@@ -1,0 +1,27 @@
+state={
+	id=988
+	name="STATE_988"
+	provinces={
+		1298 1339 1355 4301 4358 7321 10175 10219 12151 12219 12234 
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		buildings = {
+			infrastructure = 1
+			12234 = {
+				naval_base = 1
+			}
+			10175 = {
+				naval_base = 1
+			}
+			1355 = {
+				naval_base = 1
+			}
+		}
+	}
+	state_category = state_cat
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

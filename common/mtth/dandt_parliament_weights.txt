@@ -1,0 +1,3779 @@
+# Coalition
+	# Ruling Party
+		local_ruling_party_popularity_weight = {
+			base = 1
+			modifier = {
+				set_temp_variable = { ruling_party_temp = controller.govt_coalition_leader_array^0 }
+				factor = base_popularity@var:ruling_party_temp
+			}
+			modifier = {
+				add = modifier@local_ruling_party_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@local_ruling_party_popularity_factor }
+			}
+		}
+	#
+#
+#Ideologies
+	# Apolitical
+		local_apolitical_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_apolitical
+			}
+			modifier = {
+				add = modifier@local_apolitical_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp =  modifier@local_apolitical_popularity_factor }
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_communist
+				}
+				add = mtth:local_communist_popularity_weight
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_socialist
+				}
+				add = mtth:local_socialist_popularity_weight
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_liberal
+				}
+				add = mtth:local_liberal_popularity_weight
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_agrarian
+				}
+				add = mtth:local_agrarian_popularity_weight
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_conservative
+				}
+				add = mtth:local_conservative_popularity_weight
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_reactionary
+				}
+				add = mtth:local_reactionary_popularity_weight
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_fascist
+				}
+				add = mtth:local_fascist_popularity_weight
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_stratocratic
+				}
+				add = mtth:local_stratocratic_popularity_weight
+			}
+		}
+	#
+	# Communist
+		local_communist_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_communist
+			}
+			modifier = {
+				add = modifier@local_communist_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = controller.govt_coalition_leader_array^0
+					value = token:ideology_communist
+				}
+				add = modifier@local_ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_coalition_array
+					value = token:ideology_communist
+				}
+				add = modifier@local_coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_opposition_array
+					value = token:ideology_communist
+				}
+				add = modifier@local_opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_communist
+				}
+				add = modifier@local_ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@local_communist_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = controller.govt_coalition_leader_array^0
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_coalition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_opposition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_ousted_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		communist_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_communist
+			}
+			modifier = {
+				add = modifier@communist_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_communist
+				}
+				add = modifier@ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_communist
+				}
+				add = modifier@coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_communist
+				}
+				add = modifier@opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_communist
+				}
+				add = modifier@ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@communist_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		communist_strength_weight = {
+			base = 1
+			modifier = {
+				factor = popularity@token:ideology_communist
+			}
+			modifier = {
+				add = modifier@communist_strength_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_communist
+				}
+				add = modifier@ruling_party_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_communist
+				}
+				add = modifier@coalition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_communist
+				}
+				add = modifier@opposition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_communist
+				}
+				add = modifier@ousted_strength_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@communist_strength_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_strength_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		communist_enthusiasm_weight = {
+			base = 50
+			modifier = {
+				add = modifier@communist_enthusiasm_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_communist
+				}
+				add = modifier@ruling_party_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_communist
+				}
+				add = modifier@coalition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_communist
+				}
+				add = modifier@opposition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_communist
+				}
+				add = modifier@ousted_enthusiasm_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@communist_enthusiasm_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_enthusiasm_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		communist_fundraising_weight = {
+			base = 50
+			modifier = {
+				add = modifier@communist_fundraising_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_communist
+				}
+				add = modifier@ruling_party_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_communist
+				}
+				add = modifier@coalition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_communist
+				}
+				add = modifier@opposition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_communist
+				}
+				add = modifier@ousted_fundraising_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@communist_fundraising_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_fundraising_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		communist_militancy_weight = {
+			base = 20
+			modifier = {
+				add = modifier@communist_militancy_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_communist
+				}
+				add = modifier@ruling_party_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_communist
+				}
+				add = modifier@coalition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_communist
+				}
+				add = modifier@opposition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_communist
+				}
+				add = modifier@ousted_militancy_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@communist_militancy_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_communist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_militancy_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+	#
+	# Socialist
+		local_socialist_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_socialist
+			}
+			modifier = {
+				add = modifier@local_socialist_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = controller.govt_coalition_leader_array^0
+					value = token:ideology_socialist
+				}
+				add = modifier@local_ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_coalition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@local_coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_opposition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@local_opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_socialist
+				}
+				add = modifier@local_ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@local_socialist_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = controller.govt_coalition_leader_array^0
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_coalition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_opposition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_ousted_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		socialist_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_socialist
+			}
+			modifier = {
+				add = modifier@socialist_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_socialist
+				}
+				add = modifier@ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_socialist
+				}
+				add = modifier@ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@socialist_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		socialist_strength_weight = {
+			base = 1
+			modifier = {
+				factor = popularity@token:ideology_socialist
+			}
+			modifier = {
+				add = modifier@socialist_strength_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_socialist
+				}
+				add = modifier@ruling_party_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@coalition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@opposition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_socialist
+				}
+				add = modifier@ousted_strength_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@socialist_strength_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_strength_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		socialist_enthusiasm_weight = {
+			base = 50
+			modifier = {
+				add = modifier@socialist_enthusiasm_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_socialist
+				}
+				add = modifier@ruling_party_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@coalition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@opposition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_socialist
+				}
+				add = modifier@ousted_enthusiasm_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@socialist_enthusiasm_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_enthusiasm_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		socialist_fundraising_weight = {
+			base = 50
+			modifier = {
+				add = modifier@socialist_fundraising_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_socialist
+				}
+				add = modifier@ruling_party_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@coalition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@opposition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_socialist
+				}
+				add = modifier@ousted_fundraising_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@socialist_fundraising_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_fundraising_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		socialist_militancy_weight = {
+			base = 20
+			modifier = {
+				add = modifier@socialist_militancy_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_socialist
+				}
+				add = modifier@ruling_party_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@coalition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_socialist
+				}
+				add = modifier@opposition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_socialist
+				}
+				add = modifier@ousted_militancy_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@socialist_militancy_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_socialist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_militancy_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+	#
+	# Liberal
+		local_liberal_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_liberal
+			}
+			modifier = {
+				add = modifier@local_liberal_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = controller.govt_coalition_leader_array^0
+					value = token:ideology_liberal
+				}
+				add = modifier@local_ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_coalition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@local_coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_opposition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@local_opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_liberal
+				}
+				add = modifier@local_ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@local_liberal_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = controller.govt_coalition_leader_array^0
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_coalition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_opposition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_ousted_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		liberal_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_liberal
+			}
+			modifier = {
+				add = modifier@liberal_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_liberal
+				}
+				add = modifier@ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_liberal
+				}
+				add = modifier@ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@liberal_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		liberal_strength_weight = {
+			base = 1
+			modifier = {
+				factor = popularity@token:ideology_liberal
+			}
+			modifier = {
+				add = modifier@liberal_strength_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_liberal
+				}
+				add = modifier@ruling_party_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@coalition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@opposition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_liberal
+				}
+				add = modifier@ousted_strength_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@liberal_strength_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_strength_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		liberal_enthusiasm_weight = {
+			base = 50
+			modifier = {
+				add = modifier@liberal_enthusiasm_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_liberal
+				}
+				add = modifier@ruling_party_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@coalition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@opposition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_liberal
+				}
+				add = modifier@ousted_enthusiasm_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@liberal_enthusiasm_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_enthusiasm_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		liberal_fundraising_weight = {
+			base = 50
+			modifier = {
+				add = modifier@liberal_fundraising_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_liberal
+				}
+				add = modifier@ruling_party_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@coalition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@opposition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_liberal
+				}
+				add = modifier@ousted_fundraising_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@liberal_fundraising_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_fundraising_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		liberal_militancy_weight = {
+			base = 20
+			modifier = {
+				add = modifier@liberal_militancy_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_liberal
+				}
+				add = modifier@ruling_party_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@coalition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_liberal
+				}
+				add = modifier@opposition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_liberal
+				}
+				add = modifier@ousted_militancy_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@liberal_militancy_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_liberal
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_militancy_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+	#
+	# Agrarian
+		local_agrarian_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_agrarian
+			}
+			modifier = {
+				add = modifier@local_agrarian_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = controller.govt_coalition_leader_array^0
+					value = token:ideology_agrarian
+				}
+				add = modifier@local_ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_coalition_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@local_coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_opposition_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@local_opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@local_ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@local_agrarian_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = controller.govt_coalition_leader_array^0
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_coalition_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_opposition_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_ousted_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		agrarian_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_agrarian
+			}
+			modifier = {
+				add = modifier@agrarian_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_agrarian
+				}
+				add = modifier@ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@agrarian_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		agrarian_strength_weight = {
+			base = 1
+			modifier = {
+				factor = popularity@token:ideology_agrarian
+			}
+			modifier = {
+				add = modifier@agrarian_strength_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_agrarian
+				}
+				add = modifier@ruling_party_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@coalition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@opposition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@ousted_strength_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@agrarian_strength_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_strength_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		agrarian_enthusiasm_weight = {
+			base = 50
+			modifier = {
+				add = modifier@agrarian_enthusiasm_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_agrarian
+				}
+				add = modifier@ruling_party_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@coalition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@opposition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@ousted_enthusiasm_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@agrarian_enthusiasm_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_enthusiasm_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		agrarian_fundraising_weight = {
+			base = 50
+			modifier = {
+				add = modifier@agrarian_fundraising_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_agrarian
+				}
+				add = modifier@ruling_party_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@coalition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@opposition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_agrarian
+				}
+				add = modifier@ousted_fundraising_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@agrarian_fundraising_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_agrarian
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_fundraising_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		agrarian_militancy_weight = {
+		base = 20
+		modifier = {
+			add = modifier@agrarian_militancy_modifier
+		}
+		modifier = {
+			check_variable = {
+				var = govt_coalition_leader_array^0
+				value = token:ideology_agrarian
+			}
+			add = modifier@ruling_party_militancy_modifier
+		}
+		modifier = {
+			is_in_array = {
+				array = govt_coalition_array
+				value = token:ideology_agrarian
+			}
+			add = modifier@coalition_militancy_modifier
+		}
+		modifier = {
+			is_in_array = {
+				array = govt_opposition_array
+				value = token:ideology_agrarian
+			}
+			add = modifier@opposition_militancy_modifier
+		}
+		modifier = {
+			is_in_array = {
+				array = govt_ousted_array
+				value = token:ideology_agrarian
+			}
+			add = modifier@ousted_militancy_modifier
+		}
+		modifier = {
+			set_temp_variable = { factor_temp = 1 }
+			add_to_temp_variable = { factor_temp = modifier@agrarian_militancy_modifier }
+			if = {
+				limit = {
+					check_variable = {
+						var = govt_coalition_leader_array^0
+						value = token:ideology_agrarian
+					}
+				}
+				add_to_temp_variable = { factor_temp = modifier@ruling_party_militancy_modifier }
+			}
+			else_if = {
+				limit = {
+					is_in_array = {
+						array =govt_coalition_array
+						value = token:ideology_agrarian
+					}
+				}
+				add_to_temp_variable = { factor_temp = modifier@coalition_militancy_modifier }
+			}
+			else_if = {
+				limit = {
+					is_in_array = {
+						array = govt_opposition_array
+						value = token:ideology_agrarian
+					}
+				}
+				add_to_temp_variable = { factor_temp = modifier@opposition_militancy_modifier }
+			}
+			else_if = {
+				limit = {
+					is_in_array = {
+						array = govt_ousted_array
+						value = token:ideology_agrarian
+					}
+				}
+				add_to_temp_variable = { factor_temp = modifier@ousted_militancy_modifier }
+			}
+			factor = factor_temp
+		}
+		}
+	#
+	# Conservative
+		local_conservative_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_conservative
+			}
+			modifier = {
+				add = modifier@local_conservative_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = controller.govt_coalition_leader_array^0
+					value = token:ideology_conservative
+				}
+				add = modifier@local_ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_coalition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@local_coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_opposition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@local_opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_conservative
+				}
+				add = modifier@local_ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@local_conservative_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = controller.govt_coalition_leader_array^0
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_coalition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_opposition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_ousted_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		conservative_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_conservative
+			}
+			modifier = {
+				add = modifier@conservative_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_conservative
+				}
+				add = modifier@ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_conservative
+				}
+				add = modifier@ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@conservative_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		conservative_strength_weight = {
+			base = 1
+			modifier = {
+				factor = popularity@token:ideology_conservative
+			}
+			modifier = {
+				add = modifier@conservative_strength_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_conservative
+				}
+				add = modifier@ruling_party_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@coalition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@opposition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_conservative
+				}
+				add = modifier@ousted_strength_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@conservative_strength_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_strength_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		conservative_enthusiasm_weight = {
+			base = 50
+			modifier = {
+				add = modifier@conservative_enthusiasm_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_conservative
+				}
+				add = modifier@ruling_party_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@coalition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@opposition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_conservative
+				}
+				add = modifier@ousted_enthusiasm_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@conservative_enthusiasm_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_enthusiasm_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		conservative_fundraising_weight = {
+			base = 50
+			modifier = {
+				add = modifier@conservative_fundraising_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_conservative
+				}
+				add = modifier@ruling_party_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@coalition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@opposition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_conservative
+				}
+				add = modifier@ousted_fundraising_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@conservative_fundraising_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_fundraising_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		conservative_militancy_weight = {
+			base = 20
+			modifier = {
+				add = modifier@conservative_militancy_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_conservative
+				}
+				add = modifier@ruling_party_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@coalition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_conservative
+				}
+				add = modifier@opposition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_conservative
+				}
+				add = modifier@ousted_militancy_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@conservative_militancy_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_conservative
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_militancy_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+	#
+	# Reactionary
+		local_reactionary_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_reactionary
+			}
+			modifier = {
+				add = modifier@local_reactionary_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = controller.govt_coalition_leader_array^0
+					value = token:ideology_reactionary
+				}
+				add = modifier@local_ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_coalition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@local_coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_opposition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@local_opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@local_ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@local_reactionary_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = controller.govt_coalition_leader_array^0
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_coalition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_opposition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_ousted_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		reactionary_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_reactionary
+			}
+			modifier = {
+				add = modifier@reactionary_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_reactionary
+				}
+				add = modifier@ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@reactionary_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		reactionary_strength_weight = {
+			base = 1
+			modifier = {
+				factor = popularity@token:ideology_reactionary
+			}
+			modifier = {
+				add = modifier@reactionary_strength_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_reactionary
+				}
+				add = modifier@ruling_party_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@coalition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@opposition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@ousted_strength_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@reactionary_strength_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_strength_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		reactionary_enthusiasm_weight = {
+			base = 50
+			modifier = {
+				add = modifier@reactionary_enthusiasm_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_reactionary
+				}
+				add = modifier@ruling_party_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@coalition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@opposition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@ousted_enthusiasm_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@reactionary_enthusiasm_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_enthusiasm_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		reactionary_fundraising_weight = {
+			base = 50
+			modifier = {
+				add = modifier@reactionary_fundraising_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_reactionary
+				}
+				add = modifier@ruling_party_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@coalition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@opposition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@ousted_fundraising_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@reactionary_fundraising_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_fundraising_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		reactionary_militancy_weight = {
+			base = 20
+			modifier = {
+				add = modifier@reactionary_militancy_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_reactionary
+				}
+				add = modifier@ruling_party_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@coalition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@opposition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_reactionary
+				}
+				add = modifier@ousted_militancy_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@reactionary_militancy_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_reactionary
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_militancy_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+	#
+	# Fascist
+		local_fascist_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_fascist
+			}
+			modifier = {
+				add = modifier@local_fascist_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = controller.govt_coalition_leader_array^0
+					value = token:ideology_fascist
+				}
+				add = modifier@local_ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_coalition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@local_coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_opposition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@local_opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_fascist
+				}
+				add = modifier@local_ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@local_fascist_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = controller.govt_coalition_leader_array^0
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_coalition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_opposition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_ousted_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		fascist_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_fascist
+			}
+			modifier = {
+				add = modifier@fascist_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_fascist
+				}
+				add = modifier@ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_fascist
+				}
+				add = modifier@ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@fascist_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		fascist_strength_weight = {
+			base = 1
+			modifier = {
+				factor = popularity@token:ideology_fascist
+			}
+			modifier = {
+				add = modifier@fascist_strength_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_fascist
+				}
+				add = modifier@ruling_party_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@coalition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@opposition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_fascist
+				}
+				add = modifier@ousted_strength_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@fascist_strength_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_strength_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		fascist_enthusiasm_weight = {
+			base = 50
+			modifier = {
+				add = modifier@fascist_enthusiasm_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_fascist
+				}
+				add = modifier@ruling_party_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@coalition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@opposition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_fascist
+				}
+				add = modifier@ousted_enthusiasm_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@fascist_enthusiasm_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_enthusiasm_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		fascist_fundraising_weight = {
+			base = 50
+			modifier = {
+				add = modifier@fascist_fundraising_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_fascist
+				}
+				add = modifier@ruling_party_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@coalition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@opposition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_fascist
+				}
+				add = modifier@ousted_fundraising_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@fascist_fundraising_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_fundraising_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		fascist_militancy_weight = {
+			base = 20
+			modifier = {
+				add = modifier@fascist_militancy_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_fascist
+				}
+				add = modifier@ruling_party_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@coalition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_fascist
+				}
+				add = modifier@opposition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_fascist
+				}
+				add = modifier@ousted_militancy_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@fascist_militancy_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_fascist
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_militancy_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+	#
+	# Stratocratic
+		local_stratocratic_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_stratocratic
+			}
+			modifier = {
+				add = modifier@local_stratocratic_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = controller.govt_coalition_leader_array^0
+					value = token:ideology_stratocratic
+				}
+				add = modifier@local_ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_coalition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@local_coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_opposition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@local_opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = controller.govt_ousted_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@local_ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@local_stratocratic_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = controller.govt_coalition_leader_array^0
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_coalition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_opposition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = controller.govt_ousted_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@local_ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		stratocratic_popularity_weight = {
+			base = 1
+			modifier = {
+				factor = base_popularity@token:ideology_stratocratic
+			}
+			modifier = {
+				add = modifier@stratocratic_popularity_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_stratocratic
+				}
+				add = modifier@ruling_party_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@coalition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@opposition_popularity_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@ousted_popularity_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@stratocratic_popularity_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_popularity_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_popularity_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		stratocratic_strength_weight = {
+			base = 1
+			modifier = {
+				factor = popularity@token:ideology_stratocratic
+			}
+			modifier = {
+				add = modifier@stratocratic_strength_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_stratocratic
+				}
+				add = modifier@ruling_party_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@coalition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@opposition_strength_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@ousted_strength_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@stratocratic_strength_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_strength_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_strength_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		stratocratic_enthusiasm_weight = {
+			base = 50
+			modifier = {
+				add = modifier@stratocratic_enthusiasm_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_stratocratic
+				}
+				add = modifier@ruling_party_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@coalition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@opposition_enthusiasm_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@ousted_enthusiasm_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@stratocratic_enthusiasm_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_enthusiasm_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_enthusiasm_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		stratocratic_fundraising_weight = {
+			base = 50
+			modifier = {
+				add = modifier@stratocratic_fundraising_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_stratocratic
+				}
+				add = modifier@ruling_party_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@coalition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@opposition_fundraising_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@ousted_fundraising_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@stratocratic_fundraising_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_fundraising_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_fundraising_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+		stratocratic_militancy_weight = {
+			base = 20
+			modifier = {
+				add = modifier@stratocratic_militancy_modifier
+			}
+			modifier = {
+				check_variable = {
+					var = govt_coalition_leader_array^0
+					value = token:ideology_stratocratic
+				}
+				add = modifier@ruling_party_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@coalition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@opposition_militancy_modifier
+			}
+			modifier = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = token:ideology_stratocratic
+				}
+				add = modifier@ousted_militancy_modifier
+			}
+			modifier = {
+				set_temp_variable = { factor_temp = 1 }
+				add_to_temp_variable = { factor_temp = modifier@stratocratic_militancy_modifier }
+				if = {
+					limit = {
+						check_variable = {
+							var = govt_coalition_leader_array^0
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ruling_party_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array =govt_coalition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@coalition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_opposition_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@opposition_militancy_modifier }
+				}
+				else_if = {
+					limit = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_stratocratic
+						}
+					}
+					add_to_temp_variable = { factor_temp = modifier@ousted_militancy_modifier }
+				}
+				factor = factor_temp
+			}
+		}
+	#
+#

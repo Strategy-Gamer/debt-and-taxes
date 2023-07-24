@@ -1,0 +1,29 @@
+state={
+	id=481
+	name="STATE_481"
+
+	history={
+		owner = MEC
+		buildings = {
+			infrastructure = 2
+			8057 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = MEX
+		add_core_of = MEC
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+	}
+	provinces={
+		1945 8057 10895 
+	}
+	manpower=395611
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=6.000
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=675
+	name="STATE_675"
+
+	history={
+		owner = IRQ
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			8001 3
+		}
+		add_core_of = IRQ
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		1631 4951 12316 12879 13371 13372 8001
+	}
+	manpower=122093
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

@@ -1,0 +1,39 @@
+
+state={
+	id=427
+	name="STATE_427"
+	resources={
+		chromium=6.000
+	}
+
+	history={
+		owner = RAJ
+		victory_points = {
+			8087 1 
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+		add_dynamic_modifier = {
+			modifier = unique_state_rajput_state
+		}
+	}
+
+	provinces={
+		1275 1317 1359 4280 4472 5019 5063 5104 7060 7411 8087 10259 10311 10324 10511 10799 11950 12114 12226 13524 13541 13543 13545 13546 13547 13548 13549 
+	}
+	manpower=14013400
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=7.000
+}

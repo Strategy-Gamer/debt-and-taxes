@@ -1,0 +1,30 @@
+state={
+	id=891
+	name="STATE_891"
+	provinces={
+		996 1099 4001 4105 4148 11913 11982 
+	}
+	history={
+		owner=CHI
+		add_core_of=CHI
+		buildings={
+			infrastructure=4
+		}
+		victory_points = {
+			11913 20
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+	manpower=11248315
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=large_city
+}

@@ -1,0 +1,2257 @@
+
+#If you're going through this file, make sure you're using something like VSCode so you can hide large sections of this, otherwise it is near unreadable
+
+#Pops
+	#General
+		#GetPopName
+			#Returns the pop name from a value (See what values corresponds with which pop in dandt_pops.txt)
+			#Ex: 8.GetValueToPopName
+			defined_text = {
+				name = GetPopName
+				text = {
+					trigger = {
+						state = 1
+					}
+					localization_key = "slaves"
+				}
+				text = {
+					trigger = {
+						state = 2
+					}
+					localization_key = "unskilled"
+				}
+				text = {
+					trigger = {
+						state = 3
+					}
+					localization_key = "skilled"
+				}
+				text = {
+					trigger = {
+						state = 4
+					}
+					localization_key = "educated"
+				}
+				text = {
+					trigger = {
+						state = 5
+					}
+					localization_key = "soldiers"
+				}
+				text = {
+					trigger = {
+						state = 6
+					}
+					localization_key = "bureaucrats"
+				}
+				text = {
+					trigger = {
+						state = 7
+					}
+					localization_key = "capitalists"
+				}
+				text = {
+					trigger = {
+						state = 8
+					}
+					localization_key = "retirees"
+				}
+				text = {
+					localization_key = "pops"
+				}
+			}
+		#GetValueToPopName
+			#Returns the pop name from a value (See what values corresponds with which pop in dandt_pops.txt)
+			#Ex: 8.GetValueToPopName
+			defined_text = {
+				name = GetValueToPopName
+				text = {
+					trigger = {
+						check_variable = { pop_type = 0 }
+					}
+					localization_key = "pops"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type = 1 }
+					}
+					localization_key = "slaves"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type = 2 }
+					}
+					localization_key = "unskilled"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type = 3 }
+					}
+					localization_key = "skilled"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type = 4 }
+					}
+					localization_key = "educated"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type = 5 }
+					}
+					localization_key = "soldiers"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type = 6 }
+					}
+					localization_key = "bureaucrats"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type = 7 }
+					}
+					localization_key = "capitalists"
+				}
+				text = {
+					localization_key = "retirees"
+				}
+			}
+		#GetValueToPopNameTemp
+			#Returns the pop name from a value (See what values corresponds with which pop in dandt_pops.txt)
+			#Ex: 8.GetValueToPopNameTemp
+			defined_text = {
+				name = GetValueToPopName
+				text = {
+					trigger = {
+						check_variable = { pop_type_temp = 0 }
+					}
+					localization_key = "pops"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type_temp = 1 }
+					}
+					localization_key = "slaves"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type_temp = 2 }
+					}
+					localization_key = "unskilled"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type_temp = 3 }
+					}
+					localization_key = "skilled"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type_temp = 4 }
+					}
+					localization_key = "educated"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type_temp = 5 }
+					}
+					localization_key = "soldiers"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type_temp = 6 }
+					}
+					localization_key = "bureaucrats"
+				}
+				text = {
+					trigger = {
+						check_variable = { pop_type_temp = 7 }
+					}
+					localization_key = "capitalists"
+				}
+				text = {
+					localization_key = "retirees"
+				}
+			}
+		#GetSelectedToPopName
+			#Same as above but for pop selection in the state list
+			defined_text = {
+				name = GetSelectedToPopName
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 0 }
+					}
+					localization_key = "pops"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 1 }
+					}
+					localization_key = "slaves"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 2 }
+					}
+					localization_key = "unskilled"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 3 }
+					}
+					localization_key = "skilled"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 4 }
+					}
+					localization_key = "educated"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 5 }
+					}
+					localization_key = "soldiers"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 6 }
+					}
+					localization_key = "bureaucrats"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 7 }
+					}
+					localization_key = "capitalists"
+				}
+				text = {
+					localization_key = "retirees"
+				}
+			}
+		#GetSelectedToPopNameCapitalized
+			#Same as above but for pop selection in the state list
+			defined_text = {
+				name = GetSelectedToPopNameCapitalized
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 1 }
+					}
+					localization_key = "Slaves"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 2 }
+					}
+					localization_key = "Unskilled"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 3 }
+					}
+					localization_key = "Skilled"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 4 }
+					}
+					localization_key = "Educated"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 5 }
+					}
+					localization_key = "Soldiers"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 6 }
+					}
+					localization_key = "Bureaucrats"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 7 }
+					}
+					localization_key = "Capitalists"
+				}
+				text = {
+					localization_key = "Retirees"
+				}
+			}
+		#GetSelectedPopName
+			defined_text = {
+				name = GetSelectedPopName
+				text = {
+					trigger = {
+						check_variable = { selected_pop_type = 0 }
+					}
+					localization_key = pops_all_selected
+				}
+				text = {
+					localization_key = "[GetSelectedToPopName]"
+				}
+			}
+	#State List
+		#GetRelativeCOL
+			defined_text = {
+				name = GetRelativeCOLText
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_needs_spending_relative_price < 0 }
+					}
+					localization_key = "pops_col_less_tt"
+				}
+				text = {
+					localization_key = "pops_col_more_tt"
+				}
+			}
+			defined_text = {
+				name = GetRelativeCOLPriceIcon
+				text = {
+					trigger = {
+						set_temp_variable = { selected_p = selected_state:pops_needs_spending_relative_price }
+						add_to_temp_variable = { selected_p = 1 }
+						check_variable = { selected_p < global.very_cheap_price }
+					}
+					localization_key = "GFX_price_very_cheap_texticon"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_p < global.cheap_price }
+					}
+					localization_key = "GFX_price_cheap_texticon"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_p < global.slightly_cheap_price }
+					}
+					localization_key = "GFX_price_slightly_cheap_texticon"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_p < global.slightly_expensive_price }
+					}
+					localization_key = "GFX_price_average_texticon"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_p < global.expensive_price }
+					}
+					localization_key = "GFX_price_slightly_expensive_texticon"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_p < global.very_expensive_price }
+					}
+					localization_key = "GFX_price_expensive_texticon"
+				}
+				text = {
+					localization_key = "GFX_price_very_expensive_texticon"
+				}
+			}
+		#
+		#GetSOLFull
+			defined_text = {
+				name = GetSlavesSOLFull
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_amount > 0 }
+					}
+					localization_key = "slaves_sol_tt"
+				}
+				text = {
+					localization_key = ""
+				}
+			}
+			defined_text = {
+				name = GetPeasantsSOLFull
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_amount > 0 }
+					}
+					localization_key = "peasants_sol_tt"
+				}
+				text = {
+					localization_key = ""
+				}
+			}
+			defined_text = {
+				name = GetLaborersSOLFull
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_amount > 0 }
+					}
+					localization_key = "laborers_sol_tt"
+				}
+				text = {
+					localization_key = ""
+				}
+			}
+			defined_text = {
+				name = GetWorkersSOLFull
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_amount > 0 }
+					}
+					localization_key = "workers_sol_tt"
+				}
+				text = {
+					localization_key = ""
+				}
+			}
+			defined_text = {
+				name = GetProfessionalsSOLFull
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_amount > 0 }
+					}
+					localization_key = "professionals_sol_tt"
+				}
+				text = {
+					localization_key = ""
+				}
+			}
+			defined_text = {
+				name = GetElitesSOLFull
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_amount > 0 }
+					}
+					localization_key = "elites_sol_tt"
+				}
+				text = {
+					localization_key = ""
+				}
+			}
+			defined_text = {
+				name = GetBureaucratsSOLFull
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_amount > 0 }
+					}
+					localization_key = "bureaucrats_sol_tt"
+				}
+				text = {
+					localization_key = ""
+				}
+			}
+			defined_text = {
+				name = GetSoldiersSOLFull
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_amount > 0 }
+					}
+					localization_key = "soldiers_sol_tt"
+				}
+				text = {
+					localization_key = ""
+				}
+			}
+		#
+		#GetSOL
+			defined_text = {
+				name = GetAverageSOL
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 5 }
+					}
+					localization_key = "starving_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 10 }
+					}
+					localization_key = "hungry_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 15 }
+					}
+					localization_key = "destitute_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 20 }
+					}
+					localization_key = "struggling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 25 }
+					}
+					localization_key = "impoverished_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 30 }
+					}
+					localization_key = "poor_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 35 }
+					}
+					localization_key = "middling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 40 }
+					}
+					localization_key = "secure_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 45 }
+					}
+					localization_key = "comfortable_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 50 }
+					}
+					localization_key = "well_off_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 55 }
+					}
+					localization_key = "prosperous_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 60 }
+					}
+					localization_key = "affluent_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 65 }
+					}
+					localization_key = "rich_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 70 }
+					}
+					localization_key = "wealthy_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 75 }
+					}
+					localization_key = "lavish_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:pops_sol < 80 }
+					}
+					localization_key = "extravagant_sol"
+				}
+				text = {
+					localization_key = "opulent_sol"
+				}
+			}
+			defined_text = {
+				name = GetSlavesSOL
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 5 }
+					}
+					localization_key = "starving_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 10 }
+					}
+					localization_key = "hungry_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 15 }
+					}
+					localization_key = "destitute_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 20 }
+					}
+					localization_key = "struggling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 25 }
+					}
+					localization_key = "impoverished_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 30 }
+					}
+					localization_key = "poor_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 35 }
+					}
+					localization_key = "middling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 40 }
+					}
+					localization_key = "secure_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 45 }
+					}
+					localization_key = "comfortable_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 50 }
+					}
+					localization_key = "well_off_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 55 }
+					}
+					localization_key = "prosperous_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 60 }
+					}
+					localization_key = "affluent_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 65 }
+					}
+					localization_key = "rich_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 70 }
+					}
+					localization_key = "wealthy_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 75 }
+					}
+					localization_key = "lavish_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:slaves_sol < 80 }
+					}
+					localization_key = "extravagant_sol"
+				}
+				text = {
+					localization_key = "opulent_sol"
+				}
+			}
+			defined_text = {
+				name = GetPeasantsSOL
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 5 }
+					}
+					localization_key = "starving_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 10 }
+					}
+					localization_key = "hungry_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 15 }
+					}
+					localization_key = "destitute_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 20 }
+					}
+					localization_key = "struggling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 25 }
+					}
+					localization_key = "impoverished_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 30 }
+					}
+					localization_key = "poor_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 35 }
+					}
+					localization_key = "middling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 40 }
+					}
+					localization_key = "secure_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 45 }
+					}
+					localization_key = "comfortable_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 50 }
+					}
+					localization_key = "well_off_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 55 }
+					}
+					localization_key = "prosperous_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 60 }
+					}
+					localization_key = "affluent_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 65 }
+					}
+					localization_key = "rich_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 70 }
+					}
+					localization_key = "wealthy_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 75 }
+					}
+					localization_key = "lavish_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:peasants_sol < 80 }
+					}
+					localization_key = "extravagant_sol"
+				}
+				text = {
+					localization_key = "opulent_sol"
+				}
+			}
+			defined_text = {
+				name = GetLaborersSOL
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 5 }
+					}
+					localization_key = "starving_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 10 }
+					}
+					localization_key = "hungry_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 15 }
+					}
+					localization_key = "destitute_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 20 }
+					}
+					localization_key = "struggling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 25 }
+					}
+					localization_key = "impoverished_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 30 }
+					}
+					localization_key = "poor_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 35 }
+					}
+					localization_key = "middling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 40 }
+					}
+					localization_key = "secure_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 45 }
+					}
+					localization_key = "comfortable_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 50 }
+					}
+					localization_key = "well_off_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 55 }
+					}
+					localization_key = "prosperous_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 60 }
+					}
+					localization_key = "affluent_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 65 }
+					}
+					localization_key = "rich_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 70 }
+					}
+					localization_key = "wealthy_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 75 }
+					}
+					localization_key = "lavish_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:laborers_sol < 80 }
+					}
+					localization_key = "extravagant_sol"
+				}
+				text = {
+					localization_key = "opulent_sol"
+				}
+			}
+			defined_text = {
+				name = GetWorkersSOL
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 5 }
+					}
+					localization_key = "starving_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 10 }
+					}
+					localization_key = "hungry_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 15 }
+					}
+					localization_key = "destitute_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 20 }
+					}
+					localization_key = "struggling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 25 }
+					}
+					localization_key = "impoverished_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 30 }
+					}
+					localization_key = "poor_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 35 }
+					}
+					localization_key = "middling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 40 }
+					}
+					localization_key = "secure_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 45 }
+					}
+					localization_key = "comfortable_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 50 }
+					}
+					localization_key = "well_off_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 55 }
+					}
+					localization_key = "prosperous_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 60 }
+					}
+					localization_key = "affluent_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 65 }
+					}
+					localization_key = "rich_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 70 }
+					}
+					localization_key = "wealthy_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 75 }
+					}
+					localization_key = "lavish_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:workers_sol < 80 }
+					}
+					localization_key = "extravagant_sol"
+				}
+				text = {
+					localization_key = "opulent_sol"
+				}
+			}
+			defined_text = {
+				name = GetProfessionalsSOL
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 5 }
+					}
+					localization_key = "starving_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 10 }
+					}
+					localization_key = "hungry_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 15 }
+					}
+					localization_key = "destitute_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 20 }
+					}
+					localization_key = "struggling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 25 }
+					}
+					localization_key = "impoverished_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 30 }
+					}
+					localization_key = "poor_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 35 }
+					}
+					localization_key = "middling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 40 }
+					}
+					localization_key = "secure_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 45 }
+					}
+					localization_key = "comfortable_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 50 }
+					}
+					localization_key = "well_off_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 55 }
+					}
+					localization_key = "prosperous_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 60 }
+					}
+					localization_key = "affluent_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 65 }
+					}
+					localization_key = "rich_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 70 }
+					}
+					localization_key = "wealthy_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 75 }
+					}
+					localization_key = "lavish_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:professionals_sol < 80 }
+					}
+					localization_key = "extravagant_sol"
+				}
+				text = {
+					localization_key = "opulent_sol"
+				}
+			}
+			defined_text = {
+				name = GetSoldiersSOL
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 5 }
+					}
+					localization_key = "starving_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 10 }
+					}
+					localization_key = "hungry_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 15 }
+					}
+					localization_key = "destitute_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 20 }
+					}
+					localization_key = "struggling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 25 }
+					}
+					localization_key = "impoverished_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 30 }
+					}
+					localization_key = "poor_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 35 }
+					}
+					localization_key = "middling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 40 }
+					}
+					localization_key = "secure_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 45 }
+					}
+					localization_key = "comfortable_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 50 }
+					}
+					localization_key = "well_off_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 55 }
+					}
+					localization_key = "prosperous_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 60 }
+					}
+					localization_key = "affluent_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 65 }
+					}
+					localization_key = "rich_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 70 }
+					}
+					localization_key = "wealthy_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 75 }
+					}
+					localization_key = "lavish_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:soldiers_sol < 80 }
+					}
+					localization_key = "extravagant_sol"
+				}
+				text = {
+					localization_key = "opulent_sol"
+				}
+			}
+			defined_text = {
+				name = GetBureaucratsSOL
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 5 }
+					}
+					localization_key = "starving_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 10 }
+					}
+					localization_key = "hungry_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 15 }
+					}
+					localization_key = "destitute_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 20 }
+					}
+					localization_key = "struggling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 25 }
+					}
+					localization_key = "impoverished_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 30 }
+					}
+					localization_key = "poor_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 35 }
+					}
+					localization_key = "middling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 40 }
+					}
+					localization_key = "secure_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 45 }
+					}
+					localization_key = "comfortable_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 50 }
+					}
+					localization_key = "well_off_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 55 }
+					}
+					localization_key = "prosperous_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 60 }
+					}
+					localization_key = "affluent_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 65 }
+					}
+					localization_key = "rich_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 70 }
+					}
+					localization_key = "wealthy_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 75 }
+					}
+					localization_key = "lavish_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:bureaucrats_sol < 80 }
+					}
+					localization_key = "extravagant_sol"
+				}
+				text = {
+					localization_key = "opulent_sol"
+				}
+			}
+			defined_text = {
+				name = GetElitesSOL
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 5 }
+					}
+					localization_key = "starving_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 10 }
+					}
+					localization_key = "hungry_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 15 }
+					}
+					localization_key = "destitute_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 20 }
+					}
+					localization_key = "struggling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 25 }
+					}
+					localization_key = "impoverished_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 30 }
+					}
+					localization_key = "poor_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 35 }
+					}
+					localization_key = "middling_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 40 }
+					}
+					localization_key = "secure_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 45 }
+					}
+					localization_key = "comfortable_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 50 }
+					}
+					localization_key = "well_off_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 55 }
+					}
+					localization_key = "prosperous_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 60 }
+					}
+					localization_key = "affluent_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 65 }
+					}
+					localization_key = "rich_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 70 }
+					}
+					localization_key = "wealthy_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 75 }
+					}
+					localization_key = "lavish_sol"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_state:elites_sol < 80 }
+					}
+					localization_key = "extravagant_sol"
+				}
+				text = {
+					localization_key = "opulent_sol"
+				}
+			}
+		#
+		#GetPopsNeedList
+			defined_text = {
+				name = GetPopsNeedList
+				text = {
+					trigger = {
+						clear_temp_array = param_array
+						all_of = { array = selected_state:pops_spending_token_array value = val add_to_temp_array = { param_array = val } }
+						# Set options up for a comma-separated list of rounded integers
+						set_temp_variable = { param_infix = token:array_infix_newline }
+						set_temp_variable = { param_renderer = token:array_element_renderer_get_resource_spending }
+						# Cutoff at 4 for testing
+						set_temp_variable = { param_cutoff = 30 }
+						# set_temp_variable = { param_cutoff_suffix = token:array_cutoff_suffix_none }
+					}
+					localization_key = "[render_array]"
+				}
+			}
+			defined_text = {
+				name = GetPopsNeedListResourceIcon
+				text = {
+					trigger = {
+						set_temp_variable = { r_temp = selected_state:pops_spending_token_array^i }
+					}
+					localization_key = "GFX_[?r_temp.GetTokenKey]_texticon"
+				}
+			}
+			defined_text = {
+				name = GetPopsNeedListResource
+				text = {
+					trigger = {
+						set_temp_variable = { r_temp = selected_state:pops_spending_token_array^i }
+					}
+					localization_key = "[?r_temp.GetTokenLocalizedKey]"
+				}
+			}
+			defined_text = {
+				name = GetPopsNeedsPercentageSpending
+				text = {
+					trigger = {
+						set_temp_variable = { r_temp = selected_state:pops_spending_token_array^i }
+						set_temp_variable = { r_temp2 = selected_state:pops_relative_spending@var:r_temp }
+					}
+					localization_key = "[?r_temp2|2]"
+				}
+			}
+			defined_text = {
+				name = GetPopsNeedsRelativePrice
+				text = {
+					trigger = {
+						set_temp_variable = { r_temp = selected_state:pops_spending_token_array^i }
+						set_temp_variable = { r_temp2 = selected_state:price_compared_to_base@var:r_temp }
+					}
+					localization_key = "[?r_temp2|-=1%]"
+				}
+			}
+			defined_text = {
+				name = GetPopsNeedsRelativePriceIcon
+				text = {
+					trigger = {
+						set_temp_variable = { r_temp = selected_state:pops_spending_token_array^i }
+						set_temp_variable = { selected_p = selected_state:price_compared_to_base@var:r_temp }
+						add_to_temp_variable = { selected_p = 1 }
+						check_variable = { selected_p < global.very_cheap_price }
+					}
+					localization_key = "GFX_price_very_cheap_texticon"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_p < global.cheap_price }
+					}
+					localization_key = "GFX_price_cheap_texticon"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_p < global.slightly_cheap_price }
+					}
+					localization_key = "GFX_price_slightly_cheap_texticon"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_p < global.slightly_expensive_price }
+					}
+					localization_key = "GFX_price_average_texticon"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_p < global.expensive_price }
+					}
+					localization_key = "GFX_price_slightly_expensive_texticon"
+				}
+				text = {
+					trigger = {
+						check_variable = { selected_p < global.very_expensive_price }
+					}
+					localization_key = "GFX_price_expensive_texticon"
+				}
+				text = {
+					localization_key = "GFX_price_very_expensive_texticon"
+				}
+			}
+		#
+		#Needs Container
+			#GetPopsNeeds(Num)
+				#GetPopsNeeds0
+					defined_text = {
+						name = GetPopsNeeds0
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^0 > 0 }
+							}
+							localization_key = pops_needs_0
+						}
+					}
+				#GetPopsNeeds1
+					defined_text = {
+						name = GetPopsNeeds1
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^1 > 0 }
+							}
+							localization_key = pops_needs_1
+						}
+					}
+				#GetPopsNeeds2
+					defined_text = {
+						name = GetPopsNeeds2
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^2 > 0 }
+							}
+							localization_key = pops_needs_2
+						}
+					}
+				#GetPopsNeeds3
+					defined_text = {
+						name = GetPopsNeeds3
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^3 > 0 }
+							}
+							localization_key = pops_needs_3
+						}
+					}
+				#GetPopsNeeds4
+					defined_text = {
+						name = GetPopsNeeds4
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^4 > 0 }
+							}
+							localization_key = pops_needs_4
+						}
+					}
+				#GetPopsNeeds5
+					defined_text = {
+						name = GetPopsNeeds5
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^5 > 0 }
+							}
+							localization_key = pops_needs_5
+						}
+					}
+				#GetPopsNeeds6
+					defined_text = {
+						name = GetPopsNeeds6
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^6 > 0 }
+							}
+							localization_key = pops_needs_6
+						}
+					}
+				#GetPopsNeeds7
+					defined_text = {
+						name = GetPopsNeeds7
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^7 > 0 }
+							}
+							localization_key = pops_needs_7
+						}
+					}
+				#GetPopsNeeds8
+					defined_text = {
+						name = GetPopsNeeds8
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^8 > 0 }
+							}
+							localization_key = pops_needs_8
+						}
+					}
+				#GetPopsNeeds9
+					defined_text = {
+						name = GetPopsNeeds9
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^9 > 0 }
+							}
+							localization_key = pops_needs_9
+						}
+					}
+				#GetPopsNeeds10
+					defined_text = {
+						name = GetPopsNeeds10
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^10 > 0 }
+							}
+							localization_key = pops_needs_10
+						}
+					}
+				#GetPopsNeeds11
+					defined_text = {
+						name = GetPopsNeeds11
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^11 > 0 }
+							}
+							localization_key = pops_needs_11
+						}
+					}
+				#GetPopsNeeds12
+					defined_text = {
+						name = GetPopsNeeds12
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^12 > 0 }
+							}
+							localization_key = pops_needs_12
+						}
+					}
+				#GetPopsNeeds13
+					defined_text = {
+						name = GetPopsNeeds13
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^13 > 0 }
+							}
+							localization_key = pops_needs_13
+						}
+					}
+				#GetPopsNeeds14
+					defined_text = {
+						name = GetPopsNeeds14
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^14 > 0 }
+							}
+							localization_key = pops_needs_14
+						}
+					}
+				#GetPopsNeeds15
+					defined_text = {
+						name = GetPopsNeeds15
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^15 > 0 }
+							}
+							localization_key = pops_needs_15
+						}
+					}
+				#GetPopsNeeds16
+					defined_text = {
+						name = GetPopsNeeds16
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^16 > 0 }
+							}
+							localization_key = pops_needs_16
+						}
+					}
+				#GetPopsNeeds17
+					defined_text = {
+						name = GetPopsNeeds17
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^17 > 0 }
+							}
+							localization_key = pops_needs_17
+						}
+					}
+				#GetPopsNeeds18
+					defined_text = {
+						name = GetPopsNeeds18
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^18 > 0 }
+							}
+							localization_key = pops_needs_18
+						}
+					}
+				#GetPopsNeeds19
+					defined_text = {
+						name = GetPopsNeeds19
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^19 > 0 }
+							}
+							localization_key = pops_needs_19
+						}
+					}
+				#GetPopsNeeds20
+					defined_text = {
+						name = GetPopsNeeds20
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^20 > 0 }
+							}
+							localization_key = pops_needs_20
+						}
+					}
+				#GetPopsNeeds21
+					defined_text = {
+						name = GetPopsNeeds21
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^21 > 0 }
+							}
+							localization_key = pops_needs_21
+						}
+					}
+				#GetPopsNeeds22
+					defined_text = {
+						name = GetPopsNeeds22
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^22 > 0 }
+							}
+							localization_key = pops_needs_22
+						}
+					}
+				#GetPopsNeeds23
+					defined_text = {
+						name = GetPopsNeeds23
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^23 > 0 }
+							}
+							localization_key = pops_needs_23
+						}
+					}
+				#GetPopsNeeds24
+					defined_text = {
+						name = GetPopsNeeds24
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^24 > 0 }
+							}
+							localization_key = pops_needs_24
+						}
+					}
+				#GetPopsNeeds25
+					defined_text = {
+						name = GetPopsNeeds25
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^25 > 0 }
+							}
+							localization_key = pops_needs_25
+						}
+					}
+				#GetPopsNeeds26
+					defined_text = {
+						name = GetPopsNeeds26
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^26 > 0 }
+							}
+							localization_key = pops_needs_26
+						}
+					}
+				#GetPopsNeeds27
+					defined_text = {
+						name = GetPopsNeeds27
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^27 > 0 }
+							}
+							localization_key = pops_needs_27
+						}
+					}
+				#GetPopsNeeds28
+					defined_text = {
+						name = GetPopsNeeds28
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^28 > 0 }
+							}
+							localization_key = pops_needs_28
+						}
+					}
+				#GetPopsNeeds29
+					defined_text = {
+						name = GetPopsNeeds29
+						text = {
+							trigger = {
+								check_variable = { selected_state:pops_needs_amount^29 > 0 }
+							}
+							localization_key = pops_needs_29
+						}
+					}
+			#GetPopsNeedsType
+				defined_text = {
+					name = GetPopsNeedsType
+					text = {
+						trigger = {
+							state = 1
+						}
+						localization_key = "life"
+					}
+					text = {
+						trigger = {
+							state = 2
+						}
+						localization_key = "daily"
+					}
+					text = {
+						trigger = {
+							state = 3
+						}
+						localization_key = "luxury"
+					}
+				}
+			#GetPopsNeedsTypeUppercase
+				defined_text = {
+					name = GetPopsNeedsTypeUppercase
+					text = {
+						trigger = {
+							state = 1
+						}
+						localization_key = "Life"
+					}
+					text = {
+						trigger = {
+							state = 2
+						}
+						localization_key = "Daily"
+					}
+					text = {
+						trigger = {
+							state = 3
+						}
+						localization_key = "Luxury"
+					}
+				}
+		#
+		#Population Pyramid Container
+			#GetPopPyramidBarWidth
+				defined_text = {
+					name = GetPopPyramidBarWidth
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 0 }
+						}
+						localization_key = "0"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 1 }
+						}
+						localization_key = "9"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 2 }
+						}
+						localization_key = "19"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 3 }
+						}
+						localization_key = "28"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 4 }
+						}
+						localization_key = "37"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 5 }
+						}
+						localization_key = "47"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 6 }
+						}
+						localization_key = "56"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 7 }
+						}
+						localization_key = "65"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 8 }
+						}
+						localization_key = "75"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 9 }
+						}
+						localization_key = "84"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 10 }
+						}
+						localization_key = "94"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 11 }
+						}
+						localization_key = "103"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 12 }
+						}
+						localization_key = "112"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 13 }
+						}
+						localization_key = "122"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 14 }
+						}
+						localization_key = "131"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 15 }
+						}
+						localization_key = "140"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 16 }
+						}
+						localization_key = "150"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 17 }
+						}
+						localization_key = "159"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 18 }
+						}
+						localization_key = "168"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 19 }
+						}
+						localization_key = "178"
+					}
+					text = {
+						trigger = {
+							check_variable = { pop_pyramid_frame^i = 20 }
+						}
+						localization_key = "187"
+					}
+				}
+		#
+		#Overview
+			#GetPopulationAmount
+				defined_text = {
+					name = GetPopulationAmount
+					text = {
+						trigger = {
+							check_variable = { selected_state:num_owned_states > 0 } #A way of checking if it's a country scope or not
+						}
+						localization_key = "[GetNationalPopulationAmount]"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount < 1 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount }
+							multiply_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|0]"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount > 1000 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount }
+							divide_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|3]M"
+					}
+					text = {
+						localization_key = "[?selected_state:pops_amount|3]K"
+					}
+				}
+				defined_text = {
+					name = GetNationalPopulationAmount
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount < 1 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount }
+							multiply_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|0]K"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount > 1000 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount }
+							divide_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|3]B"
+					}
+					text = {
+						localization_key = "[?selected_state:pops_amount|3]M"
+					}
+				}
+			#
+			#GetPopulationChange
+				defined_text = {
+					name = GetPopulationChange
+					#text = {
+					#	trigger = {
+					#		check_variable = { selected_state:num_owned_states > 0 } #A way of checking if it's a country scope or not
+					#	}
+					#	localization_key = "[GetNationalPopulationChange]"
+					#}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change < -1000 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount_change }
+							divide_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|0]M"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change < -1 }
+						}
+						localization_key = "[?selected_state:pops_amount_change|3]K"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change < 0 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount_change }
+							multiply_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|0]"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change = 0 }
+						}
+						localization_key = "+0"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change < 1 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount_change }
+							multiply_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "+[?pops_amount_temp|0]"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change > 1000 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount_change }
+							divide_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "+[?pops_amount_temp|3]M"
+					}
+					text = {
+						localization_key = "+[?selected_state:pops_amount_change|3]K"
+					}
+				}
+				defined_text = {
+					name = GetNationalPopulationChange #NOT USED
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change < -1000 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount_change }
+							divide_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|0]B"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change < -1 }
+						}
+						localization_key = "[?selected_state:pops_amount_change|3]M"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change < 0 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount_change }
+							multiply_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|3]K"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change = 0 }
+						}
+						localization_key = "+0"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change < 1 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount_change }
+							multiply_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "+[?pops_amount_temp|0]K"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change > 1000 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_amount_change }
+							divide_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "+[?pops_amount_temp|3]B"
+					}
+					text = {
+						localization_key = "+[?selected_state:pops_amount_change|3]M"
+					}
+				}
+				defined_text = {
+					name = GetPopulationChangeColor
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change < 0 }
+						}
+						localization_key = "red"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_amount_change > 0 }
+						}
+						localization_key = "green"
+					}
+					text = {
+						localization_key = "yellow"
+					}
+				}
+			#
+			#GetWorkforceAmount
+				defined_text = {
+					name = GetWorkforceAmount
+					text = {
+						trigger = {
+							check_variable = { selected_state:num_owned_states > 0 } #A way of checking if it's a country scope or not
+						}
+						localization_key = "[GetNationalWorkforceAmount]"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_workforce_amount < 1 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_workforce_amount }
+							multiply_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|0]"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_workforce_amount > 1000 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_workforce_amount }
+							divide_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|3]M"
+					}
+					text = {
+						localization_key = "[?selected_state:pops_workforce_amount|3]K"
+					}
+				}
+				defined_text = {
+					name = GetNationalWorkforceAmount
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_workforce_amount < 1 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_workforce_amount }
+							multiply_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|0]K"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_workforce_amount > 1000 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_workforce_amount }
+							divide_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|3]B"
+					}
+					text = {
+						localization_key = "[?selected_state:pops_workforce_amount|3]M"
+					}
+				}
+			#
+			#GetUnemployedAmount
+				defined_text = {
+					name = GetUnemployedAmount
+					text = {
+						trigger = {
+							check_variable = { selected_state:num_owned_states > 0 } #A way of checking if it's a country scope or not
+						}
+						localization_key = "[GetNationalUnemployedAmount]"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_unemployed_amount < 1 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_unemployed_amount }
+							multiply_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|0]"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_unemployed_amount > 1000 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_unemployed_amount }
+							divide_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|3]M"
+					}
+					text = {
+						localization_key = "[?selected_state:pops_unemployed_amount|3]K"
+					}
+				}
+				defined_text = {
+					name = GetNationalUnemployedAmount
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_unemployed_amount < 1 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_unemployed_amount }
+							multiply_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|0]K"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_unemployed_amount > 1000 }
+							set_temp_variable = { pops_amount_temp = selected_state:pops_unemployed_amount }
+							divide_temp_variable = { pops_amount_temp = 1000 }
+						}
+						localization_key = "[?pops_amount_temp|3]B"
+					}
+					text = {
+						localization_key = "[?selected_state:pops_unemployed_amount|3]M"
+					}
+				}
+			#
+			#GetUnemploymentPercentage
+				defined_text = {
+					name = GetUnemploymentPercentage
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_unemployed_percentage < 0.05 }
+						}
+						localization_key = "good_unemployment_percentage"
+					}
+					text = {
+						trigger = {
+							check_variable = { selected_state:pops_unemployed_percentage > 0.10 }
+						}
+						localization_key = "bad_unemployment_percentage"
+					}
+					text = {
+						localization_key = "okay_unemployment_percentage"
+					}
+				}
+			#
+	#
+#

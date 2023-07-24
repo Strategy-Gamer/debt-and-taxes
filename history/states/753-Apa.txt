@@ -1,0 +1,30 @@
+
+state={
+	id=753
+	name="STATE_753"
+
+	history={
+		owner = QHI
+		add_core_of = QHI
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		4403 10787 10903 
+	}
+	manpower=494590
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=1.000
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=77
+	name="STATE_77"
+	manpower = 378000
+
+	state_category = rural
+
+	history={
+		victory_points = {
+			11597 1
+		}
+		owner = ROM
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ROM
+		add_claim_by = BUL
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		9614 11597
+	}
+
+	local_supplies=1.0
+}

@@ -1,0 +1,27 @@
+AFH = "countries/Afghanistan 2.txt"
+BRZ = "countries/Brazil 2.txt"
+MEC = "countries/Mexico 2.txt"
+
+
+SAA = "countries/Saar.txt"
+
+TKS = "countries/Turkestan.txt"
+DGS = "countries/Dunganistan.txt"
+KML = "countries/Kumul.txt"
+QHI = "countries/Qinghai.txt"
+GSU = "countries/Gansu.txt"
+XIK = "countries/Xikang.txt"
+CGQ = "countries/Chongqing.txt"
+CDU = "countries/Chengdu.txt"
+BAZ = "countries/Banzhong.txt"
+GUI = "countries/Guizhou.txt"
+GGD = "countries/Guangdong.txt"
+FEG = "countries/Fengtian.txt"
+GUO = "countries/Guominjun.txt"
+SHA = "countries/Shandong.txt"
+
+ASR = "countries/Asir.txt"
+HJZ = "countries/Hejaz.txt"
+SHR = "countries/Sohar.txt"
+
+BRU = "countries/Brunei.txt"

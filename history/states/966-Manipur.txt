@@ -1,0 +1,29 @@
+state={
+	id=966
+	name="STATE_966"
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {	
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+		add_dynamic_modifier = {
+			modifier = unique_state_rajput_state
+		}
+	}
+	state_category=rural
+	provinces={
+		997 1075 1553 1581 7634 10090 10514 
+	}
+	manpower=2873784
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

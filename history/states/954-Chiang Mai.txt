@@ -1,0 +1,30 @@
+state={
+	id=954
+	name="STATE_954"
+	provinces={
+		1253 1488 1990 4496 7312 7492 7531 7675 8045 10371 
+	}
+	history={
+		owner=SIA
+		add_core_of=SIA
+		buildings={
+			infrastructure=2
+		}
+		victory_points = {
+			1488 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+	state_category=rural
+	manpower=1099283
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

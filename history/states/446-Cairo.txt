@@ -1,0 +1,43 @@
+
+state={
+	id=446
+	name="STATE_446"
+
+	history={
+		owner = EGY
+		buildings = {
+			infrastructure = 3
+			air_base = 5
+			12049 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			7011 20 
+		}
+		victory_points = {
+			12049 5 
+		}
+		victory_points = {
+			4073 3 
+		}
+		add_core_of = EGY
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		4073 4143 7011 7188 10005 12004 12049 
+	}
+	manpower=6586596
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,39 @@
+state= {
+	id=380
+	name="STATE_380"
+	manpower = 507846
+
+
+
+	state_category = state_cat
+
+	resources={
+		#tungsten=76 # was: 106
+		#coal = 5
+		#copper = 20
+		#precious_metals = 11
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+		victory_points = {
+			4865 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+	provinces={
+		1663 1740 1756 4668 4742 4865 7764 7818 10582 10651 10662 12573 12699 13153
+	}
+}

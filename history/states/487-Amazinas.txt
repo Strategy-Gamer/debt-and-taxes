@@ -1,0 +1,30 @@
+
+state={
+	id=487
+	name="STATE_487"
+
+	history={
+		owner = BOL
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BOL
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		2160 12916 12979 13420
+	}
+	manpower=334500
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

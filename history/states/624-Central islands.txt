@@ -1,0 +1,30 @@
+state=
+{
+	id=624
+	name="STATE_624"
+	manpower = 1290672
+	state_category = town
+
+	history=
+	{
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			4288 1
+		}
+		add_core_of = PHI
+		add_dynamic_modifier = {
+			modifier = climate_humid_tropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+	}
+	provinces={
+		1372 4228 4288 4377 7307 10272 10306 12279
+	}
+
+	local_supplies=0.0
+}

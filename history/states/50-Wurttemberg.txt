@@ -1,0 +1,40 @@
+
+state={
+	id=50
+	name="STATE_50"
+	resources={
+		aluminium=6.000
+	}
+
+	history={
+		owner = GER
+		victory_points = {
+			9517 20 
+		}
+		victory_points = {
+			11499 3 
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 3
+		}
+		add_core_of = GER
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		519 694 3679 3690 6555 6581 6934 9517 9545 9655 11486 11499 13126 
+	}
+	manpower=3086854
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

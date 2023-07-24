@@ -1,0 +1,28 @@
+state={
+	id=975
+	name="STATE_975"
+	provinces={
+		2018 5049 
+	}
+	history = {
+		owner = OMA
+		add_core_of = OMA
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			5049 2
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+		set_demilitarized_zone = yes
+	}
+	manpower=113889
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

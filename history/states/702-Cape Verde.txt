@@ -1,0 +1,29 @@
+state={
+	id=702
+	name="STATE_702"
+	manpower = 150600
+	
+	state_category = small_island
+
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 2
+			13014 ={
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_tropic
+		}
+	}
+
+	provinces={
+		13014 
+	}
+
+	local_supplies=0.0 
+}

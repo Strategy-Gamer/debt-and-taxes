@@ -1,0 +1,32 @@
+
+state={
+	id=438
+	name="STATE_438"
+
+	history={
+		owner = RAJ
+		victory_points = {
+			12137 1 
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1377 4299 5086 8082 8114 9951 10794 12137 
+	}
+	manpower=16491000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

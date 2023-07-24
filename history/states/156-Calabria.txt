@@ -1,0 +1,31 @@
+
+state={
+	id=156
+	name="STATE_156"
+
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			9990 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = ITA
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+	}
+
+	provinces={
+		3901 9990 10027 12066 12098 
+	}
+	manpower=1742000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

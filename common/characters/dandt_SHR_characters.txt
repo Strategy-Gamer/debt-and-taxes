@@ -1,0 +1,17 @@
+characters = {
+	#
+		SHR_ali_banu_bu_ali = {
+			name = "Ali Banu Bu Ali"
+			#https://en.wikipedia.org/wiki/Muscat_and_Oman
+			portraits = {
+				civilian = {
+					large = GFX_portrait_SHR_ali_banu_bu_ali
+				}
+			}
+			country_leader = {
+				ideology = despotism
+			}
+			#ideology_reactionary
+		}
+	#
+}

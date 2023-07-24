@@ -1,0 +1,18 @@
+defined_text = {
+	name = GetRandomCharacterName
+	text = {
+		localization_key = "[GetRandomCharacterFirstName] [GetRandomCharacterLastName]"
+	}
+}
+defined_text = {
+	name = GetRandomCharacterFirstName
+	text = {
+		localization_key = "John"
+	}
+}
+defined_text = {
+	name = GetRandomCharacterLastName
+	text = {
+		localization_key = "Smith"
+	}
+}

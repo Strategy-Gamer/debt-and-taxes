@@ -1,0 +1,297 @@
+#Basically a bunch of stuff for text
+
+#Culture
+	defined_text = {
+		name = GetCulture0
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gc0
+					value = pops_culture_type^0
+				}
+				check_variable = {
+					gc0 > 0
+				}
+			}
+			localization_key = culture_0
+		}
+	}
+	defined_text = {
+		name = GetCulture1
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gc1
+					value = pops_culture_type^1
+				}
+				check_variable = {
+					gc1 > 0
+				}
+			}
+			localization_key = culture_1
+		}
+	}
+	defined_text = {
+		name = GetCulture2
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gc2
+					value = pops_culture_type^2
+				}
+				check_variable = {
+					gc2 > 0
+				}
+			}
+			localization_key = culture_2
+		}
+	}
+	defined_text = {
+		name = GetCulture3
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gc3
+					value = pops_culture_type^3
+				}
+				check_variable = {
+					gc3 > 0
+				}
+			}
+			localization_key = culture_3
+		}
+	}
+	defined_text = {
+		name = GetCulture4
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gc4
+					value = pops_culture_type^4
+				}
+				check_variable = {
+					gc4 > 0
+				}
+			}
+			localization_key = culture_4
+		}
+	}
+	defined_text = {
+		name = GetCulture5
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gc0
+					value = pops_culture_type^5
+				}
+				check_variable = {
+					gc5 > 0
+				}
+			}
+			localization_key = culture_5
+		}
+	}
+#
+#Religion
+	defined_text = {
+		name = GetReligion0
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gr0
+					value = pops_religion_type^0
+				}
+				check_variable = {
+					gr0 > 0
+				}
+			}
+			localization_key = religion_0
+		}
+	}
+	defined_text = {
+		name = GetReligion1
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gr1
+					value = pops_religion_type^1
+				}
+				check_variable = {
+					gr1 > 0
+				}
+			}
+			localization_key = religion_1
+		}
+	}
+	defined_text = {
+		name = GetReligion2
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gr2
+					value = pops_religion_type^2
+				}
+				check_variable = {
+					gr2 > 0
+				}
+			}
+			localization_key = religion_2
+		}
+	}
+	defined_text = {
+		name = GetReligion3
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gr3
+					value = pops_religion_type^3
+				}
+				check_variable = {
+					gr3 > 0
+				}
+			}
+			localization_key = religion_3
+		}
+	}
+	defined_text = {
+		name = GetReligion4
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gr4
+					value = pops_religion_type^4
+				}
+				check_variable = {
+					gr4 > 0
+				}
+			}
+			localization_key = religion_4
+		}
+	}
+	defined_text = {
+		name = GetReligion5
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gr5
+					value = pops_religion_type^5
+				}
+				check_variable = {
+					gr5 > 0
+				}
+			}
+			localization_key = religion_5
+		}
+	}
+#
+
+#Ideology
+	defined_text = {
+		name = GetIdeology0
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gi0
+					value = pops_ideology_type^0
+				}
+				check_variable = {
+					gi0 > 0
+				}
+			}
+			localization_key = ideology_0
+		}
+	}
+	defined_text = {
+		name = GetIdeology1
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gi1
+					value = pops_ideology_type^1
+				}
+				check_variable = {
+					gi1 > 0
+				}
+			}
+			localization_key = ideology_1
+		}
+	}
+	defined_text = {
+		name = GetIdeology2
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gi2
+					value = pops_ideology_type^2
+				}
+				check_variable = {
+					gi2 > 0
+				}
+			}
+			localization_key = ideology_2
+		}
+	}
+	defined_text = {
+		name = GetIdeology3
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gi3
+					value = pops_ideology_type^3
+				}
+				check_variable = {
+					gi3 > 0
+				}
+			}
+			localization_key = ideology_3
+		}
+	}
+	defined_text = {
+		name = GetIdeology4
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gi4
+					value = pops_ideology_type^4
+				}
+				check_variable = {
+					gi4 > 0
+				}
+			}
+			localization_key = ideology_4
+		}
+	}
+	defined_text = {
+		name = GetIdeology5
+		
+		text = {
+			trigger = {
+				set_temp_variable = {
+					var = gi5
+					value = pops_ideology_type^5
+				}
+				check_variable = {
+					gi5 > 0
+				}
+			}
+			localization_key = ideology_5
+		}
+	}
+#

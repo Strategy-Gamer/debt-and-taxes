@@ -1,0 +1,30 @@
+
+state={
+	id=757
+	name="STATE_757"
+
+	history={
+		owner = TIB
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = TIB
+		add_dynamic_modifier = {
+			modifier = climate_continental_polar
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		1991 2014 4900 8121 12807 13441
+	}
+	manpower=767443
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

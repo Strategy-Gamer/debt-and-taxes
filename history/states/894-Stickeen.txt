@@ -1,0 +1,34 @@
+
+state={
+	id=894
+	name="STATE_894"
+	provinces={
+		917 1411 1799 1872 4678 5403 10548 12508 12571 
+	}
+	history={
+		owner=CAN
+		add_core_of=CAN
+		buildings={
+			infrastructure=1
+			10548 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_cool
+		}
+		add_dynamic_modifier = {
+			modifier = generic_state_untapped_mines
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+	manpower=49276
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=pastoral
+}

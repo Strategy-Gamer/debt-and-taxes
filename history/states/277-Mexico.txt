@@ -1,0 +1,38 @@
+state={
+	id=277
+	name="STATE_277"
+	resources={
+		steel=6.000
+	}
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+		}
+		add_core_of = MEX
+		add_core_of = MEC
+		victory_points = {
+			1965 25 
+		}
+		victory_points = {
+			8089 10
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = disaster_boll_weevil_infestation
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+	}
+	provinces={
+		1965 7913 8089 13426 
+	}
+	manpower=4183403
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

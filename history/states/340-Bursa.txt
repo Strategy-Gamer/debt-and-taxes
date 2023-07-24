@@ -1,0 +1,40 @@
+
+state={
+	id=340
+	name="STATE_340"
+	manpower = 1077853
+	resources={
+		chromium=39 # was: 54
+	}
+
+	state_category = town
+
+	history={
+		owner = TUR
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			947 10
+		}
+		victory_points = {
+			9799 5
+		}
+		add_core_of = TUR
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		785 947 3786 3851 6864 6912 9799 9887 11778 11867
+	}
+
+	local_supplies=0.0
+}

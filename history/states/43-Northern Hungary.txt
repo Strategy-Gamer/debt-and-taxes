@@ -1,0 +1,40 @@
+
+state={
+	id=43
+	name="STATE_43" # Northern Hungary
+	manpower = 3750752
+	resources={
+		steel=3 # was: 4
+		aluminium=100 # was: 194
+	}
+
+	state_category = large_city
+
+	history={
+		owner = HUN
+		buildings = {
+			infrastructure = 3
+
+			air_base = 4
+		}
+		victory_points = {
+			9660 20
+		}
+		add_core_of = HUN
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		684 716 3713 3731 6716 6751 9660 9690 11520
+	}
+
+	local_supplies=0.0
+}

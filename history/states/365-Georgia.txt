@@ -1,0 +1,46 @@
+
+state={
+	id=365
+	name="STATE_365"
+	resources={
+		cotton_wool=32.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			air_base = 2
+			11975 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = USA
+		victory_points = {
+			12384 10
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = disaster_boll_weevil_infestation
+		}
+		add_dynamic_modifier = {
+			modifier = weather_wet_season
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		638 968 1433 1480 7118 7583 7612 9949 9996 10394 10437 10465 10492 11975 12325 12384 12470 12498 13418
+	}
+	manpower=2777904
+	buildings_max_level_factor=1.000
+	state_category=state_cat
+	local_supplies=0.000
+}

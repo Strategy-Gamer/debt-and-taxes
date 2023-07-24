@@ -1,0 +1,35 @@
+
+state={
+	id=859
+	name="STATE_859"
+	provinces={
+		1952 2008 2011 4956 13425 
+	}
+	history={
+		owner=MEC
+		add_core_of=MEC
+		add_core_of=MEX
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			2008 10
+		}
+		victory_points = {
+			4956 10
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = disaster_boll_weevil_infestation
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+	manpower=2000336
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=large_town
+}

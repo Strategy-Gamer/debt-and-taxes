@@ -1,0 +1,1098 @@
+# Coalition
+	# Ruling Party
+		local_ruling_party_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		ruling_party_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_ruling_party_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		ruling_party_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_ruling_party_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		ruling_party_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		ruling_party_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		ruling_party_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		ruling_party_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		ruling_party_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		ruling_party_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		ruling_party_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		ruling_party_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		ruling_party_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Coalition
+		local_coalition_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		coalition_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_coalition_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		coalition_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_coalition_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		coalition_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		coalition_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		coalition_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		coalition_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		coalition_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		coalition_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		coalition_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		coalition_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		coalition_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		coalition_unity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		coalition_unity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Opposition
+		local_opposition_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		opposition_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_opposition_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		opposition_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_opposition_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		opposition_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		opposition_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		opposition_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		opposition_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		opposition_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		opposition_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		opposition_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		opposition_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		opposition_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		opposition_partisanship_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		opposition_partisanship_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Ousted
+		local_ousted_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		ousted_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_ousted_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		ousted_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_ousted_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		ousted_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		ousted_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		ousted_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		ousted_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		ousted_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		ousted_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		ousted_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		ousted_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		ousted_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+#
+# Ideologies
+	# Apolitical
+		local_apolitical_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		apolitical_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_apolitical_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		apolitical_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_apolitical_drift_factor = {
+			color_type = neutral
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		apolitical_drift_factor = {
+			color_type = neutral
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Communist
+		local_communist_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		communist_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_communist_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		communist_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_communist_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		communist_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		communist_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		communist_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		communist_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		communist_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		communist_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		communist_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		communist_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		communist_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Sociaist
+		local_socialist_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		socialist_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_socialist_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		socialist_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_socialist_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		socialist_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		socialist_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		socialist_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		socialist_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		socialist_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		socialist_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		socialist_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		socialist_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		socialist_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Liberal
+		local_liberal_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		liberal_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_liberal_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		liberal_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_liberal_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		liberal_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		liberal_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		liberal_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		liberal_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		liberal_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		liberal_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		liberal_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		liberal_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		liberal_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Agrarian
+		local_agrarian_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		agrarian_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_agrarian_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		agrarian_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_agrarian_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		agrarian_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		agrarian_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		agrarian_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		agrarian_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		agrarian_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		agrarian_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		agrarian_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		agrarian_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		agrarian_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Conservative
+		local_conservative_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		conservative_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_conservative_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		conservative_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_conservative_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		conservative_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		conservative_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		conservative_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		conservative_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		conservative_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		conservative_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		conservative_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		conservative_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		conservative_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Reactionary
+		local_reactionary_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		reactionary_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_reactionary_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		reactionary_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_reactionary_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		reactionary_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		reactionary_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		reactionary_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		reactionary_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		reactionary_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		reactionary_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		reactionary_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		reactionary_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		reactionary_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Fascist
+		local_fascist_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		fascist_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_fascist_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		fascist_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_fascist_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		fascist_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		fascist_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		fascist_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		fascist_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		fascist_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		fascist_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		fascist_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		fascist_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		fascist_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+	# Stratocratic
+		local_stratocratic_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = state
+		}
+		stratocratic_popularity_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		local_stratocratic_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		stratocratic_popularity_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		local_stratocratic_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = state
+		}
+		stratocratic_drift_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		stratocratic_strength_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		stratocratic_strength_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		stratocratic_enthusiasm_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		stratocratic_enthusiasm_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		stratocratic_fundraising_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		stratocratic_fundraising_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+		stratocratic_militancy_modifier = {
+			color_type = good
+			value_type = number
+			precision = 0
+			category = country
+		}
+		stratocratic_militancy_factor = {
+			color_type = good
+			value_type = percentage
+			precision = 2
+			category = country
+		}
+	#
+#

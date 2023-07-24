@@ -1,0 +1,30 @@
+state={
+	id=665
+	name="STATE_665"
+	manpower=427824
+
+	state_category = pastoral
+
+	history={
+		owner = FRA
+		add_core_of = TUN
+		victory_points = {
+			7005 1 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		1105 3987 4992 7005 9983 10026 10082 11935 11957 12000 13145 13179 
+	}
+
+	local_supplies=0.0 
+}

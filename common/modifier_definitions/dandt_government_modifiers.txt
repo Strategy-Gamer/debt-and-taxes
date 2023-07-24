@@ -1,0 +1,73 @@
+primary_culture_voter_enthusiasm_modifier = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+primary_culture_voter_enthusiasm_factor = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+accepted_culture_voter_enthusiasm_modifier = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+accepted_culture_voter_enthusiasm_factor = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+marginalized_culture_voter_enthusiasm_modifier = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+marginalized_culture_voter_enthusiasm_factor = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+primary_religion_voter_enthusiasm_modifier = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+primary_religion_voter_enthusiasm_factor = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+accepted_religion_voter_enthusiasm_modifier = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+accepted_religion_voter_enthusiasm_factor = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+marginalized_religion_voter_enthusiasm_modifier = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+marginalized_religion_voter_enthusiasm_factor = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}

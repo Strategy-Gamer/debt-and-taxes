@@ -1,0 +1,304 @@
+spriteTypes = {	
+	
+### Death and Taxes ###
+
+### Technologies ###
+
+	SpriteType = {
+		name = "GFX_watt_steam_engine_medium"
+		texturefile = "gfx/interface/technologies/watt_steam_engine.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_steam_indicator_medium"
+		texturefile = "gfx/interface/technologies/steam_indicator.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_centrifugal_governor_medium"
+		texturefile = "gfx/interface/technologies/centrifugal_governor.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_double_acting_engine_medium"
+		texturefile = "gfx/interface/technologies/double_acting_engine.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_compound_engine_medium"
+		texturefile = "gfx/interface/technologies/compound_engine.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_rotary_power_medium"
+		texturefile = "gfx/interface/technologies/rotary_power.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_parallel_motion_medium"
+		texturefile = "gfx/interface/technologies/parallel_motion.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_d_slide_valve_medium"
+		texturefile = "gfx/interface/technologies/d_slide_valve.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_high_pressure_steam_engine_medium"
+		texturefile = "gfx/interface/technologies/high_pressure_steam_engine.dds"
+	}
+
+### Folder Icons ###
+
+	spriteType = {
+		name = "GFX_technology_dandt_tech_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_dandt_tech_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_dandt_tech_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_technology_dandt_tech_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_dandt_tech_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	spriteType = {
+		name = "GFX_technology_dandt_resource_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_dandt_resource_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_dandt_resource_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_dandt_resource_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_dandt_resource_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+### Resource Extraction ###
+
+	spriteType = {
+		name = "GFX_tech_intensive_agriculture_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_intensive_agriculture.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_tractors_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_tractors.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_agronomy_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_agronomy.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_intensive_farming_methods_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_intensive_farming_methods.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_sprinkler_irrigation_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_sprinkler_irrigation.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_crop_dusting_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_crop_dusting.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_improved_tractors_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_improved_tractors.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_agricultural_unit_machinery_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_agricultural_unit_machinery.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_electrified_wire_fencing_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_electrified_wire_fencing.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_mechanized_milking_machines_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_mechanized_milking_machines.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_artificial_breeding_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_artificial_breeding.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_nitrogen_fertilizers_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_nitrogen_fertilizers.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_synthetic_fertilizers_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_synthetic_fertilizers.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_nitrophosphate_process_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_nitrophosphate_process.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_advanced_synthetic_fertilizers_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_advanced_synthetic_fertilizers.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_cable_tool_drilling_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_cable_tool_drilling.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_early_rotary_drilling_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_early_rotary_drilling.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_shaft_driven_rotary_table_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_shaft_driven_rotary_table.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_four_speed_drawworks_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_four_speed_drawworks.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_unitized_drawworks_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_unitized_drawworks.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_directional_drilling_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_directional_drilling.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_drilling_mud_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_drilling_mud.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_standardized_derrick_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_standardized_derrick.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_hydraulic_ram_type_blowout_preventer_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_hydraulic_ram_type_blowout_preventer.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_tricone_bit_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_tricone_bit.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_on_water_drilling_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_on_water_drilling.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_offshore_oil_well_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_offshore_oil_well.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_jackup_oil_rig_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_jackup_oil_rig.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_steel_picks_and_shovels_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_steel_picks_and_shovels.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_steam_shovels_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_steam_shovels.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_diesel_shovels_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_diesel_shovels.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_power_shovels_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_power_shovels.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_coal_cutting_machines_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_coal_cutting_machines.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_loading_machines_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_loading_machines.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_longwall_mining_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_longwall_mining.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_hydraulic_excavators_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_hydraulic_excavators.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_bucket_wheel_excavators_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_bucket_wheel_excavators.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_mine_mechanization_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_mine_mechanization.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_continuous_mining_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_continuous_mining.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_electric_cap_lights_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_electric_cap_lights.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_methanometer_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_methanometer.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_steam_powered_sawmills_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_steam_powered_sawmills.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_conservation_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_conservation.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_bucksaws_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_bucksaws.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_chainsaws_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_chainsaws.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_hydraulic_shears_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_hydraulic_shears.dds"
+	}
+}

@@ -1,0 +1,40 @@
+
+state={
+	id=390
+	name="STATE_390"
+	manpower = 692849
+
+
+	state_category = state_cat
+
+	resources = {
+		foodstuffs = 3
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+		victory_points = {
+			1747 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = weather_wet_season
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1747 1875 3750 4839 4880 7745 7771 7862 10569 10595 12620 12667
+	}
+}

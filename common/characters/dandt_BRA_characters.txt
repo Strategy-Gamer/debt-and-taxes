@@ -1,0 +1,208 @@
+characters = {
+	#1926 Election
+		BRA_joaquim_francisco_de_assis_brasil = {
+			name = BRA_joaquim_francisco_de_assis_brasil
+			#https://en.wikipedia.org/wiki/Joaquim_Francisco_de_Assis_Brasil
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_joaquim_francisco_de_assis_brasil
+				}
+			}
+			#ideology_liberal
+		}
+		BRA_washington_luis_pereira_de_sousa = {
+			name = BRA_washington_luis_pereira_de_sousa
+			#https://en.wikipedia.org/wiki/Washington_Lu%C3%ADs
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_washington_luis_pereira_de_sousa
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1930 Election
+		BRA_julio_prestes_de_albuquerque = {
+			name = BRA_julio_prestes_de_albuquerque
+			#https://en.wikipedia.org/wiki/J%C3%BAlio_Prestes
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_julio_prestes_de_albuquerque
+				}
+			}
+			#ideology_conservative
+		}
+		BRA_getulio_dornelles_vargas = {
+			name = BRA_getulio_dornelles_vargas
+			#https://en.wikipedia.org/wiki/Get%C3%BAlio_Vargas
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_getulio_dornelles_vargas
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1934 Election
+		BRA_antonio_augusto_borges_de_medeiros = {
+			name = BRA_antonio_augusto_borges_de_medeiros
+			#https://en.wikipedia.org/wiki/Borges_de_Medeiros
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_antonio_augusto_borges_de_medeiros
+				}
+			}
+			#ideology_conservative
+		}
+		BRA_pedro_aurelio_de_gois_monteiro = {
+			name = BRA_pedro_aurelio_de_gois_monteiro
+			#https://pt.wikipedia.org/wiki/Pedro_Aur%C3%A9lio_de_G%C3%B3is_Monteiro
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_pedro_aurelio_de_gois_monteiro
+				}
+			}
+			#ideology_liberal
+		}
+		BRA_protogenes_guimaraes_pereira = {
+			name = BRA_protogenes_guimaraes_pereira
+			#https://pt.wikipedia.org/wiki/Prot%C3%B3genes_Guimar%C3%A3es
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_protogenes_guimaraes_pereira
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1945 Revolution
+		BRA_jose_linhares = {
+			name = BRA_jose_linhares
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Linhares
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_jose_linhares
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1945 Election
+		BRA_yelo_fluza = {
+			name = BRA_yelo_fluza
+			#https://en.wikipedia.org/wiki/Yedo_Fi%C3%BAza
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_yelo_fluza
+				}
+			}
+			#ideology_communist
+		}
+		BRA_eurico_gaspar_dutra = {
+			name = BRA_eurico_gaspar_dutra
+			#https://en.wikipedia.org/wiki/Eurico_Gaspar_Dutra
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_eurico_gaspar_dutra
+				}
+			}
+			#ideology_liberal
+		}
+		BRA_mario_rolim_teles = {
+			name = BRA_mario_rolim_teles
+			#https://pt.wikipedia.org/wiki/M%C3%A1rio_Rolim_Teles
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_mario_rolim_teles
+				}
+			}
+			#ideology_agrarian
+		}
+		BRA_eduardo_gomes = {
+			name = BRA_eduardo_gomes
+			#https://en.wikipedia.org/wiki/Eduardo_Gomes
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_eduardo_gomes
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1950 Election
+		BRA_cristiano_machado = {
+			name = BRA_cristiano_machado
+			#https://en.wikipedia.org/wiki/Cristiano_Machado
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_cristiano_machado
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1955 Election
+		BRA_adhemar_pereira_de_barros = {
+			name = BRA_adhemar_pereira_de_barros
+			#https://en.wikipedia.org/wiki/Adhemar_de_Barros
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_adhemar_pereira_de_barros
+				}
+			}
+			#ideology_socialist
+		}
+		BRA_juscelino_kubitschek_de_oliveira = {
+			name = BRA_juscelino_kubitschek_de_oliveira
+			#https://en.wikipedia.org/wiki/Juscelino_Kubitschek
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_juscelino_kubitschek_de_oliveira
+				}
+			}
+			#ideology_liberal
+		}
+		BRA_juarez_tavora = {
+			name = BRA_juarez_tavora
+			#https://en.wikipedia.org/wiki/Juarez_T%C3%A1vora
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_juarez_tavora
+				}
+			}
+			#ideology_conservative
+		}
+		BRA_plino_salgado = {
+			name = BRA_plino_salgado
+			#https://en.wikipedia.org/wiki/Pl%C3%ADnio_Salgado
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_plino_salgado
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1960 Election
+		BRA_henrique_batista_duffles_teixeira_lott = {
+			name = BRA_henrique_batista_duffles_teixeira_lott
+			#https://en.wikipedia.org/wiki/Henrique_Teixeira_Lott
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_henrique_batista_duffles_teixeira_lott
+				}
+			}
+			#ideology_liberal
+		}
+		BRA_janio_de_silva_quadros = {
+			name = BRA_janio_de_silva_quadros
+			#https://en.wikipedia.org/wiki/J%C3%A2nio_Quadros
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BRA_janio_de_silva_quadros
+				}
+			}
+			#ideology_conservative
+		}
+	#
+}

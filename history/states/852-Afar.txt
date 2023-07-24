@@ -1,0 +1,26 @@
+
+state={
+	id=852
+	name="STATE_852"
+
+	history={
+		owner = AFA
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		2072 5041 13412 13413 
+	}
+	manpower=579282
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

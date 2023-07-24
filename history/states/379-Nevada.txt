@@ -1,0 +1,41 @@
+
+state={
+	id=379
+	name="STATE_379"
+	manpower = 91057
+
+
+
+	state_category = state_cat
+
+	resources={
+		steel=70 # was: 136
+		tungsten=32 # was: 62
+		aluminium=25 # was: 44
+		precious_metals = 15
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = USA
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = generic_state_untapped_mines
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		1862 4521 4607 4736 4799 4816 7756 7827 7879 10422 10591 12134 12399 12425
+	}
+}

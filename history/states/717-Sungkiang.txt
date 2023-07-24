@@ -1,0 +1,29 @@
+
+state={
+	id=717
+	name="STATE_717"
+
+	history={
+		owner = FEG
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		783 800 810 861 927 944 946 973 1571 3791 3815 3843 3929 3944 3947 4551 5427 6806 6811 6863 6964 7569 7670 9623 9766 9798 9841 9883 9897 9928 10215 10376 10463 10503 10519 10521 11823 11850 11862 11893 11906 12342 12355 12443 12482 12500 
+	}
+	manpower=4924174
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

@@ -1,0 +1,30 @@
+state={
+	id=880
+	name="STATE_880"
+	provinces={
+		1053 1110 4081 4183 7004 7172 7199 9942 10112 11945 12030 
+	}
+	history={
+		owner = PRC
+		add_core_of = PRC
+		buildings={
+			infrastructure=1
+		}
+		victory_points={
+			9942 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+	manpower=4824821
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

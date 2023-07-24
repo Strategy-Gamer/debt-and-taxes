@@ -1,0 +1,233 @@
+
+#Terrain Update - TODO - Put in separate file
+	terrain_update = {
+
+		#Terrain
+		#Building Slots
+			set_temp_variable = { flat_building_slots_temp = flat_percentage }
+			set_temp_variable = { hilly_building_slots_temp = hilly_percentage }
+			set_temp_variable = { mountainous_building_slots_temp = mountainous_percentage }
+			set_temp_variable = { dunes_building_slots_temp = dunes_percentage }
+			set_temp_variable = { swamp_building_slots_temp = swamp_percentage }
+
+			multiply_temp_variable = { flat_building_slots_temp = global.flat_building_slots }
+			multiply_temp_variable = { hilly_building_slots_temp = global.hilly_building_slots }
+			multiply_temp_variable = { mountainous_building_slots_temp = global.mountainous_building_slots }
+			multiply_temp_variable = { dunes_building_slots_temp = global.dunes_building_slots }
+			multiply_temp_variable = { swamp_building_slots_temp = global.swamp_building_slots }
+
+			set_temp_variable = { terrain_building_slots_temp = 0 }
+			add_to_temp_variable = { terrain_building_slots_temp = flat_building_slots_temp }
+			add_to_temp_variable = { terrain_building_slots_temp = hilly_building_slots_temp }
+			add_to_temp_variable = { terrain_building_slots_temp = mountainous_building_slots_temp }
+			add_to_temp_variable = { terrain_building_slots_temp = dunes_building_slots_temp }
+			add_to_temp_variable = { terrain_building_slots_temp = swamp_building_slots_temp }
+
+			set_temp_variable = { forest_building_slots_temp = 1 }
+			set_temp_variable = { forest_percentage_temp = forest_percentage }
+			multiply_temp_variable = { forest_percentage_temp = global.building_slots_modifier }
+			add_to_temp_variable = { forest_building_slots_temp = forest_percentage_temp }
+			multiply_temp_variable = { terrain_building_slots_temp = forest_building_slots_temp }
+
+			round_temp_variable = terrain_building_slots_temp
+
+			subtract_from_temp_variable = { terrain_building_slots_temp = terrain_building_slots }
+			add_extra_state_shared_building_slots = terrain_building_slots_temp
+			add_to_temp_variable = { terrain_building_slots_temp = terrain_building_slots }
+			set_variable = { terrain_building_slots = terrain_building_slots_temp }
+		#
+		#Build Cost
+			set_temp_variable = { flat_build_cost_temp = flat_percentage }
+			set_temp_variable = { hilly_build_cost_temp = hilly_percentage }
+			set_temp_variable = { mountainous_build_cost_temp = mountainous_percentage }
+			set_temp_variable = { dunes_build_cost_temp = dunes_percentage }
+			set_temp_variable = { swamp_build_cost_temp = swamp_percentage }
+			set_temp_variable = { forest_build_cost_temp = forest_percentage }
+
+			multiply_temp_variable = { flat_build_cost_temp = global.flat_build_cost_modifier }
+			multiply_temp_variable = { hilly_build_cost_temp = global.hilly_build_cost_modifier }
+			multiply_temp_variable = { mountainous_build_cost_temp = global.mountainous_build_cost_modifier }
+			multiply_temp_variable = { dunes_build_cost_temp = global.dunes_build_cost_modifier }
+			multiply_temp_variable = { swamp_build_cost_temp = global.swamp_build_cost_modifier }
+			multiply_temp_variable = { forest_build_cost_temp = global.forest_build_cost_modifier }
+
+			set_variable = { terrain_build_cost_modifier = 0 }
+			add_to_variable = { terrain_build_cost_modifier = flat_build_cost_temp }
+			add_to_variable = { terrain_build_cost_modifier = hilly_build_cost_temp }
+			add_to_variable = { terrain_build_cost_modifier = mountainous_build_cost_temp }
+			add_to_variable = { terrain_build_cost_modifier = dunes_build_cost_temp }
+			add_to_variable = { terrain_build_cost_modifier = swamp_build_cost_temp }
+			add_to_variable = { terrain_build_cost_modifier = forest_build_cost_temp }
+		#
+		#Building Maintenance
+			set_temp_variable = { flat_building_maintenance_temp = flat_percentage }
+			set_temp_variable = { hilly_building_maintenance_temp = hilly_percentage }
+			set_temp_variable = { mountainous_building_maintenance_temp = mountainous_percentage }
+			set_temp_variable = { dunes_building_maintenance_temp = dunes_percentage }
+			set_temp_variable = { swamp_building_maintenance_temp = swamp_percentage }
+			set_temp_variable = { forest_building_maintenance_temp = forest_percentage }
+
+			multiply_temp_variable = { flat_building_maintenance_temp = global.flat_building_maintenance_modifier }
+			multiply_temp_variable = { hilly_building_maintenance_temp = global.hilly_building_maintenance_modifier }
+			multiply_temp_variable = { mountainous_building_maintenance_temp = global.mountainous_building_maintenance_modifier }
+			multiply_temp_variable = { dunes_building_maintenance_temp = global.dunes_building_maintenance_modifier }
+			multiply_temp_variable = { swamp_building_maintenance_temp = global.swamp_building_maintenance_modifier }
+			multiply_temp_variable = { forest_building_maintenance_temp = global.forest_building_maintenance_modifier }
+
+			set_variable = { terrain_building_maintenance_modifier = 0 }
+			add_to_variable = { terrain_building_maintenance_modifier = flat_building_maintenance_temp }
+			add_to_variable = { terrain_building_maintenance_modifier = hilly_building_maintenance_temp }
+			add_to_variable = { terrain_building_maintenance_modifier = mountainous_building_maintenance_temp }
+			add_to_variable = { terrain_building_maintenance_modifier = dunes_building_maintenance_temp }
+			add_to_variable = { terrain_building_maintenance_modifier = swamp_building_maintenance_temp }
+			add_to_variable = { terrain_building_maintenance_modifier = forest_building_maintenance_temp }
+		#
+		#Transport Cost
+			set_temp_variable = { flat_transport_cost_temp = flat_percentage }
+			set_temp_variable = { hilly_transport_cost_temp = hilly_percentage }
+			set_temp_variable = { mountainous_transport_cost_temp = mountainous_percentage }
+			set_temp_variable = { dunes_transport_cost_temp = dunes_percentage }
+			set_temp_variable = { swamp_transport_cost_temp = swamp_percentage }
+			set_temp_variable = { forest_transport_cost_temp = forest_percentage }
+
+			multiply_temp_variable = { flat_transport_cost_temp = global.flat_transport_cost_modifier }
+			multiply_temp_variable = { hilly_transport_cost_temp = global.hilly_transport_cost_modifier }
+			multiply_temp_variable = { mountainous_transport_cost_temp = global.mountainous_transport_cost_modifier }
+			multiply_temp_variable = { dunes_transport_cost_temp = global.dunes_transport_cost_modifier }
+			multiply_temp_variable = { swamp_transport_cost_temp = global.swamp_transport_cost_modifier }
+			multiply_temp_variable = { forest_transport_cost_temp = global.forest_transport_cost_modifier }
+
+			set_variable = { terrain_transport_cost_modifier = 0 }
+			add_to_variable = { terrain_transport_cost_modifier = flat_transport_cost_temp }
+			add_to_variable = { terrain_transport_cost_modifier = hilly_transport_cost_temp }
+			add_to_variable = { terrain_transport_cost_modifier = mountainous_transport_cost_temp }
+			add_to_variable = { terrain_transport_cost_modifier = dunes_transport_cost_temp }
+			add_to_variable = { terrain_transport_cost_modifier = swamp_transport_cost_temp }
+			add_to_variable = { terrain_transport_cost_modifier = forest_transport_cost_temp }
+		#
+		#Grain Farm Output
+			set_temp_variable = { flat_grain_farm_output_temp = flat_percentage }
+			set_temp_variable = { hilly_grain_farm_output_temp = hilly_percentage }
+			set_temp_variable = { mountainous_grain_farm_output_temp = mountainous_percentage }
+			set_temp_variable = { dunes_grain_farm_output_temp = dunes_percentage }
+			set_temp_variable = { swamp_grain_farm_output_temp = swamp_percentage }
+			set_temp_variable = { forest_grain_farm_output_temp = forest_percentage }
+
+			multiply_temp_variable = { flat_grain_farm_output_temp = global.flat_grain_farm_output_modifier }
+			multiply_temp_variable = { hilly_grain_farm_output_temp = global.hilly_grain_farm_output_modifier }
+			multiply_temp_variable = { mountainous_grain_farm_output_temp = global.mountainous_grain_farm_output_modifier }
+			multiply_temp_variable = { dunes_grain_farm_output_temp = global.dunes_grain_farm_output_modifier }
+			multiply_temp_variable = { swamp_grain_farm_output_temp = global.swamp_grain_farm_output_modifier }
+			multiply_temp_variable = { forest_grain_farm_output_temp = global.forest_grain_farm_output_modifier }
+
+			set_variable = { terrain_grain_farm_output_modifier = 0 }
+			add_to_variable = { terrain_grain_farm_output_modifier = flat_grain_farm_output_temp }
+			add_to_variable = { terrain_grain_farm_output_modifier = hilly_grain_farm_output_temp }
+			add_to_variable = { terrain_grain_farm_output_modifier = mountainous_grain_farm_output_temp }
+			add_to_variable = { terrain_grain_farm_output_modifier = dunes_grain_farm_output_temp }
+			add_to_variable = { terrain_grain_farm_output_modifier = swamp_grain_farm_output_temp }
+			add_to_variable = { terrain_grain_farm_output_modifier = forest_grain_farm_output_temp }
+		#
+		#Livestock Ranch Output
+			set_temp_variable = { flat_livestock_ranch_output_temp = flat_percentage }
+			set_temp_variable = { hilly_livestock_ranch_output_temp = hilly_percentage }
+			set_temp_variable = { mountainous_livestock_ranch_output_temp = mountainous_percentage }
+			set_temp_variable = { dunes_livestock_ranch_output_temp = dunes_percentage }
+			set_temp_variable = { swamp_livestock_ranch_output_temp = swamp_percentage }
+			set_temp_variable = { forest_livestock_ranch_output_temp = forest_percentage }
+
+			multiply_temp_variable = { flat_livestock_ranch_output_temp = global.flat_livestock_ranch_output_modifier }
+			multiply_temp_variable = { hilly_livestock_ranch_output_temp = global.hilly_livestock_ranch_output_modifier }
+			multiply_temp_variable = { mountainous_livestock_ranch_output_temp = global.mountainous_livestock_ranch_output_modifier }
+			multiply_temp_variable = { dunes_livestock_ranch_output_temp = global.dunes_livestock_ranch_output_modifier }
+			multiply_temp_variable = { swamp_livestock_ranch_output_temp = global.swamp_livestock_ranch_output_modifier }
+			multiply_temp_variable = { forest_livestock_ranch_output_temp = global.forest_livestock_ranch_output_modifier }
+
+			set_variable = { terrain_livestock_ranch_output_modifier = 0 }
+			add_to_variable = { terrain_livestock_ranch_output_modifier = flat_livestock_ranch_output_temp }
+			add_to_variable = { terrain_livestock_ranch_output_modifier = hilly_livestock_ranch_output_temp }
+			add_to_variable = { terrain_livestock_ranch_output_modifier = mountainous_livestock_ranch_output_temp }
+			add_to_variable = { terrain_livestock_ranch_output_modifier = dunes_livestock_ranch_output_temp }
+			add_to_variable = { terrain_livestock_ranch_output_modifier = swamp_livestock_ranch_output_temp }
+			add_to_variable = { terrain_livestock_ranch_output_modifier = forest_livestock_ranch_output_temp }
+		#
+		#Lumber Lodge Output
+			set_temp_variable = { forest_lumber_lodge_output_temp = forest_percentage }
+			multiply_temp_variable = { forest_lumber_lodge_output_temp = global.forest_lumber_lodge_output_modifier }
+			set_variable = { terrain_lumber_lodge_output_modifier = forest_lumber_lodge_output_temp }
+		#
+
+		#Rivers
+		#Building Slots
+			set_temp_variable = { river_building_slots_temp = 0 }
+			meta_effect = {
+				text = {
+					add_to_temp_variable = { river_building_slots_temp = global.navigable_river_[Nav_River_Level]_building_slots }
+					add_to_temp_variable = { river_building_slots_temp = global.unnavigable_river_[Unnav_River_Level]_building_slots }
+				}
+				Nav_River_Level = "[?navigable_rivers|0]"
+				Unnav_River_Level = "[?unnavigable_rivers|0]"
+			}
+			subtract_from_temp_variable = { river_building_slots_temp = river_building_slots }
+			add_extra_state_shared_building_slots = river_building_slots_temp
+			add_to_temp_variable = { river_building_slots_temp = river_building_slots }
+			set_variable = { river_building_slots = river_building_slots_temp }
+		#
+		#Build Cost
+			set_variable = { river_build_cost_modifier = 0 }
+			meta_effect = {
+				text = {
+					add_to_variable = { river_build_cost_modifier = global.navigable_river_[Nav_River_Level]_build_cost_modifier }
+					add_to_variable = { river_build_cost_modifier = global.unnavigable_river_[Unnav_River_Level]_build_cost_modifier }
+				}
+				Nav_River_Level = "[?navigable_rivers|0]"
+				Unnav_River_Level = "[?unnavigable_rivers|0]"
+			}
+		#
+		#Transport Cost
+			set_variable = { river_transport_cost_modifier = 0 }
+			meta_effect = {
+				text = {
+					add_to_variable = { river_transport_cost_modifier = global.navigable_river_[Nav_River_Level]_transport_cost_modifier }
+					add_to_variable = { river_transport_cost_modifier = global.unavigable_river_[Unnav_River_Level]_transport_cost_modifier }
+				}
+				Nav_River_Level = "[?navigable_rivers|0]"
+				Unnav_River_Level = "[?unnavigable_rivers|0]"
+			}
+		#
+		#Shipping Cost
+			set_variable = { river_shipping_cost_modifier = 0 }
+			meta_effect = {
+				text = {
+					add_to_variable = { river_shipping_cost_modifier = global.navigable_river_[Nav_River_Level]_shipping_cost_modifier }
+					add_to_variable = { river_shipping_cost_modifier = global.unnavigable_river_[Unnav_River_Level]_shipping_cost_modifier }
+				}
+				Nav_River_Level = "[?navigable_rivers|0]"
+				Unnav_River_Level = "[?unnavigable_rivers|0]"
+			}
+		#
+		#Grain Farm Output
+			set_variable = { river_grain_farm_output_modifier = 0 }
+			meta_effect = {
+				text = {
+					add_to_variable = { river_grain_farm_output_modifier = global.navigable_river_[Nav_River_Level]_grain_farm_output_modifier }
+					add_to_variable = { river_grain_farm_output_modifier = global.unnavigable_river_[Unnav_River_Level]_grain_farm_output_modifier }
+				}
+				Nav_River_Level = "[?navigable_rivers|0]"
+				Unnav_River_Level = "[?unnavigable_rivers|0]"
+			}
+		#
+
+		#Growing
+		#Grain Farm Output
+			set_variable = { terrain_grain_farm_output_multiplier = 1 }
+			meta_effect = {
+				text = {
+					multiply_variable = { terrain_grain_farm_output_multiplier = global.soil_quality_[Soil_Quality_Level]_grain_farm_output_multiplier }
+					multiply_variable = { terrain_grain_farm_output_multiplier = global.growth_period_[Growth_Period_Level]_grain_farm_output_multiplier }
+				}
+				Soil_Quality_Level = "[?soil_quality|0]"
+				Growth_Period_Level = "[?growth_period|0]"
+			}
+		#
+	}

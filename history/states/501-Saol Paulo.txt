@@ -1,0 +1,40 @@
+
+state={
+	id=501
+	name="STATE_501"
+	manpower = 6199200
+	state_category = city
+
+	history={
+		owner = BRA
+		add_core_of = BRA
+		buildings = {
+
+			infrastructure = 3 #was: 5
+			5112 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			10513 20
+		}
+		victory_points = {
+			5112 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1583 5186 7636 10513 10947 10994 11003 11008 12937 12972 10432 5112 5167 7553
+	}
+
+	local_supplies=0.0
+}

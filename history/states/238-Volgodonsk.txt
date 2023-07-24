@@ -1,0 +1,34 @@
+
+state={
+	id=238
+	name="STATE_238"
+	manpower = 556677
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		victory_points = {
+			775 1 # City of Volgodonsk only founded in 1950 to service the new reservoir
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		426 775 3417 3443 3464 3587 3777 3779 6417 6468 6490 6765 6796 9415 9581 11400 11403 
+	}
+
+	local_supplies=0.0 
+}

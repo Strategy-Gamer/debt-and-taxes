@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+		generic_booming_printing_industry = {
+			allowed = { always = no }
+
+			picture = generic_economic_increase
+
+			modifier = {
+				industry_consumer_goods_factory_throughput_factor = 0.025
+				industry_entertainment_complex_output_factor = 0.05
+			}
+		}
+		generic_famine = {
+			allowed = { always = no }
+
+			picture = idea_raj_risk_of_famine
+
+			modifier = {
+				industry_grain_farm_throughput_factor = -0.25
+				industry_rice_paddy_throughput_factor = -0.25
+				industry_livestock_ranch_throughput_factor = -0.25
+			}
+		}
+	}
+}

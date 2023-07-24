@@ -1,0 +1,563 @@
+dandt_on_startup = {
+	# USA
+		261 = { #Ohio
+
+			set_variable = { arable_land = 96 } #27 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 6 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 1 used
+			set_variable = { deposits@token:industry_iron_mine = 6 } # 2 used
+			set_variable = { deposits@token:industry_coal_mine = 10 } # 4 used
+			set_variable = { deposits@token:industry_sulfur_mine = 4 } # 0 used
+			set_variable = { deposits@token:industry_bauxite_mine = 2 } # 0 used
+		}
+		357 = { #Massachusetts
+			set_variable = { arable_land = 28 } #9 used
+			set_variable = { deposits@token:industry_fishing_wharf = 4 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 6 } # 0 used
+			set_variable = { deposits@token:industry_iron_mine = 8 } # 2 used
+			set_variable = { deposits@token:industry_copper_mine = 4 } # 1 used
+			set_variable = { deposits@token:industry_precious_metals_mine = 2 } # 1 used
+		}
+		358 = { #New York
+			set_variable = { arable_land = 36 } #15 used
+			set_variable = { deposits@token:industry_fishing_wharf = 4 } # 2 used
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 3 used
+		}
+		359 = { #New Jersey
+			set_variable = { arable_land = 24 } #5 used
+			set_variable = { deposits@token:industry_cotton_plantation = 4 } # 0 used
+			set_variable = { deposits@token:industry_fishing_wharf = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 4 } # 1 used
+			set_variable = { deposits@token:industry_iron_mine = 4 } # 1 used
+		}
+		360 = { #Pennsylvania
+			set_variable = { arable_land = 48 } #16 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 6 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 1 used
+			set_variable = { deposits@token:industry_iron_mine = 8 } # 3 used
+			set_variable = { deposits@token:industry_coal_mine = 24 } # 8 used
+			set_variable = { deposits@token:industry_copper_mine = 2 } # 1 used
+			set_variable = { deposits@token:industry_sulfur_mine = 4 } # 1 used
+		}
+		361 = { #Maryland
+			set_variable = { arable_land = 28 } #6 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 8 } # 0 used
+			set_variable = { deposits@token:industry_fishing_wharf = 6 } # 2 used
+			set_variable = { deposits@token:industry_lumber_lodge = 4 } # 0 used
+			set_variable = { deposits@token:industry_iron_mine = 4 } # 1 used
+			set_variable = { deposits@token:industry_coal_mine = 6 } # 1 used
+		}
+		362 = { #Virginia
+			set_variable = { arable_land = 72 } #22 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 20 } # 7 used
+			set_variable = { deposits@token:industry_fishing_wharf = 4 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 8 } # 1 used
+			set_variable = { deposits@token:industry_coal_mine = 12 } # 1 used
+		}
+		363 = { #North Carolina
+			set_variable = { arable_land = 84 } #30 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 32 } # 13 used
+			set_variable = { deposits@token:industry_fishing_wharf = 4 } # 1 used
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 0 used
+		}
+		364 = { #South Carolina
+			set_variable = { arable_land = 76 } #28 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 1 used
+			set_variable = { deposits@token:industry_cotton_plantation = 28 } # 7 used
+			set_variable = { deposits@token:industry_fishing_wharf = 4 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 6 } # 0 used
+		}
+		365 = { #Georgia
+			set_variable = { arable_land = 100 } #40 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 1 used
+			set_variable = { deposits@token:industry_cotton_plantation = 36 } # 11 used
+			set_variable = { deposits@token:industry_fishing_wharf = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 6 } # 1 used
+		}
+		366 = { #Florida
+			set_variable = { arable_land = 52 } #14 used
+			set_variable = { deposits@token:industry_cotton_plantation = 12 } # 2 used
+			set_variable = { deposits@token:industry_fishing_wharf = 10 } # 2 used
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 2 used
+			set_variable = { deposits@token:industry_sulfur_mine = 12 } # 1 used
+			set_variable = { deposits@token:industry_offshore_oil_rig = 4 } # 0 used
+		}
+		367 = { #Alabama
+			set_variable = { arable_land = 96 } #37 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 6 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 32 } # 12 used
+			set_variable = { deposits@token:industry_fishing_wharf = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 12 } # 3 used
+			set_variable = { deposits@token:industry_iron_mine = 14 } # 4 used
+			set_variable = { deposits@token:industry_coal_mine = 16 } # 3 used
+			set_variable = { deposits@token:industry_sulfur_mine = 8 } # 2 used
+			set_variable = { deposits@token:industry_offshore_oil_rig = 6 } # 0 used
+		}
+		368 = { #Tennessee
+			set_variable = { arable_land = 56 } #21 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 6 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 22 } # 7 used
+			set_variable = { deposits@token:industry_lumber_lodge = 8 } # 1 used
+		}
+		369 = { #Kentucky
+			set_variable = { arable_land = 64 } #25 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 6 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 16 } # 5 used
+			set_variable = { deposits@token:industry_lumber_lodge = 8 } # 0 used
+			set_variable = { deposits@token:industry_coal_mine = 12 } # 2 used
+		}
+		370 = { #Mississippi
+			set_variable = { arable_land = 86 } #30 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+			set_variable = { deposits@token:industry_rice_paddy = 6 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 36 } # 11 used
+			set_variable = { deposits@token:industry_fishing_wharf = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 12 } # 3 used
+			set_variable = { deposits@token:industry_sulfur_mine = 10 } # 3 used
+			set_variable = { deposits@token:industry_offshore_oil_rig = 4 } # 0 used
+		}
+		371 = { # Louisiana
+			set_variable = { arable_land = 72 } #22 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 8 } # 0 used
+			set_variable = { deposits@token:industry_rice_paddy = 12 } # 4 used
+			set_variable = { deposits@token:industry_cotton_plantation = 16 } # 3 used
+			set_variable = { deposits@token:industry_fishing_wharf = 6 } # 1 used
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 2 used
+			set_variable = { deposits@token:industry_sulfur_mine = 8 } # 4 used
+			set_variable = { deposits@token:industry_oil_rig = 6 } # 2 used
+			set_variable = { deposits@token:industry_offshore_oil_rig = 10 } # 0 used
+		}
+		372 = { # Arkansas
+			set_variable = { arable_land = 70 } #30 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 6 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 20 } # 6 used
+			set_variable = { deposits@token:industry_lumber_lodge = 12 } # 4 used
+			set_variable = { deposits@token:industry_coal_mine = 8 } # 2 used
+			set_variable = { deposits@token:industry_bauxite_mine = 2 } # 1 used
+			set_variable = { deposits@token:industry_oil_rig = 4 } # 1 used
+		}
+		373 = { #Missouri
+			set_variable = { arable_land = 94 } #38 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 6 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 16 } # 5 used
+			set_variable = { deposits@token:industry_lumber_lodge = 14 } # 2 used
+			set_variable = { deposits@token:industry_coal_mine = 10 } # 3 used
+			set_variable = { deposits@token:industry_copper_mine = 4 } # 0 used
+			set_variable = { deposits@token:industry_bauxite_mine = 2 } # 0 used
+		}
+		374 = { # Oklahoma
+			set_variable = { arable_land = 72 } #28 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 10 } # 3 used
+			set_variable = { deposits@token:industry_lumber_lodge = 14 } # 2 used
+			set_variable = { deposits@token:industry_coal_mine = 8 } # 1 used
+			set_variable = { deposits@token:industry_bauxite_mine = 4 } # 0 used
+			set_variable = { deposits@token:industry_oil_rig = 24 } # 7 used
+		}
+		375 = { #Texas
+			set_variable = { arable_land = 120 } #38 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 8 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 16 } # 4 used
+			set_variable = { deposits@token:industry_lumber_lodge = 12 } # 1 used
+			set_variable = { deposits@token:industry_iron_mine = 6 } # 1 used
+			set_variable = { deposits@token:industry_sulfur_mine = 8 } # 1 used
+			set_variable = { deposits@token:industry_bauxite_mine = 8 } # 0 used
+			set_variable = { deposits@token:industry_oil_rig = 32 } # 7 used
+			set_variable = { deposits@token:industry_offshore_oil_rig = 4 } # 0 used
+		}
+		376 = { #New Mexico
+			set_variable = { arable_land = 16 } #5 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 6 } # 1 used
+			set_variable = { deposits@token:industry_copper_mine = 6 } # 1 used
+			set_variable = { deposits@token:industry_precious_metals_mine = 2 } # 0 used
+			set_variable = { deposits@token:industry_coal_mine = 8 } # 1 used
+			set_variable = { deposits@token:industry_bauxite_mine = 4 } # 0 used
+			set_variable = { deposits@token:industry_oil_rig = 12 } # 2 used
+			set_variable = { deposits@token:industry_rare_earth_metals_mine = 2 } # 0 used
+		}
+		377 = {# Arizona
+			set_variable = { arable_land = 10 } #3 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 8 } # 1 used
+			set_variable = { deposits@token:industry_copper_mine = 20 } # 4 used
+			set_variable = { deposits@token:industry_precious_metals_mine = 6 } # 2 used
+			set_variable = { deposits@token:industry_coal_mine = 10 } # 2 used
+			set_variable = { deposits@token:industry_bauxite_mine = 2 } # 0 used
+			set_variable = { deposits@token:industry_rare_earth_metals_mine = 4 } # 0 used
+		}
+		378 = { #California
+			set_variable = { arable_land = 108 } #24 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_fishing_wharf = 8 } # 2 used
+			set_variable = { deposits@token:industry_sulfur_mine = 4 } # 1 used
+		}
+		379 = { #Nevada
+			set_variable = { arable_land = 2 } #0 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 10 } # 0 used
+			set_variable = { deposits@token:industry_tungsten_mine = 8 } # 2 used
+			set_variable = { deposits@token:industry_copper_mine = 4 } # 1 used
+			set_variable = { deposits@token:industry_bauxite_mine = 4 } # 0 used
+			set_variable = { deposits@token:industry_precious_metals_mine = 4 } # 0 used
+			set_variable = { deposits@token:industry_iron_mine = 10 } # 0 used
+			set_variable = { deposits@token:industry_rare_earth_metals_mine = 4 } # 0 used
+		}
+		380 = { # Utah
+			set_variable = { arable_land = 12 } #3 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_copper_mine = 6 } # 2 used
+			set_variable = { deposits@token:industry_coal_mine = 20 } # 2 used
+			set_variable = { deposits@token:industry_rare_earth_metals_mine = 2 } # 0 used
+		}
+		381 = { #Wyoming
+			set_variable = { arable_land = 12 } #2 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 6 } # 1 used
+			set_variable = { deposits@token:industry_coal_mine = 36 } # 1 used
+			set_variable = { deposits@token:industry_precious_metals_mine = 2 } # 0 used
+			set_variable = { deposits@token:industry_rare_earth_metals_mine = 2 } # 0 used
+		}
+		382 = { #Colorado
+			set_variable = { arable_land = 28 } #7 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 6 } # 1 used
+			set_variable = { deposits@token:industry_iron_mine = 2 } # 1 used
+			set_variable = { deposits@token:industry_coal_mine = 4 } # 2 used
+			set_variable = { deposits@token:industry_oil_rig = 2 } # 0 used
+		}
+		383 = { #Kansas
+			set_variable = { arable_land = 70 } #21 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_coal_mine = 4 } # 1 used
+			set_variable = { deposits@token:industry_oil_rig = 6 } # 2 used
+		}
+		384 = { # Nebraska
+			set_variable = { arable_land = 72 } #21 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+		}
+		385 = { #Oregon
+			set_variable = { arable_land = 24 } #4 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+			set_variable = { deposits@token:industry_fishing_wharf = 4 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 24 } # 9 used
+		}
+		386 = { #Washington
+			set_variable = { arable_land = 12 } #0 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_fishing_wharf = 6 } # 1 used
+			set_variable = { deposits@token:industry_lumber_lodge = 40 } # 13 used
+			set_variable = { deposits@token:industry_coal_mine = 8 } # 2 used
+		}
+		387 = { # Idaho
+			set_variable = { arable_land = 24 } #6 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 16 } # 1 used
+			set_variable = { deposits@token:industry_iron_mine = 6 } # 1 used
+			set_variable = { deposits@token:industry_tungsten_mine = 4 } # 0 used
+			set_variable = { deposits@token:industry_chromium_mine = 2 } # 0 used
+			set_variable = { deposits@token:industry_copper_mine = 2 } # 0 used
+		}
+		389 = { #North Dakota
+			set_variable = { arable_land = 40 } #14 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+		}
+		390 = { # South Dakota
+			set_variable = { arable_land = 36 } #12 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+		}
+		391 = { #Minnesota
+			set_variable = { arable_land = 76 } #28 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 6 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 32 } # 6 used
+			set_variable = { deposits@token:industry_iron_mine = 20 } # 2 used
+			set_variable = { deposits@token:industry_coal_mine = 6 } # 2 used
+		}
+		392 = { #Iowa
+			set_variable = { arable_land = 84 } #29 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+			set_variable = { deposits@token:industry_coal_mine = 10 } # 2 used
+		}
+		393 = { #Michigan
+			set_variable = { arable_land = 32 } #13 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 2 used
+			set_variable = { deposits@token:industry_copper_mine = 10 } # 3 used
+			set_variable = { deposits@token:industry_coal_mine = 8 } # 2 used
+		}
+		394 = { #Wisconsin
+			set_variable = { arable_land = 72 } #24 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 2 used
+			set_variable = { deposits@token:industry_lumber_lodge = 24 } # 2 used
+			set_variable = { deposits@token:industry_iron_mine = 12 } # 2 used
+			set_variable = { deposits@token:industry_copper_mine = 4 } # 0 used
+			set_variable = { deposits@token:industry_coal_mine = 8 } # 2 used
+		}
+		395 = { #Illinois
+			set_variable = { arable_land = 104 } #34 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 1 used
+			set_variable = { deposits@token:industry_iron_mine = 10 } # 5 used
+			set_variable = { deposits@token:industry_coal_mine = 18 } # 7 used
+		}
+		396 = { #Indiana
+			set_variable = { arable_land = 68 } #24 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 6 } # 0 used
+			set_variable = { deposits@token:industry_iron_mine = 6 } # 3 used
+			set_variable = { deposits@token:industry_coal_mine = 6 } # 2 used
+		}
+		463 = { # Alaska
+			set_variable = { arable_land = 10 } #0 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_fishing_wharf = 12 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 12 } # 1 used
+			set_variable = { deposits@token:industry_precious_metals_mine = 6 } # 2 used
+		}
+		629 = { # Hawaii
+			set_variable = { arable_land = 12 } #2 used
+			set_variable = { deposits@token:industry_fishing_wharf = 12 } # 1 used
+		}
+		630 = {
+			set_variable = { deposits@token:industry_fishing_wharf = 4 }
+		}
+		631 = {
+			set_variable = { deposits@token:industry_fishing_wharf = 4 }
+			set_variable = { deposits@token:industry_convoys_shipyard = 2 }
+		}
+		632 = {
+			set_variable = { deposits@token:industry_fishing_wharf = 4 }
+		}
+		638 = {
+			set_variable = { arable_land = 4 }
+			set_variable = { deposits@token:industry_fishing_wharf = 4 }
+		}
+		642 = {
+			set_variable = { deposits@token:industry_fishing_wharf = 4 }
+		}
+		686 = {
+			set_variable = { deposits@token:industry_fishing_wharf = 4 }
+		}
+		727 = {
+			set_variable = { arable_land = 24 }
+			set_variable = { deposits@token:industry_fishing_wharf = 4 }
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 1 used
+		}
+		816 = { # West Virginia
+			set_variable = { arable_land = 24 } #10 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 2 used
+			set_variable = { deposits@token:industry_coal_mine = 44 } # 19 used
+			set_variable = { deposits@token:industry_sulfur_mine = 8 } # 2 used
+			set_variable = { deposits@token:industry_oil_rig = 4 } # 1 used
+		}
+		835 = { # Upstate
+			set_variable = { arable_land = 22 } #7 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 6 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 0 used
+			set_variable = { deposits@token:industry_iron_mine = 6 } # 2 used
+		}
+		836 = { #Adirondack
+			set_variable = { arable_land = 12 } #2 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 12 } # 3 used
+			set_variable = { deposits@token:industry_coal_mine = 4 } # 1 used
+			set_variable = { deposits@token:industry_copper_mine = 4 } # 1 used
+			set_variable = { deposits@token:industry_precious_metals_mine = 2 } # 1 used
+		}
+		837 = { # New England
+			set_variable = { arable_land = 20 } #7 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_fishing_wharf = 6 } # 2 used
+			set_variable = { deposits@token:industry_lumber_lodge = 16 } # 2 used
+		}
+		838 = { # Upper Peninsula
+			set_variable = { arable_land = 6 } #0 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 4 } # 1 used
+			set_variable = { deposits@token:industry_lumber_lodge = 12 } # 3 used
+			set_variable = { deposits@token:industry_iron_mine = 14 } # 4 used
+		}
+		839 = { # Alleghany
+			set_variable = { arable_land = 32 } #8 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 10 } # 1 used
+			set_variable = { deposits@token:industry_coal_mine = 36 } # 16 used
+			set_variable = { deposits@token:industry_iron_mine = 4 } # 1 used
+			set_variable = { deposits@token:industry_sulfur_mine = 6 } # 2 used
+			set_variable = { deposits@token:industry_oil_rig = 6 } # 2 used
+		}
+		840 = { #Northern Texas
+			set_variable = { arable_land = 40 } #12 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_oil_rig = 8 } # 2 used
+		}
+		841 = { #Southern Texas
+			set_variable = { arable_land = 44 } #17 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 4 } # 2 used
+			set_variable = { deposits@token:industry_copper_mine = 4 } # 1 used
+			set_variable = { deposits@token:industry_oil_rig = 10 } # 2 used
+			set_variable = { deposits@token:industry_offshore_oil_rig = 4 } # 0 used
+		}
+		842 = { #Rockies
+			set_variable = { arable_land = 10 } #2 used
+			set_variable = { deposits@token:industry_lumber_lodge = 12 } # 0 used
+			set_variable = { deposits@token:industry_iron_mine = 6 } # 1 used
+			set_variable = { deposits@token:industry_coal_mine = 8 } # 1 used
+		}
+		843 = { #Mojave
+			set_variable = { arable_land = 20 } #2 used
+			set_variable = { deposits@token:industry_cotton_plantation = 8 } # 0 used
+			set_variable = { deposits@token:industry_oil_rig = 14 } # 6 used
+		}
+		844 = { # Jefferson
+			set_variable = { arable_land = 14 } #0 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 1 used
+			set_variable = { deposits@token:industry_lumber_lodge = 16 } # 3 used
+			set_variable = { deposits@token:industry_iron_mine = 6 } # 2 used
+			set_variable = { deposits@token:industry_copper_mine = 4 } # 1 used
+			set_variable = { deposits@token:industry_precious_metals_mine = 4 } # 1 used
+		}
+		855 = { #Lincoln
+			set_variable = { arable_land = 28 } #6 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 2 } # 0 used
+			set_variable = { deposits@token:industry_lumber_lodge = 2 } # 1 used
+		}
+		857 = { #Appalachia
+			set_variable = { arable_land = 52 } #24 used
+			set_variable = { deposits@token:industry_hydroelectric_dam = 6 } # 0 used
+			set_variable = { deposits@token:industry_cotton_plantation = 4 } # 1 used
+			set_variable = { deposits@token:industry_lumber_lodge = 24 } # 8 used
+			set_variable = { deposits@token:industry_iron_mine = 8 } # 3 used
+			set_variable = { deposits@token:industry_coal_mine = 32 } # 12 used
+			set_variable = { deposits@token:industry_precious_metals_mine = 2 } # 1 used
+			set_variable = { deposits@token:industry_copper_mine = 6 } # 2 used
+			set_variable = { deposits@token:industry_sulfur_mine = 6 } # 2 used
+		}
+
+
+	#
+	# BEL
+		6 = { #Flanders
+			set_variable = { arable_land = 30 }
+			set_variable = { deposits@token:industry_fishing_wharf = 5 }
+			set_variable = { deposits@token:industry_lumber_lodge = 4 }
+		}
+		34 = { #Wallonia
+			set_variable = { arable_land = 20 }
+			set_variable = { deposits@token:industry_coal_mine = 9 }
+			set_variable = { deposits@token:industry_iron_mine = 13 }
+			set_variable = { deposits@token:industry_lumber_lodge = 3 }
+		}
+		295 = { #Leopoldville
+			set_variable = { arable_land = 74 }
+		}
+		538 = { #Central Congo
+			set_variable = { arable_land = 24 }
+		}
+		718 = { #Stanleyville
+			set_variable = { arable_land = 40 }
+		}
+		768 = { #Rwanda
+			set_variable = { arable_land = 22 }
+		}
+		769 = { #Burundi
+			set_variable = { arable_land = 25 }
+		}
+	#
+	# PHL
+		327 = { #Manila
+			set_variable = { arable_land = 37 }
+			set_variable = { deposits@token:industry_fishing_wharf = 8 }
+			set_variable = { deposits@token:industry_lumber_lodge = 8 }
+			set_variable = { deposits@token:industry_rubber_lodge = 3 }
+			set_variable = { deposits@token:industry_cotton_plantation = 2 }
+		}
+		623 = { #Luzon
+			set_variable = { arable_land = 22 }
+			set_variable = { deposits@token:industry_fishing_wharf = 10 }
+			set_variable = { deposits@token:industry_lumber_lodge = 13 }
+			set_variable = { deposits@token:industry_precious_metals_mine = 2 }
+			set_variable = { deposits@token:industry_rare_earth_metals_mine = 1 }
+			set_variable = { deposits@token:industry_chromium_mine = 3 }
+			set_variable = { deposits@token:industry_copper_mine = 5 }
+			set_variable = { deposits@token:industry_iron_mine = 2 }
+			set_variable = { deposits@token:industry_oil_rig = 2 }
+			set_variable = { deposits@token:industry_coal_mine = 2 }
+			set_variable = { deposits@token:industry_rubber_lodge = 5 }
+		}
+		624 = { #Central Islands
+			set_variable = { arable_land = 30 }
+			set_variable = { deposits@token:industry_fishing_wharf = 8 }
+			set_variable = { deposits@token:industry_lumber_lodge = 5 }
+			set_variable = { deposits@token:industry_rubber_lodge = 2 }
+			set_variable = { deposits@token:industry_iron_mine = 6 }
+			set_variable = { deposits@token:industry_precious_metals_mine = 2 }
+			set_variable = { deposits@token:industry_copper_mine = 1 }
+			set_variable = { deposits@token:industry_cotton_plantation = 5 }
+		}
+		625 = { #Samar
+			set_variable = { arable_land = 18 }
+			set_variable = { deposits@token:industry_fishing_wharf = 4 }
+			set_variable = { deposits@token:industry_lumber_lodge = 4 }
+			set_variable = { deposits@token:industry_copper_mine = 3 }
+			set_variable = { deposits@token:industry_offshore_oil_rig = 2 }
+		}
+		626 = { #Palawan
+			set_variable = { arable_land = 5 }
+			set_variable = { deposits@token:industry_fishing_wharf = 13 }
+			set_variable = { deposits@token:industry_lumber_lodge = 10 }
+			set_variable = { deposits@token:industry_offshore_oil_rig = 12 }
+			set_variable = { deposits@token:industry_rubber_lodge = 3 }
+		}
+		627 = { #Mindanao
+			set_variable = { arable_land = 29 }
+			set_variable = { deposits@token:industry_fishing_wharf = 12 }
+			set_variable = { deposits@token:industry_lumber_lodge = 14 }
+			set_variable = { deposits@token:industry_iron_mine = 7 }
+			set_variable = { deposits@token:industry_coal_mine = 6 }
+			set_variable = { deposits@token:industry_precious_metals_mine = 4 }
+			set_variable = { deposits@token:industry_rare_earth_metals_mine = 3 }
+			set_variable = { deposits@token:industry_rubber_lodge = 7 }
+			set_variable = { deposits@token:industry_cotton_plantation = 3 }
+		}
+		628 = { #Cebu
+			set_variable = { arable_land = 29 }
+			set_variable = { deposits@token:industry_fishing_wharf = 6 }
+			set_variable = { deposits@token:industry_lumber_lodge = 5 }
+			set_variable = { deposits@token:industry_iron_mine = 5 }
+			set_variable = { deposits@token:industry_coal_mine = 4 }
+			set_variable = { deposits@token:industry_sulfur_mine = 4 }
+			set_variable = { deposits@token:industry_copper_mine = 8 }
+			set_variable = { deposits@token:industry_offshore_oil_rig = 3 }
+		}
+	#
+	# BUL
+		48 = { #Sofia
+			set_variable = { arable_land = 32 }
+		}
+		801 = { #Moesia
+			set_variable = { arable_land = 21 }
+		}
+		212 = { #Plovdiv
+			set_variable = { arable_land = 35 }
+		}
+		211 = { #Burgas
+			set_variable = { arable_land = 25 }
+		}
+		77 = { #Dobrudja
+			set_variable = { arable_land = 8 }
+		}
+	#
+	# SWI
+		3 = { #Western Switzerland
+			set_variable = { arable_land = 32 }
+		}
+		151 = { #Eastern Switzerland
+			set_variable = { arable_land = 25 }
+		}
+		944 = { #Swiss Alps
+			set_variable = { arable_land = 12 }
+		}
+	#
+}

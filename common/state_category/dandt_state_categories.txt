@@ -1,0 +1,3653 @@
+state_categories={
+	state_cat = {
+		local_building_slots = 0
+
+		color = { 125 125 125 }
+	}
+
+	######################
+	state_cat_0 = {
+		local_building_slots = 0
+		color = { 0 0 0 }
+	}
+
+	state_cat_1 = {
+		local_building_slots = 0
+		color = { 31 0 0 }
+	}
+
+	state_cat_2 = {
+		local_building_slots = 0
+		color = { 62 0 0 }
+	}
+
+	state_cat_3 = {
+		local_building_slots = 0
+		color = { 93 0 0 }
+	}
+
+	state_cat_4 = {
+		local_building_slots = 0
+		color = { 124 0 0 }
+	}
+
+	state_cat_5 = {
+		local_building_slots = 0
+		color = { 155 0 0 }
+	}
+
+	state_cat_6 = {
+		local_building_slots = 0
+		color = { 186 0 0 }
+	}
+
+	state_cat_7 = {
+		local_building_slots = 0
+		color = { 217 0 0 }
+	}
+
+	state_cat_8 = {
+		local_building_slots = 0
+		color = { 248 0 0 }
+	}
+
+	state_cat_9 = {
+		local_building_slots = 0
+		color = { 0 31 0 }
+	}
+
+	state_cat_10 = {
+		local_building_slots = 0
+		color = { 31 31 0 }
+	}
+
+	state_cat_11 = {
+		local_building_slots = 0
+		color = { 62 31 0 }
+	}
+
+	state_cat_12 = {
+		local_building_slots = 0
+		color = { 93 31 0 }
+	}
+
+	state_cat_13 = {
+		local_building_slots = 0
+		color = { 124 31 0 }
+	}
+
+	state_cat_14 = {
+		local_building_slots = 0
+		color = { 155 31 0 }
+	}
+
+	state_cat_15 = {
+		local_building_slots = 0
+		color = { 186 31 0 }
+	}
+
+	state_cat_16 = {
+		local_building_slots = 0
+		color = { 217 31 0 }
+	}
+
+	state_cat_17 = {
+		local_building_slots = 0
+		color = { 248 31 0 }
+	}
+
+	state_cat_18 = {
+		local_building_slots = 0
+		color = { 0 62 0 }
+	}
+
+	state_cat_19 = {
+		local_building_slots = 0
+		color = { 31 62 0 }
+	}
+
+	state_cat_20 = {
+		local_building_slots = 0
+		color = { 62 62 0 }
+	}
+
+	state_cat_21 = {
+		local_building_slots = 0
+		color = { 93 62 0 }
+	}
+
+	state_cat_22 = {
+		local_building_slots = 0
+		color = { 124 62 0 }
+	}
+
+	state_cat_23 = {
+		local_building_slots = 0
+		color = { 155 62 0 }
+	}
+
+	state_cat_24 = {
+		local_building_slots = 0
+		color = { 186 62 0 }
+	}
+
+	state_cat_25 = {
+		local_building_slots = 0
+		color = { 217 62 0 }
+	}
+
+	state_cat_26 = {
+		local_building_slots = 0
+		color = { 248 62 0 }
+	}
+
+	state_cat_27 = {
+		local_building_slots = 0
+		color = { 0 93 0 }
+	}
+
+	state_cat_28 = {
+		local_building_slots = 0
+		color = { 31 93 0 }
+	}
+
+	state_cat_29 = {
+		local_building_slots = 0
+		color = { 62 93 0 }
+	}
+
+	state_cat_30 = {
+		local_building_slots = 0
+		color = { 93 93 0 }
+	}
+
+	state_cat_31 = {
+		local_building_slots = 0
+		color = { 124 93 0 }
+	}
+
+	state_cat_32 = {
+		local_building_slots = 0
+		color = { 155 93 0 }
+	}
+
+	state_cat_33 = {
+		local_building_slots = 0
+		color = { 186 93 0 }
+	}
+
+	state_cat_34 = {
+		local_building_slots = 0
+		color = { 217 93 0 }
+	}
+
+	state_cat_35 = {
+		local_building_slots = 0
+		color = { 248 93 0 }
+	}
+
+	state_cat_36 = {
+		local_building_slots = 0
+		color = { 0 124 0 }
+	}
+
+	state_cat_37 = {
+		local_building_slots = 0
+		color = { 31 124 0 }
+	}
+
+	state_cat_38 = {
+		local_building_slots = 0
+		color = { 62 124 0 }
+	}
+
+	state_cat_39 = {
+		local_building_slots = 0
+		color = { 93 124 0 }
+	}
+
+	state_cat_40 = {
+		local_building_slots = 0
+		color = { 124 124 0 }
+	}
+
+	state_cat_41 = {
+		local_building_slots = 0
+		color = { 155 124 0 }
+	}
+
+	state_cat_42 = {
+		local_building_slots = 0
+		color = { 186 124 0 }
+	}
+
+	state_cat_43 = {
+		local_building_slots = 0
+		color = { 217 124 0 }
+	}
+
+	state_cat_44 = {
+		local_building_slots = 0
+		color = { 248 124 0 }
+	}
+
+	state_cat_45 = {
+		local_building_slots = 0
+		color = { 0 155 0 }
+	}
+
+	state_cat_46 = {
+		local_building_slots = 0
+		color = { 31 155 0 }
+	}
+
+	state_cat_47 = {
+		local_building_slots = 0
+		color = { 62 155 0 }
+	}
+
+	state_cat_48 = {
+		local_building_slots = 0
+		color = { 93 155 0 }
+	}
+
+	state_cat_49 = {
+		local_building_slots = 0
+		color = { 124 155 0 }
+	}
+
+	state_cat_50 = {
+		local_building_slots = 0
+		color = { 155 155 0 }
+	}
+
+	state_cat_51 = {
+		local_building_slots = 0
+		color = { 186 155 0 }
+	}
+
+	state_cat_52 = {
+		local_building_slots = 0
+		color = { 217 155 0 }
+	}
+
+	state_cat_53 = {
+		local_building_slots = 0
+		color = { 248 155 0 }
+	}
+
+	state_cat_54 = {
+		local_building_slots = 0
+		color = { 0 186 0 }
+	}
+
+	state_cat_55 = {
+		local_building_slots = 0
+		color = { 31 186 0 }
+	}
+
+	state_cat_56 = {
+		local_building_slots = 0
+		color = { 62 186 0 }
+	}
+
+	state_cat_57 = {
+		local_building_slots = 0
+		color = { 93 186 0 }
+	}
+
+	state_cat_58 = {
+		local_building_slots = 0
+		color = { 124 186 0 }
+	}
+
+	state_cat_59 = {
+		local_building_slots = 0
+		color = { 155 186 0 }
+	}
+
+	state_cat_60 = {
+		local_building_slots = 0
+		color = { 186 186 0 }
+	}
+
+	state_cat_61 = {
+		local_building_slots = 0
+		color = { 217 186 0 }
+	}
+
+	state_cat_62 = {
+		local_building_slots = 0
+		color = { 248 186 0 }
+	}
+
+	state_cat_63 = {
+		local_building_slots = 0
+		color = { 0 217 0 }
+	}
+
+	state_cat_64 = {
+		local_building_slots = 0
+		color = { 31 217 0 }
+	}
+
+	state_cat_65 = {
+		local_building_slots = 0
+		color = { 62 217 0 }
+	}
+
+	state_cat_66 = {
+		local_building_slots = 0
+		color = { 93 217 0 }
+	}
+
+	state_cat_67 = {
+		local_building_slots = 0
+		color = { 124 217 0 }
+	}
+
+	state_cat_68 = {
+		local_building_slots = 0
+		color = { 155 217 0 }
+	}
+
+	state_cat_69 = {
+		local_building_slots = 0
+		color = { 186 217 0 }
+	}
+
+	state_cat_70 = {
+		local_building_slots = 0
+		color = { 217 217 0 }
+	}
+
+	state_cat_71 = {
+		local_building_slots = 0
+		color = { 248 217 0 }
+	}
+
+	state_cat_72 = {
+		local_building_slots = 0
+		color = { 0 248 0 }
+	}
+
+	state_cat_73 = {
+		local_building_slots = 0
+		color = { 31 248 0 }
+	}
+
+	state_cat_74 = {
+		local_building_slots = 0
+		color = { 62 248 0 }
+	}
+
+	state_cat_75 = {
+		local_building_slots = 0
+		color = { 93 248 0 }
+	}
+
+	state_cat_76 = {
+		local_building_slots = 0
+		color = { 124 248 0 }
+	}
+
+	state_cat_77 = {
+		local_building_slots = 0
+		color = { 155 248 0 }
+	}
+
+	state_cat_78 = {
+		local_building_slots = 0
+		color = { 186 248 0 }
+	}
+
+	state_cat_79 = {
+		local_building_slots = 0
+		color = { 217 248 0 }
+	}
+
+	state_cat_80 = {
+		local_building_slots = 0
+		color = { 248 248 0 }
+	}
+
+	state_cat_81 = {
+		local_building_slots = 0
+		color = { 0 0 31 }
+	}
+
+	state_cat_82 = {
+		local_building_slots = 0
+		color = { 31 0 31 }
+	}
+
+	state_cat_83 = {
+		local_building_slots = 0
+		color = { 62 0 31 }
+	}
+
+	state_cat_84 = {
+		local_building_slots = 0
+		color = { 93 0 31 }
+	}
+
+	state_cat_85 = {
+		local_building_slots = 0
+		color = { 124 0 31 }
+	}
+
+	state_cat_86 = {
+		local_building_slots = 0
+		color = { 155 0 31 }
+	}
+
+	state_cat_87 = {
+		local_building_slots = 0
+		color = { 186 0 31 }
+	}
+
+	state_cat_88 = {
+		local_building_slots = 0
+		color = { 217 0 31 }
+	}
+
+	state_cat_89 = {
+		local_building_slots = 0
+		color = { 248 0 31 }
+	}
+
+	state_cat_90 = {
+		local_building_slots = 0
+		color = { 0 31 31 }
+	}
+
+	state_cat_91 = {
+		local_building_slots = 0
+		color = { 31 31 31 }
+	}
+
+	state_cat_92 = {
+		local_building_slots = 0
+		color = { 62 31 31 }
+	}
+
+	state_cat_93 = {
+		local_building_slots = 0
+		color = { 93 31 31 }
+	}
+
+	state_cat_94 = {
+		local_building_slots = 0
+		color = { 124 31 31 }
+	}
+
+	state_cat_95 = {
+		local_building_slots = 0
+		color = { 155 31 31 }
+	}
+
+	state_cat_96 = {
+		local_building_slots = 0
+		color = { 186 31 31 }
+	}
+
+	state_cat_97 = {
+		local_building_slots = 0
+		color = { 217 31 31 }
+	}
+
+	state_cat_98 = {
+		local_building_slots = 0
+		color = { 248 31 31 }
+	}
+
+	state_cat_99 = {
+		local_building_slots = 0
+		color = { 0 62 31 }
+	}
+
+	state_cat_100 = {
+		local_building_slots = 0
+		color = { 31 62 31 }
+	}
+
+	state_cat_101 = {
+		local_building_slots = 0
+		color = { 62 62 31 }
+	}
+
+	state_cat_102 = {
+		local_building_slots = 0
+		color = { 93 62 31 }
+	}
+
+	state_cat_103 = {
+		local_building_slots = 0
+		color = { 124 62 31 }
+	}
+
+	state_cat_104 = {
+		local_building_slots = 0
+		color = { 155 62 31 }
+	}
+
+	state_cat_105 = {
+		local_building_slots = 0
+		color = { 186 62 31 }
+	}
+
+	state_cat_106 = {
+		local_building_slots = 0
+		color = { 217 62 31 }
+	}
+
+	state_cat_107 = {
+		local_building_slots = 0
+		color = { 248 62 31 }
+	}
+
+	state_cat_108 = {
+		local_building_slots = 0
+		color = { 0 93 31 }
+	}
+
+	state_cat_109 = {
+		local_building_slots = 0
+		color = { 31 93 31 }
+	}
+
+	state_cat_110 = {
+		local_building_slots = 0
+		color = { 62 93 31 }
+	}
+
+	state_cat_111 = {
+		local_building_slots = 0
+		color = { 93 93 31 }
+	}
+
+	state_cat_112 = {
+		local_building_slots = 0
+		color = { 124 93 31 }
+	}
+
+	state_cat_113 = {
+		local_building_slots = 0
+		color = { 155 93 31 }
+	}
+
+	state_cat_114 = {
+		local_building_slots = 0
+		color = { 186 93 31 }
+	}
+
+	state_cat_115 = {
+		local_building_slots = 0
+		color = { 217 93 31 }
+	}
+
+	state_cat_116 = {
+		local_building_slots = 0
+		color = { 248 93 31 }
+	}
+
+	state_cat_117 = {
+		local_building_slots = 0
+		color = { 0 124 31 }
+	}
+
+	state_cat_118 = {
+		local_building_slots = 0
+		color = { 31 124 31 }
+	}
+
+	state_cat_119 = {
+		local_building_slots = 0
+		color = { 62 124 31 }
+	}
+
+	state_cat_120 = {
+		local_building_slots = 0
+		color = { 93 124 31 }
+	}
+
+	state_cat_121 = {
+		local_building_slots = 0
+		color = { 124 124 31 }
+	}
+
+	state_cat_122 = {
+		local_building_slots = 0
+		color = { 155 124 31 }
+	}
+
+	state_cat_123 = {
+		local_building_slots = 0
+		color = { 186 124 31 }
+	}
+
+	state_cat_124 = {
+		local_building_slots = 0
+		color = { 217 124 31 }
+	}
+
+	state_cat_125 = {
+		local_building_slots = 0
+		color = { 248 124 31 }
+	}
+
+	state_cat_126 = {
+		local_building_slots = 0
+		color = { 0 155 31 }
+	}
+
+	state_cat_127 = {
+		local_building_slots = 0
+		color = { 31 155 31 }
+	}
+
+	state_cat_128 = {
+		local_building_slots = 0
+		color = { 62 155 31 }
+	}
+
+	state_cat_129 = {
+		local_building_slots = 0
+		color = { 93 155 31 }
+	}
+
+	state_cat_130 = {
+		local_building_slots = 0
+		color = { 124 155 31 }
+	}
+
+	state_cat_131 = {
+		local_building_slots = 0
+		color = { 155 155 31 }
+	}
+
+	state_cat_132 = {
+		local_building_slots = 0
+		color = { 186 155 31 }
+	}
+
+	state_cat_133 = {
+		local_building_slots = 0
+		color = { 217 155 31 }
+	}
+
+	state_cat_134 = {
+		local_building_slots = 0
+		color = { 248 155 31 }
+	}
+
+	state_cat_135 = {
+		local_building_slots = 0
+		color = { 0 186 31 }
+	}
+
+	state_cat_136 = {
+		local_building_slots = 0
+		color = { 31 186 31 }
+	}
+
+	state_cat_137 = {
+		local_building_slots = 0
+		color = { 62 186 31 }
+	}
+
+	state_cat_138 = {
+		local_building_slots = 0
+		color = { 93 186 31 }
+	}
+
+	state_cat_139 = {
+		local_building_slots = 0
+		color = { 124 186 31 }
+	}
+
+	state_cat_140 = {
+		local_building_slots = 0
+		color = { 155 186 31 }
+	}
+
+	state_cat_141 = {
+		local_building_slots = 0
+		color = { 186 186 31 }
+	}
+
+	state_cat_142 = {
+		local_building_slots = 0
+		color = { 217 186 31 }
+	}
+
+	state_cat_143 = {
+		local_building_slots = 0
+		color = { 248 186 31 }
+	}
+
+	state_cat_144 = {
+		local_building_slots = 0
+		color = { 0 217 31 }
+	}
+
+	state_cat_145 = {
+		local_building_slots = 0
+		color = { 31 217 31 }
+	}
+
+	state_cat_146 = {
+		local_building_slots = 0
+		color = { 62 217 31 }
+	}
+
+	state_cat_147 = {
+		local_building_slots = 0
+		color = { 93 217 31 }
+	}
+
+	state_cat_148 = {
+		local_building_slots = 0
+		color = { 124 217 31 }
+	}
+
+	state_cat_149 = {
+		local_building_slots = 0
+		color = { 155 217 31 }
+	}
+
+	state_cat_150 = {
+		local_building_slots = 0
+		color = { 186 217 31 }
+	}
+
+	state_cat_151 = {
+		local_building_slots = 0
+		color = { 217 217 31 }
+	}
+
+	state_cat_152 = {
+		local_building_slots = 0
+		color = { 248 217 31 }
+	}
+
+	state_cat_153 = {
+		local_building_slots = 0
+		color = { 0 248 31 }
+	}
+
+	state_cat_154 = {
+		local_building_slots = 0
+		color = { 31 248 31 }
+	}
+
+	state_cat_155 = {
+		local_building_slots = 0
+		color = { 62 248 31 }
+	}
+
+	state_cat_156 = {
+		local_building_slots = 0
+		color = { 93 248 31 }
+	}
+
+	state_cat_157 = {
+		local_building_slots = 0
+		color = { 124 248 31 }
+	}
+
+	state_cat_158 = {
+		local_building_slots = 0
+		color = { 155 248 31 }
+	}
+
+	state_cat_159 = {
+		local_building_slots = 0
+		color = { 186 248 31 }
+	}
+
+	state_cat_160 = {
+		local_building_slots = 0
+		color = { 217 248 31 }
+	}
+
+	state_cat_161 = {
+		local_building_slots = 0
+		color = { 248 248 31 }
+	}
+
+	state_cat_162 = {
+		local_building_slots = 0
+		color = { 0 0 62 }
+	}
+
+	state_cat_163 = {
+		local_building_slots = 0
+		color = { 31 0 62 }
+	}
+
+	state_cat_164 = {
+		local_building_slots = 0
+		color = { 62 0 62 }
+	}
+
+	state_cat_165 = {
+		local_building_slots = 0
+		color = { 93 0 62 }
+	}
+
+	state_cat_166 = {
+		local_building_slots = 0
+		color = { 124 0 62 }
+	}
+
+	state_cat_167 = {
+		local_building_slots = 0
+		color = { 155 0 62 }
+	}
+
+	state_cat_168 = {
+		local_building_slots = 0
+		color = { 186 0 62 }
+	}
+
+	state_cat_169 = {
+		local_building_slots = 0
+		color = { 217 0 62 }
+	}
+
+	state_cat_170 = {
+		local_building_slots = 0
+		color = { 248 0 62 }
+	}
+
+	state_cat_171 = {
+		local_building_slots = 0
+		color = { 0 31 62 }
+	}
+
+	state_cat_172 = {
+		local_building_slots = 0
+		color = { 31 31 62 }
+	}
+
+	state_cat_173 = {
+		local_building_slots = 0
+		color = { 62 31 62 }
+	}
+
+	state_cat_174 = {
+		local_building_slots = 0
+		color = { 93 31 62 }
+	}
+
+	state_cat_175 = {
+		local_building_slots = 0
+		color = { 124 31 62 }
+	}
+
+	state_cat_176 = {
+		local_building_slots = 0
+		color = { 155 31 62 }
+	}
+
+	state_cat_177 = {
+		local_building_slots = 0
+		color = { 186 31 62 }
+	}
+
+	state_cat_178 = {
+		local_building_slots = 0
+		color = { 217 31 62 }
+	}
+
+	state_cat_179 = {
+		local_building_slots = 0
+		color = { 248 31 62 }
+	}
+
+	state_cat_180 = {
+		local_building_slots = 0
+		color = { 0 62 62 }
+	}
+
+	state_cat_181 = {
+		local_building_slots = 0
+		color = { 31 62 62 }
+	}
+
+	state_cat_182 = {
+		local_building_slots = 0
+		color = { 62 62 62 }
+	}
+
+	state_cat_183 = {
+		local_building_slots = 0
+		color = { 93 62 62 }
+	}
+
+	state_cat_184 = {
+		local_building_slots = 0
+		color = { 124 62 62 }
+	}
+
+	state_cat_185 = {
+		local_building_slots = 0
+		color = { 155 62 62 }
+	}
+
+	state_cat_186 = {
+		local_building_slots = 0
+		color = { 186 62 62 }
+	}
+
+	state_cat_187 = {
+		local_building_slots = 0
+		color = { 217 62 62 }
+	}
+
+	state_cat_188 = {
+		local_building_slots = 0
+		color = { 248 62 62 }
+	}
+
+	state_cat_189 = {
+		local_building_slots = 0
+		color = { 0 93 62 }
+	}
+
+	state_cat_190 = {
+		local_building_slots = 0
+		color = { 31 93 62 }
+	}
+
+	state_cat_191 = {
+		local_building_slots = 0
+		color = { 62 93 62 }
+	}
+
+	state_cat_192 = {
+		local_building_slots = 0
+		color = { 93 93 62 }
+	}
+
+	state_cat_193 = {
+		local_building_slots = 0
+		color = { 124 93 62 }
+	}
+
+	state_cat_194 = {
+		local_building_slots = 0
+		color = { 155 93 62 }
+	}
+
+	state_cat_195 = {
+		local_building_slots = 0
+		color = { 186 93 62 }
+	}
+
+	state_cat_196 = {
+		local_building_slots = 0
+		color = { 217 93 62 }
+	}
+
+	state_cat_197 = {
+		local_building_slots = 0
+		color = { 248 93 62 }
+	}
+
+	state_cat_198 = {
+		local_building_slots = 0
+		color = { 0 124 62 }
+	}
+
+	state_cat_199 = {
+		local_building_slots = 0
+		color = { 31 124 62 }
+	}
+
+	state_cat_200 = {
+		local_building_slots = 0
+		color = { 62 124 62 }
+	}
+
+	state_cat_201 = {
+		local_building_slots = 0
+		color = { 93 124 62 }
+	}
+
+	state_cat_202 = {
+		local_building_slots = 0
+		color = { 124 124 62 }
+	}
+
+	state_cat_203 = {
+		local_building_slots = 0
+		color = { 155 124 62 }
+	}
+
+	state_cat_204 = {
+		local_building_slots = 0
+		color = { 186 124 62 }
+	}
+
+	state_cat_205 = {
+		local_building_slots = 0
+		color = { 217 124 62 }
+	}
+
+	state_cat_206 = {
+		local_building_slots = 0
+		color = { 248 124 62 }
+	}
+
+	state_cat_207 = {
+		local_building_slots = 0
+		color = { 0 155 62 }
+	}
+
+	state_cat_208 = {
+		local_building_slots = 0
+		color = { 31 155 62 }
+	}
+
+	state_cat_209 = {
+		local_building_slots = 0
+		color = { 62 155 62 }
+	}
+
+	state_cat_210 = {
+		local_building_slots = 0
+		color = { 93 155 62 }
+	}
+
+	state_cat_211 = {
+		local_building_slots = 0
+		color = { 124 155 62 }
+	}
+
+	state_cat_212 = {
+		local_building_slots = 0
+		color = { 155 155 62 }
+	}
+
+	state_cat_213 = {
+		local_building_slots = 0
+		color = { 186 155 62 }
+	}
+
+	state_cat_214 = {
+		local_building_slots = 0
+		color = { 217 155 62 }
+	}
+
+	state_cat_215 = {
+		local_building_slots = 0
+		color = { 248 155 62 }
+	}
+
+	state_cat_216 = {
+		local_building_slots = 0
+		color = { 0 186 62 }
+	}
+
+	state_cat_217 = {
+		local_building_slots = 0
+		color = { 31 186 62 }
+	}
+
+	state_cat_218 = {
+		local_building_slots = 0
+		color = { 62 186 62 }
+	}
+
+	state_cat_219 = {
+		local_building_slots = 0
+		color = { 93 186 62 }
+	}
+
+	state_cat_220 = {
+		local_building_slots = 0
+		color = { 124 186 62 }
+	}
+
+	state_cat_221 = {
+		local_building_slots = 0
+		color = { 155 186 62 }
+	}
+
+	state_cat_222 = {
+		local_building_slots = 0
+		color = { 186 186 62 }
+	}
+
+	state_cat_223 = {
+		local_building_slots = 0
+		color = { 217 186 62 }
+	}
+
+	state_cat_224 = {
+		local_building_slots = 0
+		color = { 248 186 62 }
+	}
+
+	state_cat_225 = {
+		local_building_slots = 0
+		color = { 0 217 62 }
+	}
+
+	state_cat_226 = {
+		local_building_slots = 0
+		color = { 31 217 62 }
+	}
+
+	state_cat_227 = {
+		local_building_slots = 0
+		color = { 62 217 62 }
+	}
+
+	state_cat_228 = {
+		local_building_slots = 0
+		color = { 93 217 62 }
+	}
+
+	state_cat_229 = {
+		local_building_slots = 0
+		color = { 124 217 62 }
+	}
+
+	state_cat_230 = {
+		local_building_slots = 0
+		color = { 155 217 62 }
+	}
+
+	state_cat_231 = {
+		local_building_slots = 0
+		color = { 186 217 62 }
+	}
+
+	state_cat_232 = {
+		local_building_slots = 0
+		color = { 217 217 62 }
+	}
+
+	state_cat_233 = {
+		local_building_slots = 0
+		color = { 248 217 62 }
+	}
+
+	state_cat_234 = {
+		local_building_slots = 0
+		color = { 0 248 62 }
+	}
+
+	state_cat_235 = {
+		local_building_slots = 0
+		color = { 31 248 62 }
+	}
+
+	state_cat_236 = {
+		local_building_slots = 0
+		color = { 62 248 62 }
+	}
+
+	state_cat_237 = {
+		local_building_slots = 0
+		color = { 93 248 62 }
+	}
+
+	state_cat_238 = {
+		local_building_slots = 0
+		color = { 124 248 62 }
+	}
+
+	state_cat_239 = {
+		local_building_slots = 0
+		color = { 155 248 62 }
+	}
+
+	state_cat_240 = {
+		local_building_slots = 0
+		color = { 186 248 62 }
+	}
+
+	state_cat_241 = {
+		local_building_slots = 0
+		color = { 217 248 62 }
+	}
+
+	state_cat_242 = {
+		local_building_slots = 0
+		color = { 248 248 62 }
+	}
+
+	state_cat_243 = {
+		local_building_slots = 0
+		color = { 0 0 93 }
+	}
+
+	state_cat_244 = {
+		local_building_slots = 0
+		color = { 31 0 93 }
+	}
+
+	state_cat_245 = {
+		local_building_slots = 0
+		color = { 62 0 93 }
+	}
+
+	state_cat_246 = {
+		local_building_slots = 0
+		color = { 93 0 93 }
+	}
+
+	state_cat_247 = {
+		local_building_slots = 0
+		color = { 124 0 93 }
+	}
+
+	state_cat_248 = {
+		local_building_slots = 0
+		color = { 155 0 93 }
+	}
+
+	state_cat_249 = {
+		local_building_slots = 0
+		color = { 186 0 93 }
+	}
+
+	state_cat_250 = {
+		local_building_slots = 0
+		color = { 217 0 93 }
+	}
+
+	state_cat_251 = {
+		local_building_slots = 0
+		color = { 248 0 93 }
+	}
+
+	state_cat_252 = {
+		local_building_slots = 0
+		color = { 0 31 93 }
+	}
+
+	state_cat_253 = {
+		local_building_slots = 0
+		color = { 31 31 93 }
+	}
+
+	state_cat_254 = {
+		local_building_slots = 0
+		color = { 62 31 93 }
+	}
+
+	state_cat_255 = {
+		local_building_slots = 0
+		color = { 93 31 93 }
+	}
+
+	state_cat_256 = {
+		local_building_slots = 0
+		color = { 124 31 93 }
+	}
+
+	state_cat_257 = {
+		local_building_slots = 0
+		color = { 155 31 93 }
+	}
+
+	state_cat_258 = {
+		local_building_slots = 0
+		color = { 186 31 93 }
+	}
+
+	state_cat_259 = {
+		local_building_slots = 0
+		color = { 217 31 93 }
+	}
+
+	state_cat_260 = {
+		local_building_slots = 0
+		color = { 248 31 93 }
+	}
+
+	state_cat_261 = {
+		local_building_slots = 0
+		color = { 0 62 93 }
+	}
+
+	state_cat_262 = {
+		local_building_slots = 0
+		color = { 31 62 93 }
+	}
+
+	state_cat_263 = {
+		local_building_slots = 0
+		color = { 62 62 93 }
+	}
+
+	state_cat_264 = {
+		local_building_slots = 0
+		color = { 93 62 93 }
+	}
+
+	state_cat_265 = {
+		local_building_slots = 0
+		color = { 124 62 93 }
+	}
+
+	state_cat_266 = {
+		local_building_slots = 0
+		color = { 155 62 93 }
+	}
+
+	state_cat_267 = {
+		local_building_slots = 0
+		color = { 186 62 93 }
+	}
+
+	state_cat_268 = {
+		local_building_slots = 0
+		color = { 217 62 93 }
+	}
+
+	state_cat_269 = {
+		local_building_slots = 0
+		color = { 248 62 93 }
+	}
+
+	state_cat_270 = {
+		local_building_slots = 0
+		color = { 0 93 93 }
+	}
+
+	state_cat_271 = {
+		local_building_slots = 0
+		color = { 31 93 93 }
+	}
+
+	state_cat_272 = {
+		local_building_slots = 0
+		color = { 62 93 93 }
+	}
+
+	state_cat_273 = {
+		local_building_slots = 0
+		color = { 93 93 93 }
+	}
+
+	state_cat_274 = {
+		local_building_slots = 0
+		color = { 124 93 93 }
+	}
+
+	state_cat_275 = {
+		local_building_slots = 0
+		color = { 155 93 93 }
+	}
+
+	state_cat_276 = {
+		local_building_slots = 0
+		color = { 186 93 93 }
+	}
+
+	state_cat_277 = {
+		local_building_slots = 0
+		color = { 217 93 93 }
+	}
+
+	state_cat_278 = {
+		local_building_slots = 0
+		color = { 248 93 93 }
+	}
+
+	state_cat_279 = {
+		local_building_slots = 0
+		color = { 0 124 93 }
+	}
+
+	state_cat_280 = {
+		local_building_slots = 0
+		color = { 31 124 93 }
+	}
+
+	state_cat_281 = {
+		local_building_slots = 0
+		color = { 62 124 93 }
+	}
+
+	state_cat_282 = {
+		local_building_slots = 0
+		color = { 93 124 93 }
+	}
+
+	state_cat_283 = {
+		local_building_slots = 0
+		color = { 124 124 93 }
+	}
+
+	state_cat_284 = {
+		local_building_slots = 0
+		color = { 155 124 93 }
+	}
+
+	state_cat_285 = {
+		local_building_slots = 0
+		color = { 186 124 93 }
+	}
+
+	state_cat_286 = {
+		local_building_slots = 0
+		color = { 217 124 93 }
+	}
+
+	state_cat_287 = {
+		local_building_slots = 0
+		color = { 248 124 93 }
+	}
+
+	state_cat_288 = {
+		local_building_slots = 0
+		color = { 0 155 93 }
+	}
+
+	state_cat_289 = {
+		local_building_slots = 0
+		color = { 31 155 93 }
+	}
+
+	state_cat_290 = {
+		local_building_slots = 0
+		color = { 62 155 93 }
+	}
+
+	state_cat_291 = {
+		local_building_slots = 0
+		color = { 93 155 93 }
+	}
+
+	state_cat_292 = {
+		local_building_slots = 0
+		color = { 124 155 93 }
+	}
+
+	state_cat_293 = {
+		local_building_slots = 0
+		color = { 155 155 93 }
+	}
+
+	state_cat_294 = {
+		local_building_slots = 0
+		color = { 186 155 93 }
+	}
+
+	state_cat_295 = {
+		local_building_slots = 0
+		color = { 217 155 93 }
+	}
+
+	state_cat_296 = {
+		local_building_slots = 0
+		color = { 248 155 93 }
+	}
+
+	state_cat_297 = {
+		local_building_slots = 0
+		color = { 0 186 93 }
+	}
+
+	state_cat_298 = {
+		local_building_slots = 0
+		color = { 31 186 93 }
+	}
+
+	state_cat_299 = {
+		local_building_slots = 0
+		color = { 62 186 93 }
+	}
+
+	state_cat_300 = {
+		local_building_slots = 0
+		color = { 93 186 93 }
+	}
+
+	state_cat_301 = {
+		local_building_slots = 0
+		color = { 124 186 93 }
+	}
+
+	state_cat_302 = {
+		local_building_slots = 0
+		color = { 155 186 93 }
+	}
+
+	state_cat_303 = {
+		local_building_slots = 0
+		color = { 186 186 93 }
+	}
+
+	state_cat_304 = {
+		local_building_slots = 0
+		color = { 217 186 93 }
+	}
+
+	state_cat_305 = {
+		local_building_slots = 0
+		color = { 248 186 93 }
+	}
+
+	state_cat_306 = {
+		local_building_slots = 0
+		color = { 0 217 93 }
+	}
+
+	state_cat_307 = {
+		local_building_slots = 0
+		color = { 31 217 93 }
+	}
+
+	state_cat_308 = {
+		local_building_slots = 0
+		color = { 62 217 93 }
+	}
+
+	state_cat_309 = {
+		local_building_slots = 0
+		color = { 93 217 93 }
+	}
+
+	state_cat_310 = {
+		local_building_slots = 0
+		color = { 124 217 93 }
+	}
+
+	state_cat_311 = {
+		local_building_slots = 0
+		color = { 155 217 93 }
+	}
+
+	state_cat_312 = {
+		local_building_slots = 0
+		color = { 186 217 93 }
+	}
+
+	state_cat_313 = {
+		local_building_slots = 0
+		color = { 217 217 93 }
+	}
+
+	state_cat_314 = {
+		local_building_slots = 0
+		color = { 248 217 93 }
+	}
+
+	state_cat_315 = {
+		local_building_slots = 0
+		color = { 0 248 93 }
+	}
+
+	state_cat_316 = {
+		local_building_slots = 0
+		color = { 31 248 93 }
+	}
+
+	state_cat_317 = {
+		local_building_slots = 0
+		color = { 62 248 93 }
+	}
+
+	state_cat_318 = {
+		local_building_slots = 0
+		color = { 93 248 93 }
+	}
+
+	state_cat_319 = {
+		local_building_slots = 0
+		color = { 124 248 93 }
+	}
+
+	state_cat_320 = {
+		local_building_slots = 0
+		color = { 155 248 93 }
+	}
+
+	state_cat_321 = {
+		local_building_slots = 0
+		color = { 186 248 93 }
+	}
+
+	state_cat_322 = {
+		local_building_slots = 0
+		color = { 217 248 93 }
+	}
+
+	state_cat_323 = {
+		local_building_slots = 0
+		color = { 248 248 93 }
+	}
+
+	state_cat_324 = {
+		local_building_slots = 0
+		color = { 0 0 124 }
+	}
+
+	state_cat_325 = {
+		local_building_slots = 0
+		color = { 31 0 124 }
+	}
+
+	state_cat_326 = {
+		local_building_slots = 0
+		color = { 62 0 124 }
+	}
+
+	state_cat_327 = {
+		local_building_slots = 0
+		color = { 93 0 124 }
+	}
+
+	state_cat_328 = {
+		local_building_slots = 0
+		color = { 124 0 124 }
+	}
+
+	state_cat_329 = {
+		local_building_slots = 0
+		color = { 155 0 124 }
+	}
+
+	state_cat_330 = {
+		local_building_slots = 0
+		color = { 186 0 124 }
+	}
+
+	state_cat_331 = {
+		local_building_slots = 0
+		color = { 217 0 124 }
+	}
+
+	state_cat_332 = {
+		local_building_slots = 0
+		color = { 248 0 124 }
+	}
+
+	state_cat_333 = {
+		local_building_slots = 0
+		color = { 0 31 124 }
+	}
+
+	state_cat_334 = {
+		local_building_slots = 0
+		color = { 31 31 124 }
+	}
+
+	state_cat_335 = {
+		local_building_slots = 0
+		color = { 62 31 124 }
+	}
+
+	state_cat_336 = {
+		local_building_slots = 0
+		color = { 93 31 124 }
+	}
+
+	state_cat_337 = {
+		local_building_slots = 0
+		color = { 124 31 124 }
+	}
+
+	state_cat_338 = {
+		local_building_slots = 0
+		color = { 155 31 124 }
+	}
+
+	state_cat_339 = {
+		local_building_slots = 0
+		color = { 186 31 124 }
+	}
+
+	state_cat_340 = {
+		local_building_slots = 0
+		color = { 217 31 124 }
+	}
+
+	state_cat_341 = {
+		local_building_slots = 0
+		color = { 248 31 124 }
+	}
+
+	state_cat_342 = {
+		local_building_slots = 0
+		color = { 0 62 124 }
+	}
+
+	state_cat_343 = {
+		local_building_slots = 0
+		color = { 31 62 124 }
+	}
+
+	state_cat_344 = {
+		local_building_slots = 0
+		color = { 62 62 124 }
+	}
+
+	state_cat_345 = {
+		local_building_slots = 0
+		color = { 93 62 124 }
+	}
+
+	state_cat_346 = {
+		local_building_slots = 0
+		color = { 124 62 124 }
+	}
+
+	state_cat_347 = {
+		local_building_slots = 0
+		color = { 155 62 124 }
+	}
+
+	state_cat_348 = {
+		local_building_slots = 0
+		color = { 186 62 124 }
+	}
+
+	state_cat_349 = {
+		local_building_slots = 0
+		color = { 217 62 124 }
+	}
+
+	state_cat_350 = {
+		local_building_slots = 0
+		color = { 248 62 124 }
+	}
+
+	state_cat_351 = {
+		local_building_slots = 0
+		color = { 0 93 124 }
+	}
+
+	state_cat_352 = {
+		local_building_slots = 0
+		color = { 31 93 124 }
+	}
+
+	state_cat_353 = {
+		local_building_slots = 0
+		color = { 62 93 124 }
+	}
+
+	state_cat_354 = {
+		local_building_slots = 0
+		color = { 93 93 124 }
+	}
+
+	state_cat_355 = {
+		local_building_slots = 0
+		color = { 124 93 124 }
+	}
+
+	state_cat_356 = {
+		local_building_slots = 0
+		color = { 155 93 124 }
+	}
+
+	state_cat_357 = {
+		local_building_slots = 0
+		color = { 186 93 124 }
+	}
+
+	state_cat_358 = {
+		local_building_slots = 0
+		color = { 217 93 124 }
+	}
+
+	state_cat_359 = {
+		local_building_slots = 0
+		color = { 248 93 124 }
+	}
+
+	state_cat_360 = {
+		local_building_slots = 0
+		color = { 0 124 124 }
+	}
+
+	state_cat_361 = {
+		local_building_slots = 0
+		color = { 31 124 124 }
+	}
+
+	state_cat_362 = {
+		local_building_slots = 0
+		color = { 62 124 124 }
+	}
+
+	state_cat_363 = {
+		local_building_slots = 0
+		color = { 93 124 124 }
+	}
+
+	state_cat_364 = {
+		local_building_slots = 0
+		color = { 124 124 124 }
+	}
+
+	state_cat_365 = {
+		local_building_slots = 0
+		color = { 155 124 124 }
+	}
+
+	state_cat_366 = {
+		local_building_slots = 0
+		color = { 186 124 124 }
+	}
+
+	state_cat_367 = {
+		local_building_slots = 0
+		color = { 217 124 124 }
+	}
+
+	state_cat_368 = {
+		local_building_slots = 0
+		color = { 248 124 124 }
+	}
+
+	state_cat_369 = {
+		local_building_slots = 0
+		color = { 0 155 124 }
+	}
+
+	state_cat_370 = {
+		local_building_slots = 0
+		color = { 31 155 124 }
+	}
+
+	state_cat_371 = {
+		local_building_slots = 0
+		color = { 62 155 124 }
+	}
+
+	state_cat_372 = {
+		local_building_slots = 0
+		color = { 93 155 124 }
+	}
+
+	state_cat_373 = {
+		local_building_slots = 0
+		color = { 124 155 124 }
+	}
+
+	state_cat_374 = {
+		local_building_slots = 0
+		color = { 155 155 124 }
+	}
+
+	state_cat_375 = {
+		local_building_slots = 0
+		color = { 186 155 124 }
+	}
+
+	state_cat_376 = {
+		local_building_slots = 0
+		color = { 217 155 124 }
+	}
+
+	state_cat_377 = {
+		local_building_slots = 0
+		color = { 248 155 124 }
+	}
+
+	state_cat_378 = {
+		local_building_slots = 0
+		color = { 0 186 124 }
+	}
+
+	state_cat_379 = {
+		local_building_slots = 0
+		color = { 31 186 124 }
+	}
+
+	state_cat_380 = {
+		local_building_slots = 0
+		color = { 62 186 124 }
+	}
+
+	state_cat_381 = {
+		local_building_slots = 0
+		color = { 93 186 124 }
+	}
+
+	state_cat_382 = {
+		local_building_slots = 0
+		color = { 124 186 124 }
+	}
+
+	state_cat_383 = {
+		local_building_slots = 0
+		color = { 155 186 124 }
+	}
+
+	state_cat_384 = {
+		local_building_slots = 0
+		color = { 186 186 124 }
+	}
+
+	state_cat_385 = {
+		local_building_slots = 0
+		color = { 217 186 124 }
+	}
+
+	state_cat_386 = {
+		local_building_slots = 0
+		color = { 248 186 124 }
+	}
+
+	state_cat_387 = {
+		local_building_slots = 0
+		color = { 0 217 124 }
+	}
+
+	state_cat_388 = {
+		local_building_slots = 0
+		color = { 31 217 124 }
+	}
+
+	state_cat_389 = {
+		local_building_slots = 0
+		color = { 62 217 124 }
+	}
+
+	state_cat_390 = {
+		local_building_slots = 0
+		color = { 93 217 124 }
+	}
+
+	state_cat_391 = {
+		local_building_slots = 0
+		color = { 124 217 124 }
+	}
+
+	state_cat_392 = {
+		local_building_slots = 0
+		color = { 155 217 124 }
+	}
+
+	state_cat_393 = {
+		local_building_slots = 0
+		color = { 186 217 124 }
+	}
+
+	state_cat_394 = {
+		local_building_slots = 0
+		color = { 217 217 124 }
+	}
+
+	state_cat_395 = {
+		local_building_slots = 0
+		color = { 248 217 124 }
+	}
+
+	state_cat_396 = {
+		local_building_slots = 0
+		color = { 0 248 124 }
+	}
+
+	state_cat_397 = {
+		local_building_slots = 0
+		color = { 31 248 124 }
+	}
+
+	state_cat_398 = {
+		local_building_slots = 0
+		color = { 62 248 124 }
+	}
+
+	state_cat_399 = {
+		local_building_slots = 0
+		color = { 93 248 124 }
+	}
+
+	state_cat_400 = {
+		local_building_slots = 0
+		color = { 124 248 124 }
+	}
+
+	state_cat_401 = {
+		local_building_slots = 0
+		color = { 155 248 124 }
+	}
+
+	state_cat_402 = {
+		local_building_slots = 0
+		color = { 186 248 124 }
+	}
+
+	state_cat_403 = {
+		local_building_slots = 0
+		color = { 217 248 124 }
+	}
+
+	state_cat_404 = {
+		local_building_slots = 0
+		color = { 248 248 124 }
+	}
+
+	state_cat_405 = {
+		local_building_slots = 0
+		color = { 0 0 155 }
+	}
+
+	state_cat_406 = {
+		local_building_slots = 0
+		color = { 31 0 155 }
+	}
+
+	state_cat_407 = {
+		local_building_slots = 0
+		color = { 62 0 155 }
+	}
+
+	state_cat_408 = {
+		local_building_slots = 0
+		color = { 93 0 155 }
+	}
+
+	state_cat_409 = {
+		local_building_slots = 0
+		color = { 124 0 155 }
+	}
+
+	state_cat_410 = {
+		local_building_slots = 0
+		color = { 155 0 155 }
+	}
+
+	state_cat_411 = {
+		local_building_slots = 0
+		color = { 186 0 155 }
+	}
+
+	state_cat_412 = {
+		local_building_slots = 0
+		color = { 217 0 155 }
+	}
+
+	state_cat_413 = {
+		local_building_slots = 0
+		color = { 248 0 155 }
+	}
+
+	state_cat_414 = {
+		local_building_slots = 0
+		color = { 0 31 155 }
+	}
+
+	state_cat_415 = {
+		local_building_slots = 0
+		color = { 31 31 155 }
+	}
+
+	state_cat_416 = {
+		local_building_slots = 0
+		color = { 62 31 155 }
+	}
+
+	state_cat_417 = {
+		local_building_slots = 0
+		color = { 93 31 155 }
+	}
+
+	state_cat_418 = {
+		local_building_slots = 0
+		color = { 124 31 155 }
+	}
+
+	state_cat_419 = {
+		local_building_slots = 0
+		color = { 155 31 155 }
+	}
+
+	state_cat_420 = {
+		local_building_slots = 0
+		color = { 186 31 155 }
+	}
+
+	state_cat_421 = {
+		local_building_slots = 0
+		color = { 217 31 155 }
+	}
+
+	state_cat_422 = {
+		local_building_slots = 0
+		color = { 248 31 155 }
+	}
+
+	state_cat_423 = {
+		local_building_slots = 0
+		color = { 0 62 155 }
+	}
+
+	state_cat_424 = {
+		local_building_slots = 0
+		color = { 31 62 155 }
+	}
+
+	state_cat_425 = {
+		local_building_slots = 0
+		color = { 62 62 155 }
+	}
+
+	state_cat_426 = {
+		local_building_slots = 0
+		color = { 93 62 155 }
+	}
+
+	state_cat_427 = {
+		local_building_slots = 0
+		color = { 124 62 155 }
+	}
+
+	state_cat_428 = {
+		local_building_slots = 0
+		color = { 155 62 155 }
+	}
+
+	state_cat_429 = {
+		local_building_slots = 0
+		color = { 186 62 155 }
+	}
+
+	state_cat_430 = {
+		local_building_slots = 0
+		color = { 217 62 155 }
+	}
+
+	state_cat_431 = {
+		local_building_slots = 0
+		color = { 248 62 155 }
+	}
+
+	state_cat_432 = {
+		local_building_slots = 0
+		color = { 0 93 155 }
+	}
+
+	state_cat_433 = {
+		local_building_slots = 0
+		color = { 31 93 155 }
+	}
+
+	state_cat_434 = {
+		local_building_slots = 0
+		color = { 62 93 155 }
+	}
+
+	state_cat_435 = {
+		local_building_slots = 0
+		color = { 93 93 155 }
+	}
+
+	state_cat_436 = {
+		local_building_slots = 0
+		color = { 124 93 155 }
+	}
+
+	state_cat_437 = {
+		local_building_slots = 0
+		color = { 155 93 155 }
+	}
+
+	state_cat_438 = {
+		local_building_slots = 0
+		color = { 186 93 155 }
+	}
+
+	state_cat_439 = {
+		local_building_slots = 0
+		color = { 217 93 155 }
+	}
+
+	state_cat_440 = {
+		local_building_slots = 0
+		color = { 248 93 155 }
+	}
+
+	state_cat_441 = {
+		local_building_slots = 0
+		color = { 0 124 155 }
+	}
+
+	state_cat_442 = {
+		local_building_slots = 0
+		color = { 31 124 155 }
+	}
+
+	state_cat_443 = {
+		local_building_slots = 0
+		color = { 62 124 155 }
+	}
+
+	state_cat_444 = {
+		local_building_slots = 0
+		color = { 93 124 155 }
+	}
+
+	state_cat_445 = {
+		local_building_slots = 0
+		color = { 124 124 155 }
+	}
+
+	state_cat_446 = {
+		local_building_slots = 0
+		color = { 155 124 155 }
+	}
+
+	state_cat_447 = {
+		local_building_slots = 0
+		color = { 186 124 155 }
+	}
+
+	state_cat_448 = {
+		local_building_slots = 0
+		color = { 217 124 155 }
+	}
+
+	state_cat_449 = {
+		local_building_slots = 0
+		color = { 248 124 155 }
+	}
+
+	state_cat_450 = {
+		local_building_slots = 0
+		color = { 0 155 155 }
+	}
+
+	state_cat_451 = {
+		local_building_slots = 0
+		color = { 31 155 155 }
+	}
+
+	state_cat_452 = {
+		local_building_slots = 0
+		color = { 62 155 155 }
+	}
+
+	state_cat_453 = {
+		local_building_slots = 0
+		color = { 93 155 155 }
+	}
+
+	state_cat_454 = {
+		local_building_slots = 0
+		color = { 124 155 155 }
+	}
+
+	state_cat_455 = {
+		local_building_slots = 0
+		color = { 155 155 155 }
+	}
+
+	state_cat_456 = {
+		local_building_slots = 0
+		color = { 186 155 155 }
+	}
+
+	state_cat_457 = {
+		local_building_slots = 0
+		color = { 217 155 155 }
+	}
+
+	state_cat_458 = {
+		local_building_slots = 0
+		color = { 248 155 155 }
+	}
+
+	state_cat_459 = {
+		local_building_slots = 0
+		color = { 0 186 155 }
+	}
+
+	state_cat_460 = {
+		local_building_slots = 0
+		color = { 31 186 155 }
+	}
+
+	state_cat_461 = {
+		local_building_slots = 0
+		color = { 62 186 155 }
+	}
+
+	state_cat_462 = {
+		local_building_slots = 0
+		color = { 93 186 155 }
+	}
+
+	state_cat_463 = {
+		local_building_slots = 0
+		color = { 124 186 155 }
+	}
+
+	state_cat_464 = {
+		local_building_slots = 0
+		color = { 155 186 155 }
+	}
+
+	state_cat_465 = {
+		local_building_slots = 0
+		color = { 186 186 155 }
+	}
+
+	state_cat_466 = {
+		local_building_slots = 0
+		color = { 217 186 155 }
+	}
+
+	state_cat_467 = {
+		local_building_slots = 0
+		color = { 248 186 155 }
+	}
+
+	state_cat_468 = {
+		local_building_slots = 0
+		color = { 0 217 155 }
+	}
+
+	state_cat_469 = {
+		local_building_slots = 0
+		color = { 31 217 155 }
+	}
+
+	state_cat_470 = {
+		local_building_slots = 0
+		color = { 62 217 155 }
+	}
+
+	state_cat_471 = {
+		local_building_slots = 0
+		color = { 93 217 155 }
+	}
+
+	state_cat_472 = {
+		local_building_slots = 0
+		color = { 124 217 155 }
+	}
+
+	state_cat_473 = {
+		local_building_slots = 0
+		color = { 155 217 155 }
+	}
+
+	state_cat_474 = {
+		local_building_slots = 0
+		color = { 186 217 155 }
+	}
+
+	state_cat_475 = {
+		local_building_slots = 0
+		color = { 217 217 155 }
+	}
+
+	state_cat_476 = {
+		local_building_slots = 0
+		color = { 248 217 155 }
+	}
+
+	state_cat_477 = {
+		local_building_slots = 0
+		color = { 0 248 155 }
+	}
+
+	state_cat_478 = {
+		local_building_slots = 0
+		color = { 31 248 155 }
+	}
+
+	state_cat_479 = {
+		local_building_slots = 0
+		color = { 62 248 155 }
+	}
+
+	state_cat_480 = {
+		local_building_slots = 0
+		color = { 93 248 155 }
+	}
+
+	state_cat_481 = {
+		local_building_slots = 0
+		color = { 124 248 155 }
+	}
+
+	state_cat_482 = {
+		local_building_slots = 0
+		color = { 155 248 155 }
+	}
+
+	state_cat_483 = {
+		local_building_slots = 0
+		color = { 186 248 155 }
+	}
+
+	state_cat_484 = {
+		local_building_slots = 0
+		color = { 217 248 155 }
+	}
+
+	state_cat_485 = {
+		local_building_slots = 0
+		color = { 248 248 155 }
+	}
+
+	state_cat_486 = {
+		local_building_slots = 0
+		color = { 0 0 186 }
+	}
+
+	state_cat_487 = {
+		local_building_slots = 0
+		color = { 31 0 186 }
+	}
+
+	state_cat_488 = {
+		local_building_slots = 0
+		color = { 62 0 186 }
+	}
+
+	state_cat_489 = {
+		local_building_slots = 0
+		color = { 93 0 186 }
+	}
+
+	state_cat_490 = {
+		local_building_slots = 0
+		color = { 124 0 186 }
+	}
+
+	state_cat_491 = {
+		local_building_slots = 0
+		color = { 155 0 186 }
+	}
+
+	state_cat_492 = {
+		local_building_slots = 0
+		color = { 186 0 186 }
+	}
+
+	state_cat_493 = {
+		local_building_slots = 0
+		color = { 217 0 186 }
+	}
+
+	state_cat_494 = {
+		local_building_slots = 0
+		color = { 248 0 186 }
+	}
+
+	state_cat_495 = {
+		local_building_slots = 0
+		color = { 0 31 186 }
+	}
+
+	state_cat_496 = {
+		local_building_slots = 0
+		color = { 31 31 186 }
+	}
+
+	state_cat_497 = {
+		local_building_slots = 0
+		color = { 62 31 186 }
+	}
+
+	state_cat_498 = {
+		local_building_slots = 0
+		color = { 93 31 186 }
+	}
+
+	state_cat_499 = {
+		local_building_slots = 0
+		color = { 124 31 186 }
+	}
+
+	state_cat_500 = {
+		local_building_slots = 0
+		color = { 155 31 186 }
+	}
+
+	state_cat_501 = {
+		local_building_slots = 0
+		color = { 186 31 186 }
+	}
+
+	state_cat_502 = {
+		local_building_slots = 0
+		color = { 217 31 186 }
+	}
+
+	state_cat_503 = {
+		local_building_slots = 0
+		color = { 248 31 186 }
+	}
+
+	state_cat_504 = {
+		local_building_slots = 0
+		color = { 0 62 186 }
+	}
+
+	state_cat_505 = {
+		local_building_slots = 0
+		color = { 31 62 186 }
+	}
+
+	state_cat_506 = {
+		local_building_slots = 0
+		color = { 62 62 186 }
+	}
+
+	state_cat_507 = {
+		local_building_slots = 0
+		color = { 93 62 186 }
+	}
+
+	state_cat_508 = {
+		local_building_slots = 0
+		color = { 124 62 186 }
+	}
+
+	state_cat_509 = {
+		local_building_slots = 0
+		color = { 155 62 186 }
+	}
+
+	state_cat_510 = {
+		local_building_slots = 0
+		color = { 186 62 186 }
+	}
+
+	state_cat_511 = {
+		local_building_slots = 0
+		color = { 217 62 186 }
+	}
+
+	state_cat_512 = {
+		local_building_slots = 0
+		color = { 248 62 186 }
+	}
+
+	state_cat_513 = {
+		local_building_slots = 0
+		color = { 0 93 186 }
+	}
+
+	state_cat_514 = {
+		local_building_slots = 0
+		color = { 31 93 186 }
+	}
+
+	state_cat_515 = {
+		local_building_slots = 0
+		color = { 62 93 186 }
+	}
+
+	state_cat_516 = {
+		local_building_slots = 0
+		color = { 93 93 186 }
+	}
+
+	state_cat_517 = {
+		local_building_slots = 0
+		color = { 124 93 186 }
+	}
+
+	state_cat_518 = {
+		local_building_slots = 0
+		color = { 155 93 186 }
+	}
+
+	state_cat_519 = {
+		local_building_slots = 0
+		color = { 186 93 186 }
+	}
+
+	state_cat_520 = {
+		local_building_slots = 0
+		color = { 217 93 186 }
+	}
+
+	state_cat_521 = {
+		local_building_slots = 0
+		color = { 248 93 186 }
+	}
+
+	state_cat_522 = {
+		local_building_slots = 0
+		color = { 0 124 186 }
+	}
+
+	state_cat_523 = {
+		local_building_slots = 0
+		color = { 31 124 186 }
+	}
+
+	state_cat_524 = {
+		local_building_slots = 0
+		color = { 62 124 186 }
+	}
+
+	state_cat_525 = {
+		local_building_slots = 0
+		color = { 93 124 186 }
+	}
+
+	state_cat_526 = {
+		local_building_slots = 0
+		color = { 124 124 186 }
+	}
+
+	state_cat_527 = {
+		local_building_slots = 0
+		color = { 155 124 186 }
+	}
+
+	state_cat_528 = {
+		local_building_slots = 0
+		color = { 186 124 186 }
+	}
+
+	state_cat_529 = {
+		local_building_slots = 0
+		color = { 217 124 186 }
+	}
+
+	state_cat_530 = {
+		local_building_slots = 0
+		color = { 248 124 186 }
+	}
+
+	state_cat_531 = {
+		local_building_slots = 0
+		color = { 0 155 186 }
+	}
+
+	state_cat_532 = {
+		local_building_slots = 0
+		color = { 31 155 186 }
+	}
+
+	state_cat_533 = {
+		local_building_slots = 0
+		color = { 62 155 186 }
+	}
+
+	state_cat_534 = {
+		local_building_slots = 0
+		color = { 93 155 186 }
+	}
+
+	state_cat_535 = {
+		local_building_slots = 0
+		color = { 124 155 186 }
+	}
+
+	state_cat_536 = {
+		local_building_slots = 0
+		color = { 155 155 186 }
+	}
+
+	state_cat_537 = {
+		local_building_slots = 0
+		color = { 186 155 186 }
+	}
+
+	state_cat_538 = {
+		local_building_slots = 0
+		color = { 217 155 186 }
+	}
+
+	state_cat_539 = {
+		local_building_slots = 0
+		color = { 248 155 186 }
+	}
+
+	state_cat_540 = {
+		local_building_slots = 0
+		color = { 0 186 186 }
+	}
+
+	state_cat_541 = {
+		local_building_slots = 0
+		color = { 31 186 186 }
+	}
+
+	state_cat_542 = {
+		local_building_slots = 0
+		color = { 62 186 186 }
+	}
+
+	state_cat_543 = {
+		local_building_slots = 0
+		color = { 93 186 186 }
+	}
+
+	state_cat_544 = {
+		local_building_slots = 0
+		color = { 124 186 186 }
+	}
+
+	state_cat_545 = {
+		local_building_slots = 0
+		color = { 155 186 186 }
+	}
+
+	state_cat_546 = {
+		local_building_slots = 0
+		color = { 186 186 186 }
+	}
+
+	state_cat_547 = {
+		local_building_slots = 0
+		color = { 217 186 186 }
+	}
+
+	state_cat_548 = {
+		local_building_slots = 0
+		color = { 248 186 186 }
+	}
+
+	state_cat_549 = {
+		local_building_slots = 0
+		color = { 0 217 186 }
+	}
+
+	state_cat_550 = {
+		local_building_slots = 0
+		color = { 31 217 186 }
+	}
+
+	state_cat_551 = {
+		local_building_slots = 0
+		color = { 62 217 186 }
+	}
+
+	state_cat_552 = {
+		local_building_slots = 0
+		color = { 93 217 186 }
+	}
+
+	state_cat_553 = {
+		local_building_slots = 0
+		color = { 124 217 186 }
+	}
+
+	state_cat_554 = {
+		local_building_slots = 0
+		color = { 155 217 186 }
+	}
+
+	state_cat_555 = {
+		local_building_slots = 0
+		color = { 186 217 186 }
+	}
+
+	state_cat_556 = {
+		local_building_slots = 0
+		color = { 217 217 186 }
+	}
+
+	state_cat_557 = {
+		local_building_slots = 0
+		color = { 248 217 186 }
+	}
+
+	state_cat_558 = {
+		local_building_slots = 0
+		color = { 0 248 186 }
+	}
+
+	state_cat_559 = {
+		local_building_slots = 0
+		color = { 31 248 186 }
+	}
+
+	state_cat_560 = {
+		local_building_slots = 0
+		color = { 62 248 186 }
+	}
+
+	state_cat_561 = {
+		local_building_slots = 0
+		color = { 93 248 186 }
+	}
+
+	state_cat_562 = {
+		local_building_slots = 0
+		color = { 124 248 186 }
+	}
+
+	state_cat_563 = {
+		local_building_slots = 0
+		color = { 155 248 186 }
+	}
+
+	state_cat_564 = {
+		local_building_slots = 0
+		color = { 186 248 186 }
+	}
+
+	state_cat_565 = {
+		local_building_slots = 0
+		color = { 217 248 186 }
+	}
+
+	state_cat_566 = {
+		local_building_slots = 0
+		color = { 248 248 186 }
+	}
+
+	state_cat_567 = {
+		local_building_slots = 0
+		color = { 0 0 217 }
+	}
+
+	state_cat_568 = {
+		local_building_slots = 0
+		color = { 31 0 217 }
+	}
+
+	state_cat_569 = {
+		local_building_slots = 0
+		color = { 62 0 217 }
+	}
+
+	state_cat_570 = {
+		local_building_slots = 0
+		color = { 93 0 217 }
+	}
+
+	state_cat_571 = {
+		local_building_slots = 0
+		color = { 124 0 217 }
+	}
+
+	state_cat_572 = {
+		local_building_slots = 0
+		color = { 155 0 217 }
+	}
+
+	state_cat_573 = {
+		local_building_slots = 0
+		color = { 186 0 217 }
+	}
+
+	state_cat_574 = {
+		local_building_slots = 0
+		color = { 217 0 217 }
+	}
+
+	state_cat_575 = {
+		local_building_slots = 0
+		color = { 248 0 217 }
+	}
+
+	state_cat_576 = {
+		local_building_slots = 0
+		color = { 0 31 217 }
+	}
+
+	state_cat_577 = {
+		local_building_slots = 0
+		color = { 31 31 217 }
+	}
+
+	state_cat_578 = {
+		local_building_slots = 0
+		color = { 62 31 217 }
+	}
+
+	state_cat_579 = {
+		local_building_slots = 0
+		color = { 93 31 217 }
+	}
+
+	state_cat_580 = {
+		local_building_slots = 0
+		color = { 124 31 217 }
+	}
+
+	state_cat_581 = {
+		local_building_slots = 0
+		color = { 155 31 217 }
+	}
+
+	state_cat_582 = {
+		local_building_slots = 0
+		color = { 186 31 217 }
+	}
+
+	state_cat_583 = {
+		local_building_slots = 0
+		color = { 217 31 217 }
+	}
+
+	state_cat_584 = {
+		local_building_slots = 0
+		color = { 248 31 217 }
+	}
+
+	state_cat_585 = {
+		local_building_slots = 0
+		color = { 0 62 217 }
+	}
+
+	state_cat_586 = {
+		local_building_slots = 0
+		color = { 31 62 217 }
+	}
+
+	state_cat_587 = {
+		local_building_slots = 0
+		color = { 62 62 217 }
+	}
+
+	state_cat_588 = {
+		local_building_slots = 0
+		color = { 93 62 217 }
+	}
+
+	state_cat_589 = {
+		local_building_slots = 0
+		color = { 124 62 217 }
+	}
+
+	state_cat_590 = {
+		local_building_slots = 0
+		color = { 155 62 217 }
+	}
+
+	state_cat_591 = {
+		local_building_slots = 0
+		color = { 186 62 217 }
+	}
+
+	state_cat_592 = {
+		local_building_slots = 0
+		color = { 217 62 217 }
+	}
+
+	state_cat_593 = {
+		local_building_slots = 0
+		color = { 248 62 217 }
+	}
+
+	state_cat_594 = {
+		local_building_slots = 0
+		color = { 0 93 217 }
+	}
+
+	state_cat_595 = {
+		local_building_slots = 0
+		color = { 31 93 217 }
+	}
+
+	state_cat_596 = {
+		local_building_slots = 0
+		color = { 62 93 217 }
+	}
+
+	state_cat_597 = {
+		local_building_slots = 0
+		color = { 93 93 217 }
+	}
+
+	state_cat_598 = {
+		local_building_slots = 0
+		color = { 124 93 217 }
+	}
+
+	state_cat_599 = {
+		local_building_slots = 0
+		color = { 155 93 217 }
+	}
+
+	state_cat_600 = {
+		local_building_slots = 0
+		color = { 186 93 217 }
+	}
+
+	state_cat_601 = {
+		local_building_slots = 0
+		color = { 217 93 217 }
+	}
+
+	state_cat_602 = {
+		local_building_slots = 0
+		color = { 248 93 217 }
+	}
+
+	state_cat_603 = {
+		local_building_slots = 0
+		color = { 0 124 217 }
+	}
+
+	state_cat_604 = {
+		local_building_slots = 0
+		color = { 31 124 217 }
+	}
+
+	state_cat_605 = {
+		local_building_slots = 0
+		color = { 62 124 217 }
+	}
+
+	state_cat_606 = {
+		local_building_slots = 0
+		color = { 93 124 217 }
+	}
+
+	state_cat_607 = {
+		local_building_slots = 0
+		color = { 124 124 217 }
+	}
+
+	state_cat_608 = {
+		local_building_slots = 0
+		color = { 155 124 217 }
+	}
+
+	state_cat_609 = {
+		local_building_slots = 0
+		color = { 186 124 217 }
+	}
+
+	state_cat_610 = {
+		local_building_slots = 0
+		color = { 217 124 217 }
+	}
+
+	state_cat_611 = {
+		local_building_slots = 0
+		color = { 248 124 217 }
+	}
+
+	state_cat_612 = {
+		local_building_slots = 0
+		color = { 0 155 217 }
+	}
+
+	state_cat_613 = {
+		local_building_slots = 0
+		color = { 31 155 217 }
+	}
+
+	state_cat_614 = {
+		local_building_slots = 0
+		color = { 62 155 217 }
+	}
+
+	state_cat_615 = {
+		local_building_slots = 0
+		color = { 93 155 217 }
+	}
+
+	state_cat_616 = {
+		local_building_slots = 0
+		color = { 124 155 217 }
+	}
+
+	state_cat_617 = {
+		local_building_slots = 0
+		color = { 155 155 217 }
+	}
+
+	state_cat_618 = {
+		local_building_slots = 0
+		color = { 186 155 217 }
+	}
+
+	state_cat_619 = {
+		local_building_slots = 0
+		color = { 217 155 217 }
+	}
+
+	state_cat_620 = {
+		local_building_slots = 0
+		color = { 248 155 217 }
+	}
+
+	state_cat_621 = {
+		local_building_slots = 0
+		color = { 0 186 217 }
+	}
+
+	state_cat_622 = {
+		local_building_slots = 0
+		color = { 31 186 217 }
+	}
+
+	state_cat_623 = {
+		local_building_slots = 0
+		color = { 62 186 217 }
+	}
+
+	state_cat_624 = {
+		local_building_slots = 0
+		color = { 93 186 217 }
+	}
+
+	state_cat_625 = {
+		local_building_slots = 0
+		color = { 124 186 217 }
+	}
+
+	state_cat_626 = {
+		local_building_slots = 0
+		color = { 155 186 217 }
+	}
+
+	state_cat_627 = {
+		local_building_slots = 0
+		color = { 186 186 217 }
+	}
+
+	state_cat_628 = {
+		local_building_slots = 0
+		color = { 217 186 217 }
+	}
+
+	state_cat_629 = {
+		local_building_slots = 0
+		color = { 248 186 217 }
+	}
+
+	state_cat_630 = {
+		local_building_slots = 0
+		color = { 0 217 217 }
+	}
+
+	state_cat_631 = {
+		local_building_slots = 0
+		color = { 31 217 217 }
+	}
+
+	state_cat_632 = {
+		local_building_slots = 0
+		color = { 62 217 217 }
+	}
+
+	state_cat_633 = {
+		local_building_slots = 0
+		color = { 93 217 217 }
+	}
+
+	state_cat_634 = {
+		local_building_slots = 0
+		color = { 124 217 217 }
+	}
+
+	state_cat_635 = {
+		local_building_slots = 0
+		color = { 155 217 217 }
+	}
+
+	state_cat_636 = {
+		local_building_slots = 0
+		color = { 186 217 217 }
+	}
+
+	state_cat_637 = {
+		local_building_slots = 0
+		color = { 217 217 217 }
+	}
+
+	state_cat_638 = {
+		local_building_slots = 0
+		color = { 248 217 217 }
+	}
+
+	state_cat_639 = {
+		local_building_slots = 0
+		color = { 0 248 217 }
+	}
+
+	state_cat_640 = {
+		local_building_slots = 0
+		color = { 31 248 217 }
+	}
+
+	state_cat_641 = {
+		local_building_slots = 0
+		color = { 62 248 217 }
+	}
+
+	state_cat_642 = {
+		local_building_slots = 0
+		color = { 93 248 217 }
+	}
+
+	state_cat_643 = {
+		local_building_slots = 0
+		color = { 124 248 217 }
+	}
+
+	state_cat_644 = {
+		local_building_slots = 0
+		color = { 155 248 217 }
+	}
+
+	state_cat_645 = {
+		local_building_slots = 0
+		color = { 186 248 217 }
+	}
+
+	state_cat_646 = {
+		local_building_slots = 0
+		color = { 217 248 217 }
+	}
+
+	state_cat_647 = {
+		local_building_slots = 0
+		color = { 248 248 217 }
+	}
+
+	state_cat_648 = {
+		local_building_slots = 0
+		color = { 0 0 248 }
+	}
+
+	state_cat_649 = {
+		local_building_slots = 0
+		color = { 31 0 248 }
+	}
+
+	state_cat_650 = {
+		local_building_slots = 0
+		color = { 62 0 248 }
+	}
+
+	state_cat_651 = {
+		local_building_slots = 0
+		color = { 93 0 248 }
+	}
+
+	state_cat_652 = {
+		local_building_slots = 0
+		color = { 124 0 248 }
+	}
+
+	state_cat_653 = {
+		local_building_slots = 0
+		color = { 155 0 248 }
+	}
+
+	state_cat_654 = {
+		local_building_slots = 0
+		color = { 186 0 248 }
+	}
+
+	state_cat_655 = {
+		local_building_slots = 0
+		color = { 217 0 248 }
+	}
+
+	state_cat_656 = {
+		local_building_slots = 0
+		color = { 248 0 248 }
+	}
+
+	state_cat_657 = {
+		local_building_slots = 0
+		color = { 0 31 248 }
+	}
+
+	state_cat_658 = {
+		local_building_slots = 0
+		color = { 31 31 248 }
+	}
+
+	state_cat_659 = {
+		local_building_slots = 0
+		color = { 62 31 248 }
+	}
+
+	state_cat_660 = {
+		local_building_slots = 0
+		color = { 93 31 248 }
+	}
+
+	state_cat_661 = {
+		local_building_slots = 0
+		color = { 124 31 248 }
+	}
+
+	state_cat_662 = {
+		local_building_slots = 0
+		color = { 155 31 248 }
+	}
+
+	state_cat_663 = {
+		local_building_slots = 0
+		color = { 186 31 248 }
+	}
+
+	state_cat_664 = {
+		local_building_slots = 0
+		color = { 217 31 248 }
+	}
+
+	state_cat_665 = {
+		local_building_slots = 0
+		color = { 248 31 248 }
+	}
+
+	state_cat_666 = {
+		local_building_slots = 0
+		color = { 0 62 248 }
+	}
+
+	state_cat_667 = {
+		local_building_slots = 0
+		color = { 31 62 248 }
+	}
+
+	state_cat_668 = {
+		local_building_slots = 0
+		color = { 62 62 248 }
+	}
+
+	state_cat_669 = {
+		local_building_slots = 0
+		color = { 93 62 248 }
+	}
+
+	state_cat_670 = {
+		local_building_slots = 0
+		color = { 124 62 248 }
+	}
+
+	state_cat_671 = {
+		local_building_slots = 0
+		color = { 155 62 248 }
+	}
+
+	state_cat_672 = {
+		local_building_slots = 0
+		color = { 186 62 248 }
+	}
+
+	state_cat_673 = {
+		local_building_slots = 0
+		color = { 217 62 248 }
+	}
+
+	state_cat_674 = {
+		local_building_slots = 0
+		color = { 248 62 248 }
+	}
+
+	state_cat_675 = {
+		local_building_slots = 0
+		color = { 0 93 248 }
+	}
+
+	state_cat_676 = {
+		local_building_slots = 0
+		color = { 31 93 248 }
+	}
+
+	state_cat_677 = {
+		local_building_slots = 0
+		color = { 62 93 248 }
+	}
+
+	state_cat_678 = {
+		local_building_slots = 0
+		color = { 93 93 248 }
+	}
+
+	state_cat_679 = {
+		local_building_slots = 0
+		color = { 124 93 248 }
+	}
+
+	state_cat_680 = {
+		local_building_slots = 0
+		color = { 155 93 248 }
+	}
+
+	state_cat_681 = {
+		local_building_slots = 0
+		color = { 186 93 248 }
+	}
+
+	state_cat_682 = {
+		local_building_slots = 0
+		color = { 217 93 248 }
+	}
+
+	state_cat_683 = {
+		local_building_slots = 0
+		color = { 248 93 248 }
+	}
+
+	state_cat_684 = {
+		local_building_slots = 0
+		color = { 0 124 248 }
+	}
+
+	state_cat_685 = {
+		local_building_slots = 0
+		color = { 31 124 248 }
+	}
+
+	state_cat_686 = {
+		local_building_slots = 0
+		color = { 62 124 248 }
+	}
+
+	state_cat_687 = {
+		local_building_slots = 0
+		color = { 93 124 248 }
+	}
+
+	state_cat_688 = {
+		local_building_slots = 0
+		color = { 124 124 248 }
+	}
+
+	state_cat_689 = {
+		local_building_slots = 0
+		color = { 155 124 248 }
+	}
+
+	state_cat_690 = {
+		local_building_slots = 0
+		color = { 186 124 248 }
+	}
+
+	state_cat_691 = {
+		local_building_slots = 0
+		color = { 217 124 248 }
+	}
+
+	state_cat_692 = {
+		local_building_slots = 0
+		color = { 248 124 248 }
+	}
+
+	state_cat_693 = {
+		local_building_slots = 0
+		color = { 0 155 248 }
+	}
+
+	state_cat_694 = {
+		local_building_slots = 0
+		color = { 31 155 248 }
+	}
+
+	state_cat_695 = {
+		local_building_slots = 0
+		color = { 62 155 248 }
+	}
+
+	state_cat_696 = {
+		local_building_slots = 0
+		color = { 93 155 248 }
+	}
+
+	state_cat_697 = {
+		local_building_slots = 0
+		color = { 124 155 248 }
+	}
+
+	state_cat_698 = {
+		local_building_slots = 0
+		color = { 155 155 248 }
+	}
+
+	state_cat_699 = {
+		local_building_slots = 0
+		color = { 186 155 248 }
+	}
+
+	state_cat_700 = {
+		local_building_slots = 0
+		color = { 217 155 248 }
+	}
+
+	state_cat_701 = {
+		local_building_slots = 0
+		color = { 248 155 248 }
+	}
+
+	state_cat_702 = {
+		local_building_slots = 0
+		color = { 0 186 248 }
+	}
+
+	state_cat_703 = {
+		local_building_slots = 0
+		color = { 31 186 248 }
+	}
+
+	state_cat_704 = {
+		local_building_slots = 0
+		color = { 62 186 248 }
+	}
+
+	state_cat_705 = {
+		local_building_slots = 0
+		color = { 93 186 248 }
+	}
+
+	state_cat_706 = {
+		local_building_slots = 0
+		color = { 124 186 248 }
+	}
+
+	state_cat_707 = {
+		local_building_slots = 0
+		color = { 155 186 248 }
+	}
+
+	state_cat_708 = {
+		local_building_slots = 0
+		color = { 186 186 248 }
+	}
+
+	state_cat_709 = {
+		local_building_slots = 0
+		color = { 217 186 248 }
+	}
+
+	state_cat_710 = {
+		local_building_slots = 0
+		color = { 248 186 248 }
+	}
+
+	state_cat_711 = {
+		local_building_slots = 0
+		color = { 0 217 248 }
+	}
+
+	state_cat_712 = {
+		local_building_slots = 0
+		color = { 31 217 248 }
+	}
+
+	state_cat_713 = {
+		local_building_slots = 0
+		color = { 62 217 248 }
+	}
+
+	state_cat_714 = {
+		local_building_slots = 0
+		color = { 93 217 248 }
+	}
+
+	state_cat_715 = {
+		local_building_slots = 0
+		color = { 124 217 248 }
+	}
+
+	state_cat_716 = {
+		local_building_slots = 0
+		color = { 155 217 248 }
+	}
+
+	state_cat_717 = {
+		local_building_slots = 0
+		color = { 186 217 248 }
+	}
+
+	state_cat_718 = {
+		local_building_slots = 0
+		color = { 217 217 248 }
+	}
+
+	state_cat_719 = {
+		local_building_slots = 0
+		color = { 248 217 248 }
+	}
+
+	state_cat_720 = {
+		local_building_slots = 0
+		color = { 0 248 248 }
+	}
+
+	state_cat_721 = {
+		local_building_slots = 0
+		color = { 31 248 248 }
+	}
+
+	state_cat_722 = {
+		local_building_slots = 0
+		color = { 62 248 248 }
+	}
+
+	state_cat_723 = {
+		local_building_slots = 0
+		color = { 93 248 248 }
+	}
+
+	state_cat_724 = {
+		local_building_slots = 0
+		color = { 124 248 248 }
+	}
+
+	state_cat_725 = {
+		local_building_slots = 0
+		color = { 155 248 248 }
+	}
+
+	state_cat_726 = {
+		local_building_slots = 0
+		color = { 186 248 248 }
+	}
+
+	state_cat_727 = {
+		local_building_slots = 0
+		color = { 217 248 248 }
+	}
+
+	state_cat_728 = {
+		local_building_slots = 0
+		color = { 248 248 248 }
+	}
+}

@@ -1,0 +1,92 @@
+capital = 478
+
+add_manpower = 50000
+
+set_war_support = 0.45
+
+declare_war_on = {
+	target = MEX
+	type = civil_war
+}
+
+add_ideas = {
+	MEC_papal_support
+	MEC_guerilla_war
+}
+
+set_cosmetic_tag = MEC_1929_Cosmetic
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1925.7.1"
+	election_frequency = 72
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 18
+	fascism = 29
+	communism = 0
+	neutrality = 53
+}
+
+set_country_flag = monroe_doctrine
+
+diplomatic_relation = {
+	country = ITA
+	relation = non_aggression_pact
+}
+diplomatic_relation = {
+	country = IRE
+	relation = non_aggression_pact
+}
+
+recruit_character = MEC_character_enrique_gorostieta_velarde
+recruit_character = MEC_character_jose_reyes_vega
+
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		coastal_defense_ships = 1
+	}
+}
+load_oob = MEC_1929

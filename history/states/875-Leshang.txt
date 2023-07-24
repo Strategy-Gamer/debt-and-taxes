@@ -1,0 +1,33 @@
+
+state={
+	id=875
+	name="STATE_875"
+
+	history={
+		owner = XIK
+		add_core_of = XIK
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			12141 3 
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		2067 9966 10841 12141 12819 13461 
+	}
+	manpower=8125114
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

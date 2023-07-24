@@ -1,0 +1,30 @@
+
+state={
+	id=610
+	name="STATE_610"
+
+	history={
+		owner = SHX
+		add_core_of = SHX
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		814 881 972 1508 3828 3881 3955 3978 6937 6988 7575 7633 9768 9873 10331 10426 10429 10499 11801 11855 12478 
+	}
+	manpower=1375377
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

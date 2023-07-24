@@ -1,0 +1,130 @@
+Maryland - > West Virgina 164.9
+Garett 19.9
+Alleghany 79.1
+Washington 65.9
+
+Virginia - > Maryland 54.5
+Accowack 35.9
+Northampton 18.6
+
+Virginia - > Appalachia 353.5 10
+Lee 30.4
+Wise 51.2
+Dickenson 16.2
+Buchanan 16.7
+Scott 24.2
+Russell 26.0
+Tazewell 41.6
+Washington 33.9
+Smyth 25.1
+Wythe 20.7
+Bland 6
+Gyles 12.8
+Pulaski 20.6
+Carroll 22.1
+Grayson 6
+
+North Carolina - > Appalachia  948.0 25 25
+Alleghany 7.2
+Ashe 21
+Watauga 15.2
+Wilkes 36.2
+Caldwell 28
+Avery 11.8
+Burke 29.4
+Mitchell 14
+Yancey 14.5
+McDowell  20.3
+Rutherford 40.5
+Polk 10.2
+Henderson 23.4
+Transylvania 9.6
+Jackson 17.5
+Macon 13.7
+Clay 5.4
+Cherokee 16.2
+Graham 5.8
+Swain 11.6
+Haywood 28.3
+Madison 20.3
+Buncombe 97.9
+
+Georgia - > Appalachia 130.6 4
+Rabun 6.3
+Habersham 12.7
+White 6.1
+Towns 4.3
+Union 6.3 
+Lumpkin 4.9
+Fannin 13
+Murray 9.2
+Gilmer 7.3
+Whitefield 20.8
+Catoosa 9.4
+Walker 26.2
+Dade 4.1
+
+Tennessee - > Appalachia 960 26 20
+Scott 14.1
+Morgan 13.6
+Cumberland 11.4
+Bledsoe  7.1
+Sequatche 4
+Marion 17.5
+Hamilton 159.5
+Rhea 13.9
+Roane 24.5
+Anderson 19.7
+Campbell 26.8
+Claiborne 24.3
+Meigs 6.1
+Bradley 22.9
+Polk 15.7
+McMinn 29
+Monroe 21.4
+Loudon 17.8
+Blount 34
+Sevier 20.5
+Knox 155.9
+Cocke 21.8
+Jefferson 17.9
+Greene 35.1
+Washington 45.8
+Unicoi 12.7
+Carter 29.2
+Johnson 12.2
+Sullivan 51.1
+Hawkins 24.1
+Hancock 9.7
+Hamblin 16.6
+Grainger 12.7
+Union 11.4
+
+Kentucky - > Appalachia 576.4 15 12
+Lawrence 16.7
+Elliott 7.6
+Morgan 15.1
+Wolfe 8.4
+Lee 9.7
+Owsley 7.2
+Jackson 10.5
+Laurel 21.1
+McCeary 14.6
+Whitley 29.7
+Knox 26.3
+Bell 38.7
+Harlan 64.6
+Leslie 10.8
+Clay 17.6
+Perry 42.2
+Letcher 35.7
+Knox 26.3
+Breathitt 21.1
+Magoffin 15.7
+Johnson 23.0
+Martin 8.6
+Floyd 41.9
+Pike 63.3
+
+https://web.archive.org/web/20200121183358/http://populstat.info/
+

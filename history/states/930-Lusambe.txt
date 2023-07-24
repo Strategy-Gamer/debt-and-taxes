@@ -1,0 +1,26 @@
+state={
+	id=930
+	name="STATE_930"
+	provinces={
+		1731 1929 2024 7716 8016 9986 10858
+	}
+	history={
+		owner=BEL
+		buildings={
+			infrastructure=1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+	state_category=pastoral
+	manpower=885237
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

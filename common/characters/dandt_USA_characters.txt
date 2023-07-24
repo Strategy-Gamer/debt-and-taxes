@@ -1,0 +1,435 @@
+characters = {
+	#1924 Election
+		USA_william_zebulon_foster = {
+			name = USA_william_zebulon_foster
+			#https://en.wikipedia.org/wiki/William_Z._Foster
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_william_zebulon_foster
+				}
+			}
+			#ideology_communist
+		}
+		USA_frank_tetes_johns = {
+			name = USA_frank_tetes_johns
+			#https://en.wikipedia.org/wiki/Frank_T._Johns
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_frank_tetes_johns
+				}
+			}
+			#ideology_socialist
+		}
+		USA_calvin_coolidge = {
+			name = "Calvin Coolidge"
+			#https://en.wikipedia.org/wiki/Calvin_Coolidge
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_calvin_coolidge
+				}
+			}
+			#ideology_liberal
+			country_leader = {
+				desc = "USA_character_coolidge_desc"
+				ideology = conservatism
+				traits = { silent_cal }
+				expire = "1933.1.5.1"
+				id=-1
+			}
+		}
+		USA_robert_marion_la_follette = {
+			name = USA_robert_marion_la_follette
+			#https://en.wikipedia.org/wiki/Robert_M._La_Follette
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_robert_marion_la_follette
+				}
+			}
+			#ideology_agrarian
+		}
+		USA_john_william_davis = {
+			name = USA_john_william_davis
+			#https://en.wikipedia.org/wiki/John_W._Davis
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_john_william_davis
+				}
+			}
+			#ideology_conservative
+		}
+		USA_hermam_preston_faris = {
+			name = USA_hermam_preston_faris
+			#https://en.wikipedia.org/wiki/Herman_P._Faris
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_hermam_preston_faris
+				}
+			}
+			#ideology_reactionary
+		}
+		USA_gilbert_owen_nations = {
+			name = USA_gilbert_owen_nations
+			#https://en.wikipedia.org/wiki/Gilbert_Nations
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_gilbert_owen_nations
+				}
+			}
+			#ideology_fascist
+		}
+	#1928 Election
+		USA_norman_mattoon_thomas = {
+			name = USA_norman_mattoon_thomas
+			#https://en.wikipedia.org/wiki/Norman_Thomas
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_norman_mattoon_thomas
+				}
+			}
+			#ideology_socialist
+		}
+		USA_herbert_hoover = {
+			name = USA_herbert_hoover
+			#https://en.wikipedia.org/wiki/Herbert_Hoover
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_herbert_hoover
+				}
+			}
+			#ideology_liberal
+		}
+		USA_albert_emmanuel_smith = {
+			name = USA_albert_emmanuel_smith
+			#https://en.wikipedia.org/wiki/Al_Smith
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_albert_emmanuel_smith
+				}
+			}
+			#ideology_conservative
+		}
+		USA_william_federick_varney = {
+			name = USA_william_federick_varney
+			#https://en.wikipedia.org/wiki/William_F._Varney
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_william_federick_varney
+				}
+			}
+			#ideology_reactionary
+		}
+	#1932 Election
+		USA_jacob_sechler_coxey = {
+			name = USA_jacob_sechler_coxey
+			#https://en.wikipedia.org/wiki/Jacob_S._Coxey_Sr.
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_jacob_sechler_coxey
+				}
+			}
+			#ideology_agrarian
+		}
+		USA_franklin_delano_roosevelt = {
+			name = USA_franklin_delano_roosevelt
+			#https://en.wikipedia.org/wiki/Franklin_D._Roosevelt
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_franklin_delano_roosevelt
+				}
+			}
+			#ideology_conservative
+		}
+	#1936 Election
+		USA_earl_russell_browder = {
+			name = USA_earl_russell_browder
+			#https://en.wikipedia.org/wiki/Earl_Browder
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_earl_russell_browder
+				}
+			}
+			#ideology_communist
+		}
+		USA_william_edgar_borah = {
+			name = USA_william_edgar_borah
+			#https://en.wikipedia.org/wiki/William_Borah
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_william_edgar_borah
+				}
+			}
+			#ideology_socialist
+		}
+		USA_alfred_mossman_landon = {
+			name = USA_alfred_mossman_landon
+			#https://en.wikipedia.org/wiki/Alf_Landon
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_alfred_mossman_landon
+				}
+			}
+			#ideology_liberal
+		}
+		USA_huey_pierce_long = {
+			name = USA_huey_pierce_long
+			#https://en.wikipedia.org/wiki/Huey_Long
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_huey_pierce_long
+				}
+			}
+			#ideology_agrarian
+		}
+		USA_charles_coughlin = {
+			name = USA_charles_coughlin
+			#https://en.wikipedia.org/wiki/Charles_Coughlin
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_charles_coughlin
+				}
+			}
+			#ideology_reactionary
+		}
+		USA_william_dudley_pelley = {
+			name = USA_william_dudley_pelley
+			#https://en.wikipedia.org/wiki/William_Dudley_Pelley
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_william_dudley_pelley
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1940 Election
+		USA_john_william_aiken = {
+			name = USA_john_william_aiken
+			#https://en.wikipedia.org/wiki/John_W._Aiken
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_john_william_aiken
+				}
+			}
+			#ideology_socialist
+		}
+		USA_william_lewis_willkie = {
+			name = USA_william_lewis_willkie
+			#https://en.wikipedia.org/wiki/Wendell_Willkie
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_william_lewis_willkie
+				}
+			}
+			#ideology_liberal
+		}
+		USA_roger_ward_babson = {
+			name = USA_roger_ward_babson
+			#https://en.wikipedia.org/wiki/Roger_Babson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_roger_ward_babson
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1944 Election
+		USA_edward_august_teichert = {
+			name = USA_edward_august_teichert
+			#https://en.wikipedia.org/wiki/Edward_A._Teichert
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_edward_august_teichert
+				}
+			}
+			#ideology_socialist
+		}
+		USA_thomas_edmund_dewey = {
+			name = USA_thomas_edmund_dewey
+			#https://en.wikipedia.org/wiki/Thomas_E._Dewey
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_thomas_edmund_dewey
+				}
+			}
+			#ideology_liberal
+		}
+		USA_claude_a_watson = {
+			name = USA_claude_a_watson
+			#https://en.wikipedia.org/wiki/Claude_A._Watson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_claude_a_watson
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1948 Election
+		USA_henry_agard_wallace = {
+			name = USA_henry_agard_wallace
+			#https://en.wikipedia.org/wiki/Henry_A._Wallace
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_henry_agard_wallace
+				}
+			}
+			#ideology_socialist
+		}
+		USA_harry_s_truman = {
+			name = USA_harry_s_truman
+			#https://en.wikipedia.org/wiki/Harry_S._Truman
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_harry_s_truman
+				}
+			}
+			#ideology_conservative
+		}
+		USA_james_strom_thurmond = {
+			name = USA_james_strom_thurmond
+			#https://en.wikipedia.org/wiki/Strom_Thurmond
+			portraits = {
+				civilian = {
+					large = GFX_portrait_
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1952 Election
+		USA_eric_hass = {
+			name = USA_eric_hass
+			#https://en.wikipedia.org/wiki/Eric_Hass
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_eric_hass
+				}
+			}
+			#ideology_socialist
+		}
+		USA_dwight_david_eisenhower = {
+			name = USA_dwight_david_eisenhower
+			#https://en.wikipedia.org/wiki/Dwight_D._Eisenhower
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_dwight_david_eisenhower
+				}
+			}
+			#ideology_liberal
+		}
+		USA_adlai_ewing_stevenson_ii = {
+			name = USA_adlai_ewing_stevenson_ii
+			#https://en.wikipedia.org/wiki/Adlai_Stevenson_II
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_adlai_ewing_stevenson_ii
+				}
+			}
+			#ideology_conservative
+		}
+		USA_carl_stuart_hamblen = {
+			name = USA_carl_stuart_hamblen
+			#https://en.wikipedia.org/wiki/Stuart_Hamblen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_carl_stuart_hamblen
+				}
+			}
+			#ideology_reactionary
+		}
+		USA_douglas_macarthur = {
+			name = USA_douglas_macarthur
+			#https://en.wikipedia.org/wiki/Douglas_MacArthur
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_douglas_macarthur
+				}
+			}
+			#ideology_stratocratic
+		}
+	#1956 Election
+		USA_farrell_dobbs = {
+			name = USA_farrell_dobbs
+			#https://en.wikipedia.org/wiki/Farrell_Dobbs
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_farrell_dobbs
+				}
+			}
+			#ideology_socialist
+		}
+		USA_thomas_coleman_andrews = {
+			name = USA_thomas_coleman_andrews
+			#https://en.wikipedia.org/wiki/T._Coleman_Andrews
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_thomas_coleman_andrews
+				}
+			}
+			#ideology_reactionary
+		}
+		USA_enoch_arden_holtwick = {
+			name = USA_enoch_arden_holtwick
+			#https://en.wikipedia.org/wiki/Enoch_A._Holtwick
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_enoch_arden_holtwick
+				}
+			}
+			#ideology_reactionary
+		}
+		USA_gerald_lyman_kenneth_smith = {
+			name = USA_gerald_lyman_kenneth_smith
+			#https://en.wikipedia.org/wiki/Gerald_L._K._Smith
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_gerald_lyman_kenneth_smith
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1960 Election
+		USA_richard_milhous_nixon = {
+			name = USA_richard_milhous_nixon
+			#https://en.wikipedia.org/wiki/Richard_Nixon
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_richard_milhous_nixon
+				}
+			}
+			#ideology_liberal
+		}
+		USA_john_fitzgerald_kennedy = {
+			name = USA_john_fitzgerald_kennedy
+			#https://en.wikipedia.org/wiki/John_F._Kennedy
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_john_fitzgerald_kennedy
+				}
+			}
+			#ideology_conservative
+		}
+		USA_orval_eugene_faubus = {
+			name = USA_orval_eugene_faubus
+			#https://en.wikipedia.org/wiki/Orval_Faubus
+			portraits = {
+				civilian = {
+					large = GFX_portrait_USA_orval_eugene_faubus
+				}
+			}
+			#ideology_reactionary
+		}
+		USA_charles_sullivan = {
+			name = USA_charles_sullivan
+			#https://en.wikipedia.org/wiki/Charles_L._Sullivan
+			portraits = {
+				civilian = {
+					large = GFX_portrait_charles_sullivan
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+}

@@ -1,0 +1,187 @@
+characters = {
+	#1926 Election
+		CAN_john_edward_brownlee = {
+			name = CAN_john_edward_brownlee
+			#https://en.wikipedia.org/wiki/John_Edward_Brownlee
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_john_edward_brownlee
+				}
+			}
+			#ideology_socialist
+		}
+		CAN_william_mackenzie_king = {
+			name = CAN_william_mackenzie_king
+			#https://en.wikipedia.org/wiki/William_Lyon_Mackenzie_King
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_mackenzie_king
+				}
+			}
+			#ideology_liberal
+		}
+		CAN_arthur_meighen = {
+			name = CAN_arthur_meighen
+			#https://en.wikipedia.org/wiki/Arthur_Meighen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_arthur_meighen
+				}
+			}
+			#ideology_conservative
+		}
+		CAN_adrien_arcand = {
+			name = CAN_adrien_arcand
+			#https://en.wikipedia.org/wiki/Adrien_Arcand
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_adrien_arcand
+				}
+			}
+			#ideology_fascist
+		}
+		CAN_william_aberhart = {
+			name = CAN_william_aberhart
+			#https://en.wikipedia.org/wiki/William_Aberhart
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_william_aberhart
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1930 Election
+		CAN_richard_bedford_bennett = {
+			name = CAN_richard_bedford_bennett
+			#https://en.wikipedia.org/wiki/William_Lyon_Mackenzie_King
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_richard_bedford_bennett
+				}
+			}
+			#ideology_conservative
+		}
+		CAN_james_shaver_woodsworth = {
+			name = CAN_james_shaver_woodsworth
+			#https://en.wikipedia.org/wiki/J._S._Woodsworth
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_james_shaver_woodsworth
+				}
+			}
+			#ideology_socialist
+		}
+	#
+	#1935 Election
+	#
+	#1940 Election
+		CAN_william_duncan_herridge = {
+			name = CAN_william_duncan_herridge
+			#https://en.wikipedia.org/wiki/William_Duncan_Herridge
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_william_duncan_herridge
+				}
+			}
+			#ideology_agrarian
+		}
+		CAN_robert_james_manion = {
+			name = CAN_robert_james_manion
+			#https://en.wikipedia.org/wiki/Robert_James_Manion
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_robert_james_manion
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1945 Election
+		CAN_james_william_coldwell = {
+			name = CAN_james_william_coldwell
+			#https://en.wikipedia.org/wiki/M._J._Coldwell
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_james_william_coldwell
+				}
+			}
+			#ideology_socialist
+		}
+		CAN_solon_earl_low = {
+			name = CAN_solon_earl_low
+			#https://en.wikipedia.org/wiki/Solon_Earl_Low
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_solon_earl_low
+				}
+			}
+			#ideology_agrarian
+		}
+		CAN_john_bracken = {
+			name = CAN_john_bracken
+			#https://en.wikipedia.org/wiki/John_Bracken
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_john_bracken
+				}
+			}
+			#ideology_conservative
+		}
+		CAN_maxime_raymond = {
+			name = CAN_maxime_raymond
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_maxime_raymond
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1949 Election
+		CAN_louis_stephen_st_laurent = {
+			name = CAN_louis_stephen_st_laurent
+			#https://en.wikipedia.org/wiki/Louis_St._Laurent
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_louis_stephen_st_laurent
+				}
+			}
+			#ideology_liberal
+		}
+		CAN_george_alexander_drew = {
+			name = CAN_george_alexander_drew
+			#https://en.wikipedia.org/wiki/George_A._Drew
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_george_alexander_drew
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1957 Election
+		CAN_john_george_diefenbaker = {
+			name = CAN_john_george_diefenbaker
+			#https://en.wikipedia.org/wiki/John_Diefenbaker
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_john_george_diefenbaker
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1958 Election
+		CAN_lester_bowles_pearson = {
+			name = CAN_lester_bowles_pearson
+			#https://en.wikipedia.org/wiki/Lester_B._Pearson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CAN_lester_bowles_pearson
+				}
+			}
+			#ideology_liberal
+		}
+	#
+}

@@ -1,0 +1,762 @@
+﻿l_english:
+#Uncategorized
+ red: "§R"
+ green: "§G"
+ yellow: "§Y"
+ purple: "§p"
+ ocean_blue: "§r"
+ orange: "§i"
+ color_stop: "§!"
+ dollar: "$$"
+ error: "Error"
+ transport: "transport"
+
+ test_gdp_growth_tooltip: "GDP Growth: $RIGHT|+=%1$"
+ test_gdp_tooltip: "Changes GDP from $LEFT|R0$ to $RIGHT|G0$"
+
+#General Business
+ profits_profit: "Profit:           §G"
+ profits_loss: "Loss:           §R-"
+ profits_break_even: "Break Even: §Y"
+ profits_profit_color: "§G"
+ profits_loss_color: "§R-"
+ profits_break_even_color: "§Y"
+
+#State List
+ state_list_title: "State List of [Root.GetNameDef]"
+ population_button_text: "Population"
+ building_button_text: "Buildings"
+ resources_button_text: "Resources"
+ statistics_button_text: "Overview"
+
+ state_entry_name: "[?controlled_states_array^i.GetName]"
+ state_entry_population: "[?states_population^i][?states_population_magnitude^i.GetNumAbbreviation]"
+
+#Overview
+  overview_title: "Overview"
+    overview_population_amount: "[GetPopulationAmount]"
+    overview_population_tt: "§YPopulation§!\nResidents: §p[GetPopulationAmount]§!\n   - Elderly: §p[GetElderlyAmount]§!\n   - Adults: §p[GetAdultsAmount]§!\n   - Children: §p[GetChildrenAmount]§!\n\n   - Males: §p[GetMalesAmount]§!\n   - Females: §p[GetFemalesAmount]§!\n\n§YPopulation Change§!\nTotal Change: [GetPopulationChangeColor][GetPopulationChange]§!\n   - Natural Increase:\n\n   - Decrease:\n      - Natural Deaths:\n      - Accidents:\n      - Crime:\n      - Conscription:\n      - Other:\n\n   - Net Migration:\n      - Immigration:\n      - Emmigration:\n"
+    overview_population_change: "[GetPopulationChangeColor][GetPopulationChange]§!"
+
+    overview_workforce_amount: "[GetWorkforceAmount]"
+    overview_workforce_tt: "§YWorkforce§!\nAble-Bodied Population:\nWorking Population:\n   - Self-Employed:\n   - Employed:\n   - Unemployed:\n"
+
+    overview_unemployed_percentage: "[GetUnemploymentPercentage]"
+      good_unemployment_percentage: "§G[?selected_state:pops_unemployed_percentage|1%]§!"
+      okay_unemployment_percentage: "§Y[?selected_state:pops_unemployed_percentage|1%]§!"
+      bad_unemployment_percentage: "§R[?selected_state:pops_unemployed_percentage|1%]§!"
+
+    overview_standard_of_living_amount: "[?selected_state:pops_standard_of_living_this_year|1]"
+
+    overview_cost_of_living_amount: "$[?selected_state:pops_cost_of_living_this_year|2]"
+
+
+    overview_gdp_amount: "[GetGDPAmount]"
+    overview_gdp_change: "[GetGDPChangeColor][GetGDPChange]§!"
+
+    overview_imports_amount: "[GetImportsAmountColor][GetImportsAmount]§!"
+
+    overview_exports_amount: "[GetExportsAmountColor][GetExportsAmount]§!"
+
+    overview_currency_supply_amount: "[GetCurrencyAmount]"
+
+    overview_wealth_amount: "N/A"
+
+
+    overview_road_bonus: "N/A"
+
+    overview_short_haul_usage: "N/A"
+    overview_short_haul_capacity: "N/A"
+
+    overview_long_haul_usage: "N/A"
+    overview_long_haul_capacity: "N/A"
+
+    overview_shipping_usage: "N/A"
+    overview_shipping_capacity: "N/A"
+
+  graph_title: "Graph"
+    graph_max: "[?state_graph_max]"
+    graph_middle: "[?state_graph_middle]"
+    graph_min: "[?state_graph_min]"
+
+    graph_start_year: "[GetGraphStartYear]"
+    graph_middle_year: "[GetGraphMiddleYear]"
+    graph_end_year: "[?global.current_year|0]"
+
+  goods_market_title: "Goods Market"
+  
+  top_production_title: "Top Production"
+  top_production_resource_1_name: ""
+  top_production_resource_1_number: ""
+  top_production_resource_2_name: ""
+  top_production_resource_2_number: ""
+  top_production_resource_3_name: ""
+  top_production_resource_3_number: ""
+  top_production_resource_4_name: ""
+  top_production_resource_4_number: ""
+  top_production_resource_5_name: ""
+  top_production_resource_5_number: ""
+  top_production_resource_6_name: ""
+  top_production_resource_6_number: ""
+  top_production_resource_7_name: ""
+  top_production_resource_7_number: ""
+  top_production_resource_8_name: ""
+  top_production_resource_8_number: ""
+
+  top_consumption_title: "Top Consumption"
+  top_consumption_resource_1_name: ""
+  top_consumption_resource_1_number: ""
+  top_consumption_resource_2_name: ""
+  top_consumption_resource_2_number: ""
+  top_consumption_resource_3_name: ""
+  top_consumption_resource_3_number: ""
+  top_consumption_resource_4_name: ""
+  top_consumption_resource_4_number: ""
+  top_consumption_resource_5_name: ""
+  top_consumption_resource_5_number: ""
+  top_consumption_resource_6_name: ""
+  top_consumption_resource_6_number: ""
+  top_consumption_resource_7_name: ""
+  top_consumption_resource_7_number: ""
+  top_consumption_resource_8_name: ""
+  top_consumption_resource_8_number: ""
+
+  top_imports_title: "Top Imports"
+  top_imports_resource_1_name: ""
+  top_imports_resource_1_number: ""
+  top_imports_resource_2_name: ""
+  top_imports_resource_2_number: ""
+  top_imports_resource_3_name: ""
+  top_imports_resource_3_number: ""
+  top_imports_resource_4_name: ""
+  top_imports_resource_4_number: ""
+
+  top_exports_title: "Top Exports"
+  top_exports_resource_1_name: ""
+  top_exports_resource_1_number: ""
+  top_exports_resource_2_name: ""
+  top_exports_resource_2_number: ""
+  top_exports_resource_3_name: ""
+  top_exports_resource_3_number: ""
+  top_exports_resource_4_name: ""
+  top_exports_resource_4_number: ""
+#Buildings
+ industries_title: "Industries"
+ buildings_title:0 "Buildings"
+ extractors_title:0 "Extractors"
+ factories_title:0 "Factories"
+ services_title:0 "Services"
+ construction_title:0 "Construction"
+
+ construction_entry_title:0 "[?construction_show^i.GetTokenLocalizedKey]"
+ construction_entry_productivity:0 "[GetIndustriesConstructionProductivity]§!/ §pK§!"
+
+ industries_construction_tt:0 "§YConstruction§!\nStart construction of a new industry in this state.[GetIndustriesUnderConstruction]"
+ industries_under_construction_tt:0 "\n\n§Y[?selected_state:industries_under_construction_amount|0] Industries Under Construction:§!\n[GetIndustriesUnderConstruction0][GetIndustriesUnderConstruction1][GetIndustriesUnderConstruction2][GetIndustriesUnderConstruction3][GetIndustriesUnderConstruction4][GetIndustriesUnderConstruction5][GetIndustriesUnderConstruction6][GetIndustriesUnderConstruction7][GetIndustriesUnderConstruction8]"
+ industries_under_construction0_tt:0 "[GetIndustriesUnderConstruction0Amount] £[GetIndustriesUnderConstruction0TextIcon]  [GetIndustriesUnderConstruction0Name]: £[GetIndustryConstructionTextIcon]  §r[GetIndustriesUnderConstruction0Speed]§! £[GetIndustryConstructionPriceIcon]  per month\n"
+ industries_under_construction1_tt:1 "[GetIndustriesUnderConstruction1Amount] £[GetIndustriesUnderConstruction1TextIcon]  [GetIndustriesUnderConstruction1Name]: £[GetIndustryConstructionTextIcon]  §r[GetIndustriesUnderConstruction1Speed]§! £[GetIndustryConstructionPriceIcon]  per month\n"
+ industries_under_construction2_tt:2 "[GetIndustriesUnderConstruction2Amount] £[GetIndustriesUnderConstruction2TextIcon]  [GetIndustriesUnderConstruction2Name]: £[GetIndustryConstructionTextIcon]  §r[GetIndustriesUnderConstruction2Speed]§! £[GetIndustryConstructionPriceIcon]  per month\n"
+ industries_under_construction3_tt:3 "[GetIndustriesUnderConstruction3Amount] £[GetIndustriesUnderConstruction3TextIcon]  [GetIndustriesUnderConstruction3Name]: £[GetIndustryConstructionTextIcon]  §r[GetIndustriesUnderConstruction3Speed]§! £[GetIndustryConstructionPriceIcon]  per month\n"
+ industries_under_construction4_tt:4 "[GetIndustriesUnderConstruction4Amount] £[GetIndustriesUnderConstruction4TextIcon]  [GetIndustriesUnderConstruction4Name]: £[GetIndustryConstructionTextIcon]  §r[GetIndustriesUnderConstruction4Speed]§! £[GetIndustryConstructionPriceIcon]  per month\n"
+ industries_under_construction5_tt:5 "[GetIndustriesUnderConstruction5Amount] £[GetIndustriesUnderConstruction5TextIcon]  [GetIndustriesUnderConstruction5Name]: £[GetIndustryConstructionTextIcon]  §r[GetIndustriesUnderConstruction5Speed]§! £[GetIndustryConstructionPriceIcon]  per month\n"
+ industries_under_construction6_tt:6 "[GetIndustriesUnderConstruction6Amount] £[GetIndustriesUnderConstruction6TextIcon]  [GetIndustriesUnderConstruction6Name]: £[GetIndustryConstructionTextIcon]  §r[GetIndustriesUnderConstruction6Speed]§! £[GetIndustryConstructionPriceIcon]  per month\n"
+ industries_under_construction7_tt:7 "[GetIndustriesUnderConstruction7Amount] £[GetIndustriesUnderConstruction7TextIcon]  [GetIndustriesUnderConstruction7Name]: £[GetIndustryConstructionTextIcon]  §r[GetIndustriesUnderConstruction7Speed]§! £[GetIndustryConstructionPriceIcon]  per month\n"
+ industries_under_construction8_tt:8 "[GetIndustriesUnderConstruction8Amount] £[GetIndustriesUnderConstruction8TextIcon]  [GetIndustriesUnderConstruction8Name]: £[GetIndustryConstructionTextIcon]  §r[GetIndustriesUnderConstruction8Speed]§! £[GetIndustryConstructionPriceIcon]  per month\n"
+ industries_under_construction9_tt:9 "[GetIndustriesUnderConstruction9Amount] £[GetIndustriesUnderConstruction9TextIcon]  [GetIndustriesUnderConstruction9Name]: £[GetIndustryConstructionTextIcon]  §r[GetIndustriesUnderConstruction9Speed]§! £[GetIndustryConstructionPriceIcon]  per month\n"
+
+ #Subsistence Farms
+  subsistence_farms_title:0 "§iSubsistence Farms§!"
+  subsistence_farms_size:0 "[?selected_state:arable_land_available]"
+  subsistence_farms_foodstuffs_tt:0 "£resource_foodstuffs_texticon §YFoodstuffs:§!\nProduction: £resource_foodstuffs_texticon [?selected_state:foodstuffs_production_subsistence_farm|3Y] / £resource_foodstuffs_texticon [?selected_state:max_foodstuffs_production_subsistence_farm|3Y]\nSales: §G+$[?selected_state:revenue_foodstuffs_subsistence_farm]§!"
+  subsistence_farms_housing_tt:0 "£resource_housing_texticon §YHousing:§!\nProduction: £resource_housing_texticon [?selected_state:housing_production_subsistence_farm|3Y] / £resource_housing_texticon [?selected_state:max_housing_production_subsistence_farm|3Y]\nSales: §G+$[?selected_state:revenue_housing_subsistence_farm]§!"
+  subsistence_farms_lumber_tt:0 "£resource_lumber_texticon §YLumber:§!\nProduction: £resource_lumber_texticon [?selected_state:lumber_production_subsistence_farm|3Y] / £resource_lumber_texticon [?selected_state:max_lumber_production_subsistence_farm|3Y]\nSales: §G+$[?selected_state:revenue_lumber_subsistence_farm]§!"
+  subsistence_farms_fiber_tt:0 "£resource_fiber_texticon §YFiber:§!\nProduction: £resource_fiber_texticon [?selected_state:fiber_production_subsistence_farm|3Y] / £resource_fiber_texticon [?selected_state:max_fiber_production_subsistence_farm|3Y]\nSales: §G+$[?selected_state:revenue_fiber_subsistence_farm]§!"
+  subsistence_farms_fabric_tt:0 "£resource_fabric_texticon §YFabric:§!\nProduction: £resource_fabric_texticon [?selected_state:fabric_production_subsistence_farm|3Y] / £resource_fabric_texticon [?selected_state:max_fabric_production_subsistence_farm|3Y]\nSales: §G+$[?selected_state:revenue_fabric_subsistence_farm]§!"
+
+  subsistence_farms_employment:0 "§p[?selected_state:employed_subsistence_farm|3]K§!"
+  subsistence_farms_employment_tt:0 "§YWorkforce:§!\nEmployees:  §Y[?selected_state:employed_subsistence_farm|3]K§! / §Y[?selected_state:jobs_subsistence_farm|3]K§! ( §Y[?selected_state:employment_percentage_subsistence_farm|2]%§! )\n   - Peasants:       §p[?selected_state:peasants_employed_subsistence_farm|3]K§!\n   - Elites:              §p[?selected_state:elites_employed_subsistence_farm|3]K§!\n\nAvg Wage:    §Y$[?selected_state:average_wage_subsistence_farm|3]§! / §p1.000K§! Employees\nPayroll:         §R-$[?selected_state:revenue_subsistence_farm|3]§!\n   - Peasants:       §R-$[?selected_state:peasants_payroll_subsistence_farm|3]§!\n   - Elites:              §R-$[?selected_state:elites_payroll_subsistence_farm|3]§!"
+  subsistence_farms_productivity:0 "§G$[?selected_state:productivity_subsistence_farm|3]§!"
+  subsistence_farms_revenue:0 "§G+$[?selected_state:revenue_subsistence_farm|3]§!"
+ #
+ #Market Capital
+   market_capital_title:0 "§iMarket Capital§!"
+   market_capital_button_text:0 "[GetMarketCapitalText]"
+   market_capital_button_text_move:0 "Move Market Capital"
+   market_capital_button_text_view:0 "View Market"
+   market_capital_button_text_trade:0 "Click on Trade Tab"
+   market_capital_button_text_goto:0 "Go To Market Capital"
+   market_capital_employment:0 "0"
+   market_capital_productivity:0 "0"
+   market_capital_revenue:0 "0"
+ #
+
+
+ #Workforce
+  workforce_militancy_loc: "§R[?selected_state:pops_militancy|1]§!"
+
+ #Terrain
+  terrain_terrain_type: "Terrain: [GetMajorityTerrainType]"
+  terrain_forest_cover: "Forest Coverage: [?selected_state:forest_percentage|0%]"
+  terrain_navigable_rivers: "Navigable Rivers: [GetNavigableRiverType]"
+  terrain_unnavigable_rivers: "Unnavigable Rivers: [GetUnnavigableRiverType]"
+ 
+  terrain_soil_quality: "Soil Quality: [GetSoilQualityType]"
+  terrain_growth_period: "Growth Period: [GetGrowthPeriodType]"
+  terrain_resource_modifiers: "Resource Modifiers:"
+ 
+  flat_terrain_majority: "Flat ([?selected_state:flat_percentage|0%])"
+  hilly_terrain_majority: "Hilly ([?selected_state:hilly_percentage|0%])"
+  mountainous_terrain_majority: "Mountainous ([?selected_state:mountainous_percentage|0%])"
+  dunes_terrain_majority: "Dunes ([?selected_state:dunes_percentage|0%])"
+  swamp_terrain_majority: "Swamp ([?selected_state:swamp_percentage|0%])"
+  mixed_terrain_majority: "Mixed Terrain"
+ 
+  navigable_river_0: "None"
+  navigable_river_1: "Miniscle"
+  navigable_river_2: "Minor"
+  navigable_river_3: "Moderate"
+  navigable_river_4: "Major"
+  navigable_river_5: "Extensive"
+  navigable_river_6: "Expansive"
+ 
+  unnavigable_river_0: "None"
+  unnavigable_river_1: "Miniscle"
+  unnavigable_river_2: "Minor"
+  unnavigable_river_3: "Moderate"
+  unnavigable_river_4: "Major"
+  unnavigable_river_5: "Extensive"
+  unnavigable_river_6: "Expansive"
+ 
+  soil_quality_0: "Atrocious"
+  soil_quality_1: "Poor"
+  soil_quality_2: "Below Average"
+  soil_quality_3: "Average"
+  soil_quality_4: "Above Average"
+  soil_quality_5: "Good"
+  soil_quality_6: "Excellent"
+ 
+  growth_period_0: "Atrocious"
+  growth_period_1: "Poor"
+  growth_period_2: "Below Average"
+  growth_period_3: "Average"
+  growth_period_4: "Above Average"
+  growth_period_5: "Good"
+  growth_period_6: "Excellent"
+ 
+  navigable_river_0_effect: "No Modifiers from §YNavigable Rivers§!"
+  navigable_river_1_effect: "[GetMinisculeNavigableRiverEffects]"
+  navigable_river_2_effect: "[GetMinorNavigableRiverEffects]"
+  navigable_river_3_effect: "[GetModerateNavigableRiverEffects]"
+  navigable_river_4_effect: "[GetMajorNavigableRiverEffects]"
+  navigable_river_5_effect: "[GetExtensiveNavigableRiverEffects]"
+  navigable_river_6_effect: "[GetExpansiveNavigableRiverEffects]"
+ 
+  unnavigable_river_0_effect: "No Modifiers from §YUnnavigable Rivers§!"
+  unnavigable_river_1_effect: "[GetMinisculeUnnavigableRiverEffects]"
+  unnavigable_river_2_effect: "[GetMinorUnnavigableRiverEffects]"
+  unnavigable_river_3_effect: "[GetModerateUnnavigableRiverEffects]"
+  unnavigable_river_4_effect: "[GetMajorUnnavigableRiverEffects]"
+  unnavigable_river_5_effect: "[GetExtensiveUnnavigableRiverEffects]"
+  unnavigable_river_6_effect: "[GetExpansiveUnnavigableRiverEffects]"
+ 
+  soil_quality_0_effect: "[GetAtrociousSoilQualityEffects]"
+  soil_quality_1_effect: "[GetPoorSoilQualityEffects]"
+  soil_quality_2_effect: "[GetBelowAverageSoilQualityEffects]"
+  soil_quality_3_effect: "[GetAverageSoilQualityEffects]"
+  soil_quality_4_effect: "[GetAboveAverageSoilQualityEffects]"
+  soil_quality_5_effect: "[GetGoodSoilQualityEffects]"
+  soil_quality_6_effect: "[GetExcellentSoilQualityEffects]"
+ 
+  growth_period_0_effect: "[GetAtrociousGrowthPeriodEffects]"
+  growth_period_1_effect: "[GetPoorGrowthPeriodEffects]"
+  growth_period_2_effect: "[GetBelowAverageGrowthPeriodEffects]"
+  growth_period_3_effect: "[GetAverageGrowthPeriodEffects]"
+  growth_period_4_effect: "[GetAboveAverageGrowthPeriodEffects]"
+  growth_period_5_effect: "[GetGoodGrowthPeriodEffects]"
+  growth_period_6_effect: "[GetExcellentGrowthPeriodEffects]"
+ 
+  terrain_effects_tt: "[GetFlatTerrainEffects]\n[GetHillyTerrainEffects]\n[GetMountainousTerrainEffects]\n[GetDunesTerrainEffects]\n[GetSwampTerrainEffects]\n[GetForestTerrainEffects]"
+  terrain_modifiers_tt: "§YTerrain Makeup:§!\nFlat Terrain: §Y[?selected_state:flat_percentage|1%]§!\nHilly Terrain: §Y[?selected_state:hilly_percentage|1%]§!\nMountainous Terrain: §Y[?selected_state:mountainous_percentage|1%]§!\nDunes Terrain: §Y[?selected_state:dunes_percentage|1%]§!\nSwamp Terrain: §Y[?selected_state:swamp_percentage|1%]§!\nForest Coverage: §Y[?selected_state:forest_percentage|1%]§!\n\n\n§YTerrain Modiifers:§!\nBuilding Slots: [?selected_state:terrain_building_slots|0=+]\nBuild Cost Modifier: [?selected_state:terrain_build_cost_modifier|1%=-]\nBuilding Maintenance Modifier: [?selected_state:terrain_building_maintenance_modifier|1%=-]\nTransport Cost Modifier: [?selected_state:terrain_transport_cost_modifier|1%=-]\nGrain Farm Output Modifier: [?selected_state:terrain_grain_farm_output_modifier|1%=+]\nLivestock Ranch Output Modifier: [?selected_state:terrain_livestock_ranch_output_modifier|1%=+]\nLumber Lodge Output Modifier: [?selected_state:terrain_lumber_lodge_output_modifier|1%=+]\n"
+  river_effects_tt: "§CNavigable Rivers:§!\n[GetMinisculeNavigableRiverEffects]\n[GetMinorNavigableRiverEffects]\n[GetModerateNavigableRiverEffects]\n[GetMajorNavigableRiverEffects]\n[GetExtensiveNavigableRiverEffects]\n[GetExpansiveNavigableRiverEffects]\n§CUnnavigable Rivers:§!\n[GetMinisculeUnnavigableRiverEffects]\n[GetMinorUnnavigableRiverEffects]\n[GetModerateUnnavigableRiverEffects]\n[GetMajorUnnavigableRiverEffects]\n[GetExtensiveUnnavigableRiverEffects]\n[GetExpansiveUnnavigableRiverEffects]"
+  river_modifiers_tt: "[GetNavigableRiverTypeEffect]\n[GetUnnavigableRiverTypeEffect]\n\n§YRiver Modiifers:§!\nBuilding Slots: [?selected_state:river_building_slots|0=+]\nBuild Cost Modifier: [?selected_state:river_build_cost_modifier|1%=-]\nTransport Cost Modifier: [?selected_state:river_transport_cost_modifier|1%=-]\nShipping Cost Modifier: [?selected_state:river_shipping_cost_modifier|1%=-]\nGrain Farm Output Modifier: [?selected_state:river_grain_farm_output_modifier|1%=+]\n"
+  soil_effects_tt: "§CSoil Quality:§!\n[GetAtrociousSoilQualityEffects]\n[GetPoorSoilQualityEffects]\n[GetBelowAverageSoilQualityEffects]\n[GetAverageSoilQualityEffects]\n[GetAboveAverageSoilQualityEffects]\n[GetGoodSoilQualityEffects]\n[GetExcellentSoilQualityEffects]\n§CGrowth Period:§!\n[GetAtrociousGrowthPeriodEffects]\n[GetPoorGrowthPeriodEffects]\n[GetBelowAverageGrowthPeriodEffects]\n[GetAverageGrowthPeriodEffects]\n[GetAboveAverageGrowthPeriodEffects]\n[GetGoodGrowthPeriodEffects]\n[GetExcellentGrowthPeriodEffects]"
+  soil_modifiers_tt: "[GetSoilQualityTypeEffect]\n[GetGrowthPeriodTypeEffect]\n\n§YGrowth Modiifers:§!\nGrain Farm Output Multiplier: §Y[?selected_state:terrain_grain_farm_output_multiplier|2]x§!"
+ #
+
+ #Industry
+ industry_title: "[?industries_show^i.GetTokenLocalizedKey]"
+ #Industry Values
+ industry_size_loc: "[GetIndustrySize]"
+ industry_production_loc: "[GetIndustryProduction]"
+ industry_profit_loc: "[GetIndustryProfit]"
+  industry_profit_positive: "§G+$$[GetIndustryProfitRaw]§!"
+  industry_profit_zero: "§Y$$[GetIndustryProfitRaw]§!"
+  industry_profit_negative: "§R-$$[GetIndustryProfitRaw]§!"
+ #Maintenance List: GetIndustriesMaintenance(Num)
+  industry_maintenance_1: "\n   - [GetIndustriesMaintenance1Resource]: £[GetIndustriesMaintenance1TextIcon] §Y[GetIndustriesMaintenance1Amount]§! ( §R-$[GetIndustriesMaintenance1Expenses]§! £[GetIndustryMaintenance1PriceIcon] )"
+  industry_maintenance_2: "\n   - [GetIndustriesMaintenance2Resource]: £[GetIndustriesMaintenance2TextIcon] §Y[GetIndustriesMaintenance2Amount]§! ( §R-$[GetIndustriesMaintenance2Expenses]§! £[GetIndustryMaintenance2PriceIcon] )"
+  industry_maintenance_3: "\n   - [GetIndustriesMaintenance3Resource]: £[GetIndustriesMaintenance3TextIcon] §Y[GetIndustriesMaintenance3Amount]§! ( §R-$[GetIndustriesMaintenance3Expenses]§! £[GetIndustryMaintenance3PriceIcon] )"
+  industry_maintenance_4: "\n   - [GetIndustriesMaintenance4Resource]: £[GetIndustriesMaintenance4TextIcon] §Y[GetIndustriesMaintenance4Amount]§! ( §R-$[GetIndustriesMaintenance4Expenses]§! £[GetIndustryMaintenance4PriceIcon] )"
+  industry_maintenance_5: "\n   - [GetIndustriesMaintenance5Resource]: £[GetIndustriesMaintenance5TextIcon] §Y[GetIndustriesMaintenance5Amount]§! ( §R-$[GetIndustriesMaintenance5Expenses]§! £[GetIndustryMaintenance5PriceIcon] )"
+  industry_maintenance_6: "\n   - [GetIndustriesMaintenance6Resource]: £[GetIndustriesMaintenance6TextIcon] §Y[GetIndustriesMaintenance6Amount]§! ( §R-$[GetIndustriesMaintenance6Expenses]§! £[GetIndustryMaintenance6PriceIcon] )"
+  industry_maintenance_7: "\n   - [GetIndustriesMaintenance7Resource]: £[GetIndustriesMaintenance7TextIcon] §Y[GetIndustriesMaintenance7Amount]§! ( §R-$[GetIndustriesMaintenance7Expenses]§! £[GetIndustryMaintenance7PriceIcon] )"
+  industry_maintenance_8: "\n   - [GetIndustriesMaintenance8Resource]: £[GetIndustriesMaintenance8TextIcon] §Y[GetIndustriesMaintenance8Amount]§! ( §R-$[GetIndustriesMaintenance8Expenses]§! £[GetIndustryMaintenance8PriceIcon] )"
+ #
+
+ #Industry Tooltips
+  industry_size_tt: "§YConstruction:§!\nNumber of Industries: §Y[GetIndustryUnderConstruction]§!\n\n§YRequirement Left:§!\n £[GetIndustryConstructionTextIcon]  [GetIndustryConstructionResource]: §r[GetIndustryConstructionAmount]§! £[GetIndustryConstructionPriceIcon] \n\n§YMonthly Requirements:§!\n£[GetIndustryConstructionTextIcon]  [GetIndustryConstructionResource]: §r[GetIndustryConstructionSpeed]§! £[GetIndustryConstructionPriceIcon] \n      Cost: §R-$[GetIndustryConstructionExpenses]"
+
+  industry_input_1_loc: "£[GetIndustryInput1TextIcon] §Y[GetIndustryInput1Resource]:§!\nRequired: £[GetIndustryInput1TextIcon] §Y[GetIndustryInput1Amount]§!\nCost: §R-$[GetIndustryInput1Expenses]§! £[GetIndustryInput1PriceIcon]"
+  industry_input_2_loc: "£[GetIndustryInput2TextIcon] §Y[GetIndustryInput2Resource]:§!\nRequired: £[GetIndustryInput2TextIcon] §Y[GetIndustryInput2Amount]§!\nCost: §R-$[GetIndustryInput2Expenses]§! £[GetIndustryInput2PriceIcon]"
+  industry_input_3_loc: "£[GetIndustryInput3TextIcon] §Y[GetIndustryInput3Resource]:§!\nRequired: £[GetIndustryInput3TextIcon] §Y[GetIndustryInput3Amount]§!\nCost: §R-$[GetIndustryInput3Expenses]§! £[GetIndustryInput3PriceIcon]"
+  industry_input_4_loc: "£[GetIndustryInput4TextIcon] §Y[GetIndustryInput4Resource]:§!\nRequired: £[GetIndustryInput4TextIcon] §Y[GetIndustryInput4Amount]§!\nCost: §R-$[GetIndustryInput4Expenses]§! £[GetIndustryInput4PriceIcon]"
+  industry_input_5_loc: "£[GetIndustryInput5TextIcon] §Y[GetIndustryInput5Resource]:§!\nRequired: £[GetIndustryInput5TextIcon] §Y[GetIndustryInput5Amount]§!\nCost: §R-$[GetIndustryInput5Expenses]§! £[GetIndustryInput5PriceIcon]"
+  industry_input_6_loc: "£[GetIndustryInput6TextIcon] §Y[GetIndustryInput6Resource]:§!\nRequired: £[GetIndustryInput6TextIcon] §Y[GetIndustryInput6Amount]§!\nCost: §R-$[GetIndustryInput6Expenses]§! £[GetIndustryInput6PriceIcon]"
+
+  #Production Methods
+   industry_production_method_tt:0 "[GetIndustryProductionMethod]"
+   
+   industry_pm_base_tt:0 "§YBasic Production§!"
+   industry_pm_industrialized_tt:0 "§YIndustrialized Production§!"
+   industry_pm_mechanized_tt:0 "§YMechanized Production§!"
+   industry_pm_modernized_tt:0 "§YModernized Production§!"
+
+   industry_pm_base_full_tt:0 "§YBasic Production:§!\nProfit: [GetIndustryBaseProfit]§!\nProductivity: [GetIndustryBaseProductivity]§! / §p1.000K§! Employees\n[GetIndustryBasePrerequisites]\n§YProduction:§!\n£[GetIndustryResourceTextIcon]  [GetIndustryResource]: §i[GetIndustryBaseProduction]§! £[GetIndustryResourcePriceIcon] \n[GetIndustryBaseInputs][GetIndustryBaseMaintenances]\n§YEmployment:§! [GetIndustryBaseLaborers][GetIndustryBaseWorkers][GetIndustryBaseProfessionals][GetIndustryBaseElites]"
+   industry_pm_base_never_tt:0 "\n§YPrerequisites:§!\n£trigger_no Not available for this industry\n"
+   industry_pm_base_tech_yes_tt:0 "\n§YPrerequisites:§!\n£trigger_yes Has researched §Y[GetIndustryBaseTech]§!\n"
+   industry_pm_base_tech_no_tt:0 "\n§YPrerequisites:§!\n£trigger_no Has researched §Y[GetIndustryBaseTech]§!\n"
+   industry_pm_base_inputs_tt:0 "\n§YResource Inputs:§!\n[GetIndustryBaseInput1][GetIndustryBaseInput2][GetIndustryBaseInput3][GetIndustryBaseInput4][GetIndustryBaseInput5][GetIndustryBaseInput6]"
+   industry_pm_base_input1_tt:0 "£[GetIndustryBaseInput1TextIcon]  §W[GetIndustryBaseInput1Name]:§! §r[GetIndustryBaseInput1Amount]§! £[GetIndustryBaseInput1PriceIcon] \n"
+   industry_pm_base_input2_tt:0 "£[GetIndustryBaseInput2TextIcon]  §W[GetIndustryBaseInput2Name]:§! §r[GetIndustryBaseInput2Amount]§! £[GetIndustryBaseInput2PriceIcon] \n"
+   industry_pm_base_input3_tt:0 "£[GetIndustryBaseInput3TextIcon]  §W[GetIndustryBaseInput3Name]:§! §r[GetIndustryBaseInput3Amount]§! £[GetIndustryBaseInput3PriceIcon] \n"
+   industry_pm_base_input4_tt:0 "£[GetIndustryBaseInput4TextIcon]  §W[GetIndustryBaseInput4Name]:§! §r[GetIndustryBaseInput4Amount]§! £[GetIndustryBaseInput4PriceIcon] \n"
+   industry_pm_base_input5_tt:0 "£[GetIndustryBaseInput5TextIcon]  §W[GetIndustryBaseInput5Name]:§! §r[GetIndustryBaseInput5Amount]§! £[GetIndustryBaseInput5PriceIcon] \n"
+   industry_pm_base_input6_tt:0 "£[GetIndustryBaseInput6TextIcon]  §W[GetIndustryBaseInput6Name]:§! §r[GetIndustryBaseInput6Amount]§! £[GetIndustryBaseInput6PriceIcon] \n"
+   industry_pm_base_maintenances_tt:0 "\n§YMaintenance:§!\n[GetIndustryBaseMaintenance1][GetIndustryBaseMaintenance2][GetIndustryBaseMaintenance3][GetIndustryBaseMaintenance4][GetIndustryBaseMaintenance5][GetIndustryBaseMaintenance6][GetIndustryBaseMaintenance7][GetIndustryBaseMaintenance8]"
+   industry_pm_base_maintenance1_tt:0 "£[GetIndustryBaseMaintenance1TextIcon]  §W[GetIndustryBaseMaintenance1Name]:§! §r[GetIndustryBaseMaintenance1Amount]§! £[GetIndustryBaseMaintenance1PriceIcon] \n"
+   industry_pm_base_maintenance2_tt:0 "£[GetIndustryBaseMaintenance2TextIcon]  §W[GetIndustryBaseMaintenance2Name]:§! §r[GetIndustryBaseMaintenance2Amount]§! £[GetIndustryBaseMaintenance2PriceIcon] \n"
+   industry_pm_base_maintenance3_tt:0 "£[GetIndustryBaseMaintenance3TextIcon]  §W[GetIndustryBaseMaintenance3Name]:§! §r[GetIndustryBaseMaintenance3Amount]§! £[GetIndustryBaseMaintenance3PriceIcon] \n"
+   industry_pm_base_maintenance4_tt:0 "£[GetIndustryBaseMaintenance4TextIcon]  §W[GetIndustryBaseMaintenance4Name]:§! §r[GetIndustryBaseMaintenance4Amount]§! £[GetIndustryBaseMaintenance4PriceIcon] \n"
+   industry_pm_base_maintenance5_tt:0 "£[GetIndustryBaseMaintenance5TextIcon]  §W[GetIndustryBaseMaintenance5Name]:§! §r[GetIndustryBaseMaintenance5Amount]§! £[GetIndustryBaseMaintenance5PriceIcon] \n"
+   industry_pm_base_maintenance6_tt:0 "£[GetIndustryBaseMaintenance6TextIcon]  §W[GetIndustryBaseMaintenance6Name]:§! §r[GetIndustryBaseMaintenance6Amount]§! £[GetIndustryBaseMaintenance6PriceIcon] \n"
+   industry_pm_base_maintenance7_tt:0 "£[GetIndustryBaseMaintenance7TextIcon]  §W[GetIndustryBaseMaintenance7Name]:§! §r[GetIndustryBaseMaintenance7Amount]§! £[GetIndustryBaseMaintenance7PriceIcon] \n"
+   industry_pm_base_maintenance8_tt:0 "£[GetIndustryBaseMaintenance8TextIcon]  §W[GetIndustryBaseMaintenance8Name]:§! §r[GetIndustryBaseMaintenance8Amount]§! £[GetIndustryBaseMaintenance8PriceIcon] \n"
+   industry_pm_base_laborers_tt:0 "\n£GFX_laborers_texticon  Laborers: §p[GetIndustryBaseLaborersAmount]K§!"
+   industry_pm_base_workers_tt:0 "\n£GFX_workers_texticon  Workers: §p[GetIndustryBaseWorkersAmount]K§!"
+   industry_pm_base_professionals_tt:0 "\n£GFX_professionals_texticon  Professionals: §p[GetIndustryBaseProfessionalsAmount]K§!"
+   industry_pm_base_elites_tt:0 "\n£GFX_elites_texticon  Elites: §p[GetIndustryBaseElitesAmount]K§!"
+   
+   industry_pm_industrialized_full_tt:0 "§YIndustrialized Production:§!\nProfit: [GetIndustryIndustrializedProfit]§!\nProductivity: [GetIndustryIndustrializedProductivity]§! / §p1.000K§! Employees\n[GetIndustryIndustrializedPrerequisites]\n§YProduction:§!\n£[GetIndustryResourceTextIcon]  [GetIndustryResource]: §i[GetIndustryIndustrializedProduction]§! £[GetIndustryResourcePriceIcon] \n[GetIndustryIndustrializedInputs][GetIndustryIndustrializedMaintenances]\n§YEmployment:§! [GetIndustryIndustrializedLaborers][GetIndustryIndustrializedWorkers][GetIndustryIndustrializedProfessionals][GetIndustryIndustrializedElites]"
+   industry_pm_industrialized_never_tt:0 "\n§YPrerequisites:§!\n£trigger_no Not available for this industry\n"
+   industry_pm_industrialized_tech_yes_tt:0 "\n§YPrerequisites:§!\n£trigger_yes Has researched §Y[GetIndustryIndustrializedTech]§!\n"
+   industry_pm_industrialized_tech_no_tt:0 "\n§YPrerequisites:§!\n£trigger_no Has researched §Y[GetIndustryIndustrializedTech]§!\n"
+   industry_pm_industrialized_inputs_tt:0 "\n§YResource Inputs:§!\n[GetIndustryIndustrializedInput1][GetIndustryIndustrializedInput2][GetIndustryIndustrializedInput3][GetIndustryIndustrializedInput4][GetIndustryIndustrializedInput5][GetIndustryIndustrializedInput6]"
+   industry_pm_industrialized_input1_tt:0 "£[GetIndustryIndustrializedInput1TextIcon]  §W[GetIndustryIndustrializedInput1Name]:§! §r[GetIndustryIndustrializedInput1Amount]§! £[GetIndustryIndustrializedInput1PriceIcon] \n"
+   industry_pm_industrialized_input2_tt:0 "£[GetIndustryIndustrializedInput2TextIcon]  §W[GetIndustryIndustrializedInput2Name]:§! §r[GetIndustryIndustrializedInput2Amount]§! £[GetIndustryIndustrializedInput2PriceIcon] \n"
+   industry_pm_industrialized_input3_tt:0 "£[GetIndustryIndustrializedInput3TextIcon]  §W[GetIndustryIndustrializedInput3Name]:§! §r[GetIndustryIndustrializedInput3Amount]§! £[GetIndustryIndustrializedInput3PriceIcon] \n"
+   industry_pm_industrialized_input4_tt:0 "£[GetIndustryIndustrializedInput4TextIcon]  §W[GetIndustryIndustrializedInput4Name]:§! §r[GetIndustryIndustrializedInput4Amount]§! £[GetIndustryIndustrializedInput4PriceIcon] \n"
+   industry_pm_industrialized_input5_tt:0 "£[GetIndustryIndustrializedInput5TextIcon]  §W[GetIndustryIndustrializedInput5Name]:§! §r[GetIndustryIndustrializedInput5Amount]§! £[GetIndustryIndustrializedInput5PriceIcon] \n"
+   industry_pm_industrialized_input6_tt:0 "£[GetIndustryIndustrializedInput6TextIcon]  §W[GetIndustryIndustrializedInput6Name]:§! §r[GetIndustryIndustrializedInput6Amount]§! £[GetIndustryIndustrializedInput6PriceIcon] \n"
+   industry_pm_industrialized_maintenances_tt:0 "\n§YMaintenance:§!\n[GetIndustryIndustrializedMaintenance1][GetIndustryIndustrializedMaintenance2][GetIndustryIndustrializedMaintenance3][GetIndustryIndustrializedMaintenance4][GetIndustryIndustrializedMaintenance5][GetIndustryIndustrializedMaintenance6][GetIndustryIndustrializedMaintenance7][GetIndustryIndustrializedMaintenance8]"
+   industry_pm_industrialized_maintenance1_tt:0 "£[GetIndustryIndustrializedMaintenance1TextIcon]  §W[GetIndustryIndustrializedMaintenance1Name]:§! §r[GetIndustryIndustrializedMaintenance1Amount]§! £[GetIndustryIndustrializedMaintenance1PriceIcon] \n"
+   industry_pm_industrialized_maintenance2_tt:0 "£[GetIndustryIndustrializedMaintenance2TextIcon]  §W[GetIndustryIndustrializedMaintenance2Name]:§! §r[GetIndustryIndustrializedMaintenance2Amount]§! £[GetIndustryIndustrializedMaintenance2PriceIcon] \n"
+   industry_pm_industrialized_maintenance3_tt:0 "£[GetIndustryIndustrializedMaintenance3TextIcon]  §W[GetIndustryIndustrializedMaintenance3Name]:§! §r[GetIndustryIndustrializedMaintenance3Amount]§! £[GetIndustryIndustrializedMaintenance3PriceIcon] \n"
+   industry_pm_industrialized_maintenance4_tt:0 "£[GetIndustryIndustrializedMaintenance4TextIcon]  §W[GetIndustryIndustrializedMaintenance4Name]:§! §r[GetIndustryIndustrializedMaintenance4Amount]§! £[GetIndustryIndustrializedMaintenance4PriceIcon] \n"
+   industry_pm_industrialized_maintenance5_tt:0 "£[GetIndustryIndustrializedMaintenance5TextIcon]  §W[GetIndustryIndustrializedMaintenance5Name]:§! §r[GetIndustryIndustrializedMaintenance5Amount]§! £[GetIndustryIndustrializedMaintenance5PriceIcon] \n"
+   industry_pm_industrialized_maintenance6_tt:0 "£[GetIndustryIndustrializedMaintenance6TextIcon]  §W[GetIndustryIndustrializedMaintenance6Name]:§! §r[GetIndustryIndustrializedMaintenance6Amount]§! £[GetIndustryIndustrializedMaintenance6PriceIcon] \n"
+   industry_pm_industrialized_maintenance7_tt:0 "£[GetIndustryIndustrializedMaintenance7TextIcon]  §W[GetIndustryIndustrializedMaintenance7Name]:§! §r[GetIndustryIndustrializedMaintenance7Amount]§! £[GetIndustryIndustrializedMaintenance7PriceIcon] \n"
+   industry_pm_industrialized_maintenance8_tt:0 "£[GetIndustryIndustrializedMaintenance8TextIcon]  §W[GetIndustryIndustrializedMaintenance8Name]:§! §r[GetIndustryIndustrializedMaintenance8Amount]§! £[GetIndustryIndustrializedMaintenance8PriceIcon] \n"
+   industry_pm_industrialized_laborers_tt:0 "\n£GFX_laborers_texticon  Laborers: §p[GetIndustryIndustrializedLaborersAmount]K§!"
+   industry_pm_industrialized_workers_tt:0 "\n£GFX_workers_texticon  Workers: §p[GetIndustryIndustrializedWorkersAmount]K§!"
+   industry_pm_industrialized_professionals_tt:0 "\n£GFX_professionals_texticon  Professionals: §p[GetIndustryIndustrializedProfessionalsAmount]K§!"
+   industry_pm_industrialized_elites_tt:0 "\n£GFX_elites_texticon  Elites: §p[GetIndustryIndustrializedElitesAmount]K§!"
+   
+   industry_pm_mechanized_full_tt:0 "§YMechanized Production:§!\nProfit: [GetIndustryMechanizedProfit]§!\nProductivity: [GetIndustryMechanizedProductivity]§! / §p1.000K§! Employees\n[GetIndustryMechanizedPrerequisites]\n§YProduction:§!\n£[GetIndustryResourceTextIcon]  [GetIndustryResource]: §i[GetIndustryMechanizedProduction]§! £[GetIndustryResourcePriceIcon] \n[GetIndustryMechanizedInputs][GetIndustryMechanizedMaintenances]\n§YEmployment:§! [GetIndustryMechanizedLaborers][GetIndustryMechanizedWorkers][GetIndustryMechanizedProfessionals][GetIndustryMechanizedElites]"
+   industry_pm_mechanized_never_tt:0 "\n§YPrerequisites:§!\n£trigger_no Not available for this industry\n"
+   industry_pm_mechanized_tech_yes_tt:0 "\n§YPrerequisites:§!\n£trigger_yes Has researched §Y[GetIndustryMechanizedTech]§!\n"
+   industry_pm_mechanized_tech_no_tt:0 "\n§YPrerequisites:§!\n£trigger_no Has researched §Y[GetIndustryMechanizedTech]§!\n"
+   industry_pm_mechanized_inputs_tt:0 "\n§YResource Inputs:§!\n[GetIndustryMechanizedInput1][GetIndustryMechanizedInput2][GetIndustryMechanizedInput3][GetIndustryMechanizedInput4][GetIndustryMechanizedInput5][GetIndustryMechanizedInput6]"
+   industry_pm_mechanized_input1_tt:0 "£[GetIndustryMechanizedInput1TextIcon]  §W[GetIndustryMechanizedInput1Name]:§! §r[GetIndustryMechanizedInput1Amount]§! £[GetIndustryMechanizedInput1PriceIcon] \n"
+   industry_pm_mechanized_input2_tt:0 "£[GetIndustryMechanizedInput2TextIcon]  §W[GetIndustryMechanizedInput2Name]:§! §r[GetIndustryMechanizedInput2Amount]§! £[GetIndustryMechanizedInput2PriceIcon] \n"
+   industry_pm_mechanized_input3_tt:0 "£[GetIndustryMechanizedInput3TextIcon]  §W[GetIndustryMechanizedInput3Name]:§! §r[GetIndustryMechanizedInput3Amount]§! £[GetIndustryMechanizedInput3PriceIcon] \n"
+   industry_pm_mechanized_input4_tt:0 "£[GetIndustryMechanizedInput4TextIcon]  §W[GetIndustryMechanizedInput4Name]:§! §r[GetIndustryMechanizedInput4Amount]§! £[GetIndustryMechanizedInput4PriceIcon] \n"
+   industry_pm_mechanized_input5_tt:0 "£[GetIndustryMechanizedInput5TextIcon]  §W[GetIndustryMechanizedInput5Name]:§! §r[GetIndustryMechanizedInput5Amount]§! £[GetIndustryMechanizedInput5PriceIcon] \n"
+   industry_pm_mechanized_input6_tt:0 "£[GetIndustryMechanizedInput6TextIcon]  §W[GetIndustryMechanizedInput6Name]:§! §r[GetIndustryMechanizedInput6Amount]§! £[GetIndustryMechanizedInput6PriceIcon] \n"
+   industry_pm_mechanized_maintenances_tt:0 "\n§YMaintenance:§!\n[GetIndustryMechanizedMaintenance1][GetIndustryMechanizedMaintenance2][GetIndustryMechanizedMaintenance3][GetIndustryMechanizedMaintenance4][GetIndustryMechanizedMaintenance5][GetIndustryMechanizedMaintenance6][GetIndustryMechanizedMaintenance7][GetIndustryMechanizedMaintenance8]"
+   industry_pm_mechanized_maintenance1_tt:0 "£[GetIndustryMechanizedMaintenance1TextIcon]  §W[GetIndustryMechanizedMaintenance1Name]:§! §r[GetIndustryMechanizedMaintenance1Amount]§! £[GetIndustryMechanizedMaintenance1PriceIcon] \n"
+   industry_pm_mechanized_maintenance2_tt:0 "£[GetIndustryMechanizedMaintenance2TextIcon]  §W[GetIndustryMechanizedMaintenance2Name]:§! §r[GetIndustryMechanizedMaintenance2Amount]§! £[GetIndustryMechanizedMaintenance2PriceIcon] \n"
+   industry_pm_mechanized_maintenance3_tt:0 "£[GetIndustryMechanizedMaintenance3TextIcon]  §W[GetIndustryMechanizedMaintenance3Name]:§! §r[GetIndustryMechanizedMaintenance3Amount]§! £[GetIndustryMechanizedMaintenance3PriceIcon] \n"
+   industry_pm_mechanized_maintenance4_tt:0 "£[GetIndustryMechanizedMaintenance4TextIcon]  §W[GetIndustryMechanizedMaintenance4Name]:§! §r[GetIndustryMechanizedMaintenance4Amount]§! £[GetIndustryMechanizedMaintenance4PriceIcon] \n"
+   industry_pm_mechanized_maintenance5_tt:0 "£[GetIndustryMechanizedMaintenance5TextIcon]  §W[GetIndustryMechanizedMaintenance5Name]:§! §r[GetIndustryMechanizedMaintenance5Amount]§! £[GetIndustryMechanizedMaintenance5PriceIcon] \n"
+   industry_pm_mechanized_maintenance6_tt:0 "£[GetIndustryMechanizedMaintenance6TextIcon]  §W[GetIndustryMechanizedMaintenance6Name]:§! §r[GetIndustryMechanizedMaintenance6Amount]§! £[GetIndustryMechanizedMaintenance6PriceIcon] \n"
+   industry_pm_mechanized_maintenance7_tt:0 "£[GetIndustryMechanizedMaintenance7TextIcon]  §W[GetIndustryMechanizedMaintenance7Name]:§! §r[GetIndustryMechanizedMaintenance7Amount]§! £[GetIndustryMechanizedMaintenance7PriceIcon] \n"
+   industry_pm_mechanized_maintenance8_tt:0 "£[GetIndustryMechanizedMaintenance8TextIcon]  §W[GetIndustryMechanizedMaintenance8Name]:§! §r[GetIndustryMechanizedMaintenance8Amount]§! £[GetIndustryMechanizedMaintenance8PriceIcon] \n"
+   industry_pm_mechanized_laborers_tt:0 "\n£GFX_laborers_texticon  Laborers: §p[GetIndustryMechanizedLaborersAmount]K§!"
+   industry_pm_mechanized_workers_tt:0 "\n£GFX_workers_texticon  Workers: §p[GetIndustryMechanizedWorkersAmount]K§!"
+   industry_pm_mechanized_professionals_tt:0 "\n£GFX_professionals_texticon  Professionals: §p[GetIndustryMechanizedProfessionalsAmount]K§!"
+   industry_pm_mechanized_elites_tt:0 "\n£GFX_elites_texticon  Elites: §p[GetIndustryMechanizedElitesAmount]K§!"
+   
+   industry_pm_modernized_full_tt:0 "§YModernized Production:§!\nProfit: [GetIndustryModernizedProfit]§!\nProductivity: [GetIndustryModernizedProductivity]§! / §p1.000K§! Employees\n[GetIndustryModernizedPrerequisites]\n§YProduction:§!\n£[GetIndustryResourceTextIcon]  [GetIndustryResource]: §i[GetIndustryModernizedProduction]§! £[GetIndustryResourcePriceIcon] \n[GetIndustryModernizedInputs][GetIndustryModernizedMaintenances]\n§YEmployment:§! [GetIndustryModernizedLaborers][GetIndustryModernizedWorkers][GetIndustryModernizedProfessionals][GetIndustryModernizedElites]"
+   industry_pm_modernized_never_tt:0 "\n§YPrerequisites:§!\n£trigger_no Not available for this industry\n"
+   industry_pm_modernized_tech_yes_tt:0 "\n§YPrerequisites:§!\n£trigger_yes Has researched §Y[GetIndustryModernizedTech]§!\n"
+   industry_pm_modernized_tech_no_tt:0 "\n§YPrerequisites:§!\n£trigger_no Has researched §Y[GetIndustryModernizedTech]§!\n"
+   industry_pm_modernized_inputs_tt:0 "\n§YResource Inputs:§!\n[GetIndustryModernizedInput1][GetIndustryModernizedInput2][GetIndustryModernizedInput3][GetIndustryModernizedInput4][GetIndustryModernizedInput5][GetIndustryModernizedInput6]"
+   industry_pm_modernized_input1_tt:0 "£[GetIndustryModernizedInput1TextIcon]  §W[GetIndustryModernizedInput1Name]:§! §r[GetIndustryModernizedInput1Amount]§! £[GetIndustryModernizedInput1PriceIcon] \n"
+   industry_pm_modernized_input2_tt:0 "£[GetIndustryModernizedInput2TextIcon]  §W[GetIndustryModernizedInput2Name]:§! §r[GetIndustryModernizedInput2Amount]§! £[GetIndustryModernizedInput2PriceIcon] \n"
+   industry_pm_modernized_input3_tt:0 "£[GetIndustryModernizedInput3TextIcon]  §W[GetIndustryModernizedInput3Name]:§! §r[GetIndustryModernizedInput3Amount]§! £[GetIndustryModernizedInput3PriceIcon] \n"
+   industry_pm_modernized_input4_tt:0 "£[GetIndustryModernizedInput4TextIcon]  §W[GetIndustryModernizedInput4Name]:§! §r[GetIndustryModernizedInput4Amount]§! £[GetIndustryModernizedInput4PriceIcon] \n"
+   industry_pm_modernized_input5_tt:0 "£[GetIndustryModernizedInput5TextIcon]  §W[GetIndustryModernizedInput5Name]:§! §r[GetIndustryModernizedInput5Amount]§! £[GetIndustryModernizedInput5PriceIcon] \n"
+   industry_pm_modernized_input6_tt:0 "£[GetIndustryModernizedInput6TextIcon]  §W[GetIndustryModernizedInput6Name]:§! §r[GetIndustryModernizedInput6Amount]§! £[GetIndustryModernizedInput6PriceIcon] \n"
+   industry_pm_modernized_maintenances_tt:0 "\n§YMaintenance:§!\n[GetIndustryModernizedMaintenance1][GetIndustryModernizedMaintenance2][GetIndustryModernizedMaintenance3][GetIndustryModernizedMaintenance4][GetIndustryModernizedMaintenance5][GetIndustryModernizedMaintenance6][GetIndustryModernizedMaintenance7][GetIndustryModernizedMaintenance8]"
+   industry_pm_modernized_maintenance1_tt:0 "£[GetIndustryModernizedMaintenance1TextIcon]  §W[GetIndustryModernizedMaintenance1Name]:§! §r[GetIndustryModernizedMaintenance1Amount]§! £[GetIndustryModernizedMaintenance1PriceIcon] \n"
+   industry_pm_modernized_maintenance2_tt:0 "£[GetIndustryModernizedMaintenance2TextIcon]  §W[GetIndustryModernizedMaintenance2Name]:§! §r[GetIndustryModernizedMaintenance2Amount]§! £[GetIndustryModernizedMaintenance2PriceIcon] \n"
+   industry_pm_modernized_maintenance3_tt:0 "£[GetIndustryModernizedMaintenance3TextIcon]  §W[GetIndustryModernizedMaintenance3Name]:§! §r[GetIndustryModernizedMaintenance3Amount]§! £[GetIndustryModernizedMaintenance3PriceIcon] \n"
+   industry_pm_modernized_maintenance4_tt:0 "£[GetIndustryModernizedMaintenance4TextIcon]  §W[GetIndustryModernizedMaintenance4Name]:§! §r[GetIndustryModernizedMaintenance4Amount]§! £[GetIndustryModernizedMaintenance4PriceIcon] \n"
+   industry_pm_modernized_maintenance5_tt:0 "£[GetIndustryModernizedMaintenance5TextIcon]  §W[GetIndustryModernizedMaintenance5Name]:§! §r[GetIndustryModernizedMaintenance5Amount]§! £[GetIndustryModernizedMaintenance5PriceIcon] \n"
+   industry_pm_modernized_maintenance6_tt:0 "£[GetIndustryModernizedMaintenance6TextIcon]  §W[GetIndustryModernizedMaintenance6Name]:§! §r[GetIndustryModernizedMaintenance6Amount]§! £[GetIndustryModernizedMaintenance6PriceIcon] \n"
+   industry_pm_modernized_maintenance7_tt:0 "£[GetIndustryModernizedMaintenance7TextIcon]  §W[GetIndustryModernizedMaintenance7Name]:§! §r[GetIndustryModernizedMaintenance7Amount]§! £[GetIndustryModernizedMaintenance7PriceIcon] \n"
+   industry_pm_modernized_maintenance8_tt:0 "£[GetIndustryModernizedMaintenance8TextIcon]  §W[GetIndustryModernizedMaintenance8Name]:§! §r[GetIndustryModernizedMaintenance8Amount]§! £[GetIndustryModernizedMaintenance8PriceIcon] \n"
+   industry_pm_modernized_laborers_tt:0 "\n£GFX_laborers_texticon  Laborers: §p[GetIndustryModernizedLaborersAmount]K§!"
+   industry_pm_modernized_workers_tt:0 "\n£GFX_workers_texticon  Workers: §p[GetIndustryModernizedWorkersAmount]K§!"
+   industry_pm_modernized_professionals_tt:0 "\n£GFX_professionals_texticon  Professionals: §p[GetIndustryModernizedProfessionalsAmount]K§!"
+   industry_pm_modernized_elites_tt:0 "\n£GFX_elites_texticon  Elites: §p[GetIndustryModernizedElitesAmount]K§!"
+  #
+
+  industry_production_tt: "£[GetIndustryResourceTextIcon] §Y[GetIndustryResource]:§!\nProduction: £[GetIndustryResourceTextIcon] §Y[GetIndustryProduction]§! / £[GetIndustryResourceTextIcon] §Y[GetIndustryMaxProduction]§! (§Y[GetIndustryProductionPercentage]%§!)\nSales: §G+$[GetIndustryRevenueGoods]§! £[GetIndustryResourcePriceIcon] \n\nMaintenance Requirements:[GetIndustriesMaintenance1][GetIndustriesMaintenance2][GetIndustriesMaintenance3][GetIndustriesMaintenance4][GetIndustriesMaintenance5][GetIndustriesMaintenance6][GetIndustriesMaintenance7][GetIndustriesMaintenance8]"
+
+  industry_employment_tt: "§YWorkforce:§!\nEmployees:  §Y[GetIndustryEmployed]K§! / §Y[GetIndustryJobs]K§! ( §Y[GetIndustryEmploymentPercentage]§! )\n   - Laborers:        §p[GetIndustryEmployedLaborers]K§!\n   - Workers:         §p[GetIndustryEmployedWorkers]K§!\n   - Professionals:  §p[GetIndustryEmployedProfessionals]K§!\n   - Elites:              §p[GetIndustryEmployedElites]K§!\n\nAvg Wage:    §Y$[GetIndustryAverageWage]§! / §p1.000K§! Employees\nPayroll:         §R-$[GetIndustryExpensesPayroll]§!\n   - Laborers:        §R-$[GetIndustryLaborersPayroll]§!  ( §Y$[?selected_state:laborers_wage|3]§!/§pK§! )\n   - Workers:         §R-$[GetIndustryWorkersPayroll]§!  ( §Y$[?selected_state:workers_wage|3]§!/§pK§! )\n   - Professionals:  §R-$[GetIndustryProfessionalsPayroll]§!  ( §Y$[?selected_state:professionals_wage|3]§!/§pK§! )\n   - Elites:              §R-$[GetIndustryElitesPayroll]§!  ( §Y$[?selected_state:elites_wage|3]§!/§pK§! )"
+
+  #industry_profit_tt: "§YIndustry Income:§!\nGoods:           [GetIndustryRevenueGoods]\n                       ------------\n       Revenue: [GetIndustryRevenue]\n\nMaintenance:            [GetIndustryExpensesMaintenance]\nInput:                         [GetIndustryExpensesInput]\nPayroll:                       [GetIndustryExpensesPayroll]\n                                  ------------\n      Expenses:            [GetIndustryExpenses]\n                       ---------------------\nProfit:                            [GetIndustryProfit]\nProfitability:                  [GetIndustryProfitability]\n\nCash on Hand: §Y[GetIndustryMoney]§!"
+  industry_profit_tt: "§YIndustry Income:§!\nRevenue:     §G+$[GetIndustryRevenue]§!\n   - Goods:            §G+$[GetIndustryRevenueGoods]§!\n   - Subsidies:        §G+$[GetIndustryRevenueSubsidies]§!\n\nExpenses:    §R-$[GetIndustryExpenses]§!\n   - Maintenance:  §R-$[GetIndustryExpensesMaintenance]§!\n   - Input:               §R-$[GetIndustryExpensesInput]§!\n   - Payroll:             §R-$[GetIndustryExpensesPayroll]§!\n   - Bonuses:          §R-$[GetIndustryExpensesBonuses]§!\n                    -----------------\nProfit:            [GetIndustryProfit]\nProfitability:  [GetIndustryProfitability]\n\nCash on Hand:  §Y$[GetIndustryMoney]§!\nInvestments:    §G+$0.000§!\n\nProductivity:       [GetIndustryProductivity]§! / §p1.000K§! Employees\nAverage Wage: §Y$[GetIndustryAverageWage]§! / §p1.000K§! Employees\n\nBase Productivity: §G$[?selected_state:base_productivity@var:v|3]§!\nBase Wage:          §Y$[?selected_state:base_wage|3]§!"
+ #
+
+#Pops
+ pops_title: "Pops of [?selected_state.GetName]"
+
+ starving_sol:0 "£GFX_sol_starving_texticon  §RStarving§!" # 1-4
+ hungry_sol:0 "£GFX_sol_hungry_texticon  §RHungry§!" # 5-9
+ destitute_sol:0 "£GFX_sol_destitute_texticon  §RDestitute§!" # 10-14
+ struggling_sol:0 "£GFX_sol_struggling_texticon  §RStruggling§!" # 15-19
+ impoverished_sol:0 "£GFX_sol_impoverished_texticon  §YImpoverished§!" # 20 - 24
+ poor_sol:0 "£GFX_sol_poor_texticon  §YPoor§!" # 25 - 29
+ middling_sol:0 "£GFX_sol_middling_texticon  §YMiddling§!" # 30 - 34
+ secure_sol:0 "£GFX_sol_secure_texticon  §YSecure§!" # 35 - 39
+ comfortable_sol:0 "£GFX_sol_comfortable_texticon  §YComfortable§!" # 40 - 44
+ well_off_sol:0 "£GFX_sol_well_off_texticon  §GWell-Off§!" # 45 - 49
+ prosperous_sol:0 "£GFX_sol_prosperous_texticon  §GProsperous§!" # 50 - 54
+ affluent_sol:0 "£GFX_sol_affluent_texticon  §GAffluent§!" # 55 - 59
+ rich_sol:0 "£GFX_sol_rich_texticon  §GRich§!" # 60 - 64
+ wealthy_sol:0 "£GFX_sol_wealthy_texticon  §GWealthy§!" # 65 - 69
+ lavish_sol:0 "£GFX_sol_lavish_texticon  §GLavish§!" # 70 - 74
+ extravagant_sol:0 "£GFX_sol_extravagant_texticon  §GExtravagant§!" # 75 - 79
+ opulent_sol:0 "£GFX_sol_opulent_texticon  §GOpulent§!" # 80+
+
+ slaves_pop_tt: "Slaves: §Y[?selected_state:slaves_amount|3][GetPopNumAbbreviation]§!\n\nStandard of Living: §Y[?selected_state:slaves_sol]§!\n\nWorkforce: §Y[?selected_state:slaves_workforce_amount|3][GetPopNumAbbreviation]§!\nEmployment: §Y[?selected_state:slaves_employed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:slaves_employed_percentage|1%]§!)\nUnemployment: §Y[?selected_state:slaves_unemployed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:slaves_unemployed_percentage|1%]§!)"
+ peasants_pop_tt: "Peasants: §Y[?selected_state:peasants_amount|3][GetPopNumAbbreviation]§!\n\nStandard of Living: §Y[?selected_state:peasants_sol]§!\n\nWorkforce: §Y[?selected_state:peasants_workforce_amount|3][GetPopNumAbbreviation]§!\nEmployment: §Y[?selected_state:peasants_employed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:peasants_employed_percentage|1%]§!)\nUnemployment: §Y[?selected_state:peasants_unemployed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:peasants_unemployed_percentage|1%]§!)"
+ laborers_pop_tt: "Laborers: §Y[?selected_state:laborers_amount|3][GetPopNumAbbreviation]§!\n\nStandard of Living: §Y[?selected_state:laborers_sol]§!\n\nWorkforce: §Y[?selected_state:laborers_workforce_amount|3][GetPopNumAbbreviation]§!\nEmployment: §Y[?selected_state:laborers_employed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:laborers_employed_percentage|1%]§!)\nUnemployment: §Y[?selected_state:laborers_unemployed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:laborers_unemployed_percentage|1%]§!)"
+ workers_pop_tt: "Workers: §Y[?selected_state:workers_amount|3][GetPopNumAbbreviation]§!\n\nStandard of Living: §Y[?selected_state:workers_sol]§!\n\nWorkforce: §Y[?selected_state:workers_workforce_amount|3][GetPopNumAbbreviation]§!\nEmployment: §Y[?selected_state:workers_employed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:workers_employed_percentage|1%]§!)\nUnemployment: §Y[?selected_state:workers_unemployed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:workers_unemployed_percentage|1%]§!)"
+ professionals_pop_tt: "Professionals: §Y[?selected_state:professionals_amount|3][GetPopNumAbbreviation]§!\n\nStandard of Living: §Y[?selected_state:professionals_sol]§!\n\nWorkforce: §Y[?selected_state:professionals_workforce_amount|3][GetPopNumAbbreviation]§!\nEmployment: §Y[?selected_state:professionals_employed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:professionals_employed_percentage|1%]§!)\nUnemployment: §Y[?selected_state:professionals_unemployed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:professionals_unemployed_percentage|1%]§!)"
+ soldiers_pop_tt: "Soldiers: §Y[?selected_state:soldiers_amount|3][GetPopNumAbbreviation]§!\n\nStandard of Living: §Y[?selected_state:soldiers_sol]§!\n\nWorkforce: §Y[?selected_state:soldiers_workforce_amount|3][GetPopNumAbbreviation]§!\nEmployment: §Y[?selected_state:soldiers_employed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:soldiers_employed_percentage|1%]§!)\nUnemployment: §Y[?selected_state:soldiers_unemployed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:soldiers_unemployed_percentage|1%]§!)"
+ bureaucrats_pop_tt: "Bureaucrats: §Y[?selected_state:bureaucrats_amount|3][GetPopNumAbbreviation]§!\n\nStandard of Living: §Y[?selected_state:bureaucrats_sol]§!\n\nWorkforce: §Y[?selected_state:bureaucrats_workforce_amount|3][GetPopNumAbbreviation]§!\nEmployment: §Y[?selected_state:bureaucrats_employed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:bureaucrats_employed_percentage|1%]§!)\nUnemployment: §Y[?selected_state:bureaucrats_unemployed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:bureaucrats_unemployed_percentage|1%]§!)"
+ elites_pop_tt: "Elites: §Y[?selected_state:elites_amount|3][GetPopNumAbbreviation]§!\n\nStandard of Living: §Y[?selected_state:elites_sol]§!\n\nWorkforce: §Y[?selected_state:elites_workforce_amount|3][GetPopNumAbbreviation]§!\nEmployment: §Y[?selected_state:elites_employed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:elites_employed_percentage|1%]§!)\nUnemployment: §Y[?selected_state:elites_unemployed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:elites_unemployed_percentage|1%]§!)"
+
+ #Population Container
+  pops_population_loc: "Population:      §Y[?selected_state:pops_amount|3][GetPopNumAbbreviation]§!"
+ #Workforce Container
+  pops_workforce_loc: "Workforce:     §Y[?selected_state:pops_workforce_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:pops_workforce_percentage|1%]§!)"
+  pops_employed_loc: "§Y[?selected_state:pops_employed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:pops_employed_percentage|1%]§!)"
+  pops_unemployed_loc: "§Y[?selected_state:pops_unemployed_amount|3][GetPopNumAbbreviation]§! (§Y[?selected_state:pops_unemployed_percentage|1%]§!)"
+
+ #Education Container
+  pops_literacy_loc: "Literacy:       §Y[?selected_state:pops_literacy_percentage|1%]§!"
+  pops_schooling_loc: "Schooling:    §Y[?selected_state:pops_schooling_percentage|1%]§!"
+  pops_education_loc: "Education:   §Y[?selected_state:pops_education_percentage|1%]§!"
+
+ #Money Container
+  pops_money_loc: "Money:         §Y$$[?selected_state:pops_money|3][GetMoneyNumAbbreviation]§!"
+  pops_earnings_loc: "Earnings:     §G$$[?selected_state:pops_earnings|3][GetMoneyNumAbbreviation]§!"
+  pops_spending_loc: "Spending:    §R$$[?selected_state:pops_spending|3][GetMoneyNumAbbreviation]§!"
+  pops_savings_loc: "Savings:       §Y$$[?selected_state:pops_savings|3][GetMoneyNumAbbreviation]§!"
+  pops_debt_loc: "Debt:             §Y$$[?selected_state:pops_debt|3][GetMoneyNumAbbreviation]§!"
+
+ #Needs Container
+  pops_sol_loc: "SoL:"
+  pops_sol_amount: "[GetAverageSOL] (§Y[?selected_state:pops_sol|1]§!)"
+  pops_sol_amount_tt: "§YStandard of Living§! in §Y[?selected_state.GetName]§!\nAverage: [GetAverageSOL] (§Y[?selected_state:pops_sol|1]§!)\n\n[GetSlavesSOLFull][GetPeasantsSOLFull][GetLaborersSOLFull][GetWorkersSOLFull][GetProfessionalsSOLFull][GetElitesSOLFull][GetBureaucratsSOLFull][GetSoldiersSOLFull]"
+  pops_col_loc: "CoL:"
+  pops_col_amount: "§R$[?selected_state:pops_col|2]§! ([?selected_state:pops_needs_spending_relative_price|-=%1] £[GetRelativeCOLPriceIcon] )"
+  pops_col_amount_tt:0 "§YCost of Living§! in §Y[?selected_state.GetName]§!\nPops spend an average of [GetRelativeCOLText]\n\n[GetPopsNeedList]"
+  pops_col_more_tt:0 "[?selected_state:pops_needs_spending_relative_price|-=%1] £[GetRelativeCOLPriceIcon]  more on fulfilling their needs."
+  pops_col_less_tt:0 "[?selected_state:pops_needs_spending_relative_price|-=%1] £[GetRelativeCOLPriceIcon]  less on fulfilling their needs."
+  pops_col_list_tt:0 "£[GetPopsNeedListResourceIcon]  §Y[GetPopsNeedListResource]§!: §C[GetPopsNeedsPercentageSpending]%§! of Spending ( [GetPopsNeedsRelativePrice] £[GetPopsNeedsRelativePriceIcon] )"
+
+  slaves_sol_tt: "Slaves: [GetSlavesSOL] (§Y[?selected_state:slaves_sol|0]§!)\n"
+  peasants_sol_tt: "Peasants: [GetPeasantsSOL] (§Y[?selected_state:peasants_sol|0]§!)\n"
+  laborers_sol_tt: "Laborers: [GetLaborersSOL] (§Y[?selected_state:laborers_sol|0]§!)\n"
+  workers_sol_tt: "Workers: [GetWorkersSOL] (§Y[?selected_state:workers_sol|0]§!)\n"
+  professionals_sol_tt: "Professionals: [GetProfessionalsSOL] (§Y[?selected_state:professionals_sol|0]§!)\n"
+  elites_sol_tt: "Elites: [GetElitesSOL] (§Y[?selected_state:elites_sol|0]§!)\n"
+  bureaucrats_sol_tt: "Bureaucrats: [GetBureaucratsSOL] (§Y[?selected_state:bureaucrats_sol|0]§!)\n"
+  soldiers_sol_tt: "Soldiers: [GetSoldiersSOL] (§Y[?selected_state:soldiers_sol|0]§!)\n"
+ #Militancy Container
+  pops_consciousness_loc: "Consciousness:    §g[?selected_state:pops_consciousness|1]§!"
+  pops_militancy_loc: "Militancy:                §R[?selected_state:pops_militancy|1]§!"
+ #Religion Container
+  pops_religion_title: "Religion:"
+  pops_religion_percentage_loc: "§Y[?selected_state:pops_religion_percentage^i|1%]§!"
+  pops_religion_amount_loc: "[?selected_state:pops_religion_amount^i|3]"
+  #pops_religion_name_loc: "[?selected_state:pops_religion_type^i.GetValueToReligionName]"
+
+  #pops_religion_tt: "§Y[?selected_state:pops_religion_type^i.GetValueToReligionName]:§!\nAmount: §Y[?selected_state:pops_religion_amount^i|3][GetPopNumAbbreviation] ([?selected_state:pops_religion_percentage^i|1%])§!"
+ #Culture Container
+  pops_culture_title: "Culture:"
+  pops_culture_percentage_loc: "§Y[?selected_state:pops_culture_percentage^i|1%]§!"
+  pops_culture_amount_loc: "[?selected_state:pops_culture_amount^i|3]"
+  #pops_culture_name_loc: "[?selected_state:pops_culture_type^i.GetValueToCultureName]"
+
+  #pops_culture_tt: "§Y[?selected_state:pops_culture_type^i.GetValueToCultureName]:§!\nAmount: §Y[?selected_state:pops_culture_amount^i|3][GetPopNumAbbreviation] ([?selected_state:pops_culture_percentage^i|1%])§!"
+ #Ideology Container
+  pops_ideology_title: "Politics:"
+  pops_ideology_percentage_loc: "§Y[?selected_state:pops_ideology_percentage^i|1%]§!"
+  pops_ideology_amount_loc: "[?selected_state:pops_ideology_amount^i|3]"
+  #pops_ideology_name_loc: "[?selected_state:pops_ideology_type^i.GetValueToIdeologyName]"
+
+  #pops_ideology_tt: "§Y[?selected_state:pops_ideology_type^i.GetValueToIdeologyName]:§!\nAmount: §Y[?selected_state:pops_ideology_amount^i|3][GetPopNumAbbreviation] ([?selected_state:pops_ideology_percentage^i|1%])§!"
+#
+
+
+#Resources
+ resources_title: "Resources"
+ resources_price_button_text: "Price"
+ resources_size_button_text: "Employment"
+ resources_employees_button_text: "Production"
+ resources_production_button_text: "Consumption"
+ resources_consumption_button_text: ""
+ resources_trade_button_text: "Trade"
+
+ resources_supply_button_text: "Supply"
+ resources_demand_button_text: "Demand"
+ resources_stockpile_button_text: "Needs"
+ resources_input_button_text: "Trade Amount"
+ resources_maintenance_button_text: "Trade Value"
+ resources_profit_button_text: "Profit"
+
+ natural_resources_title: "Natural Resources"
+ produced_resources_title: "Produced Resources"
+ service_resources_title: "Service Resources"
+
+ #Entries
+  foodstuffs_entry_loc: "[GetResourcePriceColor_resource_foodstuffs]$$[?selected_state:price@resource_foodstuffs|3]§!"
+  foodstuffs_entry_tt: "r_entry_tt"
+  crude_oil_entry_loc: "[GetResourcePriceColor_resource_crude_oil]$$[?selected_state:price@resource_crude_oil|3]§!"
+  crude_oil_entry_tt: "r_entry_tt"
+  coal_entry_loc: "[GetResourcePriceColor_resource_coal]$$[?selected_state:price@resource_coal|3]§!"
+  coal_entry_tt: "r_entry_tt"
+  iron_entry_loc: "[GetResourcePriceColor_resource_iron]$$[?selected_state:price@resource_iron|3]§!"
+  iron_entry_tt: "r_entry_tt"
+  fiber_entry_loc: "[GetResourcePriceColor_resource_fiber]$$[?selected_state:price@resource_fiber|3]§!"
+  fiber_entry_tt: "r_entry_tt"
+  lumber_entry_loc: "[GetResourcePriceColor_resource_lumber]$$[?selected_state:price@resource_lumber|3]§!"
+  lumber_entry_tt: "r_entry_tt"
+  aluminum_entry_loc: "[GetResourcePriceColor_resource_aluminum]$$[?selected_state:price@resource_aluminum|3]§!"
+  aluminum_entry_tt: "r_entry_tt"
+  copper_entry_loc: "[GetResourcePriceColor_resource_copper]$$[?selected_state:price@resource_copper|3]§!"
+  copper_entry_tt: "r_entry_tt"
+  rubber_entry_loc: "[GetResourcePriceColor_resource_rubber]$$[?selected_state:price@resource_rubber|3]§!"
+  rubber_entry_tt: "r_entry_tt"
+  tungsten_entry_loc: "[GetResourcePriceColor_resource_tungsten]$$[?selected_state:price@resource_tungsten|3]§!"
+  tungsten_entry_tt: "r_entry_tt"
+  chromium_entry_loc: "[GetResourcePriceColor_resource_chromium]$$[?selected_state:price@resource_chromium|3]§!"
+  chromium_entry_tt: "r_entry_tt"
+  precious_metals_entry_loc: "[GetResourcePriceColor_resource_precious_metals]$$[?selected_state:price@resource_precious_metals|3]§!"
+  precious_metals_entry_tt: "r_entry_tt"
+  rare_earth_metals_entry_loc: "[GetResourcePriceColor_resource_rare_earth_metals]$$[?selected_state:price@resource_rare_earth_metals|3]§!"
+  rare_earth_metals_entry_tt: "r_entry_tt"
+  sulfur_entry_loc: "[GetResourcePriceColor_resource_sulfur]$$[?selected_state:price@resource_sulfur|3]§!"
+  sulfur_entry_tt: "r_entry_tt"
+  
+  steel_entry_loc: "[GetResourcePriceColor_resource_steel]$$[?selected_state:price@resource_steel|3]§!"
+  steel_entry_tt: "r_entry_tt"
+  cement_entry_loc: "[GetResourcePriceColor_resource_cement]$$[?selected_state:price@resource_cement|3]§!"
+  cement_entry_tt: "r_entry_tt"
+  silicates_entry_loc: "[GetResourcePriceColor_resource_silicates]$$[?selected_state:price@resource_silicates|3]§!"
+  silicates_entry_tt: "r_entry_tt"
+  machinery_entry_loc: "[GetResourcePriceColor_resource_machinery]$$[?selected_state:price@resource_machinery|3]§!"
+  machinery_entry_tt: "r_entry_tt"
+  chemicals_entry_loc: "[GetResourcePriceColor_resource_chemicals]$$[?selected_state:price@resource_chemicals|3]§!"
+  chemicals_entry_tt: "r_entry_tt"
+  fertilizer_entry_loc: "[GetResourcePriceColor_resource_fertilizer]$$[?selected_state:price@resource_fertilizer|3]§!"
+  fertilizer_entry_tt: "r_entry_tt"
+  plastics_entry_loc: "[GetResourcePriceColor_resource_plastics]$$[?selected_state:price@resource_plastics|3]§!"
+  plastics_entry_tt: "r_entry_tt"
+  fabric_entry_loc: "[GetResourcePriceColor_resource_fabric]$$[?selected_state:price@resource_fabric|3]§!"
+  fabric_entry_tt: "r_entry_tt"
+  groceries_entry_loc: "[GetResourcePriceColor_resource_groceries]$$[?selected_state:price@resource_groceries|3]§!"
+  groceries_entry_tt: "r_entry_tt"
+  clothing_entry_loc: "[GetResourcePriceColor_resource_clothing]$$[?selected_state:price@resource_clothing|3]§!"
+  clothing_entry_tt: "r_entry_tt"
+  consumer_goods_entry_loc: "[GetResourcePriceColor_resource_consumer_goods]$$[?selected_state:price@resource_consumer_goods|3]§!"
+  consumer_goods_entry_tt: "r_entry_tt"
+  hydrocarbons_entry_loc: "[GetResourcePriceColor_resource_hydrocarbons]$$[?selected_state:price@resource_hydrocarbons|3]§!"
+  hydrocarbons_entry_tt: "r_entry_tt"
+  automobiles_entry_loc: "[GetResourcePriceColor_resource_automobiles]$$[?selected_state:price@resource_automobiles|3]§!"
+  automobiles_entry_tt: "r_entry_tt"
+  electronics_entry_loc: "[GetResourcePriceColor_resource_electronics]$$[?selected_state:price@resource_electronics|3]§!"
+  electronics_entry_tt: "r_entry_tt"
+  computers_entry_loc: "[GetResourcePriceColor_resource_computers]$$[?selected_state:price@resource_computers|3]§!"
+  computers_entry_tt: "r_entry_tt"
+  pharmaceuticals_entry_loc: "[GetResourcePriceColor_resource_pharmaceuticals]$$[?selected_state:price@resource_pharmaceuticals|3]§!"
+  pharmaceuticals_entry_tt: "r_entry_tt"
+  airplanes_entry_loc: "[GetResourcePriceColor_resource_airplanes]$$[?selected_state:price@resource_airplanes|3]§!"
+  airplanes_entry_tt: "r_entry_tt"
+  small_arms_entry_loc: "[GetResourcePriceColor_resource_small_arms]$$[?selected_state:price@resource_small_arms|3]§!"
+  small_arms_entry_tt: "r_entry_tt"
+  artillery_entry_loc: "[GetResourcePriceColor_resource_artillery]$$[?selected_state:price@resource_artillery|3]§!"
+  artillery_entry_tt: "r_entry_tt"
+  tanks_entry_loc: "[GetResourcePriceColor_resource_tanks]$$[?selected_state:price@resource_tanks|3]§!"
+  tanks_entry_tt: "r_entry_tt"
+  ammunition_entry_loc: "[GetResourcePriceColor_resource_ammunition]$$[?selected_state:price@resource_ammunition|3]§!"
+  ammunition_entry_tt: "r_entry_tt"
+  rockets_entry_loc: "[GetResourcePriceColor_resource_rockets]$$[?selected_state:price@resource_rockets|3]§!"
+  rockets_entry_tt: "r_entry_tt"
+  convoys_entry_loc: "[GetResourcePriceColor_resource_convoys]$$[?selected_state:price@resource_convoys|3]§!"
+  convoys_entry_tt: "r_entry_tt"
+  electricity_entry_loc: "[GetResourcePriceColor_resource_electricity]$$[?selected_state:price@resource_electricity|3]§!"
+  electricity_entry_tt: "r_entry_tt"
+  tools_entry_loc: "[GetResourcePriceColor_resource_tools]$$[?selected_state:price@resource_tools|3]§!"
+  tools_entry_tt: "r_entry_tt"
+
+  construction_entry_loc: "[GetResourcePriceColor_resource_construction]$$[?selected_state:price@resource_construction|3]§!"
+  construction_entry_tt: "r_entry_tt"
+  housing_entry_loc: "[GetResourcePriceColor_resource_housing]$$[?selected_state:price@resource_housing|3]§!"
+  housing_entry_tt: "r_entry_tt"
+  healthcare_entry_loc: "[GetResourcePriceColor_resource_healthcare]$$[?selected_state:price@resource_healthcare|3]§!"
+  healthcare_entry_tt: "r_entry_tt"
+  basic_education_entry_loc: "[GetResourcePriceColor_resource_basic_education]$$[?selected_state:price@resource_basic_education|3]§!"
+  basic_education_entry_tt: "r_entry_tt"
+  higher_education_entry_loc: "[GetResourcePriceColor_resource_higher_education]$$[?selected_state:price@resource_higher_education|3]§!"
+  higher_education_entry_tt: "r_entry_tt"
+  transport_entry_loc: "[GetResourcePriceColor_resource_transport]$$[?selected_state:price@resource_transport|3]§!"
+  transport_entry_tt: "r_entry_tt"
+  shipping_entry_loc: "[GetResourcePriceColor_resource_shipping]$$[?selected_state:price@resource_shipping|3]§!"
+  shipping_entry_tt: "r_entry_tt"
+  finance_entry_loc: "[GetResourcePriceColor_resource_finance]$$[?selected_state:price@resource_finance|3]§!"
+  finance_entry_tt: "r_entry_tt"
+  entertainment_entry_loc: "[GetResourcePriceColor_resource_entertainment]$$[?selected_state:price@resource_entertainment|3]§!"
+  entertainment_entry_tt: "r_entry_tt"
+ #
+
+ #Selected Resource
+  resources_selected_title: "[?selected_resource.GetTokenLocalizedKey]"
+  resources_selected_price: "§Y$$[?selected_state:price@var:selected_resource|3]§!"
+
+  resources_selected_supply_title: "Supply"
+  resources_selected_supply: "§G[?selected_state:supply@var:selected_resource|3]§!"
+  resources_selected_demand_title: "Demand"
+  resources_selected_demand: "§R[?selected_state:demand@var:selected_resource|3]§!"
+  resources_selected_supply_trade_title:0 "Trade"
+  resources_selected_supply_trade:0 "[?selected_state:supply_trade@var:selected_resource|C=3]"
+  resources_selected_base_price_title: "Base Price"
+  resources_selected_base_price: "§Y$[?global.base_price@var:selected_resource|3]§!"
+
+  resources_selected_production_title: "Production"
+  resources_selected_production: "§i[?selected_state:production@var:selected_resource|3]§!"
+  resources_selected_consumption_title: "Consumption"
+  resources_selected_consumption: "§Y[?selected_state:consumption@var:selected_resource|3]§!"
+
+  resources_selected_gdp_title:0 "GDP"
+  resources_selected_gdp:0 "§Y$[?selected_state:gdp@var:selected_resource|3]§!"
+  resources_selected_gdp_percentage_title:0 "GDP % in region"
+  resources_selected_gdp_percentage:0 "[?selected_state:gdp_percentage@var:selected_resource|%1]"
+ #
+
+ #State Entries
+  #Price
+  natural_resources_price_loc: "$$[?selected_state:resource_price^global.natural_resources_array^i|3]"
+  produced_resources_price_loc: "$$[?selected_state:resource_price^global.produced_resources_array^i|3]"
+  service_resources_price_loc: "$$[?selected_state:resource_price^global.service_resources_array^i|3]"
+  #Employment
+  natural_resources_size_loc: "[?selected_state:resource_employees_amount^global.natural_resources_array^i|3]K"
+  produced_resources_size_loc: "[?selected_state:resource_employees_amount^global.produced_resources_array^i|3]K"
+  service_resources_size_loc: "[?selected_state:resource_employees_amount^global.service_resources_array^i|3]K"
+  #Production
+  natural_resources_employees_loc: "[?selected_state:resource_production^global.natural_resources_array^i|3]"
+  produced_resources_employees_loc: "[?selected_state:resource_production^global.produced_resources_array^i|3]"
+  service_resources_employees_loc: "[?selected_state:resource_production^global.service_resources_array^i|3]"
+  #Consumption
+  natural_resources_production_loc: "[?selected_state:resource_consumption^global.natural_resources_array^i|3]"
+  produced_resources_production_loc: "[?selected_state:resource_consumption^global.produced_resources_array^i|3]"
+  service_resources_production_loc: "[?selected_state:resource_consumption^global.service_resources_array^i|3]"
+  #Consumption
+  natural_resources_consumption_loc: "[?selected_state:resource_consumption^global.natural_resources_array^i|3]"
+  produced_resources_consumption_loc: "[?selected_state:resource_consumption^global.produced_resources_array^i|3]"
+  service_resources_consumption_loc: "[?selected_state:resource_consumption^global.service_resources_array^i|3]"
+  #Trade
+  natural_resources_trade_loc: "[?selected_state:resource_trade^global.natural_resources_array^i|3]"
+  produced_resources_trade_loc: "[?selected_state:resource_trade^global.produced_resources_array^i|3]"
+  service_resources_trade_loc: "[?selected_state:resource_trade^global.service_resources_array^i|3]"
+
+  #Supply
+  natural_resources_supply_loc: "[?selected_state:resource_supply^global.natural_resources_array^i|3]"
+  produced_resources_supply_loc: "[?selected_state:resource_supply^global.produced_resources_array^i|3]"
+  service_resources_supply_loc: "[?selected_state:resource_supply^global.service_resources_array^i|3]"
+  #Demand
+  natural_resources_demand_loc: "[?selected_state:resource_demand^global.natural_resources_array^i|3]"
+  produced_resources_demand_loc: "[?selected_state:resource_demand^global.produced_resources_array^i|3]"
+  service_resources_demand_loc: "[?selected_state:resource_demand^global.service_resources_array^i|3]"
+  #Needs
+  natural_resources_stockpile_loc: "[?selected_state:resource_needs^global.natural_resources_array^i|3]"
+  produced_resources_stockpile_loc: "[?selected_state:resource_needs^global.produced_resources_array^i|3]"
+  service_resources_stockpile_loc: "[?selected_state:resource_needs^global.service_resources_array^i|3]"
+  #Trade Amount
+  natural_resources_input_loc: "[?selected_state:resource_interstate_trade_amount^global.natural_resources_array^i|3]"
+  produced_resources_input_loc: "[?selected_state:resource_interstate_trade_amount^global.produced_resources_array^i|3]"
+  service_resources_input_loc: "[?selected_state:resource_interstate_trade_amount^global.service_resources_array^i|3]"
+  #Trade Value
+  natural_resources_maintenance_loc: "$[?selected_state:resource_interstate_trade_value^global.natural_resources_array^i|3]"
+  produced_resources_maintenance_loc: "$[?selected_state:resource_interstate_trade_value^global.produced_resources_array^i|3]"
+  service_resources_maintenance_loc: "$[?selected_state:resource_interstate_trade_value^global.service_resources_array^i|3]"
+  #Profit (With Profitability %) TODO - Add profitability & Color coding
+  natural_resources_profit_loc: "[?selected_state:resource_profit^global.natural_resources_array^i|3]"
+  produced_resources_profit_loc: "[?selected_state:resource_profit^global.produced_resources_array^i|3]"
+  service_resources_profit_loc: "[?selected_state:resource_profit^global.service_resources_array^i|3]"
+ #
+#
+
+#State Attributes
+ ARABILITY: "Arability: [GetArabilityLevel]"
+ ARABILITY_TOOLTIP: "[GetArabilityEffects]"
+ NOT_ARABLE: "§RNot Arable§!"
+ SEMI_ARABLE: "§YSemi-Arable§!"
+ ARABLE: "§YArable§!"
+ FERTILE: "§GFertile§!"
+ VERY_FERTILE: "§GVery Fertile§!"
+ NOT_ARABLE_EFFECT: "Foodstuffs Production: §Y1.0x§!"
+ SEMI_ARABLE_EFFECT: "Foodstuffs Production: §G1.25x§!"
+ ARABLE_EFFECT: "Foodstuffs Production: §G1.50x§!"
+ FERTILE_EFFECT: "Foodstuffs Production: §G1.75x§!"
+ VERY_FERTILE_EFFECT: "Foodstuffs Production: §G2.0x§!"
+ NOT_ARABLE_FOODSTUFFS_PRODUCTION_EFFECT: "1.0x§!"
+ SEMI_ARABLE_FOODSTUFFS_PRODUCTION_EFFECT: "1.25x"
+ ARABLE_FOODSTUFFS_PRODUCTION_EFFECT: "1.50x"
+ FERTILE_FOODSTUFFS_PRODUCTION_EFFECT: "1.75"
+ VERY_FERTILE_FOODSTUFFS_PRODUCTION_EFFECT: "2.0x"
+ WATERWAYS: "Waterways: [GetWaterwaysLevel]"
+ WATERWAYS_TOOLTIP: "[GetWaterwaysEffects]"
+ INS_WW: "Insignificant Waterways"
+ MIN_WW: "§MMiniscule Waterways§!"
+ SIG_WW: "§MSignificant Waterways§!"
+ IMP_WW: "§BImportant Waterways§!"
+ INS_WW_EFFECT: "Resource Production: §Y1.0x§!"
+ MIN_WW_EFFECT: "Resource Production: §G1.05x§!"
+ SIG_WW_EFFECT: "Resource Production: §G1.10x§!"
+ IMP_WW_EFFECT: "Resource Production: §G1.15x§!"
+ INS_WW_RESOURCE_PRODUCTION_EFFECT: "1.0x"
+ MIN_WW_RESOURCE_PRODUCTION_EFFECT: "1.05x"
+ SIG_WW_RESOURCE_PRODUCTION_EFFECT: "1.10x"
+ IMP_WW_RESOURCE_PRODUCTION_EFFECT: "1.15x"
+
+ #Other
+ pop1_loc: "Pop 1\n   [?selected_state:pop1_amount|3][GetPopNumAbbreviation]\n   [GetDollar][?selected_state:pop1_money|3]\n   [?selected_state:pop1_need|3] / [?selected_state:pop1_need_met|3]"
+
+ r1_loc: "Resource 1\n   [?selected_state:r1_amount|3]\n   §G[GetDollar][?selected_state:r1_price|3]§!\n   [GetDollar][?selected_state:r1_money|3]"

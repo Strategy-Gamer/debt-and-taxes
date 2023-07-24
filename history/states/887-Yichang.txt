@@ -1,0 +1,30 @@
+
+state={
+	id=887
+	name="STATE_887"
+
+	history={
+		owner = GXC
+		add_core_of = GXC
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1612 4041 5030 7019 7434 7596 7609 7948 8072 10474 10757 12086 13482 13483 13484
+	}
+	manpower=7213651
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

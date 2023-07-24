@@ -1,0 +1,1020 @@
+distances_setup = {
+    every_state = {
+        clear_array = neighbors
+        every_neighbor_state = {
+            add_to_array = { PREV.neighbors = THIS }
+        }
+    }
+    371 = { #Louisiana
+        clear_array = river_connections
+        clear_array = river_connectivity
+        clear_array = direct_port_connections
+        add_to_array = { river_connections = 372 } #Arkansas
+        add_to_array = { river_connectivity = 6 } #Higher this is, the easier transport over rivers are (No max, but for safe-keeping, 6)
+        add_to_array = { river_connections = 370 } #Mississippi
+        add_to_array = { river_connectivity = 5 }
+        add_to_array = { direct_port_connections = 370 }
+        add_to_array = { river_connections = 375 } #Texas
+        add_to_array = { river_connectivity = 3 }
+        add_to_array = { direct_port_connections = 375 }
+    }
+    375 = { #Texas
+        clear_array = river_connections
+        clear_array = river_connectivity
+        clear_array = direct_port_connections
+        add_to_array = { river_connections = 371 } #Louisiana
+        add_to_array = { river_connectivity = 3 }
+        add_to_array = { direct_port_connections = 371 }
+        add_to_array = { river_connections = 374 } #Oklahoma
+        add_to_array = { river_connectivity = 1 }
+        add_to_array = { river_connections = 795 } #Southern Texas
+        add_to_array = { river_connectivity = 3 }
+        add_to_array = { direct_port_connections = 795 }
+    }
+    372 = { #Arkansas
+        clear_array = river_connections
+        clear_array = river_connectivity
+        add_to_array = { river_connections = 371 } #Louisiana
+        add_to_array = { river_connectivity = 6 }
+        add_to_array = { river_connections = 374 } #Oklahoma
+        add_to_array = { river_connectivity = 3 }
+        add_to_array = { river_connections = 370 } #Mississippi
+        add_to_array = { river_connectivity = 4 }
+        add_to_array = { river_connections = 373 } #Missouri
+        add_to_array = { river_connectivity = 6 }
+        add_to_array = { river_connections = 368 } #Tennessee
+        add_to_array = { river_connectivity = 2 }
+    }
+    370 = { #Mississippi
+        clear_array = river_connections
+        clear_array = river_connectivity
+        clear_array = direct_port_connections
+        add_to_array = { river_connections = 371 } #Louisiana
+        add_to_array = { river_connectivity = 5 }
+        add_to_array = { direct_port_connections = 371 }
+        add_to_array = { river_connections = 367 } #Alabama
+        add_to_array = { river_connectivity = 4 }
+        add_to_array = { direct_port_connections = 367 }
+        add_to_array = { river_connections = 372 } #Arkansas
+        add_to_array = { river_connectivity = 4 }
+        add_to_array = { river_connections = 368 } #Tennessee
+        add_to_array = { river_connectivity = 5 }
+    }
+    795 = { #Southern Texas
+        clear_array = river_connections
+        clear_array = river_connectivity
+        clear_array = direct_port_connections
+        add_to_array = { river_connections = 375 } #Texas
+        add_to_array = { river_connectivity = 3 }
+        add_to_array = { direct_port_connections = 375 }
+        add_to_array = { river_connections = 376 } #New Mexico
+        add_to_array = { river_connectivity = 2 }
+        add_to_array = { river_connections = 482 } #Chihuahua
+        add_to_array = { river_connectivity = 1 }
+        add_to_array = { river_connections = 480 } #Coahuila
+        add_to_array = { river_connectivity = 1 }
+        add_to_array = { river_connections = 479 } #Tamaulipas
+        add_to_array = { river_connectivity = 1 }
+        add_to_array = { direct_port_connections = 368 }
+    }
+    374 = { #Oklahoma
+        clear_array = river_connections
+        clear_array = river_connectivity
+        add_to_array = { river_connections = 375 } #Texas
+        add_to_array = { river_connectivity = 1 }
+        add_to_array = { river_connections = 383 } #Kansas
+        add_to_array = { river_connectivity = 1 }
+        add_to_array = { river_connections = 372 } #Arkansas
+        add_to_array = { river_connectivity = 3 }
+    }
+    373 = { #Missouri
+        clear_array = river_connections
+        clear_array = river_connectivity
+        add_to_array = { river_connections = 383 } #Kansas
+        add_to_array = { river_connectivity = 3 }
+        add_to_array = { river_connections = 384 } #Nebraska
+        add_to_array = { river_connectivity = 5 }
+        add_to_array = { river_connections = 392 } #Iowa
+        add_to_array = { river_connectivity = 5 }
+        add_to_array = { river_connections = 395 } #Illinois
+        add_to_array = { river_connectivity = 6 }
+        add_to_array = { river_connections = 369 } #Kentucky
+        add_to_array = { river_connectivity = 6 }
+        add_to_array = { river_connections = 368 } #Tennessee
+        add_to_array = { river_connectivity = 1 }
+        add_to_array = { river_connections = 372 } #Arkansas
+        add_to_array = { river_connectivity = 6 }
+    }
+    368 = { #Tennessee
+        clear_array = river_connections
+        clear_array = river_connectivity
+        add_to_array = { river_connections = 370 } #Mississippi
+        add_to_array = { river_connectivity = 5 }
+        add_to_array = { river_connections = 367 } #Alabama
+        add_to_array = { river_connectivity = 6 }
+        add_to_array = { river_connections = 369 } #Kentucky
+        add_to_array = { river_connectivity = 6 }
+        add_to_array = { river_connections = 373 } #Missouri
+        add_to_array = { river_connectivity = 1 }
+        add_to_array = { river_connections = 372 } #Arkansas
+        add_to_array = { river_connectivity = 2 }
+    }
+    369 = { #Kentucky
+        clear_array = river_connections
+        clear_array = river_connectivity
+        add_to_array = { river_connections = 373 } #Missouri
+        add_to_array = { river_connectivity = 6 }
+        add_to_array = { river_connections = 395 } #Illinois
+        add_to_array = { river_connectivity = 6 }
+        add_to_array = { river_connections = 396 } #Indiana
+        add_to_array = { river_connectivity = 4 }
+        add_to_array = { river_connections = 261 } #Ohio
+        add_to_array = { river_connectivity = 5 }
+        add_to_array = { river_connections = 788 } #West Virginia
+        add_to_array = { river_connectivity = 5 }
+        add_to_array = { river_connections = 368 } #Tennessee
+        add_to_array = { river_connectivity = 6 }
+    }
+    367 = { #Alabama
+
+    }
+    366 = { #Florida
+
+    }
+    365 = { #Georgia
+
+    }
+    364 = { #South Carolina
+
+    }
+    363 = { #North Carolina
+
+    }
+    362 = { #Virginia
+
+    }
+    788 = { #West Virginia
+
+    }
+    361 = { #Maryland
+
+    }
+    every_state = {
+        every_neighbor_state = {
+            set_variable = { PREV.travel_distance_between@THIS = THIS.distance_to@PREV }
+            set_temp_variable = { travel_distance_between_temp = 1 }
+
+            #River Connections
+            for_each_loop = {
+                array = river_connections
+                index = i
+                break = br
+                if = {
+                    limit = {
+                        check_variable = { river_connections^i = PREV }
+                    }
+                    set_temp_variable = { river_connectivity_temp = river_connectivity^i }
+                    multiply_temp_variable = { river_connectivity_temp = 0.05 }
+                    #Modifiers would go here
+                    set_temp_variable = { river_connectivity_temp2 = 1 }
+                    subtract_from_temp_variable = { river_connectivity_temp2 = river_connectivity_temp }
+                    multiply_temp_variable = { travel_distance_between_temp = river_connectivity_temp2 }
+                    set_variable = { br = 1 }
+                }
+            }
+
+            #Infrastructure
+            set_temp_variable = { infrastructure_connectivity_temp = infrastructure_level }
+            if = {
+                limit = {
+                    check_variable = { PREV.infrastructure_level < infrastructure_connectivity_temp }
+                }
+                set_temp_variable = { infrastructure_connectivity_temp = PREV.infrastructure_level }
+            }
+            multiply_temp_variable = { infrastructure_connectivity_temp = 0.08 }
+            #Modifiers would go here
+            set_temp_variable = { infrastructure_connectivity_temp2 = 1 }
+            subtract_from_temp_variable = { infrastructure_connectivity_temp2 = infrastructure_connectivity_temp }
+            multiply_temp_variable = { travel_distance_between_temp = infrastructure_connectivity_temp2 }
+
+            multiply_variable = { PREV.travel_distance_between@THIS = travel_distance_between_temp }
+            set_variable = { THIS.travel_distance_between@PREV = PREV.travel_distance_between@THIS }
+        }
+    }
+}
+find_distances = {
+    #State scope, no parameters/returns
+    #Goes through neighbor of neighbor of neighbor etc. to get final distances
+    every_state = {
+        set_state_flag = replace_distance
+    }
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV }
+        set_variable = { travel_distance_to@PREV = THIS.travel_distance_between@PREV }
+        clr_state_flag = replace_distance
+
+        for_each_scope_loop = {
+            array = neighbors
+
+            set_variable = { original_state_temp = PREV.original_state_temp }
+            set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+            var:original_state_temp = {
+                add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        var:original_state_temp = {
+                            check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                        }
+                        has_state_flag = replace_distance
+                    }
+                }
+                var:original_state_temp = {
+                    set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+                }
+                clr_state_flag = replace_distance
+
+                distances_loop = yes
+                if = {
+                    limit = {
+                        NOT = { has_global_flag = coastal1 }
+                    }
+                    set_global_flag = coastal1
+                    distances_coastal = yes
+                    clr_global_flag = coastal1
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = { has_global_flag = coastal1 }
+            }
+            set_global_flag = coastal1
+            distances_coastal = yes
+            clr_global_flag = coastal1
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+distances_coastal = {
+    if = {
+        limit = {
+            is_coastal = yes
+        }
+        every_state = {
+            limit = {
+                is_coastal = yes
+                check_variable = { THIS.distance_to@PREV < 1000 }
+            }
+            set_variable = { original_state_temp = PREV.original_state_temp }
+            set_variable = { travel_distance_to_temp = THIS.distance_to@PREV }
+            #set_temp_variable = { travel_distance_to_temp2 = travel_distance_to_temp }
+            #multiply_variable = { travel_distance_to_temp2 = 0.02 }
+            #Modifiers for naval travel distance here
+            #multiply_variable = { travel_distance_to_temp = travel_distance_to_temp2 }
+            var:original_state_temp = {
+                add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        var:original_state_temp = {
+                            check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                        }
+                        has_state_flag = replace_distance
+                    }
+                    check_variable = { travel_distance_to_temp > 0 }
+                }
+                var:original_state_temp = {
+                    set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+                }
+                clr_state_flag = replace_distance
+
+                distances_loop20 = yes
+            }
+        }
+    }
+}
+distances_loop = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop2 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop2 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop3 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop3 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop4 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop4 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop5 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop5 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            #distances_loop6 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop6 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop7 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop7 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop8 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop8 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop9 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop9 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop10 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop10 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop11 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop11 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop12 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop12 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop13 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop13 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop14 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop14 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop15 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop15 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop16 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop16 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop17 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop17 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop18 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop18 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop19 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop19 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            distances_loop20 = yes
+            if = {
+                limit = {
+                    NOT = { has_global_flag = coastal1 }
+                }
+                set_global_flag = coastal1
+                distances_coastal = yes
+                clr_global_flag = coastal1
+            }
+        }
+    }
+}
+distances_loop20 = {
+    for_each_scope_loop = {
+        array = neighbors
+
+        set_variable = { original_state_temp = PREV.original_state_temp }
+        set_variable = { travel_distance_to_temp = THIS.travel_distance_between@PREV }
+        var:original_state_temp = {
+            add_to_variable = { PREV.travel_distance_to_temp = PREV.PREV.travel_distance_to@THIS }
+        }
+        if = {
+            limit = {
+                OR = {
+                    var:original_state_temp = {
+                        check_variable = { PREV.travel_distance_to_temp < PREV.travel_distance_to@THIS }
+                    }
+                    has_state_flag = replace_distance
+                }
+            }
+            var:original_state_temp = {
+                set_variable = { PREV.travel_distance_to@THIS = PREV.travel_distance_to_temp }
+            }
+            clr_state_flag = replace_distance
+
+            #Stops here
+        }
+    }
+}

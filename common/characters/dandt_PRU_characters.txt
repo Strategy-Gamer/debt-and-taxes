@@ -1,0 +1,160 @@
+characters = {
+	#1919 Coup
+		PRU_augusto_bernardino_leguia_y_salcedo = {
+			name = PRU_augusto_bernardino_leguia_y_salcedo
+			#https://en.wikipedia.org/wiki/Augusto_B._Legu%C3%ADa
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PRU_augusto_bernardino_leguia_y_salcedo
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1930 Coup
+		PRU_luis_miguel_sanchez_cerro = {
+			name = PRU_luis_miguel_sanchez_cerro
+			#
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PRU_luis_miguel_sanchez_cerro
+				}
+			}
+			#ideology_fascist
+		}
+		PRU_david_samanez_ocampo = {
+			name = PRU_david_samanez_ocampo
+			#https://en.wikipedia.org/wiki/David_Samanez_Ocampo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PRU_david_samanez_ocampo
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1932 Election
+		PRU_victor_raul_haya_de_la_torre = {
+			name = PRU_victor_raul_haya_de_la_torre
+			#https://en.wikipedia.org/wiki/V%C3%ADctor_Ra%C3%BAl_Haya_de_la_Torre
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PRU_victor_raul_haya_de_la_torre
+				}
+			}
+			#ideology_socialist
+		}
+		PRU_jose_maria_de_la_jara_y_ureta = {
+			name = PRU_jose_maria_de_la_jara_y_ureta
+			#https://es.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_de_la_Jara_y_Ureta
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PRU_jose_maria_de_la_jara_y_ureta
+				}
+			}
+			#ideology_conservative
+		}
+		PRU_arturo_filiberto_osores_cabrera = {
+			name = PRU_arturo_filiberto_osores_cabrera
+			#https://es.wikipedia.org/wiki/Arturo_Osores
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PRU_arturo_filiberto_osores_cabrera
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1933 Assassination
+		PRU_oscar_raymundo_benavides_larrea = {
+			name = PRU_oscar_raymundo_benavides_larrea
+			#https://en.wikipedia.org/wiki/%C3%93scar_R._Benavides
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PRU_oscar_raymundo_benavides_larrea
+				}
+			}
+			#ideology_stratocratic
+		}
+	#1936 Election (Cancelled)
+		# PRU_ = {
+		# 	name = 
+		# 	#
+		# 	portraits = {
+		# 		civilian = {
+		# 			large = GFX_portrait_
+		# 		}
+		# 	}
+		# 	#ideology_
+		# }
+		# PRU_ = {
+		# 	name = 
+		# 	#
+		# 	portraits = {
+		# 		civilian = {
+		# 			large = GFX_portrait_
+		# 		}
+		# 	}
+		# 	#ideology_
+		# }
+		# PRU_ = {
+		# 	name = 
+		# 	#
+		# 	portraits = {
+		# 		civilian = {
+		# 			large = GFX_portrait_
+		# 		}
+		# 	}
+		# 	#ideology_
+		# }
+		# PRU_ = {
+		# 	name = 
+		# 	#
+		# 	portraits = {
+		# 		civilian = {
+		# 			large = GFX_portrait_
+		# 		}
+		# 	}
+		# 	#ideology_
+		# }
+		# PRU_ = {
+		# 	name = 
+		# 	#
+		# 	portraits = {
+		# 		civilian = {
+		# 			large = GFX_portrait_
+		# 		}
+		# 	}
+		# 	#ideology_
+		# }
+		# PRU_ = {
+		# 	name = 
+		# 	#
+		# 	portraits = {
+		# 		civilian = {
+		# 			large = GFX_portrait_
+		# 		}
+		# 	}
+		# 	#ideology_
+		# }
+		# PRU_ = {
+		# 	name = 
+		# 	#
+		# 	portraits = {
+		# 		civilian = {
+		# 			large = GFX_portrait_
+		# 		}
+		# 	}
+		# 	#ideology_
+		# }
+		# PRU_ = {
+		# 	name = 
+		# 	#
+		# 	portraits = {
+		# 		civilian = {
+		# 			large = GFX_portrait_
+		# 		}
+		# 	}
+		# 	#ideology_
+		# }
+}

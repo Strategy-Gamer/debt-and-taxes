@@ -1,0 +1,33 @@
+
+state={
+	id=765
+	name="STATE_765"
+	manpower = 43600
+	state_category = pastoral
+
+	history={
+		add_core_of = QAT
+		owner = ENG
+		victory_points = {
+			8051 1
+		}
+		buildings = {
+			infrastructure = 1
+			8051 = {
+				naval_base = 2
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+	}
+
+	provinces={
+		8051
+	}
+
+	local_supplies=0.0 
+}

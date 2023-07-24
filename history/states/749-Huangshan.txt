@@ -1,0 +1,33 @@
+
+state={
+	id=749
+	name="STATE_749"
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			12019 1 
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1153 1171 4173 7104 10044 11937 12019 13466 
+	}
+	manpower=4864517
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

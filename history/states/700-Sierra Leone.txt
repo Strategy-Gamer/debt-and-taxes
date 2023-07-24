@@ -1,0 +1,33 @@
+
+state={
+	id=700
+	name="STATE_700"
+	manpower=1768500
+
+	state_category=pastoral
+
+	history={
+		owner = ENG
+		add_core_of = SIE
+		victory_points = {
+			13239 1
+		}
+		buildings = {
+			infrastructure = 2
+			13239 = {
+				naval_base = 3
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+	}
+
+	provinces={
+		2038 2094 13239 13240 13241
+	}
+	local_supplies=0.000
+}

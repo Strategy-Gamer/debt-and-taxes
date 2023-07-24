@@ -1,0 +1,26 @@
+ideas = {
+	country = {
+		CHI_demobilization_conference = {
+			allowed = { always = no }
+
+			picture = generic_disjointed_gov
+
+			modifier = {
+				ai_join_ally_desire_factor = -999
+			}
+		}
+		CHI_partial_occupation = {
+			allowed = { always = no }
+
+			picture = generic_disjointed_gov
+
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				ai_join_ally_desire_factor = -999
+			}
+		}
+	}
+}

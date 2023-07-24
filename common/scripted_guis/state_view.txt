@@ -1,0 +1,35 @@
+scripted_gui = {
+	state_view_economy = {
+		window_name = "state_view_economy_container"
+		parent_window_token = selected_state_view
+
+		context_type = selected_state_context
+
+		effects = {
+			state_view_economy_button_click = {
+				ROOT = {
+					if = {
+						limit = {
+							has_country_flag = list_view_open
+							check_variable = { selected_state = PREV }
+						}
+						clr_country_flag = list_view_open
+					}
+					else = {
+						set_country_flag = list_view_open
+						set_variable = { selected_state = PREV }
+						refresh_state_list = yes
+						create_state_pie_charts = yes
+						create_population_pyramid = yes
+						refresh_industry_list = yes
+					}
+				}
+			}
+		}
+		triggers = {
+			state_view_economy_button_click_enabled = {
+				always = yes
+			}
+		}
+	}
+}

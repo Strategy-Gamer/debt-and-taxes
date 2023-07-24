@@ -1,0 +1,31 @@
+state={
+	id=587
+	name="STATE_587"
+	manpower=245133
+
+	state_category=rural
+
+	history={
+		owner = SOV
+		add_core_of = KAZ
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			1517 1 
+		}
+		add_core_of = SOV
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_cool
+		}
+	}
+
+	provinces={
+		475 642 1517 3593 4523 4620 7641 10262 11701 12163 12383 13008 
+	}
+
+	local_supplies=0.0 
+}

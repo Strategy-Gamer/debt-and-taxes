@@ -1,0 +1,245 @@
+characters = {
+	character_KML_yulbars_khan = {
+		name = "Yulbars Khan"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KML_yulbars_khan
+			}
+			army = {
+				large = GFX__portrait_KML_yulbars_khan
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1971.8.1"
+		}
+		country_leader = {
+			ideology = maoism
+			expire = "1971.8.1"
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	character_FEG_chang_shueliang = {
+		name = "Chang Shueliang"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_FEG_chang_shueliang
+			}
+			army = {
+				large = GFX__portrait_FEG_chang_shueliang
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "2001.1.1"
+		}
+		country_leader = {
+			ideology = maoism
+			expire = "1971.8.1"
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	character_GUI_wang_jialie = {
+		name = "Wang Jialie"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GUI_wang_jialie
+			}
+			army = {
+				large = GFX_portrait_GUI_wang_jialie
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.8.1"
+		}
+		country_leader = {
+			ideology = maoism
+			expire = "1960.8.1"
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	character_GGD_chen_jitang = {
+		name = "Cheng Jitang"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GGD_chen_jitang
+			}
+			army = {
+				large = GFX_portrait_GGD_chen_jitang
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.8.1"
+		}
+		country_leader = {
+			ideology = maoism
+			expire = "1960.8.1"
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	character_BAZ_tian_songyao = {
+		name = "Tian Songyao"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_BAZ_tian_songyao
+			}
+			army = {
+				large = GFX_portrait_BAZ_tian_songyao
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.8.1"
+		}
+		country_leader = {
+			ideology = maoism
+			expire = "1960.8.1"
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	character_CGQ_liu_wenhai = {
+		name = "Liu Wenhai"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CGQ_liu_wenhai
+			}
+			army = {
+				large = GFX_portrait_CGQ_liu_wenhai
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.8.1"
+		}
+		country_leader = {
+			ideology = maoism
+			expire = "1960.8.1"
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	character_XIK_liu_xiang = {
+		name = "Liu Xiang"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_XIK_liu_xiang
+			}
+			army = {
+				large = GFX_portrait_XIK_liu_xiang
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.8.1"
+		}
+		country_leader = {
+			ideology = maoism
+			expire = "1960.8.1"
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	character_CDU_yang_sen = {
+		name = "Yang Sen"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CDU_yang_sen
+			}
+			army = {
+				large = GFX_portrait_CDU_yang_sen
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.8.1"
+		}
+		country_leader = {
+			ideology = maoism
+			expire = "1960.8.1"
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	character_GUO_feng_yuxiang = {
+		name = "Feng Yuxiang"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GUO_feng_yuxiang
+			}
+			army = {
+				large = GFX_portrait_GUO_feng_yuxiang
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.8.1"
+		}
+		country_leader = {
+			ideology = maoism
+			expire = "1960.8.1"
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

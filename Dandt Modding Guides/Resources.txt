@@ -1,0 +1,70 @@
+Resource List
+    #Value  #Resource
+    1       [None]
+    2		Oil
+    3		Aluminium
+    4		Rubber
+    5		Tungsten
+    6		Iron
+    7		Chromium
+    8		Copper
+    9		Precious Metals
+    10		Coal
+    11		Lumber
+    12		Fiber
+    13		Foodstuffs
+    14		Electricity
+    15		Steel
+    16		Rare-Earth Metals
+    17		Cement
+    18		Silicates
+    19		Chemicals
+    20		Fabric
+    21		Machinery
+    22		Plastics
+    23		Fertilizer
+    24		Hydrocarbons
+    25		Automobiles
+    26		Airplanes
+    27		Computers
+    28		Electronics
+    29		Groceries
+    30		Pharmaceuticals
+    31		Clothing
+    32		Consumer Goods
+    33		Sulfur
+    34		Convoys
+    35		Small Arms
+    36		Artillery
+    37		Tanks
+    38		Ammunition
+    39		Rockets
+    40		Construction
+    41		Tools
+    42		Healthcare
+    43		Basic Education
+    44		Higher Education
+    45		Transport
+    46		Shipping
+    47		Finance
+    48		Housing
+    49		Entertainment
+
+Vars:
+    #For Depletable Resources Only
+    [Resource_Type]_amount
+    [Resource_Type]_accessibility
+    #
+
+    resource_price (Array)
+    resource_base_price (Array)
+
+    resource_demand (Array)
+    resource_industry_demand
+    resource_pop_demand (Array)
+    resource_added_demand (Array)
+
+    resource_supply
+    resource_stockpile
+    resource_industry_stockpile
+    resource_trade_stockpile

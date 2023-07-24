@@ -1,0 +1,200 @@
+
+Industry List
+    #Value  #Industry                           #Resource Produced              #Industry Code
+	1       Oil Rig                             Oil                             oil_rig
+	2       Bauxite Mine                        Aluminium                       bauxite_mine
+    3       Rubber Lodge                        Rubber                          rubber_lodge
+    4       Synthetic Rubber Plant              Rubber                          synthetic_rubber_plant
+    5       Tungsten Mine                       Tungsten                        tungsten_mine
+    6       Iron Mine                           Iron                            iron_mine
+    7       Chromium Mine                       Chromium                        chromium_mine
+    8       Copper Mine                         Copper                          copper_mine
+    9       Precious Metals Mine                Precious Metals                 precious_metals_mine
+    10      Coal Mine                           Coal                            coal_mine
+    11      Lumber Lodge                        Lumber                          lumber_lodge
+    12      Cotton Plantation                   Fiber                           cotton_plantation
+    13      Sheep Ranch                         Fiber                           sheep_ranch
+    14      Grain Farm                          Foodstuffs                      grain_farm
+    15      Livestock Ranch                     Foodstuffs                      livestock_ranch
+    16      Fishing Wharf                       Foodstuffs                      fishing_wharf
+    17      Coal Power Plant                    Electricity                     coal_power_plant
+    18      Oil Power Plant                     Electricity
+    19      Nuclear Power Plant                 Electricity
+    20      Wind Farm                           Electricity
+    21      Solar Farm                          Electricity
+    22      Hydroelectric Dam                   Electricity
+    23      Steel Mill                          Steel                           steel_mill
+    24      Rare Earth Metals Mine              Rare Earth Metals
+    25      Cement Factory                      Cement
+    26      Silicates Factory                   Silicates
+    27      Chemical Plant                      Chemicals
+    28      Textile Mill                        Fabric
+    29      Machinery Factory                   Machinery
+    30      Plastics Factory                    Plastics
+    31      Fertilizer Factory                  Fertilizer
+    32      Oil Refinery                        Hydrocarbons
+    33      Synthetic Oil Refinery              Hydrocarbons
+    34      Automobile Factory                  Automobiles
+    35      Airplane Factory                    Airplanes
+    36      Computer Factory                    Computers
+    37      Electronics Factory                 Electronics
+    38      Food Processing Plant               Groceries
+    39      Pharmaceuticals Factory             Pharmaceuticals
+    40      Clothing Factory                    Clothing
+    41      Consumer Goods Factory              Consumer Goods
+    42      Sulfur Mine                         Sulfur
+    43      Convoys Shipyard                    Convoys
+    44      Small Arms Factory                  Small Arms
+    45      Artillery Factory                   Artillery
+    46      Tank Factory                        Tanks
+    47      Explosive Factory                   Explosives
+    48      Rocket Factory                      Rockets
+    49      Construction Yard                   Construction
+    50      Tools Factory                       Tools
+    51      Hospital                            Healthcare
+    52      School                              Basic Education
+    53      University                          Higher Education
+    54      Transport Hub                       Transport
+    55      Shipping Hub                        Shipping
+    56      Finance Hub                         Finance
+    57      Housing Office                      Housing
+    58      Entertainment Complex               Entertainment
+
+Employees
+    There are four "types" of employees
+        Slaves
+        Workers
+        Professionals
+        Businessmen
+    #Workers consist of all pop types outside of slaves, professionals and businessmen who are allowed to work in the business
+    Slaves do not attain throughput bonuses from literacy or education
+    #Professionals increase the output amounts of the industry. A multiplier is applied to the industry output which is 1 + the % of professionals. This means Professionals are extremely
+        #valuable, however they are much more expensive to employ
+    Businessmen reduce the maintenance need of the industry by up to a 20% reduction. The recommended amount is 10% businessmen as any more will not provide any additional benefits aside
+        from the normal throughput amount
+
+Pay
+    Pay is awarded via a system of minimum wages and "bonuses"
+    
+    Each pop type is first paid wages. This is dictated by supply and demand in the state & the number of pops. 
+        If the wages are below the national minimum wage, then the pops are paid at that rate instead
+    
+    In addition to that, half of the industry's profit (Excess revenue of expenses) is divided into bonuses. These bonuses are then given out like this:
+        Slaves: 0 Bonuses (Slaves are just paid wages)
+        Workers: 1 Bonus
+        Professionals: 4 Bonuses
+        Businessmen: 5 Bonuses
+    #This does not mean all worker pops of an industry get 10% of the income. It is further weighted by the amount. So if 90% of an industry are workers and the rest businessmen
+        #then the workers would get roughly 34.6% of the industry's profit
+
+    The other half of the industry's profit is split evenly between the industry itself and the owners/investors (Which is then split among them according to ownership)
+
+    Example: Steel Mill with 75K Craftsmen, 15K Professionals, 10K Businessmen, owned completely by local businessmen, wage of $1/hour, and the industry has a profit of $40.0 million
+    #Craftsmen - $16.8 in Wages - $8.106 in Bonuses
+    #Professionals - $3.36 in Wages - $6.486 in Bonuses
+    #Businessmen - $2.24 in Wages - $5.405 in Bonuses - $10 Million from ownership
+    #Industry - $10 from Profit
+    Totals / Per Capita Income
+    #Craftsmen - $24.906 - $0.332 per Capita
+    #Professionals - $9.846 - $0.656 per Capita
+    #Businessmen - $17.645 - $1.765 per Capita
+
+
+Vars:
+    #[Derived] means its value is purely gotten from something else. They update on their own.
+
+    global.[Industry_Type]_resource #The resource it produces.
+    global.[Industry_Type]_worker_types (Array) #The pop types who can work in this industry.
+
+    industries (Array)
+    industries_resource (Array)
+    industries_priority (Array)
+    industries_subsidy (Array)
+    industries_expansion (Array)
+    industries_employment (Array)
+
+    industries_size (Array)
+    
+    industries_revenue (Array)
+    industries_revenue_goods (Array)
+    industries_expenses (Array)
+    industries_expenses_maintenance (Array)
+    industries_expenses_input (Array)
+    industries_expenses_payroll (Array)
+    industries_profit (Array)
+    industries_profitability (Array)
+
+    industries_last_month_revenue (Array)
+    industries_last_month_expenses (Array)
+    industries_last_month_profitability (Array)
+
+    industries_jobs_amount (Array) #[Derived]
+    industries_available_jobs_amount (Array) #[Derived]
+    industries_employment_percentage (Array) #[Derived], 0.000 - 100.000
+    industries_employees_amount (Array) #[Derived]
+    industries_employees_slaves_amount (Array)
+    industries_employees_unskilled_amount (Array)
+    industries_employees_skilled_amount (Array)
+    industries_employees_educated_amount (Array)
+
+    industries_stockpile (Array)
+    industries_goods_sold (Array)
+
+    industries_production (Array)
+    industries_production_percentage (Array)
+
+    industries_input_percentage (Array) #[Derived], 0.000 - 100.000
+
+    industries_input_1_resource (Array)
+    industries_input_1_amount (Array)
+    industries_input_1_demand (Array)
+    industries_input_1_fulfilled (Array)
+    industries_input_1_fulfilled_percentage (Array)
+    industries_input_1_expenses (Array)
+    industries_input_1_projected_expenses (Array)
+    #Repeated for 2-5
+
+    industries_maintenance_percentage (Array) #[Derived], 0.000 - 100.000
+
+    industries_maintenance_1_resource (Array)
+    industries_maintenance_1_amount (Array)
+    industries_maintenance_1_demand (Array)
+    industries_maintenance_1_fulfilled (Array)
+    industries_maintenance_1_fulfilled_percentage (Array)
+    industries_maintenance_1_expenses (Array)
+    industries_maintenance_1_projected_expenses (Array)
+    #Repeated for 2-5
+
+    [Industry_Type]_size
+
+    [Industry_Type]_money
+    [Industry_Type]_revenue
+    [Industry_Type]_revenue_goods
+    [Industry_Type]_expenses
+    [Industry_Type]_expenses_maintenance
+    [Industry_Type]_expenses_input
+    [Industry_Type]_expenses_payroll
+    [Industry_Type]_profit
+    [Industry_Type]_profitability
+
+    [Industry_Type]_jobs_amount #[Derived]
+    [Industry_Type]_available_jobs_amount #[Derived]
+    [Industry_Type]_employment_percentage #[Derived]
+    [Industry_Type]_employees_amount #[Derived]
+    [Industry_Type]_employees_[Pop_Type]_amount
+
+    [Industry_Type]_production
+    [Industry_Type]_production_percentage
+    [Industry_Type]_input_tech
+    [Industry_Type]_throughput_tech
+    [Industry_Type]_output_tech
+    [Industry_Type]_mechanization_tech
+    [Industry_Type]_automation_tech
+
+    #Modifiers/Multipliers
+    
+    industries_build_cost_modifier (Array)
+    industries_maintenance_modifier (Array)
+    industries_input_modifier (Array)
+    industries_throughput_modifier (Array)
+    industries_output_modifier (Array)

@@ -1,0 +1,444 @@
+local_irreligious_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+irreligious_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_catholicism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+catholicism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_protestantism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+protestantism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_eastern_orthodoxy_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+eastern_orthodoxy_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_mormonism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+mormonism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_copticism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+copticism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_judaism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+judaism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_sunni_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+sunni_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_shia_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+shia_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_ibadi_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+ibadi_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_vajrayana_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+vajrayana_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_mahayana_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+theravada_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_theravada_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+mahayana_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_hinduism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+hinduism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_sikhism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+sikhism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_confucianism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+confucianism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_shintoism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+shintoism_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_indigenous_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+indigenous_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_african_folk_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+african_folk_drift_modifier = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_irreligious_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+irreligious_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_catholicism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+catholicism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_protestantism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+protestantism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_eastern_orthodoxy_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+eastern_orthodoxy_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_mormonism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+mormonism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_copticism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+copticism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_judaism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+judaism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_sunni_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+sunni_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_shia_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+shia_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_ibadi_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+ibadi_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_vajrayana_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+vajrayana_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_mahayana_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+mahayana_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_hinduism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+hinduism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_sikhism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+sikhism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_confucianism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+confucianism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_shintoism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+shintoism_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_indigenous_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+indigenous_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}
+local_african_folk_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = state
+}
+african_folk_drift_factor = {
+  color_type = neutral
+  value_type = percentage
+  precision = 1
+  category = country
+}

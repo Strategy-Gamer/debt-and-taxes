@@ -1,0 +1,32 @@
+state={
+	id=913
+	name="STATE_913"
+	provinces={
+		1977 2003 2088 10902 12725 
+	}
+	history={
+		owner=ENG
+		buildings={
+			infrastructure=1
+			12725 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			12725 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+	state_category=pastoral
+	manpower=433688
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

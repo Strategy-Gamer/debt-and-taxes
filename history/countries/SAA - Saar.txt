@@ -1,0 +1,50 @@
+capital=861
+
+#oob
+set_stability = 0.64
+set_war_support = 0.2
+# starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	basic_train = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	tech_steel_picks_and_shovels = 1
+	tech_steam_shovels = 1
+	tech_coal_cutting_machines = 1
+	tech_loading_machines = 1
+	tech_hydraulic_excavators = 1
+	tech_steam_powered_sawmills = 1
+	tech_conservation=1
+	tech_bucksaws = 1
+	tech_cable_tool_drilling = 1
+	tech_drilling_mud = 1
+	tech_standardized_derrick = 1
+	tech_early_rotary_drilling = 1
+	tech_shaft_driven_rotary_table = 1
+	tech_intensive_agriculture = 1
+	tech_tractors = 1
+	tech_agronomy = 1
+	tech_electrified_wire_fencing = 1
+	tech_nitrogen_fertilizers = 1
+	tech_synthetic_fertilizers = 1
+}
+
+set_cosmetic_tag = SAA_1929_Cosmetic
+
+recruit_character = SAA_ernest_wilton
+
+set_popularities = {
+	neutrality=100
+}
+set_politics = {
+	ruling_party=neutrality
+	elections_allowed=no
+}
+
+add_ideas = {
+	SAA_heavy_industralization
+	SAA_anti_national_socialism_supporters
+	SAA_league_of_nations_mandate
+}

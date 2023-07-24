@@ -1,0 +1,42 @@
+
+state={
+	id=381
+	name="STATE_381"
+	manpower = 225564
+
+
+	state_category = state_cat
+
+	resources = {
+		coal = 2
+		precious_metals = 3
+		lumber = 3
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = USA
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = weather_wet_season
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = generic_state_untapped_mines
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		1815 4610 4723 4794 4820 7688 7814 7888 10640 10711 12561 12633 12651
+	}
+}

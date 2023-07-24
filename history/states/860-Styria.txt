@@ -1,0 +1,36 @@
+
+state={
+	id=860
+	name="STATE_860"
+
+	history={
+		owner = AUS
+		add_core_of=AUS
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = {
+			9648 5 
+		}
+		victory_points = {
+			3673 3 
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		653 668 671 3673 6673 6687 6691 9646 9648 9650 9679 11612 13432 13433 13434 13435 
+	}
+	manpower=1783060
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

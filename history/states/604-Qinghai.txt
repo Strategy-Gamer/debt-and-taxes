@@ -1,0 +1,33 @@
+state={
+	id=604
+	name="STATE_604"
+
+	history={
+		owner = QHI
+		add_core_of = QHI
+		victory_points = {
+			7940 10
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {	
+			modifier = climate_continental_polar
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		4914 4964 7940 8018 8037 12899
+	}
+	manpower=1196100
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+
+	local_supplies=1.0
+}

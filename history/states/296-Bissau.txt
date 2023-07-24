@@ -1,0 +1,36 @@
+
+state={
+	id=296
+	name="STATE_296" # Guinea-Bissau
+	manpower = 364900
+	
+	state_category = enclave
+	resources={
+		rubber=1 # was: 1
+	}
+	history={
+		owner = POR
+		add_core_of = GNB
+		victory_points = {
+			12891 1
+		}
+		buildings = {
+			infrastructure = 1
+			12891 ={
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+	}
+
+	provinces={
+		12747 12891 
+	}
+
+	local_supplies=0.0 
+}

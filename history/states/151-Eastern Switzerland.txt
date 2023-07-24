@@ -1,0 +1,36 @@
+
+state={
+	id=151
+	name="STATE_151"
+	resources={
+		aluminium=15.000
+	}
+
+	history={
+		owner = SWI
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			663 10 
+		}
+		add_core_of = SWI
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		658 661 663 3660 3662 11601 11604 11623 
+	}
+	manpower=1354711
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

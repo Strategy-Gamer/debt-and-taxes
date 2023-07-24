@@ -1,0 +1,30 @@
+
+state={
+	id=750
+	name="STATE_750"
+
+	history={
+		owner = PRC
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1474 4896 7201 7279 10006 10304 10335 10822 12414
+	}
+	manpower=4203460
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

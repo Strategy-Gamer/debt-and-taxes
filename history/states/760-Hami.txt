@@ -1,0 +1,29 @@
+state={
+	id=760
+	name="STATE_760"
+	provinces={
+		1838 4704 4843 7732 10839 12524 12598 12671
+	}
+	manpower=603051
+	buildings_max_level_factor=1.000
+	state_category = rural
+	history={
+		owner = KML
+		add_core_of = KML
+		buildings={
+			infrastructure = 2
+		}
+		victory_points = { 1838 1 }
+		add_dynamic_modifier = {	
+			modifier = climate_arid_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	local_supplies=0.0
+}

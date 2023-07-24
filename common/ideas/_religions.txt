@@ -1,0 +1,61 @@
+ideas = {
+	religion_tokens = {
+		religion_irreligious = {
+			allowed = { always = no }
+		}
+		religion_catholicism = {
+			allowed = { always = no }
+		}
+		religion_protestantism = {
+			allowed = { always = no }
+		}
+		religion_orthodoxy = {
+			allowed = { always = no }
+		}
+		religion_mormonism = {
+			allowed = { always = no }
+		}
+		religion_coptic = {
+			allowed = { always = no }
+		}
+		religion_judaism = {
+			allowed = { always = no }
+		}
+		religion_sunni = {
+			allowed = { always = no }
+		}
+		religion_shia = {
+			allowed = { always = no }
+		}
+		religion_ibadi = {
+			allowed = { always = no }
+		}
+		religion_vajrayana = {
+			allowed = { always = no }
+		}
+		religion_mahayana = {
+			allowed = { always = no }
+		}
+		religion_thervada = {
+			allowed = { always = no }
+		}
+		religion_hinduism = {
+			allowed = { always = no }
+		}
+		religion_sikhism = {
+			allowed = { always = no }
+		}
+		religion_confucianism = {
+			allowed = { always = no }
+		}
+		religion_shintoism = {
+			allowed = { always = no }
+		}
+		religion_indigenous = {
+			allowed = { always = no }
+		}
+		religion_african_folk = {
+			allowed = { always = no }
+		}
+	}
+}

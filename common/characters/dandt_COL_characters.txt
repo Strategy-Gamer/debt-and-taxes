@@ -1,0 +1,182 @@
+characters = {
+	#1926 Election
+		COL_miguel_abadia_mendez = {
+			name = COL_miguel_abadia_mendez
+			#https://en.wikipedia.org/wiki/Miguel_Abad%C3%ADa_M%C3%A9ndez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_miguel_abadia_mendez
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1930 Election
+		COL_enrique_alfredo_olaya_herrera = {
+			name = COL_enrique_alfredo_olaya_herrera
+			#https://en.wikipedia.org/wiki/Enrique_Olaya_Herrera
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_enrique_alfredo_olaya_herrera
+				}
+			}
+			#ideology_liberal
+		}
+		COL_guillermo_valencia_castillo = {
+			name = COL_guillermo_valencia_castillo
+			#https://en.wikipedia.org/wiki/Guillermo_Valencia
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_guillermo_valencia_castillo
+				}
+			}
+			#ideology_conservative
+		}
+		COL_alfredo_vasquez_cobo = {
+			name = COL_alfredo_vasquez_cobo
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_alfredo_vasquez_cobo
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1934 Election
+		COL_eutiquio_timote = {
+			name = COL_eutiquio_timote
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_eutiquio_timote
+				}
+			}
+			#ideology_communist
+		}
+		COL_alfonso_lopez_pumarejo = {
+			name = COL_alfonso_lopez_pumarejo
+			#https://en.wikipedia.org/wiki/Alfonso_L%C3%B3pez_Pumarejo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_alfonso_lopez_pumarejo
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1938 Election
+		COL_eduardo_santos_montejo = {
+			name = COL_eduardo_santos_montejo
+			#https://en.wikipedia.org/wiki/Eduardo_Santos_Montejo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_eduardo_santos_montejo
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1942 Election
+		COL_carlos_arango_velez = {
+			name = COL_carlos_arango_velez
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_carlos_arango_velez
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1946 Election
+		COL_gabriel_turbay = {
+			name = COL_gabriel_turbay
+			#https://en.wikipedia.org/wiki/Gabriel_Turbay
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_gabriel_turbay
+				}
+			}
+			#ideology_socialist
+		}
+		COL_jorge_eliecer_gaitan = {
+			name = COL_jorge_eliecer_gaitan
+			#https://en.wikipedia.org/wiki/Jorge_Eli%C3%A9cer_Gait%C3%A1n
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_jorge_eliecer_gaitan
+				}
+			}
+			#ideology_liberal
+		}
+		COL_luis_mariano_ospina_perez = {
+			name = COL_luis_mariano_ospina_perez
+			#https://en.wikipedia.org/wiki/Mariano_Ospina_P%C3%A9rez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_luis_mariano_ospina_perez
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1949 Election
+		COL_laureano_eleuterio_gomez_castro = {
+			name = COL_laureano_eleuterio_gomez_castro
+			#https://en.wikipedia.org/wiki/Laureano_G%C3%B3mez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_laureano_eleuterio_gomez_castro
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1953 Coup
+		COL_gustavo_rojas_pinilla = {
+			name = COL_gustavo_rojas_pinilla
+			#https://en.wikipedia.org/wiki/Gustavo_Rojas_Pinilla
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_gustavo_rojas_pinilla
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1957 Coup
+		COL_gabriel_paris_gordillo = {
+			name = COL_gabriel_paris_gordillo
+			#https://en.wikipedia.org/wiki/Gabriel_Par%C3%ADs_Gordillo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_gabriel_paris_gordillo
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1958 Elections
+		COL_alberto_lleras_camargo = {
+			name = COL_alberto_lleras_camargo
+			#https://en.wikipedia.org/wiki/Alberto_Lleras_Camargo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_alberto_lleras_camargo
+				}
+			}
+			#ideology_liberal
+		}
+		COL_jorge_leyva = {
+			name = COL_jorge_leyva
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COL_jorge_leyva
+				}
+			}
+			#ideology_conservative
+		}
+	#
+}

@@ -1,0 +1,23 @@
+
+budget_changed = {
+	NOT = {
+		budget_unchanged = yes
+	}
+}
+budget_unchanged = {
+	AND = {
+		check_variable = { upper_income_tax_change = 0 }
+		check_variable = { middle_income_tax_change = 0 }
+		check_variable = { lower_income_tax_change = 0 }
+
+		check_variable = { payroll_tax_change = 0 }
+		check_variable = { property_tax_change = 0 }
+		check_variable = { corporate_tax_change = 0 }
+		check_variable = { capital_gains_tax_change = 0 }
+		check_variable = { wealth_tax_change = 0 }
+		check_variable = { sales_tax_change = 0 }
+		check_variable = { value_added_tax_change = 0 }
+		check_variable = { luxury_tax_change = 0 }
+		check_variable = { tariffs_change = 0 }
+	}
+}

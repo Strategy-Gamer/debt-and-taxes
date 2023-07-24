@@ -1,0 +1,40 @@
+
+state={
+	id=597
+	name="STATE_597"
+
+	history={
+		owner = SHA
+		add_core_of = SHA
+		add_core_of = CHI
+		victory_points = {
+			4205 1
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+			4205 = {
+				naval_base = 2
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1104 1184 1200 4186 4205 7105 10018 
+	}
+	manpower = 9593300
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=4.000
+}

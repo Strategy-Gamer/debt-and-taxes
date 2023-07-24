@@ -1,0 +1,11 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			USA = {
+				# dandt_on_startup = yes
+
+				# dandt_on_startup_1929 = yes
+			}
+		}
+	}
+}

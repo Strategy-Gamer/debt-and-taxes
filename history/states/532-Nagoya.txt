@@ -1,0 +1,36 @@
+
+state={
+	id=532
+	name="STATE_532" # Tokai
+	manpower = 6174000
+	state_category = large_city
+
+	history={
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 4 #was: 7
+		}
+		victory_points = {
+			7087 3
+		}
+		victory_points = {
+			10125 25
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		4069 4172 7087 7157 7187 10100 10125 12072 12097
+	}
+
+	local_supplies=0.0
+}

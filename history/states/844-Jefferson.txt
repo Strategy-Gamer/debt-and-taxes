@@ -1,0 +1,38 @@
+state={
+	id=844
+	name="STATE_844"
+	resources={
+		aluminium=8.000
+		precious_metals=7.000
+		lumber=6.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			610 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = USA
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_warm
+		}
+		add_dynamic_modifier = {
+			modifier = generic_state_dense_forests
+		}
+	}
+
+	provinces={
+		610 710 766 781 1432 1601 3588 3644 4331 6482 6665 6772 9730 10159 11698
+	}
+	manpower=356000
+
+
+	buildings_max_level_factor=1.000
+	state_category=state_cat
+}

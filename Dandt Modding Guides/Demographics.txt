@@ -1,0 +1,106 @@
+Culture List
+  ##      #Culture
+  --      Undefined Culture
+	02			Pacificer
+	03			Pioneer
+	04			Canadian
+	05			Quebecois
+	06			Yankee
+	07			Appalachian
+	08			Dixie
+	09			African-American
+	10			El Norte
+	11			Mexican
+	12			Amerindian
+	13			Pacific Islander
+	14			Ashkenazi
+	15			Japanese
+	16			English
+	17			Scottish
+	18			Welsh
+	19			Irish
+	20			Dutch
+	21			Flemish
+	22			Walloon
+	23			French
+	24			Breton
+	25			Catalan
+	26			Basque
+	27			Castillian
+	28			Andalucian
+	29			Galician
+	30			Portugese
+	31			North Italian
+	32			South Italian
+	33			North German
+	34			South German
+	35			Danish
+	36			Norwegian
+	37			Swedish
+	38			Finnish
+	39			Icelandic
+	40			Slovenian
+	41			Croatian
+	42			Bosniak
+	43			Serbian
+	44			Albanian
+	45			Macedonian
+	46			Greek
+	47			Bulgarian
+	48			Turkish
+	49			Kurdish
+	50			Romanian
+	51			Romani
+	52			Hungarian
+	53			Slovakian
+	54			Czech
+	55			Polish
+	56			Lithuanian
+	57			Latvian
+	58			Estonian
+	59			Byelorussian
+	60			Ukranian
+	61			Russian
+	62			Tatars
+	63			Bashkir
+	64			Caucasian
+	65			Georgian
+	66			Armenian
+	67			Azeri
+	68			Mongol
+	69			Siberian
+
+Religion List
+	##		  #Religion
+	--			Undefined Religion
+	02			Irreligious
+	03			Catholic
+	04			Protestant
+	05			Orthodox
+	06			Mormon
+	07			Coptic
+	08			Judaism
+	09			Sunni
+	10			Shia
+	11			Ibadi
+	12			Vajrayana
+	13			Mahayana
+	14			Thervada
+	15			Hindu
+	16			Sikh
+	17			Confucian
+	18			Shinto
+	19			Indigenous
+	20			African Folk
+
+Ideology List
+  ##      #Ideology
+  --           Undefined Ideology
+  02           Apolitical
+  03           Communist
+  04           Socialist
+  05           Liberal
+  06           Libertarian
+  07           Conservative
+  08           Reactionary
+  09           Fascist

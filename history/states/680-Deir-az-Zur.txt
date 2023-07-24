@@ -1,0 +1,40 @@
+
+state={
+	id=680
+	name="STATE_680"
+
+	history={
+		owner = FRA
+		victory_points = {
+			3942 1 
+		}
+		victory_points = {
+			1549 1 
+		}
+		victory_points = {
+			6883 1 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SYR
+		add_core_of = KUR
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		901 1549 1578 1606 1634 2013 3942 6883 7513 10882 
+	}
+	manpower=324110
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=4.000
+}

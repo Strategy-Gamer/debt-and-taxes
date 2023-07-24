@@ -1,0 +1,33 @@
+
+state={
+	id=779
+	name="STATE_779"
+
+	history={
+		owner = FRA
+		add_core_of = IVO
+		victory_points = {
+			10803 1 
+		}
+		buildings = {
+			infrastructure = 2
+			10803 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+	}
+
+	provinces={
+		10803 13249 13250 13266 13267 13268 13302 
+	}
+	manpower=1474156
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=1.000
+}

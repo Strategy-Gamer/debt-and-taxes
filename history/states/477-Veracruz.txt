@@ -1,0 +1,51 @@
+state={
+	id=477
+	name="STATE_477"
+	resources={
+		oil=9.000
+	}
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			12810 = {
+				naval_base = 3
+			}
+			10889 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = MEX
+		add_core_of = MEC
+		victory_points = {
+			12810 5 
+		}
+		victory_points = {
+			10889 2
+		}
+		victory_points = {
+			2021 3
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = disaster_boll_weevil_infestation
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		2021 8079 10732 10889 12810 
+	}
+	manpower=1377460
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

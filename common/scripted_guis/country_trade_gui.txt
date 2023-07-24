@@ -1,0 +1,595 @@
+scripted_gui = {
+	trade_buttons_tab = {
+		window_name = "dandt_trade_buttons_window"
+		parent_window_token = trade_tab
+
+		effects = {
+			dandt_market_button_click = {
+				clr_country_flag = trade_view_open
+			}
+			dandt_trade_button_click = {
+				set_country_flag = trade_view_open
+			}
+		}
+	}
+	market_tab = {
+		window_name = "dandt_market_tab"
+		parent_window_token = trade_tab
+
+		context_type = player_context
+
+		visible = {
+			NOT = { has_country_flag = trade_view_open }
+		}
+
+		triggers = {
+			dandt_trade_resource_background_click_enabled = {
+				NOT = { is_in_array = { global.untradeable_resources_token_array = resource_list_token_array^i } }
+			}
+
+			dandt_global_market_icon_visible = {
+				check_variable = { selected_market = 0 }
+			}
+			dandt_market_flag_visible = {
+				check_variable = { selected_market > 0 }
+			}
+		}
+
+		effects = {
+			natural_resources_filter_click = {
+				if = {
+					limit = {
+						has_country_flag = resource_list_natural_resources_filter
+					}
+					clr_country_flag = resource_list_natural_resources_filter
+				}
+				else = {
+					set_country_flag = resource_list_natural_resources_filter
+					clr_country_flag = resource_list_produced_resources_filter
+					clr_country_flag = resource_list_service_resources_filter
+					clr_country_flag = resource_list_military_resources_filter
+				}
+				country_update_trade_display = yes
+			}
+			produced_resources_filter_click = {
+				if = {
+					limit = {
+						has_country_flag = resource_list_produced_resources_filter
+					}
+					clr_country_flag = resource_list_produced_resources_filter
+				}
+				else = {
+					set_country_flag = resource_list_produced_resources_filter
+					clr_country_flag = resource_list_natural_resources_filter
+					clr_country_flag = resource_list_service_resources_filter
+					clr_country_flag = resource_list_military_resources_filter
+				}
+				country_update_trade_display = yes
+			}
+			service_resources_filter_click = {
+				if = {
+					limit = {
+						has_country_flag = resource_list_service_resources_filter
+					}
+					clr_country_flag = resource_list_service_resources_filter
+				}
+				else = {
+					set_country_flag = resource_list_service_resources_filter
+					clr_country_flag = resource_list_produced_resources_filter
+					clr_country_flag = resource_list_natural_resources_filter
+					clr_country_flag = resource_list_military_resources_filter
+				}
+				country_update_trade_display = yes
+			}
+			military_resources_filter_click = {
+				if = {
+					limit = {
+						has_country_flag = resource_list_military_resources_filter
+					}
+					clr_country_flag = resource_list_military_resources_filter
+				}
+				else = {
+					set_country_flag = resource_list_military_resources_filter
+					clr_country_flag = resource_list_produced_resources_filter
+					clr_country_flag = resource_list_service_resources_filter
+					clr_country_flag = resource_list_natural_resources_filter
+				}
+				country_update_trade_display = yes
+			}
+
+			dandt_sort_price_click = {
+				if = {
+					limit = {
+						OR = {
+							has_country_flag = resource_list_balance_sort
+							has_country_flag = resource_list_resource_sort
+							has_country_flag = resource_list_supply_sort
+							has_country_flag = resource_list_demand_sort
+						}
+					}
+					clr_country_flag = resource_list_balance_sort
+					clr_country_flag = resource_list_resource_sort
+					clr_country_flag = resource_list_supply_sort
+					clr_country_flag = resource_list_demand_sort
+				}
+				else = {
+					if = {
+						limit = {
+							has_country_flag = resource_list_invert_sort
+						}
+						clr_country_flag = resource_list_invert_sort
+					}
+					else = {
+						set_country_flag = resource_list_invert_sort
+					}
+				}
+				country_update_trade_display = yes
+			}
+			dandt_sort_balance_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = resource_list_balance_sort
+						}
+					}
+					set_country_flag = resource_list_balance_sort
+					clr_country_flag = resource_list_resource_sort
+					clr_country_flag = resource_list_supply_sort
+					clr_country_flag = resource_list_demand_sort
+				}
+				else = {
+					if = {
+						limit = {
+							has_country_flag = resource_list_invert_sort
+						}
+						clr_country_flag = resource_list_invert_sort
+					}
+					else = {
+						set_country_flag = resource_list_invert_sort
+					}
+				}
+				country_update_trade_display = yes
+			}
+			dandt_sort_supply_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = resource_list_supply_sort
+						}
+					}
+					set_country_flag = resource_list_supply_sort
+					clr_country_flag = resource_list_resource_sort
+					clr_country_flag = resource_list_balance_sort
+					clr_country_flag = resource_list_demand_sort
+				}
+				else = {
+					if = {
+						limit = {
+							has_country_flag = resource_list_invert_sort
+						}
+						clr_country_flag = resource_list_invert_sort
+					}
+					else = {
+						set_country_flag = resource_list_invert_sort
+					}
+				}
+				country_update_trade_display = yes
+			}
+			dandt_sort_demand_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = resource_list_demand_sort
+						}
+					}
+					set_country_flag = resource_list_demand_sort
+					clr_country_flag = resource_list_resource_sort
+					clr_country_flag = resource_list_balance_sort
+					clr_country_flag = resource_list_supply_sort
+				}
+				else = {
+					if = {
+						limit = {
+							has_country_flag = resource_list_invert_sort
+						}
+						clr_country_flag = resource_list_invert_sort
+					}
+					else = {
+						set_country_flag = resource_list_invert_sort
+					}
+				}
+				country_update_trade_display = yes
+			}
+			dandt_sort_resource_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = resource_list_resource_sort
+						}
+					}
+					set_country_flag = resource_list_resource_sort
+					clr_country_flag = resource_list_demand_sort
+					clr_country_flag = resource_list_balance_sort
+					clr_country_flag = resource_list_supply_sort
+				}
+				else = {
+					if = {
+						limit = {
+							has_country_flag = resource_list_invert_sort
+						}
+						clr_country_flag = resource_list_invert_sort
+					}
+					else = {
+						set_country_flag = resource_list_invert_sort
+					}
+				}
+				country_update_trade_display = yes
+			}
+
+			dandt_trade_resource_background_click = {
+				if = {
+					limit = {
+						NOT = { is_in_array = { global.untradeable_resources_token_array = v } }
+					}
+					set_country_flag = trade_view_open
+					set_temp_variable = { resource_temp = v }
+					add_trade = yes
+				}
+			}
+		}
+
+		properties = {
+			dandt_market_flag = {
+				image = "[GetResourceListFlag]"
+			}
+			natural_resources_filter = {
+				image = "[GetNaturalResourcesButton]"
+			}
+			produced_resources_filter = {
+				image = "[GetProducedResourcesButton]"
+			}
+			service_resources_filter = {
+				image = "[GetServiceResourcesButton]"
+			}
+			military_resources_filter = {
+				image = "[GetMilitaryResourcesButton]"
+			}
+
+			dandt_trade_resource_background = {
+				image = "[GetResourceListBackground]"
+			}
+			dandt_trade_resource_icon = {
+				image = "[GetResourceListIcon]"
+			}
+			dandt_trade_resource_price_icon = {
+				image = "[GetResourceListPriceIcon]"
+			}
+			dandt_trade_resource_balance_bar_negative = {
+				frame = resource_list_right_balance_bar_array^i
+			}
+			dandt_trade_resource_balance_bar_positive = {
+				frame = resource_list_left_balance_bar_array^i
+			}
+			dandt_trade_resource_price_bar_negative = {
+				frame = resource_list_left_price_bar_array^i
+			}
+			dandt_trade_resource_price_bar_positive = {
+				frame = resource_list_right_price_bar_array^i
+			}
+		}
+		dynamic_lists = {
+			market_resource_list = {
+				array = resource_list_token_array
+				entry_container = dandt_trade_resource_entry
+			}
+		}
+	}
+	market_list_view = {
+		window_name = "market_list_view"
+		parent_window_token = trade_tab
+
+		context_type = player_context
+
+		visible = {
+			NOT = { has_country_flag = trade_view_open }
+		}
+
+		effects = {
+			can_trade_checkbox_click = {
+				if = {
+					limit = {
+						has_country_flag = market_list_can_trade_filter
+					}
+					clr_country_flag = market_list_can_trade_filter
+				}
+				else = {
+					set_country_flag = market_list_can_trade_filter
+				}
+				country_update_trade_display = yes
+			}
+			allied_checkbox_click = {
+				if = {
+					limit = {
+						has_country_flag = market_list_allied_filter
+					}
+					clr_country_flag = market_list_allied_filter
+				}
+				else = {
+					set_country_flag = market_list_allied_filter
+					clr_country_flag = market_list_enemy_filter
+				}
+				country_update_trade_display = yes
+			}
+			enemy_checkbox_click = {
+				if = {
+					limit = {
+						has_country_flag = market_list_enemy_filter
+					}
+					clr_country_flag = market_list_enemy_filter
+				}
+				else = {
+					set_country_flag = market_list_enemy_filter
+					clr_country_flag = market_list_allied_filter
+				}
+				country_update_trade_display = yes
+			}
+
+			global_market_button_click = {
+				set_variable = { selected_market = 0 }
+				country_update_trade_display = yes
+			}
+			market_background_click = {
+				set_variable = { selected_market = v }
+				country_update_trade_display = yes
+			}
+		}
+
+		properties = {
+			can_trade_checkbox = {
+				image = "[GetMarketTradeableCheckbox]"
+			}
+			allied_checkbox = {
+				image = "[GetMarketAlliedCheckbox]"
+			}
+			enemy_checkbox = {
+				image = "[GetMarketEnemyCheckbox]"
+			}
+
+			market_background = {
+				image = "[GetMarketListBackground]"
+			}
+			market_flag ={
+				image = "[?v.GetFlag]"
+			}
+		}
+
+		dynamic_lists = {
+			markets_grid = {
+				array = market_list
+				entry_container = market_entry
+			}
+		}
+	}
+	trade_window_tab = {
+		window_name = "dandt_trade_tab"
+		parent_window_token = trade_tab
+
+		context_type = player_context
+
+		visible = {
+			has_country_flag = trade_view_open
+		}
+
+		triggers = {
+			#Market Balance
+				high_balance_first_entry_background_click_enabled = {
+					NOT = { is_in_array = { global.untradeable_resources_token_array = high_balance_array^0 } }
+				}
+				high_balance_second_entry_background_click_enabled = {
+					NOT = { is_in_array = { global.untradeable_resources_token_array = high_balance_array^1 } }
+				}
+				high_balance_third_entry_background_click_enabled = {
+					NOT = { is_in_array = { global.untradeable_resources_token_array = high_balance_array^2 } }
+				}
+				high_balance_fourth_entry_background_click_enabled = {
+					NOT = { is_in_array = { global.untradeable_resources_token_array = high_balance_array^3 } }
+				}
+				high_balance_fifth_entry_background_click_enabled = {
+					NOT = { is_in_array = { global.untradeable_resources_token_array = high_balance_array^4 } }
+				}
+
+				low_balance_first_entry_background_click_enabled = {
+					NOT = { is_in_array = { global.untradeable_resources_token_array = low_balance_array^0 } }
+				}
+				low_balance_second_entry_background_click_enabled = {
+					NOT = { is_in_array = { global.untradeable_resources_token_array = low_balance_array^1 } }
+				}
+				low_balance_third_entry_background_click_enabled = {
+					NOT = { is_in_array = { global.untradeable_resources_token_array = low_balance_array^2 } }
+				}
+				low_balance_fourth_entry_background_click_enabled = {
+					NOT = { is_in_array = { global.untradeable_resources_token_array = low_balance_array^3 } }
+				}
+				low_balance_fifth_entry_background_click_enabled = {
+					NOT = { is_in_array = { global.untradeable_resources_token_array = low_balance_array^4 } }
+				}
+			#
+		}
+
+		effects = {
+			# Market Balance
+				high_balance_first_entry_background_click = {
+					set_temp_variable = { resource_temp = high_balance_array^0 }
+					add_trade = yes
+				}
+				high_balance_second_entry_background_click = {
+					set_temp_variable = { resource_temp = high_balance_array^1 }
+					add_trade = yes
+				}
+				high_balance_third_entry_background_click = {
+					set_temp_variable = { resource_temp = high_balance_array^2 }
+					add_trade = yes
+				}
+				high_balance_fourth_entry_background_click = {
+					set_temp_variable = { resource_temp = high_balance_array^3 }
+					add_trade = yes
+				}
+				high_balance_fifth_entry_background_click = {
+					set_temp_variable = { resource_temp = high_balance_array^4 }
+					add_trade = yes
+				}
+
+				low_balance_first_entry_background_click = {
+					set_temp_variable = { resource_temp = low_balance_array^0 }
+					add_trade = yes
+				}
+				low_balance_second_entry_background_click = {
+					set_temp_variable = { resource_temp = low_balance_array^1 }
+					add_trade = yes
+				}
+				low_balance_third_entry_background_click = {
+					set_temp_variable = { resource_temp = low_balance_array^2 }
+					add_trade = yes
+				}
+				low_balance_fourth_entry_background_click = {
+					set_temp_variable = { resource_temp = low_balance_array^3 }
+					add_trade = yes
+				}
+				low_balance_fifth_entry_background_click = {
+					set_temp_variable = { resource_temp = low_balance_array^4 }
+					add_trade = yes
+				}
+			#
+
+			dandt_trade_route_decrease_size_click = {
+				set_temp_variable = { resource_temp = v }
+				set_temp_variable = { amount_temp = -1 }
+				adjust_trade = yes
+			}
+			dandt_trade_route_decrease_size_shift_click = {
+				set_temp_variable = { resource_temp = v }
+				set_temp_variable = { amount_temp = -10 }
+				adjust_trade = yes
+			}
+			dandt_trade_route_decrease_size_control_click = {
+				set_temp_variable = { resource_temp = v }
+				set_temp_variable = { amount_temp = -100 }
+				adjust_trade = yes
+			}
+			dandt_trade_route_decrease_size_right_click = {
+				set_temp_variable = { resource_temp = v }
+				set_temp_variable = { amount_temp = -1000 }
+				adjust_trade = yes
+			}
+			dandt_trade_route_increase_size_click = {
+				set_temp_variable = { resource_temp = v }
+				set_temp_variable = { amount_temp = 1 }
+				adjust_trade = yes
+			}
+			dandt_trade_route_increase_size_shift_click = {
+				set_temp_variable = { resource_temp = v }
+				set_temp_variable = { amount_temp = 10 }
+				adjust_trade = yes
+			}
+			dandt_trade_route_increase_size_control_click = {
+				set_temp_variable = { resource_temp = v }
+				set_temp_variable = { amount_temp = 100 }
+				adjust_trade = yes
+			}
+			dandt_trade_route_increase_size_right_click = {
+				set_temp_variable = { resource_temp = v }
+				set_temp_variable = { amount_temp = 1000 }
+				adjust_trade = yes
+			}
+			
+			dandt_trade_route_remove_route_click = {
+				set_temp_variable = { resource_temp = v }
+				remove_trade = yes
+			}
+		}
+
+		properties = {
+			#Market Balance
+				high_balance_first_entry_icon = {
+					image = "[GetHighBalanceFirstIcon]"
+				}
+				high_balance_first_entry_price_icon = {
+					image = "[GetHighBalanceFirstPriceIcon]"
+				}
+				high_balance_second_entry_icon = {
+					image = "[GetHighBalanceSecondIcon]"
+				}
+				high_balance_second_entry_price_icon = {
+					image = "[GetHighBalanceSecondPriceIcon]"
+				}
+				high_balance_third_entry_icon = {
+					image = "[GetHighBalanceThirdIcon]"
+				}
+				high_balance_third_entry_price_icon = {
+					image = "[GetHighBalanceThirdPriceIcon]"
+				}
+				high_balance_fourth_entry_icon = {
+					image = "[GetHighBalanceFourthIcon]"
+				}
+				high_balance_fourth_entry_price_icon = {
+					image = "[GetHighBalanceFourthPriceIcon]"
+				}
+				high_balance_fifth_entry_icon = {
+					image = "[GetHighBalanceFifthIcon]"
+				}
+				high_balance_fifth_entry_price_icon = {
+					image = "[GetHighBalanceFifthPriceIcon]"
+				}
+
+				low_balance_first_entry_icon = {
+					image = "[GetLowBalanceFirstIcon]"
+				}
+				low_balance_first_entry_price_icon = {
+					image = "[GetLowBalanceFirstPriceIcon]"
+				}
+				low_balance_second_entry_icon = {
+					image = "[GetLowBalanceSecondIcon]"
+				}
+				low_balance_second_entry_price_icon = {
+					image = "[GetLowBalanceSecondPriceIcon]"
+				}
+				low_balance_third_entry_icon = {
+					image = "[GetLowBalanceThirdIcon]"
+				}
+				low_balance_third_entry_price_icon = {
+					image = "[GetLowBalanceThirdPriceIcon]"
+				}
+				low_balance_fourth_entry_icon = {
+					image = "[GetLowBalanceFourthIcon]"
+				}
+				low_balance_fourth_entry_price_icon = {
+					image = "[GetLowBalanceFourthPriceIcon]"
+				}
+				low_balance_fifth_entry_icon = {
+					image = "[GetLowBalanceFifthIcon]"
+				}
+				low_balance_fifth_entry_price_icon = {
+					image = "[GetLowBalanceFifthPriceIcon]"
+				}
+			#
+			#Trade Routes
+				dandt_trade_routes_icon = {
+					image = "[GetTradeRouteResourceIcon]"
+				}
+				dandt_trade_route_exporter_flag = {
+					image = "[GetTradeRouteExporterFlag]"
+				}
+				dandt_trade_route_importer_flag = {
+					image = "[GetTradeRouteImporterFlag]"
+				}
+			#
+		}
+
+		dynamic_lists = {
+			trade_route_list = {
+				array = show_trade_routes
+				entry_container = dandt_trade_route_entry
+			}
+		}
+	}
+}

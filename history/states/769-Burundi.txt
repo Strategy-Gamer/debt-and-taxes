@@ -1,0 +1,33 @@
+state={
+	id=769
+	name="STATE_769" # Burundi
+	manpower=2145731
+	
+	state_category = pastoral
+
+	history={
+		owner = BEL
+		add_core_of = BRD
+		victory_points = {
+			2220 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		2220
+	}
+
+	local_supplies=0.0 
+}

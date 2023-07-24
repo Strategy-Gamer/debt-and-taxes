@@ -1,0 +1,26 @@
+state={
+	id=970
+	name="STATE_970"
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {	
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+	state_category=rural
+	provinces={
+		4291 4395 7232 7250 10210 12105 12142 12208 12295 13528 13529 13530 13531 13532 
+	}
+	manpower=5538474
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

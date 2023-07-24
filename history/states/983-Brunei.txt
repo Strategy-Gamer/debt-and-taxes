@@ -1,0 +1,24 @@
+state={
+	id=983
+	name="STATE_983"
+	provinces={
+		7371 7387 
+	}
+	history = {
+		owner = BRU
+		add_core_of = BRU
+		buildings = {
+			infrastructure = 1
+			7371 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			7371 1 
+		}
+	}
+	state_category = state_cat
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

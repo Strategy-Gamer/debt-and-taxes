@@ -1,0 +1,27 @@
+state={
+	id=877
+	name="STATE_877"
+	manpower=1892223
+
+	state_category=town
+
+	provinces={
+		1630 5057 5100 12327 12776 13464 
+	}
+	history={
+		owner=GSU
+		add_core_of=GSU
+		buildings={
+			infrastructure=2
+		}
+		victory_points = { 5100 1 }
+		victory_points = { 5100 2 }
+		add_dynamic_modifier = {
+			modifier = climate_arid_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+	}
+	local_supplies=0.000
+}

@@ -1,0 +1,1389 @@
+# Setup
+	laws_constants = {
+		# Setup Law Arrays
+			# Liberties
+				# Constitution - global.laws_socials_constitution_array
+					add_to_array = { global.laws_socials_constitution_array = token:law_constitution_no_constitution }
+					add_to_array = { global.laws_socials_constitution_array = token:law_constitution_in_name_only }
+					add_to_array = { global.laws_socials_constitution_array = token:law_constitution_limited_guarantees }
+					add_to_array = { global.laws_socials_constitution_array = token:law_constitution_protection_of_natural_rights }
+				# Slavery
+					add_to_array = { global.laws_socials_slavery_array = token:law_slavery_allowed }
+					add_to_array = { global.laws_socials_slavery_array = token:law_slavery_slave_trade_banned }
+					add_to_array = { global.laws_socials_slavery_array = token:law_slavery_abolition }
+				# Women's Rights
+					add_to_array = { global.laws_socials_women_array = token:law_women_patriarchal_society }
+					add_to_array = { global.laws_socials_women_array = token:law_women_labor_freedom }
+					add_to_array = { global.laws_socials_women_array = token:law_women_suffrage }
+					add_to_array = { global.laws_socials_women_array = token:law_women_enforced_equality }
+					add_to_array = { global.laws_socials_women_array = token:law_women_preferential_treatment }
+				# Minority Treatment
+					add_to_array = { global.laws_socials_minority_treatment_array = token:law_minority_treatment_oppression }
+					add_to_array = { global.laws_socials_minority_treatment_array = token:law_minority_treatment_segregation }
+					add_to_array = { global.laws_socials_minority_treatment_array = token:law_minority_treatment_full_rights }
+					add_to_array = { global.laws_socials_minority_treatment_array = token:law_minority_treatment_affirmative_action }
+				# Marriage
+					add_to_array = { global.laws_socials_marriage_array = token:law_marriage_enforced }
+					add_to_array = { global.laws_socials_marriage_array = token:law_marriage_criminalized_homosexuality }
+					add_to_array = { global.laws_socials_marriage_array = token:law_marriage_decriminalized_homosexuality }
+					add_to_array = { global.laws_socials_marriage_array = token:law_marriage_same_sex_civil_unions }
+					add_to_array = { global.laws_socials_marriage_array = token:law_marriage_same_sex_marriage }
+					add_to_array = { global.laws_socials_marriage_array = token:law_marriage_free_love }
+				# Religion
+					add_to_array = { global.laws_socials_religion_array = token:law_religion_fundamentalist_state }
+					add_to_array = { global.laws_socials_religion_array = token:law_religion_state_religion }
+					add_to_array = { global.laws_socials_religion_array = token:law_religion_seperation_of_church_and_state }
+					add_to_array = { global.laws_socials_religion_array = token:law_religion_secular_state }
+					add_to_array = { global.laws_socials_religion_array = token:law_religion_atheist_state }
+				# Press
+					add_to_array = { global.laws_socials_press_array = token:law_press_state_press_only }
+					add_to_array = { global.laws_socials_press_array = token:law_press_censored_press }
+					add_to_array = { global.laws_socials_press_array = token:law_press_free_press }
+				# Public Meetings
+					add_to_array = { global.laws_socials_public_meetings_array = token:law_public_meetings_not_allowed }
+					add_to_array = { global.laws_socials_public_meetings_array = token:law_public_meetings_licensed_only }
+					add_to_array = { global.laws_socials_public_meetings_array = token:law_public_meetings_allowed }
+				# Public Armament
+					add_to_array = { global.laws_socials_public_armament_array = token:law_public_armament_banned }
+					add_to_array = { global.laws_socials_public_armament_array = token:law_public_armament_hunting }
+					add_to_array = { global.laws_socials_public_armament_array = token:law_public_armament_self_defense }
+					add_to_array = { global.laws_socials_public_armament_array = token:law_public_armament_small_arms }
+					add_to_array = { global.laws_socials_public_armament_array = token:law_public_armament_no_restrictions }
+				# Property
+					add_to_array = { global.laws_socials_property_array = token:law_property_no_rights }
+					add_to_array = { global.laws_socials_property_array = token:law_property_limited_rights }
+					add_to_array = { global.laws_socials_property_array = token:law_property_due_process }
+					add_to_array = { global.laws_socials_property_array = token:law_property_seizure_banned }
+				# Unionization
+					add_to_array = { global.laws_socials_unionization_array = token:law_unionization_illegal }
+					add_to_array = { global.laws_socials_unionization_array = token:law_unionization_state_controlled }
+					add_to_array = { global.laws_socials_unionization_array = token:law_unionization_non_socialist }
+					add_to_array = { global.laws_socials_unionization_array = token:law_unionization_private }
+					add_to_array = { global.laws_socials_unionization_array = token:law_unionization_public_and_private }
+					add_to_array = { global.laws_socials_unionization_array = token:law_unionization_represented }
+			# Politics
+				# Parties
+					add_to_array = { global.laws_politics_parties_array = token:law_parties_underground_only }
+					add_to_array = { global.laws_politics_parties_array = token:law_parties_harassment }
+					add_to_array = { global.laws_politics_parties_array = token:law_parties_non_secret_ballots }
+					add_to_array = { global.laws_politics_parties_array = token:law_parties_secret_ballots }
+				# Gerrymandering
+					add_to_array = { global.laws_politics_gerrymandering_array = token:law_gerrymandering_legal }
+					add_to_array = { global.laws_politics_gerrymandering_array = token:law_gerrymandering_court_oversight }
+					add_to_array = { global.laws_politics_gerrymandering_array = token:law_gerrymandering_multi_partisan }
+					add_to_array = { global.laws_politics_gerrymandering_array = token:law_gerrymandering_illegal }
+				# Franchise
+					add_to_array = { global.laws_politics_franchise_array = token:law_franchise_no_voting }
+					add_to_array = { global.laws_politics_franchise_array = token:law_franchise_only_landed }
+					add_to_array = { global.laws_politics_franchise_array = token:law_franchise_wealthy }
+					add_to_array = { global.laws_politics_franchise_array = token:law_franchise_universal }
+					add_to_array = { global.laws_politics_franchise_array = token:law_franchise_only_union }
+				# Voting Age
+					add_to_array = { global.laws_politics_voting_age_array = token:law_voting_age_sixteen }
+					add_to_array = { global.laws_politics_voting_age_array = token:law_voting_age_seventeen }
+					add_to_array = { global.laws_politics_voting_age_array = token:law_voting_age_eighteen }
+					add_to_array = { global.laws_politics_voting_age_array = token:law_voting_age_nineteen }
+					add_to_array = { global.laws_politics_voting_age_array = token:law_voting_age_twenty }
+					add_to_array = { global.laws_politics_voting_age_array = token:law_voting_age_twenty_one }
+					add_to_array = { global.laws_politics_voting_age_array = token:law_voting_age_twenty_two }
+					add_to_array = { global.laws_politics_voting_age_array = token:law_voting_age_twenty_three }
+					add_to_array = { global.laws_politics_voting_age_array = token:law_voting_age_twenty_four }
+					add_to_array = { global.laws_politics_voting_age_array = token:law_voting_age_twenty_five }
+				# Centralization
+					add_to_array = { global.laws_politics_centralization_array = token:law_centralization_unitary }
+					add_to_array = { global.laws_politics_centralization_array = token:law_centralization_federal }
+					add_to_array = { global.laws_politics_centralization_array = token:law_centralization_confederal }
+				# Voting System
+					add_to_array = { global.laws_politics_voting_system_array = token:law_voting_system_first_past_the_post }
+					add_to_array = { global.laws_politics_voting_system_array = token:law_voting_system_proportional_representative }
+					add_to_array = { global.laws_politics_voting_system_array = token:law_voting_system_direct_democracy }
+				# Term Limits
+					add_to_array = { global.laws_politics_term_limits_array = token:law_term_limits_none }
+					add_to_array = { global.laws_politics_term_limits_array = token:law_term_limits_only_executive }
+					add_to_array = { global.laws_politics_term_limits_array = token:law_term_limits_executive_and_legislature }
+					add_to_array = { global.laws_politics_term_limits_array = token:law_term_limits_all_positions }
+				# Legislature
+					add_to_array = { global.laws_politics_legislature_array = token:law_legislature_dissolved }
+					add_to_array = { global.laws_politics_legislature_array = token:law_legislature_limited }
+					add_to_array = { global.laws_politics_legislature_array = token:law_legislature_economic_only }
+					add_to_array = { global.laws_politics_legislature_array = token:law_legislature_economic_and_diplomatic_only }
+					add_to_array = { global.laws_politics_legislature_array = token:law_legislature_full_authority }
+				# Proportionment
+					add_to_array = { global.laws_politics_proportionment_array = token:law_proportionment_locally_based }
+					add_to_array = { global.laws_politics_proportionment_array = token:law_proportionment_population_based }
+					add_to_array = { global.laws_politics_proportionment_array = token:law_proportionment_fixed }
+				# Candidate Choice
+					add_to_array = { global.laws_politics_candidate_choice_array = token:law_candidate_choice_party_only }
+					add_to_array = { global.laws_politics_candidate_choice_array = token:law_candidate_choice_nationally_appointed }
+					add_to_array = { global.laws_politics_candidate_choice_array = token:law_candidate_choice_locally_appointed }
+					add_to_array = { global.laws_politics_candidate_choice_array = token:law_candidate_choice_party_vote }
+					add_to_array = { global.laws_politics_candidate_choice_array = token:law_candidate_choice_public_vote }
+				# Term Length
+					add_to_array = { global.laws_politics_term_length_array = token:law_term_length_for_life }
+					add_to_array = { global.laws_politics_term_length_array = token:law_term_length_until_removed }
+					add_to_array = { global.laws_politics_term_length_array = token:law_term_length_ten_years }
+					add_to_array = { global.laws_politics_term_length_array = token:law_term_length_eight_years }
+					add_to_array = { global.laws_politics_term_length_array = token:law_term_length_six_years }
+					add_to_array = { global.laws_politics_term_length_array = token:law_term_length_five_years }
+					add_to_array = { global.laws_politics_term_length_array = token:law_term_length_four_years }
+					add_to_array = { global.laws_politics_term_length_array = token:law_term_length_three_years }
+					add_to_array = { global.laws_politics_term_length_array = token:law_term_length_two_years }
+			# Economic
+				# Economy
+				add_to_array = { global.law_categories_array = token:law_economy_category }
+					add_to_array = { global.laws_economics_economy_array = token:law_economy_planned }
+						add_to_array = { global.laws_economics_economy_stance_array = token:law_economy_planned }
+						add_to_array = { global.laws_economics_economy_stance_array = token:law_economy_planned }
+						set_variable = { global.desc@token:law_economy_planned = token:law_economy_planned_desc }
+						set_variable = { global.effect@token:law_economy_planned = token:law_economy_planned_effect }
+					add_to_array = { global.laws_economics_economy_array = token:law_economy_state_capitalism }
+						add_to_array = { global.laws_economics_economy_stance_array = token:law_economy_state_capitalism }
+						add_to_array = { global.laws_economics_economy_stance_array = token:law_economy_state_capitalism }
+						set_variable = { global.desc@token:law_economy_state_capitalism = token:law_economy_state_capitalism_desc }
+						set_variable = { global.effect@token:law_economy_state_capitalism = token:law_economy_state_capitalism_effect }
+					add_to_array = { global.laws_economics_economy_array = token:law_economy_intervention }
+						add_to_array = { global.laws_economics_economy_stance_array = token:law_economy_intervention }
+						add_to_array = { global.laws_economics_economy_stance_array = token:law_economy_intervention }
+						set_variable = { global.desc@token:law_economy_intervention = token:law_economy_intervention_desc }
+						set_variable = { global.effect@token:law_economy_intervention = token:law_economy_intervention_effect }
+					add_to_array = { global.laws_economics_economy_array = token:law_economy_regulation }
+						add_to_array = { global.laws_economics_economy_stance_array = token:law_economy_regulation }
+						add_to_array = { global.laws_economics_economy_stance_array = token:law_economy_regulation }
+						set_variable = { global.desc@token:law_economy_regulation = token:law_economy_regulation_desc }
+						set_variable = { global.effect@token:law_economy_regulation = token:law_economy_regulation_effect }
+					add_to_array = { global.laws_economics_economy_array = token:law_economy_lasseiz_faire }
+						add_to_array = { global.laws_economics_economy_stance_array = token:law_economy_regulation }
+						add_to_array = { global.laws_economics_economy_stance_array = token:law_economy_regulation }
+						set_variable = { global.desc@token:law_economy_lasseiz_faire = token:law_economy_lasseiz_faire_desc }
+						set_variable = { global.effect@token:law_economy_lasseiz_faire = token:law_economy_lasseiz_faire_effect }
+				# Foreign Investment
+				add_to_array = { global.law_categories_array = token:law_foreign_investment_category }
+					add_to_array = { global.laws_economics_foreign_investment_array = token:law_foreign_investment_banned }
+						add_to_array = { global.laws_economics_foreign_investment_stance_array = token:law_foreign_investment_banned }
+						add_to_array = { global.laws_economics_foreign_investment_stance_array = token:law_foreign_investment_banned }
+						set_variable = { global.desc@token:law_foreign_investment_banned = token:law_foreign_investment_banned_desc }
+						set_variable = { global.effect@token:law_foreign_investment_banned = token:law_foreign_investment_banned_effect }
+					add_to_array = { global.laws_economics_foreign_investment_array = token:law_foreign_investment_limited }
+						add_to_array = { global.laws_economics_foreign_investment_stance_array = token:law_foreign_investment_limited }
+						add_to_array = { global.laws_economics_foreign_investment_stance_array = token:law_foreign_investment_limited }
+						add_to_array = { global.laws_economics_foreign_investment_stance_array = token:law_foreign_investment_limited }
+						set_variable = { global.desc@token:law_foreign_investment_limited = token:law_foreign_investment_limited_desc }
+						set_variable = { global.effect@token:law_foreign_investment_limited = token:law_foreign_investment_limited_effect }
+					add_to_array = { global.laws_economics_foreign_investment_array = token:law_foreign_investment_allowed }
+						add_to_array = { global.laws_economics_foreign_investment_stance_array = token:law_foreign_investment_allowed }
+						add_to_array = { global.laws_economics_foreign_investment_stance_array = token:law_foreign_investment_allowed }
+						add_to_array = { global.laws_economics_foreign_investment_stance_array = token:law_foreign_investment_allowed }
+						set_variable = { global.desc@token:law_foreign_investment_allowed = token:law_foreign_investment_allowed_desc }
+						set_variable = { global.effect@token:law_foreign_investment_allowed = token:law_foreign_investment_allowed_effect }
+					add_to_array = { global.laws_economics_foreign_investment_array = token:law_foreign_investment_guaranteed }
+						add_to_array = { global.laws_economics_foreign_investment_stance_array = token:law_foreign_investment_guaranteed }
+						add_to_array = { global.laws_economics_foreign_investment_stance_array = token:law_foreign_investment_guaranteed }
+						set_variable = { global.desc@token:law_foreign_investment_guaranteed = token:law_foreign_investment_guaranteed_desc }
+						set_variable = { global.effect@token:law_foreign_investment_guaranteed = token:law_foreign_investment_guaranteed_effect }
+				# Consumer Rights
+				add_to_array = { global.law_categories_array = token:law_consumer_rights_category }
+					add_to_array = { global.laws_economics_consumer_rights_array = token:law_consumer_rights_none }
+						add_to_array = { global.laws_economics_consumer_rights_stance_array = token:law_consumer_rights_none }
+						add_to_array = { global.laws_economics_consumer_rights_stance_array = token:law_consumer_rights_none }
+						set_variable = { global.desc@token:law_consumer_rights_none = token:law_consumer_rights_none_desc }
+						set_variable = { global.effect@token:law_consumer_rights_none = token:law_consumer_rights_none_effect }
+					add_to_array = { global.laws_economics_consumer_rights_array = token:law_consumer_rights_minimal }
+						add_to_array = { global.laws_economics_consumer_rights_stance_array = token:law_consumer_rights_minimal }
+						add_to_array = { global.laws_economics_consumer_rights_stance_array = token:law_consumer_rights_minimal }
+						set_variable = { global.desc@token:law_consumer_rights_minimal = token:law_consumer_rights_minimal_desc }
+						set_variable = { global.effect@token:law_consumer_rights_minimal = token:law_consumer_rights_minimal_effect }
+					add_to_array = { global.laws_economics_consumer_rights_array = token:law_consumer_rights_limited }
+						add_to_array = { global.laws_economics_consumer_rights_stance_array = token:law_consumer_rights_limited }
+						add_to_array = { global.laws_economics_consumer_rights_stance_array = token:law_consumer_rights_limited }
+						set_variable = { global.desc@token:law_consumer_rights_limited = token:law_consumer_rights_limited_desc }
+						set_variable = { global.effect@token:law_consumer_rights_limited = token:law_consumer_rights_limited_effect }
+					add_to_array = { global.laws_economics_consumer_rights_array = token:law_consumer_rights_decent }
+						add_to_array = { global.laws_economics_consumer_rights_stance_array = token:law_consumer_rights_decent }
+						add_to_array = { global.laws_economics_consumer_rights_stance_array = token:law_consumer_rights_decent }
+						set_variable = { global.desc@token:law_consumer_rights_decent = token:law_consumer_rights_decent_desc }
+						set_variable = { global.effect@token:law_consumer_rights_decent = token:law_consumer_rights_decent_effect }
+					add_to_array = { global.laws_economics_consumer_rights_array = token:law_consumer_rights_excellent }
+						add_to_array = { global.laws_economics_consumer_rights_stance_array = token:law_consumer_rights_excellent }
+						add_to_array = { global.laws_economics_consumer_rights_stance_array = token:law_consumer_rights_excellent }
+						set_variable = { global.desc@token:law_consumer_rights_excellent = token:law_consumer_rights_excellent_desc }
+						set_variable = { global.effect@token:law_consumer_rights_excellent = token:law_consumer_rights_excellent_effect }
+				# Minimum Wage
+				add_to_array = { global.law_categories_array = token:law_minimum_wage_category }
+					add_to_array = { global.laws_economics_minimum_wage_array = token:law_minimum_wage_none }
+						add_to_array = { global.laws_economics_minimum_wage_stance_array = token:law_minimum_wage_none }
+						set_variable = { global.desc@token:law_minimum_wage_none = token:law_minimum_wage_none_desc }
+						set_variable = { global.effect@token:law_minimum_wage_none = token:law_minimum_wage_none_effect }
+					add_to_array = { global.laws_economics_minimum_wage_array = token:law_minimum_wage_symbolic }
+						add_to_array = { global.laws_economics_minimum_wage_stance_array = token:law_minimum_wage_symbolic }
+						set_variable = { global.desc@token:law_minimum_wage_symbolic = token:law_minimum_wage_symbolic_desc }
+						set_variable = { global.effect@token:law_minimum_wage_symbolic = token:law_minimum_wage_symbolic_effect }
+					add_to_array = { global.laws_economics_minimum_wage_array = token:law_minimum_wage_minimal }
+						add_to_array = { global.laws_economics_minimum_wage_stance_array = token:law_minimum_wage_minimal }
+						set_variable = { global.desc@token:law_minimum_wage_minimal = token:law_minimum_wage_minimal_desc }
+						set_variable = { global.effect@token:law_minimum_wage_minimal = token:law_minimum_wage_minimal_effect }
+					add_to_array = { global.laws_economics_minimum_wage_array = token:law_minimum_wage_low }
+						add_to_array = { global.laws_economics_minimum_wage_stance_array = token:law_minimum_wage_low }
+						add_to_array = { global.laws_economics_minimum_wage_stance_array = token:law_minimum_wage_low }
+						set_variable = { global.desc@token:law_minimum_wage_low = token:law_minimum_wage_low_desc }
+						set_variable = { global.effect@token:law_minimum_wage_low = token:law_minimum_wage_low_effect }
+					add_to_array = { global.laws_economics_minimum_wage_array = token:law_minimum_wage_acceptable }
+						add_to_array = { global.laws_economics_minimum_wage_stance_array = token:law_minimum_wage_acceptable }
+						add_to_array = { global.laws_economics_minimum_wage_stance_array = token:law_minimum_wage_acceptable }
+						set_variable = { global.desc@token:law_minimum_wage_acceptable = token:law_minimum_wage_acceptable_desc }
+						set_variable = { global.effect@token:law_minimum_wage_acceptable = token:law_minimum_wage_acceptable_effect }
+					add_to_array = { global.laws_economics_minimum_wage_array = token:law_minimum_wage_decent }
+						add_to_array = { global.laws_economics_minimum_wage_stance_array = token:law_minimum_wage_decent }
+						add_to_array = { global.laws_economics_minimum_wage_stance_array = token:law_minimum_wage_decent }
+						add_to_array = { global.laws_economics_minimum_wage_stance_array = token:law_minimum_wage_decent }
+						set_variable = { global.desc@token:law_minimum_wage_decent = token:law_minimum_wage_decent_desc }
+						set_variable = { global.effect@token:law_minimum_wage_decent = token:law_minimum_wage_decent_effect }
+				# Work Week
+				add_to_array = { global.law_categories_array = token:law_work_week_category }
+					add_to_array = { global.laws_economics_work_week_array = token:law_economy_work_week_unlimited_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_unlimited_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_unlimited_hours }
+						set_variable = { global.desc@token:law_economy_work_week_unlimited_hours = token:law_economy_work_week_unlimited_hours_desc }
+						set_variable = { global.effect@token:law_economy_work_week_unlimited_hours = token:law_economy_work_week_unlimited_hours_effect }
+					add_to_array = { global.laws_economics_work_week_array = token:law_economy_work_week_one_hundred_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_one_hundred_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_one_hundred_hours }
+						set_variable = { global.desc@token:law_economy_work_week_one_hundred_hours = token:law_economy_work_week_one_hundred_hours_desc }
+						set_variable = { global.effect@token:law_economy_work_week_one_hundred_hours = token:law_economy_work_week_one_hundred_hours_effect }
+					add_to_array = { global.laws_economics_work_week_array = token:law_economy_work_week_ninety_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_ninety_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_ninety_hours }
+						set_variable = { global.desc@token:law_economy_work_week_ninety_hours = token:law_economy_work_week_ninety_hours_desc }
+						set_variable = { global.effect@token:law_economy_work_week_ninety_hours = token:law_economy_work_week_ninety_hours_effect }
+					add_to_array = { global.laws_economics_work_week_array = token:law_economy_work_week_eighty_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_eighty_hours }
+						set_variable = { global.desc@token:law_economy_work_week_eighty_hours = token:law_economy_work_week_eighty_hours_desc }
+						set_variable = { global.effect@token:law_economy_work_week_eighty_hours = token:law_economy_work_week_eighty_hours_effect }
+					add_to_array = { global.laws_economics_work_week_array = token:law_economy_work_week_seventy_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_seventy_hours }
+						set_variable = { global.desc@token:law_economy_work_week_seventy_hours = token:law_economy_work_week_seventy_hours_desc }
+						set_variable = { global.effect@token:law_economy_work_week_seventy_hours = token:law_economy_work_week_seventy_hours_effect }
+					add_to_array = { global.laws_economics_work_week_array = token:law_economy_work_week_sixty_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_sixty_hours }
+						set_variable = { global.desc@token:law_economy_work_week_sixty_hours = token:law_economy_work_week_sixty_hours_desc }
+						set_variable = { global.effect@token:law_economy_work_week_sixty_hours = token:law_economy_work_week_sixty_hours_effect }
+					add_to_array = { global.laws_economics_work_week_array = token:law_economy_work_week_fifty_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_fifty_hours }
+						set_variable = { global.desc@token:law_economy_work_week_fifty_hours = token:law_economy_work_week_fifty_hours_desc }
+						set_variable = { global.effect@token:law_economy_work_week_fifty_hours = token:law_economy_work_week_fifty_hours_effect }
+					add_to_array = { global.laws_economics_work_week_array = token:law_economy_work_week_forty_hours }
+						add_to_array = { global.laws_economics_work_week_stance_array = token:law_economy_work_week_forty_hours }
+						set_variable = { global.desc@token:law_economy_work_week_forty_hours = token:law_economy_work_week_forty_hours_desc }
+						set_variable = { global.effect@token:law_economy_work_week_forty_hours = token:law_economy_work_week_forty_hours_effect }
+				# Safety Regulations
+				add_to_array = { global.law_categories_array = token:law_safety_regulations_category }
+					add_to_array = { global.laws_economics_safety_regulations_array = token:law_safety_regulations_none }
+						add_to_array = { global.laws_economics_safety_regulations_stance_array = token:law_safety_regulations_none }
+						add_to_array = { global.laws_economics_safety_regulations_stance_array = token:law_safety_regulations_none }
+						add_to_array = { global.laws_economics_safety_regulations_stance_array = token:law_safety_regulations_none }
+						set_variable = { global.desc@token:law_safety_regulations_none = token:law_safety_regulations_none_desc }
+						set_variable = { global.effect@token:law_safety_regulations_none = token:law_safety_regulations_none_effect }
+					add_to_array = { global.laws_economics_safety_regulations_array = token:law_safety_regulations_minimal }
+						add_to_array = { global.laws_economics_safety_regulations_stance_array = token:law_safety_regulations_minimal }
+						add_to_array = { global.laws_economics_safety_regulations_stance_array = token:law_safety_regulations_minimal }
+						set_variable = { global.desc@token:law_safety_regulations_minimal = token:law_safety_regulations_minimal_desc }
+						set_variable = { global.effect@token:law_safety_regulations_minimal = token:law_safety_regulations_minimal_effect }
+					add_to_array = { global.laws_economics_safety_regulations_array = token:law_safety_regulations_limited }
+						add_to_array = { global.laws_economics_safety_regulations_stance_array = token:law_safety_regulations_limited }
+						add_to_array = { global.laws_economics_safety_regulations_stance_array = token:law_safety_regulations_limited }
+						set_variable = { global.desc@token:law_safety_regulations_limited = token:law_safety_regulations_limited_desc }
+						set_variable = { global.effect@token:law_safety_regulations_limited = token:law_safety_regulations_limited_effect }
+					add_to_array = { global.laws_economics_safety_regulations_array = token:law_safety_regulations_decent }
+						add_to_array = { global.laws_economics_safety_regulations_stance_array = token:law_safety_regulations_decent }
+						add_to_array = { global.laws_economics_safety_regulations_stance_array = token:law_safety_regulations_decent }
+						set_variable = { global.desc@token:law_safety_regulations_decent = token:law_safety_regulations_decent_desc }
+						set_variable = { global.effect@token:law_safety_regulations_decent = token:law_safety_regulations_decent_effect }
+					add_to_array = { global.laws_economics_safety_regulations_array = token:law_safety_regulations_excellent }
+						add_to_array = { global.laws_economics_safety_regulations_stance_array = token:law_safety_regulations_excellent }
+						set_variable = { global.desc@token:law_safety_regulations_excellent = token:law_safety_regulations_excellent_desc }
+						set_variable = { global.effect@token:law_safety_regulations_excellent = token:law_safety_regulations_excellent_effect }
+				# Financial Regulations
+				add_to_array = { global.law_categories_array = token:law_financial_regulations_category }
+					add_to_array = { global.laws_economics_financial_regulations_array = token:law_financial_regulations_none }
+						add_to_array = { global.laws_economics_financial_regulations_stance_array = token:law_financial_regulations_none }
+						add_to_array = { global.laws_economics_financial_regulations_stance_array = token:law_financial_regulations_none }
+						add_to_array = { global.laws_economics_financial_regulations_stance_array = token:law_financial_regulations_none }
+						set_variable = { global.desc@token:law_financial_regulations_none = token:law_financial_regulations_none_desc }
+						set_variable = { global.effect@token:law_financial_regulations_none = token:law_financial_regulations_none_effect }
+					add_to_array = { global.laws_economics_financial_regulations_array = token:law_financial_regulations_minimal }
+						add_to_array = { global.laws_economics_financial_regulations_stance_array = token:law_financial_regulations_minimal }
+						add_to_array = { global.laws_economics_financial_regulations_stance_array = token:law_financial_regulations_minimal }
+						set_variable = { global.desc@token:law_financial_regulations_minimal = token:law_financial_regulations_minimal_desc }
+						set_variable = { global.effect@token:law_financial_regulations_minimal = token:law_financial_regulations_minimal_effect }
+					add_to_array = { global.laws_economics_financial_regulations_array = token:law_financial_regulations_limited }
+						add_to_array = { global.laws_economics_financial_regulations_stance_array = token:law_financial_regulations_limited }
+						add_to_array = { global.laws_economics_financial_regulations_stance_array = token:law_financial_regulations_limited }
+						set_variable = { global.desc@token:law_financial_regulations_limited = token:law_financial_regulations_limited_desc }
+						set_variable = { global.effect@token:law_financial_regulations_limited = token:law_financial_regulations_limited_effect }
+					add_to_array = { global.laws_economics_financial_regulations_array = token:law_financial_regulations_decent }
+						add_to_array = { global.laws_economics_financial_regulations_stance_array = token:law_financial_regulations_decent }
+						add_to_array = { global.laws_economics_financial_regulations_stance_array = token:law_financial_regulations_decent }
+						set_variable = { global.desc@token:law_financial_regulations_decent = token:law_financial_regulations_decent_desc }
+						set_variable = { global.effect@token:law_financial_regulations_decent = token:law_financial_regulations_decent_effect }
+					add_to_array = { global.laws_economics_financial_regulations_array = token:law_financial_regulations_excellent }
+						add_to_array = { global.laws_economics_financial_regulations_stance_array = token:law_financial_regulations_excellent }
+						set_variable = { global.desc@token:law_financial_regulations_excellent = token:law_financial_regulations_excellent_desc }
+						set_variable = { global.effect@token:law_financial_regulations_excellent = token:law_financial_regulations_excellent_effect }
+				# Business Regulations
+				add_to_array = { global.law_categories_array = token:law_business_regulations_category }
+					add_to_array = { global.laws_economics_business_regulations_array = token:law_business_regulations_none }
+						add_to_array = { global.laws_economics_business_regulations_stance_array = token:law_business_regulations_none }
+						add_to_array = { global.laws_economics_business_regulations_stance_array = token:law_business_regulations_none }
+						add_to_array = { global.laws_economics_business_regulations_stance_array = token:law_business_regulations_none }
+						set_variable = { global.desc@token:law_business_regulations_none = token:law_business_regulations_none_desc }
+						set_variable = { global.effect@token:law_business_regulations_none = token:law_business_regulations_none_effect }
+					add_to_array = { global.laws_economics_business_regulations_array = token:law_business_regulations_minimal }
+						add_to_array = { global.laws_economics_business_regulations_stance_array = token:law_business_regulations_minimal }
+						add_to_array = { global.laws_economics_business_regulations_stance_array = token:law_business_regulations_minimal }
+						set_variable = { global.desc@token:law_business_regulations_minimal = token:law_business_regulations_minimal_desc }
+						set_variable = { global.effect@token:law_business_regulations_minimal = token:law_business_regulations_minimal_effect }
+					add_to_array = { global.laws_economics_business_regulations_array = token:law_business_regulations_limited }
+						add_to_array = { global.laws_economics_business_regulations_stance_array = token:law_business_regulations_limited }
+						add_to_array = { global.laws_economics_business_regulations_stance_array = token:law_business_regulations_limited }
+						set_variable = { global.desc@token:law_business_regulations_limited = token:law_business_regulations_limited_desc }
+						set_variable = { global.effect@token:law_business_regulations_limited = token:law_business_regulations_limited_effect }
+					add_to_array = { global.laws_economics_business_regulations_array = token:law_business_regulations_decent }
+						add_to_array = { global.laws_economics_business_regulations_stance_array = token:law_business_regulations_decent }
+						add_to_array = { global.laws_economics_business_regulations_stance_array = token:law_business_regulations_decent }
+						set_variable = { global.desc@token:law_business_regulations_decent = token:law_business_regulations_decent_desc }
+						set_variable = { global.effect@token:law_business_regulations_decent = token:law_business_regulations_decent_effect }
+					add_to_array = { global.laws_economics_business_regulations_array = token:law_business_regulations_excellent }
+						add_to_array = { global.laws_economics_business_regulations_stance_array = token:law_business_regulations_excellent }
+						set_variable = { global.desc@token:law_business_regulations_excellent = token:law_business_regulations_excellent_desc }
+						set_variable = { global.effect@token:law_business_regulations_excellent = token:law_business_regulations_excellent_effect }
+				# Pollution Regulations
+				add_to_array = { global.law_categories_array = token:law_pollution_regulations_category }
+					add_to_array = { global.laws_economics_pollution_regulations_array = token:law_pollution_regulations_none }
+						add_to_array = { global.laws_economics_pollution_regulations_stance_array = token:law_pollution_regulations_none }
+						add_to_array = { global.laws_economics_pollution_regulations_stance_array = token:law_pollution_regulations_none }
+						add_to_array = { global.laws_economics_pollution_regulations_stance_array = token:law_pollution_regulations_none }
+						set_variable = { global.desc@token:law_pollution_regulations_none = token:law_pollution_regulations_none_desc }
+						set_variable = { global.effect@token:law_pollution_regulations_none = token:law_pollution_regulations_none_effect }
+					add_to_array = { global.laws_economics_pollution_regulations_array = token:law_pollution_regulations_minimal }
+						add_to_array = { global.laws_economics_pollution_regulations_stance_array = token:law_pollution_regulations_minimal }
+						add_to_array = { global.laws_economics_pollution_regulations_stance_array = token:law_pollution_regulations_minimal }
+						set_variable = { global.desc@token:law_pollution_regulations_minimal = token:law_pollution_regulations_minimal_desc }
+						set_variable = { global.effect@token:law_pollution_regulations_minimal = token:law_pollution_regulations_minimal_effect }
+					add_to_array = { global.laws_economics_pollution_regulations_array = token:law_pollution_regulations_limited }
+						add_to_array = { global.laws_economics_pollution_regulations_stance_array = token:law_pollution_regulations_limited }
+						add_to_array = { global.laws_economics_pollution_regulations_stance_array = token:law_pollution_regulations_limited }
+						set_variable = { global.desc@token:law_pollution_regulations_limited = token:law_pollution_regulations_limited_desc }
+						set_variable = { global.effect@token:law_pollution_regulations_limited = token:law_pollution_regulations_limited_effect }
+					add_to_array = { global.laws_economics_pollution_regulations_array = token:law_pollution_regulations_decent }
+						add_to_array = { global.laws_economics_pollution_regulations_stance_array = token:law_pollution_regulations_decent }
+						add_to_array = { global.laws_economics_pollution_regulations_stance_array = token:law_pollution_regulations_decent }
+						set_variable = { global.desc@token:law_pollution_regulations_decent = token:law_pollution_regulations_decent_desc }
+						set_variable = { global.effect@token:law_pollution_regulations_decent = token:law_pollution_regulations_decent_effect }
+					add_to_array = { global.laws_economics_pollution_regulations_array = token:law_pollution_regulations_excellent }
+						add_to_array = { global.laws_economics_pollution_regulations_stance_array = token:law_pollution_regulations_excellent }
+						set_variable = { global.desc@token:law_pollution_regulations_excellent = token:law_pollution_regulations_excellent_desc }
+						set_variable = { global.effect@token:law_pollution_regulations_excellent = token:law_pollution_regulations_excellent_effect }
+				# Small Business Grants
+				add_to_array = { global.law_categories_array = token:law_small_business_grants_category }
+					add_to_array = { global.laws_economics_small_business_grants_array = token:law_small_business_grants_none }
+						add_to_array = { global.laws_economics_small_business_grants_stance_array = token:law_small_business_grants_none }
+						add_to_array = { global.laws_economics_small_business_grants_stance_array = token:law_small_business_grants_none }
+						add_to_array = { global.laws_economics_small_business_grants_stance_array = token:law_small_business_grants_none }
+						add_to_array = { global.laws_economics_small_business_grants_stance_array = token:law_small_business_grants_none }
+						set_variable = { global.desc@token:law_small_business_grants_none = token:law_small_business_grants_none_desc }
+						set_variable = { global.effect@token:law_small_business_grants_none = token:law_small_business_grants_none_effect }
+					add_to_array = { global.laws_economics_small_business_grants_array = token:law_small_business_grants_minimal }
+						add_to_array = { global.laws_economics_small_business_grants_stance_array = token:law_small_business_grants_minimal }
+						add_to_array = { global.laws_economics_small_business_grants_stance_array = token:law_small_business_grants_minimal }
+						add_to_array = { global.laws_economics_small_business_grants_stance_array = token:law_small_business_grants_minimal }
+						set_variable = { global.desc@token:law_small_business_grants_minimal = token:law_small_business_grants_minimal_desc }
+						set_variable = { global.effect@token:law_small_business_grants_minimal = token:law_small_business_grants_minimal_effect }
+					add_to_array = { global.laws_economics_small_business_grants_array = token:law_small_business_grants_limited }
+						add_to_array = { global.laws_economics_small_business_grants_stance_array = token:law_small_business_grants_limited }
+						set_variable = { global.desc@token:law_small_business_grants_limited = token:law_small_business_grants_limited_desc }
+						set_variable = { global.effect@token:law_small_business_grants_limited = token:law_small_business_grants_limited_effect }
+					add_to_array = { global.laws_economics_small_business_grants_array = token:law_small_business_grants_decent }
+						add_to_array = { global.laws_economics_small_business_grants_stance_array = token:law_small_business_grants_decent }
+						set_variable = { global.desc@token:law_small_business_grants_decent = token:law_small_business_grants_decent_desc }
+						set_variable = { global.effect@token:law_small_business_grants_decent = token:law_small_business_grants_decent_effect }
+					add_to_array = { global.laws_economics_small_business_grants_array = token:law_small_business_grants_excellent }
+						add_to_array = { global.laws_economics_small_business_grants_stance_array = token:law_small_business_grants_excellent }
+						set_variable = { global.desc@token:law_small_business_grants_excellent = token:law_small_business_grants_excellent_desc }
+						set_variable = { global.effect@token:law_small_business_grants_excellent = token:law_small_business_grants_excellent_effect }
+				# Subsidies
+				add_to_array = { global.law_categories_array = token:law_agricultural_subsidies_category }
+					add_to_array = { global.laws_economics_agricultural_subsidies_array = token:law_agricultural_none_subsidies }
+						add_to_array = { global.laws_economics_agricultural_subsidies_stance_array = token:law_agricultural_none_subsidies }
+						add_to_array = { global.laws_economics_agricultural_subsidies_stance_array = token:law_agricultural_none_subsidies }
+						add_to_array = { global.laws_economics_agricultural_subsidies_stance_array = token:law_agricultural_none_subsidies }
+						add_to_array = { global.laws_economics_agricultural_subsidies_stance_array = token:law_agricultural_none_subsidies }
+						set_variable = { global.desc@token:law_agricultural_none_subsidies = token:law_agricultural_none_subsidies_desc }
+						set_variable = { global.effect@token:law_agricultural_none_subsidies = token:law_agricultural_none_subsidies_effect }
+					add_to_array = { global.laws_economics_agricultural_subsidies_array = token:law_agricultural_low_subsidies }
+						add_to_array = { global.laws_economics_agricultural_subsidies_stance_array = token:law_agricultural_low_subsidies }
+						add_to_array = { global.laws_economics_agricultural_subsidies_stance_array = token:law_agricultural_low_subsidies }
+						add_to_array = { global.laws_economics_agricultural_subsidies_stance_array = token:law_agricultural_low_subsidies }
+						set_variable = { global.desc@token:law_agricultural_low_subsidies = token:law_agricultural_low_subsidies_desc }
+						set_variable = { global.effect@token:law_agricultural_low_subsidies = token:law_agricultural_low_subsidies_effect }
+					add_to_array = { global.laws_economics_agricultural_subsidies_array = token:law_agricultural_medium_subsidies }
+						add_to_array = { global.laws_economics_agricultural_subsidies_stance_array = token:law_agricultural_medium_subsidies }
+						add_to_array = { global.laws_economics_agricultural_subsidies_stance_array = token:law_agricultural_medium_subsidies }
+						set_variable = { global.desc@token:law_agricultural_medium_subsidies = token:law_agricultural_medium_subsidies_desc }
+						set_variable = { global.effect@token:law_agricultural_medium_subsidies = token:law_agricultural_medium_subsidies_effect }
+					add_to_array = { global.laws_economics_agricultural_subsidies_array = token:law_agricultural_high_subsidies }
+						add_to_array = { global.laws_economics_agricultural_subsidies_stance_array = token:law_agricultural_high_subsidies }
+						set_variable = { global.desc@token:law_agricultural_high_subsidies = token:law_agricultural_high_subsidies_desc }
+						set_variable = { global.effect@token:law_agricultural_high_subsidies = token:law_agricultural_high_subsidies_effect }
+
+				add_to_array = { global.law_categories_array = token:law_mining_subsidies_category }
+					add_to_array = { global.laws_economics_mining_subsidies_array = token:law_mining_none_subsidies }
+						add_to_array = { global.laws_economics_mining_subsidies_stance_array = token:law_mining_none_subsidies }
+						add_to_array = { global.laws_economics_mining_subsidies_stance_array = token:law_mining_none_subsidies }
+						add_to_array = { global.laws_economics_mining_subsidies_stance_array = token:law_mining_none_subsidies }
+						add_to_array = { global.laws_economics_mining_subsidies_stance_array = token:law_mining_none_subsidies }
+						set_variable = { global.desc@token:law_mining_none_subsidies = token:law_mining_none_subsidies_desc }
+						set_variable = { global.effect@token:law_mining_none_subsidies = token:law_mining_none_subsidies_effect }
+					add_to_array = { global.laws_economics_mining_subsidies_array = token:law_mining_low_subsidies }
+						add_to_array = { global.laws_economics_mining_subsidies_stance_array = token:law_mining_low_subsidies }
+						add_to_array = { global.laws_economics_mining_subsidies_stance_array = token:law_mining_low_subsidies }
+						add_to_array = { global.laws_economics_mining_subsidies_stance_array = token:law_mining_low_subsidies }
+						set_variable = { global.desc@token:law_mining_low_subsidies = token:law_mining_low_subsidies_desc }
+						set_variable = { global.effect@token:law_mining_low_subsidies = token:law_mining_low_subsidies_effect }
+					add_to_array = { global.laws_economics_mining_subsidies_array = token:law_mining_medium_subsidies }
+						add_to_array = { global.laws_economics_mining_subsidies_stance_array = token:law_mining_medium_subsidies }
+						add_to_array = { global.laws_economics_mining_subsidies_stance_array = token:law_mining_medium_subsidies }
+						set_variable = { global.desc@token:law_mining_medium_subsidies = token:law_mining_medium_subsidies_desc }
+						set_variable = { global.effect@token:law_mining_medium_subsidies = token:law_mining_medium_subsidies_effect }
+					add_to_array = { global.laws_economics_mining_subsidies_array = token:law_mining_high_subsidies }
+						add_to_array = { global.laws_economics_mining_subsidies_stance_array = token:law_mining_high_subsidies }
+						set_variable = { global.desc@token:law_mining_high_subsidies = token:law_mining_high_subsidies_desc }
+						set_variable = { global.effect@token:law_mining_high_subsidies = token:law_mining_high_subsidies_effect }
+
+				add_to_array = { global.law_categories_array = token:law_drilling_subsidies_category }
+					add_to_array = { global.laws_economics_drilling_subsidies_array = token:law_drilling_none_subsidies }
+						add_to_array = { global.laws_economics_drilling_subsidies_stance_array = token:law_drilling_none_subsidies }
+						add_to_array = { global.laws_economics_drilling_subsidies_stance_array = token:law_drilling_none_subsidies }
+						add_to_array = { global.laws_economics_drilling_subsidies_stance_array = token:law_drilling_none_subsidies }
+						add_to_array = { global.laws_economics_drilling_subsidies_stance_array = token:law_drilling_none_subsidies }
+						set_variable = { global.desc@token:law_drilling_none_subsidies = token:law_drilling_none_subsidies_desc }
+						set_variable = { global.effect@token:law_drilling_none_subsidies = token:law_drilling_none_subsidies_effect }
+					add_to_array = { global.laws_economics_drilling_subsidies_array = token:law_drilling_low_subsidies }
+						add_to_array = { global.laws_economics_drilling_subsidies_stance_array = token:law_drilling_low_subsidies }
+						add_to_array = { global.laws_economics_drilling_subsidies_stance_array = token:law_drilling_low_subsidies }
+						add_to_array = { global.laws_economics_drilling_subsidies_stance_array = token:law_drilling_low_subsidies }
+						set_variable = { global.desc@token:law_drilling_low_subsidies = token:law_drilling_low_subsidies_desc }
+						set_variable = { global.effect@token:law_drilling_low_subsidies = token:law_drilling_low_subsidies_effect }
+					add_to_array = { global.laws_economics_drilling_subsidies_array = token:law_drilling_medium_subsidies }
+						add_to_array = { global.laws_economics_drilling_subsidies_stance_array = token:law_drilling_medium_subsidies }
+						add_to_array = { global.laws_economics_drilling_subsidies_stance_array = token:law_drilling_medium_subsidies }
+						set_variable = { global.desc@token:law_drilling_medium_subsidies = token:law_drilling_medium_subsidies_desc }
+						set_variable = { global.effect@token:law_drilling_medium_subsidies = token:law_drilling_medium_subsidies_effect }
+					add_to_array = { global.laws_economics_drilling_subsidies_array = token:law_drilling_high_subsidies }
+						add_to_array = { global.laws_economics_drilling_subsidies_stance_array = token:law_drilling_high_subsidies }
+						set_variable = { global.desc@token:law_drilling_high_subsidies = token:law_drilling_high_subsidies_desc }
+						set_variable = { global.effect@token:law_drilling_high_subsidies = token:law_drilling_high_subsidies_effect }
+
+				add_to_array = { global.law_categories_array = token:law_utilities_subsidies_category }
+					add_to_array = { global.laws_economics_utilities_subsidies_array = token:law_utilities_none_subsidies }
+						add_to_array = { global.laws_economics_utilities_subsidies_stance_array = token:law_utilities_none_subsidies }
+						add_to_array = { global.laws_economics_utilities_subsidies_stance_array = token:law_utilities_none_subsidies }
+						add_to_array = { global.laws_economics_utilities_subsidies_stance_array = token:law_utilities_none_subsidies }
+						add_to_array = { global.laws_economics_utilities_subsidies_stance_array = token:law_utilities_none_subsidies }
+						set_variable = { global.desc@token:law_utilities_none_subsidies = token:law_utilities_none_subsidies_desc }
+						set_variable = { global.effect@token:law_utilities_none_subsidies = token:law_utilities_none_subsidies_effect }
+					add_to_array = { global.laws_economics_utilities_subsidies_array = token:law_utilities_low_subsidies }
+						add_to_array = { global.laws_economics_utilities_subsidies_stance_array = token:law_utilities_low_subsidies }
+						add_to_array = { global.laws_economics_utilities_subsidies_stance_array = token:law_utilities_low_subsidies }
+						add_to_array = { global.laws_economics_utilities_subsidies_stance_array = token:law_utilities_low_subsidies }
+						set_variable = { global.desc@token:law_utilities_low_subsidies = token:law_utilities_low_subsidies_desc }
+						set_variable = { global.effect@token:law_utilities_low_subsidies = token:law_utilities_low_subsidies_effect }
+					add_to_array = { global.laws_economics_utilities_subsidies_array = token:law_utilities_medium_subsidies }
+						add_to_array = { global.laws_economics_utilities_subsidies_stance_array = token:law_utilities_medium_subsidies }
+						add_to_array = { global.laws_economics_utilities_subsidies_stance_array = token:law_utilities_medium_subsidies }
+						set_variable = { global.desc@token:law_utilities_medium_subsidies = token:law_utilities_medium_subsidies_desc }
+						set_variable = { global.effect@token:law_utilities_medium_subsidies = token:law_utilities_medium_subsidies_effect }
+					add_to_array = { global.laws_economics_utilities_subsidies_array = token:law_utilities_high_subsidies }
+						add_to_array = { global.laws_economics_utilities_subsidies_stance_array = token:law_utilities_high_subsidies }
+						set_variable = { global.desc@token:law_utilities_high_subsidies = token:law_utilities_high_subsidies_desc }
+						set_variable = { global.effect@token:law_utilities_high_subsidies = token:law_utilities_high_subsidies_effect }
+
+				add_to_array = { global.law_categories_array = token:law_clean_energy_subsidies_category }
+					add_to_array = { global.laws_economics_clean_energy_subsidies_array = token:law_clean_energy_none_subsidies }
+						add_to_array = { global.laws_economics_clean_energy_subsidies_stance_array = token:law_clean_energy_none_subsidies }
+						add_to_array = { global.laws_economics_clean_energy_subsidies_stance_array = token:law_clean_energy_none_subsidies }
+						add_to_array = { global.laws_economics_clean_energy_subsidies_stance_array = token:law_clean_energy_none_subsidies }
+						add_to_array = { global.laws_economics_clean_energy_subsidies_stance_array = token:law_clean_energy_none_subsidies }
+						set_variable = { global.desc@token:law_clean_energy_none_subsidies = token:law_clean_energy_none_subsidies_desc }
+						set_variable = { global.effect@token:law_clean_energy_none_subsidies = token:law_clean_energy_none_subsidies_effect }
+					add_to_array = { global.laws_economics_clean_energy_subsidies_array = token:law_clean_energy_low_subsidies }
+						add_to_array = { global.laws_economics_clean_energy_subsidies_stance_array = token:law_clean_energy_low_subsidies }
+						add_to_array = { global.laws_economics_clean_energy_subsidies_stance_array = token:law_clean_energy_low_subsidies }
+						add_to_array = { global.laws_economics_clean_energy_subsidies_stance_array = token:law_clean_energy_low_subsidies }
+						set_variable = { global.desc@token:law_clean_energy_low_subsidies = token:law_clean_energy_low_subsidies_desc }
+						set_variable = { global.effect@token:law_clean_energy_low_subsidies = token:law_clean_energy_low_subsidies_effect }
+					add_to_array = { global.laws_economics_clean_energy_subsidies_array = token:law_clean_energy_medium_subsidies }
+						add_to_array = { global.laws_economics_clean_energy_subsidies_stance_array = token:law_clean_energy_medium_subsidies }
+						add_to_array = { global.laws_economics_clean_energy_subsidies_stance_array = token:law_clean_energy_medium_subsidies }
+						set_variable = { global.desc@token:law_clean_energy_medium_subsidies = token:law_clean_energy_medium_subsidies_desc }
+						set_variable = { global.effect@token:law_clean_energy_medium_subsidies = token:law_clean_energy_medium_subsidies_effect }
+					add_to_array = { global.laws_economics_clean_energy_subsidies_array = token:law_clean_energy_high_subsidies }
+						add_to_array = { global.laws_economics_clean_energy_subsidies_stance_array = token:law_clean_energy_high_subsidies }
+						set_variable = { global.desc@token:law_clean_energy_high_subsidies = token:law_clean_energy_high_subsidies_desc }
+						set_variable = { global.effect@token:law_clean_energy_high_subsidies = token:law_clean_energy_high_subsidies_effect }
+
+				add_to_array = { global.law_categories_array = token:law_light_industry_subsidies_category }
+					add_to_array = { global.laws_economics_light_industry_subsidies_array = token:law_light_industry_none_subsidies }
+						add_to_array = { global.laws_economics_light_industry_subsidies_stance_array = token:law_light_industry_none_subsidies }
+						add_to_array = { global.laws_economics_light_industry_subsidies_stance_array = token:law_light_industry_none_subsidies }
+						add_to_array = { global.laws_economics_light_industry_subsidies_stance_array = token:law_light_industry_none_subsidies }
+						add_to_array = { global.laws_economics_light_industry_subsidies_stance_array = token:law_light_industry_none_subsidies }
+						set_variable = { global.desc@token:law_light_industry_none_subsidies = token:law_light_industry_none_subsidies_desc }
+						set_variable = { global.effect@token:law_light_industry_none_subsidies = token:law_light_industry_none_subsidies_effect }
+					add_to_array = { global.laws_economics_light_industry_subsidies_array = token:law_light_industry_low_subsidies }
+						add_to_array = { global.laws_economics_light_industry_subsidies_stance_array = token:law_light_industry_low_subsidies }
+						add_to_array = { global.laws_economics_light_industry_subsidies_stance_array = token:law_light_industry_low_subsidies }
+						add_to_array = { global.laws_economics_light_industry_subsidies_stance_array = token:law_light_industry_low_subsidies }
+						set_variable = { global.desc@token:law_light_industry_low_subsidies = token:law_light_industry_low_subsidies_desc }
+						set_variable = { global.effect@token:law_light_industry_low_subsidies = token:law_light_industry_low_subsidies_effect }
+					add_to_array = { global.laws_economics_light_industry_subsidies_array = token:law_light_industry_medium_subsidies }
+						add_to_array = { global.laws_economics_light_industry_subsidies_stance_array = token:law_light_industry_medium_subsidies }
+						add_to_array = { global.laws_economics_light_industry_subsidies_stance_array = token:law_light_industry_medium_subsidies }
+						set_variable = { global.desc@token:law_light_industry_medium_subsidies = token:law_light_industry_medium_subsidies_desc }
+						set_variable = { global.effect@token:law_light_industry_medium_subsidies = token:law_light_industry_medium_subsidies_effect }
+					add_to_array = { global.laws_economics_light_industry_subsidies_array = token:law_light_industry_high_subsidies }
+						add_to_array = { global.laws_economics_light_industry_subsidies_stance_array = token:law_light_industry_high_subsidies }
+						set_variable = { global.desc@token:law_light_industry_high_subsidies = token:law_light_industry_high_subsidies_desc }
+						set_variable = { global.effect@token:law_light_industry_high_subsidies = token:law_light_industry_high_subsidies_effect }
+
+				add_to_array = { global.law_categories_array = token:law_heavy_industry_subsidies_category }
+					add_to_array = { global.laws_economics_heavy_industry_subsidies_array = token:law_heavy_industry_none_subsidies }
+						add_to_array = { global.laws_economics_heavy_industry_subsidies_stance_array = token:law_heavy_industry_none_subsidies }
+						add_to_array = { global.laws_economics_heavy_industry_subsidies_stance_array = token:law_heavy_industry_none_subsidies }
+						add_to_array = { global.laws_economics_heavy_industry_subsidies_stance_array = token:law_heavy_industry_none_subsidies }
+						add_to_array = { global.laws_economics_heavy_industry_subsidies_stance_array = token:law_heavy_industry_none_subsidies }
+						set_variable = { global.desc@token:law_heavy_industry_none_subsidies = token:law_heavy_industry_none_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_industry_none_subsidies = token:law_heavy_industry_none_subsidies_effect }
+					add_to_array = { global.laws_economics_heavy_industry_subsidies_array = token:law_heavy_industry_low_subsidies }
+						add_to_array = { global.laws_economics_heavy_industry_subsidies_stance_array = token:law_heavy_industry_low_subsidies }
+						add_to_array = { global.laws_economics_heavy_industry_subsidies_stance_array = token:law_heavy_industry_low_subsidies }
+						add_to_array = { global.laws_economics_heavy_industry_subsidies_stance_array = token:law_heavy_industry_low_subsidies }
+						set_variable = { global.desc@token:law_heavy_industry_low_subsidies = token:law_heavy_industry_low_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_industry_low_subsidies = token:law_heavy_industry_low_subsidies_effect }
+					add_to_array = { global.laws_economics_heavy_industry_subsidies_array = token:law_heavy_industry_medium_subsidies }
+						add_to_array = { global.laws_economics_heavy_industry_subsidies_stance_array = token:law_heavy_industry_medium_subsidies }
+						add_to_array = { global.laws_economics_heavy_industry_subsidies_stance_array = token:law_heavy_industry_medium_subsidies }
+						set_variable = { global.desc@token:law_heavy_industry_medium_subsidies = token:law_heavy_industry_medium_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_industry_medium_subsidies = token:law_heavy_industry_medium_subsidies_effect }
+					add_to_array = { global.laws_economics_heavy_industry_subsidies_array = token:law_heavy_industry_high_subsidies }
+						add_to_array = { global.laws_economics_heavy_industry_subsidies_stance_array = token:law_heavy_industry_high_subsidies }
+						set_variable = { global.desc@token:law_heavy_industry_high_subsidies = token:law_heavy_industry_high_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_industry_high_subsidies = token:law_heavy_industry_high_subsidies_effect }
+
+				add_to_array = { global.law_categories_array = token:law_construction_subsidies_category }
+					add_to_array = { global.laws_economics_construction_subsidies_array = token:law_heavy_construction_none_subsidies }
+						add_to_array = { global.laws_economics_construction_subsidies_stance_array = token:law_heavy_construction_none_subsidies }
+						add_to_array = { global.laws_economics_construction_subsidies_stance_array = token:law_heavy_construction_none_subsidies }
+						add_to_array = { global.laws_economics_construction_subsidies_stance_array = token:law_heavy_construction_none_subsidies }
+						add_to_array = { global.laws_economics_construction_subsidies_stance_array = token:law_heavy_construction_none_subsidies }
+						set_variable = { global.desc@token:law_heavy_construction_none_subsidies = token:law_heavy_construction_none_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_construction_none_subsidies = token:law_heavy_construction_none_subsidies_effect }
+					add_to_array = { global.laws_economics_construction_subsidies_array = token:law_heavy_construction_low_subsidies }
+						add_to_array = { global.laws_economics_construction_subsidies_stance_array = token:law_heavy_construction_low_subsidies }
+						add_to_array = { global.laws_economics_construction_subsidies_stance_array = token:law_heavy_construction_low_subsidies }
+						add_to_array = { global.laws_economics_construction_subsidies_stance_array = token:law_heavy_construction_low_subsidies }
+						set_variable = { global.desc@token:law_heavy_construction_low_subsidies = token:law_heavy_construction_low_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_construction_low_subsidies = token:law_heavy_construction_low_subsidies_effect }
+					add_to_array = { global.laws_economics_construction_subsidies_array = token:law_heavy_construction_medium_subsidies }
+						add_to_array = { global.laws_economics_construction_subsidies_stance_array = token:law_heavy_construction_medium_subsidies }
+						add_to_array = { global.laws_economics_construction_subsidies_stance_array = token:law_heavy_construction_medium_subsidies }
+						set_variable = { global.desc@token:law_heavy_construction_medium_subsidies = token:law_heavy_construction_medium_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_construction_medium_subsidies = token:law_heavy_construction_medium_subsidies_effect }
+					add_to_array = { global.laws_economics_construction_subsidies_array = token:law_heavy_construction_high_subsidies }
+						add_to_array = { global.laws_economics_construction_subsidies_stance_array = token:law_heavy_construction_high_subsidies }
+						set_variable = { global.desc@token:law_heavy_construction_high_subsidies = token:law_heavy_construction_high_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_construction_high_subsidies = token:law_heavy_construction_high_subsidies_effect }
+
+				add_to_array = { global.law_categories_array = token:law_infrastructure_subsidies_category }
+					add_to_array = { global.laws_economics_infrastructure_subsidies_array = token:law_heavy_infrastructure_none_subsidies }
+						add_to_array = { global.laws_economics_infrastructure_subsidies_stance_array = token:law_heavy_infrastructure_none_subsidies }
+						add_to_array = { global.laws_economics_infrastructure_subsidies_stance_array = token:law_heavy_infrastructure_none_subsidies }
+						add_to_array = { global.laws_economics_infrastructure_subsidies_stance_array = token:law_heavy_infrastructure_none_subsidies }
+						add_to_array = { global.laws_economics_infrastructure_subsidies_stance_array = token:law_heavy_infrastructure_none_subsidies }
+						set_variable = { global.desc@token:law_heavy_infrastructure_none_subsidies = token:law_heavy_infrastructure_none_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_infrastructure_none_subsidies = token:law_heavy_infrastructure_none_subsidies_effect }
+					add_to_array = { global.laws_economics_infrastructure_subsidies_array = token:law_heavy_infrastructure_low_subsidies }
+						add_to_array = { global.laws_economics_infrastructure_subsidies_stance_array = token:law_heavy_infrastructure_low_subsidies }
+						add_to_array = { global.laws_economics_infrastructure_subsidies_stance_array = token:law_heavy_infrastructure_low_subsidies }
+						add_to_array = { global.laws_economics_infrastructure_subsidies_stance_array = token:law_heavy_infrastructure_low_subsidies }
+						set_variable = { global.desc@token:law_heavy_infrastructure_low_subsidies = token:law_heavy_infrastructure_low_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_infrastructure_low_subsidies = token:law_heavy_infrastructure_low_subsidies_effect }
+					add_to_array = { global.laws_economics_infrastructure_subsidies_array = token:law_heavy_infrastructure_medium_subsidies }
+						add_to_array = { global.laws_economics_infrastructure_subsidies_stance_array = token:law_heavy_infrastructure_medium_subsidies }
+						add_to_array = { global.laws_economics_infrastructure_subsidies_stance_array = token:law_heavy_infrastructure_medium_subsidies }
+						set_variable = { global.desc@token:law_heavy_infrastructure_medium_subsidies = token:law_heavy_infrastructure_medium_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_infrastructure_medium_subsidies = token:law_heavy_infrastructure_medium_subsidies_effect }
+					add_to_array = { global.laws_economics_infrastructure_subsidies_array = token:law_heavy_infrastructure_high_subsidies }
+						add_to_array = { global.laws_economics_infrastructure_subsidies_stance_array = token:law_heavy_infrastructure_high_subsidies }
+						set_variable = { global.desc@token:law_heavy_infrastructure_high_subsidies = token:law_heavy_infrastructure_high_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_infrastructure_high_subsidies = token:law_heavy_infrastructure_high_subsidies_effect }
+
+				add_to_array = { global.law_categories_array = token:law_services_subsidies_category }
+					add_to_array = { global.laws_economics_services_subsidies_array = token:law_heavy_services_none_subsidies }
+						add_to_array = { global.laws_economics_services_subsidies_stance_array = token:law_heavy_services_none_subsidies }
+						add_to_array = { global.laws_economics_services_subsidies_stance_array = token:law_heavy_services_none_subsidies }
+						add_to_array = { global.laws_economics_services_subsidies_stance_array = token:law_heavy_services_none_subsidies }
+						add_to_array = { global.laws_economics_services_subsidies_stance_array = token:law_heavy_services_none_subsidies }
+						set_variable = { global.desc@token:law_heavy_services_none_subsidies = token:law_heavy_services_none_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_services_none_subsidies = token:law_heavy_services_none_subsidies_effect }
+					add_to_array = { global.laws_economics_services_subsidies_array = token:law_heavy_services_low_subsidies }
+						add_to_array = { global.laws_economics_services_subsidies_stance_array = token:law_heavy_services_low_subsidies }
+						add_to_array = { global.laws_economics_services_subsidies_stance_array = token:law_heavy_services_low_subsidies }
+						add_to_array = { global.laws_economics_services_subsidies_stance_array = token:law_heavy_services_low_subsidies }
+						set_variable = { global.desc@token:law_heavy_services_low_subsidies = token:law_heavy_services_low_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_services_low_subsidies = token:law_heavy_services_low_subsidies_effect }
+					add_to_array = { global.laws_economics_services_subsidies_array = token:law_heavy_services_medium_subsidies }
+						add_to_array = { global.laws_economics_services_subsidies_stance_array = token:law_heavy_services_medium_subsidies }
+						add_to_array = { global.laws_economics_services_subsidies_stance_array = token:law_heavy_services_medium_subsidies }
+						set_variable = { global.desc@token:law_heavy_services_medium_subsidies = token:law_heavy_services_medium_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_services_medium_subsidies = token:law_heavy_services_medium_subsidies_effect }
+					add_to_array = { global.laws_economics_services_subsidies_array = token:law_heavy_services_high_subsidies }
+						add_to_array = { global.laws_economics_services_subsidies_stance_array = token:law_heavy_services_high_subsidies }
+						set_variable = { global.desc@token:law_heavy_services_high_subsidies = token:law_heavy_services_high_subsidies_desc }
+						set_variable = { global.effect@token:law_heavy_services_high_subsidies = token:law_heavy_services_high_subsidies_effect }
+
+
+			# Demographics
+				# Family Planning
+					add_to_array = { global.laws_demographics_family_planning_array = token:law_family_planning_one_child }
+					add_to_array = { global.laws_demographics_family_planning_array = token:law_family_planning_two_child }
+					add_to_array = { global.laws_demographics_family_planning_array = token:law_family_planning_legal_abortions }
+					add_to_array = { global.laws_demographics_family_planning_array = token:law_family_planning_abortions_banned }
+					add_to_array = { global.laws_demographics_family_planning_array = token:law_family_planning_encouraged_growth }
+					# add_to_array = { global. = token: }
+					# add_to_array = { global. = token: }
+		#
+		# Coalition Priorities
+			# Communist
+				add_to_array = { global.govt_coalition_ideology_communist_array = token:ideology_socialist }
+				add_to_array = { global.govt_coalition_ideology_communist_array = token:ideology_stratocratic }
+				add_to_array = { global.govt_coalition_ideology_communist_array = token:ideology_liberal }
+				add_to_array = { global.govt_coalition_ideology_communist_array = token:ideology_conservative }
+				add_to_array = { global.govt_coalition_ideology_communist_array = token:ideology_agrarian }
+				add_to_array = { global.govt_coalition_ideology_communist_array = token:ideology_reactionary }
+				add_to_array = { global.govt_coalition_ideology_communist_array = token:ideology_fascist }
+			#
+			# Socialist
+				add_to_array = { global.govt_coalition_ideology_socialist_array = token:ideology_liberal }
+				add_to_array = { global.govt_coalition_ideology_socialist_array = token:ideology_communist }
+				add_to_array = { global.govt_coalition_ideology_socialist_array = token:ideology_agrarian }
+				add_to_array = { global.govt_coalition_ideology_socialist_array = token:ideology_stratocratic }
+				add_to_array = { global.govt_coalition_ideology_socialist_array = token:ideology_conservative }
+				add_to_array = { global.govt_coalition_ideology_socialist_array = token:ideology_reactionary }
+				add_to_array = { global.govt_coalition_ideology_socialist_array = token:ideology_fascist }
+			#
+			# Liberal
+				add_to_array = { global.govt_coalition_ideology_liberal_array = token:ideology_agrarian }
+				add_to_array = { global.govt_coalition_ideology_liberal_array = token:ideology_socialist }
+				add_to_array = { global.govt_coalition_ideology_liberal_array = token:ideology_conservative }
+				add_to_array = { global.govt_coalition_ideology_liberal_array = token:ideology_communist }
+				add_to_array = { global.govt_coalition_ideology_liberal_array = token:ideology_reactionary }
+				add_to_array = { global.govt_coalition_ideology_liberal_array = token:ideology_stratocratic }
+				add_to_array = { global.govt_coalition_ideology_liberal_array = token:ideology_fascist }
+				add_to_array = { global.govt_coalition_ideology_liberal_array = token:ideology_stratocratic }
+			#
+			# Libertarian
+				add_to_array = { global.govt_coalition_ideology_agrarian_array = token:ideology_conservative }
+				add_to_array = { global.govt_coalition_ideology_agrarian_array = token:ideology_liberal }
+				add_to_array = { global.govt_coalition_ideology_agrarian_array = token:ideology_socialist }
+				add_to_array = { global.govt_coalition_ideology_agrarian_array = token:ideology_reactionary }
+				add_to_array = { global.govt_coalition_ideology_agrarian_array = token:ideology_communist }
+				add_to_array = { global.govt_coalition_ideology_agrarian_array = token:ideology_fascist }
+				add_to_array = { global.govt_coalition_ideology_agrarian_array = token:ideology_stratocratic }
+			#
+			# Conservative
+				add_to_array = { global.govt_coalition_ideology_conservative_array = token:ideology_agrarian }
+				add_to_array = { global.govt_coalition_ideology_conservative_array = token:ideology_reactionary }
+				add_to_array = { global.govt_coalition_ideology_conservative_array = token:ideology_liberal }
+				add_to_array = { global.govt_coalition_ideology_conservative_array = token:ideology_fascist }
+				add_to_array = { global.govt_coalition_ideology_conservative_array = token:ideology_socialist }
+				add_to_array = { global.govt_coalition_ideology_conservative_array = token:ideology_stratocratic }
+				add_to_array = { global.govt_coalition_ideology_conservative_array = token:ideology_communist }
+			#
+			# Reactionary
+				add_to_array = { global.govt_coalition_ideology_reactionary_array = token:ideology_conservative }
+				add_to_array = { global.govt_coalition_ideology_reactionary_array = token:ideology_fascist }
+				add_to_array = { global.govt_coalition_ideology_reactionary_array = token:ideology_agrarian }
+				add_to_array = { global.govt_coalition_ideology_reactionary_array = token:ideology_stratocratic }
+				add_to_array = { global.govt_coalition_ideology_reactionary_array = token:ideology_liberal }
+				add_to_array = { global.govt_coalition_ideology_reactionary_array = token:ideology_socialist }
+				add_to_array = { global.govt_coalition_ideology_reactionary_array = token:ideology_communist }
+			#
+			# Fascist
+				add_to_array = { global.govt_coalition_ideology_fascist_array = token:ideology_reactionary }
+				add_to_array = { global.govt_coalition_ideology_fascist_array = token:ideology_stratocratic }
+				add_to_array = { global.govt_coalition_ideology_fascist_array = token:ideology_conservative }
+				add_to_array = { global.govt_coalition_ideology_fascist_array = token:ideology_liberal }
+				add_to_array = { global.govt_coalition_ideology_fascist_array = token:ideology_agrarian }
+				add_to_array = { global.govt_coalition_ideology_fascist_array = token:ideology_socialist }
+				add_to_array = { global.govt_coalition_ideology_fascist_array = token:ideology_communist }
+			#
+			# Stratocratic
+				add_to_array = { global.govt_coalition_ideology_stratocratic_array = token:ideology_fascist }
+				add_to_array = { global.govt_coalition_ideology_stratocratic_array = token:ideology_communist }
+				add_to_array = { global.govt_coalition_ideology_stratocratic_array = token:ideology_reactionary }
+				add_to_array = { global.govt_coalition_ideology_stratocratic_array = token:ideology_socialist }
+				add_to_array = { global.govt_coalition_ideology_stratocratic_array = token:ideology_conservative }
+				add_to_array = { global.govt_coalition_ideology_stratocratic_array = token:ideology_liberal }
+				add_to_array = { global.govt_coalition_ideology_stratocratic_array = token:ideology_agrarian }
+			#
+		#
+	}
+	laws_country_startup = {
+		# Economic
+			# Economy
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								has_idea = law_economy_planned
+								has_idea = law_economy_state_capitalism
+								has_idea = law_economy_intervention
+								has_idea = law_economy_regulation
+								has_idea = law_economy_lasseiz_faire
+							}
+						}
+					}
+					if = {
+						limit = { check_variable = { govt_coalition_leader = token:ideology_communist } }
+						add_ideas = law_economy_planned
+					}
+					else_if = {
+						limit = {
+							OR = {
+								check_variable = { govt_coalition_leader = token:ideology_socialist }
+								check_variable = { govt_coalition_leader = token:ideology_fascist }
+								check_variable = { govt_coalition_leader = token:ideology_stratocratic }
+							}
+						}
+						random_list = {
+							3 = { add_ideas = law_economy_intervention }
+							2 = { add_ideas = law_economy_regulation }
+							5 = { add_ideas = law_economy_state_capitalism }
+						}
+					}
+					else_if = {
+						limit = { check_variable = { pops_sol < 25 } }
+						random_list = {
+							8 = { add_ideas = law_economy_lasseiz_faire }
+							2 = { add_ideas = law_economy_regulation }
+						}
+					}
+					else_if = {
+						limit = { check_variable = { pops_sol < 35 } }
+						random_list = {
+							3 = { add_ideas = law_economy_intervention }
+							5 = { add_ideas = law_economy_regulation }
+							2 = { add_ideas = law_economy_lasseiz_faire }
+						}
+					}
+					else = {
+						random_list = {
+							6 = { add_ideas = law_economy_intervention }
+							4 = { add_ideas = law_economy_regulation }
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { has_idea = law_economy_planned }
+						set_variable = { laws_economics_economy = token:law_economy_planned }
+					}
+					else_if = {
+						limit = { has_idea = law_economy_state_capitalism }
+						set_variable = { laws_economics_economy = token:law_economy_state_capitalism }
+					}
+					else_if = {
+						limit = { has_idea = law_economy_intervention }
+						set_variable = { laws_economics_economy = token:law_economy_intervention }
+					}
+					else_if = {
+						limit = { has_idea = law_economy_regulation }
+						set_variable = { laws_economics_economy = token:law_economy_regulation }
+					}
+					else = {
+						#limit = { has_idea = law_economy_lasseiz_faire }
+						set_variable = { laws_economics_economy = token:law_economy_lasseiz_faire }
+					}
+				}
+			#
+			# Foreign Investment
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								has_idea = law_foreign_investment_banned
+								has_idea = law_foreign_investment_limited
+								has_idea = law_foreign_investment_allowed
+								has_idea = law_foreign_investment_guaranteed
+							}
+						}
+					}
+					if = {
+						limit = {
+							OR = {
+								check_variable = { laws_economics_economy = token:law_economy_planned }
+								check_variable = { laws_economics_economy = token:law_economy_state_capitalism }
+							}
+						}
+						random_list = {
+							4 = { add_ideas = law_foreign_investment_limited }
+							6 = { add_ideas = law_foreign_investment_banned }
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								OR = {
+									check_variable = { num_of_factories > 200 }
+									is_subject = yes
+								}
+							}
+							add_ideas = law_foreign_investment_limited
+						}
+						else = {
+							random_list = {
+								3 = { add_ideas = law_foreign_investment_allowed }
+								7 = { add_ideas = law_foreign_investment_limited }
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { has_idea = law_foreign_investment_banned }
+						set_variable = { laws_economics_foreign_investment = token:law_foreign_investment_banned }
+					}
+					else_if = {
+						limit = { has_idea = law_foreign_investment_limited }
+						set_variable = { laws_economics_foreign_investment = token:law_foreign_investment_limited }
+					}
+					else_if = {
+						limit = { has_idea = law_foreign_investment_allowed }
+						set_variable = { laws_economics_foreign_investment = token:law_foreign_investment_allowed }
+					}
+					else = {
+						#limit = { has_idea = law_foreign_investment_guaranteed }
+						set_variable = { laws_economics_foreign_investment = token:law_foreign_investment_guaranteed }
+					}
+				}
+			#
+			# Consumer Rights
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								has_idea = law_consumer_rights_none
+								has_idea = law_consumer_rights_minimal
+								has_idea = law_consumer_rights_limited
+								has_idea = law_consumer_rights_decent
+								has_idea = law_consumer_rights_excellent
+							}
+						}
+					}
+					if = {
+						limit = {
+							OR = {
+								has_idea = law_economy_planned
+								has_idea = law_economy_lasseiz_faire
+							}
+						}
+						add_ideas = law_consumer_rights_none
+					}
+					else = {
+						if = {
+							limit = { check_variable = { pops_sol > 45 } }
+							add_ideas = law_consumer_rights_decent
+						}
+						else_if = {
+							limit = {
+								OR = {
+									check_variable = { govt_coalition_leader = token:ideology_communist }
+									check_variable = { govt_coalition_leader = token:ideology_fascist }
+									check_variable = { govt_coalition_leader = token:ideology_stratocratic }
+								}
+							}
+							add_ideas = law_consumer_rights_minimal
+						}
+						else_if = {
+							limit = {
+								OR = {
+									num_of_factories > 400
+									check_variable = { pops_sol > 35 }
+								}
+							}
+							add_ideas = law_consumer_rights_limited
+						}
+						else_if = {
+							limit = {
+								OR = {
+									num_of_factories > 150
+									check_variable = { pops_sol > 25 }
+									check_variable = { govt_coalition_leader = token:ideology_liberal }
+								}
+							}
+							add_ideas = law_consumer_rights_minimal
+						}
+						else = {
+							add_ideas = law_consumer_rights_none
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { has_idea = law_consumer_rights_none }
+						set_variable = { laws_economics_consumer_rights = token:law_consumer_rights_none }
+					}
+					else_if = {
+						limit = { has_idea = law_consumer_rights_minimal }
+						set_variable = { laws_economics_consumer_rights = token:law_consumer_rights_minimal }
+					}
+					else_if = {
+						limit = { has_idea = law_consumer_rights_limited }
+						set_variable = { laws_economics_consumer_rights = token:law_consumer_rights_limited }
+					}
+					else_if = {
+						limit = { has_idea = law_consumer_rights_decent }
+						set_variable = { laws_economics_consumer_rights = token:law_consumer_rights_decent }
+					}
+					else = {
+						#limit = { has_idea = law_consumer_rights_excellent }
+						set_variable = { laws_economics_consumer_rights = token:law_consumer_rights_excellent }
+					}
+				}
+			#
+		#
+	}
+#
+# Stance Calculation
+	laws_stances_constants = {
+		#Economics
+			#Economy
+				set_variable = { global.slaves_stance@token:law_economy_category = 2 }
+				set_variable = { global.laborers_stance@token:law_economy_category = 4 }
+				set_variable = { global.workers_stance@token:law_economy_category = 6 }
+				set_variable = { global.professionals_stance@token:law_economy_category = 8 }
+				set_variable = { global.elites_stance@token:law_economy_category = 9 }
+				set_variable = { global.bureaucrats_stance@token:law_economy_category = 6 }
+				set_variable = { global.soldiers_stance@token:law_economy_category = 7 }
+
+	}
+	laws_stances_country_calculation = {
+		every_core_state = {
+			laws_stance_state_calculation = yes
+		}
+	}
+	laws_stance_state_calculation = {
+		for_each_loop = {
+			array = global.law_categories_array
+			value = vv
+			log = "[?vv.GetTokenLocalizedKey]"
+			set_temp_variable = { weighted_pop_stance = 0 }
+			# log = "[?global.slaves_stance@var:vv]"
+			# log = "[?slaves_percentage]"
+			set_temp_variable = { weighted_slaves_stance = global.slaves_stance@var:vv }
+			multiply_temp_variable = { weighted_slaves_stance = slaves_percentage }
+			add_to_temp_variable = { weighted_pop_stance = weighted_slaves_stance }
+			log = "[?global.laborers_stance@var:vv]"
+			log = "[?laborers_percentage]"
+			set_temp_variable = { weighted_laborers_stance = global.laborers_stance@var:vv }
+			multiply_temp_variable = { weighted_laborers_stance = laborers_percentage }
+			add_to_temp_variable = { weighted_pop_stance = weighted_laborers_stance }
+			set_temp_variable = { weighted_workers_stance = global.workers_stance@var:vv }
+			multiply_temp_variable = { weighted_workers_stance = workers_percentage }
+			add_to_temp_variable = { weighted_pop_stance = weighted_workers_stance }
+			set_temp_variable = { weighted_professionals_stance = global.professionals_stance@var:vv }
+			multiply_temp_variable = { weighted_professionals_stance = professionals_percentage }
+			add_to_temp_variable = { weighted_pop_stance = weighted_professionals_stance }
+			set_temp_variable = { weighted_elites_stance = global.elites_stance@var:vv }
+			multiply_temp_variable = { weighted_elites_stance = elites_percentage }
+			add_to_temp_variable = { weighted_pop_stance = weighted_elites_stance }
+			set_temp_variable = { weighted_bureaucrats_stance = global.bureaucrats_stance@var:vv }
+			multiply_temp_variable = { weighted_bureaucrats_stance = bureaucrats_percentage }
+			add_to_temp_variable = { weighted_pop_stance = weighted_bureaucrats_stance }
+			set_temp_variable = { weighted_soldiers_stance = global.soldiers_stance@var:vv }
+			multiply_temp_variable = { weighted_soldiers_stance = soldiers_percentage }
+			add_to_temp_variable = { weighted_pop_stance = soldiers_soldiers_stance }
+			log = "[?weighted_pop_stance]"
+		}
+		set_temp_variable = { weighted_liberties_stance = 0 }
+		set_temp_variable = { weighted_society_stance = 0 }
+		set_temp_variable = { weighted_politics_stance = 0 }
+		set_temp_variable = { weighted_economics_stance = 0 }
+		for_each_loop = {
+			array = pops_religion_type
+			value = vv
+			set_temp_variable = { weighted_liberties_stance1 = global.liberties_stance@var:vv }
+			multiply_temp_variable = { weighted_liberties_stance1 = pops_religion_percentage@var:vv }
+			add_to_temp_variable = { weighted_liberties_stance = weighted_liberties_stance1 }
+
+			set_temp_variable = { weighted_society_stance1 = global.society_stance@var:vv }
+			multiply_temp_variable = { weighted_society_stance1 = pops_religion_percentage@var:vv }
+			add_to_temp_variable = { weighted_society_stance = weighted_society_stance1 }
+
+			set_temp_variable = { weighted_politics_stance1 = global.politics_stance@var:vv }
+			multiply_temp_variable = { weighted_politics_stance1 = pops_religion_percentage@var:vv }
+			add_to_temp_variable = { weighted_politics_stance = weighted_politics_stance1 }
+
+			set_temp_variable = { weighted_economics_stance1 = global.economics_stance@var:vv }
+			multiply_temp_variable = { weighted_economics_stance1 = pops_religion_percentage@var:vv }
+			add_to_temp_variable = { weighted_economics_stance = weighted_economics_stance1 }
+		}
+		for_each_loop = {
+			array = pops_culture_type
+			value = vv
+			set_temp_variable = { weighted_liberties_stance1 = global.liberties_stance@var:vv }
+			multiply_temp_variable = { weighted_liberties_stance1 = pops_religion_percentage@var:vv }
+			add_to_temp_variable = { weighted_liberties_stance = weighted_liberties_stance1 }
+
+			set_temp_variable = { weighted_society_stance1 = global.society_stance@var:vv }
+			multiply_temp_variable = { weighted_society_stance1 = pops_religion_percentage@var:vv }
+			add_to_temp_variable = { weighted_society_stance = weighted_society_stance1 }
+
+			set_temp_variable = { weighted_politics_stance1 = global.politics_stance@var:vv }
+			multiply_temp_variable = { weighted_politics_stance1 = pops_religion_percentage@var:vv }
+			add_to_temp_variable = { weighted_politics_stance = weighted_politics_stance1 }
+
+			set_temp_variable = { weighted_economics_stance1 = global.economics_stance@var:vv }
+			multiply_temp_variable = { weighted_economics_stance1 = pops_religion_percentage@var:vv }
+			add_to_temp_variable = { weighted_economics_stance = weighted_economics_stance1 }
+		}
+	}
+
+
+#
+# Pass Laws
+	# General
+	laws_debug_pass_bill = {
+		laws_change_subcategory_economy = yes
+		laws_change_subcategory_foreign_investment = yes
+		laws_change_subcategory_consumer_rights = yes
+		laws_change_subcategory_minimum_wage = yes
+		laws_change_subcategory_work_week = yes
+		laws_change_subcategory_safety_regulations = yes
+		laws_change_subcategory_financial_regulations = yes
+		laws_change_subcategory_business_regulations = yes
+		laws_change_subcategory_pollution_regulations = yes
+		laws_change_subcategory_small_business_grants = yes
+		laws_change_subcategory_agricultural_subsidies = yes
+		laws_change_subcategory_mining_subsidies = yes
+		laws_change_subcategory_drilling_subsidies = yes
+		laws_change_subcategory_utilities_subsidies = yes
+		laws_change_subcategory_clean_energy_subsidies = yes
+		laws_change_subcategory_light_industry_subsidies = yes
+		laws_change_subcategory_heavy_industry_subsidies = yes
+		laws_change_subcategory_construction_subsidies = yes
+		laws_change_subcategory_infrastructure_subsidies = yes
+		laws_change_subcategory_services_subsidies = yes
+	}
+	# Economics
+		laws_change_subcategory_economy = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_economy_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_economy
+						add_idea = var:laws_economics_economy_proposed
+					}
+					clear_variable = laws_economics_economy_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_foreign_investment = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_foreign_investment_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_foreign_investment
+						add_idea = var:laws_economics_foreign_investment_proposed
+					}
+					clear_variable = laws_economics_foreign_investment_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_consumer_rights = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_consumer_rights_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_consumer_rights
+						add_idea = var:laws_economics_consumer_rights_proposed
+					}
+					clear_variable = laws_economics_consumer_rights_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_minimum_wage = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_minimum_wage_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_minimum_wage
+						add_idea = var:laws_economics_minimum_wage_proposed
+					}
+					clear_variable = laws_economics_minimum_wage_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_work_week = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_work_week_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_work_week
+						add_idea = var:laws_economics_work_week_proposed
+					}
+					clear_variable = laws_economics_work_week_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_safety_regulations = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_safety_regulations_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_safety_regulations
+						add_idea = var:laws_economics_safety_regulations_proposed
+					}
+					clear_variable = laws_economics_safety_regulations_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_financial_regulations = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_financial_regulations_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_financial_regulations
+						add_idea = var:laws_economics_financial_regulations_proposed
+					}
+					clear_variable = laws_economics_financial_regulations_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_business_regulations = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_business_regulations_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_business_regulations
+						add_idea = var:laws_economics_business_regulations_proposed
+					}
+					clear_variable = laws_economics_business_regulations_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_pollution_regulations = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_pollution_regulations_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_pollution_regulations
+						add_idea = var:laws_economics_pollution_regulations_proposed
+					}
+					clear_variable = laws_economics_pollution_regulations_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_small_business_grants = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_small_business_grants_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_small_business_grants
+						add_idea = var:laws_economics_small_business_grants_proposed
+					}
+					clear_variable = laws_economics_small_business_grants_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_agricultural_subsidies = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_agricultural_subsidies_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_agricultural_subsidies
+						add_idea = var:laws_economics_agricultural_subsidies_proposed
+					}
+					clear_variable = laws_economics_agricultural_subsidies_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_mining_subsidies = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_mining_subsidies_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_mining_subsidies
+						add_idea = var:laws_economics_mining_subsidies_proposed
+					}
+					clear_variable = laws_economics_mining_subsidies_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_drilling_subsidies = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_drilling_subsidies_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_drilling_subsidies
+						add_idea = var:laws_economics_drilling_subsidies_proposed
+					}
+					clear_variable = laws_economics_drilling_subsidies_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_utilities_subsidies = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_utilities_subsidies_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_utilities_subsidies
+						add_idea = var:laws_economics_utilities_subsidies_proposed
+					}
+					clear_variable = laws_economics_utilities_subsidies_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_clean_energy_subsidies = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_clean_energy_subsidies_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_clean_energy_subsidies
+						add_idea = var:laws_economics_clean_energy_subsidies_proposed
+					}
+					clear_variable = laws_economics_clean_energy_subsidies_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_light_industry_subsidies = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_light_industry_subsidies_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_light_industry_subsidies
+						add_idea = var:laws_economics_light_industry_subsidies_proposed
+					}
+					clear_variable = laws_economics_light_industry_subsidies_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_heavy_industry_subsidies = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_heavy_industry_subsidies_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_heavy_industry_subsidies
+						add_idea = var:laws_economics_heavy_industry_subsidies_proposed
+					}
+					clear_variable = laws_economics_heavy_industry_subsidies_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_construction_subsidies = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_construction_subsidies_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_construction_subsidies
+						add_idea = var:laws_economics_construction_subsidies_proposed
+					}
+					clear_variable = laws_economics_construction_subsidies_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_infrastructure_subsidies = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_infrastructure_subsidies_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_infrastructure_subsidies
+						add_idea = var:laws_economics_infrastructure_subsidies_proposed
+					}
+					clear_variable = laws_economics_infrastructure_subsidies_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+		laws_change_subcategory_services_subsidies = {
+			ROOT = {
+				if = {
+					limit = { has_variable = laws_economics_services_subsidies_proposed }
+					swap_ideas = {
+						remove_idea = var:laws_economics_services_subsidies
+						add_idea = var:laws_economics_services_subsidies_proposed
+					}
+					clear_variable = laws_economics_services_subsidies_proposed
+				}
+				else = {
+					custom_effect_tooltip = laws_change_sublaw_no_change_tt
+				}
+			}
+		}
+	#
+#

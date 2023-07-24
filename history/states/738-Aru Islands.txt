@@ -1,0 +1,30 @@
+state={
+	id=738
+	name="STATE_738"
+	manpower=36146
+
+	state_category="small_island"
+
+	history={
+		owner = INS
+		add_core_of = INS
+		buildings = {
+			infrastructure = 1
+			4579 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_tropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+	}
+
+	provinces={
+		4579 
+	}
+
+	local_supplies=0.0 
+}

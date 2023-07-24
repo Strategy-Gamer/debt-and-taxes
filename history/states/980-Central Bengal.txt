@@ -1,0 +1,28 @@
+state={
+	id=980
+	name="STATE_980"
+	provinces={
+		2843 4162 4616 7078 7124 7662 9935 10035 10389 10443 11911 
+	}
+	history={
+		owner=RAJ
+		add_core_of = PAK
+		add_core_of = RAJ
+		buildings = {
+			infrastructure = 3
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+	manpower=13432261
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,901 @@
+###########################################
+### D&T's scripted effects for budgets ####
+###########################################
+
+# * are non-adjustable in the budget screen
+
+# REVENUE LIST
+#
+# Income Taxes:
+#  Upper
+#  Middle
+#  Lower
+#
+# Payroll Tax
+# Property Tax
+#
+# Corporate Tax
+# Capital Gains Tax
+# Wealth Tax
+#
+# Sales Tax
+# Value Added Tax
+# Luxury Tax
+# Tariffs
+#
+# Public Enterprises*
+# Diplomacy*
+
+# EXPENDITURE LIST
+#
+# Bureaucracy*
+# Public Employee Salaries
+#
+# Military:
+#  Operations
+#  Orders* (Buying Small Arms & such)
+#  Contracts* (Military Factories & Naval Dockyards)
+#  Maintenance & Repair
+#  Personnel
+#  Benefits*
+#
+# Public Services:
+#  Law & Order*
+#  Public Education*
+#  Public Healthcare*
+#  Public Transport*
+#  Public Housing*
+#  
+# Regulatory Agencies
+# Intelligence Agency
+#
+# Social Programs:
+#  Family Benefits*
+#  Unemployment Benefits*
+#  State Pensions*
+#  Welfare*
+#
+# Subsidies:
+#  Import Subsidies
+#  Export Subsidies
+#  R&D Subsidies
+#  Industry-Specific Subsidies*
+#  Infrastructure Subsidies*
+#
+# Public Construction*
+# Public Enterprises*
+# Diplomacy*
+
+#Change Effects
+	change_upper_income_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { upper_income_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = upper_income_tax_change }
+			add_to_temp_variable = { percent_temp = upper_income_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { upper_income_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { upper_income_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	change_middle_income_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { middle_income_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = middle_income_tax_change }
+			add_to_temp_variable = { percent_temp = middle_income_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { middle_income_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { middle_income_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	change_lower_income_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { lower_income_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = lower_income_tax_change }
+			add_to_temp_variable = { percent_temp = lower_income_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { lower_income_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { lower_income_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	
+	change_payroll_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { payroll_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = payroll_tax_change }
+			add_to_temp_variable = { percent_temp = payroll_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { payroll_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { payroll_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	change_property_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { property_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = property_tax_change }
+			add_to_temp_variable = { percent_temp = property_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { property_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { property_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	
+	change_corporate_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { corporate_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = corporate_tax_change }
+			add_to_temp_variable = { percent_temp = corporate_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { corporate_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { corporate_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	change_capital_gains_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { capital_gains_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = capital_gains_tax_change }
+			add_to_temp_variable = { percent_temp = capital_gains_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { capital_gains_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { capital_gains_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	change_wealth_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { wealth_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = wealth_tax_change }
+			add_to_temp_variable = { percent_temp = wealth_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { wealth_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { wealth_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	
+	change_sales_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { sales_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = sales_tax_change }
+			add_to_temp_variable = { percent_temp = sales_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { sales_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { sales_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	change_value_added_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { value_added_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = value_added_tax_change }
+			add_to_temp_variable = { percent_temp = value_added_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { value_added_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { value_added_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	change_luxury_tax = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { luxury_tax_change = change_temp }
+
+			set_temp_variable = { percent_temp = luxury_tax_change }
+			add_to_temp_variable = { percent_temp = luxury_tax }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { luxury_tax_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { luxury_tax_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+	change_tariffs = {
+		#change_temp
+		#Only changes the "planned" variable. Does not change the actual tax variable itself
+
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = budget_proposed }
+			}
+
+			add_to_variable = { tariffs_change = change_temp }
+
+			set_temp_variable = { percent_temp = tariffs_change }
+			add_to_temp_variable = { percent_temp = tariffs }
+			if = {
+				limit = {
+					check_variable = { percent_temp > 1 }
+				}
+				subtract_from_temp_variable = { percent_temp = 1 }
+				subtract_from_variable = { tariffs_change = percent_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { percent_temp < 0 }
+				}
+				subtract_from_variable = { tariffs_change = percent_temp }
+			}
+
+			update_budget_plan = yes
+		}
+	}
+#
+
+#Update/Propose/implement
+	update_budget = {
+		#Revenue
+			set_variable = { upper_income_tax_revenue = 0 }
+			set_variable = { middle_income_tax_revenue = 0 }
+			set_variable = { lower_income_tax_revenue = 0 }
+			set_variable = { payroll_tax_revenue = 0 }
+			set_variable = { property_tax_revenue = 0 }
+			set_variable = { corporate_tax_revenue = 0 }
+			set_variable = { capital_gains_tax_revenue = 0 }
+			set_variable = { wealth_tax_revenue = 0 }
+			set_variable = { sales_tax_revenue = 0 }
+			set_variable = { value_added_tax_revenue = 0 }
+			set_variable = { luxury_tax_revenue = 0 }
+			#set_variable = { tariffs_revenue = 0 }
+
+			set_temp_variable = { pops_upper_earnings_temp = 0 }
+			set_temp_variable = { pops_middle_earnings_temp = 0 }
+			set_temp_variable = { pops_lower_earnings_temp = 0 }
+
+			every_controlled_state = {
+				#Individual Income Tax
+				set_temp_variable = { rev_temp = elites_earnings }
+				add_to_temp_variable = { pops_upper_earnings_temp = rev_temp }
+				multiply_temp_variable = { rev_temp = PREV.upper_income_tax }
+				add_to_variable = { PREV.upper_income_tax_revenue = rev_temp }
+				
+				set_temp_variable = { rev_temp = professionals_earnings }
+				add_to_temp_variable = { rev_temp = bureaucrats_earnings }
+				add_to_temp_variable = { rev_temp = workers_earnings }
+				add_to_temp_variable = { pops_middle_earnings_temp = rev_temp }
+				multiply_temp_variable = { rev_temp = PREV.middle_income_tax }
+				add_to_variable = { PREV.middle_income_tax_revenue = rev_temp }
+				
+				set_temp_variable = { rev_temp = laborers_earnings }
+				add_to_temp_variable = { rev_temp = peasants_earnings }
+				add_to_temp_variable = { rev_temp = soldiers_earnings }
+				add_to_temp_variable = { pops_lower_earnings_temp = rev_temp }
+				multiply_temp_variable = { rev_temp = PREV.lower_income_tax }
+				add_to_variable = { PREV.lower_income_tax_revenue = rev_temp }
+
+				#Payroll Tax
+				set_temp_variable = { rev_temp = pops_earnings }
+				subtract_from_temp_variable = { rev_temp = slaves_earnings }
+				multiply_temp_variable = { rev_temp = PREV.payroll_tax }
+				add_to_variable = { PREV.payroll_tax_revenue = rev_temp }
+
+				#Property Tax
+				set_temp_variable = { rev_temp = pops_housing_cost }
+				multiply_temp_variable = { rev_temp = PREV.property_tax }
+				add_to_variable = { PREV.property_tax_revenue = rev_temp }
+
+				#Corporate Tax
+				set_temp_variable = { rev_temp = investment_fund_earnings }
+				multiply_temp_variable = { rev_temp = PREV.corporate_tax }
+				add_to_variable = { PREV.corporate_tax_revenue = rev_temp }
+
+				#Capital Gains Tax
+				set_temp_variable = { rev_temp = investment_fund_earnings }
+				set_temp_variable = { kickbacks_temp = 1 }
+				subtract_from_temp_variable = { kickbacks_temp = global.investment_fund_kickbacks }
+				divide_temp_variable = { rev_temp = kickbacks_temp }
+				multiply_temp_variable = { rev_temp = global.investment_fund_kickbacks }
+				add_to_temp_variable = { rev_temp = investment_fund_spending_kickbacks }
+
+				multiply_temp_variable = { rev_temp = PREV.capital_gains_tax }
+				add_to_variable = { PREV.capital_gains_tax_revenue = rev_temp }
+
+				#Wealth Tax
+				set_temp_variable = { rev_temp = investment_fund }
+				multiply_temp_variable = { rev_temp = PREV.wealth_tax }
+				add_to_variable = { PREV.wealth_tax_revenue = rev_temp }
+
+				#Sales Tax
+				set_temp_variable = { rev_temp = pops_food_cost }
+				add_to_temp_variable = { rev_temp = pops_clothing_cost }
+				add_to_temp_variable = { rev_temp = pops_household_cost }
+				add_to_temp_variable = { rev_temp = pops_movement_cost }
+				add_to_temp_variable = { rev_temp = pops_fuel_cost }
+				add_to_temp_variable = { rev_temp = pops_luxuries_cost }
+				add_to_temp_variable = { rev_temp = pops_security_cost }
+				multiply_temp_variable = { rev_temp = PREV.sales_tax }
+				add_to_variable = { PREV.sales_tax_revenue = rev_temp }
+
+				#Value Added Tax
+				for_each_loop = {
+					array = industries
+					value = budget_token
+
+					set_temp_variable = { rev_temp = productivity@var:budget_token }
+					multiply_temp_variable = { rev_temp = employed@var:budget_token }
+					multiply_temp_variable = { rev_temp = PREV.value_added_tax }
+					add_to_variable = { PREV.value_added_tax_revenue = rev_temp }
+				}
+
+				#Luxury Tax
+				set_temp_variable = { rev_temp = pops_luxuries_cost }
+				multiply_temp_variable = { rev_temp = PREV.luxury_tax }
+				add_to_variable = { PREV.luxury_tax_revenue = rev_temp }
+			}
+
+		
+			#Income Tax
+				set_temp_variable = { pops_earnings_temp = pops_lower_earnings_temp }
+				add_to_temp_variable = { pops_earnings_temp = pops_middle_earnings_temp }
+				add_to_temp_variable = { pops_earnings_temp = pops_upper_earnings_temp }
+
+				set_variable = { income_tax_revenue = upper_income_tax_revenue }
+				add_to_variable = { income_tax_revenue = middle_income_tax_revenue }
+				add_to_variable = { income_tax_revenue = lower_income_tax_revenue }
+
+				set_variable = { income_tax = income_tax_revenue }
+				divide_variable = { income_tax = pops_earnings_temp }
+			#
+
+			#Total
+				set_variable = { revenue = upper_income_tax_revenue }
+				add_to_variable = { revenue = middle_income_tax_revenue }
+				add_to_variable = { revenue = lower_income_tax_revenue }
+				add_to_variable = { revenue = payroll_tax_revenue }
+				add_to_variable = { revenue = property_tax_revenue }
+				add_to_variable = { revenue = corporate_tax_revenue }
+				add_to_variable = { revenue = capital_gains_tax_revenue }
+				add_to_variable = { revenue = wealth_tax_revenue }
+				add_to_variable = { revenue = sales_tax_revenue }
+				add_to_variable = { revenue = value_added_tax_revenue }
+				add_to_variable = { revenue = luxury_tax_revenue }
+				add_to_variable = { revenue = tariffs_revenue }
+				add_to_variable = { revenue = public_enterprises_revenue }
+				add_to_variable = { revenue = diplomacy_revenue }
+			#
+		#
+		#Expenses
+		#
+		#Sum
+		#
+	}
+
+	update_budget_plan = {
+		#Upper Income Tax
+			set_variable = { upper_income_tax_final = upper_income_tax }
+			add_to_variable = { upper_income_tax_final = upper_income_tax_change }
+
+			set_variable = { upper_income_tax_power_cost = upper_income_tax_change }
+			multiply_variable = { upper_income_tax_power_cost = 200 }
+			multiply_variable = { upper_income_tax_power_cost = global.budget_power_cost }
+		#
+		#Middle Income Tax
+			set_variable = { middle_income_tax_final = middle_income_tax }
+			add_to_variable = { middle_income_tax_final = middle_income_tax_change }
+
+			set_variable = { middle_income_tax_power_cost = middle_income_tax_change }
+			multiply_variable = { middle_income_tax_power_cost = 150 }
+			multiply_variable = { middle_income_tax_power_cost = global.budget_power_cost }
+		#
+		#Lower Income Tax
+			set_variable = { lower_income_tax_final = lower_income_tax }
+			add_to_variable = { lower_income_tax_final = lower_income_tax_change }
+
+			set_variable = { lower_income_tax_power_cost = lower_income_tax_change }
+			multiply_variable = { lower_income_tax_power_cost = 100 }
+			multiply_variable = { lower_income_tax_power_cost = global.budget_power_cost }
+		#
+		
+		#Payroll Tax
+			set_variable = { payroll_tax_final = payroll_tax }
+			add_to_variable = { payroll_tax_final = payroll_tax_change }
+
+			set_variable = { payroll_tax_power_cost = payroll_tax_change }
+			multiply_variable = { payroll_tax_power_cost = 300 }
+			multiply_variable = { payroll_tax_power_cost = global.budget_power_cost }
+		#
+		#Property Tax
+			set_variable = { property_tax_final = property_tax }
+			add_to_variable = { property_tax_final = property_tax_change }
+
+			set_variable = { property_tax_power_cost = property_tax_change }
+			multiply_variable = { property_tax_power_cost = 100 }
+			multiply_variable = { property_tax_power_cost = global.budget_power_cost }
+		#
+		
+		#Corporate Tax
+			set_variable = { corporate_tax_final = corporate_tax }
+			add_to_variable = { corporate_tax_final = corporate_tax_change }
+
+			set_variable = { corporate_tax_power_cost = corporate_tax_change }
+			multiply_variable = { corporate_tax_power_cost = 200 }
+			multiply_variable = { corporate_tax_power_cost = global.budget_power_cost }
+		#
+		#Capital Gains Tax
+			set_variable = { capital_gains_tax_final = capital_gains_tax }
+			add_to_variable = { capital_gains_tax_final = capital_gains_tax_change }
+
+			set_variable = { capital_gains_tax_power_cost = capital_gains_tax_change }
+			multiply_variable = { capital_gains_tax_power_cost = 150 }
+			multiply_variable = { capital_gains_tax_power_cost = global.budget_power_cost }
+		#
+		#Wealth Tax
+			set_variable = { wealth_tax_final = wealth_tax }
+			add_to_variable = { wealth_tax_final = wealth_tax_change }
+
+			set_variable = { wealth_tax_power_cost = wealth_tax_change }
+			multiply_variable = { wealth_tax_power_cost = 500 }
+			multiply_variable = { wealth_tax_power_cost = global.budget_power_cost }
+		#
+		
+		#Sales Tax
+			set_variable = { sales_tax_final = sales_tax }
+			add_to_variable = { sales_tax_final = sales_tax_change }
+
+			set_variable = { sales_tax_power_cost = sales_tax_change }
+			multiply_variable = { sales_tax_power_cost = 300 }
+			multiply_variable = { sales_tax_power_cost = global.budget_power_cost }
+		#
+		#Value Added Tax
+			set_variable = { value_added_tax_final = value_added_tax }
+			add_to_variable = { value_added_tax_final = value_added_tax_change }
+
+			set_variable = { value_added_tax_power_cost = value_added_tax_change }
+			multiply_variable = { value_added_tax_power_cost = 400 }
+			multiply_variable = { value_added_tax_power_cost = global.budget_power_cost }
+		#
+		#Luxury Tax
+			set_variable = { luxury_tax_final = luxury_tax }
+			add_to_variable = { luxury_tax_final = luxury_tax_change }
+
+			set_variable = { luxury_tax_power_cost = luxury_tax_change }
+			multiply_variable = { luxury_tax_power_cost = 250 }
+			multiply_variable = { luxury_tax_power_cost = global.budget_power_cost }
+		#
+		#Tariffs
+			set_variable = { tariffs_final = tariffs }
+			add_to_variable = { tariffs_final = tariffs_change }
+
+			set_variable = { tariffs_power_cost = tariffs_change }
+			multiply_variable = { tariffs_power_cost = 50 }
+			multiply_variable = { tariffs_power_cost = global.budget_power_cost }
+		#
+
+		#Revenue
+			set_variable = { upper_income_tax_final_revenue = 0 }
+			set_variable = { middle_income_tax_final_revenue = 0 }
+			set_variable = { lower_income_tax_final_revenue = 0 }
+			set_variable = { payroll_tax_final_revenue = 0 }
+			set_variable = { property_tax_final_revenue = 0 }
+			set_variable = { corporate_tax_final_revenue = 0 }
+			set_variable = { capital_gains_tax_final_revenue = 0 }
+			set_variable = { wealth_tax_final_revenue = 0 }
+			set_variable = { sales_tax_final_revenue = 0 }
+			set_variable = { value_added_tax_final_revenue = 0 }
+			set_variable = { luxury_tax_final_revenue = 0 }
+			#set_variable = { tariffs_revenue = 0 }
+
+			set_temp_variable = { pops_upper_earnings_temp = 0 }
+			set_temp_variable = { pops_middle_earnings_temp = 0 }
+			set_temp_variable = { pops_lower_earnings_temp = 0 }
+
+			every_controlled_state = {
+				#Individual Income Tax
+				set_temp_variable = { rev_temp = elites_earnings }
+				add_to_temp_variable = { pops_upper_earnings_temp = rev_temp }
+				multiply_temp_variable = { rev_temp = PREV.upper_income_tax_final }
+				add_to_variable = { PREV.upper_income_tax_final_revenue = rev_temp }
+				
+				set_temp_variable = { rev_temp = professionals_earnings }
+				add_to_temp_variable = { rev_temp = bureaucrats_earnings }
+				add_to_temp_variable = { rev_temp = workers_earnings }
+				add_to_temp_variable = { pops_middle_earnings_temp = rev_temp }
+				multiply_temp_variable = { rev_temp = PREV.middle_income_tax_final }
+				add_to_variable = { PREV.middle_income_tax_final_revenue = rev_temp }
+				
+				set_temp_variable = { rev_temp = laborers_earnings }
+				add_to_temp_variable = { rev_temp = peasants_earnings }
+				add_to_temp_variable = { rev_temp = soldiers_earnings }
+				add_to_temp_variable = { pops_lower_earnings_temp = rev_temp }
+				multiply_temp_variable = { rev_temp = PREV.lower_income_tax_final }
+				add_to_variable = { PREV.lower_income_tax_final_revenue = rev_temp }
+
+				#Payroll Tax
+				set_temp_variable = { rev_temp = pops_earnings }
+				subtract_from_temp_variable = { rev_temp = slaves_earnings }
+				multiply_temp_variable = { rev_temp = PREV.payroll_tax_final }
+				add_to_variable = { PREV.payroll_tax_final_revenue = rev_temp }
+
+				#Property Tax
+				set_temp_variable = { rev_temp = pops_housing_cost }
+				multiply_temp_variable = { rev_temp = PREV.property_tax_final }
+				add_to_variable = { PREV.property_tax_final_revenue = rev_temp }
+
+				#Corporate Tax
+				set_temp_variable = { rev_temp = investment_fund_earnings }
+				multiply_temp_variable = { rev_temp = PREV.corporate_tax_final }
+				add_to_variable = { PREV.corporate_tax_final_revenue = rev_temp }
+
+				#Capital Gains Tax
+				set_temp_variable = { rev_temp = investment_fund_earnings }
+				set_temp_variable = { kickbacks_temp = 1 }
+				subtract_from_temp_variable = { kickbacks_temp = global.investment_fund_kickbacks }
+				divide_temp_variable = { rev_temp = kickbacks_temp }
+				multiply_temp_variable = { rev_temp = global.investment_fund_kickbacks }
+				add_to_temp_variable = { rev_temp = investment_fund_spending_kickbacks }
+
+				multiply_temp_variable = { rev_temp = PREV.capital_gains_tax_final }
+				add_to_variable = { PREV.capital_gains_tax_final_revenue = rev_temp }
+
+				#Wealth Tax
+				set_temp_variable = { rev_temp = investment_fund }
+				multiply_temp_variable = { rev_temp = PREV.wealth_tax_final }
+				add_to_variable = { PREV.wealth_tax_final_revenue = rev_temp }
+
+				#Sales Tax
+				set_temp_variable = { rev_temp = pops_food_cost }
+				add_to_temp_variable = { rev_temp = pops_clothing_cost }
+				add_to_temp_variable = { rev_temp = pops_household_cost }
+				add_to_temp_variable = { rev_temp = pops_movement_cost }
+				add_to_temp_variable = { rev_temp = pops_fuel_cost }
+				add_to_temp_variable = { rev_temp = pops_luxuries_cost }
+				add_to_temp_variable = { rev_temp = pops_security_cost }
+				multiply_temp_variable = { rev_temp = PREV.sales_tax_final }
+				add_to_variable = { PREV.sales_tax_final_revenue = rev_temp }
+
+				#Value Added Tax
+				for_each_loop = {
+					array = industries
+					value = budget_token
+
+					set_temp_variable = { rev_temp = productivity@var:budget_token }
+					multiply_temp_variable = { rev_temp = employed@var:budget_token }
+					multiply_temp_variable = { rev_temp = PREV.value_added_tax_final }
+					add_to_variable = { PREV.value_added_tax_final_revenue = rev_temp }
+				}
+
+				#Luxury Tax
+				set_temp_variable = { rev_temp = pops_luxuries_cost }
+				multiply_temp_variable = { rev_temp = PREV.luxury_tax_final }
+				add_to_variable = { PREV.luxury_tax_final_revenue = rev_temp }
+			}
+		#
+
+		
+		#Income Tax
+			set_temp_variable = { pops_earnings_temp = pops_lower_earnings_temp }
+			add_to_temp_variable = { pops_earnings_temp = pops_middle_earnings_temp }
+			add_to_temp_variable = { pops_earnings_temp = pops_upper_earnings_temp }
+
+			set_variable = { income_tax_final_revenue = upper_income_tax_final_revenue }
+			add_to_variable = { income_tax_final_revenue = middle_income_tax_final_revenue }
+			add_to_variable = { income_tax_final_revenue = lower_income_tax_final_revenue }
+
+			log = "[?income_tax_final_revenue]"
+
+			set_variable = { income_tax_final = income_tax_final_revenue }
+			divide_variable = { income_tax_final = pops_earnings_temp }
+
+			set_variable = { income_tax_change = income_tax_final }
+			subtract_from_variable = { income_tax_change = income_tax }
+		#
+
+		#Total
+			set_variable = { revenue_final = upper_income_tax_final_revenue }
+			add_to_variable = { revenue_final = middle_income_tax_final_revenue }
+			add_to_variable = { revenue_final = lower_income_tax_final_revenue }
+			add_to_variable = { revenue_final = payroll_tax_final_revenue }
+			add_to_variable = { revenue_final = property_tax_final_revenue }
+			add_to_variable = { revenue_final = corporate_tax_final_revenue }
+			add_to_variable = { revenue_final = capital_gains_tax_final_revenue }
+			add_to_variable = { revenue_final = wealth_tax_final_revenue }
+			add_to_variable = { revenue_final = sales_tax_final_revenue }
+			add_to_variable = { revenue_final = value_added_tax_final_revenue }
+			add_to_variable = { revenue_final = luxury_tax_final_revenue }
+			add_to_variable = { revenue_final = tariffs_revenue }
+			add_to_variable = { revenue_final = public_enterprises_revenue }
+			add_to_variable = { revenue_final = diplomacy_revenue }
+
+			set_variable = { budget_power_cost = upper_income_tax_power_cost }
+			add_to_variable = { budget_power_cost = middle_income_tax_power_cost }
+			add_to_variable = { budget_power_cost = lower_income_tax_power_cost }
+			add_to_variable = { budget_power_cost = payroll_tax_power_cost }
+			add_to_variable = { budget_power_cost = property_tax_power_cost }
+			add_to_variable = { budget_power_cost = corporate_tax_power_cost }
+			add_to_variable = { budget_power_cost = capital_gains_tax_power_cost }
+			add_to_variable = { budget_power_cost = wealth_tax_power_cost }
+			add_to_variable = { budget_power_cost = sales_tax_power_cost }
+			add_to_variable = { budget_power_cost = value_added_tax_power_cost }
+			add_to_variable = { budget_power_cost = luxury_tax_power_cost }
+			add_to_variable = { budget_power_cost = tariffs_power_cost }
+
+			set_variable = { net_budget_final = revenue_final }
+			subtract_from_variable = { net_budget_final = expenditure_final }
+		#
+
+		#TODO - Predicted Legislature Support/Opposition
+	}
+
+	propose_budget_changes = {
+		#Proposes the budget changes to legislature if necessary
+
+		set_country_flag = budget_proposed
+
+		#TODO - Remove Political Power
+		#TODO - Submit to legislature if you have one
+
+		implement_budget_changes = yes # TEMPORARY. Waiting on Vanadium to implement legislature
+	}
+	implement_budget_changes = {
+		#Implements all planned changes
+
+		set_variable = { upper_income_tax_change = 0 }
+		set_variable = { upper_income_tax = upper_income_tax_final }
+		set_variable = { middle_income_tax_change = 0 }
+		set_variable = { middle_income_tax = middle_income_tax_final }
+		set_variable = { lower_income_tax_change = 0 }
+		set_variable = { lower_income_tax = lower_income_tax_final }
+		set_variable = { income_tax_change = 0 }
+		set_variable = { income_tax = income_tax_final }
+		
+		set_variable = { payroll_tax_change = 0 }
+		set_variable = { payroll_tax = payroll_tax_final }
+		set_variable = { property_tax_change = 0 }
+		set_variable = { property_tax = property_tax_final }
+		
+		set_variable = { corporate_tax_change = 0 }
+		set_variable = { corporate_tax = corporate_tax_final }
+		set_variable = { capital_gains_tax_change = 0 }
+		set_variable = { capital_gains_tax = capital_gains_tax_final }
+		set_variable = { wealth_tax_change = 0 }
+		set_variable = { wealth_tax = wealth_tax_final }
+		
+		set_variable = { sales_tax_change = 0 }
+		set_variable = { sales_tax = sales_tax_final }
+		set_variable = { value_added_tax_change = 0 }
+		set_variable = { value_added_tax = value_added_tax_final }
+		set_variable = { luxury_tax_change = 0 }
+		set_variable = { luxury_tax = luxury_tax_final }
+		set_variable = { tariffs_change = 0 }
+		set_variable = { tariffs = tariffs_final }
+
+		set_variable = { upper_income_tax_power_cost = 0 }
+		set_variable = { middle_income_tax_power_cost = 0 }
+		set_variable = { lower_income_tax_power_cost = 0 }
+		set_variable = { payroll_tax_final_power_cost = 0 }
+		set_variable = { property_tax_final_power_cost = 0 }
+		set_variable = { corporate_tax_final_power_cost = 0 }
+		set_variable = { capital_gains_tax_final_power_cost = 0 }
+		set_variable = { wealth_tax_final_power_cost = 0 }
+		set_variable = { sales_tax_final_power_cost = 0 }
+		set_variable = { value_added_tax_final_power_cost = 0 }
+		set_variable = { luxury_tax_final_power_cost = 0 }
+		set_variable = { tariffs_power_cost = 0 }
+		set_variable = { budget_power_cost = 0 }
+		
+		clr_country_flag = budget_proposed
+		update_budget_plan = yes
+	}
+#

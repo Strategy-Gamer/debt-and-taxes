@@ -1,0 +1,38 @@
+
+state={
+	id=16
+	name="STATE_16"
+	manpower = 7038500
+
+	state_category = metropolis
+
+
+	history={
+		owner = FRA
+		victory_points = {
+			11506 50
+		}
+		buildings = {
+			infrastructure = 4
+
+			anti_air_building = 3
+			air_base = 5
+		}
+		add_core_of = FRA
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		6547 6949 9507 9523 9534 9725 11491 11506 11518
+	}
+
+	local_supplies=0.0
+}

@@ -1,0 +1,236 @@
+characters = {
+	#Maximato
+		MEX_plutaro_elias_calles = {
+			name = MEX_plutaro_elias_calles
+			#https://en.wikipedia.org/wiki/Plutarco_El%C3%ADas_Calles
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_plutaro_elias_calles
+				}
+			}
+			#ideology_socialist
+		}
+		MEX_emilio_portes_gil = {
+			name = MEX_emilio_portes_gil
+			#https://en.wikipedia.org/wiki/Emilio_Portes_Gil
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_emilio_portes_gil
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1929 Election
+		MEX_pedro_rodriguez_triana = {
+			name = MEX_pedro_rodriguez_triana
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_pedro_rodriguez_triana
+				}
+			}
+			#ideology_communist
+		}
+		MEX_jose_vasconcelos = {
+			name = MEX_jose_vasconcelos
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Vasconcelos
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_jose_vasconcelos
+				}
+			}
+			#ideology_liberal
+		}
+		MEX_pascal_ortiz_rubio = {
+			name = MEX_pascal_ortiz_rubio
+			#https://en.wikipedia.org/wiki/Pascual_Ortiz_Rubio
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_pascal_ortiz_rubio
+				}
+			}
+			#ideology_conservative
+		}
+		MEX_abelardo_rodriguez_lujan = {
+			name = MEX_abelardo_rodriguez_lujan
+			#https://en.wikipedia.org/wiki/Abelardo_L._Rodr%C3%ADguez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_abelardo_rodriguez_lujan
+				}
+			}
+			#ideology_conservative
+		}
+		#
+	#1934 Election
+		MEX_hernan_laborde_rodriguez = {
+			name = MEX_hernan_laborde_rodriguez
+			#https://en.wikipedia.org/wiki/Hern%C3%A1n_Laborde
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_hernan_laborde_rodriguez
+				}
+			}
+			#ideology_communist
+		}
+		MEX_adalberto_tejeda_olivares = {
+			name = MEX_adalberto_tejeda_olivares
+			#https://en.wikipedia.org/wiki/Adalberto_Tejeda_Olivares
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_adalberto_tejeda_olivares
+				}
+			}
+			#ideology_socialist
+		}
+		MEX_antonio_irineo_villarreal = {
+			name = MEX_antonio_irineo_villarreal
+			#https://en.wikipedia.org/wiki/Antonio_Irineo_Villarreal
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_antonio_irineo_villarreal
+				}
+			}
+			#ideology_liberal
+		}
+		MEX_lazardo_cardenas = {
+			name = MEX_lazardo_cardenas
+			#https://en.wikipedia.org/wiki/L%C3%A1zaro_C%C3%A1rdenas
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_lazardo_cardenas
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1940 Election
+		MEX_manuel_avila_camacho = {
+			name = MEX_manuel_avila_camacho
+			#https://en.wikipedia.org/wiki/Manuel_%C3%81vila_Camacho
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_manuel_avila_camacho
+				}
+			}
+			#ideology_conservative
+		}
+		MEX_juan_andreu_almazan = {
+			name = MEX_juan_andreu_almazan
+			#https://en.wikipedia.org/wiki/Juan_Andreu_Almaz%C3%A1n
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_juan_andreu_almazan
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1946 Election
+		MEX_ezequiel_padilla_penaloza = {
+			name = MEX_ezequiel_padilla_penaloza
+			#https://en.wikipedia.org/wiki/Ezequiel_Padilla_Pe%C3%B1aloza
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_ezequiel_padilla_penaloza
+				}
+			}
+			#ideology_liberal
+		}
+		MEX_miguel_aleman_valdes = {
+			name = MEX_miguel_aleman_valdes
+			#https://en.wikipedia.org/wiki/Miguel_Alem%C3%A1n_Vald%C3%A9s
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_miguel_aleman_valdes
+				}
+			}
+			#ideology_conservative
+		}
+		MEX_carlos_calderon = {
+			name = MEX_carlos_calderon
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_carlos_calderon
+				}
+			}
+			#ideology_reactionary
+		}
+		MEX_jesus_agustin_castro = {
+			name = MEX_jesus_agustin_castro
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_jesus_agustin_castro
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1952 Election
+		MEX_vincente_lobardo_toledano = {
+			name = MEX_vincente_lobardo_toledano
+			#https://en.wikipedia.org/wiki/Vicente_Lombardo_Toledano
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_vincente_lobardo_toledano
+				}
+			}
+			#ideology_socialist
+		}
+		MEX_miguel_henriquez_guzman = {
+			name = MEX_miguel_henriquez_guzman
+			#https://en.wikipedia.org/wiki/Miguel_Henr%C3%ADquez_Guzm%C3%A1n
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_miguel_henriquez_guzman
+				}
+			}
+			#ideology_agrarian
+		}
+		MEX_adolfo_ruiz_cortines = {
+			name = MEX_adolfo_ruiz_cortines
+			#https://en.wikipedia.org/wiki/Adolfo_Ruiz_Cortines
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_adolfo_ruiz_cortines
+				}
+			}
+			#ideology_conservative
+		}
+		MEX_efrain_gonzalez_luna = {
+			name = MEX_efrain_gonzalez_luna
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_efrain_gonzalez_luna
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1958 Election
+		MEX_adolf_lopez_mateos = {
+			name = MEX_adolf_lopez_mateos
+			#https://en.wikipedia.org/wiki/Adolfo_L%C3%B3pez_Mateos
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_adolf_lopez_mateos
+				}
+			}
+			#ideology_conservative
+		}
+		MEX_luis_hector_alvarez = {
+			name = MEX_luis_hector_alvarez
+			#https://en.wikipedia.org/wiki/Luis_H._%C3%81lvarez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_MEX_luis_hector_alvarez
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+}

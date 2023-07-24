@@ -1,0 +1,32 @@
+
+state={
+	id=503
+	name="STATE_503"
+	manpower = 1922700
+
+	state_category = rural
+
+	history={
+		owner = BRA
+		buildings = {
+			infrastructure = 3 #was: 5
+			air_base = 1
+		}
+		add_core_of = BRA
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1529 2109 4533 4548 4587 5156 5178 8181 8239 10405 12466
+	}
+
+	local_supplies=0.0
+}

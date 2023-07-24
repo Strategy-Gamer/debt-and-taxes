@@ -1,0 +1,86 @@
+
+Pop List
+    #Value  #Pop
+    1       Slaves
+    2       Unskilled
+    3       Skilled
+    4       Educated
+    5       Soldiers
+    6       Bureaucrats
+    7       Capitalists
+    8       Retirees
+
+Vars:
+    pops_amount #Number of people
+    pops_amount_last_month #Pop amount last month
+    pops_amount_change #Change from last month
+
+    pops_median_age #Used at startup, check State Histories for usage
+    pops_life_span #Used at startup, check State Histories for usage
+    pops_elder_spread #Used at startup, check State Histories for usage
+    pops_youth_spread #Used at startup, check State Histories for usage
+
+    pops_age_amount (Array, length 101) #Number of people per age (From 0 to 100)
+    pops_children_amount #Number of people under 18
+    pops_adults_amount #Number of people between 18 and the retirement age
+    pops_elderly_amount #Number of people who can retire (Or have retired if it's retirees)
+    
+    pops_males_amount
+    pops_females_amount
+    pops_male_female_ratio #Used at Startup, Ratio of Males to Females, typically 1.04
+
+    pops_literacy_percentage
+    pops_education_percentage
+
+    pops_workforce_amount
+    pops_workforce_percentage
+    pops_employed_amount
+    pops_employed_percentage
+    pops_unemployed_amount
+    pops_unemployed_percentage
+
+    pops_life_needs_fulfilled_percentage
+    pops_daily_needs_fulfilled_percentage
+    pops_luxury_needs_fulfilled_percentage
+
+    pops_needs_resource (Array) #Resource Type
+    pops_needs_type (Array) #Life (1), Daily (2), or Luxury (3)
+    pops_needs_amount (Array) #Amount wanted
+    pops_needs_fulfilled (Array) #Amount that the pop has
+    pops_needs_fulfilled_percentage (Array) #% of wanted
+
+    pops_standard_of_living (Array) #Length 24 Array of Standard of Living
+    pops_standard_of_living_this_year #Average of the last 12 months
+    pops_standard_of_living_last_year #Average of the last 13-24 months
+
+    pops_cost_of_living (Array) #Length 24 Array of Cost of Living
+    pops_cost_of_living_this_year #Average of the last 12 months
+    pops_cost_of_living_last_year #Average of the last 13-24 months
+
+    pops_births_per_woman
+    pops_health_percentage
+
+    pops_religion_type (Array)
+    pops_religion_percentage (Array)
+    pops_religion_amount (Array)
+
+    pops_culture_type (Array)
+    pops_culture_percentage (Array)
+    pops_culture_amount (Array)
+
+    pops_ideology_type (Array)
+    pops_ideology_percentage (Array)
+    pops_ideology_amount (Array)
+
+    pops_money
+    pops_earnings
+    pops_spending
+
+    #Individual Pop Types
+    [Pop_Type]_amount #Number of people
+
+    [Pop_Type]_workforce_amount
+    [Pop_Type]_employed_amount
+    [Pop_Type]_employed_percentage
+    [Pop_Type]_unemployed_amount
+    [Pop_Type]_unemployed_percentage

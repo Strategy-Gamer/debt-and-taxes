@@ -1,0 +1,29 @@
+state={
+	id=707
+	name="STATE_707"
+	manpower = 404458
+	
+	state_category = small_island
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			13018 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+	}
+	
+	provinces={
+		13018 
+	}
+
+	local_supplies=0.0 
+}

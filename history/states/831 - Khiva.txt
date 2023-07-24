@@ -1,0 +1,39 @@
+state = {
+
+	id = 831
+	name = "STATE_831" #Khiva
+	manpower = 258430
+
+	state_category = rural
+
+	history = {
+	
+		victory_points = {
+			12465 1
+		}
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		
+		add_core_of = SOV
+		add_core_of = UZB
+		add_core_of = KKP
+		add_core_of = KHI
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces = {
+		 10395 10435 12324 12454 12465
+	}
+
+	local_supplies = 0.0 
+}

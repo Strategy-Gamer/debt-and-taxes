@@ -1,0 +1,39 @@
+
+state={
+	id=483
+	name="STATE_483"
+	manpower = 315987
+	
+	state_category = rural
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			4908 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = MEX
+		add_core_of = MEC
+		victory_points = {
+			10765 5
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		2069 4908 4977 5071 8012 8033 10765 10848 12833 13214
+	}
+	
+
+	local_supplies=0.0 
+}

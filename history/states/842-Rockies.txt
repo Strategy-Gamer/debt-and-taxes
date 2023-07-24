@@ -1,0 +1,34 @@
+state={
+	id=842
+	name="STATE_842"
+	resources={
+		coal=5.000
+		precious_metals=4.000
+		lumber=5.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = USA
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+	provinces={
+		868 1658 3869 6887 7684 7999 9792 10535
+	}
+	manpower=240000
+
+
+	buildings_max_level_factor=1.000
+	state_category=state_cat
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=868
+	name="STATE_868"
+
+	history={
+		owner = TIB
+		add_core_of = TIB
+		buildings = {
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+	}
+
+	provinces={
+		5042 
+	}
+	manpower=51869
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

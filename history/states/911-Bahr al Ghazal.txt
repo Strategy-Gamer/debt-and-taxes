@@ -1,0 +1,26 @@
+state={
+	id=911
+	name="STATE_911"
+	provinces={
+		1953 7996 10764 10908 
+	}
+	history={
+		owner=ENG
+		buildings={
+			infrastructure=1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+	state_category=pastoral
+	manpower=644212
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

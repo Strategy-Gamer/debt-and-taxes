@@ -1,0 +1,6012 @@
+guiTypes = {
+	containerWindowType = {
+		name = "state_list_container"
+		position = {x=250 y=125}
+		size = { width=1108 height=720 }	
+		
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_tiled_window_transparent"
+		}
+		background = {
+			name = "Background"
+			spriteType = "GFX_browser_bg"
+			alwaystransparent=yes
+		}
+		
+		instantTextboxType = {
+			name = "state_list_title"
+			position = { x = 25 y = 12 }
+			textureFile = ""
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "state_list_title"
+			maxWidth = 1000
+			maxHeight = 20
+			fixedsize = yes
+		}
+
+		containerWindowType = {
+			name = "time_button"
+			position = { x = 860 y = 670 }
+			size = { width = 221 height = 34 }
+			buttonType = {
+				name = "time_button"
+				position = { x = 0 y = 0 }
+				quadTextureSprite ="GFX_button_221x34"
+				buttonFont = "Main_14_black"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_close
+				shortcut = "A"
+			}
+			instantTextBoxType = {
+				name = "time_button_title"
+				position = { x = 0 y = 8 }
+				font = "hoi_18mbs"
+				format = center
+				maxWidth = 221
+				text = "Pass Time by One Month"
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+		}
+		
+		buttonType = {
+			name = "close_button"
+			position = { x = -48 y = 14 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+		
+		containerWindowType = {
+			name = "state_list"
+			position = {x = 10 y = 54 }
+			size = {width = 300 height = 614 }
+			margin = { top = 10 bottom = 10 left = 12 right = 25 }
+			Orientation = upper_left
+
+			verticalScrollbar = "right_vertical_slider"
+			vertical_scroll_step = 60
+			scroll_wheel_factor = 60
+			smooth_scrolling = yes
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window2_2b_border"
+			}
+			 
+			gridboxtype = {
+				name = "states_entries"
+				position = { x = 114 y = 38 }
+				size = { width = 0 height = 100%% }
+				slotsize = { width = 204 height = 38 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+			
+			containerWindowType = {
+				name = "country_entry"
+				position = { x = 2 y = 0} 
+				size = { width = 255 height = 45 }
+
+				buttonType = {
+					name = "country_background_button"
+					position = { x = 0 y = 0 }
+					#size = { width = 255 height = 45 }
+					quadTextureSprite ="GFX_state_button_background_pressed"
+					buttonFont = "Main_14_black"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_close
+				}
+
+				buttonType = {
+					name = "country_background_button_clicked"
+					quadTextureSprite ="GFX_state_button_background"
+					position = { x = 0 y = 0 }
+					#size = { width = 255 height = 45 }
+					#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "country_name"
+					position = { x = 7 y = 3 }
+					font = "hoi_18mbs"
+					format = left
+					maxWidth = 240
+					text = "[THIS.GetName]"
+					maxHeight = 24
+					fixedsize = yes
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "country_population_num"
+					position = { x = 25 y = 18 }
+					font = "hoi_18mbs"
+					format = right
+					maxWidth = 200
+					text = "[?country_population][?country_population_magnitude.GetNumAbbreviation]"
+					maxHeight = 24
+					fixedsize = yes
+					alwaystransparent = yes
+				}
+
+				iconType = {
+					name = "country_population_trend"
+					spriteType ="GFX_trend_arrow_up_green"
+					position = { x = 225 y = 20 }
+					alwaystransparent = yes
+				}
+			}
+		}
+		containerWindowType = {
+			name = "list_type_selector"
+			position = { x = 304 y = 54 }
+			size = { width = 785 height = 72 }
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_fullborder_tiled"
+				position = { x=0 y=0 }					
+			}
+			containerWindowType = {
+				name = "population_button"
+				position = { x = 206 y = 17 }
+				size = { width = 182 height = 34 }
+				buttonType = {
+					name = "population_button"
+					position = { x = 0 y = 0 }
+					quadTextureSprite ="GFX_button_182x34"
+					buttonFont = "Main_14_black"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_close
+				}
+				iconType = {
+					name = "population_icon"
+					spriteType ="GFX_population_icon"
+					frame = 1
+					position = { x = 6 y = 0 }
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "population_button_title"
+					position = { x = 0 y = 8 }
+					font = "hoi_18mbs"
+					format = center
+					maxWidth = 182
+					text = "population_button_text"
+					maxHeight = 24
+					fixedsize = yes
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "population_off"
+					spriteType ="GFX_accept_decline_icon"
+					frame = 1
+					position = { x = 149 y = 8 }
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "population_on"
+					spriteType ="GFX_accept_decline_icon"
+					frame = 2
+					position = { x = 149 y = 8 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "building_button"
+				position = { x = 393 y = 17 }
+				size = { width = 182 height = 34 }
+				buttonType = {
+					name = "building_button"
+					position = { x = 0 y = 0 }
+					quadTextureSprite ="GFX_button_182x34"
+					buttonFont = "Main_14_black"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_close
+				}
+				iconType = {
+					name = "building_icon"
+					spriteType ="GFX_industrial_capacity_icon"
+					frame = 1
+					position = { x = 4 y = 2 }
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "building_button_title"
+					position = { x = 0 y = 8 }
+					font = "hoi_18mbs"
+					format = center
+					maxWidth = 182
+					text = "building_button_text"
+					maxHeight = 24
+					fixedsize = yes
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "building_off"
+					spriteType ="GFX_accept_decline_icon"
+					frame = 1
+					position = { x = 149 y = 8 }
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "building_on"
+					spriteType ="GFX_accept_decline_icon"
+					frame = 2
+					position = { x = 149 y = 8 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "resources_button"
+				position = { x = 579 y = 17 }
+				size = { width = 182 height = 34 }
+				buttonType = {
+					name = "resources_button"
+					position = { x = 0 y = 0 }
+					quadTextureSprite ="GFX_button_182x34"
+					buttonFont = "Main_14_black"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_close
+				}
+				iconType = {
+					name = "resources_icon"
+					spriteType ="GFX_resource_groceries"
+					frame = 1
+					position = { x = 10 y = 4 }
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "resources_button_title"
+					position = { x = 2 y = 8 }
+					font = "hoi_18mbs"
+					format = center
+					maxWidth = 182
+					text = "resources_button_text"
+					maxHeight = 24
+					fixedsize = yes
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "resources_off"
+					spriteType ="GFX_accept_decline_icon"
+					frame = 1
+					position = { x = 149 y = 8 }
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "resources_on"
+					spriteType ="GFX_accept_decline_icon"
+					frame = 2
+					position = { x = 149 y = 8 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "statistics_button"
+				position = { x = 20 y = 17 }
+				size = { width = 182 height = 34 }
+				buttonType = {
+					name = "statistics_button"
+					position = { x = 0 y = 0 }
+					quadTextureSprite ="GFX_button_182x34"
+					buttonFont = "Main_14_black"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_close
+				}
+				iconType = {
+					name = "statistics_icon"
+					spriteType ="GFX_stats_menu_button"
+					position = { x = 10 y = 6 }
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "statistics_button_title"
+					position = { x = 0 y = 8 }
+					font = "hoi_18mbs"
+					format = center
+					maxWidth = 182
+					text = "statistics_button_text"
+					maxHeight = 24
+					fixedsize = yes
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "statistics_off"
+					spriteType ="GFX_accept_decline_icon"
+					frame = 1
+					position = { x = 149 y = 8 }
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "statistics_on"
+					spriteType ="GFX_accept_decline_icon"
+					frame = 2
+					position = { x = 149 y = 8 }
+					alwaystransparent = yes
+				}
+			}
+		}
+		containerWindowType = {
+			name = "selected_state_name_container"
+			position = {x = 304 y = 120 }
+			size = {width = 785 height = 78 }
+			Orientation = upper_left
+			
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_fullborder_tiled"
+			}
+			
+			instantTextBoxType = {
+				name = "selected_state_name"
+				position = { x = 0 y = 18 }
+				font = "hoi_36header"
+				text = "[?selected_state.GetName]"
+				format = center
+				maxWidth = 785
+				maxHeight = 38
+				fixedsize = yes
+			}
+		}
+		
+		containerWindowType = {
+			name = "building_tab_buttons_container"
+			position = { x=304 y=194}
+			size = { width = 785 height = 475 }
+		
+			buttonType = {
+				name = "industry_tab_button"
+				position = { x = 6 y = 0 }
+				quadTextureSprite ="GFX_building_tab_button_selected"
+				buttonFont = "Main_14_black"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_close
+				
+			}
+			instantTextBoxType = {
+				name = "industries_title"
+				position = { x = 24 y = 2 }
+				font = "hoi_24header"
+				text = "industries_title"
+				format = left
+				maxWidth = 200
+				maxHeight = 24
+				fixedsize = yes
+			}
+
+			buttonType = {
+				name = "build_factory_button"
+				position = { x = 316 y = 4 }
+				quadTextureSprite ="GFX_build_factory_button"
+				buttonFont = "Main_14_black"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_close
+				pdx_tooltip = industries_construction_tt
+			}
+
+			buttonType = {
+				name = "building_tab_button"
+				position = { x = 392 y = 0 }
+				quadTextureSprite ="GFX_building_tab_button"
+				buttonFont = "Main_14_black"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_close
+				
+			}
+			instantTextBoxType = {
+				name = "buildings_title"
+				position = { x = 410 y = 2 }
+				font = "hoi_24header"
+				text = "buildings_title"
+				format = left
+				maxWidth = 200
+				maxHeight = 24
+				fixedsize = yes
+			}
+		}
+	}
+	containerWindowType = {
+		name = "population_list_container"
+		position = {x = 304 y = 194 }
+		size = {width = 785 height = 480 }
+		Orientation = upper_left
+	
+		containerWindowType = {
+			name = "pops_types_container"
+			position = {x = 0 y = 0 }
+			size = { width = 785 height = 75 }
+			Orientation = upper_left
+			
+			background = {
+				name = "pops_categories_background"
+				quadTextureSprite = "GFX_tiled_decisions_bg_small"
+			}
+
+			containerWindowType = {
+				name = "pops_icons_container"
+				position = { x = 195 y = 4 }
+				size = { width = 450 height = 70 }
+				Orientation = upper_left
+				
+				#Enabled Version
+				iconType = {
+					name = "slaves_icon"
+					spriteType ="GFX_pop_icons"
+					frame = 1
+					position = { x = 0 y = 0 }
+
+					pdx_tooltip = slaves_pop_tt
+				}
+				iconType = {
+					name = "peasants_icon"
+					spriteType ="GFX_pop_icons"
+					frame = 8
+					position = { x = 50 y = 0 }
+
+					pdx_tooltip = peasants_pop_tt
+				}
+				iconType = {
+					name = "laborers_icon"
+					spriteType ="GFX_pop_icons"
+					frame = 2
+					position = { x = 100 y = 0 }
+
+					pdx_tooltip = laborers_pop_tt
+				}
+				iconType = {
+					name = "workers_icon"
+					spriteType ="GFX_pop_icons"
+					frame = 3
+					position = { x = 150 y = 0 }
+
+					pdx_tooltip = workers_pop_tt
+				}
+				iconType = {
+					name = "professionals_icon"
+					spriteType ="GFX_pop_icons"
+					frame = 4
+					position = { x = 200 y = 0 }
+
+					pdx_tooltip = professionals_pop_tt
+				}
+				iconType = {
+					name = "elites_icon"
+					spriteType ="GFX_pop_icons"
+					frame = 7
+					position = { x = 250 y = 0 }
+
+					pdx_tooltip = elites_pop_tt
+				}
+				iconType = {
+					name = "bureaucrats_icon"
+					spriteType ="GFX_pop_icons"
+					frame = 6
+					position = { x = 300 y = 0 }
+
+					pdx_tooltip = bureaucrats_pop_tt
+				}
+				iconType = {
+					name = "soldiers_icon"
+					spriteType ="GFX_pop_icons"
+					frame = 5
+					position = { x = 350 y = 0 }
+
+					pdx_tooltip = soldiers_pop_tt
+				}
+			}
+		}
+		containerWindowType = {
+			name = "pops_content_container"
+			position = {x = 0 y = 70 }
+			size = {width = 785 height = 405 }
+			Orientation = upper_left
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_fullborder_tiled"
+			}
+
+			containerWindowType = {
+				name = "pops_data_container"
+				position = {x = 10 y = 10 }
+				size = { width = 785 height = 405 }
+				Orientation = upper_left
+
+				background = {
+					name = "Background"
+					quadTextureSprite = "GFX_pops_menu_palpy_background"
+					alwaystransparent = yes
+				}
+
+				containerWindowType = {
+					name = "pops_name_container"
+					position = { x = 0 y = 3 }
+					size = { width = 420 height = 45 }
+					Orientation = upper_left
+
+					instantTextBoxType = {
+						name = "selected_pop_name"
+						position = { x = 20 y = 8 }
+						font = "hoi_24header"
+						text = "pops_title"
+						format = left
+						maxWidth = 440
+						maxHeight = 38
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "pops_population_container"
+					position = { x = 10 y = 44 }
+					size = { width = 420 height = 90 }
+					Orientation = upper_left
+
+					buttonType = {
+						name = "pops_population_pyramid_button"
+						spriteType ="GFX_population_pyramid_button"
+						position = { x = 365 y = 14 }
+					}
+
+					iconType = {
+						name = "pops_population_icon"
+						spriteType ="GFX_population_icon"
+						position = { x = 3 y = 17 }
+						scale = 0.85
+						alwaystransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "pops_population_loc"
+						position = { x = 35 y = 21 }
+						font = "hoi_18mbs"
+						text = "pops_population_loc"
+						format = left
+						maxWidth = 190
+						maxHeight = 18
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "pops_workforce_container"
+					position = { x = 6 y = 94 }
+					size = { width = 420 height = 80 }
+					Orientation = upper_left
+
+					iconType = {
+						name = "pops_workforce_icon"
+						spriteType ="GFX_workforce_icon"
+						position = { x = 14 y = 13 }
+						scale = 1
+						alwaystransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "pops_workforce_loc"
+						position = { x = 42 y = 15 }
+						font = "hoi_18mbs"
+						text = "pops_workforce_loc"
+						format = left
+						maxWidth = 373
+						maxHeight = 18
+						fixedsize = yes
+					}
+
+					iconType = {
+						name = "pops_employed_icon"
+						spriteType ="GFX_employed_icon"
+						position = { x = 14 y = 48 }
+						scale = 1
+						alwaystransparent = yes
+					}
+					instantTextBoxType = {
+						name = "pops_employed_loc"
+						position = { x = 46 y = 50 }
+						font = "hoi_18mbs"
+						text = "pops_employed_loc"
+						format = left
+						maxWidth = 373
+						maxHeight = 18
+						fixedsize = yes
+					}
+
+					iconType = {
+						name = "pops_unemployed_icon"
+						spriteType ="GFX_unemployed_icon"
+						position = { x = 216 y = 48 }
+						scale = 1
+						alwaystransparent = yes
+					}
+					instantTextBoxType = {
+						name = "pops_unemployed_loc"
+						position = { x = 248 y = 50 }
+						font = "hoi_18mbs"
+						text = "pops_unemployed_loc"
+						format = left
+						maxWidth = 373
+						maxHeight = 18
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "pops_education_container"
+					position = { x = 4 y = 184 }
+					size = { width = 210 height = 75 }
+					Orientation = upper_left
+
+					iconType = {
+						name = "pops_literacy_icon"
+						spriteType ="GFX_literacy_icon"
+						position = { x = 14 y = 0 }
+						scale = 1
+						alwaystransparent = yes
+					}
+					instantTextBoxType = {
+						name = "pops_literacy_loc"
+						position = { x = 44 y = 1 }
+						font = "hoi_18mbs"
+						text = "pops_literacy_loc"
+						format = left
+						maxWidth = 164
+						maxHeight = 18
+						fixedsize = yes
+					}
+
+					iconType = {
+						name = "pops_schooling_icon"
+						spriteType ="GFX_schooling_icon"
+						position = { x = 14 y = 22 }
+						scale = 1
+						alwaystransparent = yes
+					}
+					instantTextBoxType = {
+						name = "pops_schooling_loc"
+						position = { x = 44 y = 24 }
+						font = "hoi_18mbs"
+						text = "pops_schooling_loc"
+						format = left
+						maxWidth = 164
+						maxHeight = 18
+						fixedsize = yes
+					}
+
+					iconType = {
+						name = "pops_education_icon"
+						spriteType ="GFX_education_icon"
+						position = { x = 14 y = 48 }
+						scale = 1
+						alwaystransparent = yes
+					}
+					instantTextBoxType = {
+						name = "pops_education_loc"
+						position = { x = 44 y = 47 }
+						font = "hoi_18mbs"
+						text = "pops_education_loc"
+						format = left
+						maxWidth = 164
+						maxHeight = 18
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "pops_money_container"
+					position = { x = 4 y = 254 }
+					size = { width = 210 height = 122 }
+					Orientation = upper_left
+
+					instantTextBoxType = {
+						name = "pops_money_loc"
+						position = { x = 12 y = 10 }
+						font = "hoi_18mbs"
+						text = "pops_money_loc"
+						format = left
+						maxWidth = 198
+						maxHeight = 18
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "pops_earnings_loc"
+						position = { x = 12 y = 36 }
+						font = "hoi_18mbs"
+						text = "pops_earnings_loc"
+						format = left
+						maxWidth = 198
+						maxHeight = 18
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "pops_spending_loc"
+						position = { x = 12 y = 54 }
+						font = "hoi_18mbs"
+						text = "pops_spending_loc"
+						format = left
+						maxWidth = 198
+						maxHeight = 18
+						fixedsize = yes
+					}
+
+					instantTextBoxType = {
+						name = "pops_savings_loc"
+						position = { x = 12 y = 86 }
+						font = "hoi_18mbs"
+						text = "pops_savings_loc"
+						format = left
+						maxWidth = 198
+						maxHeight = 18
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "pops_debt_loc"
+						position = { x = 12 y = 104 }
+						font = "hoi_18mbs"
+						text = "pops_debt_loc"
+						format = left
+						maxWidth = 198
+						maxHeight = 18
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "pops_needs_container"
+					position = { x = 210 y = 173 }
+					size = { width = 214 height = 122 }
+					Orientation = upper_left
+					
+					instantTextBoxType = {
+						name = "pops_sol_loc"
+						position = { x = 12 y = 14 }
+						font = "hoi_18mbs"
+						text = "pops_sol_loc"
+						format = left
+						maxWidth = 184
+						maxHeight = 18
+						fixedsize = yes
+						pdx_tooltip = pops_sol_amount_tt
+					}
+					instantTextBoxType = {
+						name = "pops_sol_amount"
+						position = { x = 12 y = 14 }
+						font = "hoi_18mbs"
+						text = "pops_sol_amount"
+						format = right
+						maxWidth = 184
+						maxHeight = 18
+						pdx_tooltip = pops_sol_amount_tt
+						fixedsize = yes
+					}
+						
+					instantTextBoxType = {
+						name = "pops_col_loc"
+						position = { x = 12 y = 34 }
+						font = "hoi_18mbs"
+						text = "pops_col_loc"
+						format = left
+						maxWidth = 184
+						maxHeight = 18
+						fixedsize = yes
+						pdx_tooltip = pops_col_amount_tt
+					}
+					instantTextBoxType = {
+						name = "pops_col_amount"
+						position = { x = 12 y = 34 }
+						font = "hoi_18mbs"
+						text = "pops_col_amount"
+						format = right
+						maxWidth = 184
+						maxHeight = 18
+						fixedsize = yes
+						pdx_tooltip = pops_col_amount_tt
+					}
+				}
+			}
+			containerWindowType = {
+				name = "pops_religion_container"
+				position = { x = 428 y = 10 }
+				size = { width = 350 height = 125 }
+				Orientation = upper_left
+					
+				background = {
+					name = "pops_religion_background"
+					quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					alwaystransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "pops_religion_title"
+					position = { x = 14 y = 8 }
+					font = "hoi_24header"
+					text = "pops_religion_title"
+					format = left
+					maxWidth = 300
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				containerWindowType = {
+					name = "pops_religion_list_container"
+					position = { x = 103 y = 35 }
+					size = { width = 250 height = 80 }
+					#margin = { top = 6 bottom = 4 left = 0 right = 0 }
+					Orientation = upper_left
+					verticalScrollbar = "right_vertical_slider"
+					background = {
+						name = "Background"
+						#quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+					gridboxtype = {
+						name = "pops_religion_list"
+						position = { x = 130 y = 0 }
+						slotsize = { width = 250 height = 20 }
+						add_horizontal = no
+					}
+				}
+			}
+			containerWindowType = {
+				name = "pops_culture_container"
+				position = { x = 428 y = 131 }
+				size = { width = 350 height = 125 }
+				Orientation = upper_left
+					
+				background = {
+					name = "pops_culture_background"
+					quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					alwaystransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "pops_culture_title"
+					position = { x = 14 y = 8 }
+					font = "hoi_24header"
+					text = "pops_culture_title"
+					format = left
+					maxWidth = 300
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				containerWindowType = {
+					name = "pops_culture_list_container"
+					position = { x = 103 y = 35 }
+					size = { width = 250 height = 80 }
+					#margin = { top = 6 bottom = 4 left = 0 right = 0 }
+					Orientation = upper_left
+					verticalScrollbar = "right_vertical_slider"
+					background = {
+						name = "Background"
+						#quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+					gridboxtype = {
+						name = "pops_culture_list"
+						position = { x = 130 y = 0 }
+						slotsize = { width = 250 height = 20 }
+						add_horizontal = no
+					}
+				}
+			}
+			containerWindowType = {
+				name = "pops_ideology_container"
+				position = { x = 428 y = 252 }
+				size = { width = 350 height = 143 }
+				Orientation = upper_left
+					
+				background = {
+					name = "pops_ideology_background"
+					quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					alwaystransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "pops_ideology_title"
+					position = { x = 14 y = 8 }
+					font = "hoi_24header"
+					text = "pops_ideology_title"
+					format = left
+					maxWidth = 300
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				containerWindowType = {
+					name = "pops_ideology_list_container"
+					position = { x = 103 y = 35 }
+					size = { width = 250 height = 100 }
+					#margin = { top = 6 bottom = 4 left = 0 right = 0 }
+					Orientation = upper_left
+					verticalScrollbar = "right_vertical_slider"
+					background = {
+						name = "Background"
+						#quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+					gridboxtype = {
+						name = "pops_ideology_list"
+						position = { x = 130 y = 0 }
+						slotsize = { width = 250 height = 20 }
+						add_horizontal = no
+					}
+				}
+			}
+		}
+	}
+	containerWindowType = {
+		name = "building_tab_container"
+		position = { x=304 y=222}
+		size = {width = 787 height = 447 }
+		margin = { top = 11 bottom = 25 left = 12 right = 25 }
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window2_2b_border"
+			#alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "subsistence_farms_container"
+			position = { x=0 y=0 }
+			size = {width = 753 height = 44 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_subsistence_farms_background"
+				alwaystransparent = yes
+			}
+
+			instantTextboxType = {
+				name = "subsistence_farms_title"
+				position = { x = 7 y = 11 }
+				font = "hoi_18mbs"
+				text = "subsistence_farms_title"
+				maxWidth = 190
+				maxHeight = 20
+				format = center
+				fixedsize = yes
+			}
+
+			instantTextboxType = {
+				name = "subsistence_farms_size"
+				position = { x = 201 y = 11 }
+				font = "hoi_18mbs"
+				text = "subsistence_farms_size"
+				maxWidth = 40
+				maxHeight = 20
+				format = center
+				fixedsize = yes
+			}
+
+			iconType = {
+				name = "subsistence_farms_foodstuffs_icon"
+				quadTextureSprite ="GFX_resource_foodstuffs"
+				position = { x = 248 y = 8 }
+
+				pdx_tooltip = subsistence_farms_foodstuffs_tt
+			}
+			iconType = {
+				name = "subsistence_farms_housing_icon"
+				quadTextureSprite ="GFX_resource_housing"
+				position = { x = 282 y = 8 }
+				
+				pdx_tooltip = subsistence_farms_housing_tt
+			}
+			iconType = {
+				name = "subsistence_farms_lumber_icon"
+				quadTextureSprite ="GFX_resource_lumber"
+				position = { x = 316 y = 8 }
+				
+				pdx_tooltip = subsistence_farms_lumber_tt
+			}
+			iconType = {
+				name = "subsistence_farms_fiber_icon"
+				quadTextureSprite ="GFX_resource_fiber"
+				position = { x = 350 y = 8 }
+				
+				pdx_tooltip = subsistence_farms_fiber_tt
+			}
+			iconType = {
+				name = "subsistence_farms_fabric_icon"
+				quadTextureSprite ="GFX_resource_fabric"
+				position = { x = 384 y = 8 }
+				
+				pdx_tooltip = subsistence_farms_fabric_tt
+			}
+
+			instantTextboxType = {
+				name = "subsistence_farms_employment"
+				position = { x = 418 y = 11 }
+				font = "hoi_18mbs"
+				text = "subsistence_farms_employment"
+				maxWidth = 130
+				maxHeight = 20
+				format = right
+				fixedsize = yes
+
+				pdx_tooltip = subsistence_farms_employment_tt
+			}
+			instantTextboxType = {
+				name = "subsistence_farms_productivity"
+				position = { x = 574 y = 11 }
+				font = "hoi_18mbs"
+				text = "subsistence_farms_productivity"
+				maxWidth = 150
+				maxHeight = 20
+				format = left
+				fixedsize = yes
+			}
+			instantTextboxType = {
+				name = "subsistence_farms_revenue"
+				position = { x = 584 y = 11 }
+				font = "hoi_18mbs"
+				text = "subsistence_farms_revenue"
+				maxWidth = 150
+				maxHeight = 20
+				format = right
+				fixedsize = yes
+			}
+		}
+		containerWindowType = {
+			name = "market_capital_container"
+			position = { x=0 y=44 }
+			size = {width = 753 height = 44 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_market_capital_background"
+				alwaystransparent = yes
+			}
+
+			instantTextboxType = {
+				name = "market_capital_title"
+				position = { x = 7 y = 11 }
+				font = "hoi_18mbs"
+				text = "market_capital_title"
+				maxWidth = 190
+				maxHeight = 20
+				format = center
+				fixedsize = yes
+			}
+
+			buttonType = {
+				name = "market_capital_button"
+				quadTextureSprite = "GFX_button_steel_203x41"
+				position = { x = 208 y = 1 }
+			}
+			instantTextBoxType = {
+				name = "market_capital_button_text"
+				position = { x = 208 y = 11 }
+				font = "hoi_18mbs"
+				text = "market_capital_button_text"
+				format = center
+				maxWidth = 203
+				maxHeight = 18
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			# iconType = {
+			# 	name = "market_capital_foodstuffs_icon"
+			# 	quadTextureSprite ="GFX_resource_foodstuffs"
+			# 	position = { x = 248 y = 8 }
+
+			# 	pdx_tooltip = market_capital_foodstuffs_tt
+			# }
+
+			instantTextboxType = {
+				name = "market_capital_employment"
+				position = { x = 418 y = 11 }
+				font = "hoi_18mbs"
+				text = "market_capital_employment"
+				maxWidth = 130
+				maxHeight = 20
+				format = right
+				fixedsize = yes
+
+				pdx_tooltip = market_capital_employment_tt
+			}
+			instantTextboxType = {
+				name = "market_capital_productivity"
+				position = { x = 574 y = 11 }
+				font = "hoi_18mbs"
+				text = "market_capital_productivity"
+				maxWidth = 150
+				maxHeight = 20
+				format = left
+				fixedsize = yes
+			}
+			instantTextboxType = {
+				name = "market_capital_revenue"
+				position = { x = 584 y = 11 }
+				font = "hoi_18mbs"
+				text = "market_capital_revenue"
+				maxWidth = 150
+				maxHeight = 20
+				format = right
+				fixedsize = yes
+			}
+		}
+	}
+	containerWindowType = {
+		name = "building_list_container"
+		position = {x = 304 y = 222}
+		size = {width = 787 height = 447 }
+		margin = { top = 11 bottom = 25 left = 12 right = 25 }
+
+		verticalScrollbar = "right_vertical_slider"
+		vertical_scroll_step = 98
+		scroll_wheel_factor = 98
+		smooth_scrolling = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window2_2b_border"
+			#alwaystransparent = yes
+		}
+
+
+		iconType = {
+			name = "extractors_header"
+			spriteType ="GFX_dandt_header_industry"
+			position = { x = -1 y = 1 }
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "extractors_title"
+			position = { x = 10 y = 4 }
+			font = "hoi_24header"
+			text = "extractors_title"
+			format = left
+			maxWidth = 200
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "factories_header"
+			spriteType ="GFX_dandt_header_industry"
+			position = { x = 250 y = 1 }
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "factories_title"
+			position = { x = 260 y = 4 }
+			font = "hoi_24header"
+			text = "factories_title"
+			format = left
+			maxWidth = 200
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "services_header"
+			spriteType ="GFX_dandt_header_industry"
+			position = { x = 500 y = 1 }
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "services_title"
+			position = { x = 510 y = 4 }
+			font = "hoi_24header"
+			text = "services_title"
+			format = left
+			maxWidth = 200
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		gridboxtype = {
+			name = "industries_list"
+			position = { x = 125 y = 34 }
+			size = { width = 0 height = 100%% }
+			slotsize = { width = 250 height = 196 }
+			add_horizontal = yes
+			max_slots_horizontal = 3
+		}
+	}
+	containerWindowType = {
+		name = "resources_list_container"
+		position = { x = 304 y = 193 }
+		size = { width = 785 height = 475 }
+		#margin = { top = 13 bottom = 25 left = 10 right = 25 }
+		
+		#background = {
+		#	name = "Background"
+		#	quadTextureSprite = "GFX_tiled_window2_2b_border"
+		#}
+
+		containerWindowType = {
+			name = "resources_display_type_selector"
+			position = { x = 0 y = 0 }
+			size = { width = 785 height = 107 }
+
+			iconType = {
+				name = "resources_header"
+				spriteType ="GFX_dandt_generic_large_header_lime"
+				position = { x = 0 y = 2 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "_resources_title"
+				position = { x = 0 y = 6 }
+				font = "hoi_24header"
+				text = "resources_title"
+				format = center
+				maxWidth = 785
+				maxHeight = 24
+				fixedsize = yes
+			}
+			#background = {
+			#	name = "Background"
+			#	quadTextureSprite ="GFX_fullborder_tiled"
+			#	position = { x=0 y=0 }					
+			#}
+		}
+		containerWindowType = {
+			name = "resources_lists"
+			position = { x = 0 y = 33 }
+			size = { width = 785 height = 442 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_fullborder_tiled"
+				position = { x=0 y=0 }					
+			}
+
+			iconType = {
+				name = "natural_resources_header"
+				spriteType ="GFX_dandt_generic_large_header_yellow"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "natural_resources_title"
+				position = { x = 38 y = 4 }
+				font = "hoi_24header"
+				text = "natural_resources_title"
+				format = left
+				maxWidth = 300
+				maxHeight = 18
+				fixedsize = yes
+			}
+			# gridboxtype = {
+			# 	name = "natural_resources_list"
+			# 	position = { x = 63 y = 33 }
+			# 	size = { width = 0 height = 70 }
+			# 	slotsize = { width = 110 height = 33 }
+			# 	max_slots_horizontal = 7
+			# 	add_horizontal = yes
+			# }
+			#Natural Resource Entries
+				containerWindowType = {
+					name = "nat_resources"
+					position = { x = 8 y = 33 } 
+					size = { width = 780 height = 70 }
+
+					containerWindowType = {
+						name = "foodstuffs_entry"
+						position = { x = 0 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "foodstuffs_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_foodstuffs_desc
+						}
+
+						iconType = {
+							name = "foodstuffs_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 13
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "foodstuffs_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_foodstuffs"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_foodstuffs_desc
+						}
+						instantTextBoxType = {
+							name = "foodstuffs_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "foodstuffs_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = foodstuffs_entry_tt
+							pdx_tooltip_delayed = resource_foodstuffs_desc
+						}
+					}
+					containerWindowType = {
+						name = "lumber_entry"
+						position = { x = 110 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "lumber_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_lumber_desc
+						}
+
+						iconType = {
+							name = "lumber_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 11
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "lumber_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_lumber"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_lumber_desc
+						}
+						instantTextBoxType = {
+							name = "lumber_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "lumber_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = lumber_entry_tt
+							pdx_tooltip_delayed = resource_lumber_desc
+						}
+					}
+					containerWindowType = {
+						name = "coal_entry"
+						position = { x = 220 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "coal_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_coal_desc
+						}
+
+						iconType = {
+							name = "coal_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 10
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "coal_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_coal"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_coal_desc
+						}
+						instantTextBoxType = {
+							name = "coal_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "coal_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = coal_entry_tt
+							pdx_tooltip_delayed = resource_coal_desc
+						}
+					}
+					containerWindowType = {
+						name = "iron_entry"
+						position = { x = 330 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "iron_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_iron_desc
+						}
+
+						iconType = {
+							name = "iron_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 6
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "iron_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_iron"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_iron_desc
+						}
+						instantTextBoxType = {
+							name = "iron_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "iron_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = iron_entry_tt
+							pdx_tooltip_delayed = resource_iron_desc
+						}
+					}
+					containerWindowType = {
+						name = "fiber_entry"
+						position = { x = 440 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "fiber_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_fiber_desc
+						}
+
+						iconType = {
+							name = "fiber_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 12
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "fiber_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_fiber"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_fiber_desc
+						}
+						instantTextBoxType = {
+							name = "fiber_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "fiber_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = fiber_entry_tt
+							pdx_tooltip_delayed = resource_fiber_desc
+						}
+					}
+
+					containerWindowType = {
+						name = "sulfur_entry"
+						position = { x = 0 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "sulfur_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_sulfur_desc
+						}
+
+						iconType = {
+							name = "sulfur_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 33
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "sulfur_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_sulfur"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_sulfur_desc
+						}
+						instantTextBoxType = {
+							name = "sulfur_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "sulfur_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = sulfur_entry_tt
+							pdx_tooltip_delayed = resource_sulfur_desc
+						}
+					}
+					containerWindowType = {
+						name = "copper_entry"
+						position = { x = 110 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "copper_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_copper_desc
+						}
+
+						iconType = {
+							name = "copper_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 8
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "copper_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_copper"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_copper_desc
+						}
+						instantTextBoxType = {
+							name = "copper_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "copper_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = copper_entry_tt
+							pdx_tooltip_delayed = resource_copper_desc
+						}
+					}
+					containerWindowType = {
+						name = "aluminum_entry"
+						position = { x = 220 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "aluminum_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_aluminum_desc
+						}
+
+						iconType = {
+							name = "aluminum_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 3
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "aluminum_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_aluminum"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_aluminum_desc
+						}
+						instantTextBoxType = {
+							name = "aluminum_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "aluminum_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = aluminum_entry_tt
+							pdx_tooltip_delayed = resource_aluminum_desc
+						}
+					}
+					containerWindowType = {
+						name = "tungsten_entry"
+						position = { x = 330 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "tungsten_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_tungsten_desc
+						}
+
+						iconType = {
+							name = "tungsten_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 5
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "tungsten_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_tungsten"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_tungsten_desc
+						}
+						instantTextBoxType = {
+							name = "tungsten_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "tungsten_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = tungsten_entry_tt
+							pdx_tooltip_delayed = resource_tungsten_desc
+						}
+					}
+					containerWindowType = {
+						name = "chromium_entry"
+						position = { x = 440 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "chromium_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_chromium_desc
+						}
+
+						iconType = {
+							name = "chromium_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 7
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "chromium_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_chromium"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_chromium_desc
+						}
+						instantTextBoxType = {
+							name = "chromium_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "chromium_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = chromium_entry_tt
+							pdx_tooltip_delayed = resource_chromium_desc
+						}
+					}
+
+					containerWindowType = {
+						name = "crude_oil_entry"
+						position = { x = 0 y = 66 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "crude_oil_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_crude_oil_desc
+						}
+
+						iconType = {
+							name = "crude_oil_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 2
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "crude_oil_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_crude_oil"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_crude_oil_desc
+						}
+						instantTextBoxType = {
+							name = "crude_oil_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "crude_oil_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = crude_oil_entry_tt
+							pdx_tooltip_delayed = resource_crude_oil_desc
+						}
+					}
+					containerWindowType = {
+						name = "rubber_entry"
+						position = { x = 110 y = 66 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "rubber_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_rubber_desc
+						}
+
+						iconType = {
+							name = "rubber_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 4
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "rubber_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_rubber"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_rubber_desc
+						}
+						instantTextBoxType = {
+							name = "rubber_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "rubber_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = rubber_entry_tt
+							pdx_tooltip_delayed = resource_rubber_desc
+						}
+					}
+					containerWindowType = {
+						name = "precious_metals_entry"
+						position = { x = 220 y = 66 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "precious_metals_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_precious_metals_desc
+						}
+
+						iconType = {
+							name = "precious_metals_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 9
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "precious_metals_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_precious_metals"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_precious_metals_desc
+						}
+						instantTextBoxType = {
+							name = "precious_metals_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "precious_metals_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = precious_metals_entry_tt
+							pdx_tooltip_delayed = resource_precious_metals_desc
+						}
+					}
+					containerWindowType = {
+						name = "rare_earth_metals_entry"
+						position = { x = 330 y = 66 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "rare_earth_metals_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_rare_earth_metals_desc
+						}
+
+						iconType = {
+							name = "rare_earth_metals_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 16
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "rare_earth_metals_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_rare_earth_metals"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_rare_earth_metals_desc
+						}
+						instantTextBoxType = {
+							name = "rare_earth_metals_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "rare_earth_metals_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = rare_earth_metals_entry_tt
+							pdx_tooltip_delayed = resource_rare_earth_metals_desc
+						}
+					}
+				}
+			#
+
+			iconType = {
+				name = "produced_resources_header"
+				spriteType ="GFX_dandt_generic_large_header_red"
+				position = { x = 0 y = 130 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "produced_resources_title"
+				position = { x = 38 y = 134 }
+				font = "hoi_24header"
+				text = "produced_resources_title"
+				format = left
+				maxWidth = 300
+				maxHeight = 18
+				fixedsize = yes
+			}
+			# gridboxtype = {
+			# 	name = "produced_resources_list"
+			# 	position = { x = 63 y = 130 }
+			# 	size = { width = 0 height = 140 }
+			# 	slotsize = { width = 110 height = 33 }
+			# 	max_slots_horizontal = 7
+			# 	add_horizontal = yes
+			# }
+			#Produced Resource Entries
+
+				containerWindowType = {
+					name = "prod_resources"
+					position = { x = 8 y = 163 } 
+					size = { width = 780 height = 70 }
+
+					containerWindowType = {
+						name = "steel_entry"
+						position = { x = 0 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "steel_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_steel_desc
+						}
+
+						iconType = {
+							name = "steel_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 15
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "steel_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_steel"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_steel_desc
+						}
+						instantTextBoxType = {
+							name = "steel_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "steel_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = steel_entry_tt
+							pdx_tooltip_delayed = resource_steel_desc
+						}
+					}
+					containerWindowType = {
+						name = "cement_entry"
+						position = { x = 110 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "cement_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_cement_desc
+						}
+
+						iconType = {
+							name = "cement_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 17
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "cement_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_cement"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_cement_desc
+						}
+						instantTextBoxType = {
+							name = "cement_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "cement_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = cement_entry_tt
+							pdx_tooltip_delayed = resource_cement_desc
+						}
+					}
+					containerWindowType = {
+						name = "silicates_entry"
+						position = { x = 220 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "silicates_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_silicates_desc
+						}
+
+						iconType = {
+							name = "silicates_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 18
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "silicates_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_silicates"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_silicates_desc
+						}
+						instantTextBoxType = {
+							name = "silicates_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "silicates_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = silicates_entry_tt
+							pdx_tooltip_delayed = resource_silicates_desc
+						}
+					}
+					containerWindowType = {
+						name = "tools_entry"
+						position = { x = 330 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "tools_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_tools_desc
+						}
+
+						iconType = {
+							name = "tools_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 41
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "tools_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_tools"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_tools_desc
+						}
+						instantTextBoxType = {
+							name = "tools_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "tools_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = tools_entry_tt
+							pdx_tooltip_delayed = resource_tools_desc
+						}
+					}
+					containerWindowType = {
+						name = "fabric_entry"
+						position = { x = 440 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "fabric_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_fabric_desc
+						}
+
+						iconType = {
+							name = "fabric_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 20
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "fabric_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_fabric"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_fabric_desc
+						}
+						instantTextBoxType = {
+							name = "fabric_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "fabric_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = fabric_entry_tt
+							pdx_tooltip_delayed = resource_fabric_desc
+						}
+					}
+					
+					containerWindowType = {
+						name = "groceries_entry"
+						position = { x = 0 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "groceries_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_groceries_desc
+						}
+
+						iconType = {
+							name = "groceries_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 29
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "groceries_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_groceries"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_groceries_desc
+						}
+						instantTextBoxType = {
+							name = "groceries_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "groceries_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = groceries_entry_tt
+							pdx_tooltip_delayed = resource_groceries_desc
+						}
+					}
+					containerWindowType = {
+						name = "clothing_entry"
+						position = { x = 110 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "clothing_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_clothing_desc
+						}
+
+						iconType = {
+							name = "clothing_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 31
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "clothing_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_clothing"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_clothing_desc
+						}
+						instantTextBoxType = {
+							name = "clothing_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "clothing_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = fabric_entry_tt
+							pdx_tooltip_delayed = resource_fabric_desc
+						}
+					}
+					containerWindowType = {
+						name = "consumer_goods_entry"
+						position = { x = 220 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "consumer_goods_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_consumer_goods_desc
+						}
+
+						iconType = {
+							name = "consumer_goods_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 32
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "consumer_goods_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_consumer_goods"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_consumer_goods_desc
+						}
+						instantTextBoxType = {
+							name = "consumer_goods_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "consumer_goods_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = consumer_goods_entry_tt
+							pdx_tooltip_delayed = resource_consumer_goods_desc
+						}
+					}
+					containerWindowType = {
+						name = "electronics_entry"
+						position = { x = 330 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "electronics_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_electronics_desc
+						}
+
+						iconType = {
+							name = "electronics_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 28
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "electronics_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_electronics"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_electronics_desc
+						}
+						instantTextBoxType = {
+							name = "electronics_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "electronics_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = electronics_entry_tt
+							pdx_tooltip_delayed = resource_electronics_desc
+						}
+					}
+					containerWindowType = {
+						name = "computers_entry"
+						position = { x = 440 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "computers_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_computers_desc
+						}
+
+						iconType = {
+							name = "computers_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 27
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "computers_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_computers"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_computers_desc
+						}
+						instantTextBoxType = {
+							name = "computers_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "computers_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = computers_entry_tt
+							pdx_tooltip_delayed = resource_computers_desc
+						}
+					}
+					
+					containerWindowType = {
+						name = "small_arms_entry"
+						position = { x = 0 y = 66 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "small_arms_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_small_arms_desc
+						}
+
+						iconType = {
+							name = "small_arms_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 35
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "small_arms_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_small_arms"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_small_arms_desc
+						}
+						instantTextBoxType = {
+							name = "small_arms_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "small_arms_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = small_arms_entry_tt
+							pdx_tooltip_delayed = resource_small_arms_desc
+						}
+					}
+					containerWindowType = {
+						name = "artillery_entry"
+						position = { x = 110 y = 66 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "artillery_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_artillery_desc
+						}
+
+						iconType = {
+							name = "artillery_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 36
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "artillery_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_artillery"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_artillery_desc
+						}
+						instantTextBoxType = {
+							name = "artillery_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "artillery_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = artillery_entry_tt
+							pdx_tooltip_delayed = resource_artillery_desc
+						}
+					}
+					containerWindowType = {
+						name = "tanks_entry"
+						position = { x = 220 y = 66 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "tanks_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_tanks_desc
+						}
+
+						iconType = {
+							name = "tanks_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 37
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "tanks_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_tanks"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_tanks_desc
+						}
+						instantTextBoxType = {
+							name = "tanks_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "tanks_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = tanks_entry_tt
+							pdx_tooltip_delayed = resource_tanks_desc
+						}
+					}
+					containerWindowType = {
+						name = "ammunition_entry"
+						position = { x = 330 y = 66 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "ammunition_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_ammunition_desc
+						}
+
+						iconType = {
+							name = "ammunition_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 38
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "ammunition_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_ammunition"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_ammunition_desc
+						}
+						instantTextBoxType = {
+							name = "ammunition_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "ammunition_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = ammunition_entry_tt
+							pdx_tooltip_delayed = resource_ammunition_desc
+						}
+					}
+					containerWindowType = {
+						name = "rockets_entry"
+						position = { x = 440 y = 66 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "rockets_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_rockets_desc
+						}
+
+						iconType = {
+							name = "rockets_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 39
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "rockets_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_rockets"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_rockets_desc
+						}
+						instantTextBoxType = {
+							name = "rockets_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "rockets_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = rockets_entry_tt
+							pdx_tooltip_delayed = resource_rockets_desc
+						}
+					}
+					
+					containerWindowType = {
+						name = "electricity_entry"
+						position = { x = 0 y = 99 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "electricity_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_electricity_desc
+						}
+
+						iconType = {
+							name = "electricity_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 14
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "electricity_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_electricity"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_electricity_desc
+						}
+						instantTextBoxType = {
+							name = "electricity_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "electricity_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = electricity_entry_tt
+							pdx_tooltip_delayed = resource_electricity_desc
+						}
+					}
+					containerWindowType = {
+						name = "hydrocarbons_entry"
+						position = { x = 110 y = 99 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "hydrocarbons_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_hydrocarbons_desc
+						}
+
+						iconType = {
+							name = "hydrocarbons_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 24
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "hydrocarbons_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_hydrocarbons"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_hydrocarbons_desc
+						}
+						instantTextBoxType = {
+							name = "hydrocarbons_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "hydrocarbons_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = hydrocarbons_entry_tt
+							pdx_tooltip_delayed = resource_hydrocarbons_desc
+						}
+					}
+					containerWindowType = {
+						name = "automobiles_entry"
+						position = { x = 220 y = 99 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "automobiles_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_automobiles_desc
+						}
+
+						iconType = {
+							name = "automobiles_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 25
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "automobiles_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_automobiles"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_automobiles_desc
+						}
+						instantTextBoxType = {
+							name = "automobiles_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "automobiles_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = automobiles_entry_tt
+							pdx_tooltip_delayed = resource_automobiles_desc
+						}
+					}
+					containerWindowType = {
+						name = "convoys_entry"
+						position = { x = 330 y = 99 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "convoys_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_convoys_desc
+						}
+
+						iconType = {
+							name = "convoys_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 34
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "convoys_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_convoys"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_convoys_desc
+						}
+						instantTextBoxType = {
+							name = "convoys_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "convoys_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = convoys_entry_tt
+							pdx_tooltip_delayed = resource_convoys_desc
+						}
+					}
+					containerWindowType = {
+						name = "airplanes_entry"
+						position = { x = 440 y = 99 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "airplanes_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_airplanes_desc
+						}
+
+						iconType = {
+							name = "airplanes_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 26
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "airplanes_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_airplanes"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_airplanes_desc
+						}
+						instantTextBoxType = {
+							name = "airplanes_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "airplanes_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = airplanes_entry_tt
+							pdx_tooltip_delayed = resource_airplanes_desc
+						}
+					}
+					
+					containerWindowType = {
+						name = "machinery_entry"
+						position = { x = 0 y = 132 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "machinery_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_machinery_desc
+						}
+
+						iconType = {
+							name = "machinery_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 21
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "machinery_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_machinery"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_machinery_desc
+						}
+						instantTextBoxType = {
+							name = "machinery_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "machinery_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = machinery_entry_tt
+							pdx_tooltip_delayed = resource_machinery_desc
+						}
+					}
+					containerWindowType = {
+						name = "plastics_entry"
+						position = { x = 110 y = 132 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "plastics_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_plastics_desc
+						}
+
+						iconType = {
+							name = "plastics_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 22
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "plastics_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_plastics"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_plastics_desc
+						}
+						instantTextBoxType = {
+							name = "plastics_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "plastics_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = plastics_entry_tt
+							pdx_tooltip_delayed = resource_plastics_desc
+						}
+					}
+					containerWindowType = {
+						name = "chemicals_entry"
+						position = { x = 220 y = 132 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "chemicals_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_chemicals_desc
+						}
+
+						iconType = {
+							name = "chemicals_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 19
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "chemicals_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_chemicals"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_chemicals_desc
+						}
+						instantTextBoxType = {
+							name = "chemicals_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "chemicals_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = chemicals_entry_tt
+							pdx_tooltip_delayed = resource_chemicals_desc
+						}
+					}
+					containerWindowType = {
+						name = "fertilizer_entry"
+						position = { x = 330 y = 132 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "fertilizer_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_fertilizer_desc
+						}
+
+						iconType = {
+							name = "fertilizer_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 23
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "fertilizer_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_fertilizer"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_fertilizer_desc
+						}
+						instantTextBoxType = {
+							name = "fertilizer_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "fertilizer_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = fertilizer_entry_tt
+							pdx_tooltip_delayed = resource_fertilizer_desc
+						}
+					}
+					containerWindowType = {
+						name = "pharmaceuticals_entry"
+						position = { x = 440 y = 132 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "pharmaceuticals_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_pharmaceuticals_desc
+						}
+
+						iconType = {
+							name = "pharmaceuticals_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 30
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "pharmaceuticals_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_pharmaceuticals"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_pharmaceuticals_desc
+						}
+						instantTextBoxType = {
+							name = "pharmaceuticals_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "pharmaceuticals_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = pharmaceuticals_entry_tt
+							pdx_tooltip_delayed = resource_pharmaceuticals_desc
+						}
+					}
+				}
+			#
+
+
+			iconType = {
+				name = "service_resources_header"
+				spriteType ="GFX_dandt_generic_large_header_blue"
+				position = { x = 0 y = 326 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "service_resources_title"
+				position = { x = 38 y = 330 }
+				font = "hoi_24header"
+				text = "service_resources_title"
+				format = left
+				maxWidth = 300
+				maxHeight = 18
+				fixedsize = yes
+			}
+			# gridboxtype = {
+			# 	name = "service_resources_list"
+			# 	position = { x = 63 y = 295 }
+			# 	size = { width = 0 height = 70 }
+			# 	slotsize = { width = 110 height = 33 }
+			# 	max_slots_horizontal = 7
+			# 	add_horizontal = yes
+			# }
+			#Service Resource Entries
+				containerWindowType = {
+					name = "ser_resources"
+					position = { x = 8 y = 361 } 
+					size = { width = 780 height = 70 }
+
+					containerWindowType = {
+						name = "construction_entry"
+						position = { x = 0 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "construction_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_construction_desc
+						}
+
+						iconType = {
+							name = "construction_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 40
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "construction_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_construction"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_construction_desc
+						}
+						instantTextBoxType = {
+							name = "construction_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "construction_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = construction_entry_tt
+							pdx_tooltip_delayed = resource_construction_desc
+						}
+					}
+					containerWindowType = {
+						name = "housing_entry"
+						position = { x = 110 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "housing_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_housing_desc
+						}
+
+						iconType = {
+							name = "housing_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 48
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "housing_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_housing"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_housing_desc
+						}
+						instantTextBoxType = {
+							name = "housing_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "housing_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = housing_entry_tt
+							pdx_tooltip_delayed = resource_housing_desc
+						}
+					}
+					containerWindowType = {
+						name = "healthcare_entry"
+						position = { x = 220 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "healthcare_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_healthcare_desc
+						}
+
+						iconType = {
+							name = "healthcare_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 42
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "healthcare_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_healthcare"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_healthcare_desc
+						}
+						instantTextBoxType = {
+							name = "healthcare_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "healthcare_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = healthcare_entry_tt
+							pdx_tooltip_delayed = resource_healthcare_desc
+						}
+					}
+					containerWindowType = {
+						name = "basic_education_entry"
+						position = { x = 330 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "basic_education_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_basic_education_desc
+						}
+
+						iconType = {
+							name = "basic_education_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 43
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "basic_education_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_basic_education"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_basic_education_desc
+						}
+						instantTextBoxType = {
+							name = "basic_education_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "basic_education_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = basic_education_entry_tt
+							pdx_tooltip_delayed = resource_basic_education_desc
+						}
+					}
+					containerWindowType = {
+						name = "higher_education_entry"
+						position = { x = 440 y = 0 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "higher_education_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_higher_education_desc
+						}
+
+						iconType = {
+							name = "higher_education_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 44
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "higher_education_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_higher_education"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_higher_education_desc
+						}
+						instantTextBoxType = {
+							name = "higher_education_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "higher_education_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = higher_education_entry_tt
+							pdx_tooltip_delayed = resource_higher_education_desc
+						}
+					}
+					containerWindowType = {
+						name = "transport_entry"
+						position = { x = 0 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "transport_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_transport_desc
+						}
+
+						iconType = {
+							name = "transport_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 45
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "transport_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_transport"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_transport_desc
+						}
+						instantTextBoxType = {
+							name = "transport_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "transport_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = transport_entry_tt
+							pdx_tooltip_delayed = resource_transport_desc
+						}
+					}
+					containerWindowType = {
+						name = "shipping_entry"
+						position = { x = 110 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "shipping_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_shipping_desc
+						}
+
+						iconType = {
+							name = "shipping_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 46
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "shipping_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_shipping"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_shipping_desc
+						}
+						instantTextBoxType = {
+							name = "shipping_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "shipping_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = shipping_entry_tt
+							pdx_tooltip_delayed = resource_shipping_desc
+						}
+					}
+					
+					containerWindowType = {
+						name = "finance_entry"
+						position = { x = 220 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "finance_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_finance_desc
+						}
+
+						iconType = {
+							name = "finance_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 47
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "finance_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_finance"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_finance_desc
+						}
+						instantTextBoxType = {
+							name = "finance_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "finance_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = finance_entry_tt
+							pdx_tooltip_delayed = resource_finance_desc
+						}
+					}
+					containerWindowType = {
+						name = "entertainment_entry"
+						position = { x = 330 y = 33 } 
+						size = { width = 110 height = 33 }
+
+						buttonType = {
+							name = "entertainment_entry_background"
+							quadTextureSprite ="GFX_dandt_resource_entry"
+							position = { x = -2 y = -2 }
+							pdx_tooltip_delayed = resource_entertainment_desc
+						}
+
+						iconType = {
+							name = "entertainment_entry_icon"
+							quadTextureSprite ="GFX_resources_strip"
+							position = { x = 3 y = 3 }
+							frame = 49
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name = "entertainment_entry_name"
+							position = { x = 37 y = 1 }
+							font = "Arial12"
+							text = "resource_entertainment"
+							format = left
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip_delayed = resource_entertainment_desc
+						}
+						instantTextBoxType = {
+							name = "entertainment_entry_loc"
+							position = { x = 34 y = 16 }
+							font = "Arial12"
+							text = "entertainment_entry_loc"
+							format = right
+							maxWidth = 74
+							maxHeight = 20
+							fixedsize = yes
+							pdx_tooltip = entertainment_entry_tt
+							pdx_tooltip_delayed = resource_entertainment_desc
+						}
+					}
+				}
+			#
+		}
+		containerWindowType = {
+			name = "resources_selected_display"
+			position = { x = 566 y = 32 }
+			size = { width = 219 height = 444 }
+
+			iconType = {
+				name = "selected_resource_background"
+				spriteType ="GFX_selected_resource_background"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "resources_selected_title"
+				position = { x = 0 y = 5 }
+				font = "hoi_24header"
+				text = "resources_selected_title"
+				format = center
+				maxWidth = 219
+				maxHeight = 24
+				fixedsize = yes
+			}
+
+			iconType = {
+				name = "selected_resource_icon"
+				spriteType ="GFX_resource_iron"
+				position = { x = 16 y = 42 }
+			}
+
+			instantTextBoxType = {
+				name = "resources_selected_price"
+				position = { x = 52 y = 45 }
+				font = "hoi_18mbs"
+				text = "resources_selected_price"
+				format = left
+				maxWidth = 119
+				maxHeight = 24
+				fixedsize = yes
+			}
+			
+			iconType = {
+				name = "cost_icon"
+				spriteType ="GFX_price_average"
+				position = { x = 140 y = 42 }
+			}
+			
+
+			instantTextBoxType = {
+				name = "resources_selected_supply_title"
+				position = { x = 16 y = 195 }
+				font = "hoi_16mbs"
+				text = "resources_selected_supply_title"
+				format = left
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "resources_selected_supply"
+				position = { x = 72 y = 195 }
+				font = "hoi_16mbs"
+				text = "resources_selected_supply"
+				format = right
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			
+			instantTextBoxType = {
+				name = "resources_selected_demand_title"
+				position = { x = 16 y = 212 }
+				font = "hoi_16mbs"
+				text = "resources_selected_demand_title"
+				format = left
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "resources_selected_demand"
+				position = { x = 72 y = 212 }
+				font = "hoi_16mbs"
+				text = "resources_selected_demand"
+				format = right
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			
+			instantTextBoxType = {
+				name = "resources_selected_supply_trade_title"
+				position = { x = 16 y = 229 }
+				font = "hoi_16mbs"
+				text = "resources_selected_supply_trade_title"
+				format = left
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "resources_selected_supply_trade"
+				position = { x = 72 y = 229 }
+				font = "hoi_16mbs"
+				text = "resources_selected_supply_trade"
+				format = right
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			
+			instantTextBoxType = {
+				name = "resources_selected_production_title"
+				position = { x = 16 y = 249 }
+				font = "hoi_16mbs"
+				text = "resources_selected_production_title"
+				format = left
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "resources_selected_production"
+				position = { x = 72 y = 249 }
+				font = "hoi_16mbs"
+				text = "resources_selected_production"
+				format = right
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			
+			instantTextBoxType = {
+				name = "resources_selected_base_price_title"
+				position = { x = 16 y = 266 }
+				font = "hoi_16mbs"
+				text = "resources_selected_base_price_title"
+				format = left
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "resources_selected_base_price"
+				position = { x = 72 y = 266 }
+				font = "hoi_16mbs"
+				text = "resources_selected_base_price"
+				format = right
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			
+			instantTextBoxType = {
+				name = "resources_selected_gdp_title"
+				position = { x = 16 y = 286 }
+				font = "hoi_16mbs"
+				text = "resources_selected_gdp_title"
+				format = left
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "resources_selected_gdp"
+				position = { x = 72 y = 286 }
+				font = "hoi_16mbs"
+				text = "resources_selected_gdp"
+				format = right
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			
+			instantTextBoxType = {
+				name = "resources_selected_gdp_percentage_title"
+				position = { x = 16 y = 303 }
+				font = "hoi_16mbs"
+				text = "resources_selected_gdp_percentage_title"
+				format = left
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "resources_selected_gdp_percentage"
+				position = { x = 72 y = 303 }
+				font = "hoi_16mbs"
+				text = "resources_selected_gdp_percentage"
+				format = right
+				maxWidth = 127
+				maxHeight = 24
+				fixedsize = yes
+			}
+		}
+	}
+	containerWindowType = {
+		name = "statistics_list_container"
+		position = {x = 308 y = 197}
+		size = { width = 785 height = 475 }
+		#margin = { top = 13 bottom = 25 left = 10 right = 25 }
+		
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_state_overview_background"
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "overview_container"
+			position = {x = 10 y = 2}
+			size = { width = 380 height = 250 }
+			
+			instantTextBoxType = {
+				name = "overview_title"
+				position = { x = 5 y = 7 }
+				font = "hoi_24header"
+				text = "overview_title"
+				format = center
+				maxWidth = 350
+				maxHeight = 18
+				fixedsize = yes
+			}
+
+			#Population
+				iconType = {
+					name = "overview_population_icon"
+					spriteType ="GFX_population_icon"
+					position = { x = 10 y = 54 }
+					pdx_tooltip = overview_population_tt
+				}
+				instantTextBoxType = {
+					name = "overview_population_amount"
+					position = { x = 44 y = 54 }
+					font = "hoi_18mbs"
+					text = "overview_population_amount"
+					format = left
+					maxWidth = 68
+					maxHeight = 18
+					fixedsize = yes
+					pdx_tooltip = overview_population_tt
+				}
+				instantTextBoxType = {
+					name = "overview_population_change"
+					position = { x = 48 y = 71 }
+					font = "hoi_16mbs"
+					text = "overview_population_change"
+					format = left
+					maxWidth = 66
+					maxHeight = 18
+					fixedsize = yes
+					pdx_tooltip = overview_population_tt
+				}
+				
+				iconType = {
+					name = "overview_workforce_icon"
+					spriteType ="GFX_workforce_icon"
+					position = { x = 113 y = 46 }
+					pdx_tooltip = overview_workforce_tt
+				}
+				instantTextBoxType = {
+					name = "overview_workforce_amount"
+					position = { x = 134 y = 49 }
+					font = "hoi_16mbs"
+					text = "overview_workforce_amount"
+					format = left
+					maxWidth = 63
+					maxHeight = 18
+					fixedsize = yes
+					pdx_tooltip = overview_workforce_tt
+				}
+
+				iconType = {
+					name = "overview_employed_icon"
+					spriteType ="GFX_employed_icon"
+					position = { x = 110 y = 74 }
+					pdx_tooltip = overview_workforce_tt
+				}
+				instantTextBoxType = {
+					name = "overview_unemployed_percentage"
+					position = { x = 137 y = 77 }
+					font = "hoi_16mbs"
+					text = "overview_unemployed_percentage"
+					format = left
+					maxWidth = 60
+					maxHeight = 18
+					fixedsize = yes
+					pdx_tooltip = overview_workforce_tt
+				}
+
+				iconType = {
+					name = "overview_standard_of_living_icon"
+					spriteType ="GFX_standard_of_living_icon"
+					position = { x = 195 y = 46 }
+				}
+				instantTextBoxType = {
+					name = "overview_standard_of_living_amount"
+					position = { x = 230 y = 49 }
+					font = "hoi_16mbs"
+					text = "overview_standard_of_living_amount"
+					format = left
+					maxWidth = 63
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "overview_cost_of_living_icon"
+					spriteType ="GFX_cost_of_living_icon"
+					position = { x = 195 y = 74 }
+				}
+				instantTextBoxType = {
+					name = "overview_cost_of_living_amount"
+					position = { x = 230 y = 76 }
+					font = "hoi_16mbs"
+					text = "overview_cost_of_living_amount"
+					format = left
+					maxWidth = 63
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "overview_life_needs"
+					spriteType ="GFX_pops_life_needs_fulfilled_strip"
+					position = { x = 290 y = 58 }
+					frame = 1
+				}
+				iconType = {
+					name = "overview_daily_needs"
+					spriteType ="GFX_pops_everyday_needs_fulfilled_strip"
+					position = { x = 312 y = 58 }
+					frame = 1
+				}
+				iconType = {
+					name = "overview_luxury_needs"
+					spriteType ="GFX_pops_luxury_needs_fulfilled_strip"
+					position = { x = 335 y = 58 }
+					frame = 1
+				}
+			#
+
+			#Economy
+				iconType = {
+					name = "overview_gdp_icon"
+					spriteType ="GFX_gdp_icon"
+					position = { x = 10 y = 123 }
+				}
+				instantTextBoxType = {
+					name = "overview_gdp_amount"
+					position = { x = 42 y = 121 }
+					font = "hoi_18mbs"
+					text = "overview_gdp_amount"
+					format = left
+					maxWidth = 78
+					maxHeight = 18
+					fixedsize = yes
+				}
+				instantTextBoxType = {
+					name = "overview_gdp_change"
+					position = { x = 46 y = 138 }
+					font = "hoi_16mbs"
+					text = "overview_gdp_change"
+					format = left
+					maxWidth = 66
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "overview_imports_icon"
+					spriteType ="GFX_imports_icon"
+					position = { x = 120 y = 111 }
+				}
+				instantTextBoxType = {
+					name = "overview_imports_amount"
+					position = { x = 152 y = 115 }
+					font = "hoi_18mbs"
+					text = "overview_imports_amount"
+					format = left
+					maxWidth = 86
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "overview_exports_icon"
+					spriteType ="GFX_exports_icon"
+					position = { x = 120 y = 138 }
+				}
+				instantTextBoxType = {
+					name = "overview_exports_amount"
+					position = { x = 152 y = 142 }
+					font = "hoi_18mbs"
+					text = "overview_exports_amount"
+					format = left
+					maxWidth = 86
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "overview_currency_supply_icon"
+					spriteType ="GFX_currency_supply_icon"
+					position = { x = 235 y = 111 }
+				}
+				instantTextBoxType = {
+					name = "overview_currency_supply_amount"
+					position = { x = 269 y = 114 }
+					font = "hoi_18mbs"
+					text = "overview_currency_supply_amount"
+					format = left
+					maxWidth = 86
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "overview_wealth_icon"
+					spriteType ="GFX_wealth_icon"
+					position = { x = 235 y = 138 }
+				}
+				instantTextBoxType = {
+					name = "overview_wealth_amount"
+					position = { x = 269 y = 141 }
+					font = "hoi_18mbs"
+					text = "overview_wealth_amount"
+					format = left
+					maxWidth = 86
+					maxHeight = 18
+					fixedsize = yes
+				}
+			#
+
+			#Infrastructure
+				iconType = {
+					name = "overview_road_icon"
+					spriteType ="GFX_road_icon"
+					position = { x = 5 y = 185 }
+				}
+				instantTextBoxType = {
+					name = "overview_road_bonus"
+					position = { x = 38 y = 197 }
+					font = "hoi_16mbs"
+					text = "overview_road_bonus"
+					format = center
+					maxWidth = 49
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "overview_highway_icon"
+					spriteType ="GFX_highway_icon"
+					position = { x = 100 y = 185 }
+				}
+				instantTextBoxType = {
+					name = "overview_short_haul_usage"
+					position = { x = 137 y = 189 }
+					font = "hoi_16mbs"
+					text = "overview_short_haul_usage"
+					format = center
+					maxWidth = 39
+					maxHeight = 18
+					fixedsize = yes
+				}
+				instantTextBoxType = {
+					name = "overview_short_haul_capacity"
+					position = { x = 137 y = 205 }
+					font = "hoi_16mbs"
+					text = "overview_short_haul_capacity"
+					format = center
+					maxWidth = 39
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "overview_rail_icon"
+					spriteType ="GFX_rail_icon"
+					position = { x = 183 y = 185 }
+				}
+				instantTextBoxType = {
+					name = "overview_long_haul_usage"
+					position = { x = 212 y = 189 }
+					font = "hoi_16mbs"
+					text = "overview_long_haul_usage"
+					format = center
+					maxWidth = 49
+					maxHeight = 18
+					fixedsize = yes
+				}
+				instantTextBoxType = {
+					name = "overview_long_haul_capacity"
+					position = { x = 212 y = 205 }
+					font = "hoi_16mbs"
+					text = "overview_long_haul_capacity"
+					format = center
+					maxWidth = 49
+					maxHeight = 18
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "overview_port_icon"
+					spriteType ="GFX_port_icon"
+					position = { x = 269 y = 185 }
+				}
+				instantTextBoxType = {
+					name = "overview_shipping_usage"
+					position = { x = 305 y = 189 }
+					font = "hoi_16mbs"
+					text = "overview_shipping_usage"
+					format = center
+					maxWidth = 41
+					maxHeight = 18
+					fixedsize = yes
+				}
+				instantTextBoxType = {
+					name = "overview_shipping_capacity"
+					position = { x = 305 y = 205 }
+					font = "hoi_16mbs"
+					text = "overview_shipping_capacity"
+					format = center
+					maxWidth = 41
+					maxHeight = 18
+					fixedsize = yes
+				}
+			#
+			
+		}
+		containerWindowType = {
+			name = "graph_container"
+			position = {x = 380 y = 2}
+			size = { width = 380 height = 250 }
+			
+			instantTextBoxType = {
+				name = "graph_title"
+				position = { x = 12 y = 8 }
+				font = "hoi_18mbs"
+				text = "graph_title"
+				format = left
+				maxWidth = 350
+				maxHeight = 18
+				fixedsize = yes
+			}
+			
+			instantTextBoxType = {
+				name = "graph_max"
+				position = { x = 4 y = 30 }
+				font = "hoi_16mbs"
+				text = "graph_max"
+				format = right
+				maxWidth = 56
+				maxHeight = 18
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "graph_middle"
+				position = { x = 4 y = 100 }
+				font = "hoi_16mbs"
+				text = "graph_middle"
+				format = right
+				maxWidth = 56
+				maxHeight = 18
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "graph_min"
+				position = { x = 4 y = 170 }
+				font = "hoi_16mbs"
+				text = "graph_min"
+				format = right
+				maxWidth = 56
+				maxHeight = 18
+				fixedsize = yes
+			}
+
+			gridboxtype = {
+				name = "overview_graph"
+				position = { x = 67 y = 28 }
+				size = { width = 0 height = 158 }
+				slotsize = { width = 6 height = 158 }
+				add_horizontal = yes
+			}
+			
+			instantTextBoxType = {
+				name = "graph_start_year"
+				position = { x = 67 y = 188 }
+				font = "hoi_16mbs"
+				text = "graph_start_year"
+				format = left
+				maxWidth = 40
+				maxHeight = 18
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "graph_middle_year"
+				position = { x = 190 y = 188 }
+				font = "hoi_16mbs"
+				text = "graph_middle_year"
+				format = center
+				maxWidth = 40
+				maxHeight = 18
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "graph_end_year"
+				position = { x = 315 y = 188 }
+				font = "hoi_16mbs"
+				text = "graph_end_year"
+				format = right
+				maxWidth = 40
+				maxHeight = 18
+				fixedsize = yes
+			}
+
+			#Buttons
+				containerWindowType = {
+					name = "graph_population_button"
+					position = {x = 10 y = 200 }
+					size = { width = 50 height = 50 }
+
+					buttonType = {
+						name = "graph_population_button_pressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_pressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					buttonType = {
+						name = "graph_population_button_unpressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_unpressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "graph_population_icon"
+						spriteType ="GFX_population_icon"
+						position = { x = 6 y = 6 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "graph_gdp_button"
+					position = {x = 50 y = 200 }
+					size = { width = 50 height = 50 }
+
+					buttonType = {
+						name = "graph_gdp_button_pressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_pressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					buttonType = {
+						name = "graph_gdp_button_unpressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_unpressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "graph_gdp_icon"
+						spriteType ="GFX_gdp_icon"
+						position = { x = 7 y = 7 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "graph_standard_of_living_button"
+					position = {x = 90 y = 200 }
+					size = { width = 50 height = 50 }
+
+					buttonType = {
+						name = "graph_standard_of_living_button_pressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_pressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					buttonType = {
+						name = "graph_standard_of_living_button_unpressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_unpressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "graph_standard_of_living_icon"
+						spriteType ="GFX_standard_of_living_icon"
+						position = { x = 7 y = 10 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "graph_cost_of_living_button"
+					position = {x = 130 y = 200 }
+					size = { width = 50 height = 50 }
+
+					buttonType = {
+						name = "graph_cost_of_living_button_pressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_pressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					buttonType = {
+						name = "graph_cost_of_living_button_unpressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_unpressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "graph_cost_of_living_icon"
+						spriteType ="GFX_cost_of_living_icon"
+						position = { x = 7 y = 10 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "graph_wealth_button"
+					position = {x = 170 y = 200 }
+					size = { width = 50 height = 50 }
+
+					buttonType = {
+						name = "graph_wealth_button_pressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_pressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					buttonType = {
+						name = "graph_wealth_button_unpressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_unpressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "graph_wealth_icon"
+						spriteType ="GFX_wealth_icon"
+						position = { x = 7 y = 8 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "graph_imports_button"
+					position = {x = 210 y = 200 }
+					size = { width = 50 height = 50 }
+
+					buttonType = {
+						name = "graph_imports_button_pressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_pressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					buttonType = {
+						name = "graph_imports_button_unpressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_unpressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "graph_imports_icon"
+						spriteType ="GFX_imports_icon"
+						position = { x = 7 y = 7 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "graph_exports_button"
+					position = {x = 250 y = 200 }
+					size = { width = 50 height = 50 }
+
+					buttonType = {
+						name = "graph_exports_button_pressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_pressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					buttonType = {
+						name = "graph_exports_button_unpressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_unpressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "graph_exports_icon"
+						spriteType ="GFX_exports_icon"
+						position = { x = 7 y = 7 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "graph_unemployment_button"
+					position = {x = 290 y = 200 }
+					size = { width = 50 height = 50 }
+
+					buttonType = {
+						name = "graph_unemployment_button_pressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_pressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					buttonType = {
+						name = "graph_unemployment_button_unpressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_unpressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "graph_unemployment_icon"
+						spriteType ="GFX_employed_icon"
+						position = { x = 11 y = 10 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "graph_workforce_button"
+					position = {x = 330 y = 200 }
+					size = { width = 50 height = 50 }
+
+					buttonType = {
+						name = "graph_workforce_button_pressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_pressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					buttonType = {
+						name = "graph_workforce_button_unpressed"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_graph_unpressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "graph_workforce_icon"
+						spriteType ="GFX_workforce_icon"
+						position = { x = 11 y = 10 }
+						alwaystransparent = yes
+					}
+				}
+			#
+		}
+		containerWindowType = {
+			name = "goods_market_container"
+			position = {x = 10 y = 248 }
+			size = { width = 780 height = 253 }
+			
+			instantTextBoxType = {
+				name = "goods_market_title"
+				position = { x = 5 y = 7 }
+				font = "hoi_24header"
+				text = "goods_market_title"
+				format = center
+				maxWidth = 750
+				maxHeight = 18
+				fixedsize = yes
+			}
+
+			containerWindowType = {
+				name = "top_production_container"
+				position = {x = 10 y = 36 }
+				size = { width = 250 height = 253 }
+
+				instantTextBoxType = {
+					name = "top_production_title"
+					position = { x = 5 y = 2 }
+					font = "hoi_18mbs"
+					text = "top_production_title"
+					format = center
+					maxWidth = 225
+					maxHeight = 18
+					fixedsize = yes
+				}
+					
+				containerWindowType = {
+					name = "top_production_resource_1_container"
+					position = {x = 4 y = 20 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_production_resource_1_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_production_resource_1_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_production_resource_1_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_production_resource_1_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_production_resource_1_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_production_resource_1_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_production_resource_2_container"
+					position = {x = 4 y = 53 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_production_resource_2_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_production_resource_2_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_production_resource_2_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_production_resource_2_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_production_resource_2_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_production_resource_2_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_production_resource_3_container"
+					position = {x = 4 y = 86 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_production_resource_3_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_production_resource_3_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_production_resource_3_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_production_resource_3_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_production_resource_3_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_production_resource_3_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_production_resource_4_container"
+					position = {x = 4 y = 119 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_production_resource_4_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_production_resource_4_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_production_resource_4_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_production_resource_4_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_production_resource_4_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_production_resource_4_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_production_resource_5_container"
+					position = {x = 115 y = 20 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_production_resource_5_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_production_resource_5_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_production_resource_5_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_production_resource_5_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_production_resource_5_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_production_resource_5_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_production_resource_6_container"
+					position = {x = 115 y = 53 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_production_resource_6_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_production_resource_6_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_production_resource_6_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_production_resource_6_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_production_resource_6_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_production_resource_6_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_production_resource_7_container"
+					position = {x = 115 y = 86 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_production_resource_7_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_production_resource_7_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_production_resource_7_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_production_resource_7_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_production_resource_7_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_production_resource_7_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_production_resource_8_container"
+					position = {x = 115 y = 119 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_production_resource_8_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_production_resource_8_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_production_resource_8_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_production_resource_8_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_production_resource_8_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_production_resource_8_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+			}
+			containerWindowType = {
+				name = "top_consumption_container"
+				position = {x = 261 y = 36 }
+				size = { width = 250 height = 253 }
+
+				instantTextBoxType = {
+					name = "top_consumption_title"
+					position = { x = 5 y = 2 }
+					font = "hoi_18mbs"
+					text = "top_consumption_title"
+					format = center
+					maxWidth = 225
+					maxHeight = 18
+					fixedsize = yes
+				}
+					
+				containerWindowType = {
+					name = "top_consumption_resource_1_container"
+					position = {x = 4 y = 20 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_consumption_resource_1_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_consumption_resource_1_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_consumption_resource_1_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_consumption_resource_1_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_consumption_resource_1_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_consumption_resource_1_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_consumption_resource_2_container"
+					position = {x = 4 y = 53 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_consumption_resource_2_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_consumption_resource_2_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_consumption_resource_2_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_consumption_resource_2_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_consumption_resource_2_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_consumption_resource_2_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_consumption_resource_3_container"
+					position = {x = 4 y = 86 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_consumption_resource_3_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_consumption_resource_3_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_consumption_resource_3_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_consumption_resource_3_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_consumption_resource_3_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_consumption_resource_3_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_consumption_resource_4_container"
+					position = {x = 4 y = 119 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_consumption_resource_4_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_consumption_resource_4_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_consumption_resource_4_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_consumption_resource_4_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_consumption_resource_4_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_consumption_resource_4_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_consumption_resource_5_container"
+					position = {x = 115 y = 20 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_consumption_resource_5_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_consumption_resource_5_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_consumption_resource_5_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_consumption_resource_5_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_consumption_resource_5_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_consumption_resource_5_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_consumption_resource_6_container"
+					position = {x = 115 y = 53 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_consumption_resource_6_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_consumption_resource_6_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_consumption_resource_6_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_consumption_resource_6_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_consumption_resource_6_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_consumption_resource_6_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_consumption_resource_7_container"
+					position = {x = 115 y = 86 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_consumption_resource_7_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_consumption_resource_7_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_consumption_resource_7_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_consumption_resource_7_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_consumption_resource_7_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_consumption_resource_7_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_consumption_resource_8_container"
+					position = {x = 115 y = 119 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_consumption_resource_8_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_consumption_resource_8_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_consumption_resource_8_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_consumption_resource_8_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_consumption_resource_8_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_consumption_resource_8_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+			}
+			containerWindowType = {
+				name = "top_trade_container"
+				position = {x = 512 y = 36 }
+				size = { width = 250 height = 253 }
+
+				instantTextBoxType = {
+					name = "top_imports_title"
+					position = { x = 5 y = 2 }
+					font = "hoi_18mbs"
+					text = "top_imports_title"
+					format = center
+					maxWidth = 112
+					maxHeight = 18
+					fixedsize = yes
+				}
+				instantTextBoxType = {
+					name = "top_exports_title"
+					position = { x = 117 y = 2 }
+					font = "hoi_18mbs"
+					text = "top_exports_title"
+					format = center
+					maxWidth = 112
+					maxHeight = 18
+					fixedsize = yes
+				}
+					
+				containerWindowType = {
+					name = "top_imports_resource_1_container"
+					position = {x = 4 y = 20 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_imports_resource_1_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_imports_resource_1_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_imports_resource_1_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_imports_resource_1_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_imports_resource_1_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_imports_resource_1_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_imports_resource_2_container"
+					position = {x = 4 y = 53 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_imports_resource_2_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_imports_resource_2_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_imports_resource_2_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_imports_resource_2_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_imports_resource_2_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_imports_resource_2_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_imports_resource_3_container"
+					position = {x = 4 y = 86 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_imports_resource_3_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_imports_resource_3_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_imports_resource_3_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_imports_resource_3_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_imports_resource_3_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_imports_resource_3_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_imports_resource_4_container"
+					position = {x = 4 y = 119 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_imports_resource_4_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_imports_resource_4_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_imports_resource_4_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_imports_resource_4_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_imports_resource_4_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_imports_resource_4_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_exports_resource_1_container"
+					position = {x = 115 y = 20 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_exports_resource_1_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_exports_resource_1_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_exports_resource_1_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_exports_resource_1_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_exports_resource_1_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_exports_resource_1_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_exports_resource_2_container"
+					position = {x = 115 y = 53 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_exports_resource_2_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_exports_resource_2_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_exports_resource_2_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_exports_resource_2_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_exports_resource_2_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_exports_resource_2_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_exports_resource_3_container"
+					position = {x = 115 y = 86 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_exports_resource_3_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_exports_resource_3_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_exports_resource_3_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_exports_resource_3_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_exports_resource_3_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_exports_resource_3_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "top_exports_resource_4_container"
+					position = {x = 115 y = 119 }
+					size = { width = 115 height = 40 }
+
+					background = {
+						name = "top_exports_resource_4_background"
+						quadTextureSprite = "GFX_dandt_resource_entry"
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "top_exports_resource_4_icon"
+						quadTextureSprite ="GFX_resources_strip"
+						position = { x = 5 y = 5 }
+						frame = 2
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+					}
+
+					instantTextBoxType = {
+						name = "top_exports_resource_4_name"
+						position = { x = 39 y = 3 }
+						font = "Arial12"
+						text = "top_exports_resource_4_name"
+						format = left
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "top_exports_resource_4_number"
+						position = { x = 36 y = 18 }
+						font = "Arial12"
+						text = "top_exports_resource_4_number"
+						format = right
+						maxWidth = 74
+						maxHeight = 20
+						fixedsize = yes
+					}
+				}
+			}
+		}
+	}
+	containerWindowType = {
+		name = "population_pyramid_container"
+		position = { x = 314 y = 401 }
+		size = { width = 420 height = 259 }
+		Orientation = upper_left
+			
+		background = {
+			name = "population_pyramid_background"
+			quadTextureSprite = "GFX_tiled_decisions_bg_small"
+			alwaystransparent = yes
+		}
+
+		#TODO - flip these back so it's male on the left, female on the right.
+		gridboxtype = {
+			name = "population_pyramid_female_graph"
+			position = { x = 113 y = 18 }
+			size = { width = 0 height = 0 }
+			slotsize = { width = 187 height = 10 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+		gridboxtype = {
+			name = "population_pyramid_male_graph"
+			position = { x = 305 y = 18 }
+			size = { width = 0 height = 0 }
+			slotsize = { width = 187 height = 10 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+
+		iconType = {
+			name = "population_pyramid_graph_background"
+			spriteType ="GFX_population_pyramid_graph_background"
+			position = { x = 18 y = 14 }
+			alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "industry_construction_container"
+		position = { x = 676 y = 192 }
+		size = { width = 286 height = 447 }
+		Orientation = upper_left
+
+		containerWindowType = {
+			name = "construction_list_container"
+			position = {x = 0 y = 2 }
+			size = {width = 286 height = 447 }
+			margin = { top = 40 bottom = 12 left = 10 right = 25 }
+			Orientation = upper_left
+
+			background = {
+				name = "industry_construction_background"
+				quadTextureSprite = "GFX_industry_construction_background"
+			}
+			verticalScrollbar = "right_vertical_slider"
+			vertical_scroll_step = 98
+			scroll_wheel_factor = 98
+			smooth_scrolling = yes
+
+			gridboxtype = {
+				name = "construction_list"
+				position = { x = 125 y = 0 }
+				size = { width = 0 height = 100%% }
+				slotsize = { width = 252 height = 33 }
+				add_horizontal = no
+			}
+		}
+		iconType = {
+			name = "construction_industry_icon"
+			quadTextureSprite ="GFX_industry_icon"
+			position = { x = 16 y = 14 }
+		}
+		instantTextBoxType = {
+			name = "construction_title"
+			position = { x = 54 y = 15 }
+			font = "hoi_18mbs"
+			text = "construction_title"
+			format = left
+			maxWidth = 150
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "construction_pm_button"
+			position = { x = 204 y = 12 }
+			quadTextureSprite ="GFX_production_method_basic_button"
+		}
+	}
+	### INDIVIDUAL ENTRIES IN THE LISTS ###
+	containerWindowType = {
+		name = "state_entry"
+		position = { x = 0 y = 0} 
+		size = { width = 255 height = 45 }
+		
+		buttonType = {
+			name = "background_button"
+			position = { x = 0 y = 0 }
+			#size = { width = 255 height = 45 }
+			quadTextureSprite ="GFX_state_button_background_pressed"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+		}
+
+		buttonType = {
+			name = "background_button_clicked"
+			quadTextureSprite ="GFX_state_button_background"
+			position = { x = 0 y = 0 }
+			#size = { width = 255 height = 45 }
+			#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 7 y = 3 }
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 200
+			text = "state_entry_name"
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "population_num"
+			position = { x = 22 y = 18 }
+			font = "hoi_18mbs"
+			format = right
+			maxWidth = 200
+			text = "state_entry_population"
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "population_trend"
+			spriteType ="GFX_trend_arrow_up_green"
+			position = { x = 225 y = 20 }
+			alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "population_pyramid_male_bar_entry"
+		position = { x = 0 y = 0} 
+		size = { width = 187 height = 10 }
+
+		iconType = {
+			name = "population_pyramid_male_bar_entry_icon"
+			spriteType ="GFX_population_pyramid_bar_male_0x10"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "population_pyramid_female_bar_entry"
+		position = { x = 0 y = 0} 
+		size = { width = 187 height = 10 }
+
+		iconType = {
+			name = "population_pyramid_female_bar_entry_icon"
+			spriteType ="GFX_population_pyramid_bar_female_0x10"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "religion_entry"
+		position = { x = 10 y = 0} 
+		size = { width = 300 height = 20 }
+
+		instantTextBoxType = {
+			name = "religion_percentage"
+			position = { x = 0 y = 0 }
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 60	
+			text = "pops_religion_percentage_loc"
+			maxHeight = 20
+			fixedsize = yes
+			#alwaystransparent = yes
+
+			pdx_tooltip = pops_religion_tt
+		}
+
+		iconType = {
+			name = "religion_color_block"
+			spriteType ="GFX_pol_party_colour"
+			position = { x = 64 y = 4 }
+			pdx_tooltip = pops_religion_tt
+		}
+		iconType = {
+			name = "religion_color_block_bg"
+			spriteType ="GFX_square_color_overlay"
+			position = { x = 60 y = 0 }
+			pdx_tooltip = pops_religion_tt
+		}
+
+		instantTextBoxType = {
+			name = "religion_name"
+			position = { x = 85 y = 0 }
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 125
+			text = "pops_religion_name_loc"
+			maxHeight = 20
+			fixedsize = yes
+			#alwaystransparent = yes
+			
+			pdx_tooltip = pops_religion_tt
+		}
+	}
+	containerWindowType = {
+		name = "culture_entry"
+		position = { x = 10 y = 0} 
+		size = { width = 300 height = 20 }
+
+		instantTextBoxType = {
+			name = "culture_percentage"
+			position = { x = 0 y = 0 }
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 60
+			text = "pops_culture_percentage_loc"
+			maxHeight = 20
+			fixedsize = yes
+			#alwaystransparent = yes
+
+			pdx_tooltip = pops_culture_tt
+		}
+
+		iconType = {
+			name = "culture_color_block"
+			spriteType ="GFX_pol_party_colour"
+			position = { x = 64 y = 4 }
+			pdx_tooltip = pops_culture_tt
+		}
+		iconType = {
+			name = "culture_color_block_bg"
+			spriteType ="GFX_square_color_overlay"
+			position = { x = 60 y = 0 }
+			pdx_tooltip = pops_culture_tt
+		}
+
+		instantTextBoxType = {
+			name = "culture_name"
+			position = { x = 85 y = 0 }
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 125
+			text = "pops_culture_name_loc"
+			maxHeight = 20
+			fixedsize = yes
+			#alwaystransparent = yes
+
+			pdx_tooltip = pops_culture_tt
+		}
+	}
+	containerWindowType = {
+		name = "ideology_entry"
+		position = { x = 10 y = 0} 
+		size = { width = 300 height = 20 }
+
+		instantTextBoxType = {
+			name = "ideology_percentage"
+			position = { x = 0 y = 0 }
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 60
+			text = "pops_ideology_percentage_loc"
+			maxHeight = 20
+			fixedsize = yes
+			#alwaystransparent = yes
+
+			pdx_tooltip = pops_ideology_tt
+		}
+
+
+		iconType = {
+			name = "ideology_color_block"
+			spriteType ="GFX_pol_party_colour"
+			position = { x = 64 y = 4 }
+			pdx_tooltip = pops_ideology_tt
+		}
+		iconType = {
+			name = "ideology_color_block_bg"
+			spriteType ="GFX_square_color_overlay"
+			position = { x = 60 y = 0 }
+			pdx_tooltip = pops_ideology_tt
+		}
+
+		instantTextBoxType = {
+			name = "ideology_name"
+			position = { x = 85 y = 0 }
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 125
+			text = "pops_ideology_name_loc"
+			maxHeight = 20
+			fixedsize = yes
+			#alwaystransparent = yes
+
+			pdx_tooltip = pops_ideology_tt
+		}
+	}
+	containerWindowType = { 
+		name = "industry"
+		position = { x = 0 y = 0} 
+		size = { width = 256 height = 194 }
+		 
+		iconType = {
+			name = "industry_background"
+			quadTextureSprite = "GFX_industry_background"
+			alwaystransparent = yes
+		}
+		 
+		instantTextBoxType = {
+			name = "industry_name"
+			position = { x = 44 y = 10 }
+			font = "hoi_16mbs"
+			text = "industry_title"
+			format = left
+			maxWidth = 120
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "industry_resource"
+			quadTextureSprite ="GFX_resources_strip"
+			position = { x = 10 y = 5 }
+			frame = 1
+		}
+
+		instantTextBoxType = {
+			name = "industry_size"
+			position = { x = 137 y = 9 }
+			font = "hoi_18mbs"
+			text = "industry_size_loc"
+			format = right
+			maxWidth = 50
+			maxHeight = 24
+			fixedsize = yes
+
+			pdx_tooltip = industry_size_tt
+		}
+
+		buttonType = {
+			name = "industry_increase_size"
+			position = { x = 196 y = 8 }
+			quadTextureSprite ="GFX_increase_size_button"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+		}
+		buttonType = {
+			name = "industry_decrease_size"
+			position = { x = 220 y = 8 }
+			quadTextureSprite ="GFX_decrease_size_button"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+		}
+
+		iconType = {
+			name = "industry_input_resource_0"
+			quadTextureSprite ="GFX_resources_strip"
+			position = { x = 24 y = 49 }
+			frame = 1
+
+			pdx_tooltip = industry_input_1_loc
+		}
+		iconType = {
+			name = "industry_input_resource_1"
+			quadTextureSprite ="GFX_resources_strip"
+			position = { x = 59 y = 49 }
+			frame = 1
+
+			pdx_tooltip = industry_input_2_loc
+		}
+		iconType = {
+			name = "industry_input_resource_2"
+			quadTextureSprite ="GFX_resources_strip"
+			position = { x = 94 y = 49 }
+			frame = 1
+
+			pdx_tooltip = industry_input_3_loc
+		}
+		iconType = {
+			name = "industry_input_resource_3"
+			quadTextureSprite ="GFX_resources_strip"
+			position = { x = 129 y = 49 }
+			frame = 1
+
+			pdx_tooltip = industry_input_4_loc
+		}
+		iconType = {
+			name = "industry_input_resource_4"
+			quadTextureSprite ="GFX_resources_strip"
+			position = { x = 164 y = 49 }
+			frame = 1
+
+			pdx_tooltip = industry_input_5_loc
+		}
+		iconType = {
+			name = "industry_input_resource_5"
+			quadTextureSprite ="GFX_resources_strip"
+			position = { x = 199 y = 49 }
+			frame = 1
+
+			pdx_tooltip = industry_input_6_loc
+		}
+
+		iconType = {
+			name = "industry_resource_output"
+			quadTextureSprite ="GFX_resources_strip"
+			position = { x = 19 y = 84 }
+			frame = 1
+
+			pdx_tooltip = industry_production_tt
+		}
+		instantTextBoxType = {
+			name = "resource_output"
+			position = { x = 47 y = 87 }
+			font = "hoi_18mbs"
+			text = "industry_production_loc"
+			format = left
+			maxWidth = 80
+			maxHeight = 24 
+			fixedsize = yes
+
+			pdx_tooltip = industry_production_tt
+		}
+
+		iconType = {
+			name = "industry_modifiers_icon"
+			quadTextureSprite ="GFX_tech_icon"
+			position = { x = 113 y = 85 }
+		}
+		iconType = {
+			name = "industry_corp_ownership_icon"
+			quadTextureSprite ="GFX_hat_elites_icon"
+			position = { x = 202 y = 84 }
+			scale = 0.8
+		}
+		iconType = {
+			name = "industry_govt_ownership_icon"
+			quadTextureSprite ="GFX_government_icon"
+			position = { x = 168 y = 85 }
+			scale = 0.8
+		}
+		iconType = {
+			name = "industry_local_ownership_icon"
+			quadTextureSprite ="GFX_workforce_icon"
+			position = { x = 146 y = 87 }
+		}
+		
+		instantTextBoxType = {
+			name = "industry_income"
+			position = { x = 22 y = 153 }
+			font = "hoi_18mbs"
+			text = "industry_profit_loc"
+			format = left
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+
+			pdx_tooltip = industry_profit_tt
+		}
+
+		iconType = {
+			name = "employment"
+			quadTextureSprite ="GFX_employment_icon_0"
+			position = { x = 22 y = 115 }
+			frame = 11
+
+			pdx_tooltip = "industry_employment_tt"
+		}
+		buttonType = {
+			name = "priority_button"
+			position = { x = 140 y = 118 }
+			quadTextureSprite ="GFX_priority_icon"
+			frame = 1
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+		}
+		
+		buttonType = {
+			name = "subsidy_button"
+			position = { x = 133 y = 150 }
+			quadTextureSprite ="GFX_subsidy_button"
+			frame = 1
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+		}
+		
+		iconType = {
+			name = "industry_pm_select_box"
+			quadTextureSprite ="GFX_select_production_method_box"
+			position = { x = 164 y = 39 }
+		}
+		buttonType = {
+			name = "select_basic_production_method_button"
+			position = { x = 171 y = 117 }
+			quadTextureSprite ="GFX_production_method_basic_button"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = ui_ship_designer_role_entry
+
+			pdx_tooltip = industry_pm_base_full_tt
+		}
+		buttonType = {
+			name = "select_industrialized_production_method_button"
+			position = { x = 171 y = 93 }
+			quadTextureSprite ="GFX_production_method_industrialized_button"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = ui_ship_designer_company_icon
+			
+			pdx_tooltip = industry_pm_industrialized_full_tt
+		}
+		buttonType = {
+			name = "select_mechanized_production_method_button"
+			position = { x = 171 y = 69 }
+			quadTextureSprite ="GFX_production_method_mechanized_button"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = ui_tank_designer_role_entry
+			
+			pdx_tooltip = industry_pm_mechanized_full_tt
+		}
+		buttonType = {
+			name = "select_modernized_production_method_button"
+			position = { x = 171 y = 45 }
+			quadTextureSprite ="GFX_production_method_modernized_button"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = ui_tank_designer_company_icon
+			
+			pdx_tooltip = industry_pm_modernized_full_tt
+		}
+		# buttonType = {
+		# 	name = "select_automatized_production_method_button"
+		# 	position = { x = 171 y = 21 }
+		# 	quadTextureSprite ="GFX_production_method_automatized_button"
+		# 	buttonFont = "Main_14_black"
+		# 	Orientation = "UPPER_LEFT"
+		# 	clicksound = ui_tank_designer_reset
+		# }
+
+		buttonType = {
+			name = "production_method_button"
+			position = { x = 171 y = 150 }
+			quadTextureSprite ="GFX_production_method_basic_button"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+			
+			pdx_tooltip = industry_production_method_tt
+		} 
+	}
+	containerWindowType = {
+		name = "graph_point_entry"
+		position = { x = 0 y = 0 } 
+		size = { width = 10 height = 160 }
+		
+		iconType ={
+			name ="graph_point_icon"
+			spriteType = "GFX_graph_point_icon_strip"
+			position = { x = 0 y = 0 }
+		}
+	}
+	containerWindowType = { 
+		name = "construction_entry"
+		position = { x = 0 y = 0} 
+		size = { width = 252 height = 35 }
+		 
+		buttonType = {
+			name = "construction_entry_background"
+			quadTextureSprite = "GFX_button_steel_orange_252x35"
+			clicksound = construction
+		}
+		 
+		instantTextBoxType = {
+			name = "construction_entry_name"
+			position = { x = 40 y = 10 }
+			font = "hoi_16mbs"
+			text = "construction_entry_title"
+			format = left
+			maxWidth = 150
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "construction_entry_resource"
+			quadTextureSprite ="GFX_resources_strip"
+			position = { x = 6 y = 5 }
+			frame = 1
+			alwaystransparent = yes
+		}
+		 
+		instantTextBoxType = {
+			name = "construction_entry_productivity"
+			position = { x = 145 y = 10 }
+			font = "hoi_16mbs"
+			text = "construction_entry_productivity"
+			format = right
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+	}
+}

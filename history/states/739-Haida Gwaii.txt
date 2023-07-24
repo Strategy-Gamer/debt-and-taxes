@@ -1,0 +1,33 @@
+state={
+	id=739
+	name="STATE_739"
+
+	history={
+		owner = CAN
+		buildings = {
+			infrastructure = 1
+			1869 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = CAN
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_polar
+		}
+		add_dynamic_modifier = {
+			modifier = generic_state_untapped_mines
+		}
+	}
+
+	provinces={
+		1869
+	}
+	manpower=12684
+	buildings_max_level_factor=1	
+	state_category="small_island"
+
+	local_supplies=0.0 
+}

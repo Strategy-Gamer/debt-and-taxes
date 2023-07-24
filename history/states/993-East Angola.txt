@@ -1,0 +1,18 @@
+state={
+	id=993
+	name="STATE_993"
+	provinces={
+		1552 2126 4735 8054 
+	}
+	history = {
+		owner = POR
+		add_core_of = POR
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	state_category = state_cat
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

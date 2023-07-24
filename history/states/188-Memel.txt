@@ -1,0 +1,37 @@
+state=
+{
+	id=188
+	name="STATE_188"
+	manpower = 150000
+
+
+	state_category = rural
+
+	history = {
+		victory_points = {
+			3288 3
+		}
+		owner = LIT
+		buildings = {
+			infrastructure = 3 #was: 5
+			3288 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = LIT
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+	provinces={
+		3288
+	}
+
+	local_supplies=0.0
+}

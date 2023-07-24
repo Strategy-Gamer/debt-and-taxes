@@ -1,0 +1,38 @@
+
+state={
+	id=430
+	name="STATE_430"
+
+	history={
+		add_core_of = BAN
+		owner = RAJ
+		victory_points = {
+			11929 1 
+		}
+		buildings = {
+			infrastructure = 3
+			11968 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = PAK
+		add_core_of = RAJ
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		7179 9991 9993 10416 11929 11968 12010 12423 13208 
+	}
+	manpower=16363300
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

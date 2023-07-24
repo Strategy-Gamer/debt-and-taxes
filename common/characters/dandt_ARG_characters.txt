@@ -1,0 +1,272 @@
+characters = {
+	#1928 Election
+		ARG_rodolfo_ghioldi = {
+			name = ARG_rodolfo_ghioldi
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_rodolfo_ghioldi
+				}
+			}
+			#ideology_communist
+		}
+		ARG_juan_hipolito_del_sagrado_corazon_de_jesus_yrigoyen = {
+			name = ARG_juan_hipolito_del_sagrado_corazon_de_jesus_yrigoyen
+			#https://en.wikipedia.org/wiki/Hip%C3%B3lito_Yrigoyen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_juan_hipolito_del_sagrado_corazon_de_jesus_yrigoyen
+				}
+			}
+			#ideology_socialist
+		}
+		ARG_leopoldo_melo = {
+			name = ARG_leopoldo_melo
+			#https://en.wikipedia.org/wiki/Leopoldo_Melo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_leopoldo_melo
+				}
+			}
+			#ideology_liberal
+		}
+		ARG_robusto_patron_costas = {
+			name = ARG_robusto_patron_costas
+			#https://en.wikipedia.org/wiki/Robustiano_Patr%C3%B3n_Costas
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_robusto_patron_costas
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1930 Coup
+		ARG_jose_felix_benito_uriburu_y_uriburu = {
+			name = ARG_jose_felix_benito_uriburu_y_uriburu
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_F%C3%A9lix_Uriburu
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_jose_felix_benito_uriburu_y_uriburu
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1931 Election
+		ARG_lisandro_de_la_torre = {
+			name = ARG_lisandro_de_la_torre
+			#https://en.wikipedia.org/wiki/Lisandro_de_la_Torre
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_lisandro_de_la_torre
+				}
+			}
+			#ideology_socialist
+		}
+		ARG_augustin_pedro_justo_rolon = {
+			name = ARG_augustin_pedro_justo_rolon
+			#https://en.wikipedia.org/wiki/Agust%C3%ADn_Pedro_Justo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_augustin_pedro_justo_rolon
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1937 Election
+		ARG_maximo_marcelo_torcuato_de_alvear_pacheco = {
+			name = ARG_maximo_marcelo_torcuato_de_alvear_pacheco
+			#https://en.wikipedia.org/wiki/Marcelo_Torcuato_de_Alvear
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_maximo_marcelo_torcuato_de_alvear_pacheco
+				}
+			}
+			#ideology_socialist
+		}
+		ARG_jaime_geraldo_roberto_marcelino_maria_ortiz_lizardi = {
+			name = ARG_jaime_geraldo_roberto_marcelino_maria_ortiz_lizardi
+			#https://en.wikipedia.org/wiki/Roberto_Mar%C3%ADa_Ortiz
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_jaime_geraldo_roberto_marcelino_maria_ortiz_lizardi
+				}
+			}
+			#ideology_liberal
+		}
+		ARG_ramon_antonio_castillo_barrioneuvo = {
+			name = ARG_ramon_antonio_castillo_barrioneuvo
+			#https://en.wikipedia.org/wiki/Ram%C3%B3n_Castillo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_ramon_antonio_castillo_barrioneuvo
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1943 Revolution
+		ARG_arturo_rawson = {
+			name = ARG_arturo_rawson
+			#https://en.wikipedia.org/wiki/Arturo_Rawson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_arturo_rawson
+				}
+			}
+			#ideology_stratocratic
+		}
+		ARG_pedro_pablo_ramirez_menchaca = {
+			name = ARG_pedro_pablo_ramirez_menchaca
+			#https://en.wikipedia.org/wiki/Pedro_Pablo_Ram%C3%ADrez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_pedro_pablo_ramirez_menchaca
+				}
+			}
+			#ideology_fascist
+		}
+		ARG_edelmiro_julian_farrell_plaul = {
+			name = ARG_edelmiro_julian_farrell_plaul
+			#https://en.wikipedia.org/wiki/Edelmiro_Juli%C3%A1n_Farrell
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_edelmiro_julian_farrell_plaul
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1946 Election
+		ARG_juan_domingo_peron = {
+			name = ARG_juan_domingo_peron
+			#https://en.wikipedia.org/wiki/Juan_Per%C3%B3n
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_juan_domingo_peron
+				}
+			}
+			#ideology_socialist
+		}
+		ARG_jose_pascual_tamborini = {
+			name = ARG_jose_pascual_tamborini
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Tamborini
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_jose_pascual_tamborini
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1952 Election
+		ARG_ricardo_balbin = {
+			name = ARG_ricardo_balbin
+			#https://en.wikipedia.org/wiki/Ricardo_Balb%C3%ADn
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_ricardo_balbin
+				}
+			}
+			#ideology_liberal
+		}
+		ARG_luciano_molinas = {
+			name = ARG_luciano_molinas
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_luciano_molinas
+				}
+			}
+			#ideology_agrarian
+		}
+		ARG_reynaldo_pastor = {
+			name = ARG_reynaldo_pastor
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_reynaldo_pastor
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1954 Midterms
+		ARG_alcira_de_la_pena = {
+			name = ARG_alcira_de_la_pena
+			#https://en.wikipedia.org/wiki/Alcira_de_la_Pe%C3%B1a
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_alcira_de_la_pena
+				}
+			}
+			#ideology_communist
+		}
+		ARG_arturo_frondizi_ercoli = {
+			name = ARG_arturo_frondizi_ercoli
+			#https://en.wikipedia.org/wiki/Arturo_Frondizi
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_arturo_frondizi_ercoli
+				}
+			}
+			#ideology_socialist
+		}
+		ARG_crisologo_larralde = {
+			name = ARG_crisologo_larralde
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_crisologo_larralde
+				}
+			}
+			#ideology_liberal
+		}
+		ARG_benito_de_miguel = {
+			name = ARG_benito_de_miguel
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_benito_de_miguel
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1955 Coup
+		ARG_eduardo_ernesto_lonardi_doucet = {
+			name = ARG_eduardo_ernesto_lonardi_doucet
+			#https://en.wikipedia.org/wiki/Eduardo_Lonardi
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_eduardo_ernesto_lonardi_doucet
+				}
+			}
+			#ideology_stratocratic
+		}
+		ARG_pedro_eugenio_aramburu_silveti = {
+			name = ARG_pedro_eugenio_aramburu_silveti
+			#https://en.wikipedia.org/wiki/Pedro_Eugenio_Aramburu
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_pedro_eugenio_aramburu_silveti
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1958 Election
+		ARG_lucas_ayarragaray = {
+			name = ARG_lucas_ayarragaray
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ARG_lucas_ayarragaray
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+}

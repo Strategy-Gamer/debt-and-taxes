@@ -1,0 +1,27 @@
+
+state={
+	id=662
+	name="STATE_662"
+	manpower=13213
+
+	state_category=wasteland
+
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = LBA
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		4117 4200 7076 7136 7194 8069 11940 13073 
+	}
+	local_supplies=0.000
+}

@@ -1,0 +1,122 @@
+characters = {
+	#1924 Election
+		DOM_francisco_hilario_henriquez_y_carvajal = {
+			name = DOM_francisco_hilario_henriquez_y_carvajal
+			#https://en.wikipedia.org/wiki/Francisco_Henr%C3%ADquez_y_Carvajal
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DOM_francisco_hilario_henriquez_y_carvajal
+				}
+			}
+			#ideology_liberal
+		}
+		DOM_felipe_horacio_vasquez_lajara = {
+			name = DOM_felipe_horacio_vasquez_lajara
+			#https://en.wikipedia.org/wiki/Horacio_V%C3%A1squez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DOM_felipe_horacio_vasquez_lajara
+				}
+			}
+			#ideology_conservative
+		}
+		DOM_jacinto_bienvenido_peynado_peynado = {
+			name = DOM_jacinto_bienvenido_peynado_peynado
+			#https://en.wikipedia.org/wiki/Jacinto_Peynado
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DOM_jacinto_bienvenido_peynado_peynado
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1930 Coup
+		DOM_juan_rafael_estrella_urena = {
+			name = DOM_juan_rafael_estrella_urena
+			#https://en.wikipedia.org/wiki/Rafael_Estrella_Ure%C3%B1a
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DOM_juan_rafael_estrella_urena
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1930 Election
+		DOM_rafael_leonidas_trujillo_molina = {
+			name = DOM_rafael_leonidas_trujillo_molina
+			#https://en.wikipedia.org/wiki/Rafael_Trujillo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DOM_rafael_leonidas_trujillo_molina
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1934 Election
+	#
+	#1938 Election
+		DOM_manuel_de_jesus_maria_ulpiano_troncoso_de_La_concha = {
+			name = DOM_manuel_de_jesus_maria_ulpiano_troncoso_de_La_concha
+			#https://en.wikipedia.org/wiki/Manuel_de_Jes%C3%BAs_Troncoso_de_la_Concha
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DOM_manuel_de_jesus_maria_ulpiano_troncoso_de_La_concha
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1942 Election
+	#
+	#1947 Election
+		DOM_francisco_prats_ramirez = {
+			name = DOM_francisco_prats_ramirez
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DOM_francisco_prats_ramirez
+				}
+			}
+			#ideology_socialist
+		}
+		DOM_rafael_espaillat = {
+			name = DOM_rafael_espaillat
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DOM_rafael_espaillat
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1952 Election
+		DOM_hector_bienvenido_trujillo_molina = {
+			name = DOM_hector_bienvenido_trujillo_molina
+			#https://en.wikipedia.org/wiki/H%C3%A9ctor_Trujillo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DOM_hector_bienvenido_trujillo_molina
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1957 Election
+	#
+	#1960 Resignation
+		DOM_joaquin_antonio_balaguer_ricardo = {
+			name = DOM_joaquin_antonio_balaguer_ricardo
+			#https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Balaguer
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DOM_joaquin_antonio_balaguer_ricardo
+				}
+			}
+			#ideology_fascist
+		}
+	#
+}

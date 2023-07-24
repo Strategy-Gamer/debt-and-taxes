@@ -1,0 +1,38 @@
+
+state={
+	id=858
+	name="STATE_858"
+	provinces={
+		4946 7921 8003 10172 10738 10853 10871 12804 
+	}
+	history={
+		owner=MEX
+		add_core_of=MEC
+		add_core_of=MEX
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			7921 10
+		}
+		victory_points = {
+			10172 5
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = disaster_boll_weevil_infestation
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+	manpower=863215
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=large_town
+}

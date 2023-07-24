@@ -1,0 +1,33 @@
+
+state={
+	id=615
+	name="STATE_615"
+
+	history={
+		owner = SHX
+		add_core_of = SHX
+		victory_points = {
+			1519 3 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1027 1034 1203 1438 1519 1531 4074 4174 4469 4538 4634 7571 10367 10421 10480 10507 12078 12300 12344 12432 13479 
+	}
+	manpower=11601000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

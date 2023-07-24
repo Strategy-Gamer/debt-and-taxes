@@ -1,0 +1,27 @@
+
+state={
+	id=767
+	name="STATE_767"
+
+	history={
+		add_core_of = SUD
+		owner = ENG
+		buildings = {
+			infrastructure = 0
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		1960 5060 8052 8103 10739 10857 
+	}
+	manpower=815334
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

@@ -1,0 +1,58 @@
+ #Entertainement Complex
+  industry_entertainment_complex_input_factor: "$industry_entertainment_complex$ Input Factor"
+  local_industry_entertainment_complex_input_factor: "Local $industry_entertainment_complex_input_factor$"
+  industry_entertainment_complex_output_factor: "$industry_entertainment_complex$ Output Factor"
+  local_industry_entertainment_complex_output_factor: "Local $industry_entertainment_complex_output_factor$"
+  industry_entertainment_complex_throughput_factor: "$industry_entertainment_complex$ Throughput Factor"
+  local_industry_entertainment_complex_throughput_factor: "Local $industry_entertainment_complex_throughput_factor$"
+  industry_entertainment_complex_maintenance_factor: "$industry_entertainment_complex$ maintenance Factor"
+  local_industry_entertainment_complex_maintenance_factor: "Local $industry_entertainment_complex_maintenance_factor$"
+  industry_entertainment_complex_attractiveness_modifier: "$industry_entertainment_complex$ Attractiveness Modifier"
+  local_industry_entertainment_complex_attractiveness_modifier: "Local $industry_entertainment_complex_attractiveness_modifier$"
+  industry_entertainment_complex_attractiveness_factor: "$industry_entertainment_complex$ Mine Attractiveness Factor"
+  local_industry_entertainment_complex_attractiveness_factor: "Local $industry_entertainment_complex_attractiveness_factor$"
+
+  #Extractors
+			set_variable = { size@token:industry_grain_farm = 19 }
+			set_variable = { production_method@token:industry_grain_farm = 2 }
+
+			set_variable = { size@token:industry_livestock_ranch = 2 }
+			set_variable = { production_method@token:industry_livestock_ranch = 3 }
+
+			set_variable = { size@token:industry_cotton_plantation = 11 }
+			set_variable = { production_method@token:industry_cotton_plantation = 1 }
+
+			set_variable = { size@token:industry_lumber_lodge = 3 }
+			set_variable = { production_method@token:industry_lumber_lodge = 2 }
+
+			set_variable = { size@token:industry_iron_mine = 4 }
+			set_variable = { production_method@token:industry_iron_mine = 2 }
+
+			set_variable = { size@token:industry_coal_mine = 2 }
+			set_variable = { production_method@token:industry_coal_mine = 2 }
+
+			#Factories
+			set_variable = { size@token:industry_steel_mill = 1 }
+			set_variable = { production_method@token:industry_steel_mill = 2 }
+
+			set_variable = { size@token:industry_textile_mill = 1 }
+			set_variable = { production_method@token:industry_textile_mill = 2 }
+
+			set_variable = { size@token:industry_machinery_factory = 1 }
+			set_variable = { production_method@token:industry_machinery_factory = 2 }
+
+			set_variable = { size@token:industry_clothing_factory = 1 }
+			set_variable = { production_method@token:industry_clothing_factory = 2 }
+
+			set_variable = { size@token:industry_consumer_goods_factory = 2 }
+			set_variable = { production_method@token:industry_consumer_goods_factory = 2 }
+
+			#Services
+			set_variable = { size@token:industry_construction_yard = 1 }
+			set_variable = { production_method@token:industry_construction_yard = 2 }
+			
+			set_variable = { size@token:industry_transport_hub = 2 }
+			set_variable = { production_method@token:industry_transport_hub = 2 }
+
+			set_variable = { size@token:industry_finance_hub = 1 }
+			set_variable = { production_method@token:industry_finance_hub = 2 }

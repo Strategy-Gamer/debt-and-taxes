@@ -1,0 +1,30 @@
+state=
+{
+	id=630
+	name="STATE_630"
+	manpower = 100
+	state_category = tiny_island
+
+	history={
+		owner = USA
+		add_core_of = HAW
+		buildings = {
+			infrastructure = 1
+			13051 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_tropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+	}
+	
+	provinces={
+		13051 	
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,1576 @@
+# Year Demarcation
+technologies = {
+	@1850 = 0
+	@1900 = 2
+	@1910 = 4
+	@1920 = 6
+	@1925 = 8
+	@1930 = 10
+	@1935 = 12
+	@1940 = 14
+	@1945 = 16
+	@1950 = 18
+	@1955 = 20
+	@1960 = 22
+
+# Agriculture
+	tech_intensive_agriculture = {
+		path = {
+			leads_to_tech = tech_tractors
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_electrified_wire_fencing
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_nitrogen_fertilizers
+			research_cost_coeff = 1
+		}
+
+		research_cost = 4
+		start_year = 1850
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1850 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		custom_modifier_tooltip = industry_grain_farm_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_rice_paddy_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_livestock_ranch_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_fishing_wharf_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_sheep_ranch_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_sheep_ranch_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_silk_plantation_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_rubber_lodge_method_industrialized_enable_tt
+		subsistence_farm_output_factor = 0.1
+	}
+	tech_tractors = {
+		path = {
+			leads_to_tech = tech_agronomy
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_crop_dusting
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1910
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1910 }
+		}
+		
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			agriculture_tech
+		}
+
+		custom_modifier_tooltip = industry_grain_farm_method_mechanized_enable_tt
+		custom_modifier_tooltip = industry_fishing_wharf_method_mechanized_enable_tt
+	}
+	tech_agronomy = {
+		path = {
+			leads_to_tech = tech_intensive_farming_methods
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1920
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1920 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		industry_agriculture_output_factor = 0.05
+		subsistence_farm_output_factor = 0.05
+		
+	}
+	tech_intensive_farming_methods = {
+		path = {
+			leads_to_tech = tech_sprinkler_irrigation
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1940
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1940 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+		
+		custom_modifier_tooltip = industry_rice_paddy_method_mechanized_enable_tt
+
+		industry_agriculture_output_factor = 0.05
+		subsistence_farm_output_factor = 0.05
+	}
+	tech_sprinkler_irrigation = {
+		research_cost = 2
+		start_year = 1945
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1945 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		industry_rice_paddy_throughput_factor = 0.1
+		industry_agriculture_throughput_factor = 0.05
+	}
+	tech_crop_dusting = {
+		path = {
+			leads_to_tech = tech_improved_tractors
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1930
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1930 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		industry_agriculture_maintenance_factor = 0.05
+		industry_agriculture_throughput_factor = 0.050
+	}
+	tech_improved_tractors = {
+		path = {
+			leads_to_tech = tech_agricultural_unit_machinery
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1945
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1945 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		industry_agriculture_maintenance_factor = 0.05
+		industry_agriculture_throughput_factor = 0.05
+	}
+	tech_agricultural_unit_machinery = {
+		research_cost = 2
+		start_year = 1950
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1950 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		custom_modifier_tooltip = industry_grain_farm_method_modernized_enable_tt
+		custom_modifier_tooltip = industry_fishing_wharf_method_modernized_enable_tt
+	}
+	tech_electrified_wire_fencing = {
+		path = {
+			leads_to_tech = tech_mechanized_milking_machines
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1900
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 4 y = @1900 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		custom_modifier_tooltip = industry_livestock_ranch_method_mechanized_enable_tt
+		custom_modifier_tooltip = industry_sheep_ranch_method_mechanized_enable_tt
+	}
+	tech_mechanized_milking_machines = {
+		path = {
+			leads_to_tech = tech_artificial_breeding
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1920
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 4 y = @1920 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		custom_modifier_tooltip = industry_livestock_ranch_method_modernized_enable_tt
+	}
+	tech_artificial_breeding = {
+		research_cost = 2
+		start_year = 1930
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 4 y = @1930 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		custom_modifier_tooltip = industry_sheep_ranch_method_modernized_enable_tt
+
+		industry_livestock_ranch_output_factor = 0.1
+		industry_sheep_ranch_output_factor = 0.1
+		subsistence_farm_output_factor = 0.1
+	}
+	tech_nitrogen_fertilizers = {
+		path = {
+			leads_to_tech = tech_synthetic_fertilizers
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1900
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 6 y = @1900 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		industry_fertilizer_factory_throughput_factor = 0.1
+		industry_agriculture_input_factor = 0.05
+		industry_agriculture_output_factor = 0.05
+		subsistence_farm_output_factor = 0.1
+	}
+	tech_synthetic_fertilizers = {
+		path = {
+			leads_to_tech = tech_nitrophosphate_process
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1920
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 6 y = @1920 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+		
+		industry_fertilizer_factory_throughput_factor = 0.1
+		industry_agriculture_input_factor = 0.05
+		industry_agriculture_output_factor = 0.05
+		subsistence_farm_output_factor = 0.1
+	}
+	tech_nitrophosphate_process = {
+		path = {
+			leads_to_tech = tech_advanced_synthetic_fertilizers
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1930
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 6 y = @1930 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+		
+		industry_fertilizer_factory_throughput_factor = 0.2
+		industry_agriculture_input_factor = 0.1
+		industry_agriculture_output_factor = 0.1
+		subsistence_farm_output_factor = 0.2
+	}
+	tech_advanced_synthetic_fertilizers = {
+		research_cost = 2
+		start_year = 1950
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 6 y = @1950 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+		
+		industry_fertilizer_factory_throughput_factor = 0.1
+		industry_agriculture_input_factor = 0.05
+		industry_agriculture_output_factor = 0.05
+		subsistence_farm_output_factor = 0.1
+	}
+# Drilling
+	tech_cable_tool_drilling = {
+		path = {
+			leads_to_tech = tech_early_rotary_drilling
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_drilling_mud
+			research_cost_coeff = 1
+		}
+
+		research_cost = 4
+		start_year = 1850
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1850 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		custom_modifier_tooltip = industry_oil_rig_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_gas_rig_method_industrialized_enable_tt
+	}
+	tech_early_rotary_drilling = {
+		path = {
+			leads_to_tech = tech_shaft_driven_rotary_table
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1900
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1900 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		industry_drill_throughput_factor = 0.01
+	}
+	tech_shaft_driven_rotary_table = {
+		path = {
+			leads_to_tech = tech_four_speed_drawworks
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1920
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1920 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		industry_drill_throughput_factor = 0.02
+	}
+	tech_four_speed_drawworks = {
+		path = {
+			leads_to_tech = tech_unitized_drawworks
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1930
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1930 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		industry_drill_throughput_factor = 0.02
+	}
+	tech_unitized_drawworks = {
+		path = {
+			leads_to_tech = tech_directional_drilling
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1935
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1935 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		industry_drill_throughput_factor = 0.1
+	}
+	tech_directional_drilling = {
+		research_cost = 2
+		start_year = 1940
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1940 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		industry_drill_throughput_factor = 0.05
+	}
+	tech_drilling_mud = {
+		path = {
+			leads_to_tech = tech_standardized_derrick
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1900
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1900 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		industry_drill_input_factor = -0.1
+		industry_drill_maintenance_factor = -0.05
+	}
+	tech_standardized_derrick = {
+		path = {
+			leads_to_tech = tech_hydraulic_ram_type_blowout_preventer
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_on_water_drilling
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1910
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1910 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		custom_modifier_tooltip = industry_oil_rig_method_mechanized_enable_tt
+		custom_modifier_tooltip = industry_gas_rig_method_mechanized_enable_tt
+	}
+	tech_hydraulic_ram_type_blowout_preventer = {
+		path = {
+			leads_to_tech = tech_tricone_bit
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1925
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1925 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		industry_drill_maintenance_factor = -0.05
+		industry_drill_output_factor = 0.05
+	}
+	tech_tricone_bit = {
+		research_cost = 2
+		start_year = 1935
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1935 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		custom_modifier_tooltip = industry_oil_rig_method_modernized_enable_tt
+		custom_modifier_tooltip = industry_gas_rig_method_modernized_enable_tt
+	}
+	tech_on_water_drilling = {
+		path = {
+			leads_to_tech = tech_offshore_oil_well
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1930
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 4 y = @1930 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		custom_modifier_tooltip = industry_offshore_oil_rig_method_industrialized_enable_tt
+	}
+	tech_offshore_oil_well = {
+		path = {
+			leads_to_tech = tech_jackup_oil_rig
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1945
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 4 y = @1945 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		custom_modifier_tooltip = industry_offshore_oil_rig_method_mechanized_enable_tt
+	}
+	tech_jackup_oil_rig = {
+		research_cost = 2
+		start_year = 1955
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 4 y = @1955 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			drilling_tech
+		}
+
+		custom_modifier_tooltip = industry_offshore_oil_rig_method_modernized_enable_tt
+	}
+
+# Mining
+	tech_steel_picks_and_shovels = {
+		path = {
+			leads_to_tech = tech_steam_shovels
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_coal_cutting_machines
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_hydraulic_excavators
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_electric_cap_lights
+			research_cost_coeff = 1
+		}
+
+		research_cost = 4
+		start_year = 1850
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1850 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		custom_modifier_tooltip = industry_bauxite_mine_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_tungsten_mine_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_iron_mine_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_chromium_mine_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_copper_mine_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_precious_metals_mine_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_coal_mine_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_rare_earth_metals_mine_method_industrialized_enable_tt
+		custom_modifier_tooltip = industry_sulfur_mine_method_industrialized_enable_tt
+	}
+	tech_steam_shovels = {
+		path = {
+			leads_to_tech = tech_diesel_shovels
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1900
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1900 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		industry_mine_throughput_factor = 0.1
+	}
+	tech_diesel_shovels = {
+		path = {
+			leads_to_tech = tech_power_shovels
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1930
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1930 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		industry_mine_throughput_factor = 0.1
+	}
+	tech_power_shovels = {
+		research_cost = 2
+		start_year = 1955
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1955 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		industry_mine_throughput_factor = 0.1
+	}
+	tech_coal_cutting_machines = {
+		path = {
+			leads_to_tech = tech_loading_machines
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1900
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1900 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		industry_coal_mine_maintenance_factor = 0.05
+		industry_coal_mine_throughput_factor = 0.1
+	}
+	tech_loading_machines = {
+		path = {
+			leads_to_tech = tech_longwall_mining
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1920
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1920 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		custom_modifier_tooltip = industry_coal_mine_method_mechanized_enable_tt
+	}
+	tech_longwall_mining = {
+		research_cost = 2
+		start_year = 1945
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1945 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		custom_modifier_tooltip = industry_coal_mine_method_modernized_enable_tt
+	}
+	tech_hydraulic_excavators = {
+		path = {
+			leads_to_tech = tech_bucket_wheel_excavators
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1900
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 4 y = @1900 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		industry_mine_output_factor = 0.05
+	}
+	tech_bucket_wheel_excavators = {
+		path = {
+			leads_to_tech = tech_mine_mechanization
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1925
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 4 y = @1925 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		custom_modifier_tooltip = industry_bauxite_mine_method_mechanized_enable_tt
+		custom_modifier_tooltip = industry_tungsten_mine_method_mechanized_enable_tt
+		custom_modifier_tooltip = industry_iron_mine_method_mechanized_enable_tt
+		custom_modifier_tooltip = industry_chromium_mine_method_mechanized_enable_tt
+		custom_modifier_tooltip = industry_copper_mine_method_mechanized_enable_tt
+		custom_modifier_tooltip = industry_precious_metals_mine_method_mechanized_enable_tt
+		custom_modifier_tooltip = industry_rare_earth_metals_mine_method_mechanized_enable_tt
+		custom_modifier_tooltip = industry_sulfur_mine_method_mechanized_enable_tt
+	}
+	tech_mine_mechanization = {
+		path = {
+			leads_to_tech = tech_continuous_mining
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1940
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 4 y = @1940 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		custom_modifier_tooltip = industry_bauxite_mine_method_modernized_enable_tt
+		custom_modifier_tooltip = industry_tungsten_mine_method_modernized_enable_tt
+		custom_modifier_tooltip = industry_iron_mine_method_modernized_enable_tt
+		custom_modifier_tooltip = industry_chromium_mine_method_modernized_enable_tt
+		custom_modifier_tooltip = industry_copper_mine_method_modernized_enable_tt
+		custom_modifier_tooltip = industry_precious_metals_mine_method_modernized_enable_tt
+		custom_modifier_tooltip = industry_rare_earth_metals_mine_method_modernized_enable_tt
+		custom_modifier_tooltip = industry_sulfur_mine_method_modernized_enable_tt
+	}
+	tech_continuous_mining = {
+		research_cost = 2
+		start_year = 1950
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 4 y = @1950 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		industry_mine_output_factor = 0.1
+	}
+	tech_electric_cap_lights = {
+		path = {
+			leads_to_tech = tech_methanometer
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1930
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 6 y = @1930 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		industry_mine_input_factor = -0.025
+	}
+	tech_methanometer = {
+		research_cost = 2
+		start_year = 1950
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 6 y = @1950 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			mining_tech
+		}
+
+		industry_mine_input_factor = -0.025
+	}
+
+# Logging
+	tech_steam_powered_sawmills = {
+		path = {
+			leads_to_tech = tech_conservation
+			research_cost_coeff = 1
+		}
+
+		research_cost = 4
+		start_year = 1850
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1850 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			logging_tech
+		}
+
+		custom_modifier_tooltip = industry_lumber_lodge_method_industrialized_enable_tt
+	}
+	tech_conservation = {
+		path = {
+			leads_to_tech = tech_bucksaws
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 900
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1900 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			logging_tech
+		}
+
+		industry_lumber_lodge_input_factor = 0.05
+		industry_lumber_lodge_output_factor = 0.1
+	}
+	tech_bucksaws = {
+		path = {
+			leads_to_tech = tech_chainsaws
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1920
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1920 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			logging_tech
+		}
+
+		industry_lumber_lodge_throughput_factor = 0.1
+	}
+	tech_chainsaws = {
+		path = {
+			leads_to_tech = tech_hydraulic_shears
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1930
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1930 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			logging_tech
+		}
+
+		custom_modifier_tooltip = industry_lumber_lodge_method_mechanized_enable_tt
+	}
+	tech_hydraulic_shears = {
+		research_cost = 2
+		start_year = 1940
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 0 y = @1940 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			logging_tech
+		}
+
+		custom_modifier_tooltip = industry_lumber_lodge_method_modernized_enable_tt
+	}
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=678
+	name="STATE_678"
+
+	history={
+		owner = SAU
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = SAU
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		5081 12768 5093 13623
+	}
+	manpower=43223
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

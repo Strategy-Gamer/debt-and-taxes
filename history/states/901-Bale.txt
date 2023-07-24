@@ -1,0 +1,21 @@
+state={
+	id=901
+	name="STATE_901"
+	provinces={
+		4995 10775 13488 
+	}
+	history={
+		owner=ETH
+		add_core_of=ETH
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+	state_category=pastoral
+	manpower = 810500
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

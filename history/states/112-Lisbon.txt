@@ -1,0 +1,44 @@
+state={
+	id=112
+	name="STATE_112"
+	resources={
+		tungsten=50.000
+	}
+
+	history={
+		owner = POR
+		victory_points = {
+			11805 20
+		}
+		victory_points = {
+			3798 1
+		}
+		buildings = {
+			infrastructure = 3
+
+			air_base = 5
+			11805 = {
+				naval_base = 8
+			}
+		}
+		add_core_of = POR
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		799 3798 3861 6924 11805
+	}
+	manpower=1995800
+	buildings_max_level_factor=1.000
+	state_category=city
+
+	local_supplies=12.0
+}

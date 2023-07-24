@@ -1,0 +1,43 @@
+characters = {
+	MEC_enrique_gorostieta_velarde = {
+		name = MEC_enrique_gorostieta_velarde
+		portraits={
+			civilian={
+				large=GFX_Portrait_South_America_Generic_land_4
+			}
+			army = {
+				large=GFX_Portrait_South_America_Generic_land_4
+			}
+		}
+		country_leader={
+			ideology = fundamentalism
+			traits = { }
+			expire="1936.12.5.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ brilliant_strategist cavalry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	MEC_jose_reyes_vega = {
+		name = MEC_jose_reyes_vega
+		portraits={
+			army = {
+				large=GFX_Portrait_South_America_Generic_land_2
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+}

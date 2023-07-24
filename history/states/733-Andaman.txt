@@ -1,0 +1,27 @@
+state={
+	id=733
+	name="STATE_733"
+	manpower=29500
+	state_category = small_island
+	
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+			12251 = {
+				naval_base = 2
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+	}
+	provinces={
+		10321 12251 
+	}
+
+	local_supplies=0.0 
+}

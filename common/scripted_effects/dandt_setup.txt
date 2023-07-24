@@ -1,0 +1,907 @@
+###################################################
+### D&T's scripted effects for initial setup   ####
+###################################################
+
+#These are general startup scripts which do not fit in any specific file 
+
+dandt_setup = {
+	#dandt_constants = yes
+	state_categories_setup = yes
+	dandt_history = yes
+	setup = yes
+}
+
+population_pyramid_setup = {
+	#Country Scope
+	#Input: pops_pyramid_setup array
+
+	#pop_pyramid_setup is population per 5 years. 0th index is 0-4, 1st index is 5-9, etc.
+	#Total does not need to match, just the proportions
+
+	#Get total
+	set_temp_variable = { total_pops_pyramid_amount = 0 }
+	for_each_loop = {
+		array = pops_pyramid_setup
+		index = age_bracket
+
+		add_to_temp_variable = { total_pops_pyramid_amount = pops_pyramid_setup^age_bracket }
+	}
+
+	#Get proportion
+	for_each_loop = {
+		array = pops_pyramid_setup
+		index = age_bracket
+
+		multiply_variable = { pops_pyramid_setup^age_bracket = 100 }
+		divide_variable = { pops_pyramid_setup^age_bracket = total_pops_pyramid_amount }
+	}
+
+	#Create actual population pyramid
+	for_loop_effect = {
+		end = 21
+		value = age_bracket
+
+		add_to_array = { pops_pyramid_percentage = pops_pyramid_setup^age_bracket }
+	}
+	clear_array = pops_pyramid_setup
+}
+
+setup = {
+	set_variable = { global.current_year = global.year }
+
+	add_to_array = { global.dandt_countries = USA }
+	add_to_array = { global.dandt_countries = BUL }
+	add_to_array = { global.dandt_countries = SWI }
+	add_to_array = { global.dandt_countries = BEL }
+
+	for_each_scope_loop = {
+		array = global.dandt_countries
+
+		modifiers_update = yes
+		set_variable = { interest_rate = 0.10 } #TEMPORARY
+		every_controlled_state = {
+			state_modifiers_update = yes
+
+			resource_setup = yes
+			pop_setup = yes
+
+			industry_setup = yes
+			industry_productivity_sort = yes
+			base_wage_calculation = yes
+
+			arable_land_update = yes
+			subsistence_farm_update_workforce = yes
+			state_industry_modifiers_update = yes # Economies of Scale
+
+			employment_setup = yes
+			standard_of_living_setup = yes
+		}
+
+		market_setup = yes
+
+		calc_supply = yes
+		calc_demand = yes
+		get_resource_prices = yes
+	}
+
+	global_market_update = yes
+	trade_routes_setup = yes
+
+	for_each_scope_loop = {
+		array = global.dandt_countries
+
+		every_controlled_state = {
+			subsistence_farm_update = yes
+
+			industries_update = yes
+			industry_productivity_sort = yes
+			base_wage_calculation = yes
+
+			industries_update = yes
+			pops_update = yes
+			standard_of_living_setup = yes
+
+			#update_state_modifiers = yes
+			#industries_update = yes
+			#industries_update_production_input_maintenance = yes
+		}
+		calc_supply = yes
+		calc_demand = yes
+		get_resource_prices = yes
+
+		every_controlled_state = {
+			industries_update = yes
+			industry_productivity_sort = yes
+			base_wage_calculation = yes
+
+			industries_update = yes
+			pops_update = yes
+
+			money_setup = yes
+			industries_update_civ_count = yes
+		}
+	}
+	
+	global_market_update = yes
+
+	for_each_scope_loop = {
+		array = global.dandt_countries
+		if = {
+			limit = {
+				check_variable = { market_leader = THIS }
+			}
+			market_calc_gdp = yes
+		}
+		
+		refresh_state_list = yes
+		create_state_pie_charts = yes
+		country_update_trade_display = yes
+	}
+}
+
+#STATES
+	state_categories_setup = {
+		every_state = {
+			set_state_category = state_cat
+			#add_building_construction = {
+			#	type = prov_check
+			#	level = 1
+			#	instant_build = yes
+			#	province = {
+			#		all_provinces = yes
+			#	}
+			#}
+			#set_variable = { num_provinces = 0 }
+			#while_loop_effect = {
+			#	limit = {
+			#		meta_trigger = {
+			#			text = {
+			#				prov_check > [Num_Provinces]
+			#			}
+			#			Num_Provinces = "[?num_provinces|0]"
+			#		}
+			#	}
+			#	add_to_variable = { num_provinces = 1 }
+			#}
+			#set_temp_variable = { num_provinces_capped = num_provinces }
+			#if = {
+			#	limit = {
+			#		check_variable = { num_provinces_capped > 33 }
+			#	}
+			#	set_temp_variable = { num_provinces_capped = 33 }
+			#}
+			#meta_effect = {
+			#	text = {
+			#		set_state_category = size_[Num_Provinces]
+			#	}
+			#	Num_Provinces = "[?num_provinces_capped|0]"
+			#}
+		}
+	}
+
+	terrain_setup = {
+		if = {
+			limit = {
+				check_variable = { flat_percentage = 0 }
+				check_variable = { hilly_percentage = 0 }
+				check_variable = { mountainous_percentage = 0 }
+				check_variable = { dunes_percentage = 0 }
+				check_variable = { swamp_percentage = 0 }
+			}
+			set_variable = { flat_percentage = 1 } #Defaults to flat
+		}
+
+		terrain_update = yes
+	}
+
+	infrastructure_setup = {
+
+		infrastructure_update = yes
+	}
+
+	#UPDATED
+	resource_setup = {
+		for_each_loop = {
+			array = global.resources_token_array
+			value = r_type
+
+			set_variable = { price@var:r_type = global.base_price@var:r_type }
+
+			set_variable = { supply@var:r_type = 0 }
+			set_variable = { demand@var:r_type = 0 }
+			set_variable = { need@var:r_type = 0 }
+
+			set_variable = { production@var:r_type = 0 }
+			set_variable = { consumption@var:r_type = 0 }
+		}
+	}
+
+	#UPDATED
+	pop_setup = {
+
+		#State-wide Variables that need to be set before looping through each pop type
+
+		#pops_amount
+			#Setting pops_amount
+			set_variable = { pops_amount = state_population_k }
+		#
+
+		#Literacy Percentage
+			if = {
+				limit = {
+					NOT = { has_variable = pops_literacy_percentage }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_literacy_percentage
+						}
+						set_variable = { PREV.pops_literacy_percentage = pops_literacy_percentage }
+					}
+					else = {
+						set_variable = { PREV.pops_literacy_percentage = global.pops_literacy_percentage }
+					}
+				}
+			}
+		#
+		#Schooling Percentage
+			if = {
+				limit = {
+					NOT = { has_variable = pops_schooling_percentage }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_schooling_percentage
+						}
+						set_variable = { PREV.pops_schooling_percentage = pops_schooling_percentage }
+					}
+					else = {
+						set_variable = { PREV.pops_schooling_percentage = global.pops_schooling_percentage }
+					}
+				}
+			}
+		#
+		#Education Percentage
+			if = {
+				limit = {
+					NOT = { has_variable = pops_education_percentage }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_education_percentage
+						}
+						set_variable = { PREV.pops_education_percentage = pops_education_percentage }
+					}
+					else = {
+						set_variable = { PREV.pops_education_percentage = global.pops_education_percentage }
+					}
+				}
+			}
+		#
+		
+		#Heating Lumber Use
+			if = {
+				limit = {
+					NOT = { has_variable = pops_heating_lumber_use }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_heating_lumber_use
+						}
+						set_variable = { PREV.pops_heating_lumber_use = pops_heating_lumber_use }
+					}
+					else = {
+						set_variable = { PREV.pops_heating_lumber_use = global.pops_heating_lumber_use }
+					}
+				}
+			}
+		#
+		#Heating Electricity Use
+			if = {
+				limit = {
+					NOT = { has_variable = pops_heating_electricity_use }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_heating_electricity_use
+						}
+						set_variable = { PREV.pops_heating_electricity_use = pops_heating_electricity_use }
+					}
+					else = {
+						set_variable = { PREV.pops_heating_electricity_use = global.pops_heating_electricity_use }
+					}
+				}
+			}
+		#
+		#Pharmaceuticals Use
+			if = {
+				limit = {
+					NOT = { has_variable = pops_healthcare_pharmaceuticals_use }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_healthcare_pharmaceuticals_use
+						}
+						set_variable = { PREV.pops_healthcare_pharmaceuticals_use = pops_healthcare_pharmaceuticals_use }
+					}
+					else = {
+						set_variable = { PREV.pops_healthcare_pharmaceuticals_use = global.pops_healthcare_pharmaceuticals_use }
+					}
+				}
+			}
+		#
+		#Automobiles Use
+			if = {
+				limit = {
+					NOT = { has_variable = pops_movement_automobiles_use }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_movement_automobiles_use
+						}
+						set_variable = { PREV.pops_movement_automobiles_use = pops_movement_automobiles_use }
+					}
+					else = {
+						set_variable = { PREV.pops_movement_automobiles_use = global.pops_movement_automobiles_use }
+					}
+				}
+			}
+		#
+		#Fuel Electricity Use
+			if = {
+				limit = {
+					NOT = { has_variable = pops_fuel_electricity_use }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_fuel_electricity_use
+						}
+						set_variable = { PREV.pops_fuel_electricity_use = pops_fuel_electricity_use }
+					}
+					else = {
+						set_variable = { PREV.pops_fuel_electricity_use = global.pops_fuel_electricity_use }
+					}
+				}
+			}
+		#
+		#Computers Use
+			if = {
+				limit = {
+					NOT = { has_variable = pops_luxuries_computers_use }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_luxuries_computers_use
+						}
+						set_variable = { PREV.pops_luxuries_computers_use = pops_luxuries_computers_use }
+					}
+					else = {
+						set_variable = { PREV.pops_luxuries_computers_use = global.pops_luxuries_computers_use }
+					}
+				}
+			}
+		#
+
+		#Births Per Woman
+			if = {
+				limit = {
+					NOT = { has_variable = pops_births_per_woman }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_births_per_woman
+						}
+						set_variable = { PREV.pops_births_per_woman = pops_births_per_woman }
+					}
+					else = {
+						set_variable = { PREV.pops_births_per_woman = global.pops_births_per_woman }
+					}
+				}
+			}
+		#
+		#Heatlh Percentage
+			if = {
+				limit = {
+					NOT = { has_variable = pops_health_percentage }
+				}
+				owner = {
+					if = {
+						limit = {
+							has_variable = pops_health_percentage
+						}
+						set_variable = { PREV.pops_health_percentage = pops_health_percentage }
+					}
+					else = {
+						set_variable = { PREV.pops_health_percentage = global.pops_health_percentage }
+					}
+				}
+			}
+		#
+
+		#Religion
+			if = {
+				limit = {
+					check_variable  = { pops_religion_type^num = 0 }
+				}
+				owner = {
+					if = {
+						limit = {
+							check_variable  = { pops_religion_type^num > 0 }
+						}
+						for_each_loop = {
+							array = pops_religion_type
+							index = rr
+
+							add_to_array = { PREV.pops_religion_type = pops_religion_type^rr }
+							add_to_array = { PREV.pops_religion_percentage = pops_religion_percentage^rr }
+							add_to_array = { PREV.pops_religion_amount = 0 }
+						}
+					}
+					else = {
+						add_to_array = { PREV.pops_religion_type = 0 }
+						add_to_array = { PREV.pops_religion_percentage = 1 }
+						add_to_array = { PREV.pops_religion_amount = 0 }
+					}
+				}
+			}
+		#
+		#Culture
+			if = {
+				limit = {
+					check_variable  = { pops_culture_type^num = 0 }
+				}
+				owner = {
+					if = {
+						limit = {
+							check_variable  = { pops_culture_type^num > 0 }
+						}
+						for_each_loop = {
+							array = pops_culture_type
+							index = rr
+
+							add_to_array = { PREV.pops_culture_type = pops_culture_type^rr }
+							add_to_array = { PREV.pops_culture_percentage = pops_culture_percentage^rr }
+							add_to_array = { PREV.pops_culture_amount = 0 }
+						}
+					}
+					else = {
+						add_to_array = { PREV.pops_culture_type = 0 }
+						add_to_array = { PREV.pops_culture_percentage = 1 }
+						add_to_array = { PREV.pops_culture_amount = 0 }
+					}
+				}
+			}
+		#
+		#Ideology
+			if = {
+				limit = {
+					check_variable  = { pops_ideology_type^num = 0 }
+				}
+				owner = {
+					if = {
+						limit = {
+							check_variable  = { pops_ideology_type^num > 0 }
+						}
+						for_each_loop = {
+							array = pops_ideology_type
+							index = rr
+
+							add_to_array = { PREV.pops_ideology_type = pops_ideology_type^rr }
+							add_to_array = { PREV.pops_ideology_percentage = pops_ideology_percentage^rr }
+							add_to_array = { PREV.pops_ideology_amount = 0 }
+						}
+					}
+					else = {
+						add_to_array = { PREV.pops_ideology_type = 0 }
+						add_to_array = { PREV.pops_ideology_percentage = 1 }
+						add_to_array = { PREV.pops_ideology_amount = 0 }
+					}
+				}
+			}
+			for_each_loop = {
+				array = pops_ideology_type
+				index = rr
+				break = brk
+				if = {
+					limit = {
+						check_variable = { pops_ideology_type^rr = 2 }
+					}
+					remove_from_array = { array = pops_ideology_amount index = rr }
+					remove_from_array = { array = pops_ideology_percentage index = rr }
+					remove_from_array = { array = pops_ideology_type index = rr }
+					set_temp_variable = { brk = 1 }
+				}
+			}
+		#
+
+		#Normalize Demographics
+		pops_normalize_demographics = yes
+
+		#Finish with Updating Pops
+		pops_update = yes
+	}
+
+	industry_setup = {
+		#Grain Farms
+		#	if = {
+		#		limit = {
+		#			check_variable = { grain_farm_size < 1 }  
+		#		}
+		#		set_variable = { grain_farm_size = farmers_workforce_amount }
+		#		divide_variable = { grain_farm_size = 4 }
+		#		round_variable = grain_farm_size
+		#	}
+
+		for_each_loop = {
+			array = global.industries_token_array
+			value = ind_setup_token
+
+			if = {
+				limit = {
+					check_variable = { size@var:ind_setup_token > 0 }
+				}
+				add_to_array = { industries = ind_setup_token }
+			}
+		}
+		industries_update = yes
+	}
+
+	employment_setup = {
+		set_variable = { slaves_employed_amount = 0 }
+		set_variable = { peasants_employed_amount = 0 }
+		set_variable = { laborers_employed_amount = 0 }
+		set_variable = { workers_employed_amount = 0 }
+		set_variable = { professionals_employed_amount = 0 }
+		set_variable = { elites_employed_amount = 0 }
+		set_variable = { bureaucrats_employed_amount = 0 }
+		set_variable = { soldiers_employed_amount = 0 }
+
+		set_temp_variable = { multiplier_temp = 1 }
+		if = {
+			limit = {
+				check_variable = { industries_jobs_amount > pops_workforce_amount }
+			}
+			set_temp_variable = { multiplier_temp = pops_workforce_amount }
+			divide_temp_variable = { multiplier_temp = industries_jobs_amount }
+
+			multiply_temp_variable = { multiplier_temp = 100 }
+			subtract_from_temp_variable = { multiplier_temp = 0.5 }
+			round_temp_variable = multiplier_temp
+			divide_temp_variable = { multiplier_temp = 100 }
+		}
+		#Industries Employ Pops
+		for_each_loop = {
+			array = industries
+			value = emp_ind_token
+			
+			set_variable = { employment_percentage@var:emp_ind_token = multiplier_temp }
+			set_variable = { employment_target@var:emp_ind_token = multiplier_temp }
+			
+			set_variable = { laborers_employed@var:emp_ind_token = laborers_jobs@var:emp_ind_token }
+			multiply_variable = { laborers_employed@var:emp_ind_token = multiplier_temp }
+			set_variable = { workers_employed@var:emp_ind_token = workers_jobs@var:emp_ind_token }
+			multiply_variable = { workers_employed@var:emp_ind_token = multiplier_temp }
+			set_variable = { professionals_employed@var:emp_ind_token = professionals_jobs@var:emp_ind_token }
+			multiply_variable = { professionals_employed@var:emp_ind_token = multiplier_temp }
+			set_variable = { elites_employed@var:emp_ind_token = elites_jobs@var:emp_ind_token }
+			multiply_variable = { elites_employed@var:emp_ind_token = multiplier_temp }
+			
+			add_to_variable = { laborers_employed_amount = laborers_employed@var:emp_ind_token }
+			add_to_variable = { workers_employed_amount = workers_employed@var:emp_ind_token }
+			add_to_variable = { professionals_employed_amount = professionals_employed@var:emp_ind_token }
+			add_to_variable = { elites_employed_amount = elites_employed@var:emp_ind_token }
+		}
+		set_variable = { laborers_workforce_amount = pops_workforce_amount } #Everyone are laborers
+
+		set_variable = { workers_workforce_amount = workers_employed_amount }
+		set_variable = { professionals_workforce_amount = professionals_employed_amount }
+		set_variable = { elites_workforce_amount = elites_employed_amount }
+
+		subtract_from_variable = { laborers_workforce_amount = workers_workforce_amount }
+		subtract_from_variable = { laborers_workforce_amount = professionals_workforce_amount }
+		subtract_from_variable = { laborers_workforce_amount = elites_workforce_amount }
+		
+		#Subsistence Farms Employ Pops
+		if = {
+			limit = {
+				check_variable = { laborers_workforce_amount > laborers_employed_amount }
+				check_variable = { jobs_subsistence_farm > 0 }
+			}
+			set_variable = { peasants_workforce_amount = jobs_subsistence_farm }
+			if = {
+				limit = {
+					set_temp_variable = { lwa_temp = laborers_workforce_amount }
+					subtract_from_temp_variable = { lwa_temp = laborers_employed_amount }
+					check_variable = { lwa_temp < peasants_workforce_amount }
+				}
+				set_variable = { peasants_workforce_amount = lwa_temp }
+			}
+			subtract_from_variable = { laborers_workforce_amount = peasants_workforce_amount }
+
+			set_temp_variable = { emp_percent_temp = peasants_workforce_amount }
+			divide_temp_variable = { emp_percent_temp = jobs_subsistence_farm }
+
+			set_variable = { peasants_employed_subsistence_farm = peasants_jobs_subsistence_farm }
+			multiply_variable = { peasants_employed_subsistence_farm = emp_percent_temp }
+			set_variable = { peasants_workforce_amount = peasants_employed_subsistence_farm }
+			
+			set_variable = { elites_employed_subsistence_farm = elites_jobs_subsistence_farm }
+			multiply_variable = { elites_employed_subsistence_farm = emp_percent_temp }
+			add_to_variable = { elites_workforce_amount = elites_employed_subsistence_farm }
+		}
+
+		industries_update = yes
+		subsistence_farm_update = yes
+		pops_update_workforce = yes
+
+		#Lit/Schooling
+		set_temp_variable = { literate_pops_cap = pops_workforce_amount }
+		multiply_temp_variable = { literate_pops_cap = pops_literacy_percentage }
+
+		set_temp_variable = { literate_pops = workers_workforce_amount }
+		add_to_temp_variable = { literate_pops = professionals_workforce_amount }
+		add_to_temp_variable = { literate_pops = elites_workforce_amount }
+		add_to_temp_variable = { literate_pops = bureaucrats_workforce_amount }
+		
+		set_temp_variable = { schooled_pops_cap = pops_workforce_amount }
+		multiply_temp_variable = { schooled_pops_cap = pops_schooling_percentage }
+
+		set_temp_variable = { schooled_pops = professionals_workforce_amount }
+		add_to_temp_variable = { schooled_pops = elites_workforce_amount }
+
+		if = {
+			limit = {
+				check_variable = { schooled_pops > schooled_pops_cap }
+			}
+			set_variable = { pops_schooling_percentage = schooled_pops }
+			divide_variable = { pops_schooling_percentage = pops_workforce_amount }
+		}
+		if = {
+			limit = {
+				check_variable = { literate_pops > literate_pops_cap }
+			}
+			set_variable = { pops_literacy_percentage = literate_pops }
+			divide_variable = { pops_literacy_percentage = pops_workforce_amount }
+		}
+	}
+
+	trade_routes_setup = {
+		
+		for_each_scope_loop = {
+			array = global.dandt_countries
+			calc_trade_routes_supply = yes
+		}
+		for_each_scope_loop = {
+			array = global.dandt_countries
+			calc_foreign_routes_supply = yes
+		}
+		for_each_scope_loop = {
+			array = global.dandt_countries
+			calc_trade_routes_value = yes
+			calc_foreign_routes_value = yes
+		}
+	}
+
+	standard_of_living_setup = {
+		subsistence_farm_update = yes
+		pops_update = yes
+
+		#Slaves
+			set_temp_variable = { earnings_temp = slaves_earnings }
+			multiply_temp_variable = { earnings_temp = 100 }
+			divide_temp_variable = { earnings_temp = slaves_amount }
+			for_each_loop = {
+				array = global.sol_cost
+				index = sol_temp
+				value = col_temp
+				break = b
+
+				if = {
+					limit = {
+						check_variable = { earnings_temp < col_temp }
+					}
+					set_variable = { slaves_sol = sol_temp }
+					set_temp_variable = { b = 1 }
+				}
+			}
+		#
+		#Peasants
+			set_temp_variable = { earnings_temp = peasants_earnings }
+			multiply_temp_variable = { earnings_temp = 100 }
+			divide_temp_variable = { earnings_temp = peasants_amount }
+			for_each_loop = {
+				array = global.sol_cost
+				index = sol_temp
+				value = col_temp
+				break = b
+
+				if = {
+					limit = {
+						check_variable = { earnings_temp < col_temp }
+					}
+					set_variable = { peasants_sol = sol_temp }
+					set_temp_variable = { b = 1 }
+				}
+			}
+		#
+		#Laborers
+			set_temp_variable = { earnings_temp = laborers_earnings }
+			multiply_temp_variable = { earnings_temp = 100 }
+			divide_temp_variable = { earnings_temp = laborers_amount }
+			for_each_loop = {
+				array = global.sol_cost
+				index = sol_temp
+				value = col_temp
+				break = b
+
+				if = {
+					limit = {
+						check_variable = { earnings_temp < col_temp }
+					}
+					set_variable = { laborers_sol = sol_temp }
+					set_temp_variable = { b = 1 }
+				}
+			}
+		#
+		#Workers
+			set_temp_variable = { earnings_temp = workers_earnings }
+			multiply_temp_variable = { earnings_temp = 100 }
+			divide_temp_variable = { earnings_temp = workers_amount }
+			for_each_loop = {
+				array = global.sol_cost
+				index = sol_temp
+				value = col_temp
+				break = b
+
+				if = {
+					limit = {
+						check_variable = { earnings_temp < col_temp }
+					}
+					set_variable = { workers_sol = sol_temp }
+					set_temp_variable = { b = 1 }
+				}
+			}
+		#
+		#Professionals
+			set_temp_variable = { earnings_temp = professionals_earnings }
+			multiply_temp_variable = { earnings_temp = 100 }
+			divide_temp_variable = { earnings_temp = professionals_amount }
+			for_each_loop = {
+				array = global.sol_cost
+				index = sol_temp
+				value = col_temp
+				break = b
+
+				if = {
+					limit = {
+						check_variable = { earnings_temp < col_temp }
+					}
+					set_variable = { professionals_sol = sol_temp }
+					set_temp_variable = { b = 1 }
+				}
+			}
+		#
+		#Elites
+			set_temp_variable = { earnings_temp = elites_earnings }
+			multiply_temp_variable = { earnings_temp = 100 }
+			divide_temp_variable = { earnings_temp = elites_amount }
+			for_each_loop = {
+				array = global.sol_cost
+				index = sol_temp
+				value = col_temp
+				break = b
+
+				if = {
+					limit = {
+						check_variable = { earnings_temp < col_temp }
+					}
+					set_variable = { elites_sol = sol_temp }
+					set_temp_variable = { b = 1 }
+				}
+			}
+		#
+		#Bureaucrats
+			set_temp_variable = { earnings_temp = bureaucrats_earnings }
+			multiply_temp_variable = { earnings_temp = 100 }
+			divide_temp_variable = { earnings_temp = bureaucrats_amount }
+			for_each_loop = {
+				array = global.sol_cost
+				index = sol_temp
+				value = col_temp
+				break = b
+
+				if = {
+					limit = {
+						check_variable = { earnings_temp < col_temp }
+					}
+					set_variable = { bureaucrats_sol = sol_temp }
+					set_temp_variable = { b = 1 }
+				}
+			}
+		#
+		#Soldiers
+			set_temp_variable = { earnings_temp = soldiers_earnings }
+			multiply_temp_variable = { earnings_temp = 100 }
+			divide_temp_variable = { earnings_temp = soldiers_amount }
+			for_each_loop = {
+				array = global.sol_cost
+				index = sol_temp
+				value = col_temp
+				break = b
+
+				if = {
+					limit = {
+						check_variable = { earnings_temp < col_temp }
+					}
+					set_variable = { soldiers_sol = sol_temp }
+					set_temp_variable = { b = 1 }
+				}
+			}
+		#
+
+		calculate_pop_needs = yes
+	}
+
+	money_setup = {
+		for_each_loop = {
+			array = industries
+			value = mon_ind_token
+
+			set_variable = { money@var:mon_ind_token = money_limit@var:mon_ind_token }
+		}
+	}
+#
+
+#COUNTRIES
+	market_setup = {
+		# Market Capitals
+		if = {
+			limit = {
+				NOT = { has_variable = market_capital }
+			}
+			set_variable = { market_capital = capital }
+		}
+		set_variable = { selected_market = market_capital:controller }
+
+		# Market Countries & Leader
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_variable = market_leader }
+					check_variable = { market_leader = THIS }
+				}
+			}
+			set_variable = { market_leader = THIS }
+			
+			clear_array = market_countries
+			add_to_array = { market_countries = THIS }
+		}
+	}
+	country_resource_setup = {
+		get_resource_prices = yes
+		# for_each_loop = {
+		# 	array = global.resources_token_array
+		# 	value = r_type
+
+		# 	set_variable = { price@var:r_type = global.base_price@var:r_type }
+		# }
+		
+		for_loop_effect = {
+			start = 0
+			end = global.resource_type_amount
+			value = r_type
+
+			add_to_array = { resource_interstate_trade_amount = 0 }
+			add_to_array = { resource_interstate_trade_value = 0 }
+		}
+	}
+#

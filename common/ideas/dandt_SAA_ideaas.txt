@@ -1,0 +1,60 @@
+ideas = {
+
+	country = {
+		SAA_heavy_industralization = { #could become a state modifier
+
+			picture = SOV_second_five_year_plan
+			
+			removal_cost = -1
+
+			allowed = {
+				original_tag = SAA
+			}
+			
+			modifier = {
+				industry_coal_mine_throughput_factor = 0.1
+				industry_small_arms_factory_output_factor = 0.1
+				industrial_capacity_factory = 0.15
+				local_resources_factor = 0.10
+			}
+		}
+
+		SAA_anti_national_socialism_supporters = {
+
+			picture = MEX_politicised_army
+			
+			removal_cost = -1
+
+			allowed = {
+				original_tag = SAA
+			}
+			
+			modifier = {
+				communism_drift = 0.1
+				communism_acceptance = 50
+				fascism_drift = -0.1
+				fascism_acceptance = -100
+				stability_weekly_factor = -0.005
+			}
+		}
+
+		SAA_league_of_nations_mandate = {
+
+			picture = hol_aloof_neutrality
+			
+			removal_cost = -1
+
+			allowed = {
+				original_tag = SAA
+			}
+			
+			modifier = {
+				communism_acceptance = -100
+				fascism_acceptance = -100
+				neutrality_drift = 0.05
+				join_faction_tension = 1.0
+				enemy_declare_war_tension = 1.0
+			}
+		}
+	}
+}

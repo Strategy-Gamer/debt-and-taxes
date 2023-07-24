@@ -1,0 +1,14 @@
+characters = {
+	GER_paul_hindenburg = {
+		name = "Paul Hindenburg"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_hindenburg
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1950.01.01"
+		}
+	}
+}

@@ -1,0 +1,83 @@
+on_actions = {
+	on_liberate = {
+		effect = {
+			#Pops
+
+			#
+			#Economy
+
+			#
+			#Government
+				govt_country_setup = yes
+			#Laws
+				laws_country_startup = yes #PREFERABLY ECO SHOULD BE RUN BEFORE THIS
+			#
+		}
+	}
+	on_puppet = {
+		effect = {
+			#Pops
+
+			#
+			#Economy
+
+			#
+			#Government
+				govt_country_setup = yes
+			#Laws
+				laws_country_startup = yes #PREFERABLY ECO SHOULD BE RUN BEFORE THIS
+			#
+		}
+	}
+	on_release_as_free = {
+		effect = {
+			#Pops
+
+			#
+			#Economy
+
+			#
+			#Government
+				govt_country_setup = yes
+			#Laws
+				laws_country_startup = yes #PREFERABLY ECO SHOULD BE RUN BEFORE THIS
+			#
+		}
+	}
+	on_subject_free = {
+		effect = {
+			#Pops
+
+			#
+			#Economy
+
+			#
+			#Government
+				govt_country_setup = yes
+			#Laws
+				laws_country_startup = yes #PREFERABLY ECO SHOULD BE RUN BEFORE THIS
+			#
+		}
+	}
+	on_ruling_party_change = {
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = govt_keep_house_on_alignment_change_flag } }
+				#Pops
+
+				#
+				#Economy
+
+				#
+				#Government
+					govt_country_setup = yes
+				#Laws
+					laws_country_startup = yes #PREFERABLY ECO SHOULD BE RUN BEFORE THIS
+				#
+			}
+			else = {
+				clr_country_flag = govt_keep_house_on_alignment_change_flag
+			}
+		}
+	}
+}

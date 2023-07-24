@@ -1,0 +1,29 @@
+
+state={
+	id=853
+	name="STATE_853"
+
+	history={
+		owner = ETH
+		victory_points = {
+			1984 1.0 
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1984 2040 13414 
+	}
+	manpower=1193338
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

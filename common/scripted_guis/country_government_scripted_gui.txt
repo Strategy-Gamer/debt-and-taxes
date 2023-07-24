@@ -1,0 +1,1508 @@
+scripted_gui = {
+	country_politics_info_gui = {
+		window_name = country_politics_info_container
+		context_type = player_context
+		parent_window_token = politics_tab
+
+		triggers = {
+			leading_party_bg_visible = {
+				is_in_array = {
+					array = govt_coalition_leader_array
+					value = v
+				}
+			}
+
+			coalition_party_bg_visible = {
+				# NOT = {
+				# 	check_variable = {
+				# 		var = THIS.govt_coalition_leader
+				# 		value = v
+				# 	}
+				# }
+				is_in_array = {
+					array = govt_coalition_array
+					value = v
+				}
+			}
+			opposition_party_bg_visible = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = v
+				}
+			}
+			ousted_party_bg_visible = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = v
+				}
+			}
+		}
+
+		effects = {
+			internal_politics_button_click = {
+				if = {
+					limit = { has_country_flag = laws_internal_politics_menu_flag }
+					clr_country_flag = laws_internal_politics_menu_flag
+				}
+				else = {
+					set_country_flag = laws_internal_politics_menu_flag
+				}
+			}
+		}
+
+		properties = {
+			party_color_icon = {
+				image = "[GetPartyColor]"
+			}
+		}
+
+		dynamic_lists = {
+			country_politics_party_list = {
+				array = govt_ideology_array
+				entry_container = country_parties_item
+			}
+		}
+	}
+	country_diplo_header_gui = {
+		window_name = country_diplo_header_container
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+	}
+	country_diplo_info_gui = {
+		window_name = country_diplo_info_container
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_info
+	}
+	country_diplo_parties_info_gui = {
+		window_name = country_diplo_parties_info_container
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+
+		triggers = {
+			leading_party_bg_visible = {
+				is_in_array = {
+					array = govt_coalition_leader_array
+					value = v
+				}
+			}
+
+			coalition_party_bg_visible = {
+				# NOT = {
+				# 	check_variable = {
+				# 		var = THIS.govt_coalition_leader
+				# 		value = v
+				# 	}
+				# }
+				is_in_array = {
+					array = govt_coalition_array
+					value = v
+				}
+			}
+			opposition_party_bg_visible = {
+				is_in_array = {
+					array = govt_opposition_array
+					value = v
+				}
+			}
+			ousted_party_bg_visible = {
+				is_in_array = {
+					array = govt_ousted_array
+					value = v
+				}
+			}
+		}
+
+		properties = {
+			party_color_icon = {
+				image = "[GetPartyColor]"
+			}
+		}
+
+		dynamic_lists = {
+			country_politics_party_list = {
+				array = govt_ideology_array
+				entry_container = country_parties_item
+			}
+		}
+	}
+
+	country_government_gui = {
+		window_name = country_government_container
+		context_type = player_context
+		parent_window_token = politics_tab
+
+		triggers = {
+		}
+
+		effects = {
+			laws_liberties_category_button_click = {
+				clr_country_flag = laws_politics_menu_flag
+				clr_country_flag = laws_economics_menu_flag
+				clr_country_flag = laws_demographics_menu_flag
+			}
+			laws_politics_category_button_click = {
+				set_country_flag = laws_politics_menu_flag
+				clr_country_flag = laws_economics_menu_flag
+				clr_country_flag = laws_demographics_menu_flag
+			}
+			laws_economics_category_button_click = {
+				clr_country_flag = laws_politics_menu_flag
+				set_country_flag = laws_economics_menu_flag
+				clr_country_flag = laws_demographics_menu_flag
+			}
+			laws_demographics_category_button_click = {
+				clr_country_flag = laws_politics_menu_flag
+				clr_country_flag = laws_economics_menu_flag
+				set_country_flag = laws_demographics_menu_flag
+			}
+			laws_pass_debug_button_click = {
+				laws_debug_pass_bill = yes
+			}
+		}
+	}
+	laws_liberties_category_gui = {
+		window_name = country_government_laws_liberties_container
+		context_type = player_context
+		# parent_window_name = "country_government_container"
+
+		visible = {
+			NOT = {
+				has_country_flag = laws_politics_menu_flag
+				has_country_flag = laws_economics_menu_flag
+				has_country_flag = laws_demographics_menu_flag
+			}
+		}
+
+		dynamic_lists = {
+			laws_liberties_constitution_list = {
+				array = global.laws_liberties_constitution_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_liberties_slavery_list = {
+				array = global.laws_liberties_slavery_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_liberties_women_list = {
+				array = global.laws_liberties_women_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_liberties_minority_treatment_list = {
+				array = global.laws_liberties_minority_treatment_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_liberties_marriage_list = {
+				array = global.laws_liberties_marriage_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_liberties_religion_list = {
+				array = global.laws_liberties_religion_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_liberties_press_list = {
+				array = global.laws_liberties_press_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_liberties_public_meetings_list = {
+				array = global.laws_liberties_public_meetings_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_liberties_public_armament_list = {
+				array = global.laws_liberties_public_armament_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_liberties_property_list = {
+				array = global.laws_liberties_property_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_liberties_unionization_list = {
+				array = global.laws_liberties_unionization_array
+				entry_container = country_government_laws_individual_container
+			}
+		}
+	}
+	laws_politics_category_gui = {
+		window_name = country_government_laws_politics_container
+		context_type = player_context
+		# parent_window_name = "country_government_container"
+
+		visible = {
+			has_country_flag = laws_politics_menu_flag
+		}
+
+		dynamic_lists = {
+			laws_politics_parties_list = {
+				array = global.laws_politics_parties_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_politics_gerrymandering_list = {
+				array = global.laws_politics_gerrymandering_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_politics_franchise_list = {
+				array = global.laws_politics_franchise_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_politics_voting_age_list = {
+				array = global.laws_politics_voting_age_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_politics_centralization_list = {
+				array = global.laws_politics_centralization_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_politics_voting_system_list = {
+				array = global.laws_politics_voting_system_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_politics_term_limits_list = {
+				array = global.laws_politics_term_limits_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_politics_legislature_list = {
+				array = global.laws_politics_legislature_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_politics_proportionment_list = {
+				array = global.laws_politics_proportionment_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_politics_candidate_choice_list = {
+				array = global.laws_politics_candidate_choice_array
+				entry_container = country_government_laws_individual_container
+			}
+			laws_politics_term_length_list = {
+				array = global.laws_politics_term_length_array
+				entry_container = country_government_laws_individual_container
+			}
+		}
+	}
+	laws_economics_category_gui = {
+		window_name = country_government_laws_economics_container
+		context_type = player_context
+		parent_window_token = politics_tab
+
+		visible = {
+			has_country_flag = laws_economics_menu_flag
+		}
+
+		effects = {
+			# Economy
+				subcategory_economy_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_economy = v } }
+						}
+						set_variable = {
+							laws_economics_economy_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_economy_proposed
+					}
+				}
+				subcategory_economy_name_bg_click = {
+					laws_change_subcategory_economy = yes
+				}
+			#
+			# Foreign Investment
+				subcategory_foreign_investment_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_foreign_investment = v } }
+						}
+						set_variable = {
+							laws_economics_foreign_investment_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_foreign_investment_proposed
+					}
+				}
+				subcategory_foreign_investment_name_bg_click = {
+					laws_change_subcategory_foreign_investment = yes
+				}
+			#
+			# Consumer Rights
+				subcategory_consumer_rights_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_consumer_rights = v } }
+						}
+						set_variable = {
+							laws_economics_consumer_rights_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_consumer_rights_proposed
+					}
+				}
+				subcategory_consumer_rights_name_bg_click = {
+					laws_change_subcategory_consumer_rights = yes
+				}
+			#
+			# Minimum Wage
+				subcategory_minimum_wage_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_minimum_wage = v } }
+						}
+						set_variable = {
+							laws_economics_minimum_wage_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_minimum_wage_proposed
+					}
+				}
+				subcategory_minimum_wage_name_bg_click = {
+					laws_change_subcategory_minimum_wage = yes
+				}
+			#
+			# Work Week
+				subcategory_work_week_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_work_week = v } }
+						}
+						set_variable = {
+							laws_economics_work_week_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_work_week_proposed
+					}
+				}
+				subcategory_work_week_name_bg_click = {
+					laws_change_subcategory_work_week = yes
+				}
+			#
+			# Safety Regulations
+				subcategory_safety_regulations_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_safety_regulations = v } }
+						}
+						set_variable = {
+							laws_economics_safety_regulations_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_safety_regulations_proposed
+					}
+				}
+				subcategory_safety_regulations_name_bg_click = {
+					laws_change_subcategory_safety_regulations = yes
+				}
+			#
+			# Financial Regulations
+				subcategory_financial_regulations_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_financial_regulations = v } }
+						}
+						set_variable = {
+							laws_economics_financial_regulations_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_financial_regulations_proposed
+					}
+				}
+				subcategory_financial_regulations_name_bg_click = {
+					laws_change_subcategory_financial_regulations = yes
+				}
+			#
+			# Business Regulations
+				subcategory_business_regulations_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_business_regulations = v } }
+						}
+						set_variable = {
+							laws_economics_business_regulations_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_business_regulations_proposed
+					}
+				}
+				subcategory_business_regulations_name_bg_click = {
+					laws_change_subcategory_business_regulations = yes
+				}
+			#
+			# Pollution Regulations
+				subcategory_pollution_regulations_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_pollution_regulations = v } }
+						}
+						set_variable = {
+							laws_economics_pollution_regulations_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_pollution_regulations_proposed
+					}
+				}
+				subcategory_pollution_regulations_name_bg_click = {
+					laws_change_subcategory_pollution_regulations = yes
+				}
+			#
+			# Small Business Grants
+				subcategory_small_business_grants_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_small_business_grants = v } }
+						}
+						set_variable = {
+							laws_economics_small_business_grants_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_small_business_grants_proposed
+					}
+				}
+				subcategory_small_business_grants_name_bg_click = {
+					laws_change_subcategory_small_business_grants = yes
+				}
+			#
+			# Subsidies
+				subcategory_subsidies_name_bg_click = {
+					laws_change_subcategory_agricultural_subsidies = yes
+					laws_change_subcategory_mining_subsidies = yes
+					laws_change_subcategory_drilling_subsidies = yes
+					laws_change_subcategory_utilities_subsidies = yes
+					laws_change_subcategory_clean_energy_subsidies = yes
+					laws_change_subcategory_light_industry_subsidies = yes
+					laws_change_subcategory_heavy_industry_subsidies = yes
+					laws_change_subcategory_construction_subsidies = yes
+					laws_change_subcategory_infrastructure_subsidies = yes
+					laws_change_subcategory_services_subsidies = yes
+				}
+				subcategory_agricultural_subsidies_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_agricultural_subsidies = v } }
+						}
+						set_variable = {
+							laws_economics_agricultural_subsidies_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_agricultural_subsidies_proposed
+					}
+				}
+				subcategory_mining_subsidies_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_mining_subsidies = v } }
+						}
+						set_variable = {
+							laws_economics_mining_subsidies_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_mining_subsidies_proposed
+					}
+				}
+				subcategory_drilling_subsidies_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_drilling_subsidies = v } }
+						}
+						set_variable = {
+							laws_economics_drilling_subsidies_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_drilling_subsidies_proposed
+					}
+				}
+				subcategory_utilities_subsidies_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_utilities_subsidies = v } }
+						}
+						set_variable = {
+							laws_economics_utilities_subsidies_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_utilities_subsidies_proposed
+					}
+				}
+				subcategory_clean_energy_subsidies_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_clean_energy_subsidies = v } }
+						}
+						set_variable = {
+							laws_economics_clean_energy_subsidies_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_clean_energy_subsidies_proposed
+					}
+				}
+				subcategory_light_industry_subsidies_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_light_industry_subsidies = v } }
+						}
+						set_variable = {
+							laws_economics_light_industry_subsidies_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_light_industry_subsidies_proposed
+					}
+				}
+				subcategory_heavy_industry_subsidies_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_heavy_industry_subsidies = v } }
+						}
+						set_variable = {
+							laws_economics_heavy_industry_subsidies_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_heavy_industry_subsidies_proposed
+					}
+				}
+				subcategory_construction_subsidies_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_construction_subsidies = v } }
+						}
+						set_variable = {
+							laws_economics_construction_subsidies_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_construction_subsidies_proposed
+					}
+				}
+				subcategory_infrastructure_subsidies_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_infrastructure_subsidies = v } }
+						}
+						set_variable = {
+							laws_economics_infrastructure_subsidies_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_infrastructure_subsidies_proposed
+					}
+				}
+				subcategory_services_subsidies_law_icon_click = {
+					if = {
+						limit = {
+							NOT = { check_variable = { laws_economics_services_subsidies = v } }
+						}
+						set_variable = {
+							laws_economics_services_subsidies_proposed = v
+						}
+					}
+					else = {
+						clear_variable = laws_economics_services_subsidies_proposed
+					}
+				}
+			#
+		}
+
+		triggers = {
+			# Economy
+				subcategory_economy_current_outline_visible = {
+					check_variable = {
+						laws_economics_economy = v
+					}
+				}
+				subcategory_economy_select_outline_visible = {
+					check_variable = {
+						laws_economics_economy_proposed = v
+					}
+				}
+			#
+			# Foreign Investment
+				subcategory_foreign_investment_current_outline_visible = {
+					check_variable = {
+						laws_economics_foreign_investment = v
+					}
+				}
+				subcategory_foreign_investment_select_outline_visible = {
+					check_variable = {
+						laws_economics_foreign_investment_proposed = v
+					}
+				}
+			#
+			# Consumer Rights
+				subcategory_consumer_rights_current_outline_visible = {
+					check_variable = {
+						laws_economics_consumer_rights = v
+					}
+				}
+				subcategory_consumer_rights_select_outline_visible = {
+					check_variable = {
+						laws_economics_consumer_rights_proposed = v
+					}
+				}
+			#
+			# Minimum Wage
+				subcategory_minimum_wage_current_outline_visible = {
+					check_variable = {
+						laws_economics_minimum_wage = v
+					}
+				}
+				subcategory_minimum_wage_select_outline_visible = {
+					check_variable = {
+						laws_economics_minimum_wage_proposed = v
+					}
+				}
+			#
+			# Work Week
+				subcategory_work_week_current_outline_visible = {
+					check_variable = {
+						laws_economics_work_week = v
+					}
+				}
+				subcategory_work_week_select_outline_visible = {
+					check_variable = {
+						laws_economics_work_week_proposed = v
+					}
+				}
+			#
+			# Safety Regulations
+				subcategory_safety_regulations_current_outline_visible = {
+					check_variable = {
+						laws_economics_safety_regulations = v
+					}
+				}
+				subcategory_safety_regulations_select_outline_visible = {
+					check_variable = {
+						laws_economics_safety_regulations_proposed = v
+					}
+				}
+			#
+			# Financial Regulations
+				subcategory_financial_regulations_current_outline_visible = {
+					check_variable = {
+						laws_economics_financial_regulations = v
+					}
+				}
+				subcategory_financial_regulations_select_outline_visible = {
+					check_variable = {
+						laws_economics_financial_regulations_proposed = v
+					}
+				}
+			#
+			# Business Regulations
+				subcategory_business_regulations_current_outline_visible = {
+					check_variable = {
+						laws_economics_business_regulations = v
+					}
+				}
+				subcategory_business_regulations_select_outline_visible = {
+					check_variable = {
+						laws_economics_business_regulations_proposed = v
+					}
+				}
+			#
+			# Pollution Regulations
+				subcategory_pollution_regulations_current_outline_visible = {
+					check_variable = {
+						laws_economics_pollution_regulations = v
+					}
+				}
+				subcategory_pollution_regulations_select_outline_visible = {
+					check_variable = {
+						laws_economics_pollution_regulations_proposed = v
+					}
+				}
+			#
+			# Small Business Grants
+				subcategory_small_business_grants_current_outline_visible = {
+					check_variable = {
+						laws_economics_small_business_grants = v
+					}
+				}
+				subcategory_small_business_grants_select_outline_visible = {
+					check_variable = {
+						laws_economics_small_business_grants_proposed = v
+					}
+				}
+			#
+			# Subsidies
+				subcategory_agricultural_subsidies_current_outline_visible = {
+					check_variable = {
+						laws_economics_agricultural_subsidies = v
+					}
+				}
+				subcategory_agricultural_subsidies_select_outline_visible = {
+					check_variable = {
+						laws_economics_agricultural_subsidies_proposed = v
+					}
+				}
+				subcategory_mining_subsidies_current_outline_visible = {
+					check_variable = {
+						laws_economics_mining_subsidies = v
+					}
+				}
+				subcategory_mining_subsidies_select_outline_visible = {
+					check_variable = {
+						laws_economics_mining_subsidies_proposed = v
+					}
+				}
+				subcategory_drilling_subsidies_current_outline_visible = {
+					check_variable = {
+						laws_economics_drilling_subsidies = v
+					}
+				}
+				subcategory_drilling_subsidies_select_outline_visible = {
+					check_variable = {
+						laws_economics_drilling_subsidies_proposed = v
+					}
+				}
+				subcategory_utilities_subsidies_current_outline_visible = {
+					check_variable = {
+						laws_economics_utilities_subsidies = v
+					}
+				}
+				subcategory_utilities_subsidies_select_outline_visible = {
+					check_variable = {
+						laws_economics_utilities_subsidies_proposed = v
+					}
+				}
+				subcategory_clean_energy_subsidies_current_outline_visible = {
+					check_variable = {
+						laws_economics_clean_energy_subsidies = v
+					}
+				}
+				subcategory_clean_energy_subsidies_select_outline_visible = {
+					check_variable = {
+						laws_economics_clean_energy_subsidies_proposed = v
+					}
+				}
+				subcategory_light_industry_subsidies_current_outline_visible = {
+					check_variable = {
+						laws_economics_light_industry_subsidies = v
+					}
+				}
+				subcategory_light_industry_subsidies_select_outline_visible = {
+					check_variable = {
+						laws_economics_light_industry_subsidies_proposed = v
+					}
+				}
+				subcategory_heavy_industry_subsidies_current_outline_visible = {
+					check_variable = {
+						laws_economics_heavy_industry_subsidies = v
+					}
+				}
+				subcategory_heavy_industry_subsidies_select_outline_visible = {
+					check_variable = {
+						laws_economics_heavy_industry_subsidies_proposed = v
+					}
+				}
+				subcategory_construction_subsidies_current_outline_visible = {
+					check_variable = {
+						laws_economics_construction_subsidies = v
+					}
+				}
+				subcategory_construction_subsidies_select_outline_visible = {
+					check_variable = {
+						laws_economics_construction_subsidies_proposed = v
+					}
+				}
+				subcategory_infrastructure_subsidies_current_outline_visible = {
+					check_variable = {
+						laws_economics_infrastructure_subsidies = v
+					}
+				}
+				subcategory_infrastructure_subsidies_select_outline_visible = {
+					check_variable = {
+						laws_economics_infrastructure_subsidies_proposed = v
+					}
+				}
+				subcategory_services_subsidies_current_outline_visible = {
+					check_variable = {
+						laws_economics_services_subsidies = v
+					}
+				}
+				subcategory_services_subsidies_select_outline_visible = {
+					check_variable = {
+						laws_economics_services_subsidies_proposed = v
+					}
+				}
+			#
+		}
+
+		dynamic_lists = {
+			subcategory_economy_list = {
+				array = global.laws_economics_economy_array
+				entry_container = subcategory_economy_entry
+			}
+			subcategory_foreign_investment_list = {
+				array = global.laws_economics_foreign_investment_array
+				entry_container = subcategory_foreign_investment_entry
+			}
+			subcategory_consumer_rights_list = {
+				array = global.laws_economics_consumer_rights_array
+				entry_container = subcategory_consumer_rights_entry
+			}
+			subcategory_minimum_wage_list = {
+				array = global.laws_economics_minimum_wage_array
+				entry_container = subcategory_minimum_wage_entry
+			}
+			subcategory_work_week_list = {
+				array = global.laws_economics_work_week_array
+				entry_container = subcategory_work_week_entry
+			}
+			subcategory_safety_regulations_list = {
+				array = global.laws_economics_safety_regulations_array
+				entry_container = subcategory_safety_regulations_entry
+			}
+			subcategory_financial_regulations_list = {
+				array = global.laws_economics_financial_regulations_array
+				entry_container = subcategory_financial_regulations_entry
+			}
+			subcategory_business_regulations_list = {
+				array = global.laws_economics_business_regulations_array
+				entry_container = subcategory_business_regulations_entry
+			}
+			subcategory_pollution_regulations_list = {
+				array = global.laws_economics_pollution_regulations_array
+				entry_container = subcategory_pollution_regulations_entry
+			}
+			subcategory_small_business_grants_list = {
+				array = global.laws_economics_small_business_grants_array
+				entry_container = subcategory_small_business_grants_entry
+			}
+			subcategory_agricultural_subsidies_list = {
+				array = global.laws_economics_agricultural_subsidies_array
+				entry_container = subcategory_agricultural_subsidies_entry
+			}
+			subcategory_mining_subsidies_list = {
+				array = global.laws_economics_mining_subsidies_array
+				entry_container = subcategory_mining_subsidies_entry
+			}
+			subcategory_drilling_subsidies_list = {
+				array = global.laws_economics_drilling_subsidies_array
+				entry_container = subcategory_drilling_subsidies_entry
+			}
+			subcategory_utilities_subsidies_list = {
+				array = global.laws_economics_utilities_subsidies_array
+				entry_container = subcategory_utilities_subsidies_entry
+			}
+			subcategory_clean_energy_subsidies_list = {
+				array = global.laws_economics_clean_energy_subsidies_array
+				entry_container = subcategory_clean_energy_subsidies_entry
+			}
+			subcategory_light_industry_subsidies_list = {
+				array = global.laws_economics_light_industry_subsidies_array
+				entry_container = subcategory_light_industry_subsidies_entry
+			}
+			subcategory_heavy_industry_subsidies_list = {
+				array = global.laws_economics_heavy_industry_subsidies_array
+				entry_container = subcategory_heavy_industry_subsidies_entry
+			}
+			subcategory_construction_subsidies_list = {
+				array = global.laws_economics_construction_subsidies_array
+				entry_container = subcategory_construction_subsidies_entry
+			}
+			subcategory_infrastructure_subsidies_list = {
+				array = global.laws_economics_infrastructure_subsidies_array
+				entry_container = subcategory_infrastructure_subsidies_entry
+			}
+			subcategory_services_subsidies_list = {
+				array = global.laws_economics_services_subsidies_array
+				entry_container = subcategory_services_subsidies_entry
+			}
+		}
+		properties = {
+			subcategory_economy_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_foreign_investment_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_consumer_rights_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_minimum_wage_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_work_week_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_safety_regulations_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_financial_regulations_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_business_regulations_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_pollution_regulations_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_small_business_grants_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_agricultural_subsidies_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_mining_subsidies_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_drilling_subsidies_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_utilities_subsidies_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_clean_energy_subsidies_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_light_industry_subsidies_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_heavy_industry_subsidies_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_construction_subsidies_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_infrastructure_subsidies_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+			subcategory_services_subsidies_law_icon = {
+				image = "[GetLawIconInList]"
+			}
+		}
+	}
+	laws_demographics_category_gui = {
+		window_name = country_government_laws_demographics_container
+		context_type = player_context
+		# parent_window_name = "country_government_container"
+
+		visible = {
+			has_country_flag = laws_demographics_menu_flag
+		}
+
+		dynamic_lists = {
+			laws_demographics_family_planning_list = {
+				array = global.laws_demographics_family_planning_array
+				entry_container = country_government_laws_individual_container
+			}
+		}
+	}
+	politics_list_gui = {
+		window_name = politics_list_container
+		context_type = player_context
+
+		visible = {
+			has_country_flag = laws_internal_politics_menu_flag
+		}
+
+		effects = {
+			#Close Button
+				close_button_click = {
+					clr_country_flag  = laws_internal_politics_menu_flag
+				}
+				update_button_click = {
+					country_event = dandt.3
+				}
+				update_button_click = {
+					country_event = dandt.3
+				}
+				update_button_right_click = {
+					country_event = dandt.2
+				}
+			#
+			#Left List
+
+			#
+			#Folder Buttons
+				parliament_button_click = {
+					set_country_flag = govt_internal_politics_parliament_tab_flag
+					clr_country_flag = govt_internal_politics_parties_tab_flag
+					clr_country_flag = govt_internal_politics_population_tab_flag
+					clr_country_flag = govt_internal_politics_legislation_tab_flag
+				}
+				parties_button_click = {
+					clr_country_flag = govt_internal_politics_parliament_tab_flag
+					set_country_flag = govt_internal_politics_parties_tab_flag
+					clr_country_flag = govt_internal_politics_population_tab_flag
+					clr_country_flag = govt_internal_politics_legislation_tab_flag
+				}
+				population_button_click = {
+					clr_country_flag = govt_internal_politics_parliament_tab_flag
+					clr_country_flag = govt_internal_politics_parties_tab_flag
+					set_country_flag = govt_internal_politics_population_tab_flag
+					clr_country_flag = govt_internal_politics_legislation_tab_flag
+				}
+				legislation_button_click = {
+					clr_country_flag = govt_internal_politics_parliament_tab_flag
+					clr_country_flag = govt_internal_politics_parties_tab_flag
+					clr_country_flag = govt_internal_politics_population_tab_flag
+					set_country_flag = govt_internal_politics_legislation_tab_flag
+				}
+			#
+		}
+
+		triggers = {
+			#Left List
+
+			#
+			#Folder Buttons
+				parliament_off_visible = {
+					NOT = { has_country_flag = govt_internal_politics_parliament_tab_flag }
+				}
+				parliament_on_visible = {
+					has_country_flag = govt_internal_politics_parliament_tab_flag
+				}
+				parties_off_visible = {
+					NOT = { has_country_flag = govt_internal_politics_parties_tab_flag }
+				}
+				parties_on_visible = {
+					has_country_flag = govt_internal_politics_parties_tab_flag
+				}
+				population_off_visible = {
+					NOT = { has_country_flag = govt_internal_politics_population_tab_flag }
+				}
+				population_on_visible = {
+					has_country_flag = govt_internal_politics_population_tab_flag
+				}
+				legislation_off_visible = {
+					NOT = { has_country_flag = govt_internal_politics_legislation_tab_flag }
+				}
+				legislation_on_visible = {
+					has_country_flag = govt_internal_politics_legislation_tab_flag
+				}
+			#
+			#Parliament
+				#Horizontal Bar Graph
+					#Communist
+						parliament_communist_ruling_population_icon_visible = {
+							check_variable = { popularity@token:ideology_communist > 0 }
+							is_in_array = {
+								array = govt_coalition_leader_array
+								value = token:ideology_communist
+							}
+						}
+						parliament_communist_coalition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_communist > 0 }
+							is_in_array = {
+								array = govt_coalition_array
+								value = token:ideology_communist
+							}
+							NOT = {
+								is_in_array = {
+									array = govt_coalition_leader_array
+									value = token:ideology_communist
+								}
+							}
+						}
+						parliament_communist_opposition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_communist > 0 }
+							is_in_array = {
+								array = govt_opposition_array
+								value = token:ideology_communist
+							}
+						}
+						parliament_communist_ousted_population_icon_visible = {
+							check_variable = { popularity@token:ideology_communist > 0 }
+							is_in_array = {
+								array = govt_ousted_array
+								value = token:ideology_communist
+							}
+						}
+					#
+					#Socialist
+						parliament_socialist_ruling_population_icon_visible = {
+							check_variable = { popularity@token:ideology_socialist > 0 }
+							is_in_array = {
+								array = govt_coalition_leader_array
+								value = token:ideology_socialist
+							}
+						}
+						parliament_socialist_coalition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_socialist > 0 }
+							is_in_array = {
+								array = govt_coalition_array
+								value = token:ideology_socialist
+							}
+							NOT = {
+								is_in_array = {
+									array = govt_coalition_leader_array
+									value = token:ideology_socialist
+								}
+							}
+						}
+						parliament_socialist_opposition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_socialist > 0 }
+							is_in_array = {
+								array = govt_opposition_array
+								value = token:ideology_socialist
+							}
+						}
+						parliament_socialist_ousted_population_icon_visible = {
+							check_variable = { popularity@token:ideology_socialist > 0 }
+							is_in_array = {
+								array = govt_ousted_array
+								value = token:ideology_socialist
+							}
+						}
+					#
+					#Liberal
+						parliament_liberal_ruling_population_icon_visible = {
+							check_variable = { popularity@token:ideology_liberal > 0 }
+							is_in_array = {
+								array = govt_coalition_leader_array
+								value = token:ideology_liberal
+							}
+						}
+						parliament_liberal_coalition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_liberal > 0 }
+							is_in_array = {
+								array = govt_coalition_array
+								value = token:ideology_liberal
+							}
+							NOT = {
+								is_in_array = {
+									array = govt_coalition_leader_array
+									value = token:ideology_liberal
+								}
+							}
+						}
+						parliament_liberal_opposition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_liberal > 0 }
+							is_in_array = {
+								array = govt_opposition_array
+								value = token:ideology_liberal
+							}
+						}
+						parliament_liberal_ousted_population_icon_visible = {
+							check_variable = { popularity@token:ideology_liberal > 0 }
+							is_in_array = {
+								array = govt_ousted_array
+								value = token:ideology_liberal
+							}
+						}
+					#
+					#Libertarian
+						parliament_libertarian_ruling_population_icon_visible = {
+							check_variable = { popularity@token:ideology_agrarian > 0 }
+							is_in_array = {
+								array = govt_coalition_leader_array
+								value = token:ideology_agrarian
+							}
+						}
+						parliament_libertarian_coalition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_agrarian > 0 }
+							is_in_array = {
+								array = govt_coalition_array
+								value = token:ideology_agrarian
+							}
+							NOT = {
+								is_in_array = {
+									array = govt_coalition_leader_array
+									value = token:ideology_agrarian
+								}
+							}
+						}
+						parliament_libertarian_opposition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_agrarian > 0 }
+							is_in_array = {
+								array = govt_opposition_array
+								value = token:ideology_agrarian
+							}
+						}
+						parliament_libertarian_ousted_population_icon_visible = {
+							check_variable = { popularity@token:ideology_agrarian > 0 }
+							is_in_array = {
+								array = govt_ousted_array
+								value = token:ideology_agrarian
+							}
+						}
+					#
+					#Conservative
+						parliament_conservative_ruling_population_icon_visible = {
+							check_variable = { popularity@token:ideology_conservative > 0 }
+							is_in_array = {
+								array = govt_coalition_leader_array
+								value = token:ideology_conservative
+							}
+						}
+						parliament_conservative_coalition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_conservative > 0 }
+							is_in_array = {
+								array = govt_coalition_array
+								value = token:ideology_conservative
+							}
+							NOT = {
+								is_in_array = {
+									array = govt_coalition_leader_array
+									value = token:ideology_conservative
+								}
+							}
+						}
+						parliament_conservative_opposition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_conservative > 0 }
+							is_in_array = {
+								array = govt_opposition_array
+								value = token:ideology_conservative
+							}
+						}
+						parliament_conservative_ousted_population_icon_visible = {
+							check_variable = { popularity@token:ideology_conservative > 0 }
+							is_in_array = {
+								array = govt_ousted_array
+								value = token:ideology_conservative
+							}
+						}
+					#
+					#Reactionary
+						parliament_reactionary_ruling_population_icon_visible = {
+							check_variable = { popularity@token:ideology_reactionary > 0 }
+							is_in_array = {
+								array = govt_coalition_leader_array
+								value = token:ideology_reactionary
+							}
+						}
+						parliament_reactionary_coalition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_reactionary > 0 }
+							is_in_array = {
+								array = govt_coalition_array
+								value = token:ideology_reactionary
+							}
+						}
+						parliament_reactionary_opposition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_reactionary > 0 }
+							is_in_array = {
+								array = govt_opposition_array
+								value = token:ideology_reactionary
+							}
+							NOT = {
+								is_in_array = {
+									array = govt_coalition_leader_array
+									value = token:ideology_reactionary
+								}
+							}
+						}
+						parliament_reactionary_ousted_population_icon_visible = {
+							check_variable = { popularity@token:ideology_reactionary > 0 }
+							is_in_array = {
+								array = govt_ousted_array
+								value = token:ideology_reactionary
+							}
+						}
+					#
+					#Fascist
+						parliament_fascist_ruling_population_icon_visible = {
+							check_variable = { popularity@token:ideology_fascist > 0 }
+							is_in_array = {
+								array = govt_coalition_leader_array
+								value = token:ideology_fascist
+							}
+						}
+						parliament_fascist_coalition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_fascist > 0 }
+							is_in_array = {
+								array = govt_coalition_array
+								value = token:ideology_fascist
+							}
+							NOT = {
+								is_in_array = {
+									array = govt_coalition_leader_array
+									value = token:ideology_fascist
+								}
+							}
+						}
+						parliament_fascist_opposition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_fascist > 0 }
+							is_in_array = {
+								array = govt_opposition_array
+								value = token:ideology_fascist
+							}
+						}
+						parliament_fascist_ousted_population_icon_visible = {
+							check_variable = { popularity@token:ideology_fascist > 0 }
+							is_in_array = {
+								array = govt_ousted_array
+								value = token:ideology_fascist
+							}
+						}
+					#
+					#Stratocratic
+						parliament_stratocratic_ruling_population_icon_visible = {
+							check_variable = { popularity@token:ideology_stratocratic > 0 }
+							is_in_array = {
+								array = govt_coalition_leader_array
+								value = token:ideology_stratocratic
+							}
+						}
+						parliament_stratocratic_coalition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_stratocratic > 0 }
+							is_in_array = {
+								array = govt_coalition_array
+								value = token:ideology_stratocratic
+							}
+							NOT = {
+								is_in_array = {
+									array = govt_coalition_leader_array
+									value = token:ideology_stratocratic
+								}
+							}
+						}
+						parliament_stratocratic_opposition_population_icon_visible = {
+							check_variable = { popularity@token:ideology_stratocratic > 0 }
+							is_in_array = {
+								array = govt_opposition_array
+								value = token:ideology_stratocratic
+							}
+						}
+						parliament_stratocratic_ousted_population_icon_visible = {
+							check_variable = { popularity@token:ideology_stratocratic > 0 }
+							is_in_array = {
+								array = govt_ousted_array
+								value = token:ideology_stratocratic
+							}
+						}
+					#
+				#
+			#
+		}
+
+		properties = {
+			#Party List
+				party_color_icon = {
+					image = "[GetPartyColor]"
+				}
+			#
+			#Parliament Population
+				#Communist
+					parliament_communist_ruling_population_icon = {
+						frame = popularity@token:ideology_communist
+					}
+					parliament_communist_coalition_population_icon = {
+						frame = popularity@token:ideology_communist
+					}
+					parliament_communist_opposition_population_icon = {
+						frame = popularity@token:ideology_communist
+					}
+					parliament_communist_ousted_population_icon = {
+						frame = popularity@token:ideology_communist
+					}
+				#
+				#Socialist
+					parliament_socialist_ruling_population_icon = {
+						frame = x_position@token:ideology_socialist
+					}
+					parliament_socialist_coalition_population_icon = {
+						frame = x_position@token:ideology_socialist
+					}
+					parliament_socialist_opposition_population_icon = {
+						frame = x_position@token:ideology_socialist
+					}
+					parliament_socialist_ousted_population_icon = {
+						frame = x_position@token:ideology_socialist
+					}
+				#
+				#Liberal
+					parliament_liberal_ruling_population_icon = {
+						frame = x_position@token:ideology_liberal
+					}
+					parliament_liberal_coalition_population_icon = {
+						frame = x_position@token:ideology_liberal
+					}
+					parliament_liberal_opposition_population_icon = {
+						frame = x_position@token:ideology_liberal
+					}
+					parliament_liberal_ousted_population_icon = {
+						frame = x_position@token:ideology_liberal
+					}
+				#
+				#Libertarian
+					parliament_libertarian_ruling_population_icon = {
+						frame = x_position@token:ideology_agrarian
+					}
+					parliament_libertarian_coalition_population_icon = {
+						frame = x_position@token:ideology_agrarian
+					}
+					parliament_libertarian_opposition_population_icon = {
+						frame = x_position@token:ideology_agrarian
+					}
+					parliament_libertarian_ousted_population_icon = {
+						frame = x_position@token:ideology_agrarian
+					}
+				#
+				#Conservative
+					parliament_conservative_ruling_population_icon = {
+						frame = x_position@token:ideology_conservative
+					}
+					parliament_conservative_coalition_population_icon = {
+						frame = x_position@token:ideology_conservative
+					}
+					parliament_conservative_opposition_population_icon = {
+						frame = x_position@token:ideology_conservative
+					}
+					parliament_conservative_ousted_population_icon = {
+						frame = x_position@token:ideology_conservative
+					}
+				#
+				#Reactionary
+					parliament_reactionary_ruling_population_icon = {
+						frame = x_position@token:ideology_reactionary
+					}
+					parliament_reactionary_coalition_population_icon = {
+						frame = x_position@token:ideology_reactionary
+					}
+					parliament_reactionary_opposition_population_icon = {
+						frame = x_position@token:ideology_reactionary
+					}
+					parliament_reactionary_ousted_population_icon = {
+						frame = x_position@token:ideology_reactionary
+					}
+				#
+				#Fascist
+					parliament_fascist_ruling_population_icon = {
+						frame = x_position@token:ideology_fascist
+					}
+					parliament_fascist_coalition_population_icon = {
+						frame = x_position@token:ideology_fascist
+					}
+					parliament_fascist_opposition_population_icon = {
+						frame = x_position@token:ideology_fascist
+					}
+					parliament_fascist_ousted_population_icon = {
+						frame = x_position@token:ideology_fascist
+					}
+				#
+				#Stratocratic
+					parliament_stratocratic_ruling_population_icon = {
+						frame = x_position@token:ideology_stratocratic
+					}
+					parliament_stratocratic_coalition_population_icon = {
+						frame = x_position@token:ideology_stratocratic
+					}
+					parliament_stratocratic_opposition_population_icon = {
+						frame = x_position@token:ideology_stratocratic
+					}
+					parliament_stratocratic_ousted_population_icon = {
+						frame = x_position@token:ideology_stratocratic
+					}
+				#
+			#
+		}
+
+		dynamic_lists = {
+			parties_list = {
+				array = govt_ideology_array
+				entry_container = parties_item
+			}
+		}
+	}
+}

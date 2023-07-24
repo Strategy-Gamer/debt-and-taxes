@@ -1,0 +1,37 @@
+state={
+	id=97
+	name="STATE_97"
+
+	history={
+		owner = POL
+		victory_points = {
+			11301 3
+		}
+		victory_points = {
+			3254 1
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+		}
+		add_core_of = POL
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		290 347 400 3254 11247 11274 11301 11329 11357
+	}
+	manpower=1157200
+	buildings_max_level_factor=1.000
+	state_category=rural
+
+	local_supplies=5.0
+}

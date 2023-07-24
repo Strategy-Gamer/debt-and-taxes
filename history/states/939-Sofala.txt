@@ -1,0 +1,26 @@
+state={
+	id=939
+	name="STATE_939"
+	provinces={
+		2120 5155 12935 12950 
+	}
+	history={
+		owner=POR
+		buildings={
+			infrastructure=1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+	state_category=pastoral
+	manpower=2183995
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

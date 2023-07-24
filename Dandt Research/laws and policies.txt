@@ -1,0 +1,107 @@
+Liberties
+
+
+
+Politics
+	Military Service
+
+Economics
+	Agricultural Subsidies
+		NONE / LOW / MEDIUM / HIGH
+		Grain/Rice Farms, Livestock/Sheep Ranches, Cotton/Silk Plantations, Fishing Wharves, Logging/Rubber Lodges
+
+	Mining Subsidies
+		NONE / LOW / MEDIUM / HIGH
+		Coal, Iron, Sulfur, Copper, Aluminum, Tungsten, Chromium, Precious Metals, Rare Earth Metals Mine
+
+	Petroleum Industry Subsidies
+		NONE / LOW / MEDIUM / HIGH
+		Oil Rig, Gas Rig, Offshore Oil Rig, Oil Refinery, Synthetic Oil Refinery
+
+	Utilities Subsidies
+		NONE / LOW / MEDIUM / HIGH
+		Coal/Oil/Nuclear Power Plants
+
+	Clean Energy Subsidies
+		NONE / LOW / MEDIUM / HIGH
+		Hydroelectric Dams, Solar/Wind Power Farms
+
+	Light Industry Subsidies
+		NONE / LOW / MEDIUM / HIGH
+		Fabric, Silicates, Groceries, Clothing, Consumer Goods, Electronics, Computers
+
+	Heavy Industry Subsidies
+		NONE / LOW / MEDIUM / HIGH
+		Steel, Tools, Automobiles, Airplanes, Machinery, Plastics, Chemicals, Fertilizer, Pharmaceuticals
+
+	Construction Subsidies
+		NONE / LOW / MEDIUM / HIGH
+		Construction Yard, Cement Factory
+
+	Infrastructure Subsidies
+		NONE / LOW / MEDIUM / HIGH
+		Roads, Highways, Railroads, Ports, Airports, Canals
+
+	Finance Regulations
+	Consumer Rights
+	Business Regulations
+	Work Safety
+
+	Pollution Regulations
+	Tech Grants
+	Small Business Grants
+	Recycling
+
+	Foreign Investment
+
+	Vice Taxes
+	Capital Gains Tax
+	Income Tax
+	Tariffs
+	Corporate Tax
+	Sales Tax
+	(Public Tax Returns)
+
+	(Bank Holiday)
+	(Entreprenuer Scheme)
+
+	(Fuel Efficiency Standards)
+
+
+
+Society
+	Public Education
+	Public Healthcare
+	Food Standards
+	Law & Order
+	Public Transport
+	Public Housing
+
+	Family Planning
+		One Child
+		Two Child
+		No Limits
+		Childcare Provisions
+		Child Benefits
+
+	Border Controls
+		Open Borders
+		Passport Checks
+		Biometric Checks
+		Armed Guards
+		Closed Borders
+
+	Citizenship Tests
+		Minimal
+		Basic
+		Comprehensive
+		Ethnic-Based
+
+	State Pensions
+	Unemployment Benefits
+	(Compulsory Work For Unemployed)
+	(Disabilities)
+	Welfare
+	(Rent Controls)
+	(Ban Second Homes)
+

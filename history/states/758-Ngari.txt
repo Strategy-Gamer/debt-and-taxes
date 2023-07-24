@@ -1,0 +1,28 @@
+state={
+	id=758
+	name="STATE_758"
+	provinces={
+		1961 5094 8029 10802 12801 13439 13440
+	}
+	manpower=594500
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+	history={
+		owner = TIB
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = TIB
+		add_dynamic_modifier = {
+			modifier = climate_continental_polar
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	local_supplies=0.0 
+}

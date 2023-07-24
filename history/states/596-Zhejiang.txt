@@ -1,0 +1,40 @@
+
+state={
+	id=596
+	name="STATE_596"
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		victory_points = {
+			9974 1 
+		}
+		buildings = {
+			infrastructure = 2
+			9974 = {
+				naval_base = 3
+				coastal_bunker = 1
+				bunker = 1
+			}
+			1055 = {
+				naval_base = 3
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+	}
+
+	provinces={
+		1055 1096 1125 1168 1195 4013 4099 7058 7086 7146 7174 9944 9972 9974 10058 10086 11920 11947 12059 13465 
+	}
+	manpower=10014201
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

@@ -1,0 +1,194 @@
+characters = {
+	#1926 Election
+		GUA_lazaro_chacon_gonzalez = {
+			name = GUA_lazaro_chacon_gonzalez
+			#https://en.wikipedia.org/wiki/L%C3%A1zaro_Chac%C3%B3n_Gonz%C3%A1lez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_lazaro_chacon_gonzalez
+				}
+			}
+			#ideology_conservative
+		}
+		GUA_jorge_ubico = {
+			name = GUA_jorge_ubico
+			#https://en.wikipedia.org/wiki/Jorge_Ubico
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_jorge_ubico
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1944 Junta
+		GUA_juan_federico_ponce_vaides = {
+			name = GUA_juan_federico_ponce_vaides
+			#https://en.wikipedia.org/wiki/Juan_Federico_Ponce_Vaides
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_juan_federico_ponce_vaides
+				}
+			}
+			#ideology_stratocratic
+		}
+	#1944 Election
+		GUA_juan_jose_arevalo = {
+			name = GUA_juan_jose_arevalo
+			#https://en.wikipedia.org/wiki/Juan_Jos%C3%A9_Ar%C3%A9valo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_juan_jose_arevalo
+				}
+			}
+			#ideology_conservative
+		}
+		GUA_adrian_recinos = {
+			name = GUA_adrian_recinos
+			#https://en.wikipedia.org/wiki/Adri%C3%A1n_Recinos
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_adrian_recinos
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1950 Election
+		GUA_juan_jacobo_arbenz_guzman = {
+			name = GUA_juan_jacobo_arbenz_guzman
+			#https://en.wikipedia.org/wiki/Jacobo_%C3%81rbenz
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_juan_jacobo_arbenz_guzman
+				}
+			}
+			#ideology_agrarian
+		}
+		GUA_francisco_javier_arana_castro = {
+			name = GUA_francisco_javier_arana_castro
+			#https://en.wikipedia.org/wiki/Francisco_Javier_Arana
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_francisco_javier_arana_castro
+				}
+			}
+			#ideology_stratocratic
+		}
+		GUA_jose_miguel_ramon_ydigoras_fuentes = {
+			name = GUA_jose_miguel_ramon_ydigoras_fuentes
+			#https://en.wikipedia.org/wiki/Miguel_Yd%C3%ADgoras_Fuentes
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_jose_miguel_ramon_ydigoras_fuentes
+				}
+			}
+			#ideology_conservative
+		}
+		GUA_jorge_garcia_granados = {
+			name = GUA_jorge_garcia_granados
+			#https://en.wikipedia.org/wiki/Jorge_Garc%C3%ADa_Granados
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_jorge_garcia_granados
+				}
+			}
+			#ideology_liberal
+		}
+		GUA_manuel_francisco_galich_lopez = {
+			name = GUA_manuel_francisco_galich_lopez
+			#https://en.wikipedia.org/wiki/Manuel_Galich
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_manuel_francisco_galich_lopez
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1954 Coup
+		GUA_carlos_enrique_diaz_de_leon = {
+			name = GUA_carlos_enrique_diaz_de_leon
+			#https://en.wikipedia.org/wiki/Carlos_Enrique_D%C3%ADaz_de_Le%C3%B3n
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_carlos_enrique_diaz_de_leon
+				}
+			}
+			#ideology_agrarian
+		}
+		GUA_elfego_hernan_monzon_aguirre = {
+			name = GUA_elfego_hernan_monzon_aguirre
+			#https://en.wikipedia.org/wiki/Elfego_Hern%C3%A1n_Monz%C3%B3n_Aguirre
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_elfego_hernan_monzon_aguirre
+				}
+			}
+			#ideology_stratocratic
+		}
+		GUA_carlos_castillo_armas = {
+			name = GUA_carlos_castillo_armas
+			#https://en.wikipedia.org/wiki/Carlos_Castillo_Armas
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_carlos_castillo_armas
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1957 Election
+		GUA_miguel_ortiz_passarelli = {
+			name = GUA_miguel_ortiz_passarelli
+			#https://en.wikipedia.org/wiki/1957_Guatemalan_general_election
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_miguel_ortiz_passarelli
+				}
+			}
+			#ideology_reactionary
+		}
+		GUA_miguel_asturias_quinonez = {
+			name = GUA_miguel_asturias_quinonez
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_miguel_asturias_quinonez
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1958 Elecion
+		GUA_jose_luis_cruz_salzar = {
+			name = GUA_jose_luis_cruz_salzar
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_jose_luis_cruz_salzar
+				}
+			}
+			#ideology_reactionary
+		}
+		GUA_mario_mendez_montenegro = {
+			name = GUA_mario_mendez_montenegro
+			#https://en.wikipedia.org/wiki/Mario_M%C3%A9ndez_Montenegro
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_mario_mendez_montenegro
+				}
+			}
+			#ideology_fascist
+		}
+		GUA_jose_enrique_ardon_fernandez = {
+			name = GUA_jose_enrique_ardon_fernandez
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Enrique_Ard%C3%B3n_Fern%C3%A1ndez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_GUA_jose_enrique_ardon_fernandez
+				}
+			}
+			#ideology_liberal
+		}
+}

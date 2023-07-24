@@ -1,0 +1,45 @@
+
+state={
+	id=293
+	name="STATE_293"
+	resources={
+		oil=1.000
+	}
+
+	history={
+		owner = YEM
+		buildings = {
+			infrastructure = 2
+			10752 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			13388 3 
+		}
+		victory_points = {
+			1920 1
+		}
+		victory_points = {
+			1973 1
+		}
+		victory_points = {
+			13384 1
+		}
+		add_core_of = YEM
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+	}
+
+	provinces={
+		1920 1973 4924 10752 10840 13382 13384 13385 13386 13387 13388 13389 
+	}
+	manpower=2489500
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

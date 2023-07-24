@@ -1,0 +1,44 @@
+
+state={
+	id=386
+	name="STATE_386"
+	resources={
+		lumber=51.000
+		foodstuffs=6.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			air_base = 5
+			7315 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = USA
+		victory_points = {
+			7315 10
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_cool
+		}
+		add_dynamic_modifier = {
+			modifier = generic_state_dense_forests
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1320 4296 4398 7255 7315 7386 7414 7442 10155 10157 10242 10271 10690 12155 12214
+	}
+	manpower=1194434
+	buildings_max_level_factor=1.000
+	state_category=state_cat
+	local_supplies=0.000
+}

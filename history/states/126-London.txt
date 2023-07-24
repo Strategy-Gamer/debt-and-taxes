@@ -1,0 +1,42 @@
+state={
+	id=126
+	name="STATE_126"
+	manpower=9824296
+
+	state_category = megalopolis
+
+	history={
+		owner = ENG
+		victory_points = {
+			6103 50
+		}
+		buildings = {
+			infrastructure = 5 #was: 9
+			anti_air_building = 5
+			radar_station = 1
+			air_base = 10
+			11374 = {
+				naval_base = 10
+			}
+		}
+		add_core_of = ENG
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+		add_dynamic_modifier = {
+			modifier = unique_state_westminster
+		}
+	}
+
+	provinces={
+		6103 9239 11333 11374
+	}
+
+	local_supplies=0.0
+}

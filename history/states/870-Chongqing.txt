@@ -1,0 +1,33 @@
+
+state={
+	id=870
+	name="STATE_870"
+
+	history={
+		owner = CGQ
+		add_core_of = CGQ
+		victory_points = {
+			6999 20 
+		}
+		buildings = {
+			infrastructure = 4
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		4141 4431 6999 9939 11972 12705 13456 
+	}
+	manpower=23394331
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+	local_supplies=0.000
+}

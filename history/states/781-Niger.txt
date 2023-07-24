@@ -1,0 +1,34 @@
+
+state={
+	id=781
+	name="STATE_781" # Niger
+	manpower = 543817
+	
+	state_category = pastoral
+
+	history={
+		owner = FRA
+		add_core_of = NGR
+		victory_points = {
+			2056 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1975 2056 12707
+	}
+
+	local_supplies=1.0 
+}

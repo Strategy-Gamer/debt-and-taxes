@@ -1,0 +1,27 @@
+
+state={
+	id=598
+	name="STATE_598"
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+	}
+
+	provinces={
+		1001 4005 4031 4082 4123 7142 7181 9953 10095 12067 
+	}
+	manpower=10067106
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

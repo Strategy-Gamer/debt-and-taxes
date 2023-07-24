@@ -1,0 +1,24 @@
+state={
+	id=990
+	name="STATE_990"
+	provinces={
+		1208 2117 4216 4396 7443 8091 10269 10285 12283 12905 
+	}
+	history = {
+		owner = MAL
+		add_core_of = MAL
+		buildings = {
+			infrastructure = 1
+			1208 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			1208 1 
+		}
+	}
+	state_category = state_cat
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

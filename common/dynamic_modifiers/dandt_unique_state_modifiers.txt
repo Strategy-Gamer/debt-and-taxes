@@ -1,0 +1,81 @@
+unique_state_wall_street = {
+	enable = { always = yes }
+
+	icon = GFX_state_modifier_unique_wall_street
+
+	local_industry_finance_hub_throughput_factor = 0.075
+	local_industry_finance_hub_attractiveness_factor = 0.05
+}
+unique_state_hollywood = {
+	enable = { always = yes }
+
+	icon = GFX_state_modifier_unique_hollywood
+
+	local_industry_entertainment_complex_throughput_factor = 0.075
+	local_industry_entertainment_complex_attractiveness_factor = 0.05
+}
+unique_state_westminster = {
+	enable = { always = yes }
+
+	icon = GFX_state_modifier_unique_wall_street
+
+	local_industry_finance_hub_throughput_factor = 0.075
+	local_industry_finance_hub_attractiveness_factor = 0.05
+}
+unique_state_panama_canal = {
+	enable = { always = yes }
+
+	icon = GFX_state_modifier_generic_canal
+
+	local_industry_transport_hub_output_factor = 0.1
+	local_industry_shipping_hub_throughput_factor = 0.05
+	local_industry_shipping_hub_output_factor = 0.35
+	local_industry_shipping_hub_attractiveness_factor = 0.125
+	local_industry_finance_hub_throughput_factor = 0.05
+}
+unique_state_kiel_canal = {
+	enable = { always = yes }
+
+	icon = GFX_state_modifier_generic_canal
+
+	local_industry_transport_hub_output_factor = 0.05
+	local_industry_shipping_hub_throughput_factor = 0.05
+	local_industry_shipping_hub_output_factor = 0.20
+	local_industry_shipping_hub_attractiveness_factor = 0.10
+	local_industry_finance_hub_throughput_factor = 0.05
+}
+unique_state_danish_belt = {
+	enable = { always = yes }
+
+	icon = GFX_state_modifier_generic_strait
+
+	local_industry_shipping_hub_throughput_factor = 0.25
+	local_industry_shipping_hub_output_factor = 0.25
+	local_industry_shipping_hub_attractiveness_factor = 0.125
+	local_industry_finance_hub_throughput_factor = 0.05
+}
+unique_state_gibraltar_strait = {
+	enable = { always = yes }
+
+	local_industry_shipping_hub_throughput_factor = 0.25
+	local_industry_shipping_hub_output_factor = 0.25
+	local_industry_shipping_hub_attractiveness_factor = 0.125
+	local_industry_finance_hub_throughput_factor = 0.05
+}
+unique_state_malacca_strait = {
+	enable = { always = yes }
+
+	local_industry_shipping_hub_throughput_factor = 0.25
+	local_industry_shipping_hub_output_factor = 0.25
+	local_industry_shipping_hub_attractiveness_factor = 0.125
+	local_industry_finance_hub_throughput_factor = 0.05
+}
+unique_state_rajput_state = {
+	enable = { always = yes }
+
+	icon = GFX_state_modifier_unique_rajput_states
+
+	local_manpower = -0.9
+	local_resources = -0.75
+	compliance_growth = -0.5
+}

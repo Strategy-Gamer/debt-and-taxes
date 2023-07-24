@@ -1,0 +1,34 @@
+
+state={
+	id=878
+	name="STATE_878"
+
+	history={
+		owner = JAP
+		add_core_of = SHA
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			1069 5 
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		1069 1154 4071 4157 7055 7089 12045 
+	}
+	manpower=5686612
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

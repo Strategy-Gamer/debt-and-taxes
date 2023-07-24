@@ -1,0 +1,359 @@
+# is_in_continent_north_america = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = is_in_continent_north_america_tt
+# 		OR = {
+# 			is_in_region_canada = yes
+# 			is_in_region_america = yes
+# 			is_in_region_central_america = yes
+# 		}
+# 	}
+# }
+# # North America Regions
+# 	is_in_region_canada = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = is_in_region_canada_tt
+# 			OR = {
+# 				is_in_sub_region_canadian_rockies = yes
+# 				is_in_sub_region_canadian_hudson_basin = yes
+# 				is_in_sub_region_canadian_maritimes = yes
+# 			}
+# 		}
+# 	}
+# 	# Canadian SubRegions
+# 		is_in_sub_region_canadian_rockies = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_canadian_rockies_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_canadian_hudson_basin = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_canadian_hudson_basin_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_canadian_maritimes = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_canadian_maritimes_tt
+# 				region = 1
+# 			}
+# 		}
+# 	#
+# 	is_in_region_america = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = is_in_region_america_tt
+# 			OR = {
+# 				is_in_sub_region_cascadia = yes
+# 				is_in_sub_region_american_rockies = yes
+# 				is_in_sub_region_american_southwest = yes
+# 				is_in_sub_region_northern_great_plains = yes
+# 				is_in_sub_region_southern_great_plains = yes
+# 				is_in_sub_region_great_lakes = yes
+# 				is_in_sub_region_american_northeast = yes
+# 				is_in_sub_region_appalachia = yes
+# 				is_in_sub_region_american_southeast = yes
+# 				is_in_sub_region_american_gulfcoast = yes
+# 			}
+# 		}
+# 	}
+# 	# American SubRegions
+# 		is_in_sub_region_cascadia = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_cascadia_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_american_rockies = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_american_rockies_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_american_southwest = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_american_southwest_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_northern_great_plains = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_northern_great_plains_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_southern_great_plains = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_southern_great_plains_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_great_lakes = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_great_lakes_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_american_northeast = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_american_northeast_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_appalachia = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_appalachia_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_american_southeast = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_american_southeast_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_american_gulfcoast = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_american_gulfcoast_tt
+# 				region = 1
+# 			}
+# 		}
+# 	#
+# 	is_in_region_central_america = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = is_in_region_central_america_tt
+# 			OR = {
+# 				is_in_sub_region_northern_mexico = yes
+# 				is_in_sub_region_central_mexico = yes
+# 				is_in_sub_region_southern_mexico = yes
+# 				is_in_sub_region_central_america = yes
+# 				is_in_sub_region_greater_antilles = yes
+# 				is_in_sub_region_lesser_antilles = yes
+# 			}
+# 		}
+# 	}
+# 	# Central America SubRegions
+# 		is_in_sub_region_northern_mexico = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_northern_mexico_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_central_mexico = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_central_mexico_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_southern_mexico = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_southern_mexico_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_greater_antilles = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_greater_antilles_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_lesser_antilles = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_lesser_antilles_tt
+# 				region = 1
+# 			}
+# 		}
+# 	#
+# #
+# is_in_continent_south_america = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = is_in_continent_south_america_tt
+# 		OR = {
+# 			is_in_region_andes = yes
+# 			is_in_region_la_plata = yes
+# 			is_in_region_brazil = yes
+# 		}
+# 	}
+# }
+# # South America Regions
+# 	is_in_region_andes = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = is_in_region_andes_tt
+# 			OR = {
+# 				is_in_sub_region_guyana = yes
+# 				is_in_sub_region_venezuela = yes
+# 				is_in_sub_region_columbia = yes
+# 				is_in_sub_region_peru = yes
+# 			}
+# 		}
+# 	}
+# 	# Andes SubRegions
+# 		is_in_sub_region_guyana = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_guyana_tt
+# 				OR = {
+# 					region = 1
+# 				}
+# 			}
+# 		}
+# 		is_in_sub_region_venezuela = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_venezuela_tt
+# 				OR = {
+# 					region = 1
+# 				}
+# 			}
+# 		}
+# 		is_in_sub_region_columbia = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_columbia_tt
+# 				OR = {
+# 					region = 1
+# 				}
+# 			}
+# 		}
+# 		is_in_sub_region_peru = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_peru_tt
+# 				OR = {
+# 					region = 1
+# 				}
+# 			}
+# 		}
+# 	#
+# 	is_in_region_patagonia = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = is_in_region_patagonia_tt
+# 			OR = {
+# 				is_in_sub_region_chile = yes
+# 				is_in_sub_region_bolivia = yes
+# 				is_in_sub_region_latin_mesopotamia = yes
+# 				is_in_sub_region_patagonia = yes
+# 			}
+# 		}
+# 	}
+# 	# Patagonia SubRegions
+# 		is_in_sub_region_chile = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_chile_tt
+# 				OR = {
+# 					region = 1
+# 				}
+# 			}
+# 		}
+# 		is_in_sub_region_bolivia = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_bolivia_tt
+# 				OR = {
+# 					region = 1
+# 				}
+# 			}
+# 		}
+# 		is_in_sub_region_latin_mesopotamia = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_latin_mesopotamia_tt
+# 				OR = {
+# 					region = 1
+# 				}
+# 			}
+# 		}
+# 		is_in_sub_region_patagonia = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_patagonia_tt
+# 				OR = {
+# 					region = 1
+# 				}
+# 			}
+# 		}
+# 	#
+# 	is_in_region_brazil = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = is_in_region_brazil_tt
+# 			OR = {
+# 				is_in_sub_region_amazon = yes
+# 				is_in_sub_region_brazilian_plateau = yes
+# 				is_in_sub_region_brazilian_northeast = yes
+# 				is_in_sub_region_brazilian_coast = yes
+# 				is_in_sub_region_brazilian = yes
+# 			}
+# 		}
+# 	}
+# 	# Brazilian SubRegions
+# 		is_in_sub_region_amazon = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_amazon_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_brazilian_plateau = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_brazilian_plateau_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_brazilian_northeast = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_brazilian_northeast_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_brazilian_coast = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_brazilian_coast_tt
+# 				region = 1
+# 			}
+# 		}
+# 		is_in_sub_region_south_brazil = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = is_in_sub_region_south_brazil_tt
+# 				region = 1
+# 			}
+# 		}
+# 	#
+# #
+# is_in_atlantic = {
+# 	custom_trigger_tooltip = {
+# 		tooltip  = is_in_atlantic_tt
+# 		OR = {
+# 			region = 1
+# 		}
+# 	}
+# }
+
+# is_in_continent_europe = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = is_in_continent_europe_tt
+# 		OR = {
+# 			is_in_region_west_europe = yes
+# 			is_in_region_north_europe = yes
+# 			is_in_region_east_europe = yes
+# 			is_in_south_europe = yes
+# 		}
+# 	}
+# }
+# # Europe Regions
+# 	is_in_region_west_europe = {
+# 		custom_trigger_tooltip = is_in_region_west_europe_tt
+# 		OR = {
+# 			is_in_sub_region_portugal = yes
+# 			is_in_sub_region_castille = yes
+# 			is_in_sub_region_aragon = yes
+# 			is_in_sub_region_north_france = yes
+# 			is_in_sub_region_south_france = yes
+# 			is_in_sub_region_lowlands = yes
+# 			is_in_sub_region_england = yes
+# 			is_in_sub_region_celtlands = yes
+# 		}
+# 	}
+# #
+# is_in_continent_africa = {
+
+# }
+# is_in_continent_asia = {
+
+# }
+# is_in_region_china = {
+
+# }
+# is_in_continent_oceania = {
+
+# }

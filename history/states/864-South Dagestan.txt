@@ -1,0 +1,25 @@
+state={
+	id=864
+	name="STATE_864"
+	provinces={
+		1450 3668 3711 4463 7554 7624 9645 
+	}
+	history={
+		owner=SOV
+		add_core_of=SOV
+		add_core_of=DAG
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+	}
+	manpower=411794
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

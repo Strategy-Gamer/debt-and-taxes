@@ -1,0 +1,30 @@
+
+state={
+	id=741
+	name="STATE_741"
+
+	history={
+		add_core_of = CAM
+		owner = VIN
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1324 1620 4302 4330 4596 4639 5236 7645 10204 10261 10467 12167 12260 12447 12460 12475 
+	}
+	manpower=3945000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

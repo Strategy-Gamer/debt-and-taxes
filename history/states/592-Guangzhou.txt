@@ -1,0 +1,36 @@
+
+state={
+	id=592
+	name="STATE_592"
+	resources={
+		tungsten=8.000
+		steel=15.000
+		chromium=3.000
+	}
+
+	history={
+		owner = GGD
+		add_core_of = GGD
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1087 1131 1187 7039 7152 9963 11938 12077 13446 13449 
+	}
+	manpower=10435202
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=1.000
+}

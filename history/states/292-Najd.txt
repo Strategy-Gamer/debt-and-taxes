@@ -1,0 +1,33 @@
+
+state={
+	id=292
+	name="STATE_292"
+	resources={
+		oil=3.000
+	}
+
+	history={
+		owner = SAU
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			12727 3
+		}
+		add_core_of = SAU
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		5024 7995 12727 12813 12870
+	}
+	manpower=210045
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

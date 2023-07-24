@@ -1,0 +1,617 @@
+﻿###########################
+# Events for Disintegrating countries
+###########################
+
+add_namespace = dandt
+
+#Startup event to set things right, variables
+country_event = {
+	id = dandt.1
+	title = dandt.1.t
+	desc = dandt.1.d
+	picture = GFX_report_event_aid_pact
+	
+	is_triggered_only = yes
+		
+	immediate = {
+		hidden_effect = {
+			country_event = { id = dandt.3 days = 36 }
+			every_country = {
+				limit = {
+					NOT = {
+						OR = { #List of exeptions, otherwise things will be over
+							tag = USA
+						}
+					}
+				}
+				#Custom effect for setup of countries, in dandt_scripted_effects
+				#setup_country = yes
+			}
+			#Custom effect for economic calculations. Ignore the name
+			#get_tax_and_expenses = yes
+		}
+	}
+
+	option = {
+		name = dandt.1.a
+	}
+}
+
+#Event to show you economy stuff
+country_event = {
+	id = dandt.2
+	title = dandt.2.t
+	desc = dandt.2.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dandt.2.a
+
+	}
+	option = {
+		name = dandt.2.b
+
+	}
+	option = {
+		name = dandt.2.c
+
+		ai_trade_calculation = yes
+	}
+	option = {
+		name = dandt.2.e
+		#Do nothing
+	}
+}
+
+#Event for debugging parliament
+country_event = {
+	id = dandt.3
+	title = dandt.3.t
+	desc = dandt.3.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dandt.3.a
+		set_variable = { leader = token:USA_calvin_coolidge }
+		# govt_parties_setup = yes
+	}
+	option = {
+		name = count_votes
+		govt_house_setup = yes
+	}
+	option = {
+		name = attempt_coalition
+		govt_coalition_setup = yes
+	}
+	option = {
+		name = dandt.3.e
+		govt_house_normalize = yes
+	}
+}
+
+#Hourly events
+country_event = {
+	id = dandt.241
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.242 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.242
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.243 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.243
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.244 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.244
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.245 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.245
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.246 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.246
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.247 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.247
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.248 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.248
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.251 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.251
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.252 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.252
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.253 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.253
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.254 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.254
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.255 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.255
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.256 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.256
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.257 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.257
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.258 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.258
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.261 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.261
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.262 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.262
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.263 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.263
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.264 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.264
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.265 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.265
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.266 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.266
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.267 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.267
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+		if = {
+			limit = {
+				check_variable = { global.hour_loops < 24 }
+			}
+			add_to_variable = { global.hour_loops = 1 }
+			country_event = { id = dandt.268 hours = 2 }
+		}
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}
+country_event = {
+	id = dandt.268
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		events_hourly = yes
+	}
+
+	option = {
+		name = dandt.0.a
+	}
+}

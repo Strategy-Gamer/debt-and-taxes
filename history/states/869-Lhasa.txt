@@ -1,0 +1,31 @@
+state={
+	id=869
+	name="STATE_869"
+	manpower=1310423
+
+	state_category = rural
+
+	provinces={
+		2098 5018 5033 5080 7926 10741 10918 13444 13445
+	}
+	history = {
+		owner=TIB
+		add_core_of=TIB
+		buildings={
+			infrastructure=1
+		}
+		victory_points = {
+			5033 5
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_polar
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+	local_supplies=0.000
+}

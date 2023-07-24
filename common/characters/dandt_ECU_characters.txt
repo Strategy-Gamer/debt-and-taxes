@@ -1,0 +1,414 @@
+characters = {
+	#Constitutional Crisis
+		ECU_isidro_ramon_antonio_ayora_cueva = {
+			name = ECU_isidro_ramon_antonio_ayora_cueva
+			#https://en.wikipedia.org/wiki/Isidro_Ayora
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_isidro_ramon_antonio_ayora_cueva
+				}
+			}
+			#ideology_liberal
+		}
+		ECU_juan_manuel_lasso = {
+			name = ECU_juan_manuel_lasso
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_juan_manuel_lasso
+				}
+			}
+			#ideology_conservative
+		}
+		ECU_luis_alberto_larrea_alba = {
+			name = ECU_luis_alberto_larrea_alba
+			#https://en.wikipedia.org/wiki/Luis_Larrea_Alba
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_luis_alberto_larrea_alba
+				}
+			}
+			#ideology_stratocratic
+		}
+		ECU_alfredo_baquerizo_moreno = {
+			name = ECU_alfredo_baquerizo_moreno
+			#https://en.wikipedia.org/wiki/Alfredo_Baquerizo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_alfredo_baquerizo_moreno
+				}
+			}
+			#ideology_liberal
+		}
+		ECU_carlos_freile_larrea = {
+			name = ECU_carlos_freile_larrea
+			#https://en.wikipedia.org/wiki/Carlos_Freile_Larrea
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_carlos_freile_larrea
+				}
+			}
+			#ideology_liberal
+		}
+		ECU_alberto_guerrero_martinez = {
+			name = ECU_alberto_guerrero_martinez
+			#https://en.wikipedia.org/wiki/Alberto_Guerrero_Mart%C3%ADnez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_alberto_guerrero_martinez
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1931 Election
+		ECU_ildefonso_mendoza = {
+			name = ECU_ildefonso_mendoza
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_ildefonso_mendoza
+				}
+			}
+			#ideology_socialist
+		}
+		ECU_neptali_bonifaz = {
+			name = ECU_neptali_bonifaz
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_neptali_bonifaz
+				}
+			}
+			#ideology_conservative
+		}
+		ECU_modesto_larrea_jijon = {
+			name = ECU_modesto_larrea_jijon
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_modesto_larrea_jijon
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1932 Election
+		ECU_pablo_vela = {
+			name = ECU_pablo_vela
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_pablo_vela
+				}
+			}
+			#ideology_socialist
+		}
+		ECU_juan_de_dios_martinez_mera = {
+			name = ECU_juan_de_dios_martinez_mera
+			#https://en.wikipedia.org/wiki/Juan_de_Dios_Mart%C3%ADnez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_juan_de_dios_martinez_mera
+				}
+			}
+			#ideology_liberal
+		}
+		ECU_manuel_sotomayor = {
+			name = ECU_manuel_sotomayor
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_manuel_sotomayor
+				}
+			}
+			#ideology_conservative
+		}
+		ECU_abelardo_montalvo_alvear = {
+			name = ECU_abelardo_montalvo_alvear
+			#https://en.wikipedia.org/wiki/Abelardo_Montalvo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_abelardo_montalvo_alvear
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1933 Election
+		ECU_ricardo_paredes_romero = {
+			name = ECU_ricardo_paredes_romero
+			#https://en.wikipedia.org/wiki/Ricardo_Paredes_Romero
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_ricardo_paredes_romero
+				}
+			}
+			#ideology_communist
+		}
+		ECU_carlos_sambreno = {
+			name = ECU_carlos_sambreno
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_carlos_sambreno
+				}
+			}
+			#ideology_socialist
+		}
+		ECU_colon_alfaro = {
+			name = ECU_colon_alfaro
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_colon_alfaro
+				}
+			}
+			#ideology_liberal
+		}
+		ECU_jose_maria_velaco_ibarra = {
+			name = ECU_jose_maria_velaco_ibarra
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Velasco_Ibarra
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_jose_maria_velaco_ibarra
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1935 Coup
+		ECU_antonio_pons_campuzano = {
+			name = ECU_antonio_pons_campuzano
+			#https://en.wikipedia.org/wiki/Antonio_Pons
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_antonio_pons_campuzano
+				}
+			}
+			#ideology_conservative
+		}
+		ECU_frederico_paez_chiriboga = {
+			name = ECU_frederico_paez_chiriboga
+			#https://en.wikipedia.org/wiki/Federico_P%C3%A1ez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_frederico_paez_chiriboga
+				}
+			}
+			#ideology_socialist
+		}
+		ECU_gil_alberto_enriquez_gallo = {
+			name = ECU_gil_alberto_enriquez_gallo
+			#https://en.wikipedia.org/wiki/Federico_P%C3%A1ez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_gil_alberto_enriquez_gallo
+				}
+			}
+			#ideology_stratocratic
+		}
+		ECU_manuel_maria_borrero_gonzalez = {
+			name = ECU_manuel_maria_borrero_gonzalez
+			#https://en.wikipedia.org/wiki/Manuel_Mar%C3%ADa_Borrero
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_manuel_maria_borrero_gonzalez
+				}
+			}
+			#ideology_liberal
+		}
+		ECU_don_aurelio_mosquera_narvaez = {
+			name = ECU_don_aurelio_mosquera_narvaez
+			#https://en.wikipedia.org/wiki/Aurelio_Mosquera
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_don_aurelio_mosquera_narvaez
+				}
+			}
+			#ideology_liberal
+		}
+		ECU_carlos_alberto_arroyo_del_rio = {
+			name = ECU_carlos_alberto_arroyo_del_rio
+			#https://en.wikipedia.org/wiki/Carlos_Alberto_Arroyo_del_R%C3%ADo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_carlos_alberto_arroyo_del_rio
+				}
+			}
+			#
+		}
+		ECU_andres_fernandez_de_cordova_nieto = {
+			name = ECU_andres_fernandez_de_cordova_nieto
+			#https://en.wikipedia.org/wiki/Andr%C3%A9s_C%C3%B3rdova
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_andres_fernandez_de_cordova_nieto
+				}
+			}
+			#ideology_liberal
+		}
+		ECU_julio_enrique_moreno = {
+			name = ECU_julio_enrique_moreno
+			#https://en.wikipedia.org/wiki/Julio_Enrique_Moreno
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_julio_enrique_moreno
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1940 Election
+		ECU_jacinto_jijon_y_caamano = {
+			name = ECU_jacinto_jijon_y_caamano
+			#https://en.wikipedia.org/wiki/Jacinto_Jij%C3%B3n_y_Caama%C3%B1o
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_jacinto_jijon_y_caamano
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1947 Coup
+		ECU_carlos_mancheno_cajas = {
+			name = ECU_carlos_mancheno_cajas
+			#https://en.wikipedia.org/wiki/Carlos_Mancheno_Cajas
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_carlos_mancheno_cajas
+				}
+			}
+			#ideology_stratocratic
+		}
+		ECU_mariano_suarez_veintimilla = {
+			name = ECU_mariano_suarez_veintimilla
+			#https://en.wikipedia.org/wiki/Mariano_Su%C3%A1rez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_mariano_suarez_veintimilla
+				}
+			}
+			#ideology_conservative
+		}
+		ECU_carlos_julio_arosemena_tola = {
+			name = ECU_carlos_julio_arosemena_tola
+			#https://en.wikipedia.org/wiki/Carlos_Julio_Arosemena_Tola
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_carlos_julio_arosemena_tola
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1948 Election
+		ECU_galo_lincoln_plaza_lasso_de_la_vega = {
+			name = ECU_galo_lincoln_plaza_lasso_de_la_vega
+			#https://en.wikipedia.org/wiki/Galo_Plaza
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_galo_lincoln_plaza_lasso_de_la_vega
+				}
+			}
+			#ideology_agrarian
+		}
+		ECU_manuel_flor_torres = {
+			name = ECU_manuel_flor_torres
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_manuel_flor_torres
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1952 Election
+		ECU_jose_ricardo_chiriboga = {
+			name = ECU_jose_ricardo_chiriboga
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_jose_ricardo_chiriboga
+				}
+			}
+			#ideology_liberal
+		}
+		ECU_ruperto_alarcon_falconi = {
+			name = ECU_ruperto_alarcon_falconi
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_ruperto_alarcon_falconi
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1956 Election
+		ECU_carlos_guevara_moreno = {
+			name = ECU_carlos_guevara_moreno
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_carlos_guevara_moreno
+				}
+			}
+			#ideology_socialist
+		}
+		ECU_raul_clemente_heurta = {
+			name = ECU_raul_clemente_heurta
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_raul_clemente_heurta
+				}
+			}
+			#ideology_liberal
+		}
+		ECU_jose_ricardo_chiriboga_villagomez = {
+			name = ECU_jose_ricardo_chiriboga_villagomez
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_jose_ricardo_chiriboga_villagomez
+				}
+			}
+			#ideology_conservative
+		}
+		ECU_camilo_ponce_enriquez = {
+			name = ECU_camilo_ponce_enriquez
+			#https://en.wikipedia.org/wiki/Camilo_Ponce_Enr%C3%ADquez_(politician)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_camilo_ponce_enriquez
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1960 Election
+		ECU_antonio_parra_velasco = {
+			name = ECU_antonio_parra_velasco
+			#https://en.wikipedia.org/wiki/Antonio_Parra_Velasco
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_antonio_parra_velasco
+				}
+			}
+			#ideology_communist
+		}
+		ECU_gonzalo_cordero_crespo = {
+			name = ECU_gonzalo_cordero_crespo
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ECU_gonzalo_cordero_crespo
+				}
+			}
+			#ideology_conservative
+		}
+	#
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=974
+	name="STATE_974"
+	provinces={
+		1923 2059 5037 8073 8118 13328 13380 13381 13390 13392 13407 
+	}
+	history = {
+		owner = ASR
+		add_core_of = ASR
+		add_core_of = HJZ
+		add_core_of = YEM
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			1923 1
+		}
+
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+	manpower=311933
+	state_category=pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,235 @@
+get_deployed_air_force_size = {
+	if = {
+		limit = {
+			NOT = {
+				AND = {
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+					has_deployed_air_force_size = {
+						size < deployed_air_force_size
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 39999
+				}
+			}
+			set_variable = { deployed_air_force_size = 40000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 29999
+				}
+			}
+			set_variable = { deployed_air_force_size = 30000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 19999
+				}
+			}
+			set_variable = { deployed_air_force_size = 20000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 9999
+				}
+			}
+			set_variable = { deployed_air_force_size = 10000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 8999
+				}
+			}
+			set_variable = { deployed_air_force_size = 9000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 7999
+				}
+			}
+			set_variable = { deployed_air_force_size = 8000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 6999
+				}
+			}
+			set_variable = { deployed_air_force_size = 7000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 5999
+				}
+			}
+			set_variable = { deployed_air_force_size = 6000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 4999
+				}
+			}
+			set_variable = { deployed_air_force_size = 5000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 3999
+				}
+			}
+			set_variable = { deployed_air_force_size = 4000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 2999
+				}
+			}
+			set_variable = { deployed_air_force_size = 3000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 1999
+				}
+			}
+			set_variable = { deployed_air_force_size = 2000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_deployed_air_force_size = {
+					size > 999
+				}
+			}
+			set_variable = { deployed_air_force_size = 1000 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+		else = {
+			set_variable = { deployed_air_force_size = 0 }
+			while_loop_effect = {
+				limit = { 
+					has_deployed_air_force_size = {
+						size > deployed_air_force_size
+					}
+				}
+				add_to_variable = { deployed_air_force_size = 1 }
+			}
+		}
+	}
+}

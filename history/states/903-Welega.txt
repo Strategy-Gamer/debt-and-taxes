@@ -1,0 +1,24 @@
+state={
+	id=903
+	name="STATE_903"
+	provinces={
+		2009 12856 13489 
+	}
+	history={
+		owner=ETH
+		add_core_of=ETH
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+	state_category=pastoral
+	manpower=782726
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

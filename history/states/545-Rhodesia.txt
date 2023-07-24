@@ -1,0 +1,33 @@
+state={
+	id=545
+	name="STATE_545"
+	manpower=1171336
+	
+	state_category = pastoral
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			10929 1 
+		}
+		add_core_of = ZIM
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1874 2151 2216 4851 7842 10929
+	}
+
+	local_supplies=3.0 
+}

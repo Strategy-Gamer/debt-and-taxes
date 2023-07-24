@@ -1,0 +1,33 @@
+
+state={
+	id=434
+	name="STATE_434"
+	manpower = 260040
+	
+	state_category = wasteland
+	resources={
+		# tungsten=49 # was: 54
+	}
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {	
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1116 1996 10810 12322 12730 
+	}
+
+	local_supplies=3.0 
+}

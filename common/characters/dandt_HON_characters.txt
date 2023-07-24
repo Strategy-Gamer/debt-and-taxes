@@ -1,0 +1,82 @@
+characters = {
+	#1928 Election
+		HON_vincente_mejia_colindres = {
+			name = HON_vincente_mejia_colindres
+			#https://en.wikipedia.org/wiki/Vicente_Mej%C3%ADa_Colindres
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HON_vincente_mejia_colindres
+				}
+			}
+			#ideology_liberal
+		}
+		HON_tiburcio_carias_andino = {
+			name = HON_tiburcio_carias_andino
+			#https://en.wikipedia.org/wiki/Tiburcio_Car%C3%ADas_Andino
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HON_tiburcio_carias_andino
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1932 Election
+		HON_angel_zuniga_huete = {
+			name = HON_angel_zuniga_huete
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HON_angel_zuniga_huete
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1948 Election
+		HON_juan_manuel_galvez = {
+			name = HON_juan_manuel_galvez
+			#https://en.wikipedia.org/wiki/1948_Honduran_general_election
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HON_juan_manuel_galvez
+				}
+			}
+			#ideology_conservative
+		}
+		HON_julio_lozano_diaz = {
+			name = HON_julio_lozano_diaz
+			#https://en.wikipedia.org/wiki/Julio_Lozano_D%C3%ADaz
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HON_julio_lozano_diaz
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1954 Election
+		HON_ramon_villeda_morales = {
+			name = HON_ramon_villeda_morales
+			#https://en.wikipedia.org/wiki/Ram%C3%B3n_Villeda_Morales
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HON_ramon_villeda_morales
+				}
+			}
+			#ideology_liberal
+		}
+		HON_abraham_william_calderon = {
+			name = HON_abraham_william_calderon
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HON_abraham_william_calderon
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1956 Coup
+	#
+}

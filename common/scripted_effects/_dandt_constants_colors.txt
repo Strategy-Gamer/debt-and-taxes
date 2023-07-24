@@ -1,0 +1,385 @@
+dandt_constants_2 = {
+	# Cultures
+		set_variable = { var = global.red@token:culture_pacificer value = 75 }
+		set_variable = { var = global.green@token:culture_pacificer value = 255 }
+		set_variable = { var = global.blue@token:culture_pacificer value = 249 }
+
+		set_variable = { var = global.red@token:culture_pioneer value = 231 }
+		set_variable = { var = global.green@token:culture_pioneer value = 114 }
+		set_variable = { var = global.blue@token:culture_pioneer value = 0 }
+
+		set_variable = { var = global.red@token:culture_canadian value = 0 }
+		set_variable = { var = global.green@token:culture_canadian value = 231 }
+		set_variable = { var = global.blue@token:culture_canadian value = 49 }
+
+		set_variable = { var = global.red@token:culture_quebecois value = 0 }
+		set_variable = { var = global.green@token:culture_quebecois value = 54 }
+		set_variable = { var = global.blue@token:culture_quebecois value = 231 }
+
+		set_variable = { var = global.red@token:culture_yankee value = 0 }
+		set_variable = { var = global.green@token:culture_yankee value = 114 }
+		set_variable = { var = global.blue@token:culture_yankee value = 231 }
+
+		set_variable = { var = global.red@token:culture_appalachian value = 236 }
+		set_variable = { var = global.green@token:culture_appalachian value = 222 }
+		set_variable = { var = global.blue@token:culture_appalachian value = 101 }
+
+		set_variable = { var = global.red@token:culture_dixie value = 184 }
+		set_variable = { var = global.green@token:culture_dixie value = 184 }
+		set_variable = { var = global.blue@token:culture_dixie value = 184 }
+
+		set_variable = { var = global.red@token:culture_african_american value = 87 }
+		set_variable = { var = global.green@token:culture_african_american value = 87 }
+		set_variable = { var = global.blue@token:culture_african_american value = 87 }
+
+		set_variable = { var = global.red@token:culture_el_norte value = 151 }
+		set_variable = { var = global.green@token:culture_el_norte value = 241 }
+		set_variable = { var = global.blue@token:culture_el_norte value = 115 }
+
+		set_variable = { var = global.red@token:culture_mexican value = 57 }
+		set_variable = { var = global.green@token:culture_mexican value = 154 }
+		set_variable = { var = global.blue@token:culture_mexican value = 60 }
+
+		set_variable = { var = global.red@token:culture_amerindian value = 147 }
+		set_variable = { var = global.green@token:culture_amerindian value = 43 }
+		set_variable = { var = global.blue@token:culture_amerindian value = 141 }
+
+		set_variable = { var = global.red@token:culture_pacific_islander value = 255 }
+		set_variable = { var = global.green@token:culture_pacific_islander value = 129 }
+		set_variable = { var = global.blue@token:culture_pacific_islander value = 215 }
+
+		set_variable = { var = global.red@token:culture_ashkenazi value = 189 }
+		set_variable = { var = global.green@token:culture_ashkenazi value = 234 }
+		set_variable = { var = global.blue@token:culture_ashkenazi value = 251 }
+
+		set_variable = { var = global.red@token:culture_japanese value = 255 }
+		set_variable = { var = global.green@token:culture_japanese value = 191 }
+		set_variable = { var = global.blue@token:culture_japanese value = 191 }
+
+		set_variable = { var = global.red@token:culture_english value = 219 }
+		set_variable = { var = global.green@token:culture_english value = 83 }
+		set_variable = { var = global.blue@token:culture_english value = 102 }
+
+		set_variable = { var = global.red@token:culture_scottish value = 50 }
+		set_variable = { var = global.green@token:culture_scottish value = 107 }
+		set_variable = { var = global.blue@token:culture_scottish value = 184 }
+
+		set_variable = { var = global.red@token:culture_welsh value = 73 }
+		set_variable = { var = global.green@token:culture_welsh value = 183 }
+		set_variable = { var = global.blue@token:culture_welsh value = 111 }
+
+		set_variable = { var = global.red@token:culture_dutch value = 217 }
+		set_variable = { var = global.green@token:culture_dutch value = 156 }
+		set_variable = { var = global.blue@token:culture_dutch value = 94 }
+
+		set_variable = { var = global.red@token:culture_flemish value = 244 }
+		set_variable = { var = global.green@token:culture_flemish value = 192 }
+		set_variable = { var = global.blue@token:culture_flemish value = 118 }
+
+		set_variable = { var = global.red@token:culture_walloon value = 101 }
+		set_variable = { var = global.green@token:culture_walloon value = 88 }
+		set_variable = { var = global.blue@token:culture_walloon value = 146 }
+
+		set_variable = { var = global.red@token:culture_french value = 31 }
+		set_variable = { var = global.green@token:culture_french value = 87 }
+		set_variable = { var = global.blue@token:culture_french value = 237 }
+
+		set_variable = { var = global.red@token:culture_breton value = 210 }
+		set_variable = { var = global.green@token:culture_breton value = 199 }
+		set_variable = { var = global.blue@token:culture_breton value = 219 }
+
+		set_variable = { var = global.red@token:culture_catalan value = 235 }
+		set_variable = { var = global.green@token:culture_catalan value = 164 }
+		set_variable = { var = global.blue@token:culture_catalan value = 111 }
+
+		set_variable = { var = global.red@token:culture_basque value = 255 }
+		set_variable = { var = global.green@token:culture_basque value = 220 }
+		set_variable = { var = global.blue@token:culture_basque value = 137 }
+
+		set_variable = { var = global.red@token:culture_castillan value = 213 }
+		set_variable = { var = global.green@token:culture_castillan value = 197 }
+		set_variable = { var = global.blue@token:culture_castillan value = 60 }
+
+		set_variable = { var = global.red@token:culture_andalucian value = 168 }
+		set_variable = { var = global.green@token:culture_andalucian value = 224 }
+		set_variable = { var = global.blue@token:culture_andalucian value = 160 }
+
+		set_variable = { var = global.red@token:culture_galacian value = 212 }
+		set_variable = { var = global.green@token:culture_galacian value = 142 }
+		set_variable = { var = global.blue@token:culture_galacian value = 142 }
+
+		set_variable = { var = global.red@token:culture_portugese value = 115 }
+		set_variable = { var = global.green@token:culture_portugese value = 200 }
+		set_variable = { var = global.blue@token:culture_portugese value = 59 }
+
+		set_variable = { var = global.red@token:culture_north_italian value = 66 }
+		set_variable = { var = global.green@token:culture_north_italian value = 220 }
+		set_variable = { var = global.blue@token:culture_north_italian value = 91 }
+
+		set_variable = { var = global.red@token:culture_south_italian value = 102 }
+		set_variable = { var = global.green@token:culture_south_italian value = 174 }
+		set_variable = { var = global.blue@token:culture_south_italian value = 114 }
+
+		set_variable = { var = global.red@token:culture_north_german value = 86 }
+		set_variable = { var = global.green@token:culture_north_german value = 71 }
+		set_variable = { var = global.blue@token:culture_north_german value = 68 }
+
+		set_variable = { var = global.red@token:culture_south_german value = 116 }
+		set_variable = { var = global.green@token:culture_south_german value = 94 }
+		set_variable = { var = global.blue@token:culture_south_german value = 94 }
+
+		set_variable = { var = global.red@token:culture_danish value = 220 }
+		set_variable = { var = global.green@token:culture_danish value = 83 }
+		set_variable = { var = global.blue@token:culture_danish value = 83 }
+
+		set_variable = { var = global.red@token:culture_norwegian value = 172 }
+		set_variable = { var = global.green@token:culture_norwegian value = 113 }
+		set_variable = { var = global.blue@token:culture_norwegian value = 70 }
+		
+		set_variable = { var = global.red@token:culture_swedish value = 56 }
+		set_variable = { var = global.green@token:culture_swedish value = 114 }
+		set_variable = { var = global.blue@token:culture_swedish value = 186 }
+
+		set_variable = { var = global.red@token:culture_finnish value = 198 }
+		set_variable = { var = global.green@token:culture_finnish value = 186 }
+		set_variable = { var = global.blue@token:culture_finnish value = 194 }
+
+		set_variable = { var = global.red@token:culture_icelandic value = 153 }
+		set_variable = { var = global.green@token:culture_icelandic value = 172 }
+		set_variable = { var = global.blue@token:culture_icelandic value = 187 }
+
+		set_variable = { var = global.red@token:culture_slovenian value = 66 }
+		set_variable = { var = global.green@token:culture_slovenian value = 135 }
+		set_variable = { var = global.blue@token:culture_slovenian value = 158 }
+
+		set_variable = { var = global.red@token:culture_croatian value = 168 }
+		set_variable = { var = global.green@token:culture_croatian value = 160 }
+		set_variable = { var = global.blue@token:culture_croatian value = 206 }
+
+		set_variable = { var = global.red@token:culture_bosniak value = 83 }
+		set_variable = { var = global.green@token:culture_bosniak value = 211 }
+		set_variable = { var = global.blue@token:culture_bosniak value = 207 }
+
+		set_variable = { var = global.red@token:culture_serbian value = 184 }
+		set_variable = { var = global.green@token:culture_serbian value = 102 }
+		set_variable = { var = global.blue@token:culture_serbian value = 102 }
+
+		set_variable = { var = global.red@token:culture_albanian value = 172 }
+		set_variable = { var = global.green@token:culture_albanian value = 47 }
+		set_variable = { var = global.blue@token:culture_albanian value = 22 }
+
+		set_variable = { var = global.red@token:culture_macedonian value = 23 }
+		set_variable = { var = global.green@token:culture_macedonian value = 50 }
+		set_variable = { var = global.blue@token:culture_macedonian value = 111 }
+
+		set_variable = { var = global.red@token:culture_greek value = 110 }
+		set_variable = { var = global.green@token:culture_greek value = 207 }
+		set_variable = { var = global.blue@token:culture_greek value = 231 }
+
+		set_variable = { var = global.red@token:culture_bulgarian value = 82 }
+		set_variable = { var = global.green@token:culture_bulgarian value = 160 }
+		set_variable = { var = global.blue@token:culture_bulgarian value = 89 }
+
+		set_variable = { var = global.red@token:culture_turkish value = 234 }
+		set_variable = { var = global.green@token:culture_turkish value = 65 }
+		set_variable = { var = global.blue@token:culture_turkish value = 32 }
+
+		set_variable = { var = global.red@token:culture_kurdish value = 224 }
+		set_variable = { var = global.green@token:culture_kurdish value = 192 }
+		set_variable = { var = global.blue@token:culture_kurdish value = 107 }
+
+		set_variable = { var = global.red@token:culture_romanian value = 234 }
+		set_variable = { var = global.green@token:culture_romanian value = 229 }
+		set_variable = { var = global.blue@token:culture_romanian value = 106 }
+
+		set_variable = { var = global.red@token:culture_romani value = 0 }
+		set_variable = { var = global.green@token:culture_romani value = 128 }
+		set_variable = { var = global.blue@token:culture_romani value = 255 }
+
+		set_variable = { var = global.red@token:culture_hungarian value = 236 }
+		set_variable = { var = global.green@token:culture_hungarian value = 192 }
+		set_variable = { var = global.blue@token:culture_hungarian value = 124 }
+
+		set_variable = { var = global.red@token:culture_slovakian value = 166 }
+		set_variable = { var = global.green@token:culture_slovakian value = 209 }
+		set_variable = { var = global.blue@token:culture_slovakian value = 216 }
+
+		set_variable = { var = global.red@token:culture_czech value = 87 }
+		set_variable = { var = global.green@token:culture_czech value = 226 }
+		set_variable = { var = global.blue@token:culture_czech value = 247 }
+
+		set_variable = { var = global.red@token:culture_polish value = 243 }
+		set_variable = { var = global.green@token:culture_polish value = 162 }
+		set_variable = { var = global.blue@token:culture_polish value = 146 }
+
+		set_variable = { var = global.red@token:culture_lithuanian value = 120 }
+		set_variable = { var = global.green@token:culture_lithuanian value = 207 }
+		set_variable = { var = global.blue@token:culture_lithuanian value = 103 }
+
+		set_variable = { var = global.red@token:culture_latvian value = 175 }
+		set_variable = { var = global.green@token:culture_latvian value = 82 }
+		set_variable = { var = global.blue@token:culture_latvian value = 104 }
+
+		set_variable = { var = global.red@token:culture_estonian value = 156 }
+		set_variable = { var = global.green@token:culture_estonian value = 236 }
+		set_variable = { var = global.blue@token:culture_estonian value = 231 }
+
+		set_variable = { var = global.red@token:culture_byelorussian value = 146 }
+		set_variable = { var = global.green@token:culture_byelorussian value = 166 }
+		set_variable = { var = global.blue@token:culture_byelorussian value = 155 }
+
+		set_variable = { var = global.red@token:culture_ukrainian value = 182 }
+		set_variable = { var = global.green@token:culture_ukrainian value = 184 }
+		set_variable = { var = global.blue@token:culture_ukrainian value = 108 }
+
+		set_variable = { var = global.red@token:culture_russian value = 67 }
+		set_variable = { var = global.green@token:culture_russian value = 117 }
+		set_variable = { var = global.blue@token:culture_russian value = 74 }
+
+		set_variable = { var = global.red@token:culture_tatar value = 109 }
+		set_variable = { var = global.green@token:culture_tatar value = 136 }
+		set_variable = { var = global.blue@token:culture_tatar value = 144 }
+
+		set_variable = { var = global.red@token:culture_bashkir value = 61 }
+		set_variable = { var = global.green@token:culture_bashkir value = 203 }
+		set_variable = { var = global.blue@token:culture_bashkir value = 81 }
+
+		set_variable = { var = global.red@token:culture_caucasian value = 195 }
+		set_variable = { var = global.green@token:culture_caucasian value = 208 }
+		set_variable = { var = global.blue@token:culture_caucasian value = 82 }
+
+		set_variable = { var = global.red@token:culture_georgian value = 141 }
+		set_variable = { var = global.green@token:culture_georgian value = 201 }
+		set_variable = { var = global.blue@token:culture_georgian value = 141 }
+
+		set_variable = { var = global.red@token:culture_armenian value = 180 }
+		set_variable = { var = global.green@token:culture_armenian value = 132 }
+		set_variable = { var = global.blue@token:culture_armenian value = 178 }
+
+		set_variable = { var = global.red@token:culture_azeri value = 42 }
+		set_variable = { var = global.green@token:culture_azeri value = 48 }
+		set_variable = { var = global.blue@token:culture_azeri value = 107 }
+
+		set_variable = { var = global.red@token:culture_mongol value = 229 }
+		set_variable = { var = global.green@token:culture_mongol value = 230 }
+		set_variable = { var = global.blue@token:culture_mongol value = 43 }
+
+		set_variable = { var = global.red@token:culture_siberian value = 132 }
+		set_variable = { var = global.green@token:culture_siberian value = 192 }
+		set_variable = { var = global.blue@token:culture_siberian value = 232 }
+	#
+	#Religion
+		set_variable = { var = global.red@token:religion_irreligious value = 184 }
+		set_variable = { var = global.green@token:religion_irreligious value = 184 }
+		set_variable = { var = global.blue@token:religion_irreligious value = 184 }
+
+		set_variable = { var = global.red@token:religion_catholicism value = 248 }
+		set_variable = { var = global.green@token:religion_catholicism value = 240 }
+		set_variable = { var = global.blue@token:religion_catholicism value = 17 }
+
+		set_variable = { var = global.red@token:religion_protestantism value = 57 }
+		set_variable = { var = global.green@token:religion_protestantism value = 154 }
+		set_variable = { var = global.blue@token:religion_protestantism value = 237 }
+
+		set_variable = { var = global.red@token:religion_orthodoxy value = 217 }
+		set_variable = { var = global.green@token:religion_orthodoxy value = 148 }
+		set_variable = { var = global.blue@token:religion_orthodoxy value = 39 }
+
+		set_variable = { var = global.red@token:religion_mormonism value = 168 }
+		set_variable = { var = global.green@token:religion_mormonism value = 107 }
+		set_variable = { var = global.blue@token:religion_mormonism value = 177 }
+
+		set_variable = { var = global.red@token:religion_coptic value = 126 }
+		set_variable = { var = global.green@token:religion_coptic value = 108 }
+		set_variable = { var = global.blue@token:religion_coptic value = 73 }
+
+		set_variable = { var = global.red@token:religion_judaism value = 189 }
+		set_variable = { var = global.green@token:religion_judaism value = 234 }
+		set_variable = { var = global.blue@token:religion_judaism value = 251 }
+
+		set_variable = { var = global.red@token:religion_sunni value = 42 }
+		set_variable = { var = global.green@token:religion_sunni value = 183 }
+		set_variable = { var = global.blue@token:religion_sunni value = 39 }
+
+		set_variable = { var = global.red@token:religion_shia value = 77 }
+		set_variable = { var = global.green@token:religion_shia value = 229 }
+		set_variable = { var = global.blue@token:religion_shia value = 74 }
+
+		set_variable = { var = global.red@token:religion_ibadi value = 65 }
+		set_variable = { var = global.green@token:religion_ibadi value = 136 }
+		set_variable = { var = global.blue@token:religion_ibadi value = 63 }
+
+		set_variable = { var = global.red@token:religion_vajrayana value = 255 }
+		set_variable = { var = global.green@token:religion_vajrayana value = 108 }
+		set_variable = { var = global.blue@token:religion_vajrayana value = 186 }
+
+		set_variable = { var = global.red@token:religion_mahayana value = 251 }
+		set_variable = { var = global.green@token:religion_mahayana value = 128 }
+		set_variable = { var = global.blue@token:religion_mahayana value = 113 }
+
+		set_variable = { var = global.red@token:religion_thervada value = 215 }
+		set_variable = { var = global.green@token:religion_thervada value = 118 }
+		set_variable = { var = global.blue@token:religion_thervada value = 186 }
+
+		set_variable = { var = global.red@token:religion_hinduism value = 252 }
+		set_variable = { var = global.green@token:religion_hinduism value = 171 }
+		set_variable = { var = global.blue@token:religion_hinduism value = 79 }
+
+		set_variable = { var = global.red@token:religion_sikhism value = 180 }
+		set_variable = { var = global.green@token:religion_sikhism value = 88 }
+		set_variable = { var = global.blue@token:religion_sikhism value = 3 }
+
+		set_variable = { var = global.red@token:religion_confucianism value = 255 }
+		set_variable = { var = global.green@token:religion_confucianism value = 237 }
+		set_variable = { var = global.blue@token:religion_confucianism value = 111 }
+
+		set_variable = { var = global.red@token:religion_mormonism value = 168 }
+		set_variable = { var = global.green@token:religion_mormonism value = 107 }
+		set_variable = { var = global.blue@token:religion_mormonism value = 177 }
+
+		set_variable = { var = global.red@token:religion_shintoism value = 179 }
+		set_variable = { var = global.green@token:religion_shintoism value = 30 }
+		set_variable = { var = global.blue@token:religion_shintoism value = 30 }
+
+		set_variable = { var = global.red@token:religion_indigenous value = 75 }
+		set_variable = { var = global.green@token:religion_indigenous value = 185 }
+		set_variable = { var = global.blue@token:religion_indigenous value = 186 }
+
+		set_variable = { var = global.red@token:religion_african_folk value = 87 }
+		set_variable = { var = global.green@token:religion_african_folk value = 87 }
+		set_variable = { var = global.blue@token:religion_african_folk value = 87 }
+	#
+	#Ideology
+		set_variable = { var = global.red@token:ideology_communist value = 153 }
+		set_variable = { var = global.green@token:ideology_communist value = 0 }
+		set_variable = { var = global.blue@token:ideology_communist value = 0 }
+
+		set_variable = { var = global.red@token:ideology_socialist value = 255 }
+		set_variable = { var = global.green@token:ideology_socialist value = 102 }
+		set_variable = { var = global.blue@token:ideology_socialist value = 102 }
+
+		set_variable = { var = global.red@token:ideology_liberal value = 229 }
+		set_variable = { var = global.green@token:ideology_liberal value = 205 }
+		set_variable = { var = global.blue@token:ideology_liberal value = 22 }
+
+		set_variable = { var = global.red@token:ideology_agrarian value = 55 }
+		set_variable = { var = global.green@token:ideology_agrarian value = 242 }
+		set_variable = { var = global.blue@token:ideology_agrarian value = 77 }
+
+		set_variable = { var = global.red@token:ideology_conservative value = 76 }
+		set_variable = { var = global.green@token:ideology_conservative value = 150 }
+		set_variable = { var = global.blue@token:ideology_conservative value = 224 }
+
+		set_variable = { var = global.red@token:ideology_reactionary value = 85 }
+		set_variable = { var = global.green@token:ideology_reactionary value = 103 }
+		set_variable = { var = global.blue@token:ideology_reactionary value = 194 }
+
+		set_variable = { var = global.red@token:ideology_fascist value = 204 }
+		set_variable = { var = global.green@token:ideology_fascist value = 102 }
+		set_variable = { var = global.blue@token:ideology_fascist value = 0 }
+
+		set_variable = { var = global.red@token:ideology_stratocratic value = 160 }
+		set_variable = { var = global.green@token:ideology_stratocratic value = 160 }
+		set_variable = { var = global.blue@token:ideology_stratocratic value = 160 }
+	#
+}

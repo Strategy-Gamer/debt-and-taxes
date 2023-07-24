@@ -1,0 +1,31 @@
+state = {
+	id = 644
+	name = "STATE_644"
+
+	state_category = "wasteland"
+	manpower = 34182
+
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = YAK
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_polar
+		}
+	}
+
+	provinces = {
+		1722 1745 1819 2853 2877 3184 4006 4229 4455 4878 6085 6211 12549 12592 12634 13060 13061
+	}
+
+	local_supplies = 0.0 
+}

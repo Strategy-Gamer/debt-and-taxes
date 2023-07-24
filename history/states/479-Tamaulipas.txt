@@ -1,0 +1,43 @@
+
+state={
+	id=479
+	name="STATE_479"
+	resources={
+		oil=9.000
+	}
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MEX
+		add_core_of = MEC
+		victory_points = {
+			5015 5 
+		}
+		victory_points = {
+			10769 5
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = disaster_boll_weevil_infestation
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		2083 5015 5021 10769 12721 13088 
+	}
+	manpower=553988
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

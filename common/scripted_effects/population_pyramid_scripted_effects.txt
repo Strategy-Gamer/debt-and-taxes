@@ -1,0 +1,36 @@
+
+
+
+create_population_pyramid = {
+	clear_array = pop_pyramid_frame
+	resize_array = {
+		array = pop_pyramid_frame
+		value = 0 # 0 is nothing
+		size = 21 # 21 age groups (by 5 years, from 0-4 to 100+)
+	}
+	for_loop_effect = {
+		start = 0
+		end = 20
+		add = 1
+		value = age
+
+		#Get Age Group
+		set_temp_variable = { age_group = 20 }
+		subtract_from_temp_variable = { age_group = age }
+		#Add to age group total
+		add_to_variable = { pop_pyramid_frame^age_group = selected_state:pops_age_amount^age }
+		add_to_variable = { pop_pyramid_frame^age_group = selected_state:pops_age_aged_amount^age }
+	}
+	find_highest_in_array = {
+		array = pop_pyramid_frame
+		value = pop_pyramid_frame_biggest_val
+	}
+	for_each_loop = {
+		array = pop_pyramid_frame
+		index = age_group
+
+		divide_variable = { pop_pyramid_frame^age_group = pop_pyramid_frame_biggest_val }
+		multiply_variable = { pop_pyramid_frame^age_group = 20 }
+		round_variable = pop_pyramid_frame^age_group
+	}
+}

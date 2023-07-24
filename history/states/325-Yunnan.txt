@@ -1,0 +1,33 @@
+
+state={
+	id=325
+	name="STATE_325"
+	resources={
+		tungsten=2.000
+	}
+
+	history={
+		owner = YUN
+		add_core_of = YUN
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1114 1172 1196 1383 1522 1653 4501 8023 10346 10776 12262 13450 
+	}
+	manpower=4894500
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=3.000
+}

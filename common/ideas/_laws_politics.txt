@@ -1,0 +1,464 @@
+ideas = {
+	law_tokens = { # Parties
+		law_parties_underground_only = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_parties
+				set_variable = { laws_politics_parties = token:law_parties_underground_only }
+			}
+		}
+		law_parties_harassment = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_parties
+				set_variable = { laws_politics_parties = token:law_parties_harassment }
+			}
+		}
+		law_parties_non_secret_ballots = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_parties
+				set_variable = { laws_politics_parties = token:law_parties_non_secret_ballots }
+			}
+		}
+		law_parties_secret_ballots = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_parties
+				set_variable = { laws_politics_parties = token:law_parties_secret_ballots }
+			}
+		}
+	}
+	law_tokens = { # Gerrymandering
+		law_gerrymandering_legal = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_gerrymandering
+				set_variable = { laws_politics_gerrymandering = token:law_gerrymandering_legal }
+			}
+		}
+		law_gerrymandering_court_oversight = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_gerrymandering
+				set_variable = { laws_politics_gerrymandering = token:law_gerrymandering_court_oversight }
+			}
+		}
+		law_gerrymandering_multi_partisan = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_gerrymandering
+				set_variable = { laws_politics_gerrymandering = token:law_gerrymandering_multi_partisan }
+			}
+		}
+		law_gerrymandering_illegal = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_gerrymandering
+				set_variable = { laws_politics_gerrymandering = token:law_gerrymandering_illegal }
+			}
+		}
+	}
+	law_tokens = { # Franchise
+		law_franchise_no_voting = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_franchise
+				set_variable = { laws_politics_franchise = token:law_franchise_no_voting }
+			}
+		}
+		law_franchise_only_landed = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_franchise
+				set_variable = { laws_politics_franchise = token:law_franchise_only_landed }
+			}
+		}
+		law_franchise_wealthy = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_franchise
+				set_variable = { laws_politics_franchise = token:law_franchise_wealthy }
+			}
+		}
+		law_franchise_universal = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_franchise
+				set_variable = { laws_politics_franchise = token:law_franchise_universal }
+			}
+		}
+		law_franchise_only_union = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_franchise
+				set_variable = { laws_politics_franchise = token:law_franchise_only_union }
+			}
+		}
+	}
+	law_tokens = { # Voting Age
+		law_voting_age_sixteen = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_age
+				set_variable = { laws_politics_voting_age = token:law_voting_age_sixteen }
+			}
+		}
+		law_voting_age_seventeen = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_age
+				set_variable = { laws_politics_voting_age = token:law_voting_age_seventeen }
+			}
+		}
+		law_voting_age_eighteen = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_age
+				set_variable = { laws_politics_voting_age = token:law_voting_age_eighteen }
+			}
+		}
+		law_voting_age_nineteen = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_age
+				set_variable = { laws_politics_voting_age = token:law_voting_age_nineteen }
+			}
+		}
+		law_voting_age_twenty = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_age
+				set_variable = { laws_politics_voting_age = token:law_voting_age_twenty }
+			}
+		}
+		law_voting_age_twenty_one = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_age
+				set_variable = { laws_politics_voting_age = token:law_voting_age_twenty_one }
+			}
+		}
+		law_voting_age_twenty_two = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_age
+				set_variable = { laws_politics_voting_age = token:law_voting_age_twenty_two }
+			}
+		}
+		law_voting_age_twenty_three = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_age
+				set_variable = { laws_politics_voting_age = token:law_voting_age_twenty_three }
+			}
+		}
+		law_voting_age_twenty_four = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_age
+				set_variable = { laws_politics_voting_age = token:law_voting_age_twenty_four }
+			}
+		}
+		law_voting_age_twenty_five = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_age
+				set_variable = { laws_politics_voting_age = token:law_voting_age_twenty_five }
+			}
+		}
+	}
+	law_tokens = { # Centralization
+		law_centralization_unitary = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_centralization
+				set_variable = { laws_politics_centralization = token:law_centralization_unitary }
+			}
+		}
+		law_centralization_federal = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_centralization
+				set_variable = { laws_politics_centralization = token:law_centralization_federal }
+			}
+		}
+		law_centralization_confederal = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_centralization
+				set_variable = { laws_politics_centralization = token:law_centralization_confederal }
+			}
+		}
+	}
+	law_tokens = { # Voting System
+		law_voting_system_first_past_the_post = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_system
+				set_variable = { laws_politics_voting_system = token:law_voting_system_first_past_the_post }
+			}
+		}
+		law_voting_system_proportional_representative = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_system
+				set_variable = { laws_politics_voting_system = token:law_voting_system_proportional_representative }
+			}
+		}
+		law_voting_system_direct_democracy = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_voting_system
+				set_variable = { laws_politics_voting_system = token:law_voting_system_direct_democracy }
+			}
+		}
+	}
+	law_tokens = { # Term Limits
+		law_term_limits_none = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_limits
+				set_variable = { laws_politics_term_limits = token:law_term_limits_none }
+			}
+		}
+		law_term_limits_only_executive = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_limits
+				set_variable = { laws_politics_term_limits = token:law_term_limits_only_executive }
+			}
+		}
+		law_term_limits_executive_and_legislature = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_limits
+				set_variable = { laws_politics_term_limits = token:law_term_limits_executive_and_legislature }
+			}
+		}
+		law_term_limits_all_positions = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_limits
+				set_variable = { laws_politics_term_limits = token:law_term_limits_all_positions }
+			}
+		}
+	}
+	law_tokens = { # Legislature
+		law_legislature_dissolved = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_legislature
+				set_variable = { laws_politics_legislature = token:law_legislature_dissolved }
+			}
+		}
+		law_legislature_limited = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_legislature
+				set_variable = { laws_politics_legislature = token:law_legislature_limited }
+			}
+		}
+		law_legislature_economic_only = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_legislature
+				set_variable = { laws_politics_legislature = token:law_legislature_economic_only }
+			}
+		}
+		law_legislature_economic_and_diplomatic_only = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_legislature
+				set_variable = { laws_politics_legislature = token:law_legislature_economic_and_diplomatic_only }
+			}
+		}
+		law_legislature_full_authority = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_legislature
+				set_variable = { laws_politics_legislature = token:law_legislature_full_authority }
+			}
+		}
+	}
+	law_tokens = { # Proportionment
+		law_proportionment_locally_based = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_proportionment
+				set_variable = { laws_politics_proportionment = token:law_proportionment_locally_based }
+			}
+		}
+		law_proportionment_population_based = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_proportionment
+				set_variable = { laws_politics_proportionment = token:law_proportionment_population_based }
+			}
+		}
+		law_proportionment_fixed = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_proportionment
+				set_variable = { laws_politics_proportionment = token:law_proportionment_fixed }
+			}
+		}
+	}
+	law_tokens = { # Candidate Choice
+		law_candidate_choice_party_only = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_candidate_choice
+				set_variable = { laws_politics_candidate_choice = token:law_candidate_choice_party_only }
+			}
+		}
+		law_candidate_choice_nationally_appointed = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_candidate_choice
+				set_variable = { laws_politics_candidate_choice = token:law_candidate_choice_nationally_appointed }
+			}
+		}
+		law_candidate_choice_locally_appointed = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_candidate_choice
+				set_variable = { laws_politics_candidate_choice = token:law_candidate_choice_locally_appointed }
+			}
+		}
+		law_candidate_choice_party_vote = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_candidate_choice
+				set_variable = { laws_politics_candidate_choice = token:law_candidate_choice_party_vote }
+			}
+		}
+		law_candidate_choice_public_vote = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_candidate_choice
+				set_variable = { laws_politics_candidate_choice = token:law_candidate_choice_public_vote }
+			}
+		}
+	}
+	law_tokens = { # Term Length
+		law_term_length_for_life = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_length
+				set_variable = { laws_politics_term_length = token:law_term_length_for_life }
+			}
+		}
+		law_term_length_until_removed = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_length
+				set_variable = { laws_politics_term_length = token:law_term_length_until_removed }
+			}
+		}
+		law_term_length_ten_years = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_length
+				set_variable = { laws_politics_term_length = token:law_term_length_ten_years }
+			}
+		}
+		law_term_length_eight_years = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_length
+				set_variable = { laws_politics_term_length = token:law_term_length_eight_years }
+			}
+		}
+		law_term_length_six_years = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_length
+				set_variable = { laws_politics_term_length = token:law_term_length_six_years }
+			}
+		}
+		law_term_length_five_years = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_length
+				set_variable = { laws_politics_term_length = token:law_term_length_five_years }
+			}
+		}
+		law_term_length_four_years = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_length
+				set_variable = { laws_politics_term_length = token:law_term_length_four_years }
+			}
+		}
+		law_term_length_three_years = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_length
+				set_variable = { laws_politics_term_length = token:law_term_length_three_years }
+			}
+		}
+		law_term_length_two_years = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_politics_term_length
+				set_variable = { laws_politics_term_length = token:law_term_length_two_years }
+			}
+		}
+	}
+}

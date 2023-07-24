@@ -1,0 +1,30 @@
+
+state={
+	id=559
+	name="STATE_559"
+
+	history={
+		owner = ITA
+		add_core_of = SOM
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1964 1966 2020 4909 5065 10818 10891 12840 
+	}
+	manpower=1028895
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

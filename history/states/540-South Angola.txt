@@ -1,0 +1,36 @@
+
+state={
+	id=540
+	name="STATE_540"
+	resources={
+		rubber=1.000
+	}
+
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			10966 1 
+		}
+		add_core_of = ANG
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		8138 8202 10966 12391 12958 12985 
+	}
+	manpower=3096575
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

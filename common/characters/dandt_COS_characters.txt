@@ -1,0 +1,188 @@
+characters = {
+	#1928 Election
+		COS_jorge_volio_jimenez = {
+			name = COS_jorge_volio_jimenez
+			#https://en.wikipedia.org/wiki/Jorge_Volio_Jim%C3%A9nez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_jorge_volio_jimenez
+				}
+			}
+			#ideology_socialist
+		}
+		COS_cleto_gonzalez_viquez = {
+			name = COS_cleto_gonzalez_viquez
+			#https://en.wikipedia.org/wiki/Cleto_Gonz%C3%A1lez_V%C3%ADquez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_cleto_gonzalez_viquez
+				}
+			}
+			#ideology_agrarian
+		}
+		COS_carlos_maria_jimenez_ortiz = {
+			name = COS_carlos_maria_jimenez_ortiz
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_carlos_maria_jimenez_ortiz
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1932 Election
+		COS_ricardo_jimenez_oreaumuno = {
+			name = COS_ricardo_jimenez_oreaumuno
+			#https://en.wikipedia.org/wiki/Ricardo_Jim%C3%A9nez_Oreamuno
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_ricardo_jimenez_oreaumuno
+				}
+			}
+			#ideology_liberal
+		}
+		COS_manuel_castro_quesada = {
+			name = COS_manuel_castro_quesada
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_manuel_castro_quesada
+				}
+			}
+			#ideology_reactionary
+		}
+		COS_max_koberg = {
+			name = COS_max_koberg
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_max_koberg
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1936 Election
+		COS_manuel_mora_valverde = {
+			name = COS_manuel_mora_valverde
+			#https://en.wikipedia.org/wiki/Manuel_Mora
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_manuel_mora_valverde
+				}
+			}
+			#ideology_communist
+		}
+		COS_octavio_beeche_arguello = {
+			name = COS_octavio_beeche_arguello
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_octavio_beeche_arguello
+				}
+			}
+			#ideology_agrarian
+		}
+		COS_leon_cortes_castro = {
+			name = COS_leon_cortes_castro
+			#https://en.wikipedia.org/wiki/Le%C3%B3n_Cort%C3%A9s_Castro
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_leon_cortes_castro
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1940 Election
+		COS_virgilio_salazar_leiva = {
+			name = COS_virgilio_salazar_leiva
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_virgilio_salazar_leiva
+				}
+			}
+			#ideology_agrarian
+		}
+		COS_rafael_angel_calderon_guardia = {
+			name = COS_rafael_angel_calderon_guardia
+			#https://en.wikipedia.org/wiki/Rafael_%C3%81ngel_Calder%C3%B3n_Guardia
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_rafael_angel_calderon_guardia
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1944 Election
+		COS_theodoro_picardo_michalski = {
+			name = COS_theodoro_picardo_michalski
+			#https://en.wikipedia.org/wiki/Teodoro_Picado_Michalski
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_theodoro_picardo_michalski
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1948 Election
+		COS_otilio_ulate_blanco = {
+			name = COS_otilio_ulate_blanco
+			#https://en.wikipedia.org/wiki/Otilio_Ulate_Blanco
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_otilio_ulate_blanco
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1953 Election
+		COS_jose_figueres_ferrer = {
+			name = COS_jose_figueres_ferrer
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Figueres_Ferrer
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_jose_figueres_ferrer
+				}
+			}
+			#ideology_agrarian
+		}
+		COS_mario_echandi_jimenez = {
+			name = COS_mario_echandi_jimenez
+			#https://en.wikipedia.org/wiki/Mario_Echandi_Jim%C3%A9nez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_mario_echandi_jimenez
+				}
+			}
+			#ideology_liberal
+		}
+		COS_fernando_castro_cervantes = {
+			name = COS_fernando_castro_cervantes
+			#no_articles
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_fernando_castro_cervantes
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1958 Election
+		COS_jorge_rossi_chavarria = {
+			name = COS_jorge_rossi_chavarria
+			#https://en.wikipedia.org/wiki/Jorge_Rossi_Chavarr%C3%ADa
+			portraits = {
+				civilian = {
+					large = GFX_portrait_COS_jorge_rossi_chavarria
+				}
+			}
+			#ideology_socialist
+		}
+	#
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=471
+	name="STATE_471"
+
+	history={
+		owner = CAN
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = CAN
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = generic_state_untapped_mines
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_polar
+		}
+	}
+
+	provinces={
+		3606 7869 7891 
+	}
+	manpower=27681
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=3.000
+}

@@ -1,0 +1,26 @@
+state={
+	id=951
+	name="STATE_951"
+	provinces={
+		1374 1520 1563 1577 1592 4260 4539 4554 7426 10195 10238 10453 12210 
+	}
+	history={
+		owner=VIN
+		buildings={
+			infrastructure=1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+	state_category=pastoral
+	manpower=733283
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

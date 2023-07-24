@@ -1,0 +1,25 @@
+state={
+	id=845
+	name="STATE_845"
+	manpower=14854
+
+	state_category=pastoral
+
+	history={
+		owner=FRA
+		buildings = {
+			# infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		13355 13356 13357 
+	}
+	local_supplies=0.000
+}

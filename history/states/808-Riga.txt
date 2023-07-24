@@ -1,0 +1,39 @@
+
+state={
+	id=808
+	name="STATE_808"
+	resources={
+		steel=1.000
+	}
+
+	history={
+		owner = LAT
+		victory_points = {
+			9340 5
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			air_base = 3
+			9340 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = LAT
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		9240 9340 10323
+	}
+	manpower=420250
+	buildings_max_level_factor=1.000
+	state_category=city
+}

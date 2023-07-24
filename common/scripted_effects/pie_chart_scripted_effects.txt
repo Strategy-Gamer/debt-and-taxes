@@ -1,0 +1,171 @@
+# Scripted GUI Pie Chart by Yard1
+
+create_state_pie_charts = {
+	create_pie_chart_religion = yes
+	create_pie_chart_culture = yes
+	create_pie_chart_ideology = yes
+}
+
+# this creates a pie chart of popularities - can be easily adapted to show anything that adds up to 100%
+# This code is much different from Yard's, but I'll credit him anyway
+create_pie_chart_religion = {
+	clear_array = selected_state_pops_religion_type
+	clear_array = pie_chart_religion
+	resize_array = {
+		array = pie_chart_religion
+		value = 1 # 1 is value for neutrality frame, so we don't have to make a loop for it
+		size = 100 # 100 pieces, each percent is one piece
+	}
+	var:selected_state = {
+		set_temp_variable = { pie_pop = 0 }
+		set_temp_variable = { excess_pop = 0 }
+		for_each_loop = {
+			array = pops_religion_type
+			index = rr
+			value = vv
+			add_to_array = { ROOT.selected_state_pops_religion_type = vv }
+
+			set_variable = { ROOT.last_idx = pie_pop }
+			set_temp_variable = { pie_pop = pops_religion_percentage^rr }
+			multiply_temp_variable = { pie_pop = 100 }
+			round_temp_variable = pie_pop 
+			#ROOT = { add_political_power = 1 }
+
+			#Excess
+			set_temp_variable = { excess_temp = pops_religion_percentage^rr }
+			subtract_from_temp_variable = { excess_temp = pie_pop }
+			add_to_temp_variable = { excess_pop = pie_pop }
+			if = {
+				limit = {
+					NOT = { check_variable = { excess_pop < 1 } }
+				}
+				subtract_from_temp_variable = { excess_pop = 1 }
+				add_to_temp_variable = { pie_pop = 1 }
+			}
+			
+			add_to_temp_variable = { pie_pop = ROOT.last_idx }
+			subtract_from_temp_variable = { pie_pop = 1 }
+			if = {
+				limit = {
+					check_variable = { pie_pop > 100 }
+				}
+				set_temp_variable = { pie_pop = 100 }
+			}
+			for_loop_effect = {
+				start = ROOT.last_idx
+				end = pie_pop
+				set_variable = { PREV.pie_chart_religion^v = pops_religion_type^rr }
+			}
+			set_variable = { ROOT.last_idx = pie_pop }
+		}
+	}
+	clear_variable = ROOT.last_idx
+}
+
+create_pie_chart_culture = {
+	clear_array = selected_state_pops_culture_type
+	clear_array = pie_chart_culture
+	resize_array = {
+		array = pie_chart_culture
+		value = 1 # 1 is value for neutrality frame, so we don't have to make a loop for it
+		size = 100 # 100 pieces, each percent is one piece
+	}
+	var:selected_state = {
+		set_temp_variable = { pie_pop = 0 }
+		set_temp_variable = { excess_pop = 0 }
+		for_each_loop = {
+			array = pops_culture_type
+			index = rr
+			value = vv
+			add_to_array = { ROOT.selected_state_pops_culture_type = vv }
+
+			set_variable = { ROOT.last_idx = pie_pop }
+			set_temp_variable = { pie_pop = pops_culture_percentage^rr }
+			multiply_temp_variable = { pie_pop = 100 }
+			round_temp_variable = pie_pop 
+			
+			#Excess
+			set_temp_variable = { excess_temp = pops_culture_percentage^rr }
+			subtract_from_temp_variable = { excess_temp = pie_pop }
+			add_to_temp_variable = { excess_pop = pie_pop }
+			if = {
+				limit = {
+					NOT = { check_variable = { excess_pop < 1 } }
+				}
+				subtract_from_temp_variable = { excess_pop = 1 }
+				add_to_temp_variable = { pie_pop = 1 }
+			}
+			
+			add_to_temp_variable = { pie_pop = ROOT.last_idx }
+			subtract_from_temp_variable = { pie_pop = 1 }
+			if = {
+				limit = {
+					check_variable = { pie_pop > 100 }
+				}
+				set_temp_variable = { pie_pop = 100 }
+			}
+			for_loop_effect = {
+				start = ROOT.last_idx
+				end = pie_pop
+				set_variable = { PREV.pie_chart_culture^v = pops_culture_type^rr }
+				add_to_variable = { ROOT.last_idx = 1 }
+			}
+		}
+	}
+
+	clear_variable = ROOT.last_idx
+}
+
+create_pie_chart_ideology = {
+	clear_array = selected_state_pops_ideology_type
+	clear_array = pie_chart_ideology
+	resize_array = {
+		array = pie_chart_ideology
+		value = 1 # 1 is value for neutrality frame, so we don't have to make a loop for it
+		size = 100 # 100 pieces, each percent is one piece
+	}
+	var:selected_state = {
+		set_temp_variable = { pie_pop = 0 }
+		set_temp_variable = { excess_pop = 0 }
+		for_each_loop = {
+			array = pops_ideology_type
+			index = rr
+			value = vv
+			add_to_array = { ROOT.selected_state_pops_ideology_type = vv }
+
+			set_variable = { ROOT.last_idx = pie_pop }
+			set_temp_variable = { pie_pop = pops_ideology_percentage^rr }
+			multiply_temp_variable = { pie_pop = 100 }
+			round_temp_variable = pie_pop 
+			
+			#Excess
+			set_temp_variable = { excess_temp = pops_ideology_percentage^rr }
+			subtract_from_temp_variable = { excess_temp = pie_pop }
+			add_to_temp_variable = { excess_pop = pie_pop }
+			if = {
+				limit = {
+					NOT = { check_variable = { excess_pop < 1 } }
+				}
+				subtract_from_temp_variable = { excess_pop = 1 }
+				add_to_temp_variable = { pie_pop = 1 }
+			}
+			
+			add_to_temp_variable = { pie_pop = ROOT.last_idx }
+			subtract_from_temp_variable = { pie_pop = 1 }
+			if = {
+				limit = {
+					check_variable = { pie_pop > 100 }
+				}
+				set_temp_variable = { pie_pop = 100 }
+			}
+			for_loop_effect = {
+				start = ROOT.last_idx
+				end = pie_pop
+				set_variable = { PREV.pie_chart_ideology^v = pops_ideology_type^rr }
+				add_to_variable = { ROOT.last_idx = 1 }
+			}
+		}
+	}
+
+	clear_variable = ROOT.last_idx
+}

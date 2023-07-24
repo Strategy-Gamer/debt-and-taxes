@@ -1,0 +1,33 @@
+
+state={
+	id=546
+	name="STATE_546"
+	resources={
+		rubber=2.000
+	}
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = TZN
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		2176 2281 5180 8144 10988 
+	}
+	manpower=1348156
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

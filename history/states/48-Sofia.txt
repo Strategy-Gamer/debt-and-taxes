@@ -1,0 +1,40 @@
+
+state={
+	id=48
+	name="STATE_48"
+	manpower = 1685989
+	resources={
+		aluminium = 2
+	}
+	
+	
+	state_category = city
+
+	history={
+		owner = BUL
+		victory_points = { #Sofia
+			949 15 
+		}
+		victory_points = { #Vidin
+			9771 1
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+		}
+		add_core_of = BUL
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		793 935 949 965 3908 3971 9771 11754 
+	}
+}

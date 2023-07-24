@@ -1,0 +1,28 @@
+state={
+	id=863
+	name="STATE_863"
+	provinces={
+		4534 4605 6436 12309 
+	}
+	history={
+		owner=SOV
+		add_core_of = SOV
+		add_core_of = GEO
+		buildings = {
+			infrastructure = 3
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+	manpower=355443
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

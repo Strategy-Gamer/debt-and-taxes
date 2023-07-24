@@ -1,0 +1,39 @@
+
+state={
+	id=328
+	name="STATE_328"
+	resources={
+		aluminium=7.000
+	}
+
+	history={
+		owner = FEG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			4572 1 
+		}
+		victory_points = {
+			10433 1 
+		}
+		set_demilitarized_zone = yes
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		887 945 1567 3888 3913 3932 3949 4503 4572 6868 6905 6947 7523 7591 7652 7663 9759 9782 9803 9848 9866 9913 10433 11744 11781 11864 12412 
+	}
+	manpower=7036266
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

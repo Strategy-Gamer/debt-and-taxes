@@ -1,0 +1,37 @@
+
+#General Scripted Effects that don't fit in any file
+
+
+#Math
+    power = {
+        #num_temp^power_temp
+        #State Scope
+        #Inputs: num_temp (Temp Var), power_temp (Temp Var, Only integers work)
+        #Outputs: num_temp (Temp Var)
+
+        set_temp_variable = { num_temp_start = num_temp }
+        
+        #If power_temp is positive
+        if = {
+            limit = {
+                check_variable = { power_temp > 0 }
+            }
+            for_loop_effect = {
+                start = 1
+                end = power_temp
+
+                multiply_temp_variable = { num_temp = num_temp_start }
+           }
+        }
+        else = {
+            for_loop_effect = {
+                start = 1
+                add = -1
+                end = power_temp
+                compare = greater_than
+                
+                divide_temp_variable = { num_temp = num_temp_start }
+            }
+        }
+    }
+#

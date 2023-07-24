@@ -1,0 +1,36 @@
+state={
+	id=539
+	name="STATE_539"
+	manpower=409752
+
+	state_category=pastoral
+
+	history={
+		owner = FRA
+		add_core_of = GAB
+		victory_points = {
+			5139 1 
+		}
+		buildings = {
+			infrastructure = 2
+			5139 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_tropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		5139 8207 10948 13210 
+	}
+
+	local_supplies=1.0 
+}

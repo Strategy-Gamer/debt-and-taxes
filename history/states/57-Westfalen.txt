@@ -1,0 +1,34 @@
+
+state={
+	id=57
+	name="STATE_57"
+
+	history={
+		owner = GER
+		victory_points = {
+			495 5 
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 3
+		}
+		add_core_of = GER
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		405 495 3355 3398 6535 6622 9443 9509 9547 11346 11431 
+	}
+	manpower=5609333
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

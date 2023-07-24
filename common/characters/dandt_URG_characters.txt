@@ -1,0 +1,208 @@
+characters = {
+	#1928 Elections
+		URG_julio_maria_sosa_debrus = {
+			name = URG_julio_maria_sosa_debrus
+			#https://es.wikipedia.org/wiki/Julio_Mar%C3%ADa_Sosa_(pol%C3%ADtico)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_julio_maria_sosa_debrus
+				}
+			}
+			#ideology_communist
+		}
+		URG_john_campisteguy_oxcoby = {
+			name = URG_john_campisteguy_oxcoby
+			#https://es.wikipedia.org/wiki/Juan_Campisteguy
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_john_campisteguy_oxcoby
+				}
+			}
+			#ideology_liberal
+		}
+		URG_lorenzo_carnelli = {
+			name = URG_lorenzo_carnelli
+			#https://es.wikipedia.org/wiki/Juan_Campisteguy
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_lorenzo_carnelli
+				}
+			}
+			#ideology_agrarian
+		}
+		URG_luis_alberto_de_herrera_y_quevedo = {
+			name = URG_luis_alberto_de_herrera_y_quevedo
+			#https://es.wikipedia.org/wiki/Luis_Alberto_de_Herrera
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_luis_alberto_de_herrera_y_quevedo
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1930 Election
+		URG_jose_luis_gabriel_terra_leivas = {
+			name = URG_jose_luis_gabriel_terra_leivas
+			#https://es.wikipedia.org/wiki/Gabriel_Terra
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_jose_luis_gabriel_terra_leivas
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1934 Coup
+	#
+	#1938 Election
+		URG_emilio_frugoni = {
+			name = URG_emilio_frugoni
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_emilio_frugoni
+				}
+			}
+			#ideology_socialist
+		}
+		URG_luis_alfredo_baldomir_ferrari = {
+			name = URG_luis_alfredo_baldomir_ferrari
+			#https://en.wikipedia.org/wiki/Alfredo_Baldomir
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_luis_alfredo_baldomir_ferrari
+				}
+			}
+			#ideology_liberal
+		}
+		URG_juan_jose_de_arteaga = {
+			name = URG_juan_jose_de_arteaga
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_juan_jose_de_arteaga
+				}
+			}
+			#ideology_conservative
+		}
+		URG_justo_michael_alonso = {
+			name = URG_justo_michael_alonso
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_justo_michael_alonso
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1942 Election
+		URG_eugenio_gomez = {
+			name = URG_eugenio_gomez
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_eugenio_gomez
+				}
+			}
+			#ideology_communist
+		}
+		URG_juan_jose_de_amezaga_landaroso = {
+			name = URG_juan_jose_de_amezaga_landaroso
+			#https://en.wikipedia.org/wiki/Juan_Jos%C3%A9_de_Am%C3%A9zaga
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_juan_jose_de_amezaga_landaroso
+				}
+			}
+			#ideology_liberal
+		}
+		URG_joaquin_secco_illa = {
+			name = URG_joaquin_secco_illa
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_joaquin_secco_illa
+				}
+			}
+			#ideology_agrarian
+		}
+		URG_martin_casimiro_martinez_fagalde = {
+			name = URG_martin_casimiro_martinez_fagalde
+			#https://en.wikipedia.org/wiki/Mart%C3%ADn_C._Mart%C3%ADnez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_martin_casimiro_martinez_fagalde
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1946 Election
+		URG_tomas_berreta_gandolfo = {
+			name = URG_tomas_berreta_gandolfo
+			#https://en.wikipedia.org/wiki/Tom%C3%A1s_Berreta
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_tomas_berreta_gandolfo
+				}
+			}
+			#ideology_liberal
+		}
+		URG_alfredo_garcia_morales = {
+			name = URG_alfredo_garcia_morales
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_alfredo_garcia_morales
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1950 Election
+		URG_andres_martinez_trueba = {
+			name = URG_andres_martinez_trueba
+			#https://en.wikipedia.org/wiki/Andr%C3%A9s_Mart%C3%ADnez_Trueba
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_andres_martinez_trueba
+				}
+			}
+			#ideology_liberal
+		}
+		URG_juan_vincente_chiarino = {
+			name = URG_juan_vincente_chiarino
+			#https://en.wikipedia.org/wiki/Juan_Vicente_Chiarino
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_juan_vincente_chiarino
+				}
+			}
+			#ideology_agrarian
+		}
+		URG_asdrubal_delgado = {
+			name = URG_asdrubal_delgado
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_asdrubal_delgado
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1952 Constitution
+		URG_national_council_of_government = {
+			name = URG_national_council_of_government
+			#https://en.wikipedia.org/wiki/National_Council_of_Government_(Uruguay)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_URG_national_council_of_government
+				}
+			}
+			#ideology_liberal
+		}
+	#
+}

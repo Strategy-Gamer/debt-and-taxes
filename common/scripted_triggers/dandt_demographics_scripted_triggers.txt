@@ -1,0 +1,61 @@
+is_primary_culture = {
+	custom_trigger_tooltip = {
+		tooltip = is_primary_culture_tt
+		check_variable = {
+			primary_culture = vv
+		}
+	}
+}
+is_accepted_culture = {
+	custom_trigger_tooltip = {
+		tooltip = is_accepted_culture_tt
+		is_in_array = {
+			array = pop_accepted_culture_types
+			value = vv
+		}
+	}
+}
+is_marginalized_culture = {
+	custom_trigger_tooltip = {
+		tooltip = is_marginalized_culture_tt
+		hidden_trigger = {
+			NOT = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+		}
+	}
+}
+
+is_primary_religion = {
+	custom_trigger_tooltip = {
+		tooltip = is_primary_religion_tt
+		check_variable = {
+			primary_religion = vv
+		}
+	}
+}
+is_accepted_religion = {
+	custom_trigger_tooltip = {
+		tooltip = is_accepted_religion_tt
+		is_in_array = {
+			array = pop_accepted_religion_types
+			value = vv
+		}
+	}
+}
+is_marginalized_religion = {
+	custom_trigger_tooltip = {
+		tooltip = is_marginalized_religion_tt
+		hidden_trigger = {
+			NOT = {
+				OR = {
+					is_primary_religion = yes
+					is_accepted_religion = yes
+				}
+			}
+		}
+	}
+}

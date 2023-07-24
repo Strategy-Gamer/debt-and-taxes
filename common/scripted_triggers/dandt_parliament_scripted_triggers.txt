@@ -1,0 +1,153 @@
+is_eligible_for_coalition_loop = {
+	check_variable = {
+		var = popularity@var:vv
+		value = 0.4
+		compare = greater_than
+	}
+	NOT = { is_ousted_party_loop = yes }
+	NOT = { is_coalition_party_loop = yes }
+	OR = {
+		AND = { #communist
+			check_variable = {
+				var = vv
+				value = token:ideology_communist
+			}
+			NOT = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_agrarian
+				}
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_reactionary
+				}
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_fascist
+				}
+			}
+		}
+		AND = { #socialist
+			check_variable = {
+				var = vv
+				value = token:ideology_socialist
+			}
+			NOT = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_fascist
+				}
+			}
+		}
+		AND = { #liberal
+			check_variable = {
+				var = vv
+				value = token:ideology_liberal
+			}
+		}
+		AND = { #libertarian
+			check_variable = {
+				var = vv
+				value = token:ideology_agrarian
+			}
+			NOT = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_fascist
+				}
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_communist
+				}
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_stratocratic
+				}
+			}
+		}
+		AND = { #conservative
+			check_variable = {
+				var = vv
+				value = token:ideology_conservative
+			}
+		}
+		AND = { #reactionary
+			check_variable = {
+				var = vv
+				value = token:ideology_reactionary
+			}
+			NOT = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_communist
+				}
+			}
+		}
+		AND = { #fascist
+			check_variable = {
+				var = vv
+				value = token:ideology_fascist
+			}
+			NOT = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_agrarian
+				}
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_socialist
+				}
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_communist
+				}
+			}
+		}
+		AND = { #stratocratic
+			check_variable = {
+				var = vv
+				value = token:ideology_stratocratic
+			}
+			NOT = {
+				is_in_array = {
+					array = govt_coalition_array
+					value = token:ideology_agrarian
+				}
+			}
+		}
+	}
+}
+is_coalition_party_loop = {
+	is_in_array = {
+		array = govt_coalition_array
+		value = vv
+	}
+}
+is_opposition_party_loop = {
+	is_in_array = {
+		array = govt_opposition_array
+		value = vv
+	}
+}
+is_ousted_party_loop = {
+	is_in_array = {
+		array = govt_ousted_array
+		value = vv
+	}
+}
+is_majority_coalition = {
+	set_temp_variable = {
+		var = coalition_strength_percentage_temp
+		value = govt_coalition_strength
+	}
+	divide_temp_variable = {
+		var = coalition_strength_percentage_temp
+		value = govt_unousted_strength
+	}
+	log = "[?coalition_strength_percentage_temp]"
+	check_variable = {
+		var = coalition_strength_percentage_temp
+		value = 0.509
+		compare = greater_than
+	}
+}

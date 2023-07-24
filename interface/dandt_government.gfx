@@ -1,0 +1,694 @@
+spriteTypes = {
+	#General
+		spriteType = {
+			name = "GFX_coalition_icon"
+			textureFile = "gfx/interface/icons/coalition_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_diplo_variable_bg"
+			textureFile = "gfx/interface/diplo_variable_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_leading_pol_party_bg"
+			textureFile = "gfx/interface/parties/leading_pol_party_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_coalition_pol_party_bg"
+			textureFile = "gfx/interface/parties/coalition_pol_party_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_opposition_pol_party_bg"
+			textureFile = "gfx/interface/parties/opposition_pol_party_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_ousted_pol_party_bg"
+			textureFile = "gfx/interface/parties/ousted_pol_party_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_internal_politics_button"
+			textureFile = "gfx/interface/buttons/politics/internal_politics_button.dds"
+		}
+		spriteType = {
+			name = "GFX_autonomy_button_icon"
+			textureFile = "gfx/interface/icons/autonomy.dds"
+		}
+		spriteType = {
+			name = "GFX_diplo_parties_bg"
+			textureFile = "gfx/interface/parties/diplo_parties_bg.dds"
+		}
+	#
+	#Popularity Bar
+		spriteType = {
+			name = "GFX_horizontal_parliament_population_bg"
+			textureFile = "gfx/interface/parties/horizontal_parliament_population_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_horizontal_parliament_population_transparent_bg"
+			textureFile = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_horizontal_parliament_population_frame"
+			textureFile = "gfx/interface/parties/horizontal_parliament_population_frame.dds"
+		}
+	#
+	#Communist
+		corneredTileSpriteType = {
+			name = "GFX_tiled_ideology_communist_small"
+			size= { x = 1 y = 16 }
+			textureFile = "gfx/interface/tiles/tiled_ideology_communist_small.dds"
+			borderSize = { x = 0 y = 2 }
+			tilingCenter = yes
+			effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_communist_ruling_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_communist_ruling_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_communist_coalition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_communist_coalition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_communist_opposition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_communist_opposition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_communist_ousted_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_communist_ousted_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+	#
+	#Socialist
+		progressbarType = {
+			name = "GFX_horizontal_parliament_socialist_ruling_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_socialist_ruling_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_socialist_coalition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_socialist_coalition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_socialist_opposition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_socialist_opposition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_socialist_ousted_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_socialist_ousted_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+	#
+	#Liberal
+		progressbarType = {
+			name = "GFX_horizontal_parliament_liberal_ruling_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_liberal_ruling_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_liberal_coalition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_liberal_coalition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_liberal_opposition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_liberal_opposition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_liberal_ousted_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_liberal_ousted_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+	#
+	#Agrarian
+		progressbarType = {
+			name = "GFX_horizontal_parliament_agrarian_ruling_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_agrarian_ruling_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_agrarian_coalition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_agrarian_coalition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_agrarian_opposition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_agrarian_opposition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_agrarian_ousted_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_agrarian_ousted_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+	#
+	#Conservative
+		progressbarType = {
+			name = "GFX_horizontal_parliament_conservative_ruling_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_conservative_ruling_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_conservative_coalition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_conservative_coalition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_conservative_opposition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_conservative_opposition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_conservative_ousted_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_conservative_ousted_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+	#
+	#Reactionary
+		progressbarType = {
+			name = "GFX_horizontal_parliament_reactionary_ruling_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_reactionary_ruling_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_reactionary_coalition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_reactionary_coalition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_reactionary_opposition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_reactionary_opposition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_reactionary_ousted_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_reactionary_ousted_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+	#
+	#Fascist
+		progressbarType = {
+			name = "GFX_horizontal_parliament_fascist_ruling_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_fascist_ruling_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_fascist_coalition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_fascist_coalition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_fascist_opposition_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_fascist_opposition_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+		progressbarType = {
+			name = "GFX_horizontal_parliament_fascist_ousted_population"
+			color = { 0.6 0 0 }
+			colortwo = { 0.6 0 0 }
+			textureFile1 = "gfx/interface/parties/horizontal_parliament_fascist_ousted_population.dds"
+			textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+			size = { x = 596 y = 20 }
+			effectFile = "gfx/FX/progress.lua"
+		}
+	#
+	#Stratocratic
+	progressbarType = {
+		name = "GFX_horizontal_parliament_stratocratic_ruling_population"
+		color = { 0.6 0 0 }
+		colortwo = { 0.6 0 0 }
+		textureFile1 = "gfx/interface/parties/horizontal_parliament_stratocratic_ruling_population.dds"
+		textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+		size = { x = 596 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbarType = {
+		name = "GFX_horizontal_parliament_stratocratic_coalition_population"
+		color = { 0.6 0 0 }
+		colortwo = { 0.6 0 0 }
+		textureFile1 = "gfx/interface/parties/horizontal_parliament_stratocratic_coalition_population.dds"
+		textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+		size = { x = 596 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbarType = {
+		name = "GFX_horizontal_parliament_stratocratic_opposition_population"
+		color = { 0.6 0 0 }
+		colortwo = { 0.6 0 0 }
+		textureFile1 = "gfx/interface/parties/horizontal_parliament_stratocratic_opposition_population.dds"
+		textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+		size = { x = 596 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbarType = {
+		name = "GFX_horizontal_parliament_stratocratic_ousted_population"
+		color = { 0.6 0 0 }
+		colortwo = { 0.6 0 0 }
+		textureFile1 = "gfx/interface/parties/horizontal_parliament_stratocratic_ousted_population.dds"
+		textureFile2 = "gfx/interface/parties/horizontal_parliament_population_transparent_bg.dds"
+		size = { x = 596 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	#
+}
+
+# Laws
+spriteTypes = {
+	# Generic
+		spriteType = {
+			name = "GFX_law_empty_button"
+			texturefile = "gfx/interface/buttons/politics/generic_politics_button.dds"
+		}
+		spriteType = {
+			name = "GFX_law_empty_grey_button"
+			texturefile = "gfx/interface/buttons/politics/generic_politics_light_button.dds"
+		}
+		spriteType = {
+			name = "GFX_selected_button_outline_green"
+			texturefile = "gfx/interface/buttons/politics/selected_button_outline_green.dds"
+		}
+		spriteType = {
+			name = "GFX_selected_button_outline_yellow"
+			texturefile = "gfx/interface/buttons/politics/selected_button_outline_yellow.dds"
+		}
+		spriteType = {
+			name = "GFX_selected_button_outline_red"
+			texturefile = "gfx/interface/buttons/politics/selected_button_outline_red.dds"
+		}
+		spriteType = {
+			name = "GFX_debug_law_icon"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_debug_transparent_law_icon"
+			texturefile = "gfx/interface/ideas/laws/debug_transparent_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_subcategory_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_bg.dds"
+		}
+
+	# Economy
+		spriteType = {
+			name = "GFX_law_subcategory_economy_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_economy_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_planned"
+			texturefile = "gfx/interface/ideas/laws/economics/economy_planned.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_state_capitalism"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_intervention"
+			texturefile = "gfx/interface/ideas/laws/economics/economy_intervention.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_regulation"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_lasseiz_faire"
+			texturefile = "gfx/interface/ideas/laws/economics/economy_laissez_faire.dds"
+		}
+	#
+	# Foreign Investment
+		spriteType = {
+			name = "GFX_law_subcategory_foreign_investment_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_foreign_investment_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_foreign_investment_banned"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_foreign_investment_limited"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_foreign_investment_allowed"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_foreign_investment_guaranteed"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+	#
+	# Consumer Rights
+		spriteType = {
+			name = "GFX_law_subcategory_consumer_rights_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_consumer_rights_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_consumer_rights_none"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_consumer_rights_minimal"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_consumer_rights_limited"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_consumer_rights_decent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_consumer_rights_excellent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+	#
+	# Minimum Wage
+		spriteType = {
+			name = "GFX_law_subcategory_minimum_wage_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_minimum_wage_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_minimum_wage_none"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_minimum_wage_symbolic"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_minimum_wage_low"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_minimum_wage_acceptable"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_minimum_wage_decent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+	#
+	# Work Week
+		spriteType = {
+			name = "GFX_law_subcategory_work_week_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_work_week_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_work_week_unlimited_hours"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_work_week_one_hundred_hours"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_work_week_ninety_hours"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_work_week_eighty_hours"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_work_week_seventy_hours"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_work_week_sixty_hours"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_work_week_fifty_hours"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_economy_work_week_forty_hours"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+	#
+	# Safety Regulations
+		spriteType = {
+			name = "GFX_law_subcategory_safety_regulations_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_safety_regulations_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_safety_regulations_none"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_safety_regulations_minimal"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_safety_regulations_limited"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_safety_regulations_decent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_safety_regulations_excellent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+	#
+	# Financial Regulations
+		spriteType = {
+			name = "GFX_law_subcategory_financial_regulations_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_financial_regulations_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_financial_regulations_none"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_financial_regulations_minimal"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_financial_regulations_limited"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_financial_regulations_decent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_financial_regulations_excellent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+	#
+	# Business Regulations
+		spriteType = {
+			name = "GFX_law_subcategory_business_regulations_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_business_regulations_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_business_regulations_none"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_business_regulations_minimal"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_business_regulations_limited"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_business_regulations_decent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_business_regulations_excellent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+	#
+	# Pollution Regulations
+		spriteType = {
+			name = "GFX_law_subcategory_pollution_regulations_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_pollution_regulations_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_pollution_regulations_none"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_pollution_regulations_minimal"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_pollution_regulations_limited"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_pollution_regulations_decent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_pollution_regulations_excellent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+	#
+	# Small Business Grants
+		spriteType = {
+			name = "GFX_law_subcategory_small_business_grants_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_small_business_grants_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_small_business_grants_none"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_small_business_grants_minimal"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_small_business_grants_limited"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_small_business_grants_decent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+		spriteType = {
+			name = "GFX_law_small_business_grants_excellent"
+			texturefile = "gfx/interface/ideas/laws/debug_law_icon.dds"
+		}
+	#
+	# Subsidies
+		spriteType = {
+			name = "GFX_law_subcategory_subsidies_bg"
+			texturefile = "gfx/interface/gui/law_categories/law_subcategory_subsidies_bg.dds"
+		}
+		spriteType = {
+			name = "GFX_law_agricultural_none_subsidies"
+			texturefile = "gfx/interface/ideas/laws/economics/law_agricultural_none_subsidies.dds"
+		}
+		spriteType = {
+			name = "GFX_law_agricultural_low_subsidies"
+			texturefile = "gfx/interface/ideas/laws/economics/law_agricultural_low_subsidies.dds"
+		}
+		spriteType = {
+			name = "GFX_law_agricultural_medium_subsidies"
+			texturefile = "gfx/interface/ideas/laws/economics/law_agricultural_medium_subsidies.dds"
+		}
+		spriteType = {
+			name = "GFX_law_agricultural_high_subsidies"
+			texturefile = "gfx/interface/ideas/laws/economics/law_agricultural_high_subsidies.dds"
+		}
+	#
+}

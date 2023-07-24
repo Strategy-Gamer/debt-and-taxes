@@ -1,0 +1,33 @@
+
+state={
+	id=600
+	name="STATE_600"
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			3992 3 
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1066 1628 3992 4038 4083 4156 4185 7007 7054 7653 9984 10057 10114 10501 11961 11988 12495 13141 
+	}
+	manpower=9620400
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=3.000
+}

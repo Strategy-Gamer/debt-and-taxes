@@ -1,0 +1,35 @@
+
+state={
+	id=40
+	name="STATE_40" # Barnaul
+	manpower = 2107451
+
+	state_category = large_town
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = ALT #Could be a claim too
+		victory_points = {
+			1794 1
+		}
+		add_dynamic_modifier = {	
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		1297 1779 1794 1797 4803 7680 10537 10546 11410 12515 12528 12613
+	}
+
+	local_supplies=5.0
+}

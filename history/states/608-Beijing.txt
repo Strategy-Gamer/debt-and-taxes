@@ -1,0 +1,35 @@
+
+state={
+	id=608
+	name="STATE_608"
+
+	history={
+		owner = SHX
+		add_core_of = SHX
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+		}
+		victory_points = {
+			9843 20 
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+		set_demilitarized_zone=yes
+	}
+
+	provinces={
+		1134 4140 6828 9843 11761 12026 
+	}
+	manpower=8048400
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=1.000
+}

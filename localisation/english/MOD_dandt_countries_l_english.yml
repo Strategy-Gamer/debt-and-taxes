@@ -1,0 +1,314 @@
+﻿l_english:
+# Americas
+ MEC: "Cistero Mexico"
+ MEC_DEF: "League of Religious Freedom"
+ MEC_ADJ: "Mexican"
+
+ MEX_1929_Cosmetic: "Revolutionary Mexico"
+ MEX_1929_Cosmetic_DEF: "Mexican Revolutionary Republic"
+ MEX_1929_Cosmetic_ADJ: "Mexican"
+
+ MEC_1929_Cosmetic: "Cristeros Mexico"
+ MEC_1929_Cosmetic_DEF: "the Catholic Church of Mexico"
+ MEC_1929_Cosmetic_ADJ: "Mexican"
+
+ YUG_1929_Cosmetic: "Kingdom of Serbs, Croats and Slovenes"
+ YUG_1929_Cosmetic_DEF: "the Kingdom of Serbs, Croats and Slovenes"
+ YUG_1929_Cosmetic_ADJ: "Serb"
+
+ GER_Weimar_Cosmetic: "Weimar Republic"
+ GER_Weimar_Cosmetic_DEF: "the Weimar Republic of Germany"
+ GER_Weimar_Cosmetic_ADJ: "German"
+
+ VEN_1929_Cosmetic: "Venezuela"
+ VEN_1929_Cosmetic_DEF: "the United States of Venezuela"
+ VEN_1929_Cosmetic_ADJ: "Venezuelan"
+
+ MEX_1929_Cosmetic: "Maximato Mexico"
+ MEX_1929_Cosmetic_DEF: "the United Mexican States"
+ MEX_1929_Cosmetic_ADJ: "Mexican"
+
+#
+# Europe
+ SAA: "Saarland"
+ SAA_DEF: "Saarland"
+ SAA_ADJ: "Saar"
+
+ SAA_1929_Cosmetic: "Territory of the Saar Basin"
+ SAA_1929_Cosmetic_DEF: "the League of Nations' Mandate of Saar Basin"
+ SAA_1929_Cosmetic_ADJ: "Saar"
+
+ IRE_1929_Cosmetic: "Irish Free State"
+ IRE_1929_Cosmetic_DEF: "The Irish Free State"
+ IRE_1929_Cosmetic_ADJ: "Irish"
+
+ DNZ_1929_Cosmetic: "Mandate of Danzig"
+ DNZ_1929_Cosmetic_DEF: "the Free City of Danzig"
+ DNZ_1929_Cosmetic: "Danziger"
+#
+# Africa/ME
+ AFA: "Afar"
+ AFA_DEF: "the Sultanate of Afar"
+ AFA_ADJ: "Afar"
+
+ TKS: "Turkestan"
+ TKS_DEF: "the Islamic Republic of Turkestan"
+ TKS_ADJ: "Kashgari"
+
+ TKS_1933_Cosmetic: "East Turkestan"
+ TKS_1933_Cosmetic_DEF: "the Islamic Republic of East Turkestan"
+ TKS_1933_Cosmetic_ADJ: "Kashgari"
+
+ AFH: "Saqqawist Afghanistan"
+ AFH_DEF: "the Emirate of Afghanistan"
+ AFH_ADJ: "Afghani"
+
+ ETH_Abyssinia_Cosmetic: "Abyssinia"
+ ETH_Abyssinia_Cosmetic_DEF: "the Abyssinian Empire"
+ ETH_Abyssinia_Cosmetic_ADJ: "Abyssinian"
+
+ SAU_1929_Cosmetic: "Hejaz and Najd"
+ SAU_1929_Cosmetic_DEF: "United Emirates of Hejaz and Najd"
+ SAU_1929_Cosmetic_ADJ: "Arabian"
+#
+# Asia
+ DGS: "Dunganistan"
+ DGS_DEF: "Dunganistan"
+ DGS_ADJ: "Dungan"
+
+ DGS_1934_Cosmetic: "Dungan Clique"
+ DGS_1934_Cosmetic_DEF: "the Dungan Autonomous Region of Khotan"
+ DGS_1934_Cosmetic_ADJ: "Dungan"
+
+ QHI: "Qinghai"
+ QHI_DEF: "the United Communities of Qinghai"
+ QHI_ADJ: "Qinghaiese"
+
+ QHI_1929_Cosmetic: "Qinghai-Ma Clique"
+ QHI_1929_Cosmetic_DEF: "the Qinghai-Ma Clique"
+ QHI_1929_Cosmetic_ADJ: "Hui"
+
+ GSU: "Gansu"
+ GSU_DEF: "the Federal-Republic of Gansu"
+ GSU_ADJ: "Gansuese"
+
+ GSU_1929_Cosmetic: "Gansu-Ma Clique"
+ GSU_1929_Cosmetic_DEF: "the Gansu-Ma Clique"
+ GSU_1929_Cosmetic_ADJ: "Hui"
+
+ XSM: "Ningxia"
+ XSM_DEF: "the Ningxia Autonomous Region"
+ XSM_ADJ: "Ningxianese"
+
+ XSM_1929_Cosmetic: "Ningxia-Ma Clique"
+ XSM_1929_Cosmetic_DEF: "the Ningxia-Ma Clique"
+ XSM_1929_Cosmetic_ADJ: "Hui"
+
+ XSM_1935_Cosmetic: "Ma Clique"
+ XSM_1935_Cosmetic_DEF: "the Ma Clique"
+ XSM_1935_Cosmetic_ADJ: "Hui"
+
+ XIK: "Xikang"
+ XIK_DEF: "the Principality of Xikang"
+ XIK_ADJ: "Xikangese"
+
+ XIK_1929_Cosmetic: "Xikang Clique"
+ XIK_1929_Cosmetic_DEF: "the Xikang Clique"
+ XIK_1929_Cosmetic_ADJ: "Xikangese"
+
+ CGQ: "Chongqing"
+ CGQ_DEF: "the Autonomous Republic of Chongqing"
+ CGQ_ADJ: "Chongqingese"
+
+ CGQ_1929_Cosmetic: "Chongqing Clique"
+ CGQ_1929_Cosmetic_DEF: "the Chongqing Clique"
+ CGQ_1929_Cosmetic: "Chongqingese"
+
+ CDU: "Chengdu"
+ CDU_DEF: "The National-Republic of Chengdu"
+ CDU_ADJ: "Chengduese"
+
+ CDU_1929_Cosmetic: "Deng Clique"
+ CDU_1929_Cosmetic_DEF: "the Deng Clique"
+ CDU_1929_Cosmetic_ADJ: "Chengduese"
+
+ BAZ: "Banzhong"
+ BAZ_DEF: "Banzhong"
+ BAZ_ADJ: "Banzhongese"
+
+ BAZ_1929_Cosmetic: "Tian Clique"
+ BAZ_1929_Cosmetic_DEF: "the Tian Clique"
+ BAZ_1929_Cosmetic_ADJ: "Banzhongese"
+
+ GUI: "Guizhou"
+ GUI_DEF: "the Republic of Guizhou"
+ GUI_ADJ: "Guizhoun"
+
+ GUI_1929_Cosmetic: "Guizhou Clique"
+ GUI_1929_Cosmetic_DEF: "the Guizhou Clique"
+ GUI_1929_Cosmetic_ADJ: "Guizhoun"
+
+ GXC: "Guangxi DC"
+ GXC_DEF: "the Guangxi Defense Council"
+ GXC_ADJ: "Guangxi"
+
+ GXC_1929_Cosmetic: "Guangxi Clique"
+ GXC_1929_Cosmetic_DEF: "the Guangxi Clique"
+ GXC_1929_Cosmetic_ADJ: "Guangxi"
+
+ GGD: "Guangdong"
+ GGD_DEF: "the United Provinces of Guangdong"
+ GGD_ADJ: "Guangdongese"
+
+ GGD_1929_Cosmetic: "Guangdong Clique"
+ GGD_1929_Cosmetic_DEF: "the Guangdong Clique"
+ GGD_1929_Cosmetic_ADJ: "Guangdongese"
+
+ GGD_1931_Cosmetic: "New Guangxi Clique"
+ GGD_1932_Cosmetic_DEF: "the New Guangxi Clique"
+ GGD_1931_Cosmetic_ADJ: "Guangxi"
+
+ FEG: "Liaoning"
+ FEG_DEF: "the Liaoning Social Republic"
+ FEG_ADJ: "Manchurian"
+
+ FEG_1929_Cosmetic: "Fengtian Clique"
+ FEG_1929_Cosmetic_DEF: "the Fengtian Clique"
+ FEG_1929_Cosmetic_ADJ: "Manchurian"
+
+ GUO: "Jin"
+ GUO_DEF: "the Constitutional Kingdom of Jin"
+ GUO_ADJ: "Jin"
+
+ GUO_1929_Cosmetic: "Guominjun"
+ GUO_1929_Cosmetic_DEF: "the Guominjun"
+ GUO_1929_Cosmetic_ADJ: "Jin"
+
+ SHA: "Shandong"
+ SHA_DEF: "the Democratic Republic of Shandong"
+ SHA_ADJ: "Shandongese"
+
+ SHA_1929_Cosmetic: "Red Spear Society"
+ SHA_1929_Cosmetic_DEF: "the Red Spear Society"
+ SHA_1929_Cosmetic_ADJ: "Shandongese"
+
+ CHI: "Nationalist China"
+ CHI_DEF: "the Republic of China"
+ CHI_ADJ: "Chinese"
+
+ CHI_1929_Cosmetic: "Whampoa Clique"
+ CHI_1929_Cosmetic_DEF: "the Whampoa Clique"
+ CHI_1929_Cosmetic_ADJ: "Kuomintang"
+
+ CHI_faction_nra: "National Revolutionary Armies of China"
+ CHI_faction_northern_coalition: "Coalition for Autonomy"
+ CHI_faction_united_front: "Chinese United Front"
+
+ SHX: "Shanxi"
+ SHX_DEF: "the Republic of Shanxi"
+ SHX_ADJ: "Shanxiese"
+
+ SHX_1929_Cosmetic: "Shanxi Clique"
+ SHX_1929_Cosmetic_DEF: "the Shanxi Clique"
+ SHX_1929_Cosmetic_ADJ: "Shanxiese"
+
+ YUN: "Yunnan"
+ YUN_DEF: "the Yunnan Associative Federation"
+ YUN_ADJ: "Yunnanese"
+
+ YUN_1929_Cosmetic: "Yunnan Clique"
+ YUN_1929_Cosmetic_DEF: "the Yunnan Clique"
+ YUN_1929_Cosmetic_ADJ: "Yunnanese"
+
+ PRC: "People's Republic of China"
+ PRC_DEF: "the People's Republic of China"
+ PRC_ADJ: "Chinese"
+
+ PRC_1929_Cosmetic: "Soviet Zone"
+ PRC_1929_Cosmetic_DEF: "the Soviet Zone of China"
+ PRC_1929_Cosmetic_ADJ: "Chinese"
+
+ PRC_1931_Cosmetic: "Chinese Soviet Republic"
+ PRC_1931_Cosmetic_DEF: "the Chinese Soviet Republic"
+ PRC_1931_Cosmetic_ADJ: "Chinese"
+
+ PRC_1946_Cosmetic: "Liberated Zone"
+ PRC_1946_Cosmetic_DEF: "the Liberated Zone of China"
+ PRC_1946_Cosmetic_ADJ: "Chinese"
+
+ KML: "Kumul Federation"
+ KML_DEF: "the Kumul Federation"
+ KML_DEF: "Kumul"
+
+ KML_1929_Cosmetic: "Kumul Khanate"
+ KML_1929_Cosmetic_DEF: "the Kumul Khanate"
+ KML_1929_Cosmetic_ADJ: "Kumul"
+
+ SIK: "Xinjiang"
+ SIK_DEF: "Xinjiang"
+ SIK_ADJ: "Xinjiang"
+
+ SIK_1929_Cosmetic: "Xinjiang Clique"
+ SIK_1929_Cosmetic_DEF: "Xinjiang Clique"
+ SIK_1929_Cosmetic_ADJ: "Xinjiang Clique"
+
+ VIN_1929_Cosmetic: "French Cochinchina"
+ VIN_1929_Cosmetic_DEF: "the Constituent Territory of French Cochinchina"
+ VIN_1929_Cosmetic_ADJ: "Cochinchinese"
+
+ BRM_1929_Cosmetic: "British Burma"
+ BRM_1929_Cosmetic_DEF: "the British Colony of Burma"
+ BRM_1929_Cosmetic_ADJ: "Burmese"
+
+ PHI_1933_Cosmetic: "American Philippines"
+ PHI_1933_Cosmetic_DEF: "the American Commonwealth of the Philippines"
+ PHI_1933_Cosmetic_DEF: "Filipino"
+
+
+ OMA_1929_Cosmetic: "Muscat & Oman"
+ OMA_1929_Cosmetic_DEF: "the Sultanate of Muscat & Oman"
+ OMA_1929_Cosmetic_ADJ: "Omani"
+
+ IRQ_1929_Cosmetic: "Mandate of Iraq"
+ IRQ_1929_Cosmetic_DEF: "the British Administered Kingdom of Iraq"
+ IRQ_1929_Cosmetic_ADJ: "Iraqi"
+
+ ISR_1929_Cosmetic: "Mandate of Palestine"
+ ISR_1929_Cosmetic_DEF: "the British Mandate of Palestine"
+ ISR_1929_Cosmetic_ADJ: "Palestinean"
+
+ JOR_1929_Cosmetic: "Emirate of Transjordan"
+ JOR_1929_Cosmetic_DEF: "the Emirate of Transjordan"
+ JOR_1929_Cosmetic_ADJ: "Jordanian"
+
+ EGY_1929_Cosmetic: "Kingdom of Egypt"
+ EGY_1929_Cosmetic_DEF: "the Kingdom of Egypt"
+ EGY_1929_Cosmetic_ADJ: "Egyptian"
+
+ ASR: "Asir"
+ ASR_DEF: "the Emirate of Asir"
+ ASR_ADJ: "Aseer"
+
+ HJZ: "Hejaz"
+ HJZ_DEF: "the Kingdom of Hejaz"
+ HJZ_ADJ: "Hejazi"
+
+ HJZ_Caliphate_Cosmetic: "Hashemite Caliphate"
+ HJZ_Caliphate_Cosmetic_DEF: "the Hashemite Caliphate"
+ HJZ_Caliphate_Cosmetic_ADJ: "Hashemite"
+
+ HJZ_Hashemite_Arabia_Cosmetic: "Hashemite Arabia"
+ HJZ_Hashemite_Arabia_Cosmetic_DEF: "the Kingdom of Hashemite Arabia"
+ HJZ_Hashemite_Arabia_Cosmetic_ADJ: "Arabian"
+
+ SHR: "Sohar"
+ SHR_DEF: "the Kingdom of Sohar"
+ SHR_ADJ: "Sohari"
+
+ KUR_1929_Cosmetic: "Ararat"
+ KUR_1929_Cosmetic_DEF: "the Republic of Ararat"
+ KUR_1929_Cosmetic_ADJ: "Kurdish"
+
+ BRU: "Brunei Darussalam"
+ BRU_DEF: "the Sultanate of Brunei Darussalam"
+ BRU_ADJ: "Bruneian"

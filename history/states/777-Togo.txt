@@ -1,0 +1,36 @@
+
+state={
+	id=777
+	name="STATE_777"
+	manpower=1101346
+
+	state_category=pastoral
+
+	history={
+		owner = FRA
+		add_core_of = TOG
+		victory_points = {
+			1951 1 
+		}
+		buildings = {
+			infrastructure = 2
+			1951 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1951 12843 13284 13285 13286 
+	}
+	local_supplies=0.000
+}

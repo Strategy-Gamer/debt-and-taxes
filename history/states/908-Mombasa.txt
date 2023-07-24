@@ -1,0 +1,29 @@
+state={
+	id=908
+	name="STATE_908"
+	provinces={
+		5196 5210 6020 
+	}
+	history={
+		owner=ENG
+		buildings={
+			infrastructure=2
+			5210 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			5210 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+	state_category=pastoral
+	manpower=1017600
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

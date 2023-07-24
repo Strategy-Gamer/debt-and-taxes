@@ -1,0 +1,160 @@
+spriteTypes = {
+#Soil
+	spriteType = {
+		name = "GFX_state_modifier_soil_average"
+		texturefile = "gfx/interface/modifiers/state_modifier_soil_average.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_soil_breadbasket"
+		texturefile = "gfx/interface/modifiers/state_modifier_soil_breadbasket.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_soil_farmland"
+		texturefile = "gfx/interface/modifiers/state_modifier_soil_farmland.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_soil_marginal"
+		texturefile = "gfx/interface/modifiers/state_modifier_soil_marginal.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_soil_non_arable"
+		texturefile = "gfx/interface/modifiers/state_modifier_soil_non_arable.dds"
+	}
+#Climate
+	spriteType = {
+		name = "GFX_state_modifier_climate_humid_tropic"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_humid_tropic.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_arid_tropic"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_arid_tropic.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_mild_tropic"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_mild_tropic.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_continental_tropic"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_continental_tropic.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_humid_subtropic"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_humid_subtropic.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_arid_subtropic"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_arid_subtropic.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_mild_subtropic"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_mild_subtropic.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_continental_subtropic"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_continental_subtropic.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_mild_warm"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_mild_warm.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_continental_warm"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_continental_warm.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_humid_cool"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_humid_cool.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_arid_cool"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_arid_cool.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_mild_cool"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_mild_cool.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_continental_cool"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_continental_cool.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_humid_polar"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_humid_polar.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_arid_polar"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_arid_polar.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_mild_polar"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_mild_polar.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_climate_continental_polar"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_continental_polar.dds"
+	}
+#Rivers
+	spriteType = {
+		name = "GFX_state_modifier_terrain_large_navigable_river"
+		texturefile = "gfx/interface/modifiers/state_modifier_terrain_large_navigable_river.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_terrain_small_navigable_river"
+		texturefile = "gfx/interface/modifiers/state_modifier_terrain_small_navigable_river.dds"
+	}
+	spriteType = { 
+		name = "GFX_state_modifier_terrain_large_river"
+		texturefile = "gfx/interface/modifiers/state_modifier_climate_continental_polar.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_terrain_small_river"
+		texturefile = "gfx/interface/modifiers/state_modifier_terrain_small_river.dds"
+	}
+
+#Other
+	spriteType = {
+		name = "GFX_state_modifier_weather_wet_season"
+		texturefile = "gfx/interface/modifiers/state_modifier_weather_wet_season.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_weather_drought"
+		texturefile = "gfx/interface/modifiers/state_modifier_weather_drought.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_disaster_boll_weevil_infestation"
+		texturefile = "gfx/interface/modifiers/state_modifier_disaster_boll_weevil_infestation.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_generic_state_untapped_mines"
+		texturefile = "gfx/interface/modifiers/state_modifier_generic_state_untapped_mines.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_generic_state_natural_harbor"
+		texturefile = "gfx/interface/modifiers/state_modifier_generic_state_natural_harbor.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_generic_canal"
+		texturefile = "gfx/interface/modifiers/state_modifier_generic_canal.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_generic_strait"
+		texturefile = "gfx/interface/modifiers/state_modifier_generic_strait.dds"
+	}
+#Unique
+	spriteType = {
+		name = "GFX_state_modifier_unique_wall_street"
+		texturefile = "gfx/interface/modifiers/state_modifier_unique_state_wall_street.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_unique_hollywood"
+		texturefile = "gfx/interface/modifiers/state_modifier_unique_state_hollywood.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_unique_westminster"
+		texturefile = "gfx/interface/modifiers/state_modifier_unique_westminster.dds"
+	}
+	spriteType = {
+		name = "GFX_state_modifier_unique_rajput_states"
+		texturefile = "gfx/interface/modifiers/state_modifier_unique_rajput_states.dds"
+	}
+}

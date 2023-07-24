@@ -1,0 +1,12 @@
+capital = 597
+set_cosmetic_tag = SHA_1929_Cosmetic
+
+load_oob = SHA_1929
+
+set_popularities = {
+	neutrality=100
+}
+set_politics = {
+	ruling_party=neutrality
+	elections_allowed=no
+}

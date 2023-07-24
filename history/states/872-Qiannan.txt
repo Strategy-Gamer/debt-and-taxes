@@ -1,0 +1,28 @@
+state={
+	id=872
+	name="STATE_872"
+	manpower=3263118
+
+	state_category=town
+
+	provinces={
+		4532 7521 7549 7577 8095 10616 13451 
+	}
+	history={
+		owner=GUI
+		add_core_of=GUI
+		buildings = {
+			infrastructure = 3
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+	local_supplies=0.000
+}

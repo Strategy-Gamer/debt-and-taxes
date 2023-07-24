@@ -1,0 +1,32 @@
+state={
+	id=87
+	name="STATE_87"
+	manpower = 2632000
+
+	state_category = town
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			9508 10
+		}
+		add_core_of = POL
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		493 584 9439 9508 9546 11428 11515
+	}
+
+	local_supplies=0.0
+}

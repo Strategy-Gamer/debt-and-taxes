@@ -1,0 +1,26 @@
+
+state={
+	id=847
+	name="STATE_847"
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+	}
+
+	provinces={
+		13297 13339 13340 
+	}
+	manpower=588795
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

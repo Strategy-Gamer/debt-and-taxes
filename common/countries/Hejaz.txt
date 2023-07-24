@@ -1,0 +1,4 @@
+color = rgb { 190 99 53 }
+color_ui = rgb { 190 99 53 }
+graphical_culture = middle_eastern_gfx
+graphical_culture_2d = middle_eastern_2d

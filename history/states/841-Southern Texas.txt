@@ -1,0 +1,42 @@
+state={
+	id=841
+	name="STATE_841"
+	resources={
+		oil=80.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			6785 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			12782 1
+		}
+		add_core_of = USA
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = disaster_boll_weevil_infestation
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1954 2019 2042 4955 5038 5061 6785 6798 6987 8064 10740 10894 12369 12728 12782
+	}
+	manpower=1271000
+
+
+	buildings_max_level_factor=1.000
+	state_category=state_cat
+}

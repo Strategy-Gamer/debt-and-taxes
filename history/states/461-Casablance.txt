@@ -1,0 +1,42 @@
+
+state={
+	id=461
+	name="STATE_461"
+	resources={
+		chromium=12.000 #added due to portugal setup
+	}
+
+	manpower = 3197719
+
+	state_category = rural
+
+	history={
+		owner = FRA
+		add_core_of = MOR
+		victory_points = {
+			7069 10
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 4
+			7069 = {
+				naval_base = 4
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		989 1079 1111 1194 4084 4097 4139 7069 7100 7116 7173 10013 10023 10070 11943 11987 12042
+	}
+
+	local_supplies=0.0
+}

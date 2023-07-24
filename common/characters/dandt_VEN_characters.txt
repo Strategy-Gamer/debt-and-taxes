@@ -1,0 +1,202 @@
+characters = {
+	#1922 Junta
+		VEN_juan_vicente_gomez_chacon = {
+			name = VEN_juan_vicente_gomez_chacon
+			#https://en.wikipedia.org/wiki/Juan_Vicente_G%C3%B3mez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_juan_vicente_gomez_chacon
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1929 Election
+		VEN_juan_bautista_perez = {
+			name = VEN_juan_bautista_perez
+			#https://en.wikipedia.org/wiki/Juan_Bautista_P%C3%A9rez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_juan_bautista_perez
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1929 Coup Attempts
+		VEN_gustavo_machado_morales = {
+			name = VEN_gustavo_machado_morales
+			#https://en.wikipedia.org/wiki/Gustavo_Machado_(politician)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_gustavo_machado_morales
+				}
+			}
+			#ideology_communist
+		}
+		VEN_miguel_otero_silva = {
+			name = VEN_miguel_otero_silva
+			#https://en.wikipedia.org/wiki/Miguel_Otero_Silva
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_miguel_otero_silva
+				}
+			}
+			#ideology_communist
+		}
+		VEN_santos_dominici = {
+			name = VEN_santos_dominici
+			#no_article https://en.wikipedia.org/wiki/Rom%C3%A1n_Delgado_Chalbaud
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_santos_dominici
+				}
+			}
+			#ideology_liberal
+		}
+		VEN_alberto_smith = {
+			name = VEN_alberto_smith
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_alberto_smith
+				}
+			}
+			#ideology_liberal
+		}
+		VEN_rafael_simon_urbina = {
+			name = VEN_rafael_simon_urbina
+			#https://en.wikipedia.org/wiki/Rafael_Sim%C3%B3n_Urbina
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_rafael_simon_urbina
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1931 Election
+	#
+	#1935 Passing
+		VEN_eleazar_lopez_contreras = {
+			name = VEN_eleazar_lopez_contreras
+			#https://en.wikipedia.org/wiki/Eleazar_L%C3%B3pez_Contreras
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_eleazar_lopez_contreras
+				}
+			}
+			#ideology_stratocratic
+		}
+	#1936 Election
+		VEN_nestor_luis_perez_luzardo = {
+			name = VEN_nestor_luis_perez_luzardo
+			#https://es.wikipedia.org/wiki/N%C3%A9stor_Luis_P%C3%A9rez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_nestor_luis_perez_luzardo
+				}
+			}
+			#ideology_agrarian
+		}
+		VEN_isaias_medina_angarita = {
+			name = VEN_isaias_medina_angarita
+			#https://en.wikipedia.org/wiki/Isa%C3%ADas_Medina_Angarita
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_isaias_medina_angarita
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1941 Election
+		VEN_romulo_angel_del_monte_carmelo_gallegos_freire = {
+			name = VEN_romulo_angel_del_monte_carmelo_gallegos_freire
+			#https://es.wikipedia.org/wiki/R%C3%B3mulo_Gallegos
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_romulo_angel_del_monte_carmelo_gallegos_freire
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1949 Coup
+		VEN_romulo_ernesto_betancourt_bello = {
+			name = VEN_romulo_ernesto_betancourt_bello
+			#https://en.wikipedia.org/wiki/R%C3%B3mulo_Betancourt
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_romulo_ernesto_betancourt_bello
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1947 ELections
+		VEN_rafael_antonio_caldera_rodriquez = {
+			name = VEN_rafael_antonio_caldera_rodriquez
+			#https://en.wikipedia.org/wiki/Rafael_Caldera
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_rafael_antonio_caldera_rodriquez
+				}
+			}
+			#ideology_conservative
+		}
+	#1948 Coup
+		VEN_carlos_roman_delgado_chalbaud_gomez = {
+			name = VEN_carlos_roman_delgado_chalbaud_gomez
+			#https://en.wikipedia.org/wiki/Carlos_Delgado_Chalbaud
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_carlos_roman_delgado_chalbaud_gomez
+				}
+			}
+			#ideology_stratocratic
+		}
+		VEN_german_suarez_flamerich = {
+			name = VEN_german_suarez_flamerich
+			#https://en.wikipedia.org/wiki/Germ%C3%A1n_Su%C3%A1rez_Flamerich
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_german_suarez_flamerich
+				}
+			}
+			#ideology_stratocratic
+		}
+		VEN_marcos_evangelista_perez_jimenez = {
+			name = VEN_marcos_evangelista_perez_jimenez
+			#https://en.wikipedia.org/wiki/Marcos_P%C3%A9rez_Jim%C3%A9nez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_marcos_evangelista_perez_jimenez
+				}
+			}
+			#ideology_
+		}
+	#
+	#1958 Coup
+		VEN_wolfgang_enrique_larrazabal_ugueto = {
+			name = VEN_wolfgang_enrique_larrazabal_ugueto
+			#https://es.wikipedia.org/wiki/Wolfgang_Larraz%C3%A1bal
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_wolfgang_enrique_larrazabal_ugueto
+				}
+			}
+			#ideology_agrarian
+		}
+		VEN_luis_edgar_sanabria_arcia = {
+			name = VEN_luis_edgar_sanabria_arcia
+			#
+			portraits = {
+				civilian = {
+					large = GFX_portrait_VEN_luis_edgar_sanabria_arcia
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+}

@@ -1,0 +1,274 @@
+characters = {
+	#1928 Election
+		CUB_gerardo_machado_y_morales = {
+			name = CUB_gerardo_machado_y_morales
+			#https://en.wikipedia.org/wiki/Gerardo_Machado
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_gerardo_machado_y_morales
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1933 Coup
+		CUB_alberto_herrera_y_franchi = {
+			name = CUB_alberto_herrera_y_franchi
+			#https://en.wikipedia.org/wiki/Alberto_Herrera_Franchi
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_alberto_herrera_y_franchi
+				}
+			}
+			#ideology_stratocratic
+		}
+		CUB_carlos_manuel_de_cespedes_y_quesada = {
+			name = CUB_carlos_manuel_de_cespedes_y_quesada
+			#https://en.wikipedia.org/wiki/Carlos_Manuel_de_C%C3%A9spedes_y_Quesada
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_carlos_manuel_de_cespedes_y_quesada
+				}
+			}
+			#ideology_liberal
+		}
+		CUB_pentarchy_of_1933 = {
+			name = CUB_pentarchy_of_1933
+			#https://en.wikipedia.org/wiki/Pentarchy_of_1933
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_pentarchy_of_1933
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1933 Revolution
+		CUB_ramon_grau_san_martin = {
+			name = CUB_ramon_grau_san_martin
+			#https://en.wikipedia.org/wiki/Ram%C3%B3n_Grau
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_ramon_grau_san_martin
+				}
+			}
+			#ideology_socialist
+		}
+		CUB_carlos_hevia_y_de_los_reyes_gavilan = {
+			name = CUB_carlos_hevia_y_de_los_reyes_gavilan
+			#https://en.wikipedia.org/wiki/Carlos_Hevia
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_carlos_hevia_y_de_los_reyes_gavilan
+				}
+			}
+			#ideology_socialist
+		}
+	#
+	#1934 Coup
+		CUB_carlos_mendieta_y_montefur = {
+			name = CUB_carlos_mendieta_y_montefur
+			#https://en.wikipedia.org/wiki/Carlos_Mendieta
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_carlos_mendieta_y_montefur
+				}
+			}
+			#ideology_liberal
+		}
+		CUB_jose_agripino_barnet_y_vinajeras = {
+			name = CUB_jose_agripino_barnet_y_vinajeras
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Agripino_Barnet
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_jose_agripino_barnet_y_vinajeras
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1936 Election
+		CUB_miguel_mariano_gomez_y_arias = {
+			name = CUB_miguel_mariano_gomez_y_arias
+			#https://en.wikipedia.org/wiki/Miguel_Mariano_G%C3%B3mez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_miguel_mariano_gomez_y_arias
+				}
+			}
+			#ideology_liberal
+		}
+		CUB_aurelio_mario_gabriel_francisco_garcia_menocal_y_deop = {
+			name = CUB_aurelio_mario_gabriel_francisco_garcia_menocal_y_deop
+			#https://en.wikipedia.org/wiki/Mario_Garc%C3%ADa_Menocal
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_aurelio_mario_gabriel_francisco_garcia_menocal_y_deop
+				}
+			}
+			#ideology_conservative
+		}
+		CUB_federico_laredo_bru = {
+			name = CUB_federico_laredo_bru
+			#https://en.wikipedia.org/wiki/Federico_Laredo_Br%C3%BA
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_federico_laredo_bru
+				}
+			}
+			#ideology_liberal
+		}
+		CUB_fulugencio_batista_y_zaldivar = {
+			name = CUB_fulugencio_batista_y_zaldivar
+			#https://en.wikipedia.org/wiki/Fulgencio_Batista
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_fulugencio_batista_y_zaldivar
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1940 Election
+		CUB_reynaldo_marquez = {
+			name = CUB_reynaldo_marquez
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_reynaldo_marquez
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1944 Election
+		CUB_carlos_saladrigas_zayas = {
+			name = CUB_carlos_saladrigas_zayas
+			#https://en.wikipedia.org/wiki/Carlos_Saladrigas_Zayas
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_carlos_saladrigas_zayas
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1948 Election
+		CUB_juan_marinello_vidaurreta = {
+			name = CUB_juan_marinello_vidaurreta
+			#https://en.wikipedia.org/wiki/Juan_Marinello
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_juan_marinello_vidaurreta
+				}
+			}
+			#ideology_communist
+		}
+		CUB_carlos_manuel_prio_socarras = {
+			name = CUB_carlos_manuel_prio_socarras
+			#https://en.wikipedia.org/wiki/Carlos_Pr%C3%ADo_Socarr%C3%A1s
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_carlos_manuel_prio_socarras
+				}
+			}
+			#ideology_socialist
+		}
+		CUB_ricardo_nunez_portuondo = {
+			name = CUB_ricardo_nunez_portuondo
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_ricardo_nunez_portuondo
+				}
+			}
+			#ideology_liberal
+		}
+		CUB_eduardo_rene_chibas_ribas = {
+			name = CUB_eduardo_rene_chibas_ribas
+			#https://en.wikipedia.org/wiki/Eduardo_Chib%C3%A1s
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_eduardo_rene_chibas_ribas
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1954 Election
+		CUB_andres_domingo_y_morales_del_castillo = {
+			name = CUB_andres_domingo_y_morales_del_castillo
+			#https://en.wikipedia.org/wiki/Andr%C3%A9s_Domingo_y_Morales_del_Castillo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_andres_domingo_y_morales_del_castillo
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1958 Election
+		CUB_carlos_marquez_sterling_y_guiral = {
+			name = CUB_carlos_marquez_sterling_y_guiral
+			#https://en.wikipedia.org/wiki/Carlos_M%C3%A1rquez_Sterling
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_carlos_marquez_sterling_y_guiral
+				}
+			}
+			#ideology_liberal
+		}
+		CUB_alberto_salas_amaro = {
+			name = CUB_alberto_salas_amaro
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_alberto_salas_amaro
+				}
+			}
+			#ideology_agrarian
+		}
+		CUB_andres_rivero_aguero = {
+			name = CUB_andres_rivero_aguero
+			#https://en.wikipedia.org/wiki/Andr%C3%A9s_Rivero_Ag%C3%BCero
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_andres_rivero_aguero
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1958 Revolution
+		CUB_manuel_urrutia_lleo = {
+			name = CUB_manuel_urrutia_lleo
+			#https://en.wikipedia.org/wiki/Manuel_Urrutia_Lle%C3%B3
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_manuel_urrutia_lleo
+				}
+			}
+			#ideology_stratocratic
+		}
+		CUB_osvaldo_dorticos_torrado = {
+			name = CUB_osvaldo_dorticos_torrado
+			#https://en.wikipedia.org/wiki/Osvaldo_Dortic%C3%B3s_Torrado
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_osvaldo_dorticos_torrado
+				}
+			}
+			#ideology_communist
+		}
+		CUB_fidel_alejandro_castro_ruz = {
+			name = CUB_fidel_alejandro_castro_ruz
+			#https://en.wikipedia.org/wiki/Fidel_Castro
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CUB_fidel_alejandro_castro_ruz
+				}
+			}
+			#ideology_communist
+		}
+	#
+}

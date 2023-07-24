@@ -1,0 +1,10 @@
+capital = 974
+
+set_popularities = {
+	neutrality = 100
+}
+set_politics = {
+	ruling_party = neutrality
+	elections_allowed = no
+}
+recruit_character = ASR_sayyid_al_hasan_ibn_al_idrisid

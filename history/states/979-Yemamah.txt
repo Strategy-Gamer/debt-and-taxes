@@ -1,0 +1,24 @@
+state={
+	id=979
+	name="STATE_979"
+	provinces={
+		2090 7934 8004 8060 10748 10786 10870 13393 
+	}
+	history = {
+		owner = SAU
+		add_core_of = SAU
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+	manpower=137229
+	state_category=pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

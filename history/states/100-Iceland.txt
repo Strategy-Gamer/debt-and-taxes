@@ -1,0 +1,29 @@
+state={
+	id=100
+	name="STATE_100"
+	manpower = 115870
+	
+	state_category = rural
+	
+	history={
+		owner = ICE
+		victory_points = { 12674 1 }
+		buildings = {
+			infrastructure = 1
+			12674 ={
+				naval_base = 1
+			}
+		}
+		add_core_of = DEN
+		add_core_of = ICE
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_polar
+		}
+	}
+	provinces={ 4861 12674 12689 	}
+
+	local_supplies=0.0 
+}

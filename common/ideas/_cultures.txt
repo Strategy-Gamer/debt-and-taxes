@@ -1,0 +1,208 @@
+ideas = {
+	culture_tokens = {
+		culture_pacificer = {
+			allowed = { always = no }
+		}
+		culture_pioneer = {
+			allowed = { always = no }
+		}
+		culture_canadian = {
+			allowed = { always = no }
+		}
+		culture_quebecois = {
+			allowed = { always = no }
+		}
+		culture_yankee = {
+			allowed = { always = no }
+		}
+		culture_appalachian = {
+			allowed = { always = no }
+		}
+		culture_dixie = {
+			allowed = { always = no }
+		}
+		culture_african_american = {
+			allowed = { always = no }
+		}
+		culture_el_norte = {
+			allowed = { always = no }
+		}
+		culture_mexican = {
+			allowed = { always = no }
+		}
+		culture_amerindian = {
+			allowed = { always = no }
+		}
+		culture_pacific_islander = {
+			allowed = { always = no }
+		}
+		culture_ashkenazi = {
+			allowed = { always = no }
+		}
+		culture_japanese = {
+			allowed = { always = no }
+		}
+		culture_english = {
+			allowed = { always = no }
+		}
+		culture_scottish = {
+			allowed = { always = no }
+		}
+		culture_welsh = {
+			allowed = { always = no }
+		}
+		culture_irish = {
+			allowed = { always = no }
+		}
+		culture_dutch = {
+			allowed = { always = no }
+		}
+		culture_flemish = {
+			allowed = { always = no }
+		}
+		culture_walloon = {
+			allowed = { always = no }
+		}
+		culture_french = {
+			allowed = { always = no }
+		}
+		culture_breton = {
+			allowed = { always = no }
+		}
+		culture_catalan = {
+			allowed = { always = no }
+		}
+		culture_basque = {
+			allowed = { always = no }
+		}
+		culture_castillan = {
+			allowed = { always = no }
+		}
+		culture_andalucian = {
+			allowed = { always = no }
+		}
+		culture_galacian = {
+			allowed = { always = no }
+		}
+		culture_portugese = {
+			allowed = { always = no }
+		}
+		culture_north_italian = {
+			allowed = { always = no }
+		}
+		culture_south_italian = {
+			allowed = { always = no }
+		}
+		culture_north_german = {
+			allowed = { always = no }
+		}
+		culture_south_german = {
+			allowed = { always = no }
+		}
+		culture_danish = {
+			allowed = { always = no }
+		}
+		culture_norwegian = {
+			allowed = { always = no }
+		}
+		culture_swedish = {
+			allowed = { always = no }
+		}
+		culture_finnish = {
+			allowed = { always = no }
+		}
+		culture_icelandic = {
+			allowed = { always = no }
+		}
+		culture_slovenian = {
+			allowed = { always = no }
+		}
+		culture_croatian = {
+			allowed = { always = no }
+		}
+		culture_bosniak = {
+			allowed = { always = no }
+		}
+		culture_serbian = {
+			allowed = { always = no }
+		}
+		culture_albanian = {
+			allowed = { always = no }
+		}
+		culture_macedonian= {
+			allowed = { always = no }
+		}
+		culture_greek = {
+			allowed = { always = no }
+		}
+		culture_bulgarian = {
+			allowed = { always = no }
+		}
+		culture_turkish = {
+			allowed = { always = no }
+		}
+		culture_kurdish = {
+			allowed = { always = no }
+		}
+		culture_romanian = {
+			allowed = { always = no }
+		}
+		culture_romani = {
+			allowed = { always = no }
+		}
+		culture_hungarian = {
+			allowed = { always = no }
+		}
+		culture_slovakian = {
+			allowed = { always = no }
+		}
+		culture_czech = {
+			allowed = { always = no }
+		}
+		culture_polish = {
+			allowed = { always = no }
+		}
+		culture_lithuanian = {
+			allowed = { always = no }
+		}
+		culture_latvian = {
+			allowed = { always = no }
+		}
+		culture_estonian = {
+			allowed = { always = no }
+		}
+		culture_byelorussian = {
+			allowed = { always = no }
+		}
+		culture_ukrainian = {
+			allowed = { always = no }
+		}
+		culture_russian = {
+			allowed = { always = no }
+		}
+		culture_tatar = {
+			allowed = { always = no }
+		}
+		culture_bashkir = {
+			allowed = { always = no }
+		}
+		culture_caucasian = {
+			allowed = { always = no }
+		}
+		culture_georgian = {
+			allowed = { always = no }
+		}
+		culture_armenian = {
+			allowed = { always = no }
+		}
+		culture_azeri = {
+			allowed = { always = no }
+		}
+		culture_mongol = {
+			allowed = { always = no }
+		}
+		culture_siberian = {
+			allowed = { always = no }
+		}
+	}
+}

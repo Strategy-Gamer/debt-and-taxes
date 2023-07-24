@@ -1,0 +1,2059 @@
+#This file is automatically created by the script in /DandtScripts.
+
+
+#Maximum Terrain Effects
+	#GetFlatTerrainEffects
+		defined_text = {
+			name = GetFlatTerrainEffects
+			text = {
+				localization_key = flat_terrain_effects
+			}
+		}
+	#GetFlatTerrainBuildingSlots
+		defined_text = {
+			name = GetFlatTerrainBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.flat_building_slots > 0 }
+				}
+				localization_key = max_flat_terrain_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.flat_building_slots < 0 }
+				}
+				localization_key = max_flat_terrain_building_slots_negative
+			}
+		}
+	#GetFlatTerrainBuildingSlotsModifier
+		defined_text = {
+			name = GetFlatTerrainBuildingSlotsModifier
+			text = {
+				trigger = {
+					check_variable = { global.flat_building_slots_modifier > 0 }
+				}
+				localization_key = max_flat_terrain_building_slots_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.flat_building_slots_modifier < 0 }
+				}
+				localization_key = max_flat_terrain_building_slots_modifier_negative
+			}
+		}
+	#GetFlatTerrainBuildCostModifier
+		defined_text = {
+			name = GetFlatTerrainBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.flat_build_cost_modifier > 0 }
+				}
+				localization_key = max_flat_terrain_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.flat_build_cost_modifier < 0 }
+				}
+				localization_key = max_flat_terrain_build_cost_modifier_negative
+			}
+		}
+	#GetFlatTerrainBuildingMaintenanceModifier
+		defined_text = {
+			name = GetFlatTerrainBuildingMaintenanceModifier
+			text = {
+				trigger = {
+					check_variable = { global.flat_building_maintenance_modifier > 0 }
+				}
+				localization_key = max_flat_terrain_building_maintenance_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.flat_building_maintenance_modifier < 0 }
+				}
+				localization_key = max_flat_terrain_building_maintenance_modifier_negative
+			}
+		}
+	#GetFlatTerrainTransportCostModifier
+		defined_text = {
+			name = GetFlatTerrainTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.flat_transport_cost_modifier > 0 }
+				}
+				localization_key = max_flat_terrain_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.flat_transport_cost_modifier < 0 }
+				}
+				localization_key = max_flat_terrain_transport_cost_modifier_negative
+			}
+		}
+	#GetFlatTerrainGrainFarmOutputModifier
+		defined_text = {
+			name = GetFlatTerrainGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.flat_grain_farm_output_modifier > 0 }
+				}
+				localization_key = max_flat_terrain_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.flat_grain_farm_output_modifier < 0 }
+				}
+				localization_key = max_flat_terrain_grain_farm_output_modifier_negative
+			}
+		}
+	#GetFlatTerrainLivestockRanchOutputModifier
+		defined_text = {
+			name = GetFlatTerrainLivestockRanchOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.flat_livestock_ranch_output_modifier > 0 }
+				}
+				localization_key = max_flat_terrain_livestock_ranch_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.flat_livestock_ranch_output_modifier < 0 }
+				}
+				localization_key = max_flat_terrain_livestock_ranch_output_modifier_negative
+			}
+		}
+	#GetFlatTerrainLumberLodgeOutputModifier
+		defined_text = {
+			name = GetFlatTerrainLumberLodgeOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.flat_lumber_lodge_output_modifier > 0 }
+				}
+				localization_key = max_flat_terrain_lumber_lodge_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.flat_lumber_lodge_output_modifier < 0 }
+				}
+				localization_key = max_flat_terrain_lumber_lodge_output_modifier_negative
+			}
+		}
+	#GetHillyTerrainEffects
+		defined_text = {
+			name = GetHillyTerrainEffects
+			text = {
+				localization_key = hilly_terrain_effects
+			}
+		}
+	#GetHillyTerrainBuildingSlots
+		defined_text = {
+			name = GetHillyTerrainBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.hilly_building_slots > 0 }
+				}
+				localization_key = max_hilly_terrain_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.hilly_building_slots < 0 }
+				}
+				localization_key = max_hilly_terrain_building_slots_negative
+			}
+		}
+	#GetHillyTerrainBuildingSlotsModifier
+		defined_text = {
+			name = GetHillyTerrainBuildingSlotsModifier
+			text = {
+				trigger = {
+					check_variable = { global.hilly_building_slots_modifier > 0 }
+				}
+				localization_key = max_hilly_terrain_building_slots_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.hilly_building_slots_modifier < 0 }
+				}
+				localization_key = max_hilly_terrain_building_slots_modifier_negative
+			}
+		}
+	#GetHillyTerrainBuildCostModifier
+		defined_text = {
+			name = GetHillyTerrainBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.hilly_build_cost_modifier > 0 }
+				}
+				localization_key = max_hilly_terrain_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.hilly_build_cost_modifier < 0 }
+				}
+				localization_key = max_hilly_terrain_build_cost_modifier_negative
+			}
+		}
+	#GetHillyTerrainBuildingMaintenanceModifier
+		defined_text = {
+			name = GetHillyTerrainBuildingMaintenanceModifier
+			text = {
+				trigger = {
+					check_variable = { global.hilly_building_maintenance_modifier > 0 }
+				}
+				localization_key = max_hilly_terrain_building_maintenance_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.hilly_building_maintenance_modifier < 0 }
+				}
+				localization_key = max_hilly_terrain_building_maintenance_modifier_negative
+			}
+		}
+	#GetHillyTerrainTransportCostModifier
+		defined_text = {
+			name = GetHillyTerrainTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.hilly_transport_cost_modifier > 0 }
+				}
+				localization_key = max_hilly_terrain_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.hilly_transport_cost_modifier < 0 }
+				}
+				localization_key = max_hilly_terrain_transport_cost_modifier_negative
+			}
+		}
+	#GetHillyTerrainGrainFarmOutputModifier
+		defined_text = {
+			name = GetHillyTerrainGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.hilly_grain_farm_output_modifier > 0 }
+				}
+				localization_key = max_hilly_terrain_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.hilly_grain_farm_output_modifier < 0 }
+				}
+				localization_key = max_hilly_terrain_grain_farm_output_modifier_negative
+			}
+		}
+	#GetHillyTerrainLivestockRanchOutputModifier
+		defined_text = {
+			name = GetHillyTerrainLivestockRanchOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.hilly_livestock_ranch_output_modifier > 0 }
+				}
+				localization_key = max_hilly_terrain_livestock_ranch_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.hilly_livestock_ranch_output_modifier < 0 }
+				}
+				localization_key = max_hilly_terrain_livestock_ranch_output_modifier_negative
+			}
+		}
+	#GetHillyTerrainLumberLodgeOutputModifier
+		defined_text = {
+			name = GetHillyTerrainLumberLodgeOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.hilly_lumber_lodge_output_modifier > 0 }
+				}
+				localization_key = max_hilly_terrain_lumber_lodge_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.hilly_lumber_lodge_output_modifier < 0 }
+				}
+				localization_key = max_hilly_terrain_lumber_lodge_output_modifier_negative
+			}
+		}
+	#GetMountainousTerrainEffects
+		defined_text = {
+			name = GetMountainousTerrainEffects
+			text = {
+				localization_key = mountainous_terrain_effects
+			}
+		}
+	#GetMountainousTerrainBuildingSlots
+		defined_text = {
+			name = GetMountainousTerrainBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_building_slots > 0 }
+				}
+				localization_key = max_mountainous_terrain_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_building_slots < 0 }
+				}
+				localization_key = max_mountainous_terrain_building_slots_negative
+			}
+		}
+	#GetMountainousTerrainBuildingSlotsModifier
+		defined_text = {
+			name = GetMountainousTerrainBuildingSlotsModifier
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_building_slots_modifier > 0 }
+				}
+				localization_key = max_mountainous_terrain_building_slots_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_building_slots_modifier < 0 }
+				}
+				localization_key = max_mountainous_terrain_building_slots_modifier_negative
+			}
+		}
+	#GetMountainousTerrainBuildCostModifier
+		defined_text = {
+			name = GetMountainousTerrainBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_build_cost_modifier > 0 }
+				}
+				localization_key = max_mountainous_terrain_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_build_cost_modifier < 0 }
+				}
+				localization_key = max_mountainous_terrain_build_cost_modifier_negative
+			}
+		}
+	#GetMountainousTerrainBuildingMaintenanceModifier
+		defined_text = {
+			name = GetMountainousTerrainBuildingMaintenanceModifier
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_building_maintenance_modifier > 0 }
+				}
+				localization_key = max_mountainous_terrain_building_maintenance_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_building_maintenance_modifier < 0 }
+				}
+				localization_key = max_mountainous_terrain_building_maintenance_modifier_negative
+			}
+		}
+	#GetMountainousTerrainTransportCostModifier
+		defined_text = {
+			name = GetMountainousTerrainTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_transport_cost_modifier > 0 }
+				}
+				localization_key = max_mountainous_terrain_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_transport_cost_modifier < 0 }
+				}
+				localization_key = max_mountainous_terrain_transport_cost_modifier_negative
+			}
+		}
+	#GetMountainousTerrainGrainFarmOutputModifier
+		defined_text = {
+			name = GetMountainousTerrainGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_grain_farm_output_modifier > 0 }
+				}
+				localization_key = max_mountainous_terrain_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_grain_farm_output_modifier < 0 }
+				}
+				localization_key = max_mountainous_terrain_grain_farm_output_modifier_negative
+			}
+		}
+	#GetMountainousTerrainLivestockRanchOutputModifier
+		defined_text = {
+			name = GetMountainousTerrainLivestockRanchOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_livestock_ranch_output_modifier > 0 }
+				}
+				localization_key = max_mountainous_terrain_livestock_ranch_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_livestock_ranch_output_modifier < 0 }
+				}
+				localization_key = max_mountainous_terrain_livestock_ranch_output_modifier_negative
+			}
+		}
+	#GetMountainousTerrainLumberLodgeOutputModifier
+		defined_text = {
+			name = GetMountainousTerrainLumberLodgeOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_lumber_lodge_output_modifier > 0 }
+				}
+				localization_key = max_mountainous_terrain_lumber_lodge_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.mountainous_lumber_lodge_output_modifier < 0 }
+				}
+				localization_key = max_mountainous_terrain_lumber_lodge_output_modifier_negative
+			}
+		}
+	#GetDunesTerrainEffects
+		defined_text = {
+			name = GetDunesTerrainEffects
+			text = {
+				localization_key = dunes_terrain_effects
+			}
+		}
+	#GetDunesTerrainBuildingSlots
+		defined_text = {
+			name = GetDunesTerrainBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.dunes_building_slots > 0 }
+				}
+				localization_key = max_dunes_terrain_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.dunes_building_slots < 0 }
+				}
+				localization_key = max_dunes_terrain_building_slots_negative
+			}
+		}
+	#GetDunesTerrainBuildingSlotsModifier
+		defined_text = {
+			name = GetDunesTerrainBuildingSlotsModifier
+			text = {
+				trigger = {
+					check_variable = { global.dunes_building_slots_modifier > 0 }
+				}
+				localization_key = max_dunes_terrain_building_slots_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.dunes_building_slots_modifier < 0 }
+				}
+				localization_key = max_dunes_terrain_building_slots_modifier_negative
+			}
+		}
+	#GetDunesTerrainBuildCostModifier
+		defined_text = {
+			name = GetDunesTerrainBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.dunes_build_cost_modifier > 0 }
+				}
+				localization_key = max_dunes_terrain_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.dunes_build_cost_modifier < 0 }
+				}
+				localization_key = max_dunes_terrain_build_cost_modifier_negative
+			}
+		}
+	#GetDunesTerrainBuildingMaintenanceModifier
+		defined_text = {
+			name = GetDunesTerrainBuildingMaintenanceModifier
+			text = {
+				trigger = {
+					check_variable = { global.dunes_building_maintenance_modifier > 0 }
+				}
+				localization_key = max_dunes_terrain_building_maintenance_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.dunes_building_maintenance_modifier < 0 }
+				}
+				localization_key = max_dunes_terrain_building_maintenance_modifier_negative
+			}
+		}
+	#GetDunesTerrainTransportCostModifier
+		defined_text = {
+			name = GetDunesTerrainTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.dunes_transport_cost_modifier > 0 }
+				}
+				localization_key = max_dunes_terrain_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.dunes_transport_cost_modifier < 0 }
+				}
+				localization_key = max_dunes_terrain_transport_cost_modifier_negative
+			}
+		}
+	#GetDunesTerrainGrainFarmOutputModifier
+		defined_text = {
+			name = GetDunesTerrainGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.dunes_grain_farm_output_modifier > 0 }
+				}
+				localization_key = max_dunes_terrain_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.dunes_grain_farm_output_modifier < 0 }
+				}
+				localization_key = max_dunes_terrain_grain_farm_output_modifier_negative
+			}
+		}
+	#GetDunesTerrainLivestockRanchOutputModifier
+		defined_text = {
+			name = GetDunesTerrainLivestockRanchOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.dunes_livestock_ranch_output_modifier > 0 }
+				}
+				localization_key = max_dunes_terrain_livestock_ranch_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.dunes_livestock_ranch_output_modifier < 0 }
+				}
+				localization_key = max_dunes_terrain_livestock_ranch_output_modifier_negative
+			}
+		}
+	#GetDunesTerrainLumberLodgeOutputModifier
+		defined_text = {
+			name = GetDunesTerrainLumberLodgeOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.dunes_lumber_lodge_output_modifier > 0 }
+				}
+				localization_key = max_dunes_terrain_lumber_lodge_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.dunes_lumber_lodge_output_modifier < 0 }
+				}
+				localization_key = max_dunes_terrain_lumber_lodge_output_modifier_negative
+			}
+		}
+	#GetSwampTerrainEffects
+		defined_text = {
+			name = GetSwampTerrainEffects
+			text = {
+				localization_key = swamp_terrain_effects
+			}
+		}
+	#GetSwampTerrainBuildingSlots
+		defined_text = {
+			name = GetSwampTerrainBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.swamp_building_slots > 0 }
+				}
+				localization_key = max_swamp_terrain_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.swamp_building_slots < 0 }
+				}
+				localization_key = max_swamp_terrain_building_slots_negative
+			}
+		}
+	#GetSwampTerrainBuildingSlotsModifier
+		defined_text = {
+			name = GetSwampTerrainBuildingSlotsModifier
+			text = {
+				trigger = {
+					check_variable = { global.swamp_building_slots_modifier > 0 }
+				}
+				localization_key = max_swamp_terrain_building_slots_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.swamp_building_slots_modifier < 0 }
+				}
+				localization_key = max_swamp_terrain_building_slots_modifier_negative
+			}
+		}
+	#GetSwampTerrainBuildCostModifier
+		defined_text = {
+			name = GetSwampTerrainBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.swamp_build_cost_modifier > 0 }
+				}
+				localization_key = max_swamp_terrain_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.swamp_build_cost_modifier < 0 }
+				}
+				localization_key = max_swamp_terrain_build_cost_modifier_negative
+			}
+		}
+	#GetSwampTerrainBuildingMaintenanceModifier
+		defined_text = {
+			name = GetSwampTerrainBuildingMaintenanceModifier
+			text = {
+				trigger = {
+					check_variable = { global.swamp_building_maintenance_modifier > 0 }
+				}
+				localization_key = max_swamp_terrain_building_maintenance_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.swamp_building_maintenance_modifier < 0 }
+				}
+				localization_key = max_swamp_terrain_building_maintenance_modifier_negative
+			}
+		}
+	#GetSwampTerrainTransportCostModifier
+		defined_text = {
+			name = GetSwampTerrainTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.swamp_transport_cost_modifier > 0 }
+				}
+				localization_key = max_swamp_terrain_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.swamp_transport_cost_modifier < 0 }
+				}
+				localization_key = max_swamp_terrain_transport_cost_modifier_negative
+			}
+		}
+	#GetSwampTerrainGrainFarmOutputModifier
+		defined_text = {
+			name = GetSwampTerrainGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.swamp_grain_farm_output_modifier > 0 }
+				}
+				localization_key = max_swamp_terrain_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.swamp_grain_farm_output_modifier < 0 }
+				}
+				localization_key = max_swamp_terrain_grain_farm_output_modifier_negative
+			}
+		}
+	#GetSwampTerrainLivestockRanchOutputModifier
+		defined_text = {
+			name = GetSwampTerrainLivestockRanchOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.swamp_livestock_ranch_output_modifier > 0 }
+				}
+				localization_key = max_swamp_terrain_livestock_ranch_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.swamp_livestock_ranch_output_modifier < 0 }
+				}
+				localization_key = max_swamp_terrain_livestock_ranch_output_modifier_negative
+			}
+		}
+	#GetSwampTerrainLumberLodgeOutputModifier
+		defined_text = {
+			name = GetSwampTerrainLumberLodgeOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.swamp_lumber_lodge_output_modifier > 0 }
+				}
+				localization_key = max_swamp_terrain_lumber_lodge_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.swamp_lumber_lodge_output_modifier < 0 }
+				}
+				localization_key = max_swamp_terrain_lumber_lodge_output_modifier_negative
+			}
+		}
+	#GetForestTerrainEffects
+		defined_text = {
+			name = GetForestTerrainEffects
+			text = {
+				localization_key = forest_terrain_effects
+			}
+		}
+	#GetForestTerrainBuildingSlots
+		defined_text = {
+			name = GetForestTerrainBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.forest_building_slots > 0 }
+				}
+				localization_key = max_forest_terrain_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.forest_building_slots < 0 }
+				}
+				localization_key = max_forest_terrain_building_slots_negative
+			}
+		}
+	#GetForestTerrainBuildingSlotsModifier
+		defined_text = {
+			name = GetForestTerrainBuildingSlotsModifier
+			text = {
+				trigger = {
+					check_variable = { global.forest_building_slots_modifier > 0 }
+				}
+				localization_key = max_forest_terrain_building_slots_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.forest_building_slots_modifier < 0 }
+				}
+				localization_key = max_forest_terrain_building_slots_modifier_negative
+			}
+		}
+	#GetForestTerrainBuildCostModifier
+		defined_text = {
+			name = GetForestTerrainBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.forest_build_cost_modifier > 0 }
+				}
+				localization_key = max_forest_terrain_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.forest_build_cost_modifier < 0 }
+				}
+				localization_key = max_forest_terrain_build_cost_modifier_negative
+			}
+		}
+	#GetForestTerrainBuildingMaintenanceModifier
+		defined_text = {
+			name = GetForestTerrainBuildingMaintenanceModifier
+			text = {
+				trigger = {
+					check_variable = { global.forest_building_maintenance_modifier > 0 }
+				}
+				localization_key = max_forest_terrain_building_maintenance_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.forest_building_maintenance_modifier < 0 }
+				}
+				localization_key = max_forest_terrain_building_maintenance_modifier_negative
+			}
+		}
+	#GetForestTerrainTransportCostModifier
+		defined_text = {
+			name = GetForestTerrainTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.forest_transport_cost_modifier > 0 }
+				}
+				localization_key = max_forest_terrain_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.forest_transport_cost_modifier < 0 }
+				}
+				localization_key = max_forest_terrain_transport_cost_modifier_negative
+			}
+		}
+	#GetForestTerrainGrainFarmOutputModifier
+		defined_text = {
+			name = GetForestTerrainGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.forest_grain_farm_output_modifier > 0 }
+				}
+				localization_key = max_forest_terrain_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.forest_grain_farm_output_modifier < 0 }
+				}
+				localization_key = max_forest_terrain_grain_farm_output_modifier_negative
+			}
+		}
+	#GetForestTerrainLivestockRanchOutputModifier
+		defined_text = {
+			name = GetForestTerrainLivestockRanchOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.forest_livestock_ranch_output_modifier > 0 }
+				}
+				localization_key = max_forest_terrain_livestock_ranch_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.forest_livestock_ranch_output_modifier < 0 }
+				}
+				localization_key = max_forest_terrain_livestock_ranch_output_modifier_negative
+			}
+		}
+	#GetForestTerrainLumberLodgeOutputModifier
+		defined_text = {
+			name = GetForestTerrainLumberLodgeOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.forest_lumber_lodge_output_modifier > 0 }
+				}
+				localization_key = max_forest_terrain_lumber_lodge_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.forest_lumber_lodge_output_modifier < 0 }
+				}
+				localization_key = max_forest_terrain_lumber_lodge_output_modifier_negative
+			}
+		}
+#End of Maximum Terrain Effects
+#River Effects
+	#GetMinisculeNavigableRiverEffects
+		defined_text = {
+			name = GetMinisculeNavigableRiverEffects
+			text = {
+				localization_key = navigable_river_1_effects
+			}
+		}
+	#GetMinisculeNavigableRiverBuildingSlots
+		defined_text = {
+			name = GetMinisculeNavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_1_building_slots > 0 }
+				}
+				localization_key = navigable_river_1_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_1_building_slots < 0 }
+				}
+				localization_key = navigable_river_1_building_slots_negative
+			}
+		}
+	#GetMinisculeNavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetMinisculeNavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_1_build_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_1_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_1_build_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_1_build_cost_modifier_negative
+			}
+		}
+	#GetMinisculeNavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetMinisculeNavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_1_transport_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_1_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_1_transport_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_1_transport_cost_modifier_negative
+			}
+		}
+	#GetMinisculeNavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetMinisculeNavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_1_shipping_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_1_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_1_shipping_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_1_shipping_cost_modifier_negative
+			}
+		}
+	#GetMinisculeNavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetMinisculeNavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_1_grain_farm_output_modifier > 0 }
+				}
+				localization_key = navigable_river_1_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_1_grain_farm_output_modifier < 0 }
+				}
+				localization_key = navigable_river_1_grain_farm_output_modifier_negative
+			}
+		}
+	#GetMinorNavigableRiverEffects
+		defined_text = {
+			name = GetMinorNavigableRiverEffects
+			text = {
+				localization_key = navigable_river_2_effects
+			}
+		}
+	#GetMinorNavigableRiverBuildingSlots
+		defined_text = {
+			name = GetMinorNavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_2_building_slots > 0 }
+				}
+				localization_key = navigable_river_2_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_2_building_slots < 0 }
+				}
+				localization_key = navigable_river_2_building_slots_negative
+			}
+		}
+	#GetMinorNavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetMinorNavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_2_build_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_2_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_2_build_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_2_build_cost_modifier_negative
+			}
+		}
+	#GetMinorNavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetMinorNavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_2_transport_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_2_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_2_transport_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_2_transport_cost_modifier_negative
+			}
+		}
+	#GetMinorNavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetMinorNavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_2_shipping_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_2_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_2_shipping_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_2_shipping_cost_modifier_negative
+			}
+		}
+	#GetMinorNavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetMinorNavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_2_grain_farm_output_modifier > 0 }
+				}
+				localization_key = navigable_river_2_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_2_grain_farm_output_modifier < 0 }
+				}
+				localization_key = navigable_river_2_grain_farm_output_modifier_negative
+			}
+		}
+	#GetModerateNavigableRiverEffects
+		defined_text = {
+			name = GetModerateNavigableRiverEffects
+			text = {
+				localization_key = navigable_river_3_effects
+			}
+		}
+	#GetModerateNavigableRiverBuildingSlots
+		defined_text = {
+			name = GetModerateNavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_3_building_slots > 0 }
+				}
+				localization_key = navigable_river_3_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_3_building_slots < 0 }
+				}
+				localization_key = navigable_river_3_building_slots_negative
+			}
+		}
+	#GetModerateNavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetModerateNavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_3_build_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_3_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_3_build_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_3_build_cost_modifier_negative
+			}
+		}
+	#GetModerateNavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetModerateNavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_3_transport_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_3_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_3_transport_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_3_transport_cost_modifier_negative
+			}
+		}
+	#GetModerateNavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetModerateNavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_3_shipping_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_3_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_3_shipping_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_3_shipping_cost_modifier_negative
+			}
+		}
+	#GetModerateNavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetModerateNavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_3_grain_farm_output_modifier > 0 }
+				}
+				localization_key = navigable_river_3_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_3_grain_farm_output_modifier < 0 }
+				}
+				localization_key = navigable_river_3_grain_farm_output_modifier_negative
+			}
+		}
+	#GetMajorNavigableRiverEffects
+		defined_text = {
+			name = GetMajorNavigableRiverEffects
+			text = {
+				localization_key = navigable_river_4_effects
+			}
+		}
+	#GetMajorNavigableRiverBuildingSlots
+		defined_text = {
+			name = GetMajorNavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_4_building_slots > 0 }
+				}
+				localization_key = navigable_river_4_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_4_building_slots < 0 }
+				}
+				localization_key = navigable_river_4_building_slots_negative
+			}
+		}
+	#GetMajorNavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetMajorNavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_4_build_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_4_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_4_build_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_4_build_cost_modifier_negative
+			}
+		}
+	#GetMajorNavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetMajorNavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_4_transport_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_4_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_4_transport_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_4_transport_cost_modifier_negative
+			}
+		}
+	#GetMajorNavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetMajorNavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_4_shipping_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_4_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_4_shipping_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_4_shipping_cost_modifier_negative
+			}
+		}
+	#GetMajorNavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetMajorNavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_4_grain_farm_output_modifier > 0 }
+				}
+				localization_key = navigable_river_4_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_4_grain_farm_output_modifier < 0 }
+				}
+				localization_key = navigable_river_4_grain_farm_output_modifier_negative
+			}
+		}
+	#GetExtensiveNavigableRiverEffects
+		defined_text = {
+			name = GetExtensiveNavigableRiverEffects
+			text = {
+				localization_key = navigable_river_5_effects
+			}
+		}
+	#GetExtensiveNavigableRiverBuildingSlots
+		defined_text = {
+			name = GetExtensiveNavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_5_building_slots > 0 }
+				}
+				localization_key = navigable_river_5_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_5_building_slots < 0 }
+				}
+				localization_key = navigable_river_5_building_slots_negative
+			}
+		}
+	#GetExtensiveNavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetExtensiveNavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_5_build_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_5_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_5_build_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_5_build_cost_modifier_negative
+			}
+		}
+	#GetExtensiveNavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetExtensiveNavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_5_transport_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_5_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_5_transport_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_5_transport_cost_modifier_negative
+			}
+		}
+	#GetExtensiveNavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetExtensiveNavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_5_shipping_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_5_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_5_shipping_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_5_shipping_cost_modifier_negative
+			}
+		}
+	#GetExtensiveNavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetExtensiveNavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_5_grain_farm_output_modifier > 0 }
+				}
+				localization_key = navigable_river_5_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_5_grain_farm_output_modifier < 0 }
+				}
+				localization_key = navigable_river_5_grain_farm_output_modifier_negative
+			}
+		}
+	#GetExpansiveNavigableRiverEffects
+		defined_text = {
+			name = GetExpansiveNavigableRiverEffects
+			text = {
+				localization_key = navigable_river_6_effects
+			}
+		}
+	#GetExpansiveNavigableRiverBuildingSlots
+		defined_text = {
+			name = GetExpansiveNavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_6_building_slots > 0 }
+				}
+				localization_key = navigable_river_6_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_6_building_slots < 0 }
+				}
+				localization_key = navigable_river_6_building_slots_negative
+			}
+		}
+	#GetExpansiveNavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetExpansiveNavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_6_build_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_6_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_6_build_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_6_build_cost_modifier_negative
+			}
+		}
+	#GetExpansiveNavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetExpansiveNavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_6_transport_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_6_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_6_transport_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_6_transport_cost_modifier_negative
+			}
+		}
+	#GetExpansiveNavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetExpansiveNavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_6_shipping_cost_modifier > 0 }
+				}
+				localization_key = navigable_river_6_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_6_shipping_cost_modifier < 0 }
+				}
+				localization_key = navigable_river_6_shipping_cost_modifier_negative
+			}
+		}
+	#GetExpansiveNavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetExpansiveNavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_6_grain_farm_output_modifier > 0 }
+				}
+				localization_key = navigable_river_6_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.navigable_river_6_grain_farm_output_modifier < 0 }
+				}
+				localization_key = navigable_river_6_grain_farm_output_modifier_negative
+			}
+		}
+	#GetMinisculeUnnavigableRiverEffects
+		defined_text = {
+			name = GetMinisculeUnnavigableRiverEffects
+			text = {
+				localization_key = unnavigable_river_1_effects
+			}
+		}
+	#GetMinisculeUnnavigableRiverBuildingSlots
+		defined_text = {
+			name = GetMinisculeUnnavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_1_building_slots > 0 }
+				}
+				localization_key = unnavigable_river_1_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_1_building_slots < 0 }
+				}
+				localization_key = unnavigable_river_1_building_slots_negative
+			}
+		}
+	#GetMinisculeUnnavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetMinisculeUnnavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_1_build_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_1_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_1_build_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_1_build_cost_modifier_negative
+			}
+		}
+	#GetMinisculeUnnavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetMinisculeUnnavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_1_transport_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_1_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_1_transport_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_1_transport_cost_modifier_negative
+			}
+		}
+	#GetMinisculeUnnavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetMinisculeUnnavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_1_shipping_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_1_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_1_shipping_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_1_shipping_cost_modifier_negative
+			}
+		}
+	#GetMinisculeUnnavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetMinisculeUnnavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_1_grain_farm_output_modifier > 0 }
+				}
+				localization_key = unnavigable_river_1_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_1_grain_farm_output_modifier < 0 }
+				}
+				localization_key = unnavigable_river_1_grain_farm_output_modifier_negative
+			}
+		}
+	#GetMinorUnnavigableRiverEffects
+		defined_text = {
+			name = GetMinorUnnavigableRiverEffects
+			text = {
+				localization_key = unnavigable_river_2_effects
+			}
+		}
+	#GetMinorUnnavigableRiverBuildingSlots
+		defined_text = {
+			name = GetMinorUnnavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_2_building_slots > 0 }
+				}
+				localization_key = unnavigable_river_2_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_2_building_slots < 0 }
+				}
+				localization_key = unnavigable_river_2_building_slots_negative
+			}
+		}
+	#GetMinorUnnavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetMinorUnnavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_2_build_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_2_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_2_build_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_2_build_cost_modifier_negative
+			}
+		}
+	#GetMinorUnnavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetMinorUnnavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_2_transport_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_2_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_2_transport_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_2_transport_cost_modifier_negative
+			}
+		}
+	#GetMinorUnnavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetMinorUnnavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_2_shipping_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_2_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_2_shipping_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_2_shipping_cost_modifier_negative
+			}
+		}
+	#GetMinorUnnavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetMinorUnnavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_2_grain_farm_output_modifier > 0 }
+				}
+				localization_key = unnavigable_river_2_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_2_grain_farm_output_modifier < 0 }
+				}
+				localization_key = unnavigable_river_2_grain_farm_output_modifier_negative
+			}
+		}
+	#GetModerateUnnavigableRiverEffects
+		defined_text = {
+			name = GetModerateUnnavigableRiverEffects
+			text = {
+				localization_key = unnavigable_river_3_effects
+			}
+		}
+	#GetModerateUnnavigableRiverBuildingSlots
+		defined_text = {
+			name = GetModerateUnnavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_3_building_slots > 0 }
+				}
+				localization_key = unnavigable_river_3_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_3_building_slots < 0 }
+				}
+				localization_key = unnavigable_river_3_building_slots_negative
+			}
+		}
+	#GetModerateUnnavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetModerateUnnavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_3_build_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_3_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_3_build_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_3_build_cost_modifier_negative
+			}
+		}
+	#GetModerateUnnavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetModerateUnnavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_3_transport_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_3_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_3_transport_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_3_transport_cost_modifier_negative
+			}
+		}
+	#GetModerateUnnavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetModerateUnnavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_3_shipping_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_3_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_3_shipping_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_3_shipping_cost_modifier_negative
+			}
+		}
+	#GetModerateUnnavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetModerateUnnavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_3_grain_farm_output_modifier > 0 }
+				}
+				localization_key = unnavigable_river_3_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_3_grain_farm_output_modifier < 0 }
+				}
+				localization_key = unnavigable_river_3_grain_farm_output_modifier_negative
+			}
+		}
+	#GetMajorUnnavigableRiverEffects
+		defined_text = {
+			name = GetMajorUnnavigableRiverEffects
+			text = {
+				localization_key = unnavigable_river_4_effects
+			}
+		}
+	#GetMajorUnnavigableRiverBuildingSlots
+		defined_text = {
+			name = GetMajorUnnavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_4_building_slots > 0 }
+				}
+				localization_key = unnavigable_river_4_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_4_building_slots < 0 }
+				}
+				localization_key = unnavigable_river_4_building_slots_negative
+			}
+		}
+	#GetMajorUnnavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetMajorUnnavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_4_build_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_4_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_4_build_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_4_build_cost_modifier_negative
+			}
+		}
+	#GetMajorUnnavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetMajorUnnavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_4_transport_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_4_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_4_transport_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_4_transport_cost_modifier_negative
+			}
+		}
+	#GetMajorUnnavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetMajorUnnavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_4_shipping_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_4_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_4_shipping_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_4_shipping_cost_modifier_negative
+			}
+		}
+	#GetMajorUnnavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetMajorUnnavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_4_grain_farm_output_modifier > 0 }
+				}
+				localization_key = unnavigable_river_4_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_4_grain_farm_output_modifier < 0 }
+				}
+				localization_key = unnavigable_river_4_grain_farm_output_modifier_negative
+			}
+		}
+	#GetExtensiveUnnavigableRiverEffects
+		defined_text = {
+			name = GetExtensiveUnnavigableRiverEffects
+			text = {
+				localization_key = unnavigable_river_5_effects
+			}
+		}
+	#GetExtensiveUnnavigableRiverBuildingSlots
+		defined_text = {
+			name = GetExtensiveUnnavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_5_building_slots > 0 }
+				}
+				localization_key = unnavigable_river_5_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_5_building_slots < 0 }
+				}
+				localization_key = unnavigable_river_5_building_slots_negative
+			}
+		}
+	#GetExtensiveUnnavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetExtensiveUnnavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_5_build_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_5_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_5_build_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_5_build_cost_modifier_negative
+			}
+		}
+	#GetExtensiveUnnavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetExtensiveUnnavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_5_transport_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_5_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_5_transport_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_5_transport_cost_modifier_negative
+			}
+		}
+	#GetExtensiveUnnavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetExtensiveUnnavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_5_shipping_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_5_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_5_shipping_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_5_shipping_cost_modifier_negative
+			}
+		}
+	#GetExtensiveUnnavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetExtensiveUnnavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_5_grain_farm_output_modifier > 0 }
+				}
+				localization_key = unnavigable_river_5_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_5_grain_farm_output_modifier < 0 }
+				}
+				localization_key = unnavigable_river_5_grain_farm_output_modifier_negative
+			}
+		}
+	#GetExpansiveUnnavigableRiverEffects
+		defined_text = {
+			name = GetExpansiveUnnavigableRiverEffects
+			text = {
+				localization_key = unnavigable_river_6_effects
+			}
+		}
+	#GetExpansiveUnnavigableRiverBuildingSlots
+		defined_text = {
+			name = GetExpansiveUnnavigableRiverBuildingSlots
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_6_building_slots > 0 }
+				}
+				localization_key = unnavigable_river_6_building_slots_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_6_building_slots < 0 }
+				}
+				localization_key = unnavigable_river_6_building_slots_negative
+			}
+		}
+	#GetExpansiveUnnavigableRiverBuildCostModifier
+		defined_text = {
+			name = GetExpansiveUnnavigableRiverBuildCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_6_build_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_6_build_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_6_build_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_6_build_cost_modifier_negative
+			}
+		}
+	#GetExpansiveUnnavigableRiverTransportCostModifier
+		defined_text = {
+			name = GetExpansiveUnnavigableRiverTransportCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_6_transport_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_6_transport_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_6_transport_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_6_transport_cost_modifier_negative
+			}
+		}
+	#GetExpansiveUnnavigableRiverShippingCostModifier
+		defined_text = {
+			name = GetExpansiveUnnavigableRiverShippingCostModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_6_shipping_cost_modifier > 0 }
+				}
+				localization_key = unnavigable_river_6_shipping_cost_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_6_shipping_cost_modifier < 0 }
+				}
+				localization_key = unnavigable_river_6_shipping_cost_modifier_negative
+			}
+		}
+	#GetExpansiveUnnavigableRiverGrainFarmOutputModifier
+		defined_text = {
+			name = GetExpansiveUnnavigableRiverGrainFarmOutputModifier
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_6_grain_farm_output_modifier > 0 }
+				}
+				localization_key = unnavigable_river_6_grain_farm_output_modifier_positive
+			}
+			text = {
+				trigger = {
+					check_variable = { global.unnavigable_river_6_grain_farm_output_modifier < 0 }
+				}
+				localization_key = unnavigable_river_6_grain_farm_output_modifier_negative
+			}
+		}
+#End of River Effects
+#Soil Effects
+	#GetAtrociousSoilQualityEffects
+		defined_text = {
+			name = GetAtrociousSoilQualityEffects
+			text = {
+				localization_key = soil_quality_0_effects
+			}
+		}
+	#GetAtrociousSoilQualityGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetAtrociousSoilQualityGrainFarmOutputMultiplier
+			text = {
+				localization_key = soil_quality_0_grain_farm_output_multiplier
+			}
+		}
+	#GetPoorSoilQualityEffects
+		defined_text = {
+			name = GetPoorSoilQualityEffects
+			text = {
+				localization_key = soil_quality_1_effects
+			}
+		}
+	#GetPoorSoilQualityGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetPoorSoilQualityGrainFarmOutputMultiplier
+			text = {
+				localization_key = soil_quality_1_grain_farm_output_multiplier
+			}
+		}
+	#GetBelowAverageSoilQualityEffects
+		defined_text = {
+			name = GetBelowAverageSoilQualityEffects
+			text = {
+				localization_key = soil_quality_2_effects
+			}
+		}
+	#GetBelowAverageSoilQualityGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetBelowAverageSoilQualityGrainFarmOutputMultiplier
+			text = {
+				localization_key = soil_quality_2_grain_farm_output_multiplier
+			}
+		}
+	#GetAverageSoilQualityEffects
+		defined_text = {
+			name = GetAverageSoilQualityEffects
+			text = {
+				localization_key = soil_quality_3_effects
+			}
+		}
+	#GetAverageSoilQualityGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetAverageSoilQualityGrainFarmOutputMultiplier
+			text = {
+				localization_key = soil_quality_3_grain_farm_output_multiplier
+			}
+		}
+	#GetAboveAverageSoilQualityEffects
+		defined_text = {
+			name = GetAboveAverageSoilQualityEffects
+			text = {
+				localization_key = soil_quality_4_effects
+			}
+		}
+	#GetAboveAverageSoilQualityGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetAboveAverageSoilQualityGrainFarmOutputMultiplier
+			text = {
+				localization_key = soil_quality_4_grain_farm_output_multiplier
+			}
+		}
+	#GetGoodSoilQualityEffects
+		defined_text = {
+			name = GetGoodSoilQualityEffects
+			text = {
+				localization_key = soil_quality_5_effects
+			}
+		}
+	#GetGoodSoilQualityGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetGoodSoilQualityGrainFarmOutputMultiplier
+			text = {
+				localization_key = soil_quality_5_grain_farm_output_multiplier
+			}
+		}
+	#GetExcellentSoilQualityEffects
+		defined_text = {
+			name = GetExcellentSoilQualityEffects
+			text = {
+				localization_key = soil_quality_6_effects
+			}
+		}
+	#GetExcellentSoilQualityGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetExcellentSoilQualityGrainFarmOutputMultiplier
+			text = {
+				localization_key = soil_quality_6_grain_farm_output_multiplier
+			}
+		}
+	#GetAtrociousGrowthPeriodEffects
+		defined_text = {
+			name = GetAtrociousGrowthPeriodEffects
+			text = {
+				localization_key = growth_period_0_effects
+			}
+		}
+	#GetAtrociousGrowthPeriodGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetAtrociousGrowthPeriodGrainFarmOutputMultiplier
+			text = {
+				localization_key = growth_period_0_grain_farm_output_multiplier
+			}
+		}
+	#GetPoorGrowthPeriodEffects
+		defined_text = {
+			name = GetPoorGrowthPeriodEffects
+			text = {
+				localization_key = growth_period_1_effects
+			}
+		}
+	#GetPoorGrowthPeriodGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetPoorGrowthPeriodGrainFarmOutputMultiplier
+			text = {
+				localization_key = growth_period_1_grain_farm_output_multiplier
+			}
+		}
+	#GetBelowAverageGrowthPeriodEffects
+		defined_text = {
+			name = GetBelowAverageGrowthPeriodEffects
+			text = {
+				localization_key = growth_period_2_effects
+			}
+		}
+	#GetBelowAverageGrowthPeriodGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetBelowAverageGrowthPeriodGrainFarmOutputMultiplier
+			text = {
+				localization_key = growth_period_2_grain_farm_output_multiplier
+			}
+		}
+	#GetAverageGrowthPeriodEffects
+		defined_text = {
+			name = GetAverageGrowthPeriodEffects
+			text = {
+				localization_key = growth_period_3_effects
+			}
+		}
+	#GetAverageGrowthPeriodGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetAverageGrowthPeriodGrainFarmOutputMultiplier
+			text = {
+				localization_key = growth_period_3_grain_farm_output_multiplier
+			}
+		}
+	#GetAboveAverageGrowthPeriodEffects
+		defined_text = {
+			name = GetAboveAverageGrowthPeriodEffects
+			text = {
+				localization_key = growth_period_4_effects
+			}
+		}
+	#GetAboveAverageGrowthPeriodGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetAboveAverageGrowthPeriodGrainFarmOutputMultiplier
+			text = {
+				localization_key = growth_period_4_grain_farm_output_multiplier
+			}
+		}
+	#GetGoodGrowthPeriodEffects
+		defined_text = {
+			name = GetGoodGrowthPeriodEffects
+			text = {
+				localization_key = growth_period_5_effects
+			}
+		}
+	#GetGoodGrowthPeriodGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetGoodGrowthPeriodGrainFarmOutputMultiplier
+			text = {
+				localization_key = growth_period_5_grain_farm_output_multiplier
+			}
+		}
+	#GetExcellentGrowthPeriodEffects
+		defined_text = {
+			name = GetExcellentGrowthPeriodEffects
+			text = {
+				localization_key = growth_period_6_effects
+			}
+		}
+	#GetExcellentGrowthPeriodGrainFarmOutputMultiplier
+		defined_text = {
+			name = GetExcellentGrowthPeriodGrainFarmOutputMultiplier
+			text = {
+				localization_key = growth_period_6_grain_farm_output_multiplier
+			}
+		}
+#End of Soil Effects

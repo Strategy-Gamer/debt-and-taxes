@@ -1,0 +1,24 @@
+state={
+	id=995
+	name="STATE_995"
+	provinces={
+		1277 1332 1345 1373 1428 1460 1533 4446 4652 7327 7368 7463 7673 10194 10209 10225 10354 10382 10522 12126 12168 12181 12184 12212 12302 12343 12415 
+	}
+	history = {
+		owner = INS
+		add_core_of = INS
+		buildings = {
+			infrastructure = 2
+			4652 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			4652 1 
+		}
+	}
+	state_category = state_cat
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

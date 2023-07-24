@@ -1,0 +1,41 @@
+﻿l_english:
+#Diplo
+ coalition_value_diplo: "[?THIS.govt_coalition_strength_percentage|0]%"
+ coalition_value_diplo_tt: "§YRuling Government§! in §C[THIS.GetName]§!:\n  §LParty:§! [THIS.GetCoalitionLeader]\n  §LIdeology:§! [THIS.GetCoalitionIdeology]\n  §LPopularity:§! [?THIS.govt_coalition_popularity|1]%\n  §LStrength:§! [?THIS.govt_coalition_strength|1]% ([?THIS.govt_coalition_strength_percentage|1]%)"
+ diplo_parliament_population_tt: "[THIS.GetFlag] §CParliament of [THIS.GetNameDef]§!\n\n §HParty:§! [THIS.GetCoalitionLeader]\n §HIdeology:§! [?govt_coalition_leader.GetTokenLocalizedKey]\n\n§LCoalition:§! £pops [?govt_coalition_popularity|1]% £political_power_texticon [?govt_coalition_strength|1]% £war_support_modifiericons_texticon  [?govt_coalition_strength_percentage|1]% £stability_texticon  [?govt_coalition_unity|1]%\n[GetCoalitionPartiesList]\n\n§gOpposition:§! £pops [?govt_opposition_popularity|1]% £political_power_texticon [?govt_opposition_strength|1]% £war_support_modifiericons_texticon  [?govt_opposition_strength_percentage|1]%\n[GetOppositionPartiesList]\n\n§ROusted:§! £pops [?govt_ousted_popularity|1]%\n[GetOustedPartiesList]"
+#
+#Internal Politics Menu
+ politics_list_title_tt: "Politics of [THIS.GetNameDef]"
+ parliament_button_tt: "Parliament"
+ parliament_button_tt_delayed: "Parliament Description Here"
+ parties_button_tt: "Parties"
+ parties_button_tt_delayed: "Parties Description Here"
+ population_button_tt: "Population"
+ population_button_tt_delayed: "Population Description here"
+ legislation_button_tt: "Legislation"
+ legislation_button_tt_delayed: "Legislation Description Here"
+
+#Lists
+ leading_party_entry_bg_tt: "§Y[GetPartyNameInList]§!\n§LIdeology:§! [?v.GetTokenLocalizedKey]\n§LStatus:§! Ruling\n§LPopularity:§! [GetPartyPopularityInList]\n\n§LLeader:§! [GetPartyLeaderInList]\n§L[GetPartyDesignatoryTypeInList]:§! [GetPartyCandidateInList]"
+ coalition_party_entry_bg_tt: "§Y[GetPartyNameInList]§!\n§LIdeology:§! [?v.GetTokenLocalizedKey]\n§LStatus:§! Coalition\n§LPopularity:§! [GetPartyPopularityInList]\n\n§LLeader:§! [GetPartyLeaderInList]\n§L[GetPartyDesignatoryTypeInList]:§! [GetPartyCandidateInList]"
+ opposition_party_entry_bg_tt: "§Y[GetPartyNameInList]§!\n§LIdeology:§! [?v.GetTokenLocalizedKey]\n§LStatus:§! Opposition\n§LPopularity:§! [GetPartyPopularityInList]\n\n§LLeader:§! [GetPartyLeaderInList]\n§L[GetPartyDesignatoryTypeInList]:§! [GetPartyCandidateInList]"
+ ousted_party_entry_bg_tt: "§Y[GetPartyNameInList]§!\n§LIdeology:§! [?v.GetTokenLocalizedKey]\n§LStatus:§! Ousted\n§LPopularity:§! [GetPartyPopularityInList]\n\n§LLeader:§! [GetPartyLeaderInList]\n§L[GetPartyDesignatoryTypeInList]:§! [GetPartyCandidateInList]"
+ parties_title_name: "Parties"
+ coalition_leader_name_tt: "[?gcl1.GetTokenLocalizedKey]"
+ coalition_leader_ideology_tt: "[?gcl.GetTokenLocalizedKey]"
+ coalition_leader_ruler_tt: "[?gcl2.GetTokenLocalizedKey]"
+ piechart_strength_tt: "[GetCoalitionStrengthPercentageColor][?govt_coalition_strength_percentage|0]%§!"
+ piechart_strength_tt_delayed: "§Y[ROOT.GetAdjective] Ruling Coalition:§!\n  §LLeader:§! [GetCoalitionLeader]\n  §LIdeology:§! [GetCoalitionIdeology]\n  §LPopularity:§! [?govt_coalition_popularity|1]%\n  §LStrength:§! [?govt_coalition_strength_percentage]%"
+ parliament_population_tt: "[ROOT.GetFlag] §CParliament of [ROOT.GetNameDef]§!\n\n §HLeader:§! [GetCoalitionLeader]\n §HIdeology:§! [?govt_coalition_leader.GetTokenLocalizedKey]\n\n§LCoalition:§! £pops [?govt_coalition_popularity|1]% £political_power_texticon [?govt_coalition_strength|1]% £war_support_modifiericons_texticon  [?govt_coalition_strength_percentage|1]% £stability_texticon  [?govt_coalition_unity|1]%\n[GetCoalitionPartiesList]\n\n§gOpposition:§! £pops [?govt_opposition_popularity|1]% £political_power_texticon [?govt_opposition_strength|1]% £war_support_modifiericons_texticon  [?govt_opposition_strength_percentage|1]%\n[GetOppositionPartiesList]\n\n§ROusted:§! £pops [?govt_ousted_popularity|1]%\n[GetOustedPartiesList]"
+#ScriptedLoc
+ pops_texticon_tt: "£pops"
+ ideology_communist_color_texticon_tt: "£GFX_ideology_communist_texticon "
+ ideology_socialist_color_texticon_tt: "£GFX_ideology_socialist_texticon "
+ ideology_liberal_color_texticon_tt: "£GFX_ideology_liberal_texticon "
+ ideology_agrarian_color_texticon_tt: "£GFX_ideology_agrarian_texticon "
+ ideology_conservative_color_texticon_tt: "£GFX_ideology_conservative_texticon "
+ ideology_reactionary_color_texticon_tt: "£GFX_ideology_reactionary_texticon "
+ ideology_fascist_color_texticon_tt: "£GFX_ideology_fascist_texticon "
+ ideology_stratocratic_color_texticon_tt: "£GFX_ideology_stratocratic_texticon "
+#ScriptedEffect
+ govt_house_parties_change_generic_tt: "[?v.GetPartyColor]  [?v.GetPartyName]    [?v.GetPartyPopularityChange]"

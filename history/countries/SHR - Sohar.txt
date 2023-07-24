@@ -1,0 +1,10 @@
+capital = 976
+
+set_popularities = {
+	neutrality = 100
+}
+set_politics = {
+	ruling_party = neutrality
+	elections_allowed = no
+}
+recruit_character = SHR_ali_banu_bu_ali

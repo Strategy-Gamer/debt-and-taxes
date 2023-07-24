@@ -1,0 +1,38 @@
+
+state={
+	id=42
+	name="STATE_42"
+	resources={
+		steel=59.000
+		aluminium=14.000
+	}
+
+	history={
+		owner = GER
+		victory_points = {
+			11435 1 
+		}
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = GER
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		529 563 3423 3558 6444 9486 9575 11435 11470 11494 11547 11560 13625
+	}
+	manpower=2127739
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+	local_supplies=0.000
+}

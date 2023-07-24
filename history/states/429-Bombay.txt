@@ -1,0 +1,36 @@
+
+state={
+	id=429
+	name="STATE_429"
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+			air_base = 2
+			1349 = {
+				naval_base = 6
+			}
+		}
+		victory_points = {
+			1349 10 
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1349 1405 4072 4353 7013 7119 7177 10019 10270 12182 12269 13533 13534 13535 13536 13537 13538 13539 13540 13542 13544 
+	}
+	manpower=11855600
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

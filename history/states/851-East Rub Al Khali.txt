@@ -1,0 +1,24 @@
+state={
+	id=851
+	name="STATE_851"
+	provinces={
+		4932 12740 
+	}
+	history={
+		owner=ENG
+		add_core_of = YEM
+		buildings = {
+			# infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+	manpower=65239
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=pastoral
+}

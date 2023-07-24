@@ -1,0 +1,42 @@
+
+state={
+	id=338
+	name="STATE_338"
+	manpower = 1800615
+	resources={
+		steel=9 # was: 16
+	}
+
+	state_category = city
+
+	history={
+		owner = ENG
+		victory_points = {
+			3369 5
+		}
+		buildings = {
+			infrastructure = 4 #was: 7
+
+			air_base = 2
+			3369 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = ENG
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		3369 6221 6351 6378 9484 11471
+	}
+
+	local_supplies=0.0
+}

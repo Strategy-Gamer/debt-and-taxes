@@ -1,0 +1,7257 @@
+#Cateogories
+	#Agriculture
+		#Input
+			industry_agriculture_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_agriculture_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_agriculture_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_agriculture_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_agriculture_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_agriculture_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_agriculture_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_agriculture_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_agriculture_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_agriculture_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_agriculture_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_agriculture_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_agriculture_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_agriculture_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Drills
+		#Input
+			industry_drill_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_drill_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_drill_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_drill_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_drill_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_drill_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_drill_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_drill_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_drill_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_drill_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_drill_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_drill_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_drill_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_drill_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Mines
+		#Input
+			industry_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Power Plants
+		#Input
+			industry_power_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_power_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_power_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_power_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_power_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_power_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_power_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_power_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_power_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_power_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_power_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_power_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_power_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_power_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Utilities
+		#Input
+			industry_utilities_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_utilities_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_utilities_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_utilities_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_utilities_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_utilities_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_utilities_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_utilities_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_utilities_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_utilities_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_utilities_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_utilities_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_utilities_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_utilities_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Clean Energy
+		#Input
+			industry_clean_energy_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clean_energy_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_clean_energy_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clean_energy_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_clean_energy_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clean_energy_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_clean_energy_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clean_energy_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_clean_energy_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clean_energy_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_clean_energy_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_clean_energy_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_clean_energy_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clean_energy_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Factories
+		#Input
+			industry_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Light Industry
+		#Input
+			industry_light_industry_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_light_industry_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_light_industry_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_light_industry_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_light_industry_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_light_industry_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_light_industry_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_light_industry_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_light_industry_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_light_industry_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_light_industry_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_light_industry_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_light_industry_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_light_industry_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Heavy Industry
+		#Input
+			industry_heavy_industry_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_heavy_industry_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_heavy_industry_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_heavy_industry_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_heavy_industry_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_heavy_industry_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_heavy_industry_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_heavy_industry_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_heavy_industry_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_heavy_industry_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_heavy_industry_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_heavy_industry_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_heavy_industry_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_heavy_industry_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Services
+		#Input
+			industry_service_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_service_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_service_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_service_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_service_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_service_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_service_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_service_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_service_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_service_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_service_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_service_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_service_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_service_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Construction
+		#Input
+			industry_construction_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_construction_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_construction_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_construction_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_construction_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_construction_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_construction_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_construction_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Infrastructure
+		#Input
+			industry_infrastructure_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_infrastructure_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_infrastructure_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_infrastructure_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_infrastructure_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_infrastructure_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_infrastructure_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_infrastructure_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_infrastructure_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_infrastructure_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_infrastructure_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_infrastructure_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_infrastructure_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_infrastructure_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+#
+#Extractors
+	#Oil Rig
+		#Input
+			industry_oil_rig_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_rig_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_oil_rig_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_rig_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_oil_rig_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_rig_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_oil_rig_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_rig_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_oil_rig_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_rig_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_oil_rig_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_oil_rig_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_oil_rig_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_rig_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Gas Rig
+		#Input
+			industry_gas_rig_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_gas_rig_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_gas_rig_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_gas_rig_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_gas_rig_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_gas_rig_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_gas_rig_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_gas_rig_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_gas_rig_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_gas_rig_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_gas_rig_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_gas_rig_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_gas_rig_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_gas_rig_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Offshore Oil Rig
+		#Input
+			industry_offshore_oil_rig_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_offshore_oil_rig_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_offshore_oil_rig_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_offshore_oil_rig_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_offshore_oil_rig_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_offshore_oil_rig_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_offshore_oil_rig_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_offshore_oil_rig_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_offshore_oil_rig_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_offshore_oil_rig_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_offshore_oil_rig_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_offshore_oil_rig_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_offshore_oil_rig_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_offshore_oil_rig_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Bauxite Mine
+		#Input
+			industry_bauxite_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_bauxite_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_bauxite_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_bauxite_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_bauxite_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_bauxite_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_bauxite_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_bauxite_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_bauxite_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_bauxite_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_bauxite_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_bauxite_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_bauxite_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_bauxite_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Rubber Lodge
+		#Input
+			industry_rubber_lodge_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rubber_lodge_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_rubber_lodge_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rubber_lodge_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_rubber_lodge_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rubber_lodge_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_rubber_lodge_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rubber_lodge_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_rubber_lodge_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rubber_lodge_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_rubber_lodge_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_rubber_lodge_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_rubber_lodge_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rubber_lodge_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Tungsten Mine
+		#Input
+			industry_tungsten_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tungsten_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_tungsten_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tungsten_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_tungsten_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tungsten_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_tungsten_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tungsten_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_tungsten_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tungsten_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_tungsten_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_tungsten_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_tungsten_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tungsten_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Iron Mine
+		#Input
+			industry_iron_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_iron_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_iron_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_iron_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_iron_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_iron_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_iron_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_iron_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_iron_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_iron_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_iron_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_iron_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_iron_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_iron_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Chromium Mine
+		#Input
+			industry_chromium_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chromium_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_chromium_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chromium_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_chromium_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chromium_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_chromium_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chromium_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_chromium_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chromium_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_chromium_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_chromium_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_chromium_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chromium_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Copper Mine
+		#Input
+			industry_copper_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_copper_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_copper_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_copper_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_copper_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_copper_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_copper_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_copper_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_copper_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_copper_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_copper_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_copper_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_copper_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_copper_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Precious Metals Mine
+		#Input
+			industry_precious_metals_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_precious_metals_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_precious_metals_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_precious_metals_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_precious_metals_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_precious_metals_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_precious_metals_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_precious_metals_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_precious_metals_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_precious_metals_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_precious_metals_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_precious_metals_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_precious_metals_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_precious_metals_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Coal Mine
+		#Input
+			industry_coal_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_coal_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_coal_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_coal_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_coal_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_coal_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_coal_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_coal_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Lumber Lodge
+		#Input
+			industry_lumber_lodge_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_lumber_lodge_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_lumber_lodge_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_lumber_lodge_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_lumber_lodge_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_lumber_lodge_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_lumber_lodge_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_lumber_lodge_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_lumber_lodge_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_lumber_lodge_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_lumber_lodge_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_lumber_lodge_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_lumber_lodge_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_lumber_lodge_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Cotton Plantation
+		#Input
+			industry_cotton_plantation_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cotton_plantation_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_cotton_plantation_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cotton_plantation_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_cotton_plantation_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cotton_plantation_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_cotton_plantation_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cotton_plantation_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_cotton_plantation_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cotton_plantation_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_cotton_plantation_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_cotton_plantation_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_cotton_plantation_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cotton_plantation_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Silk Plantation
+		#Input
+			industry_silk_plantation_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silk_plantation_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_silk_plantation_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silk_plantation_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_silk_plantation_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silk_plantation_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_silk_plantation_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silk_plantation_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_silk_plantation_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silk_plantation_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_silk_plantation_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_silk_plantation_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_silk_plantation_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silk_plantation_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Sheep Ranch
+		#Input
+			industry_sheep_ranch_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sheep_ranch_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_sheep_ranch_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sheep_ranch_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_sheep_ranch_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sheep_ranch_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_sheep_ranch_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sheep_ranch_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_sheep_ranch_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sheep_ranch_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_sheep_ranch_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_sheep_ranch_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_sheep_ranch_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sheep_ranch_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Grain Farm
+		#Input
+			industry_grain_farm_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_grain_farm_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_grain_farm_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_grain_farm_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_grain_farm_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_grain_farm_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_grain_farm_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_grain_farm_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_grain_farm_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_grain_farm_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_grain_farm_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_grain_farm_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_grain_farm_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_grain_farm_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Rice Paddy
+		#Input
+			industry_rice_paddy_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rice_paddy_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_rice_paddy_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rice_paddy_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_rice_paddy_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rice_paddy_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_rice_paddy_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rice_paddy_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_rice_paddy_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rice_paddy_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_rice_paddy_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_rice_paddy_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_rice_paddy_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rice_paddy_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Livestock Ranch
+		#Input
+			industry_livestock_ranch_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_livestock_ranch_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_livestock_ranch_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_livestock_ranch_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_livestock_ranch_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_livestock_ranch_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_livestock_ranch_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_livestock_ranch_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_livestock_ranch_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_livestock_ranch_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_livestock_ranch_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_livestock_ranch_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_livestock_ranch_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_livestock_ranch_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Fishing Wharf
+		#Input
+			industry_fishing_wharf_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fishing_wharf_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_fishing_wharf_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fishing_wharf_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_fishing_wharf_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fishing_wharf_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_fishing_wharf_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fishing_wharf_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_fishing_wharf_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fishing_wharf_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_fishing_wharf_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_fishing_wharf_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_fishing_wharf_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fishing_wharf_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Rare Earth Metals Mine
+		#Input
+			industry_rare_earth_metals_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rare_earth_metals_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_rare_earth_metals_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rare_earth_metals_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_rare_earth_metals_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rare_earth_metals_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_rare_earth_metals_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rare_earth_metals_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_rare_earth_metals_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rare_earth_metals_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_rare_earth_metals_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_rare_earth_metals_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_rare_earth_metals_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rare_earth_metals_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Sulfur Mine
+		#Input
+			industry_sulfur_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sulfur_mine_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_sulfur_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sulfur_mine_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_sulfur_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sulfur_mine_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_sulfur_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sulfur_mine_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_sulfur_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sulfur_mine_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_sulfur_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_sulfur_mine_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_sulfur_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_sulfur_mine_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+#Factories
+	#Coal Power Plant
+		#Input
+			industry_coal_power_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_power_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_coal_power_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_power_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_coal_power_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_power_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_coal_power_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_power_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_coal_power_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_power_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_coal_power_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_coal_power_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_coal_power_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_coal_power_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Oil Power Plant
+		#Input
+			industry_oil_power_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_power_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_oil_power_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_power_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_oil_power_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_power_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_oil_power_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_power_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_oil_power_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_power_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_oil_power_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_oil_power_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_oil_power_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_power_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Nuclear Power Plant
+		#Input
+			industry_nuclear_power_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_nuclear_power_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_nuclear_power_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_nuclear_power_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_nuclear_power_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_nuclear_power_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_nuclear_power_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_nuclear_power_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_nuclear_power_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_nuclear_power_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_nuclear_power_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_nuclear_power_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_nuclear_power_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_nuclear_power_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Wind Power Farm
+		#Input
+			industry_wind_power_farm_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_wind_power_farm_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_wind_power_farm_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_wind_power_farm_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_wind_power_farm_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_wind_power_farm_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_wind_power_farm_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_wind_power_farm_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_wind_power_farm_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_wind_power_farm_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_wind_power_farm_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_wind_power_farm_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_wind_power_farm_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_wind_power_farm_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Solar Power Farm
+		#Input
+			industry_solar_power_farm_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_solar_power_farm_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_solar_power_farm_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_solar_power_farm_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_solar_power_farm_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_solar_power_farm_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_solar_power_farm_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_solar_power_farm_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_solar_power_farm_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_solar_power_farm_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_solar_power_farm_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_solar_power_farm_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_solar_power_farm_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_solar_power_farm_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Hydroelectric Dam
+		#Input
+			industry_hydroelectric_dam_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hydroelectric_dam_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_hydroelectric_dam_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hydroelectric_dam_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_hydroelectric_dam_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hydroelectric_dam_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_hydroelectric_dam_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hydroelectric_dam_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_hydroelectric_dam_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hydroelectric_dam_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_hydroelectric_dam_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_hydroelectric_dam_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_hydroelectric_dam_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hydroelectric_dam_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Steel Plant
+		#Input
+			industry_steel_mill_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_steel_mill_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_steel_mill_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_steel_mill_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_steel_mill_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_steel_mill_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_steel_mill_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_steel_mill_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_steel_mill_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_steel_mill_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_steel_mill_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_steel_mill_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_steel_mill_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_steel_mill_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Cement Factory
+		#Input
+			industry_cement_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cement_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_cement_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cement_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_cement_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cement_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_cement_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cement_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_cement_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cement_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_cement_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_cement_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_cement_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_cement_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Silicates Factory
+		#Input
+			industry_silicates_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silicates_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_silicates_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silicates_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_silicates_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silicates_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_silicates_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silicates_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_silicates_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silicates_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_silicates_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_silicates_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_silicates_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_silicates_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Chemical Plant
+		#Input
+			industry_chemical_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chemical_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_chemical_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chemical_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_chemical_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chemical_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_chemical_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chemical_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_chemical_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chemical_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_chemical_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_chemical_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_chemical_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_chemical_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Textile Mill
+		#Input
+			industry_textile_mill_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_textile_mill_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_textile_mill_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_textile_mill_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_textile_mill_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_textile_mill_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_textile_mill_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_textile_mill_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_textile_mill_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_textile_mill_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_textile_mill_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_textile_mill_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_textile_mill_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_textile_mill_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Machinery Factory
+		#Input
+			industry_machinery_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_machinery_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_machinery_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_machinery_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_machinery_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_machinery_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_machinery_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_machinery_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_machinery_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_machinery_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_machinery_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_machinery_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_machinery_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_machinery_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Plastics Factory
+		#Input
+			industry_plastics_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_plastics_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_plastics_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_plastics_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_plastics_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_plastics_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_plastics_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_plastics_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_plastics_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_plastics_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_plastics_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_plastics_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_plastics_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_plastics_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Fertilizer Factory
+		#Input
+			industry_fertilizer_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fertilizer_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_fertilizer_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fertilizer_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_fertilizer_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fertilizer_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_fertilizer_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fertilizer_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_fertilizer_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fertilizer_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_fertilizer_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_fertilizer_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_fertilizer_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_fertilizer_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Oil Refinery
+		#Input
+			industry_oil_refinery_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_refinery_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_oil_refinery_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_refinery_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_oil_refinery_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_refinery_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_oil_refinery_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_refinery_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_oil_refinery_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_refinery_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_oil_refinery_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_oil_refinery_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_oil_refinery_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_oil_refinery_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Synthetic Oil Refinery
+		#Input
+			industry_synthetic_oil_refinery_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_oil_refinery_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_synthetic_oil_refinery_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_oil_refinery_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_synthetic_oil_refinery_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_oil_refinery_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_synthetic_oil_refinery_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_oil_refinery_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_synthetic_oil_refinery_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_oil_refinery_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_synthetic_oil_refinery_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_oil_refinery_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_synthetic_oil_refinery_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_oil_refinery_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Synthetic Rubber Plant
+		#Input
+			industry_synthetic_rubber_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_rubber_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_synthetic_rubber_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_rubber_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_synthetic_rubber_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_rubber_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_synthetic_rubber_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_rubber_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_synthetic_rubber_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_rubber_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_synthetic_rubber_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_rubber_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_synthetic_rubber_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_synthetic_rubber_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Automobile Factory
+		#Input
+			industry_automobile_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_automobile_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_automobile_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_automobile_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_automobile_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_automobile_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_automobile_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_automobile_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_automobile_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_automobile_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_automobile_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_automobile_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_automobile_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_automobile_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Airplane Factory
+		#Input
+			industry_airplane_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_airplane_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_airplane_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_airplane_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_airplane_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_airplane_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_airplane_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_airplane_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_airplane_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_airplane_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_airplane_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_airplane_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_airplane_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_airplane_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Computer Factory
+		#Input
+			industry_computer_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_computer_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_computer_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_computer_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_computer_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_computer_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_computer_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_computer_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_computer_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_computer_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_computer_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_computer_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_computer_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_computer_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Electronics Factory
+		#Input
+			industry_electronics_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_electronics_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_electronics_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_electronics_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_electronics_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_electronics_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_electronics_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_electronics_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_electronics_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_electronics_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_electronics_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_electronics_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_electronics_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_electronics_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Food Processing Plant
+		#Input
+			industry_food_processing_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_food_processing_plant_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_food_processing_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_food_processing_plant_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_food_processing_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_food_processing_plant_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_food_processing_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_food_processing_plant_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_food_processing_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_food_processing_plant_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_food_processing_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_food_processing_plant_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_food_processing_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_food_processing_plant_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Pharmaceuticals Factory
+		#Input
+			industry_pharmaceuticals_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_pharmaceuticals_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_pharmaceuticals_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_pharmaceuticals_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_pharmaceuticals_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_pharmaceuticals_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_pharmaceuticals_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_pharmaceuticals_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_pharmaceuticals_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_pharmaceuticals_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_pharmaceuticals_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_pharmaceuticals_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_pharmaceuticals_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_pharmaceuticals_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Clothing Factory
+		#Input
+			industry_clothing_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clothing_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_clothing_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clothing_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_clothing_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clothing_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_clothing_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clothing_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_clothing_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clothing_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_clothing_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_clothing_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_clothing_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_clothing_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Consumer Goods Factory
+		#Input
+			industry_consumer_goods_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_consumer_goods_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_consumer_goods_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_consumer_goods_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_consumer_goods_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_consumer_goods_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_consumer_goods_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_consumer_goods_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_consumer_goods_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_consumer_goods_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_consumer_goods_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_consumer_goods_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_consumer_goods_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_consumer_goods_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Convoys Shipyard
+		#Input
+			industry_convoys_shipyard_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_convoys_shipyard_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_convoys_shipyard_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_convoys_shipyard_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_convoys_shipyard_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_convoys_shipyard_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_convoys_shipyard_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_convoys_shipyard_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_convoys_shipyard_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_convoys_shipyard_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_convoys_shipyard_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_convoys_shipyard_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_convoys_shipyard_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_convoys_shipyard_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Small Arms Factory
+		#Input
+			industry_small_arms_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_small_arms_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_small_arms_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_small_arms_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_small_arms_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_small_arms_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_small_arms_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_small_arms_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_small_arms_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_small_arms_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_small_arms_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_small_arms_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_small_arms_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_small_arms_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Artillery Factory
+		#Input
+			industry_artillery_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_artillery_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_artillery_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_artillery_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_artillery_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_artillery_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_artillery_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_artillery_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_artillery_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_artillery_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_artillery_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_artillery_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_artillery_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_artillery_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Tank Factory
+		#Input
+			industry_tank_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tank_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_tank_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tank_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_tank_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tank_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_tank_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tank_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_tank_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tank_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_tank_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_tank_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_tank_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tank_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Ammunition Factory
+		#Input
+			industry_ammunition_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_ammunition_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_ammunition_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_ammunition_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_ammunition_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_ammunition_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_ammunition_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_ammunition_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_ammunition_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_ammunition_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_ammunition_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_ammunition_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_ammunition_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_ammunition_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Rocket Factory
+		#Input
+			industry_rocket_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rocket_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_rocket_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rocket_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_rocket_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rocket_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_rocket_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rocket_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_rocket_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rocket_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_rocket_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_rocket_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_rocket_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_rocket_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Tools Factory
+		#Input
+			industry_tools_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tools_factory_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_tools_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tools_factory_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_tools_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tools_factory_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_tools_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tools_factory_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_tools_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tools_factory_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_tools_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_tools_factory_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_tools_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_tools_factory_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+# Services
+	#Real Estate
+		#Input
+			industry_real_estate_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_real_estate_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_real_estate_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_real_estate_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_real_estate_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_real_estate_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_real_estate_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_real_estate_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_real_estate_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_real_estate_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_real_estate_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_real_estate_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_real_estate_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_real_estate_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Construction Yard
+		#Input
+			industry_construction_yard_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_yard_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_construction_yard_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_yard_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_construction_yard_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_yard_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_construction_yard_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_yard_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_construction_yard_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_yard_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_construction_yard_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_construction_yard_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_construction_yard_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_construction_yard_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Hospital
+		#Input
+			industry_hospital_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hospital_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_hospital_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hospital_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_hospital_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hospital_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_hospital_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hospital_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_hospital_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hospital_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_hospital_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_hospital_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_hospital_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_hospital_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#School
+		#Input
+			industry_school_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_school_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_school_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_school_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_school_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_school_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_school_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_school_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_school_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_school_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_school_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_school_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_school_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_school_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#University
+		#Input
+			industry_university_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_university_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_university_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_university_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_university_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_university_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_university_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_university_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_university_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_university_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_university_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_university_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_university_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_university_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Transport Hub
+		#Input
+			industry_transport_hub_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_transport_hub_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_transport_hub_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_transport_hub_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_transport_hub_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_transport_hub_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_transport_hub_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_transport_hub_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_transport_hub_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_transport_hub_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_transport_hub_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_transport_hub_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_transport_hub_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_transport_hub_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Shipping Hub
+		#Input
+			industry_shipping_hub_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_shipping_hub_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_shipping_hub_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_shipping_hub_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_shipping_hub_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_shipping_hub_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_shipping_hub_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_shipping_hub_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_shipping_hub_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_shipping_hub_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_shipping_hub_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_shipping_hub_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_shipping_hub_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_shipping_hub_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Finance Hub
+		#Input
+			industry_finance_hub_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_finance_hub_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_finance_hub_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_finance_hub_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_finance_hub_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_finance_hub_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_finance_hub_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_finance_hub_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_finance_hub_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_finance_hub_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_finance_hub_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_finance_hub_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_finance_hub_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_finance_hub_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+	#Entertainment Hub
+		#Input
+			industry_entertainment_complex_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_entertainment_complex_input_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Ouput
+			industry_entertainment_complex_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_entertainment_complex_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Throughput
+			industry_entertainment_complex_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_entertainment_complex_throughput_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Maintenence
+			industry_entertainment_complex_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_entertainment_complex_maintenance_factor = {
+				color_type = bad
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Subsidize
+			industry_entertainment_complex_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_entertainment_complex_subsidize_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+		#Attractiveness
+			industry_entertainment_complex_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = country
+			}
+			local_industry_entertainment_complex_attractiveness_modifier = {
+				color_type = good
+				value_type = number
+				precision = 1
+				category = state
+			}
+			industry_entertainment_complex_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_industry_entertainment_complex_attractiveness_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#

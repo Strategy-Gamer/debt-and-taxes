@@ -1,0 +1,30 @@
+state={
+	id=770
+	name="STATE_770"
+	manpower=1603975
+
+	state_category=pastoral
+
+	history={
+		owner = ENG
+		add_core_of = MLW
+		victory_points = {
+			12986 1 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+	}
+
+	provinces={
+		2255 12908 12986 13209 
+	}
+
+	local_supplies=0.0 
+}

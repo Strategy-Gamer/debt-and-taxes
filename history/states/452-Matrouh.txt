@@ -1,0 +1,30 @@
+
+state={
+	id=452
+	name="STATE_452"
+
+	history={
+		owner = EGY
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			9989 1 
+		}
+		add_core_of = EGY
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		1143 5078 7079 7148 9989 10061 10127 11910 11967 12033 12091 12764 13228 
+	}
+	manpower=52556
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=9.000
+}

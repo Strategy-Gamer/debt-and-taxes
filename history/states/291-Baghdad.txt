@@ -1,0 +1,49 @@
+
+state={
+	id=291
+	name="STATE_291"
+	resources={
+		oil=15.000
+	}
+
+	history={
+		owner = IRQ
+		victory_points = {
+			2097 10 
+		}
+		victory_points = {
+			12413 1
+		}
+		victory_points = {
+			7994 1 
+		}
+		victory_points = {
+			2089 5 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+			2089 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = IRQ
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		78 2004 2089 2097 3795 7977 7994 10744 10876 12413 12726 12839 12855 13503 13504 13505 13506 13507
+	}
+	manpower=2044165
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=6.000
+}

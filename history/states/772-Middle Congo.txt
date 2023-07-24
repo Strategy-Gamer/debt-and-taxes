@@ -1,0 +1,39 @@
+
+state={
+	id=772
+	name="STATE_772"
+	resources={
+		rubber=1.000
+	}
+
+	history={
+		owner = FRA
+		add_core_of = RCG
+		victory_points = {
+			8193 2 
+		}
+		buildings = {
+			infrastructure = 2
+			12975 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_tropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		2192 3109 6008 8193 12975 
+	}
+	manpower=746415
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

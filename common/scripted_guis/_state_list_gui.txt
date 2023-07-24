@@ -1,0 +1,1318 @@
+scripted_gui = {
+	state_list = {
+		window_name = "state_list_container"
+
+		context_type = player_context
+		
+		visible = {
+			has_country_flag = list_view_open
+		}
+		
+		triggers = {
+			country_background_button_clicked_visible = {
+				check_variable = { selected_state = THIS }
+			}
+			background_button_clicked_visible = {
+				check_variable = { selected_state = controlled_states_array^i }
+			}
+			population_off_visible = {
+				NOT = { has_country_flag = population_on }
+			}
+			population_on_visible = {
+				has_country_flag = population_on
+			}
+			building_off_visible = {
+				NOT = { has_country_flag = building_on }
+			}
+			building_on_visible = {
+				has_country_flag = building_on
+			}
+			resources_off_visible = {
+				NOT = { has_country_flag = resources_on }
+			}
+			resources_on_visible = {
+				has_country_flag = resources_on
+			}
+			statistics_off_visible = {
+				has_country_flag = statistics_off
+			}
+			statistics_on_visible = {
+				NOT = { has_country_flag = statistics_off }
+			}
+
+			
+			industry_tab_button_visible = {
+				has_country_flag = building_on
+			}
+			building_tab_button_visible = {
+				has_country_flag = building_on
+			}
+			build_factory_button_visible = {
+				has_country_flag = building_on
+			}
+			industries_title_visible = {
+				has_country_flag = building_on
+			}
+			buildings_title_visible = {
+				has_country_flag = building_on
+			}
+		}
+
+		effects = {
+			time_button_click = {
+				hidden_effect = {
+					on_monthly_tick = yes
+				}
+			}
+			close_button_click = {
+				clr_country_flag = list_view_open
+			}
+			background_button_click = {
+				#Sets selected_state as the state you've selected in the menu, and gets its actual variable value
+				set_variable = { selected_state = controlled_states_array^i }
+				create_state_pie_charts = yes
+				create_population_pyramid = yes
+				create_overview_graph = yes
+				refresh_industry_list = yes
+				clr_country_flag = construction_view_open
+			}
+			country_background_button_click = {
+				set_variable = { selected_state = ROOT }
+				country_pops_update = yes
+				refresh_state_list = yes
+				create_state_pie_charts = yes
+				create_population_pyramid = yes
+				create_overview_graph = yes
+				refresh_industry_list = yes
+				clr_country_flag = construction_view_open
+			}
+			population_button_click = {
+				set_country_flag = population_on
+				clr_country_flag = building_on
+				clr_country_flag = resources_on
+				set_country_flag = statistics_off
+				
+				clr_country_flag = construction_view_open
+			}
+			building_button_click = {
+				clr_country_flag = population_on
+				set_country_flag = building_on
+				clr_country_flag = resources_on
+				set_country_flag = statistics_off
+				refresh_industry_list = yes
+			}
+			resources_button_click = {
+				clr_country_flag = population_on
+				clr_country_flag = building_on
+				set_country_flag = resources_on
+				set_country_flag = statistics_off
+
+				clr_country_flag = construction_view_open
+			}
+			statistics_button_click = {
+				clr_country_flag = statistics_off
+				clr_country_flag = building_on
+				clr_country_flag = resources_on
+				clr_country_flag = population_on
+
+				clr_country_flag = construction_view_open
+			}
+			
+			build_factory_button_click = {
+				if = {
+					limit = {
+						has_country_flag = construction_view_open
+					}
+					clr_country_flag = construction_view_open
+				}
+				else = {
+					set_country_flag = construction_view_open
+				}
+				refresh_construction_list = yes
+			}
+			industry_tab_button_click = {
+				clr_country_flag = building_tab_second_open
+			}
+			building_tab_button_click = {
+				set_country_flag = building_tab_second_open
+			}
+		}
+		
+		dynamic_lists = {
+			states_entries = {
+				array = controlled_states_array
+				entry_container = state_entry
+			}
+		}
+		
+        properties = {
+			country_population_trend = {
+				image = "[GetCountryPopulationTrendGFX]"
+			}
+			population_trend = {
+				image = "[GetStatePopulationTrendGFX]"
+			}
+		}
+	}
+	population_list = {
+		window_name = "population_list_container"
+		parent_window_name = "state_list_container"
+
+		context_type = player_context
+		
+		visible = {
+			has_country_flag = list_view_open
+			has_country_flag = population_on
+		}
+		
+		triggers = {
+			
+		}
+
+		effects = {
+			pops_population_pyramid_button_click = {
+				if = {
+					limit = {
+						has_country_flag = population_pyramid_on
+					}
+					clr_country_flag = population_pyramid_on
+				}
+				else = {
+					set_country_flag = population_pyramid_on
+					create_population_pyramid = yes
+				}
+			}
+		}
+
+		dynamic_lists = {
+			pops_religion_list = {
+				array = selected_state:pops_religion_type
+				entry_container = religion_entry
+			}
+			pops_culture_list = {
+				array = selected_state:pops_culture_type
+				entry_container = culture_entry
+			}
+			pops_ideology_list = {
+				array = selected_state:pops_ideology_type
+				entry_container = ideology_entry
+			}
+		}
+
+		properties = {
+			religion_color_block = {
+				image = "[?selected_state_pops_religion_type^i.GetValueToReligionColorSquare]"
+			}
+			culture_color_block = {
+				image = "[?selected_state_pops_culture_type^i.GetValueToCultureColorSquare]"
+			}
+			ideology_color_block = {
+				image = "[?selected_state_pops_ideology_type^i.GetValueToIdeologyColorSquare]"
+			}
+		}
+	}
+	population_pyramid = {
+		window_name = "population_pyramid_container"
+		parent_window_name = "state_list_container"
+
+		context_type = player_context
+
+		visible = {
+			has_country_flag = list_view_open
+			has_country_flag = population_on
+			has_country_flag = population_pyramid_on
+		}
+
+		dynamic_lists = {
+			population_pyramid_male_graph = {
+				array = pop_pyramid_frame
+				entry_container = population_pyramid_male_bar_entry
+			}
+			population_pyramid_female_graph = {
+				array = pop_pyramid_frame
+				entry_container = population_pyramid_female_bar_entry
+			}
+		}
+
+		properties = {
+			population_pyramid_male_bar_entry_icon = { 
+				image = "GFX_population_pyramid_bar_male_[GetPopPyramidBarWidth]x10"
+			}
+			population_pyramid_female_bar_entry_icon = { 
+				image = "GFX_population_pyramid_bar_female_[GetPopPyramidBarWidth]x10"
+			}
+		}
+	}
+	industry_list = {
+		window_name = "building_list_container"
+		parent_window_name = "state_list_container"
+
+		context_type = player_context
+		
+		visible = {
+			has_country_flag = list_view_open
+			has_country_flag = building_on
+			NOT = { has_country_flag = building_tab_second_open }
+		}
+		
+		triggers = {
+			industry_background_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_name_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_resource_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_size_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_increase_size_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_decrease_size_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			production_method_button_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_resource_output_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			resource_output_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_modifiers_icon_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_corp_ownership_icon_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_govt_ownership_icon_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_local_ownership_icon_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			industry_income_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			employment_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			priority_button_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+			subsidy_button_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+			}
+
+			industry_input_resource_0_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+				set_temp_variable = { ind_inp_r = industries_show^i }
+				set_temp_variable = { ind_inp_pm = selected_state:production_method@var:ind_inp_r }
+				OR = {
+					AND = {
+						check_variable = { ind_inp_pm = 0 }
+						check_variable = { global.industry_base_input_amount_1@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 1 }
+						check_variable = { global.industry_industrialized_input_amount_1@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 2 }
+						check_variable = { global.industry_mechanized_input_amount_1@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 3 }
+						check_variable = { global.industry_modernized_input_amount_1@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 4 }
+						check_variable = { global.industry_automatized_input_amount_1@var:ind_inp_r > 0 }
+					}
+				}
+			}
+			industry_input_resource_1_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+				set_temp_variable = { ind_inp_r = industries_show^i }
+				set_temp_variable = { ind_inp_pm = selected_state:production_method@var:ind_inp_r }
+				OR = {
+					AND = {
+						check_variable = { ind_inp_pm = 0 }
+						check_variable = { global.industry_base_input_amount_2@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 1 }
+						check_variable = { global.industry_industrialized_input_amount_2@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 2 }
+						check_variable = { global.industry_mechanized_input_amount_2@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 3 }
+						check_variable = { global.industry_modernized_input_amount_2@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 4 }
+						check_variable = { global.industry_automatized_input_amount_2@var:ind_inp_r > 0 }
+					}
+				}
+			}
+			industry_input_resource_2_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+				set_temp_variable = { ind_inp_r = industries_show^i }
+				set_temp_variable = { ind_inp_pm = selected_state:production_method@var:ind_inp_r }
+				OR = {
+					AND = {
+						check_variable = { ind_inp_pm = 0 }
+						check_variable = { global.industry_base_input_amount_3@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 1 }
+						check_variable = { global.industry_industrialized_input_amount_3@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 2 }
+						check_variable = { global.industry_mechanized_input_amount_3@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 3 }
+						check_variable = { global.industry_modernized_input_amount_3@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 4 }
+						check_variable = { global.industry_automatized_input_amount_3@var:ind_inp_r > 0 }
+					}
+				}
+			}
+			industry_input_resource_3_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+				set_temp_variable = { ind_inp_r = industries_show^i }
+				set_temp_variable = { ind_inp_pm = selected_state:production_method@var:ind_inp_r }
+				OR = {
+					AND = {
+						check_variable = { ind_inp_pm = 0 }
+						check_variable = { global.industry_base_input_amount_4@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 1 }
+						check_variable = { global.industry_industrialized_input_amount_4@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 2 }
+						check_variable = { global.industry_mechanized_input_amount_4@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 3 }
+						check_variable = { global.industry_modernized_input_amount_4@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 4 }
+						check_variable = { global.industry_automatized_input_amount_4@var:ind_inp_r > 0 }
+					}
+				}
+			}
+			industry_input_resource_4_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+				set_temp_variable = { ind_inp_r = industries_show^i }
+				set_temp_variable = { ind_inp_pm = selected_state:production_method@var:ind_inp_r }
+				OR = {
+					AND = {
+						check_variable = { ind_inp_pm = 0 }
+						check_variable = { global.industry_base_input_amount_5@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 1 }
+						check_variable = { global.industry_industrialized_input_amount_5@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 2 }
+						check_variable = { global.industry_mechanized_input_amount_5@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 3 }
+						check_variable = { global.industry_modernized_input_amount_5@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 4 }
+						check_variable = { global.industry_automatized_input_amount_5@var:ind_inp_r > 0 }
+					}
+				}
+			}
+			industry_input_resource_5_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+				set_temp_variable = { ind_inp_r = industries_show^i }
+				set_temp_variable = { ind_inp_pm = selected_state:production_method@var:ind_inp_r }
+				OR = {
+					AND = {
+						check_variable = { ind_inp_pm = 0 }
+						check_variable = { global.industry_base_input_amount_6@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 1 }
+						check_variable = { global.industry_industrialized_input_amount_6@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 2 }
+						check_variable = { global.industry_mechanized_input_amount_6@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 3 }
+						check_variable = { global.industry_modernized_input_amount_6@var:ind_inp_r > 0 }
+					}
+					AND = {
+						check_variable = { ind_inp_pm = 4 }
+						check_variable = { global.industry_automatized_input_amount_6@var:ind_inp_r > 0 }
+					}
+				}
+			}
+
+			industry_corp_ownership_icon_click_enabled = {
+				always = no
+			}
+			industry_govt_ownership_icon_click_enabled = {
+				always = no
+			}
+			industry_local_ownership_icon_click_enabled = {
+				always = yes
+			}
+
+			select_basic_production_method_button_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+
+				check_variable = { industries_pm_selected = industries_show^i }
+			}
+			select_basic_production_method_button_click_enabled = {
+				set_temp_variable = { industry_token = industries_show^i }
+				set_temp_variable = { tech_token = global.industry_base_tech_unlock@var:industry_token }
+
+				NOT = { check_variable = { tech_token = -1 } }
+				OR = {
+					check_variable = { tech_token = 0 }
+					has_tech = var:tech_token
+				}
+			}
+			
+			select_industrialized_production_method_button_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+
+				check_variable = { industries_pm_selected = industries_show^i }
+			}
+			select_industrialized_production_method_button_click_enabled = {
+				set_temp_variable = { industry_token = industries_show^i }
+				set_temp_variable = { tech_token = global.industry_industrialized_tech_unlock@var:industry_token }
+
+				NOT = { check_variable = { tech_token = -1 } }
+				OR = {
+					check_variable = { tech_token = 0 }
+					has_tech = var:tech_token
+				}
+			}
+			
+			select_mechanized_production_method_button_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+
+				check_variable = { industries_pm_selected = industries_show^i }
+			}
+			select_mechanized_production_method_button_click_enabled = {
+				set_temp_variable = { industry_token = industries_show^i }
+				set_temp_variable = { tech_token = global.industry_mechanized_tech_unlock@var:industry_token }
+
+				NOT = { check_variable = { tech_token = -1 } }
+				OR = {
+					check_variable = { tech_token = 0 }
+					has_tech = var:tech_token
+				}
+			}
+			
+			select_modernized_production_method_button_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+
+				check_variable = { industries_pm_selected = industries_show^i }
+			}
+			select_modernized_production_method_button_click_enabled = {
+				set_temp_variable = { industry_token = industries_show^i }
+				set_temp_variable = { tech_token = global.industry_modernized_tech_unlock@var:industry_token }
+
+				NOT = { check_variable = { tech_token = -1 } }
+				OR = {
+					check_variable = { tech_token = 0 }
+					has_tech = var:tech_token
+				}
+			}
+			
+			industry_pm_select_box_visible = {
+				NOT = { check_variable = { industries_show^i = 0 } }
+
+				check_variable = { industries_pm_selected = industries_show^i }
+			}
+		}
+
+		effects = {
+			industry_increase_size_click = {
+				var:selected_state = {
+					set_temp_variable = { industry_token = PREV.industries_show^i }
+					set_temp_variable = { x_temp = 1 }
+					construct_x_industries = yes
+				}
+			}
+			industry_decrease_size_click = {
+				set_temp_variable = { ind_size_i = industries_show^i }
+				subtract_from_variable = { selected_state:size@var:ind_size_i = 1 }
+				if = {
+					limit = {
+						check_variable = { selected_state:size@var:ind_size_i < 0 }
+					}
+					set_variable = { selected_state:size@var:ind_size_i = 0 }
+				}
+			}
+
+			production_method_button_click = {
+				if = {
+					limit = {
+						NOT = { check_variable = { industries_pm_selected = industries_show^i } }
+					}
+					set_variable = { industries_pm_selected = industries_show^i }
+				}
+				else = {
+					clear_variable = industries_pm_selected
+				}
+			}
+			select_basic_production_method_button_click = {
+				var:selected_state = {
+					set_temp_variable = { industry_token = PREV.industries_show^i }
+					set_temp_variable = { pm_num = 0 }
+					industry_change_production_method = yes
+					pops_update = yes
+				}
+				clear_variable = industries_pm_selected
+			}
+			select_industrialized_production_method_button_click = {
+				var:selected_state = {
+					set_temp_variable = { industry_token = PREV.industries_show^i }
+					set_temp_variable = { pm_num = 1 }
+					industry_change_production_method = yes
+					pops_update = yes
+				}
+				clear_variable = industries_pm_selected
+			}
+			select_mechanized_production_method_button_click = {
+				var:selected_state = {
+					set_temp_variable = { industry_token = PREV.industries_show^i }
+					set_temp_variable = { pm_num = 2 }
+					industry_change_production_method = yes
+					pops_update = yes
+				}
+				clear_variable = industries_pm_selected
+			}
+			select_modernized_production_method_button_click = {
+				var:selected_state = {
+					set_temp_variable = { industry_token = PREV.industries_show^i }
+					set_temp_variable = { pm_num = 3 }
+					industry_change_production_method = yes
+					pops_update = yes
+				}
+				clear_variable = industries_pm_selected
+			}
+
+			priority_button_click = {
+				set_temp_variable = { ind_pri_i = industries_show^i }
+				add_to_variable = { selected_state:priority@var:ind_pri_i = 1 }
+				if = {
+					limit = {
+						check_variable = { selected_state:priority@var:ind_pri_i > 3 }
+					}
+					set_variable = { selected_state:priority@var:ind_pri_i = 0 }
+				}
+			}
+			priority_button_right_click = {
+				set_temp_variable = { ind_pri_i = industries_show^i }
+				subtract_from_variable = { selected_state:priority@var:ind_pri_i = 1 }
+				if = {
+					limit = {
+						check_variable = { selected_state:priority@var:ind_pri_i < 0 }
+					}
+					set_variable = { selected_state:priority@var:ind_pri_i = 3 }
+				}
+			}
+			subsidy_button_click = {
+				set_temp_variable = { ind_sub_i = industries_show^i }
+				add_to_variable = { selected_state:subsidy@var:ind_sub_i = 1 }
+				if = {
+					limit = {
+						check_variable = { selected_state:subsidy@var:ind_sub_i > 3 }
+					}
+					set_variable = { selected_state:subsidy@var:ind_sub_i = 0 }
+				}
+			}
+			subsidy_button_right_click = {
+				set_temp_variable = { ind_sub_i = industries_show^i }
+				subtract_from_variable = { selected_state:subsidy@var:ind_sub_i = 1 }
+				if = {
+					limit = {
+						check_variable = { selected_state:subsidy@var:ind_sub_i < 0 }
+					}
+					set_variable = { selected_state:subsidy@var:ind_sub_i = 3 }
+				}
+			}
+			expansion_button_click = {
+				set_temp_variable = { ind_sub_i = industries_show^i }
+				add_to_variable = { selected_state:expansion@var:ind_sub_i = 1 }
+				if = {
+					limit = {
+						check_variable = { selected_state:expansion@var:ind_sub_i > 4 }
+					}
+					set_variable = { selected_state:expansion@var:ind_sub_i = 0 }
+				}
+			}
+			expansion_button_right_click = {
+				set_temp_variable = { ind_sub_i = industries_show^i }
+				subtract_from_variable = { selected_state:expansion@var:ind_sub_i = 1 }
+				if = {
+					limit = {
+						check_variable = { selected_state:expansion@var:ind_sub_i < 0 }
+					}
+					set_variable = { selected_state:expansion@var:ind_sub_i = 4 }
+				}
+			}
+		}
+		
+		dynamic_lists = {
+			industries_list = {
+				array = industries_show
+				entry_container = industry
+			}
+		}
+		
+		properties = {
+			industry_resource = {
+				image = "[GetIndustryResourceIcon]"
+			}
+			industry_resource_output = {
+				image = "[GetIndustryResourceIcon]"
+			}
+			employment = {
+				image = "[GetIndustryEmploymentIcon]"
+			}
+			industry_input_resource_0 = {
+				image = "[GetIndustryInput1Icon]"
+			}
+			industry_input_resource_1 = {
+				image = "[GetIndustryInput2Icon]"
+			}
+			industry_input_resource_2 = {
+				image = "[GetIndustryInput3Icon]"
+			}
+			industry_input_resource_3 = {
+				image = "[GetIndustryInput4Icon]"
+			}
+			industry_input_resource_4 = {
+				image = "[GetIndustryInput5Icon]"
+			}
+			industry_input_resource_5 = {
+				image = "[GetIndustryInput6Icon]"
+			}
+			production_method_button = {
+				image = "[GetIndustryProductionMethodButton]"
+			}
+			priority_button = {
+				image = "[GetIndustryPriorityIcon]"
+			}
+			subsidy_button = {
+				image = "[GetIndustrySubsidyButton]"
+			}
+			expansion_button = {
+				image = "[GetIndustryExpansionButton]"
+			}
+		}
+	}
+	building_tab = {
+		window_name = "building_tab_container"
+		parent_window_name = "state_list_container"
+
+		context_type = player_context
+		
+		visible = {
+			has_country_flag = list_view_open
+			has_country_flag = building_on
+			has_country_flag = building_tab_second_open
+		}
+
+		effects = {
+			market_capital_button_click = {
+				if = { # Click on Trade Tab
+					limit = {
+						check_variable = { selected_market = selected_state }
+					}
+				}
+				else_if = { # View
+					limit = {
+						OR = {
+							check_variable = { selected_state > 0 }
+							var:selected_state = {
+								check_variable = { controller:market_capital = THIS }
+							}
+						}
+					}
+					set_variable = { selected_market = selected_state:controller }
+					set_variable = { selected_state = selected_state:controller }
+					country_update_trade_display = yes
+				}
+				else = { # Go To
+					var:selected_state = { set_variable = { ROOT.selected_state = controller:market_capital } }
+				}
+			}
+		}
+	}
+	resources_list = {
+		window_name = "resources_list_container"
+		parent_window_name = "state_list_container"
+
+		context_type = player_context
+		
+		visible = {
+			has_country_flag = list_view_open
+			has_country_flag = resources_on
+		}
+		
+		triggers = {
+
+		}
+
+		effects = {
+			#Resource Selection
+				#Natural Resources
+					foodstuffs_entry_background_click = {
+						set_variable = { selected_resource = token:resource_foodstuffs }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					lumber_entry_background_click = {
+						set_variable = { selected_resource = token:resource_lumber }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					coal_entry_background_click = {
+						set_variable = { selected_resource = token:resource_coal }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					iron_entry_background_click = {
+						set_variable = { selected_resource = token:resource_iron }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					fiber_entry_background_click = {
+						set_variable = { selected_resource = token:resource_fiber }
+                		clr_country_flag = new_trade_route_view_open
+					}
+
+					sulfur_entry_background_click = {
+						set_variable = { selected_resource = token:resource_sulfur }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					copper_entry_background_click = {
+						set_variable = { selected_resource = token:resource_copper }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					aluminum_entry_background_click = {
+						set_variable = { selected_resource = token:resource_aluminum }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					tungsten_entry_background_click = {
+						set_variable = { selected_resource = token:resource_tungsten }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					chromium_entry_background_click = {
+						set_variable = { selected_resource = token:resource_chromium }
+                		clr_country_flag = new_trade_route_view_open
+					}
+
+					crude_oil_entry_background_click = {
+						set_variable = { selected_resource = token:resource_crude_oil }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					rubber_entry_background_click = {
+						set_variable = { selected_resource = token:resource_rubber }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					precious_metals_entry_background_click = {
+						set_variable = { selected_resource = token:resource_precious_metals }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					rare_earth_metals_entry_background_click = {
+						set_variable = { selected_resource = token:resource_rare_earth_metals }
+                		clr_country_flag = new_trade_route_view_open
+					}
+				#
+				#Produced Resources
+					steel_entry_background_click = {
+						set_variable = { selected_resource = token:resource_steel }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					cement_entry_background_click = {
+						set_variable = { selected_resource = token:resource_cement }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					silicates_entry_background_click = {
+						set_variable = { selected_resource = token:resource_silicates }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					tools_entry_background_click = {
+						set_variable = { selected_resource = token:resource_tools }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					fabric_entry_background_click = {
+						set_variable = { selected_resource = token:resource_fabric }
+                		clr_country_flag = new_trade_route_view_open
+					}
+
+					groceries_entry_background_click = {
+						set_variable = { selected_resource = token:resource_groceries }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					clothing_entry_background_click = {
+						set_variable = { selected_resource = token:resource_clothing }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					consumer_goods_entry_background_click = {
+						set_variable = { selected_resource = token:resource_consumer_goods }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					electronics_entry_background_click = {
+						set_variable = { selected_resource = token:resource_electronics }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					computers_entry_background_click = {
+						set_variable = { selected_resource = token:resource_computers }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					
+					small_arms_entry_background_click = {
+						set_variable = { selected_resource = token:resource_small_arms }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					artillery_entry_background_click = {
+						set_variable = { selected_resource = token:resource_artillery }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					tanks_entry_background_click = {
+						set_variable = { selected_resource = token:resource_tanks }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					ammunition_entry_background_click = {
+						set_variable = { selected_resource = token:resource_ammunition }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					rockets_entry_background_click = {
+						set_variable = { selected_resource = token:resource_rockets }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					
+					electricity_entry_background_click = {
+						set_variable = { selected_resource = token:resource_electricity }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					hydrocarbons_entry_background_click = {
+						set_variable = { selected_resource = token:resource_hydrocarbons }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					automobiles_entry_background_click = {
+						set_variable = { selected_resource = token:resource_automobiles }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					convoys_entry_background_click = {
+						set_variable = { selected_resource = token:resource_convoys }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					airplanes_entry_background_click = {
+						set_variable = { selected_resource = token:resource_airplanes }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					
+					machinery_entry_background_click = {
+						set_variable = { selected_resource = token:resource_machinery }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					plastics_entry_background_click = {
+						set_variable = { selected_resource = token:resource_plastics }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					chemicals_entry_background_click = {
+						set_variable = { selected_resource = token:resource_chemicals }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					fertilizer_entry_background_click = {
+						set_variable = { selected_resource = token:resource_fertilizer }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					pharmaceuticals_entry_background_click = {
+						set_variable = { selected_resource = token:resource_pharmaceuticals }
+                		clr_country_flag = new_trade_route_view_open
+					}
+				#
+				#Service Resources
+					construction_entry_background_click = {
+						set_variable = { selected_resource = token:resource_construction }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					housing_entry_background_click = {
+						set_variable = { selected_resource = token:resource_housing }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					healthcare_entry_background_click = {
+						set_variable = { selected_resource = token:resource_healthcare }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					basic_education_entry_background_click = {
+						set_variable = { selected_resource = token:resource_basic_education }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					higher_education_entry_background_click = {
+						set_variable = { selected_resource = token:resource_higher_education }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					
+					transport_entry_background_click = {
+						set_variable = { selected_resource = token:resource_transport }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					shipping_entry_background_click = {
+						set_variable = { selected_resource = token:resource_shipping }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					finance_entry_background_click = {
+						set_variable = { selected_resource = token:resource_finance }
+                		clr_country_flag = new_trade_route_view_open
+					}
+					entertainment_entry_background_click = {
+						set_variable = { selected_resource = token:resource_entertainment }
+                		clr_country_flag = new_trade_route_view_open
+					}
+				#
+			#
+		}
+		
+		dynamic_lists = {
+		}
+		
+		properties = {
+			selected_resource_icon = {
+				image = "GFX_[?selected_resource.GetTokenKey]"
+			}
+			cost_icon = {
+				image = "[GetResourceSelectedCostGFX]"
+			}
+		}
+	}
+	statistics_list = {
+		window_name = "statistics_list_container"
+		parent_window_name = "state_list_container"
+
+		context_type = player_context
+		
+		visible = {
+			has_country_flag = list_view_open
+			NOT = { has_country_flag = statistics_off }
+		}
+		
+		triggers = {
+			graph_population_button_unpressed_visible = {
+				NOT = { check_variable = { state_graph_type = 0 } }
+			}
+			graph_gdp_button_unpressed_visible = {
+				NOT = { check_variable = { state_graph_type = 1 } }
+			}
+			graph_standard_of_living_button_unpressed_visible = {
+				NOT = { check_variable = { state_graph_type = 2 } }
+			}
+			graph_cost_of_living_button_unpressed_visible = {
+				NOT = { check_variable = { state_graph_type = 3 } }
+			}
+			graph_wealth_button_unpressed_visible = {
+				NOT = { check_variable = { state_graph_type = 4 } }
+			}
+			graph_imports_button_unpressed_visible = {
+				NOT = { check_variable = { state_graph_type = 5 } }
+			}
+			graph_exports_button_unpressed_visible = {
+				NOT = { check_variable = { state_graph_type = 6 } }
+			}
+			graph_unemployment_button_unpressed_visible = {
+				NOT = { check_variable = { state_graph_type = 7 } }
+			}
+			graph_workforce_button_unpressed_visible = {
+				NOT = { check_variable = { state_graph_type = 8 } }
+			}
+		}
+
+		effects = {
+			graph_population_button_unpressed_click = {
+				set_variable = { state_graph_type = 0 }
+				create_overview_graph = yes
+			}
+			graph_gdp_button_unpressed_click = {
+				set_variable = { state_graph_type = 1 }
+				create_overview_graph = yes
+			}
+			graph_standard_of_living_button_unpressed_click = {
+				set_variable = { state_graph_type = 2 }
+				create_overview_graph = yes
+			}
+			graph_cost_of_living_button_unpressed_click = {
+				set_variable = { state_graph_type = 3 }
+				create_overview_graph = yes
+			}
+			graph_wealth_button_unpressed_click = {
+				set_variable = { state_graph_type = 4 }
+				create_overview_graph = yes
+			}
+			graph_imports_button_unpressed_click = {
+				set_variable = { state_graph_type = 5 }
+				create_overview_graph = yes
+			}
+			graph_exports_button_unpressed_click = {
+				set_variable = { state_graph_type = 6 }
+				create_overview_graph = yes
+			}
+			graph_unemployment_button_unpressed_click = {
+				set_variable = { state_graph_type = 7 }
+				create_overview_graph = yes
+			}
+			graph_workforce_button_unpressed_click = {
+				set_variable = { state_graph_type = 8 }
+				create_overview_graph = yes
+			}
+		}
+		
+		dynamic_lists = {
+
+			overview_graph = {
+				array = state_graph_amount_array
+				entry_container = graph_point_entry
+			}
+		}
+		
+		properties = {
+			#Overview
+			overview_life_needs = {
+				image = "GFX_pops_life_needs_fulfilled_strip"
+				frame = selected_state:pops_life_needs_fulfilled_frame
+			}
+			overview_daily_needs = {
+				image = "GFX_pops_everyday_needs_fulfilled_strip"
+				frame = selected_state:pops_daily_needs_fulfilled_frame
+			}
+			overview_luxury_needs = {
+				image = "GFX_pops_luxury_needs_fulfilled_strip"
+				frame = selected_state:pops_luxury_needs_fulfilled_frame
+			}
+			
+			#Graph
+			graph_point_icon = {
+				y = state_graph_y_array^i
+				frame = state_graph_color_array^i
+			}
+
+			#Goods Market
+			top_production_resource_1_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_produced_type^0
+			}
+			top_production_resource_2_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_produced_type^1
+			}
+			top_production_resource_3_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_produced_type^2
+			}
+			top_production_resource_4_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_produced_type^3
+			}
+			top_production_resource_5_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_produced_type^4
+			}
+			top_production_resource_6_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_produced_type^5
+			}
+			top_production_resource_7_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_produced_type^6
+			}
+			top_production_resource_8_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_produced_type^7
+			}
+			
+			top_consumption_resource_1_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_consumption_type^0
+			}
+			top_consumption_resource_2_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_consumption_type^1
+			}
+			top_consumption_resource_3_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_consumption_type^2
+			}
+			top_consumption_resource_4_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_consumption_type^3
+			}
+			top_consumption_resource_5_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_consumption_type^4
+			}
+			top_consumption_resource_6_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_consumption_type^5
+			}
+			top_consumption_resource_7_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_consumption_type^6
+			}
+			top_consumption_resource_8_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_consumption_type^7
+			}
+			
+			top_imports_resource_1_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_imports_type^0
+			}
+			top_imports_resource_2_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_imports_type^1
+			}
+			top_imports_resource_3_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_imports_type^2
+			}
+			top_imports_resource_4_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_imports_type^3
+			}
+			
+			top_exports_resource_1_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_exports_type^0
+			}
+			top_exports_resource_2_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_exports_type^1
+			}
+			top_exports_resource_3_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_exports_type^2
+			}
+			top_exports_resource_4_icon = {
+				image = "GFX_resources_strip"
+				frame = selected_state:resources_top_exports_type^3
+			}
+		}
+	}
+	construction_list = {
+		window_name = "industry_construction_container"
+		parent_window_name = "state_list_container"
+
+		context_type = player_context
+
+		visible = {
+			has_country_flag = construction_view_open
+		}
+
+		triggers = {
+			construction_entry_background_click_enabled = {
+				set_temp_variable = { industry_token = construction_show^i }
+				if = {
+					limit = {
+						check_variable = { construction_pm_selected = 0 }
+					}
+					set_temp_variable = { tech_token = global.industry_base_tech_unlock@var:industry_token }
+				}
+				else_if = {
+					limit = {
+						check_variable = { construction_pm_selected = 1 }
+					}
+					set_temp_variable = { tech_token = global.industry_industrialized_tech_unlock@var:industry_token }
+				}
+				else_if = {
+					limit = {
+						check_variable = { construction_pm_selected = 2 }
+					}
+					set_temp_variable = { tech_token = global.industry_mechanized_tech_unlock@var:industry_token }
+				}
+				else_if = {
+					limit = {
+						check_variable = { construction_pm_selected = 3 }
+					}
+					set_temp_variable = { tech_token = global.industry_modernized_tech_unlock@var:industry_token }
+				}
+
+				NOT = { check_variable = { tech_token = -1 } }
+				OR = {
+					check_variable = { tech_token = 0 }
+					has_tech = var:tech_token
+				}
+			}
+			industry_construction_background_visible = {
+				has_country_flag = construction_view_open
+			}
+			construction_entry_background_visible = {
+				has_country_flag = construction_view_open
+			}
+		}
+
+		effects = {
+			construction_pm_button_click = {
+				add_to_variable = { construction_pm_selected = 1 }
+				if = {
+					limit = {
+						check_variable = { construction_pm_selected > 3 }
+					}
+					set_variable = { construction_pm_selected = 3 }
+				}
+			}
+			construction_pm_button_right_click = {
+				subtract_from_variable = { construction_pm_selected = 1 }
+				if = {
+					limit = {
+						check_variable = { construction_pm_selected < 0 }
+					}
+					set_variable = { construction_pm_selected = 0 }
+				}
+			}
+
+			construction_entry_background_click = {
+				var:selected_state = {
+					set_temp_variable = { industry_token = PREV.construction_show^i }
+					set_temp_variable = { x_temp = 1 }
+					set_variable = { production_method@var:industry_token = PREV.construction_pm_selected }
+					construct_x_industries = yes
+				}
+				clr_country_flag = construction_view_open
+			}
+		}
+
+		dynamic_lists = {
+			construction_list = {
+				array = construction_show
+				entry_container = construction_entry
+			}
+		}
+
+		properties = {
+			construction_entry_resource = {
+				image = "[GetIndustriesConstructionResourceIcon]"
+			}
+			construction_pm_button = {
+				image = "[GetIndustriesConstructionProductionMethodButton]"
+			}
+		}
+	}
+}

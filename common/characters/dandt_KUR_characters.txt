@@ -1,0 +1,47 @@
+characters = {
+	#
+		KUR_ibrahim_heski = {
+			name = "Ibrahim Heski"
+			#https://en.wikipedia.org/wiki/Ibrahim_Heski
+			portraits = {
+				civilian = {
+					large = GFX_portrait_KUR_ibrahim_heski
+				}
+			}
+			country_leader = {
+				ideology = liberalism
+			}
+			#ideology_agrarian
+		}
+		KUR_ihsan_nuri = {
+			name = ""
+			#https://en.wikipedia.org/wiki/Ihsan_Nuri
+			portraits = {
+				civilian = {
+					large = GFX_portrait_KUR_ihsan_nuri
+				}
+			}
+			#ideology_stratocratic
+		}
+		KUR_ferzende_beg = {
+			name = "Ferzende Beg"
+			#https://en.wikipedia.org/wiki/Ferzende
+			portraits = {
+				civilian = {
+					large = GFX_portrait_KUR_ferzende_beg
+				}
+			}
+			#ideology_socialist
+		}
+		KUR_halis_ozturk = {
+			name = "Halis Ozturk"
+			#https://en.wikipedia.org/wiki/Halis_%C3%96zt%C3%BCrk
+			portraits = {
+				civilian = {
+					large = GFX_portrait_KUR_halis_ozturk
+				}
+			}
+			#ideology_conservative
+		}
+	#
+}

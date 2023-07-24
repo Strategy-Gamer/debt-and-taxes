@@ -1,0 +1,39 @@
+1840 - The Blueprint
+1845 - The Sewing Machine
+1845 - Rubber Tires
+1847 - Antiseptics
+1852 - Gyroscope
+1856 - Pasteurization
+1856 - Bessemer Process
+1856 - Synthetic Dye
+1857 - Cowper Stove
+1857 - Siemens Regenerative Furnace
+1858 - Rotary Washing Machine
+1858 - Coal-Based Internal Combustion Engine
+1858 - Franklin Press
+1860 - Steel Railways (implementation)
+1862 - The Machine Gun
+1866 - The Tin Can
+1867 - Dynamite
+1867 - Typewriter
+1872 - Mail-Order Catalog
+1873 - Barbed Wire
+1876 - The Telephone
+1876 - 4 Stroke Internal Combustion Engine
+1878 - Moving Pictures
+1879 - Incandescent Light-Blub
+1882 - Reciprocating Engines (Coal Power Plant I)
+1884 - Fountain Pen
+1884 - The Cash Register
+1884 - The Steam Turbine
+1885 - Combustion-Based Automobile
+1887 - Radar
+1888 - AC-Motor & Transformer
+1891 - Power Station
+1892 - Diesel-Based Internal Combustion Engine
+1899 - Vacuum Cleaner
+1906 - Steam Turbines (Coal Power Plant 2)
+
+
+1939 - Solar Cells (Prototype Panels)
+1954 - Improved Cells (Viable Panels)

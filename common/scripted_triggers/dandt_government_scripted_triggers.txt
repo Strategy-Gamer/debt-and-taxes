@@ -1,0 +1,72 @@
+has_communist_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_communist_government_tt
+		check_variable = {
+			var = govt_coalition_leader
+			value = token:ideology_communist
+		}
+	}
+}
+has_socialist_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_socialist_government_tt
+		check_variable = {
+			var = govt_coalition_leader
+			value = token:ideology_socialist
+		}
+	}
+}
+has_liberal_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_liberal_government_tt
+		check_variable = {
+			var = govt_coalition_leader
+			value = token:ideology_liberal
+		}
+	}
+}
+has_libertarian_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_libertarian_government_tt
+		check_variable = {
+			var = govt_coalition_leader
+			value = token:ideology_agrarian
+		}
+	}
+}
+has_conservative_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_conservative_government_tt
+		check_variable = {
+			var = govt_coalition_leader
+			value = token:ideology_conservative
+		}
+	}
+}
+has_reactionary_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_reactionary_government_tt
+		check_variable = {
+			var = govt_coalition_leader
+			value = token:ideology_reactionary
+		}
+	}
+}
+has_fascist_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_fascist_government_tt
+		check_variable = {
+			var = govt_coalition_leader
+			value = token:ideology_fascist
+		}
+	}
+}
+has_stratocratic_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_stratocratic_government_tt
+		check_variable = {
+			var = govt_coalition_leader
+			value = token:ideology_stratocratic
+		}
+	}
+}

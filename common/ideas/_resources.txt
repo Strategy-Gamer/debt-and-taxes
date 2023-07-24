@@ -1,0 +1,148 @@
+ideas = {
+	resources_tokens = {
+		resource_crude_oil = {
+			allowed = { always = no }
+		}
+		resource_aluminum = {
+			allowed = { always = no }
+		}
+		resource_rubber = {
+			allowed = { always = no }
+		}
+		resource_tungsten = {
+			allowed = { always = no }
+		}
+		resource_iron = {
+			allowed = { always = no }
+		}
+		resource_chromium = {
+			allowed = { always = no }
+		}
+		resource_copper = {
+			allowed = { always = no }
+		}
+		resource_precious_metals = {
+			allowed = { always = no }
+		}
+		resource_coal = {
+			allowed = { always = no }
+		}
+		resource_lumber = {
+			allowed = { always = no }
+		}
+		resource_fiber = {
+			allowed = { always = no }
+		}
+		resource_foodstuffs = {
+			allowed = { always = no }
+		}
+		resource_steel = {
+			allowed = { always = no }
+		}
+		resource_electricity = {
+			allowed = { always = no }
+		}
+		resource_rare_earth_metals = {
+			allowed = { always = no }
+		}
+		resource_cement = {
+			allowed = { always = no }
+		}
+		resource_silicates = {
+			allowed = { always = no }
+		}
+		resource_chemicals = {
+			allowed = { always = no }
+		}
+		resource_fabric = {
+			allowed = { always = no }
+		}
+		resource_machinery = {
+			allowed = { always = no }
+		}
+		resource_plastics = {
+			allowed = { always = no }
+		}
+		resource_fertilizer = {
+			allowed = { always = no }
+		}
+		resource_hydrocarbons = {
+			allowed = { always = no }
+		}
+		resource_automobiles = {
+			allowed = { always = no }
+		}
+		resource_airplanes = {
+			allowed = { always = no }
+		}
+		resource_computers = {
+			allowed = { always = no }
+		}
+		resource_electronics = {
+			allowed = { always = no }
+		}
+		resource_groceries = {
+			allowed = { always = no }
+		}
+		resource_pharmaceuticals = {
+			allowed = { always = no }
+		}
+		resource_clothing = {
+			allowed = { always = no }
+		}
+		resource_consumer_goods = {
+			allowed = { always = no }
+		}
+		resource_sulfur = {
+			allowed = { always = no }
+		}
+		resource_convoys = {
+			allowed = { always = no }
+		}
+		resource_small_arms = {
+			allowed = { always = no }
+		}
+		resource_artillery = {
+			allowed = { always = no }
+		}
+		resource_tanks = {
+			allowed = { always = no }
+		}
+		resource_ammunition = {
+			allowed = { always = no }
+		}
+		resource_rockets = {
+			allowed = { always = no }
+		}
+		resource_construction = {
+			allowed = { always = no }
+		}
+		resource_tools = {
+			allowed = { always = no }
+		}
+		resource_healthcare = {
+			allowed = { always = no }
+		}
+		resource_basic_education = {
+			allowed = { always = no }
+		}
+		resource_higher_education = {
+			allowed = { always = no }
+		}
+		resource_transport = {
+			allowed = { always = no }
+		}
+		resource_shipping = {
+			allowed = { always = no }
+		}
+		resource_finance = {
+			allowed = { always = no }
+		}
+		resource_housing = {
+			allowed = { always = no }
+		}
+		resource_entertainment = {
+			allowed = { always = no }
+		}
+	}
+}

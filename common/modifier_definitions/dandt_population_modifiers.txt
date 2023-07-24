@@ -1,0 +1,75 @@
+# Life Needs
+	local_life_needs_modifier = {
+		color_type = bad
+		value_type = number
+		precision = 2
+		category = state
+	}
+	life_needs_modifier = {
+		color_type = bad
+		value_type = number
+		precision = 2
+		category = country
+	}
+	local_life_needs_factor = {
+		color_type = bad
+		value_type = percentage
+		precision = 1
+		category = state
+	}
+	life_needs_factor = {
+		color_type = bad
+		value_type = percentage
+		precision = 1
+		category = country
+	}
+# Daily Needs
+	local_daily_needs_modifier = {
+		color_type = bad
+		value_type = number
+		precision = 2
+		category = state
+	}
+	daily_needs_modifier = {
+		color_type = bad
+		value_type = number
+		precision = 2
+		category = country
+	}
+	local_daily_needs_factor = {
+		color_type = bad
+		value_type = percentage
+		precision = 1
+		category = state
+	}
+	daily_needs_factor = {
+		color_type = bad
+		value_type = percentage
+		precision = 1
+		category = country
+	}
+# Luxury Needs
+	local_luxury_needs_modifier = {
+		color_type = bad
+		value_type = number
+		precision = 2
+		category = state
+	}
+	luxury_needs_modifier = {
+		color_type = bad
+		value_type = number
+		precision = 2
+		category = country
+	}
+	local_luxury_needs_factor = {
+		color_type = bad
+		value_type = percentage
+		precision = 1
+		category = state
+	}
+	luxury_needs_factor = {
+		color_type = bad
+		value_type = percentage
+		precision = 1
+		category = country
+	}

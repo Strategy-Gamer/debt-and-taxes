@@ -1,0 +1,37 @@
+
+state={
+	id=3
+	name="STATE_3"
+	resources={
+		aluminium=18.000
+	}
+
+	history={
+		owner = SWI
+		victory_points = {
+			9620 15 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+		}
+		add_core_of = SWI
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		6666 6683 9620 9622 9638 11590 13124 
+	}
+	manpower=1811689
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

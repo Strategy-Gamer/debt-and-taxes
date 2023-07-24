@@ -1,0 +1,1009 @@
+#	Example:
+#
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+########################################################
+### D&T's history and constants file, essentially	####
+########################################################
+
+dandt_constants = {
+	#Resources
+		set_variable = { global.resource_type_amount = 50 } #Number of different resources + 2
+
+		#Resource List
+			#add_to_array = { global.resources_token_array = 0 } #
+			#add_to_array = { global.resources_token_array = 0 } #
+			add_to_array = { global.resources_token_array = token:resource_crude_oil } #Crude Oil
+			add_to_array = { global.resources_token_array = token:resource_aluminum } #Aluminum
+			add_to_array = { global.resources_token_array = token:resource_rubber } #Rubber
+			add_to_array = { global.resources_token_array = token:resource_tungsten } #Tungsten
+			add_to_array = { global.resources_token_array = token:resource_iron } #Iron
+			add_to_array = { global.resources_token_array = token:resource_chromium } #Chromium
+			add_to_array = { global.resources_token_array = token:resource_copper } #Copper
+			add_to_array = { global.resources_token_array = token:resource_precious_metals } #Precious Metals
+			add_to_array = { global.resources_token_array = token:resource_coal } #Coal
+			add_to_array = { global.resources_token_array = token:resource_lumber } #Lumber
+			add_to_array = { global.resources_token_array = token:resource_fiber } #Fiber
+			add_to_array = { global.resources_token_array = token:resource_foodstuffs } #Foodstuffs
+			add_to_array = { global.resources_token_array = token:resource_electricity } #Electricity
+			add_to_array = { global.resources_token_array = token:resource_steel } #Steel
+			add_to_array = { global.resources_token_array = token:resource_rare_earth_metals } #Rare Earth Metals - CHANGED
+			add_to_array = { global.resources_token_array = token:resource_cement } #Cement - CHANGED
+			add_to_array = { global.resources_token_array = token:resource_silicates } #Silicates - CHANGED
+			add_to_array = { global.resources_token_array = token:resource_chemicals } #Chemicals
+			add_to_array = { global.resources_token_array = token:resource_fabric } #Fabric
+			add_to_array = { global.resources_token_array = token:resource_machinery } #Machinery
+			add_to_array = { global.resources_token_array = token:resource_plastics } #Plastics
+			add_to_array = { global.resources_token_array = token:resource_fertilizer } #Fertilizer - CHANGED
+			add_to_array = { global.resources_token_array = token:resource_hydrocarbons } #Hydrocarbons
+			add_to_array = { global.resources_token_array = token:resource_automobiles } #Automobiles
+			add_to_array = { global.resources_token_array = token:resource_airplanes } #Airplanes
+			add_to_array = { global.resources_token_array = token:resource_computers } #Computers
+			add_to_array = { global.resources_token_array = token:resource_electronics } #Electronics
+			add_to_array = { global.resources_token_array = token:resource_groceries } #Groceries
+			add_to_array = { global.resources_token_array = token:resource_pharmaceuticals } #Pharmaceuticals
+			add_to_array = { global.resources_token_array = token:resource_clothing } #Clothing
+			add_to_array = { global.resources_token_array = token:resource_consumer_goods } #Consumer Goods
+			add_to_array = { global.resources_token_array = token:resource_sulfur } #Sulfur
+			add_to_array = { global.resources_token_array = token:resource_convoys } #Convoys - CHANGED
+			add_to_array = { global.resources_token_array = token:resource_small_arms } #Small Arms
+			add_to_array = { global.resources_token_array = token:resource_artillery } #Artillery
+			add_to_array = { global.resources_token_array = token:resource_tanks } #Tanks
+			add_to_array = { global.resources_token_array = token:resource_ammunition } #Ammunition
+			add_to_array = { global.resources_token_array = token:resource_rockets } #Rockets
+			add_to_array = { global.resources_token_array = token:resource_construction } #Construction
+			add_to_array = { global.resources_token_array = token:resource_tools } #Tools
+			add_to_array = { global.resources_token_array = token:resource_healthcare } #Healthcare
+			add_to_array = { global.resources_token_array = token:resource_basic_education } #Basic Education
+			add_to_array = { global.resources_token_array = token:resource_higher_education } #Higher Education
+			add_to_array = { global.resources_token_array = token:resource_transport } #Transport
+			add_to_array = { global.resources_token_array = token:resource_shipping } #Shipping
+			add_to_array = { global.resources_token_array = token:resource_finance } #Finance
+			add_to_array = { global.resources_token_array = token:resource_housing } #Housing
+			add_to_array = { global.resources_token_array = token:resource_entertainment } #Entertainment
+
+			add_to_array = { global.natural_resources_array = token:resource_foodstuffs }
+			add_to_array = { global.natural_resources_array = token:resource_lumber }
+			add_to_array = { global.natural_resources_array = token:resource_coal }
+			add_to_array = { global.natural_resources_array = token:resource_iron }
+			add_to_array = { global.natural_resources_array = token:resource_fiber }
+			add_to_array = { global.natural_resources_array = token:resource_sulfur }
+			add_to_array = { global.natural_resources_array = token:resource_copper }
+			add_to_array = { global.natural_resources_array = token:resource_aluminum }
+			add_to_array = { global.natural_resources_array = token:resource_tungsten }
+			add_to_array = { global.natural_resources_array = token:resource_chromium }
+			add_to_array = { global.natural_resources_array = token:resource_crude_oil }
+			add_to_array = { global.natural_resources_array = token:resource_rubber }
+			add_to_array = { global.natural_resources_array = token:resource_precious_metals }
+			add_to_array = { global.natural_resources_array = token:resource_rare_earth_metals }
+
+			add_to_array = { global.produced_resources_array = token:resource_steel }
+			add_to_array = { global.produced_resources_array = token:resource_cement }
+			add_to_array = { global.produced_resources_array = token:resource_silicates }
+			add_to_array = { global.produced_resources_array = token:resource_tools }
+			add_to_array = { global.produced_resources_array = token:resource_fabric }
+			add_to_array = { global.produced_resources_array = token:resource_groceries }
+			add_to_array = { global.produced_resources_array = token:resource_clothing }
+			add_to_array = { global.produced_resources_array = token:resource_consumer_goods }
+			add_to_array = { global.produced_resources_array = token:resource_electronics }
+			add_to_array = { global.produced_resources_array = token:resource_computers }
+			add_to_array = { global.produced_resources_array = token:resource_electricity }
+			add_to_array = { global.produced_resources_array = token:resource_hydrocarbons }
+			add_to_array = { global.produced_resources_array = token:resource_automobiles }
+			add_to_array = { global.produced_resources_array = token:resource_convoys }
+			add_to_array = { global.produced_resources_array = token:resource_airplanes }
+			add_to_array = { global.produced_resources_array = token:resource_machinery }
+			add_to_array = { global.produced_resources_array = token:resource_plastics }
+			add_to_array = { global.produced_resources_array = token:resource_chemicals }
+			add_to_array = { global.produced_resources_array = token:resource_fertilizer }
+			add_to_array = { global.produced_resources_array = token:resource_pharmaceuticals }
+			
+			add_to_array = { global.service_resources_array = token:resource_construction }
+			add_to_array = { global.service_resources_array = token:resource_housing }
+			add_to_array = { global.service_resources_array = token:resource_healthcare }
+			add_to_array = { global.service_resources_array = token:resource_basic_education }
+			add_to_array = { global.service_resources_array = token:resource_higher_education }
+			add_to_array = { global.service_resources_array = token:resource_transport }
+			add_to_array = { global.service_resources_array = token:resource_shipping }
+			add_to_array = { global.service_resources_array = token:resource_finance }
+			add_to_array = { global.service_resources_array = token:resource_entertainment }
+			
+			add_to_array = { global.military_resources_array = token:resource_small_arms }
+			add_to_array = { global.military_resources_array = token:resource_artillery }
+			add_to_array = { global.military_resources_array = token:resource_tanks }
+			add_to_array = { global.military_resources_array = token:resource_ammunition }
+			add_to_array = { global.military_resources_array = token:resource_rockets }
+
+			#IN ORDER - This list is used for sorting lists by resource
+			set_variable = { global.resources_token_value@token:resource_foodstuffs = 0 } #Foodstuffs
+			set_variable = { global.resources_token_value@token:resource_lumber = 1 } #Lumber
+			set_variable = { global.resources_token_value@token:resource_coal = 2 } #Coal
+			set_variable = { global.resources_token_value@token:resource_iron = 3 } #Iron
+			set_variable = { global.resources_token_value@token:resource_fiber = 4 } #Fiber
+			set_variable = { global.resources_token_value@token:resource_sulfur = 5 } #Sulfur
+			set_variable = { global.resources_token_value@token:resource_copper = 6 } #Copper
+			set_variable = { global.resources_token_value@token:resource_aluminum = 7 } #Aluminum
+			set_variable = { global.resources_token_value@token:resource_tungsten = 8 } #Tungsten
+			set_variable = { global.resources_token_value@token:resource_chromium = 9 } #Chromium
+			set_variable = { global.resources_token_value@token:resource_crude_oil = 10 } #Crude Oil
+			set_variable = { global.resources_token_value@token:resource_rubber = 11 } #Rubber
+			set_variable = { global.resources_token_value@token:resource_precious_metals = 12 } #Precious Metals
+			set_variable = { global.resources_token_value@token:resource_rare_earth_metals = 13 } #Rare Earth Metals - CHANGED
+
+			set_variable = { global.resources_token_value@token:resource_steel = 14 } #Steel
+			set_variable = { global.resources_token_value@token:resource_cement = 15 } #Cement - CHANGED
+			set_variable = { global.resources_token_value@token:resource_silicates = 16 } #Silicates - CHANGED
+			set_variable = { global.resources_token_value@token:resource_tools = 17 } #Tools
+			set_variable = { global.resources_token_value@token:resource_fabric = 18 } #Fabric
+			set_variable = { global.resources_token_value@token:resource_groceries = 19 } #Groceries
+			set_variable = { global.resources_token_value@token:resource_clothing = 20 } #Clothing
+			set_variable = { global.resources_token_value@token:resource_consumer_goods = 21 } #Consumer Goods
+			set_variable = { global.resources_token_value@token:resource_electronics = 22 } #Electronics
+			set_variable = { global.resources_token_value@token:resource_computers = 23 } #Computers
+			set_variable = { global.resources_token_value@token:resource_small_arms = 24 } #Small Arms
+			set_variable = { global.resources_token_value@token:resource_artillery = 25 } #Artillery
+			set_variable = { global.resources_token_value@token:resource_tanks = 26 } #Tanks
+			set_variable = { global.resources_token_value@token:resource_ammunition = 27 } #Ammunition
+			set_variable = { global.resources_token_value@token:resource_rockets = 28 } #Rockets
+			set_variable = { global.resources_token_value@token:resource_electricity = 29 } #Electricity
+			set_variable = { global.resources_token_value@token:resource_hydrocarbons = 30 } #Hydrocarbons
+			set_variable = { global.resources_token_value@token:resource_automobiles = 31 } #Automobiles
+			set_variable = { global.resources_token_value@token:resource_convoys = 32 } #Convoys - CHANGED
+			set_variable = { global.resources_token_value@token:resource_airplanes = 33 } #Airplanes
+			set_variable = { global.resources_token_value@token:resource_machinery = 34 } #Machinery
+			set_variable = { global.resources_token_value@token:resource_plastics = 35 } #Plastics
+			set_variable = { global.resources_token_value@token:resource_chemicals = 36 } #Chemicals
+			set_variable = { global.resources_token_value@token:resource_fertilizer = 37 } #Fertilizer - CHANGED
+			set_variable = { global.resources_token_value@token:resource_pharmaceuticals = 38 } #Pharmaceuticals
+
+			set_variable = { global.resources_token_value@token:resource_construction = 39 } #Construction
+			set_variable = { global.resources_token_value@token:resource_housing = 40 } #Housing
+			set_variable = { global.resources_token_value@token:resource_healthcare = 41 } #Healthcare
+			set_variable = { global.resources_token_value@token:resource_basic_education = 42 } #Basic Education
+			set_variable = { global.resources_token_value@token:resource_higher_education = 43 } #Higher Education
+			set_variable = { global.resources_token_value@token:resource_transport = 44 } #Transport
+			set_variable = { global.resources_token_value@token:resource_shipping = 45 } #Shipping
+			set_variable = { global.resources_token_value@token:resource_finance = 46 } #Finance
+			set_variable = { global.resources_token_value@token:resource_entertainment = 47 } #Entertainment
+		#
+
+		# Trade	
+			set_variable = { global.shipping_amount@token:resource_crude_oil = 100 } #Crude Oil
+			set_variable = { global.shipping_amount@token:resource_aluminum = 200 } #Aluminum
+			set_variable = { global.shipping_amount@token:resource_rubber = 300 } #Rubber
+			set_variable = { global.shipping_amount@token:resource_tungsten = 50 } #Tungsten
+			set_variable = { global.shipping_amount@token:resource_iron = 100 } #Iron
+			set_variable = { global.shipping_amount@token:resource_chromium = 50 } #Chromium
+			set_variable = { global.shipping_amount@token:resource_copper = 200 } #Copper
+			set_variable = { global.shipping_amount@token:resource_precious_metals = 0.2 } #Precious Metals
+			set_variable = { global.shipping_amount@token:resource_coal = 200 } #Coal
+			set_variable = { global.shipping_amount@token:resource_lumber = 200 } #Lumber
+			set_variable = { global.shipping_amount@token:resource_fiber = 500 } #Fiber
+			set_variable = { global.shipping_amount@token:resource_foodstuffs = 200 } #Foodstuffs
+			set_variable = { global.shipping_amount@token:resource_electricity = 100.0 } #Electricity
+			set_variable = { global.shipping_amount@token:resource_steel = 25.0 } #Steel
+			set_variable = { global.shipping_amount@token:resource_rare_earth_metals = 40 } #Rare Earth Metals - CHANGED
+			set_variable = { global.shipping_amount@token:resource_cement = 50.0 } #Cement - CHANGED
+			set_variable = { global.shipping_amount@token:resource_silicates = 50 } #Silicates - CHANGED
+			set_variable = { global.shipping_amount@token:resource_chemicals = 30.0 } #Chemicals
+			set_variable = { global.shipping_amount@token:resource_fabric = 20 } #Fabric
+			set_variable = { global.shipping_amount@token:resource_machinery = 10.0 } #Machinery
+			set_variable = { global.shipping_amount@token:resource_plastics = 50 } #Plastics
+			set_variable = { global.shipping_amount@token:resource_fertilizer = 100 } #Fertilizer - CHANGED
+			set_variable = { global.shipping_amount@token:resource_hydrocarbons = 100 } #Hydrocarbons
+			set_variable = { global.shipping_amount@token:resource_automobiles = 10 } #Automobiles
+			set_variable = { global.shipping_amount@token:resource_airplanes = 4.0 } #Airplanes
+			set_variable = { global.shipping_amount@token:resource_computers = 10 } #Computers
+			set_variable = { global.shipping_amount@token:resource_electronics = 40 } #Electronics
+			set_variable = { global.shipping_amount@token:resource_groceries = 50 } #Groceries
+			set_variable = { global.shipping_amount@token:resource_pharmaceuticals = 20.0 } #Pharmaceuticals
+			set_variable = { global.shipping_amount@token:resource_clothing = 100 } #Clothing
+			set_variable = { global.shipping_amount@token:resource_consumer_goods = 50.0 } #Consumer Goods
+			set_variable = { global.shipping_amount@token:resource_sulfur = 100 } #Sulfur
+			set_variable = { global.shipping_amount@token:resource_convoys = 2.0 } #Convoys - CHANGED
+			set_variable = { global.shipping_amount@token:resource_small_arms = 50 } #Small Arms
+			set_variable = { global.shipping_amount@token:resource_artillery = 10.0 } #Artillery
+			set_variable = { global.shipping_amount@token:resource_tanks = 3.0 } #Tanks
+			set_variable = { global.shipping_amount@token:resource_ammunition = 100.0 } #Ammunition
+			set_variable = { global.shipping_amount@token:resource_rockets = 5.0 } #Rockets
+			set_variable = { global.shipping_amount@token:resource_construction = 50 } #Construction
+			set_variable = { global.shipping_amount@token:resource_tools = 20.0 } #Tools
+			set_variable = { global.shipping_amount@token:resource_healthcare = 12.5 } #Healthcare
+			set_variable = { global.shipping_amount@token:resource_basic_education = 25.0 } #Basic Education
+			set_variable = { global.shipping_amount@token:resource_higher_education = 9.0 } #Higher Education
+			set_variable = { global.shipping_amount@token:resource_transport = 25.0 } #Transport
+			set_variable = { global.shipping_amount@token:resource_shipping = 20.0  } #Shipping
+			set_variable = { global.shipping_amount@token:resource_finance = 10 } #Finance
+			set_variable = { global.shipping_amount@token:resource_housing = 25.0 } #Housing
+			set_variable = { global.shipping_amount@token:resource_entertainment = 40 } #Entertainment
+
+			#Untradeable
+			add_to_array = { global.untradeable_resources_token_array = token:resource_precious_metals }
+			add_to_array = { global.untradeable_resources_token_array = token:resource_electricity }
+			add_to_array = { global.untradeable_resources_token_array = token:resource_housing }
+			add_to_array = { global.untradeable_resources_token_array = token:resource_construction }
+			add_to_array = { global.untradeable_resources_token_array = token:resource_healthcare }
+			add_to_array = { global.untradeable_resources_token_array = token:resource_basic_education }
+			add_to_array = { global.untradeable_resources_token_array = token:resource_higher_education }
+			add_to_array = { global.untradeable_resources_token_array = token:resource_transport }
+			add_to_array = { global.untradeable_resources_token_array = token:resource_shipping }
+		#
+
+		#Base Price
+			add_to_array = { global.resource_base_price = 1 } #None
+			add_to_array = { global.resource_base_price = 1 } #None
+
+			#Each $1.000 is 1,000,000 dollars
+			#Each 1.000 in resources is (default) 1000 tons
+			#   Iron, Coal are 1,000,000 tons
+			#   Lumber is 100,000 tons
+			#   Foodstuffs is 10,000 tons
+			#   Oil is per million barrels
+
+			#HA - Historically Accurate
+
+			set_variable = { global.base_price@token:resource_crude_oil = 1.00 } # $1.27 a barrel in 1929, 65 cents in 1931, 300 pounds per barrel, $8.47 per ton #HA PRICE: 1.27
+			set_variable = { global.base_price@token:resource_aluminum = 0.5 } # 23 cents a pound (1930), $460 per ton #HA PRICE: 0.46
+			set_variable = { global.base_price@token:resource_rubber = 0.3 } # 20 cents a pound (1929), 11.9 cents a pound (1930), $400/$238 per ton #HA PRICE: 0.238
+			set_variable = { global.base_price@token:resource_tungsten = 2.0 } # $1,851 per short ton (1930) #HA PRICE: 1.851
+			set_variable = { global.base_price@token:resource_iron = 1.0 } # $4.50 per short ton (1930) #HA PRICE: 4.5
+			set_variable = { global.base_price@token:resource_chromium = 2.0 } # $2,040 per short ton #HA PRICE: 2.04
+			set_variable = { global.base_price@token:resource_copper = 0.5 } # 13.2 cents per pound, $264 per ton #HA PRICE: 0.264
+			set_variable = { global.base_price@token:resource_precious_metals = 50.0 } # Gold: $23 per ounce (1930), Silver: $1 per ounce (1930), $552,000 per ton #HA PRICE: 552
+			set_variable = { global.base_price@token:resource_coal = 0.5 } # Bitumous Coal: $1.78 per short ton #HA PRICE: 1.78
+			set_variable = { global.base_price@token:resource_lumber = 0.5 } # $19.6 per thousand board feet, 2.1 million thousand board feet sold, 400K cut, $15.9 per ton #HA PRICE: 1.59
+			set_variable = { global.base_price@token:resource_fiber = 0.2 } # Cotton: 9.9 cents per pound, world production: 23.4-27.5 million bales, $198 per ton #HA PRICE: 0.198
+			set_variable = { global.base_price@token:resource_foodstuffs = 0.5 } # Wheat: 1 bushel = 60 pounds, $1.40 per bushel (1929), $49 cents (1931), $46.7 per ton #HA PRICE: 46.7
+			set_variable = { global.base_price@token:resource_rare_earth_metals = 2.5 } # Cobalt: $1.29 per pound (1937), $2580 per ton #HA PRICE: 2.58
+			set_variable = { global.base_price@token:resource_sulfur = 1.0 } #Sulfur: $21.51 Billion for 88 Million Tons (1930, 2019 USD), $1.41 Billion for 88 Mil Tons (1930), $1,602 per ton #HA PRICE: 1.60
+
+			set_variable = { global.base_price@token:resource_steel = 4 }
+			set_variable = { global.base_price@token:resource_electricity = 1.0 }
+			set_variable = { global.base_price@token:resource_cement = 2.0 }
+			set_variable = { global.base_price@token:resource_silicates = 2.0 }
+			set_variable = { global.base_price@token:resource_chemicals = 3.0 }
+			set_variable = { global.base_price@token:resource_fabric = 0.5 }
+			set_variable = { global.base_price@token:resource_machinery = 10.0 }
+			set_variable = { global.base_price@token:resource_plastics = 2.0 }
+			set_variable = { global.base_price@token:resource_fertilizer = 1.0 }
+			set_variable = { global.base_price@token:resource_hydrocarbons = 1.0 }
+			set_variable = { global.base_price@token:resource_automobiles = 10.0 }
+			set_variable = { global.base_price@token:resource_airplanes = 25.0 }
+			set_variable = { global.base_price@token:resource_computers = 10.0 }
+			set_variable = { global.base_price@token:resource_electronics = 2.5 }
+			set_variable = { global.base_price@token:resource_groceries = 2.0 }
+			set_variable = { global.base_price@token:resource_pharmaceuticals = 5.0 }
+			set_variable = { global.base_price@token:resource_clothing = 1.0 }
+			set_variable = { global.base_price@token:resource_consumer_goods = 2.0 }
+			set_variable = { global.base_price@token:resource_convoys = 50.0 }
+			set_variable = { global.base_price@token:resource_small_arms = 2.0 }
+			set_variable = { global.base_price@token:resource_artillery = 10.0 }
+			set_variable = { global.base_price@token:resource_tanks = 30.0 }
+			set_variable = { global.base_price@token:resource_ammunition = 1.0 }
+			set_variable = { global.base_price@token:resource_rockets = 20.0 }
+			set_variable = { global.base_price@token:resource_tools = 5.0 }
+
+			set_variable = { global.base_price@token:resource_construction = 2.0 }
+			set_variable = { global.base_price@token:resource_healthcare = 8.0 }
+			set_variable = { global.base_price@token:resource_basic_education = 4.0 }
+			set_variable = { global.base_price@token:resource_higher_education = 12.0 }
+			set_variable = { global.base_price@token:resource_transport = 4.0 }
+			set_variable = { global.base_price@token:resource_shipping = 5.0 }
+			set_variable = { global.base_price@token:resource_finance = 10.0 }
+			set_variable = { global.base_price@token:resource_housing = 4.0 }
+			set_variable = { global.base_price@token:resource_entertainment = 2.5 }
+		#
+
+		set_variable = { global.very_cheap_price = 0.5 }
+		set_variable = { global.cheap_price = 0.66 }
+		set_variable = { global.slightly_cheap_price = 0.8 }
+		set_variable = { global.slightly_expensive_price = 1.22 }
+		set_variable = { global.expensive_price = 1.66 }
+		set_variable = { global.very_expensive_price = 1.95 }
+	#
+
+	#Pops
+		add_to_array = { global.pops_token_array = token:pop_slaves }
+		add_to_array = { global.pops_token_array = token:pop_peasants }
+		add_to_array = { global.pops_token_array = token:pop_laborers }
+		add_to_array = { global.pops_token_array = token:pop_workers }
+		add_to_array = { global.pops_token_array = token:pop_professionals }
+		add_to_array = { global.pops_token_array = token:pop_elites }
+		add_to_array = { global.pops_token_array = token:pop_bureaucrats }
+		add_to_array = { global.pops_token_array = token:pop_soldiers }
+
+		set_variable = { global.pop_type_amount = 9 } #Num of pop types + 1
+
+		set_variable = { global.pops_retirement_age = 60 }
+
+		set_variable = { global.pops_median_age = 25 }
+		set_variable = { global.pops_life_span = 70 }
+		set_variable = { global.pops_youth_spread = 0.507 }
+		set_variable = { global.pops_elder_spread = 0.513 }
+
+		set_variable = { global.pops_male_female_ratio = 1.01 }
+
+		set_variable = { global.pops_births_per_woman = 6 }
+		#https://ourworldindata.org/fertility-rate#all-charts-preview
+		#6 seems to be the normal amount for non-developed countries
+
+		set_variable = { global.pops_non_employed_income = 0.01 } #Income per pop not employed
+		set_variable = { global.peasants_non_employed_income = 0.005 } #Income per peasant pop not employed
+
+		set_variable = { global.peasants_sol_difference = 10 } # The difference between Laborers & Peasants SoL when laborers will not become peasants.
+		set_variable = { global.peasants_min_sol_calculation = 10 } # The minimum SoL for peasants ONLY for the above calculation.
+		set_variable = { global.pops_unemployment_bleed = 0.2 } #What % of unemployed pops become laborers each month
+		set_variable = { global.pops_underpaid_start = 0.5 } #What % of a pop's SoL expenditure will they start to be less inclined to be employed
+		set_variable = { global.pops_underpaid_min = 0.3 } #Minimum % of pops willing to be employed
+
+		set_variable = { global.pops_needs_multiplier = 1.25 } # Multiplier on base needs. Increasing it will increase it per SoL so that SoL starts lower.
+		for_each_loop = {
+			array = global.resources_token_array
+			value = r_temp
+
+			set_variable = { price@var:r_temp = global.base_price@var:r_temp }
+		}
+		for_loop_effect = {
+			start = 0
+			end = 150
+			add = 1
+			value = sol_temp
+			break = b
+
+			get_pop_needs = yes
+
+			add_to_array = { global.sol_cost = total_cost_temp } #sol_cost^i -> Costs for each level of standard of living (arranged in an array)
+		}
+
+		#Potential Pop Needs
+			clear_array = global.pops_needs_token_array
+			add_to_array = { global.pops_needs_token_array = token:resource_foodstuffs }
+			add_to_array = { global.pops_needs_token_array = token:resource_groceries }
+			add_to_array = { global.pops_needs_token_array = token:resource_housing }
+			add_to_array = { global.pops_needs_token_array = token:resource_lumber }
+			add_to_array = { global.pops_needs_token_array = token:resource_coal }
+			add_to_array = { global.pops_needs_token_array = token:resource_electricity }
+			add_to_array = { global.pops_needs_token_array = token:resource_fiber }
+			add_to_array = { global.pops_needs_token_array = token:resource_fabric }
+			add_to_array = { global.pops_needs_token_array = token:resource_clothing }
+			add_to_array = { global.pops_needs_token_array = token:resource_consumer_goods }
+			add_to_array = { global.pops_needs_token_array = token:resource_electronics }
+			add_to_array = { global.pops_needs_token_array = token:resource_basic_education }
+			add_to_array = { global.pops_needs_token_array = token:resource_higher_education }
+			add_to_array = { global.pops_needs_token_array = token:resource_healthcare }
+			add_to_array = { global.pops_needs_token_array = token:resource_pharmaceuticals }
+			add_to_array = { global.pops_needs_token_array = token:resource_transport }
+			add_to_array = { global.pops_needs_token_array = token:resource_automobiles }
+			add_to_array = { global.pops_needs_token_array = token:resource_hydrocarbons }
+			add_to_array = { global.pops_needs_token_array = token:resource_computers }
+			add_to_array = { global.pops_needs_token_array = token:resource_entertainment }
+			add_to_array = { global.pops_needs_token_array = token:resource_convoys }
+			add_to_array = { global.pops_needs_token_array = token:resource_airplanes }
+			add_to_array = { global.pops_needs_token_array = token:resource_small_arms }
+			add_to_array = { global.pops_needs_token_array = token:resource_ammunition }
+			add_to_array = { global.pops_needs_token_array = token:resource_artillery }
+			add_to_array = { global.pops_needs_token_array = token:resource_tanks }
+			add_to_array = { global.pops_needs_token_array = token:resource_finance }
+	#
+
+	#Custom Map Modes
+
+		#These lists are autogened from a script.
+		#It takes the color of the demographic and matches it with a state category with the same color
+		#The conversion is (1 * Red / 32) + (9 * Green / 32) + (81 * Blue / 32)
+	#
+
+	#Industries
+		set_variable = { global.industry_type_amount = 60 } #Number of different industries + 1
+		set_variable = { global.industrial_complex_per_x = 200 } #One industrial complex every X industrial power in a state
+
+		set_variable = { global.industry_money_limit = 1 } #Money limit for an industry for its output times the base price of the outputted resource
+
+		set_variable = { global.industry_bonuses_percentage = 0.6 } #% of net profits that go to the employees
+		set_variable = { global.minimum_base_wage = 0.01 } #Minimum base wage (not average) for an industry
+
+		set_variable = { global.industries_economy_of_scale_factor = 0.005 } #What bonus gets added to throughput for each size industry in a state
+		set_variable = { global.industries_economy_of_scale_max_base = 0.2 } #Maximum Bonus
+
+		#Define all the industries
+			define_oil_rig = yes
+			define_gas_rig = yes
+			define_offshore_oil_rig = yes
+
+			define_bauxite_mine = yes
+			define_tungsten_mine = yes
+			define_iron_mine = yes
+			define_chromium_mine = yes
+			define_copper_mine = yes
+			define_precious_metals_mine = yes
+			define_coal_mine = yes
+			define_rare_earth_metals_mine = yes
+			define_sulfur_mine = yes
+
+			define_cotton_plantation = yes
+			define_silk_plantation = yes
+			define_sheep_ranch = yes
+			define_grain_farm = yes
+			define_rice_paddy = yes
+			define_livestock_ranch = yes
+			define_fishing_wharf = yes
+
+			define_lumber_lodge = yes
+			define_rubber_lodge = yes
+
+			define_coal_power_plant = yes
+			define_oil_power_plant = yes
+			define_nuclear_power_plant = yes
+			define_wind_farm = yes
+			define_solar_farm = yes
+			define_hydroelectric_dam = yes
+
+			define_steel_mill = yes
+			define_cement_factory = yes
+			define_silicates_factory = yes
+			define_chemical_plant = yes
+			define_textile_mill = yes
+			define_machinery_factory = yes
+			define_plastics_factory = yes
+			define_fertilizer_factory = yes
+			define_oil_refinery = yes
+			define_synthetic_oil_refinery = yes
+			define_synthetic_rubber_plant = yes
+			define_automobile_factory = yes
+			define_airplane_factory = yes
+			define_computer_factory = yes
+			define_electronics_factory = yes
+			define_food_processing_plant = yes
+			define_pharmaceuticals_factory = yes
+			define_clothing_factory = yes
+			define_consumer_goods_factory = yes
+			define_convoys_shipyard = yes
+			define_small_arms_factory = yes
+			define_artillery_factory = yes
+			define_tank_factory = yes
+			define_ammunition_factory = yes
+			define_rocket_factory = yes
+			define_tools_factory = yes
+
+			define_real_estate = yes
+			define_construction_yard = yes
+			define_hospital = yes
+			define_school = yes
+			define_university = yes
+			define_transport_hub = yes
+			define_shipping_hub = yes
+			define_finance_hub = yes
+			define_entertainment_complex = yes
+		#
+
+		#Industry List
+			add_to_array = { global.industries_token_array = token:industry_oil_rig }
+			add_to_array = { global.industries_token_array = token:industry_gas_rig }
+			add_to_array = { global.industries_token_array = token:industry_offshore_oil_rig }
+
+			add_to_array = { global.industries_token_array = token:industry_bauxite_mine }
+			add_to_array = { global.industries_token_array = token:industry_tungsten_mine }
+			add_to_array = { global.industries_token_array = token:industry_iron_mine }
+			add_to_array = { global.industries_token_array = token:industry_chromium_mine }
+			add_to_array = { global.industries_token_array = token:industry_copper_mine }
+			add_to_array = { global.industries_token_array = token:industry_precious_metals_mine }
+			add_to_array = { global.industries_token_array = token:industry_coal_mine }
+			add_to_array = { global.industries_token_array = token:industry_rare_earth_metals_mine }
+			add_to_array = { global.industries_token_array = token:industry_sulfur_mine }
+
+			add_to_array = { global.industries_token_array = token:industry_cotton_plantation }
+			add_to_array = { global.industries_token_array = token:industry_sheep_ranch }
+			add_to_array = { global.industries_token_array = token:industry_grain_farm }
+			add_to_array = { global.industries_token_array = token:industry_rice_paddy }
+			add_to_array = { global.industries_token_array = token:industry_livestock_ranch }
+			add_to_array = { global.industries_token_array = token:industry_fishing_wharf }
+
+			add_to_array = { global.industries_token_array = token:industry_lumber_lodge }
+			add_to_array = { global.industries_token_array = token:industry_rubber_lodge }
+
+			add_to_array = { global.industries_token_array = token:industry_coal_power_plant }
+			add_to_array = { global.industries_token_array = token:industry_oil_power_plant }
+			add_to_array = { global.industries_token_array = token:industry_nuclear_power_plant }
+			add_to_array = { global.industries_token_array = token:industry_wind_power_farm }
+			add_to_array = { global.industries_token_array = token:industry_solar_power_farm }
+			add_to_array = { global.industries_token_array = token:industry_hydroelectric_dam }
+
+			add_to_array = { global.industries_token_array = token:industry_steel_mill }
+			add_to_array = { global.industries_token_array = token:industry_cement_factory }
+			add_to_array = { global.industries_token_array = token:industry_silicates_factory }
+			add_to_array = { global.industries_token_array = token:industry_chemical_plant }
+			add_to_array = { global.industries_token_array = token:industry_textile_mill }
+			add_to_array = { global.industries_token_array = token:industry_machinery_factory }
+			add_to_array = { global.industries_token_array = token:industry_plastics_factory }
+			add_to_array = { global.industries_token_array = token:industry_fertilizer_factory }
+			add_to_array = { global.industries_token_array = token:industry_oil_refinery }
+			add_to_array = { global.industries_token_array = token:industry_synthetic_oil_refinery }
+			add_to_array = { global.industries_token_array = token:industry_synthetic_rubber_plant }
+			add_to_array = { global.industries_token_array = token:industry_automobile_factory }
+			add_to_array = { global.industries_token_array = token:industry_airplane_factory }
+			add_to_array = { global.industries_token_array = token:industry_computer_factory }
+			add_to_array = { global.industries_token_array = token:industry_electronics_factory }
+			add_to_array = { global.industries_token_array = token:industry_food_processing_plant }
+			add_to_array = { global.industries_token_array = token:industry_pharmaceuticals_factory }
+			add_to_array = { global.industries_token_array = token:industry_clothing_factory }
+			add_to_array = { global.industries_token_array = token:industry_consumer_goods_factory }
+			add_to_array = { global.industries_token_array = token:industry_convoys_shipyard }
+			add_to_array = { global.industries_token_array = token:industry_small_arms_factory }
+			add_to_array = { global.industries_token_array = token:industry_artillery_factory }
+			add_to_array = { global.industries_token_array = token:industry_tank_factory }
+			add_to_array = { global.industries_token_array = token:industry_ammunition_factory }
+			add_to_array = { global.industries_token_array = token:industry_rocket_factory }
+			add_to_array = { global.industries_token_array = token:industry_tools_factory }
+
+			add_to_array = { global.industries_token_array = token:industry_real_estate }
+			add_to_array = { global.industries_token_array = token:industry_construction_yard }
+			add_to_array = { global.industries_token_array = token:industry_hospital }
+			add_to_array = { global.industries_token_array = token:industry_school }
+			add_to_array = { global.industries_token_array = token:industry_university }
+			add_to_array = { global.industries_token_array = token:industry_transport_hub }
+			add_to_array = { global.industries_token_array = token:industry_shipping_hub }
+			add_to_array = { global.industries_token_array = token:industry_finance_hub }
+			add_to_array = { global.industries_token_array = token:industry_entertainment_complex }
+		#
+
+		#Industry Types
+			#Extractors
+			add_to_array = { global.extractors_token_array = token:industry_grain_farm }
+			add_to_array = { global.extractors_token_array = token:industry_rice_paddy }
+			add_to_array = { global.extractors_token_array = token:industry_livestock_ranch }
+			add_to_array = { global.extractors_token_array = token:industry_fishing_wharf }
+			add_to_array = { global.extractors_token_array = token:industry_cotton_plantation }
+			add_to_array = { global.extractors_token_array = token:industry_sheep_ranch }
+
+			add_to_array = { global.extractors_token_array = token:industry_lumber_lodge }
+			add_to_array = { global.extractors_token_array = token:industry_rubber_lodge }
+
+			add_to_array = { global.extractors_token_array = token:industry_bauxite_mine }
+			add_to_array = { global.extractors_token_array = token:industry_tungsten_mine }
+			add_to_array = { global.extractors_token_array = token:industry_iron_mine }
+			add_to_array = { global.extractors_token_array = token:industry_chromium_mine }
+			add_to_array = { global.extractors_token_array = token:industry_copper_mine }
+			add_to_array = { global.extractors_token_array = token:industry_precious_metals_mine }
+			add_to_array = { global.extractors_token_array = token:industry_coal_mine }
+			add_to_array = { global.extractors_token_array = token:industry_rare_earth_metals_mine }
+			add_to_array = { global.extractors_token_array = token:industry_sulfur_mine }
+
+			add_to_array = { global.extractors_token_array = token:industry_oil_rig }
+			add_to_array = { global.extractors_token_array = token:industry_gas_rig }
+			add_to_array = { global.extractors_token_array = token:industry_offshore_oil_rig }
+
+			add_to_array = { global.extractors_token_array = token:industry_wind_power_farm }
+			add_to_array = { global.extractors_token_array = token:industry_solar_power_farm }
+			add_to_array = { global.extractors_token_array = token:industry_hydroelectric_dam }
+
+			#Factories
+			add_to_array = { global.factories_token_array = token:industry_coal_power_plant }
+			add_to_array = { global.factories_token_array = token:industry_oil_power_plant }
+			add_to_array = { global.factories_token_array = token:industry_nuclear_power_plant }
+
+			add_to_array = { global.factories_token_array = token:industry_steel_mill }
+			add_to_array = { global.factories_token_array = token:industry_cement_factory }
+			add_to_array = { global.factories_token_array = token:industry_silicates_factory }
+			add_to_array = { global.factories_token_array = token:industry_chemical_plant }
+			add_to_array = { global.factories_token_array = token:industry_textile_mill }
+			add_to_array = { global.factories_token_array = token:industry_machinery_factory }
+			add_to_array = { global.factories_token_array = token:industry_plastics_factory }
+			add_to_array = { global.factories_token_array = token:industry_fertilizer_factory }
+			add_to_array = { global.factories_token_array = token:industry_oil_refinery }
+			add_to_array = { global.factories_token_array = token:industry_synthetic_oil_refinery }
+			add_to_array = { global.factories_token_array = token:industry_synthetic_rubber_plant }
+			add_to_array = { global.factories_token_array = token:industry_automobile_factory }
+			add_to_array = { global.factories_token_array = token:industry_airplane_factory }
+			add_to_array = { global.factories_token_array = token:industry_computer_factory }
+			add_to_array = { global.factories_token_array = token:industry_electronics_factory }
+			add_to_array = { global.factories_token_array = token:industry_food_processing_plant }
+			add_to_array = { global.factories_token_array = token:industry_pharmaceuticals_factory }
+			add_to_array = { global.factories_token_array = token:industry_clothing_factory }
+			add_to_array = { global.factories_token_array = token:industry_consumer_goods_factory }
+			add_to_array = { global.factories_token_array = token:industry_convoys_shipyard }
+			add_to_array = { global.factories_token_array = token:industry_small_arms_factory }
+			add_to_array = { global.factories_token_array = token:industry_artillery_factory }
+			add_to_array = { global.factories_token_array = token:industry_tank_factory }
+			add_to_array = { global.factories_token_array = token:industry_ammunition_factory }
+			add_to_array = { global.factories_token_array = token:industry_rocket_factory }
+			add_to_array = { global.factories_token_array = token:industry_tools_factory }
+
+			#Services
+			add_to_array = { global.services_token_array = token:industry_real_estate }
+			add_to_array = { global.services_token_array = token:industry_construction_yard }
+			add_to_array = { global.services_token_array = token:industry_hospital }
+			add_to_array = { global.services_token_array = token:industry_school }
+			add_to_array = { global.services_token_array = token:industry_university }
+			add_to_array = { global.services_token_array = token:industry_transport_hub }
+			add_to_array = { global.services_token_array = token:industry_shipping_hub }
+			add_to_array = { global.services_token_array = token:industry_finance_hub }
+			add_to_array = { global.services_token_array = token:industry_entertainment_complex }
+		#
+	#
+
+	#Terrain
+
+	#
+
+	#AI
+		#Investment
+		set_variable = { global.ai_profit_return = 0.5 } #What % of profit does the AI use for its yearly return calculation (for attractiveness)
+		set_variable = { global.ai_return_rate_attractiveness_factor = 250 } #Multiplies against Yearly Return Rate and adds to industry Attractiveness (where return rate of 0.5 is 50% return after 1 year)
+		set_variable = { global.ai_unemployment_limit = 0.06 } #At what % of unemployment will the AI be less likely to invest (due to tight labor market)
+		set_variable = { global.attractivenss_decrease_from_construction = 20 } #How much the attractiveness decreases for every level of industry being built
+
+		set_variable = { global.ai_dti_ratio_impact = 25 } #How much does 100% debt-to-profit ratio impact an entity's spending? (10 = 10% reduction of spending relative to revenue at 100% debt/profit)
+		set_variable = { global.ai_cash_to_profit_ratio_impact = 10 } #How much does 100% cash to profit ratio impact an entity's spending? (10 = 10% increase of spending relative to revenue at 100% cash/profit)
+		
+		#Trade
+		set_variable = { global.ai_trade_relative_price_condition = 0.05 } # Price difference requirement from base price to be considered
+		set_variable = { global.ai_trade_balance_tolerance = 0.8 } # Multiplied against the trade per route size value to check if trading additional goods of that will tip the balance to the other side. Lower values are more tolerant.
+
+		
+	#
+
+	#Buildings
+		define_subsistence_farm = yes
+		define_trade_center = yes
+	#
+
+	#Corporations & Investment Funds
+		set_variable = { global.profit_finance_need = 0.2 } #What % of profits turn into finance need (dividing by base price)
+		set_variable = { global.industry_base_finance_need = 0.01 } # $0.1 per size
+		set_variable = { global.industry_industrialized_finance_need = 0.02 } # $0.2 per size
+		set_variable = { global.industry_mechanized_finance_need = 0.03 } # $0.3 per size
+		set_variable = { global.industry_modernized_finance_need = 0.05 } # $0.5 per size
+
+		set_variable = { global.corporate_bonuses_percentage = 0.1 } #% of Corporate profits that go to their elites
+
+		set_variable = { global.investment_fund_kickbacks = 0.2 } #What % of excess revenue from locally owned industries will go to the local elites directly
+		set_variable = { global.investment_fund_pool_kickbacks = 0.1 } #What % of the pooled investment fund gets given to elites
+
+	#Economy
+		set_variable = { global.state_stockpile_limit_min = 25 } #The minimum amount that a state can store in goods. Gets multiplied by the resource weight
+		set_variable = { global.state_stockpile_limit = 1 } #The multiplier on the state's demand that a state can store in goods
+	#
+
+	#Ideologies
+		add_to_array = { global.govt_ideology_array = token:ideology_communist }
+		add_to_array = { global.govt_ideology_array = token:ideology_socialist }
+		add_to_array = { global.govt_ideology_array = token:ideology_liberal }
+		add_to_array = { global.govt_ideology_array = token:ideology_agrarian }
+		add_to_array = { global.govt_ideology_array = token:ideology_conservative }
+		add_to_array = { global.govt_ideology_array = token:ideology_reactionary }
+		add_to_array = { global.govt_ideology_array = token:ideology_fascist }
+		add_to_array = { global.govt_ideology_array = token:ideology_stratocratic }
+	#
+
+	#Government
+		set_variable = { global.budget_power_cost = 1 } #Base political power cost for proposing budget changes
+	#
+}
+
+dandt_history = {
+	#USA
+	USA = {
+		#Individual Values
+		set_variable = { pops_retirement_age = 65 }
+		set_variable = { pops_male_female_ratio = 1.033 }
+		set_variable = { pops_literacy_percentage = 0.956 }
+		set_variable = { pops_schooling_percentage = 0.290 } #was 50.8% by 1940
+		set_variable = { pops_education_percentage = 0.047 }
+
+		set_variable = { pops_heating_electricity_use = 0.7 }
+		set_variable = { pops_healthcare_pharmaceuticals_use = 0.1 }
+		set_variable = { pops_movement_automobiles_use = 0.35 }
+
+		set_variable = { pops_births_per_woman = 2.01 }
+		set_variable = { pops_health_percentage = 0.78 }
+
+		#Religion/Culture/Ideology
+
+		clear_array = pops_religion_type
+		clear_array = pops_religion_percentage
+		clear_array = pops_culture_type
+		clear_array = pops_culture_percentage
+		clear_array = pops_ideology_type
+		clear_array = pops_ideology_percentage
+
+		add_to_array = { pops_religion_type = 4 } #Protestant
+		add_to_array = { pops_religion_percentage = 0.8 }
+		add_to_array = { pops_religion_type = 3 } #Catholic
+		add_to_array = { pops_religion_percentage = 0.18 }
+		add_to_array = { pops_religion_type = token:religion_judaism } #Jewish
+		add_to_array = { pops_religion_percentage = 0.02 }
+
+		add_to_array = { pops_culture_type = token:culture_yankee } #Yankee
+		add_to_array = { pops_culture_percentage = 1 }
+
+		add_to_array = { pops_ideology_type = 2 } #Apolitical
+		add_to_array = { pops_ideology_percentage = 0.260 }
+		add_to_array = { pops_ideology_type = 7 } #Conservative
+		add_to_array = { pops_ideology_percentage = 0.220 }
+		add_to_array = { pops_ideology_type = 5 } #Liberal
+		add_to_array = { pops_ideology_percentage = 0.180 }
+		add_to_array = { pops_ideology_type = 6 } #Libertarian
+		add_to_array = { pops_ideology_percentage = 0.110 }
+		add_to_array = { pops_ideology_type = 4 } #Socialist
+		add_to_array = { pops_ideology_percentage = 0.100 }
+		add_to_array = { pops_ideology_type = 8 } #Reactionary
+		add_to_array = { pops_ideology_percentage = 0.090 }
+		add_to_array = { pops_ideology_type = 3 } #Communist
+		add_to_array = { pops_ideology_percentage = 0.023 }
+		add_to_array = { pops_ideology_type = 9 } #Fascist
+		add_to_array = { pops_ideology_percentage = 0.017 }
+
+
+		#Population Pyramid
+		#Taken from the male side
+		add_to_array = { pops_pyramid_setup = 5.860 } #0-4
+		add_to_array = { pops_pyramid_setup = 6.558 } #5-9
+		add_to_array = { pops_pyramid_setup = 6.110} #10-14
+		add_to_array = { pops_pyramid_setup = 5.781 } #15-19
+		add_to_array = { pops_pyramid_setup = 5.358 } #20-24
+		add_to_array = { pops_pyramid_setup = 4.982 } #25-29
+		add_to_array = { pops_pyramid_setup = 4.465 } #30-34
+		add_to_array = { pops_pyramid_setup = 4.606 } #35-39
+		add_to_array = { pops_pyramid_setup = 4.136 } #40-44
+		add_to_array = { pops_pyramid_setup = 3.666 } #45-49
+		add_to_array = { pops_pyramid_setup = 3.149 } #50-54
+		add_to_array = { pops_pyramid_setup = 2.444 } #55-59
+		add_to_array = { pops_pyramid_setup = 1.927 } #60-64
+		add_to_array = { pops_pyramid_setup = 1.410 } #65-69
+		add_to_array = { pops_pyramid_setup = 0.940 } #70-74
+		add_to_array = { pops_pyramid_setup = 0.564 } #75-79
+		add_to_array = { pops_pyramid_setup = 0.235 } #80-84
+		add_to_array = { pops_pyramid_setup = 0.094 } #85-89
+		add_to_array = { pops_pyramid_setup = 0.047 } #90-94
+		add_to_array = { pops_pyramid_setup = 0.020 } #95-99
+		add_to_array = { pops_pyramid_setup = 0 } #100+
+
+		population_pyramid_setup = yes
+	}
+
+	BUL = {
+		#Population Pyramid
+		#Taken from the male side
+		add_to_array = { pops_pyramid_setup = 5.860 } #0-4
+		add_to_array = { pops_pyramid_setup = 6.558 } #5-9
+		add_to_array = { pops_pyramid_setup = 6.110} #10-14
+		add_to_array = { pops_pyramid_setup = 5.781 } #15-19
+		add_to_array = { pops_pyramid_setup = 5.358 } #20-24
+		add_to_array = { pops_pyramid_setup = 4.982 } #25-29
+		add_to_array = { pops_pyramid_setup = 4.465 } #30-34
+		add_to_array = { pops_pyramid_setup = 4.606 } #35-39
+		add_to_array = { pops_pyramid_setup = 4.136 } #40-44
+		add_to_array = { pops_pyramid_setup = 3.666 } #45-49
+		add_to_array = { pops_pyramid_setup = 3.149 } #50-54
+		add_to_array = { pops_pyramid_setup = 2.444 } #55-59
+		add_to_array = { pops_pyramid_setup = 1.927 } #60-64
+		add_to_array = { pops_pyramid_setup = 1.410 } #65-69
+		add_to_array = { pops_pyramid_setup = 0.940 } #70-74
+		add_to_array = { pops_pyramid_setup = 0.564 } #75-79
+		add_to_array = { pops_pyramid_setup = 0.235 } #80-84
+		add_to_array = { pops_pyramid_setup = 0.094 } #85-89
+		add_to_array = { pops_pyramid_setup = 0.047 } #90-94
+		add_to_array = { pops_pyramid_setup = 0.020 } #95-99
+		add_to_array = { pops_pyramid_setup = 0 } #100+
+
+		population_pyramid_setup = yes
+	}
+
+	SWI = {
+
+		set_variable = { pops_births_per_woman = 2.33 }
+		set_variable = { pops_health_percentage = 0.65 }
+
+		set_variable = { pops_literacy_percentage = 0.98 }
+		set_variable = { pops_education_percentage = 0.06 }
+
+		#Religion
+		add_to_array = { pops_religion_type = 4 } #Protestant
+		add_to_array = { pops_religion_percentage = 0.58 }
+		add_to_array = { pops_religion_type = 3 } #Catholic
+		add_to_array = { pops_religion_percentage = 0.40 }
+		add_to_array = { pops_religion_type = token:religion_judaism } #Judaism
+		add_to_array = { pops_religion_percentage = 0.02 }
+
+		#Culture
+		add_to_array = { pops_culture_type = 34 } #South German
+		add_to_array = { pops_culture_percentage = 1 }
+
+		#Ideology
+		add_to_array = { pops_ideology_type = 7 } #Conservative
+		add_to_array = { pops_ideology_percentage = 0.25 }
+		add_to_array = { pops_ideology_type = 5 } #Liberal
+		add_to_array = { pops_ideology_percentage = 0.22 }
+		add_to_array = { pops_ideology_type = 2 } #Apolitical
+		add_to_array = { pops_ideology_percentage = 0.20 }
+		add_to_array = { pops_ideology_type = 9 } #Fascist
+		add_to_array = { pops_ideology_percentage = 0.10 }
+		add_to_array = { pops_ideology_type = 4 } #Socialist
+		add_to_array = { pops_ideology_percentage = 0.08 }
+		add_to_array = { pops_ideology_type = 8 } #Reactionary
+		add_to_array = { pops_ideology_percentage = 0.06 }
+		add_to_array = { pops_ideology_type = 6 } #Libertarian
+		add_to_array = { pops_ideology_percentage = 0.05 }
+		add_to_array = { pops_ideology_type = 3 } #Communist
+		add_to_array = { pops_ideology_percentage = 0.04 }
+
+		#Population Pyramid
+		#Taken from the male side
+		add_to_array = { pops_pyramid_setup = 5.860 } #0-4
+		add_to_array = { pops_pyramid_setup = 6.558 } #5-9
+		add_to_array = { pops_pyramid_setup = 6.110} #10-14
+		add_to_array = { pops_pyramid_setup = 5.781 } #15-19
+		add_to_array = { pops_pyramid_setup = 5.358 } #20-24
+		add_to_array = { pops_pyramid_setup = 4.982 } #25-29
+		add_to_array = { pops_pyramid_setup = 4.465 } #30-34
+		add_to_array = { pops_pyramid_setup = 4.606 } #35-39
+		add_to_array = { pops_pyramid_setup = 4.136 } #40-44
+		add_to_array = { pops_pyramid_setup = 3.666 } #45-49
+		add_to_array = { pops_pyramid_setup = 3.149 } #50-54
+		add_to_array = { pops_pyramid_setup = 2.444 } #55-59
+		add_to_array = { pops_pyramid_setup = 1.927 } #60-64
+		add_to_array = { pops_pyramid_setup = 1.410 } #65-69
+		add_to_array = { pops_pyramid_setup = 0.940 } #70-74
+		add_to_array = { pops_pyramid_setup = 0.564 } #75-79
+		add_to_array = { pops_pyramid_setup = 0.235 } #80-84
+		add_to_array = { pops_pyramid_setup = 0.094 } #85-89
+		add_to_array = { pops_pyramid_setup = 0.047 } #90-94
+		add_to_array = { pops_pyramid_setup = 0.020 } #95-99
+		add_to_array = { pops_pyramid_setup = 0 } #100+
+
+		population_pyramid_setup = yes
+	}
+
+	BEL = {
+		#Population Pyramid
+		#Taken from the male side
+		add_to_array = { pops_pyramid_setup = 5.860 } #0-4
+		add_to_array = { pops_pyramid_setup = 6.558 } #5-9
+		add_to_array = { pops_pyramid_setup = 6.110} #10-14
+		add_to_array = { pops_pyramid_setup = 5.781 } #15-19
+		add_to_array = { pops_pyramid_setup = 5.358 } #20-24
+		add_to_array = { pops_pyramid_setup = 4.982 } #25-29
+		add_to_array = { pops_pyramid_setup = 4.465 } #30-34
+		add_to_array = { pops_pyramid_setup = 4.606 } #35-39
+		add_to_array = { pops_pyramid_setup = 4.136 } #40-44
+		add_to_array = { pops_pyramid_setup = 3.666 } #45-49
+		add_to_array = { pops_pyramid_setup = 3.149 } #50-54
+		add_to_array = { pops_pyramid_setup = 2.444 } #55-59
+		add_to_array = { pops_pyramid_setup = 1.927 } #60-64
+		add_to_array = { pops_pyramid_setup = 1.410 } #65-69
+		add_to_array = { pops_pyramid_setup = 0.940 } #70-74
+		add_to_array = { pops_pyramid_setup = 0.564 } #75-79
+		add_to_array = { pops_pyramid_setup = 0.235 } #80-84
+		add_to_array = { pops_pyramid_setup = 0.094 } #85-89
+		add_to_array = { pops_pyramid_setup = 0.047 } #90-94
+		add_to_array = { pops_pyramid_setup = 0.020 } #95-99
+		add_to_array = { pops_pyramid_setup = 0 } #100+
+
+		population_pyramid_setup = yes
+	}
+
+
+	358 = { #New York
+		#POPS - 9009000 people
+
+		#TERRAIN
+			set_variable = { flat_percentage = 0.6 }
+			set_variable = { hilly_percentage = 0.3 }
+			set_variable = { mountainous_percentage = 0.1 }
+			set_variable = { forest_percentage = 0.4 }
+
+			set_variable = { navigable_rivers = 5 }
+			set_variable = { unnavigable_rivers = 2 }
+
+			set_variable = { soil_quality = 3 }
+			set_variable = { growth_period = 3 }
+
+		#INFRASTRUCTURE
+			set_variable = { roads_size = 10 }
+			set_variable = { waterways_size = 5 }
+
+		#INDUSTRIES - 278 size total
+			#Extractors - 45
+			set_variable = { grain_farm_size = 21 }
+			set_variable = { fishing_wharf_size = 24 }
+
+			#Factories - 111
+			set_variable = { coal_power_plant_size = 12 }
+			set_variable = { steel_mill_size = 15 }
+			set_variable = { textile_mill_size = 9 }
+			set_variable = { machinery_factory_size = 14 }
+			set_variable = { chemical_plant_size = 14 }
+			set_variable = { cement_factory_size = 11 }
+			set_variable = { automobile_factory_size = 11 }
+			set_variable = { consumer_goods_factory_size = 16 }
+			set_variable = { convoys_shipyard_size = 11 }
+
+			#Services - 112
+			set_variable = { construction_yard_size = 14 }
+			set_variable = { maintenance_facility_size = 10 }
+			set_variable = { hospital_size = 20 }
+			set_variable = { school_size = 17 }
+			set_variable = { university_size = 3 }
+			set_variable = { shipping_hub_size = 17 }
+			set_variable = { finance_hub_size = 15 }
+			set_variable = { entertainment_complex_size = 16 }
+
+	}
+
+	48 = { #Sofia
+		#Industries - 46
+			#Extractors - 32
+				set_variable = { grain_farm_size = 12 }
+				set_variable = { lumber_lodge_size = 8 }
+				#set_variable = { sheep_ranch_size = 7 }
+				set_variable = { coal_mine_size = 8 }
+			#Factories - 14
+				set_variable = { cement_factory_size = 6 }
+				set_variable = { textile_mill_size = 8 }
+				set_variable = { consumer_goods_factory_size = 12 }
+			#Services - 0
+
+
+	}
+	211 = { #Burgas
+		#Industries - 37
+			#Extractors - 42
+				set_variable = { grain_farm_size = 9 }
+				set_variable = { lumber_lodge_size = 8 }
+				#set_variable = { sheep_ranch_size = 7 }
+				set_variable = { cotton_plantation_size = 10 }
+				set_variable = { coal_mine_size = 8 }
+			#Factories - 4
+				set_variable = { cement_factory_size = 6 }
+				set_variable = { textile_mill_size = 8 }
+				set_variable = { consumer_goods_factory_size = 4 }
+			#Services - 0
+	}
+	212 = { #Plovdiv
+		#Industries - 49
+			#Extractors - 49
+				set_variable = { grain_farm_size = 16 }
+				set_variable = { coal_mine_size = 16 }
+				set_variable = { lumber_lodge_size = 6 }
+			#Factories - 0
+				set_variable = { textile_mill_size = 49 }
+			#Services - 0
+	}
+	801 = { #Moesia
+		#Industries - 33
+			#Extractors - 29
+				set_variable = { grain_farm_size = 19 }
+				set_variable = { lumber_lodge_size = 6 }
+				#set_variable = { sheep_ranch_size = 2 }
+				set_variable = { coal_mine_size = 2 }
+			#Factories - 4
+				set_variable = { cement_factory_size = 1 }
+				set_variable = { textile_mill_size = 2 }
+				set_variable = { consumer_goods_factory_size = 1 }
+			#Services - 0
+	}
+
+	3 = { #West Switz
+		set_variable = { grain_farm_size = 20 }
+		set_variable = { lumber_lodge_size = 2 }
+
+	}
+	151 = { #East Switz
+		set_variable = { grain_farm_size = 20 }
+		set_variable = { lumber_lodge_size = 2 }
+	}
+}

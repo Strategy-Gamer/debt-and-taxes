@@ -1,0 +1,49 @@
+state={
+	id=7
+	name="STATE_7"
+	resources={
+		steel=4.000
+	}
+
+	history={
+		owner = HOL
+		add_core_of = HOL
+		victory_points = {
+			391 40
+		}
+		victory_points = {
+			3211 10
+		}
+		victory_points = {
+			9498 20
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 5
+			3314 = {
+				naval_base = 5
+			}
+			9498 = {
+				naval_base = 10
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		68 391 3211 3314 9498
+	}
+	manpower=4123000
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+
+	local_supplies=0.0
+}

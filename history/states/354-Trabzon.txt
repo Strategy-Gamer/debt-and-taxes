@@ -1,0 +1,42 @@
+
+state={
+	id=354
+	name="STATE_354"
+
+	history={
+		owner = TUR
+		victory_points = {
+			9932 15 
+		}
+		victory_points = {
+			10472 5 
+		}
+		victory_points = {
+			3979 3 
+		}
+		buildings = {
+			infrastructure = 2
+			9932 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = TUR
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		789 3714 3979 6976 6991 7454 9886 9932 10403 10472 11753 13363 13364 13365 
+	}
+	manpower=1031129
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

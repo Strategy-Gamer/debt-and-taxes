@@ -1,0 +1,408 @@
+ideas = {
+	law_tokens = { # Constitution
+		law_constitution_no_constitution = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_constitution
+				set_variable = { laws_socials_constitution = token:law_constitution_no_constitution }
+			}
+		}
+		law_constitution_in_name_only = {
+			allowed = { always = no }
+			
+			on_add = {
+				remove_ideas = var:laws_socials_constitution
+				set_variable = { laws_socials_constitution = token:law_constitution_in_name_only }
+			}
+		}
+		law_constitution_limited_guarantees = {
+			allowed = { always = no }
+			
+			on_add = {
+				remove_ideas = var:laws_socials_constitution
+				set_variable = { laws_socials_constitution = token:law_constitution_limited_guarantees }
+			}
+		}
+		law_constitution_protection_of_natural_rights = {
+			allowed = { always = no }
+			
+			on_add = {
+				remove_ideas = var:laws_socials_constitution
+				set_variable = { laws_socials_constitution = token:law_constitution_protection_of_natural_rights }
+			}
+		}
+	}
+	law_tokens = { # Slavery
+		law_slavery_allowed = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_slavery
+				set_variable = { laws_socials_slavery = token:law_slavery_allowed }
+			}
+		}
+		law_slavery_slave_trade_banned = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_slavery
+				set_variable = { laws_socials_slavery = token:law_slavery_slave_trade_banned }
+			}
+		}
+		law_slavery_abolition = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_slavery
+				set_variable = { laws_socials_slavery = token:law_slavery_abolition }
+			}
+		}
+	}
+	law_tokens = { # Women's Rights
+		law_women_patriarchal_society = {
+			allowed ={ always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_women
+				set_variable = { laws_socials_women = token:law_women_patriarchal_society }
+			}
+		}
+		law_women_labor_freedom = {
+			allowed ={ always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_women
+				set_variable = { laws_socials_women = token:law_women_patriarchal_society }
+			}
+		}
+		law_women_suffrage = {
+			allowed ={ always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_women
+				set_variable = { laws_socials_women = token:law_women_patriarchal_society }
+			}
+		}
+		law_women_enforced_equality = {
+			allowed ={ always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_women
+				set_variable = { laws_socials_women = token:law_women_patriarchal_society }
+			}
+		}
+		law_women_preferential_treatment = {
+			allowed ={ always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_women
+				set_variable = { laws_socials_women = token:law_women_patriarchal_society }
+			}
+		}
+	}
+	law_tokens = { # Minority Treatment
+		law_minority_treatment_oppression = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_minority_treatment
+				set_variable = { laws_socials_minority_treatment = token:law_minority_treatment_oppression }
+			}
+		}
+		law_minority_treatment_segregation = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_minority_treatment
+				set_variable = { laws_socials_minority_treatment = token:law_minority_treatment_segregation }
+			}
+		}
+		law_minority_treatment_full_rights = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_minority_treatment
+				set_variable = { laws_socials_minority_treatment = token:law_minority_treatment_full_rights }
+			}
+		}
+		law_minority_treatment_affirmative_action = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_minority_treatment
+				set_variable = { laws_socials_minority_treatment = token:law_minority_treatment_affirmative_action }
+			}
+		}
+	}
+	law_tokens = { # Marriage
+		law_marriage_enforced = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_marriage
+				set_variable = { laws_socials_marriage = token:law_marriage_enforced }
+			}
+		}
+		law_marriage_criminalized_homosexuality = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_marriage
+				set_variable = { laws_socials_marriage = token:law_marriage_criminalized_homosexuality }
+			}
+		}
+		law_marriage_decriminalized_homosexuality = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_marriage
+				set_variable = { laws_socials_marriage = token:law_marriage_decriminalized_homosexuality }
+			}
+		}
+		law_marriage_same_sex_civil_unions = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_marriage
+				set_variable = { laws_socials_marriage = token:law_marriage_same_sex_civil_unions }
+			}
+		}
+		law_marriage_same_sex_marriage = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_marriage
+				set_variable = { laws_socials_marriage = token:law_marriage_same_sex_marriage }
+			}
+		}
+		law_marriage_free_love = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_marriage
+				set_variable = { laws_socials_marriage = token:law_marriage_free_love }
+			}
+		}
+	}
+	law_tokens = { # Religion
+		law_religion_fundamentalist_state = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_religion
+				set_variable = { laws_socials_religion = token:law_religion_fundamentalist_state }
+			}
+		}
+		law_religion_state_religion = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_religion
+				set_variable = { laws_socials_religion = token:law_religion_state_religion }
+			}
+		}
+		law_religion_seperation_of_church_and_state = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_religion
+				set_variable = { laws_socials_religion = token:law_religion_seperation_of_church_and_state }
+			}
+		}
+		law_religion_secular_state = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_religion
+				set_variable = { laws_socials_religion = token:law_religion_secular_state }
+			}
+		}
+		law_religion_atheist_state = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_religion
+				set_variable = { laws_socials_religion = token:law_religion_atheist_state }
+			}
+		}
+	}
+	law_tokens = { # Press
+		law_press_state_press_only = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_press
+				set_variable = { laws_socials_press = token:law_press_state_press_only }
+			}
+		}
+		law_press_censored_press = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_press
+				set_variable = { laws_socials_press = token:law_press_censored_press }
+			}
+		}
+		law_press_free_press = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_press
+				set_variable = { laws_socials_press = token:law_press_free_press }
+			}
+		}
+	}
+	law_tokens = { # Public Meetings
+		law_public_meetings_not_allowed = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_public_meetings
+				set_variable = { laws_socials_public_meetings = token:law_public_meetings_not_allowed }
+			}
+		}
+		law_public_meetings_licensed_only = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_public_meetings
+				set_variable = { laws_socials_public_meetings = token:law_public_meetings_licensed_only }
+			}
+		}
+		law_public_meetings_allowed = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_public_meetings
+				set_variable = { laws_socials_public_meetings = token:law_public_meetings_allowed }
+			}
+		}
+	}
+	law_tokens = { # Public Armament
+		law_public_armament_banned = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_public_armament
+				set_variable = { laws_socials_public_armament = token:law_public_armament_banned }
+			}
+		}
+		law_public_armament_hunting = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_public_armament
+				set_variable = { laws_socials_public_armament = token:law_public_armament_hunting }
+			}
+		}
+		law_public_armament_self_defense = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_public_armament
+				set_variable = { laws_socials_public_armament = token:law_public_armament_self_defense }
+			}
+		}
+		law_public_armament_small_arms = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_public_armament
+				set_variable = { laws_socials_public_armament = token:law_public_armament_small_arms }
+			}
+		}
+		law_public_armament_no_restrictions = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_public_armament
+				set_variable = { laws_socials_public_armament = token:law_public_armament_no_restrictions }
+			}
+		}
+	}
+	law_tokens = { # Property
+		law_property_no_rights = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_property
+				set_variable = { laws_socials_property = token:law_property_no_rights }
+			}
+		}
+		law_property_limited_rights = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_property
+				set_variable = { laws_socials_property = token:law_property_limited_rights }
+			}
+		}
+		law_property_due_process = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_property
+				set_variable = { laws_socials_property = token:law_property_due_process }
+			}
+		}
+		law_property_seizure_banned = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_property
+				set_variable = { laws_socials_property = token:law_property_seizure_banned }
+			}
+		}
+	}
+	law_tokens = { # Unionization
+		law_unionization_illegal = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_unionization
+				set_variable = { laws_socials_unionization = token:law_unionization_illegal }
+			}
+		}
+		law_unionization_state_controlled = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_unionization
+				set_variable = { laws_socials_unionization = token:law_unionization_state_controlled }
+			}
+		}
+		law_unionization_non_socialist = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_unionization
+				set_variable = { laws_socials_unionization = token:law_unionization_non_socialist }
+			}
+		}
+		law_unionization_private = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_unionization
+				set_variable = { laws_socials_unionization = token:law_unionization_private }
+			}
+		}
+		law_unionization_public_and_private = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_unionization
+				set_variable = { laws_socials_unionization = token:law_unionization_public_and_private }
+			}
+		}
+		law_unionization_represented = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_socials_unionization
+				set_variable = { laws_socials_unionization = token:law_unionization_represented }
+			}
+		}
+	}
+}

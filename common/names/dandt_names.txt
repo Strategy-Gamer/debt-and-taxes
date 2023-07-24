@@ -1,0 +1,227 @@
+# Americas
+	MEC = {
+		male = {
+			names = {
+				David Adrián Agustín Álvaro Anastasio Andrés Ángel Antonio Bernardo Emiliano Emilio
+				Enrique Ernesto Felipe Félix Francisco "Francisco Javier" Gabriel Gaspar Gregorio Ignacio
+				Jerónimo Joaquín José "José Manuel" "José María" Juan "Juan Bautista" Justo Lázaro Manuel
+				Mariano Martín Melchor Miguel Nicolás Pablo Pascual Pedro Porfirio Ramón Anselmo Cecilio
+				Ricardo Rómulo Salvador Sebastián Tomás Valentín Valeriano Venustiano Vicente Victoriano
+			}
+		}
+		female = {
+			names = {
+				Adelita Araceli Belén Camila Candelaria Chavela Consuelo Cristina Delfina Esperanza
+				Fidelia Graciela Isadora Isabella Jimena Ximena Luciana Lucrecia María Marisol
+				Noemí Nohemi Valentina Valeria Rocío Socorro Sofía Teófila Amaranta Úrsula Rebeca Remedios
+			}
+		}
+		surnames = {
+			Martínez Almonte Álvarez Arista Barragán Bocanegra Bravo Bustamante Canalizo Carranza Caserta
+			Cervantes Corona Corra "de Ampudia" "de Cos" "de Itúrbide" Díaz Echeverría Escandón Escobedo
+			Fagoaga "Fernández del Valle" Flores Gómez González Guerrero Huerta Kosterlitzky "López de Santa Ana" Lozada
+			"Martínez del Río" Mejía Miramón Múzquiz Obregón Pedraza Pimentel Reyes "Rincón Gallardo" Robles
+			Ruíz Salas Sánchez "Sarmaniego del Castillo" "Vázquez de la Cadena" Villa Woll Zapata Zaragoza Zuloaga
+		}
+		callsigns = { }
+	}
+#
+# Europe
+	SAA = {
+		male = {
+			names = {  Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich
+				Theodor Hans Anton Joachim Max Emil Peter Fritz Otto Adolf Tobias Staffan Marco Karl
+			}
+		}
+		female = {
+			names = { Jessica Emma Hanna Sofia Marie Hildegard }
+		}
+		surnames = {
+			Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn
+			Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm
+			Beisswenger Duttmann Wilbs Berglen Behrmann
+			}
+		callsigns = { "Bubi" "Assi" "The Black Devil" "The Blond Knight Of Germany" "Dolfo" "Fighter of Libau" "Petit Rouge" "Pritzl" "The Red Baron" "The Red Battle-flyer" "The Red Knight" "Reeste" }
+	}
+# Africa/ME
+	AFR = {
+		male = {
+			names = {
+				Aar Abadir Abd Abdallah Abdi Abdihakim Abdillahi Abdiqasim Abdirahman Abdirashid Abdirizak Abdisalam Abdiweli Abdourahman Abdulkadir Abdullahi Abdulsalami Adan Aden Ahmed Ali Arawelo Ayub Dahir Daud Elman Faisal Farah Hasan Hassan Hirsi Ibrahim Ismail Jama Jaylaani Liban
+				Maxamed Mo Mohamed Mohammed Mohamoud Mohamud Muse Mustafa Nur Nuruddin Olol Omar Osman Rageh Salaad Sharif Shaykh Shire Uways Warsame Yusuf
+			}
+		}
+		female = {
+			names = {
+				Amina Asha Asli Ayaan Edna Fatima Fowziya Halima Hanan Hawa Hodan Idyl Iman Khadija Ladan Maryam Siham Waris Yasmin Yasmine Yussur Zahra
+			}
+		}
+		surnames = {
+			Aato Abade Abdi Abdillahi Abdulle Abdulmajid Abrar Abubakar Adan Addou Afrax "Al-Amawi" Ahmed Ali Allas Aptidon "Ar-Rida" Aweys Awl Bani "Al-Barawi" Barre Bile Daar Daud Diinle Dirie Duale Elmi Farah Farole Feiruz Galal
+			Galaydh Ghalib Ghedi Haji "Haji-Faqi" Hashi Hassan Hersi Hirsi Hussein Ibrahim Ibrahim Ikar Irro Islam Ismail Issa Isse "Al-Jabarti" Jama Osman Jibrell Kahin Kassim "Al-Kawneyn" Kediye Kenadid Kusow Liibaan Maanta Madobe
+			Mahamuud Malimey Moalim Mohallim Mohamed Muhammad Mukhtar Mumin Mursal Nalayeh Nur Omaar Omer Osman Osoble Qalanjo Qarshe "Al-Qutbi" Said Samatar Sharmarke Shermarke Shirdon Shire Siad Silanyo Sinimo Sufi Timacade Waberi
+			Warfa Warsame "Al-Zayla'i"
+		}
+		callsigns = { }
+	}
+	TKS = {
+		male = {
+			names = {
+				Abdullo Abdullohi Abdurahman Abdusalom Ahmadjon Alisher Anvan Bahodur Bakhriddin Daler Darvesh Daryo Davlatali Farkhod Farrukh Firuz Habibullo Hoji Homid Ibrohim Ilhom Ismoil Jahongir Jamshed Janob Jurabek Khakim Khon
+				Mamadsho Mamur Mashhadi Mirali Mirzo Muhammad Muhammadjon Mukhammad Mullo Murod Nosir Nuriddin Odil Pulod Rahmatillo Rahmatullo Raimkul Ramazon Ravshan Ravshanbek Rustam Sadullo Samandar Shuhrat Sobir Suhrob Tohir
+				Ulugbek Ustoz Yoqub Zokir
+			}
+		}
+		female = {
+			names = {
+				Ariana Azaliya Daler Farzona Firuza Flura Gulchkehra Gulshod Gulya Guylchekhra Guyulya Latofat Mastona Mavzuna Mazoltuv Munisa Nargis Nigina Ruhsora Sitora Zamira Zulfiya
+			}
+		}
+		surnames = {
+			Abdulayev Abdullaev Abdulloev Abdulov Abdurakhmanov Abdurashidov Akbarov Akhmadov Aliev Alimov Amirov Azizov Babaev Boqiev Burkhanov Choriev Dzamshedov Ergashev Hamidov Haydarov Ibragimov Idrisov Isaev Islamov Ismailov
+			Isoev Jalilov Juraev Kadyrov Karimov Kasymov Khasanov Kurbanov Kurbonov Majidov Mamurov Mirzoev Murodov Musaev Nabiyev Niyazov Niyozov Nuraliev Qurbonov Rakhimov Ramazonov Rasulov Ravshanov Sadykov Saidov Salimov Sharifov
+			Sharipov Sheraliev Sultanov Sultonov Umarov Usmanov Yuldashev Yuldosvhev Yunusov Yusufi Yusufov Yusupov
+		}
+	}
+#
+# Asia
+	DGS = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	QHI = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	GSU = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	XIK = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	CGQ = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	CDU = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	BAZ = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	GUI = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	GGD = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	FEG = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	GUO = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	SHA = {
+		male = {
+			names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+		}
+		female = {
+			names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
+		}
+		surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+		callsigns = { }
+	}
+	KML = {
+		male = {
+			names = {
+				Aibek Alikhan Alisher Arman Aslan Aybek Azat Bolat Bulat Erasyl Islam Makhmud Mukhamed Mukhammed Nurasyl Nurislam Nurzhan Ramazan Ruslan Rustam Serik Shamil Sukhrab Talgat Temir Timur
+			}
+		}
+
+		female = {
+			names = {
+				Aiday Aiman Aina Aliya Anar Anara Anargul Aruzhan Ayaulym Ayna Aynur Bibigul Gulnar Gulnara Gulnaz Inkar Inzhu Madina Saltanat Sezim Zhuldyz
+			}
+		}
+
+		surnames = {
+			Abaev Abdulayev Abdulin Adelzhanov Aibekov Aitmukhambetov Akhmetov Aliev Alikhanov Alimov Aliyev Almatyev Amangeldiev Amirov Aruzhanov Astana Asylmuratov Aubakirov Aybekov Azizov Babaev Baizhanov Bolatov Erjanov Erzhanov
+			Ibragimov Idrisov Isaev Iskakov Islamov Ismailov Kadyrov Karimov Kasymov Khasanov Kudaibergenov Kurbanov Kusainov Maksatov Malzagov Mendygaliev Musaev Mustafin Nazarbayev Niyazov Niyazymbetov Nurasylov Nurgaliev Nurislamov
+			Nursultanov Nurzhanov Omarov Ospan Rakhimov Ramadanov Ramazanov Rasulov Salimov Sapiyev Sarsenbaev Sarsenov Serikbaev Serikov Sharipov Shumenov Sultanbekov Sultanov Sydykov Talgatov Tazhibaev Temirov Tursynbekov Umarov
+			Usmanov Yuldashev Ynusov Yusupov Zhanibekov Zhaparov Zhumabekov Zhunusov Zhusupov
+		}
+	}

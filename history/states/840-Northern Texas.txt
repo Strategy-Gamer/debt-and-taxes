@@ -1,0 +1,37 @@
+
+state={
+	id=840
+	name="STATE_840"
+	resources={
+		oil=60.000
+		foodstuffs=12.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = weather_wet_season
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		1915 1998 2055 3875 3972 9773 9908 12301 12848 12875 12893 13423 
+	}
+	manpower=847000
+	buildings_max_level_factor=1.000
+	state_category=state_cat
+	local_supplies=0.000
+}

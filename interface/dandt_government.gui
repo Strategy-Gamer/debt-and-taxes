@@ -1,0 +1,2712 @@
+guiTypes = {
+	#Internal Politics
+		containerWindowType = {
+			name = "politics_list_container"
+			position = { x = 250 y = 125 }
+			size = { width = 1278 height = 720 }
+
+			fade_time = 300
+			fade_type = linear
+			moveable = yes
+
+			background = {
+				name = "Background"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+			background = {
+				name = "Background"
+				spriteType = "GFX_browser_bg"
+				alwaystransparent=yes
+			}
+
+			instantTextboxType = {
+				name = "politics_list_title"
+				position = { x = 25 y = 12 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 0}
+				text = "politics_list_title_tt"
+				pdx_tooltip = "politics_list_title_tt"
+				pdx_tooltip_delayed = "politics_list_title_text_delayed"
+				maxWidth = 1000
+				maxHeight = 20
+				fixedsize = yes
+			}
+
+			containerWindowType = { # Update Button
+				name = "update_button_container"
+				position = { x = 860 y = 670 }
+				size = { width = 221 height = 34 }
+				buttonType = {
+					name = "update_button"
+					position = { x = 0 y = 0 }
+					quadTextureSprite ="GFX_button_221x34"
+					buttonFont = "Main_14_black"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_close
+					shortcut = "A"
+				}
+				instantTextBoxType = {
+					name = "update_button_title"
+					position = { x = 0 y = 8 }
+					font = "hoi_18mbs"
+					format = center
+					maxWidth = 221
+					text = "Update Politics"
+					maxHeight = 24
+					fixedsize = yes
+					alwaystransparent = yes
+				}
+			}
+
+			buttonType = {
+				name = "close_button"
+				position = { x = -222 y = 9 }
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "Main_14_black"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_RIGHT"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+			}
+
+			containerWindowType = {
+				name = "party_list_container"
+				position = {x = 10 y = 54 }
+				size = {width = 300 height = 614 }
+				margin = { top = 10 bottom = 10 left = 12 right = 25 }
+				Orientation = upper_left
+
+				verticalScrollbar = "right_vertical_slider"
+				vertical_scroll_step = 60
+				scroll_wheel_factor = 60
+				smooth_scrolling = yes
+
+				background = {
+					name = "Background"
+					quadTextureSprite = "GFX_tiled_window2_2b_border"
+				}
+
+				gridboxtype = {
+					name = "parties_list"
+					position = { x = 114 y = 38 }
+					size = { width = 0 height = 100%% }
+					slotsize = { width = 204 height = 38 }
+					max_slots_horizontal = 1
+					add_horizontal = no
+				}
+
+				containerWindowType = {
+					name = "parties_title_entry"
+					position = { x = 2 y = 0 }
+					size = { width = 255 height = 45 }
+
+					buttonType = {
+						name = "parties_title_background_button"
+						position = { x = 0 y = 0 }
+						#size = { width = 255 height = 45 }
+						quadTextureSprite ="GFX_state_button_background_pressed"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+
+					buttonType = {
+						name = "parties_title_background_button_clicked"
+						quadTextureSprite ="GFX_state_button_background"
+						position = { x = 0 y = 0 }
+						#size = { width = 255 height = 45 }
+						#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+						alwaystransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "parties_title_name"
+						position = { x = 7 y = 3 }
+						font = "hoi_18mbs"
+						format = left
+						maxWidth = 240
+						text = parties_title_name
+						maxHeight = 24
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "country_population_num"
+						position = { x = 25 y = 18 }
+						font = "hoi_18mbs"
+						format = right
+						maxWidth = 200
+						text = "[?govt_ideology_array^num]"
+						maxHeight = 24
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+
+					iconType = {
+						name = "country_population_trend"
+						spriteType ="GFX_trend_arrow_up_green"
+						position = { x = 225 y = 20 }
+						alwaystransparent = yes
+					}
+				}
+			}
+			containerWindowType = {
+				name = "list_type_selector"
+				position = { x = 304 y = 54 }
+				size = { width = 785 height = 72 }
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_fullborder_tiled"
+				}
+				containerWindowType = {
+					name = "parliament_button_container"
+					orientation = center
+					origo = center
+					position = { x = -280 }
+					size = { width = 182 height = 34 }
+					buttonType = {
+						name = "parliament_button"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_182x34"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+						pdx_tooltip = parliament_button_text
+						pdx_tooltip_delayed = parliament_button_text_delayed
+					}
+					iconType = {
+						name = "parliament_icon"
+						spriteType ="GFX_resource_groceries"
+						frame = 1
+						position = { x = 10 y = 4 }
+						alwaystransparent = yes
+					}
+					instantTextBoxType = {
+						name = "parliament_button_title"
+						position = { x = 2 y = 8 }
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 182
+						text = "parliament_button_tt"
+						maxHeight = 24
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "parliament_off"
+						spriteType ="GFX_accept_decline_icon"
+						frame = 1
+						position = { x = 149 y = 8 }
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "parliament_on"
+						spriteType ="GFX_accept_decline_icon"
+						frame = 2
+						position = { x = 149 y = 8 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "legislation_button_container"
+					orientation = center
+					origo = center
+					position = { x = -93 }
+					size = { width = 182 height = 34 }
+					buttonType = {
+						name = "legislation_button"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_182x34"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "legislation_icon"
+						spriteType ="GFX_resource_groceries"
+						frame = 1
+						position = { x = 10 y = 4 }
+						alwaystransparent = yes
+					}
+					instantTextBoxType = {
+						name = "legislation_button_title"
+						position = { x = 2 y = 8 }
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 182
+						text = "legislation_button_tt"
+						maxHeight = 24
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "legislation_off"
+						spriteType ="GFX_accept_decline_icon"
+						frame = 1
+						position = { x = 149 y = 8 }
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "legislation_on"
+						spriteType ="GFX_accept_decline_icon"
+						frame = 2
+						position = { x = 149 y = 8 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "parties_button_container"
+					orientation = center
+					origo = center
+					position = { x = 93 }
+					size = { width = 182 height = 34 }
+					buttonType = {
+						name = "parties_button"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_182x34"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "parties_icon"
+						spriteType ="GFX_resource_groceries"
+						frame = 1
+						position = { x = 10 y = 4 }
+						alwaystransparent = yes
+					}
+					instantTextBoxType = {
+						name = "parties_button_title"
+						position = { x = 2 y = 8 }
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 182
+						text = "parties_button_tt"
+						maxHeight = 24
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "parties_off"
+						spriteType ="GFX_accept_decline_icon"
+						frame = 1
+						position = { x = 149 y = 8 }
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "parties_on"
+						spriteType ="GFX_accept_decline_icon"
+						frame = 2
+						position = { x = 149 y = 8 }
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "population_button_container"
+					orientation = center
+					origo = center
+					position = { x = 280 }
+					size = { width = 182 height = 34 }
+					buttonType = {
+						name = "population_button"
+						position = { x = 0 y = 0 }
+						quadTextureSprite ="GFX_button_182x34"
+						buttonFont = "Main_14_black"
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+					}
+					iconType = {
+						name = "population_icon"
+						spriteType ="GFX_pops"
+						frame = 1
+						position = { x = 14 y = 10 }
+						alwaystransparent = yes
+					}
+					instantTextBoxType = {
+						name = "population_button_title"
+						position = { x = 2 y = 8 }
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 182
+						text = "population_button_tt"
+						maxHeight = 24
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "population_off"
+						spriteType ="GFX_accept_decline_icon"
+						frame = 1
+						position = { x = 149 y = 8 }
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "population_on"
+						spriteType ="GFX_accept_decline_icon"
+						frame = 2
+						position = { x = 149 y = 8 }
+						alwaystransparent = yes
+					}
+				}
+			}
+			containerWindowType = {
+				name = "selected_state_name_container"
+				position = {x = 304 y = 120 }
+				size = {width = 785 height = 78 }
+				Orientation = upper_left
+
+				background = {
+					name = "Background"
+					quadTextureSprite = "GFX_fullborder_tiled"
+				}
+
+				instantTextBoxType = {
+					name = "selected_state_name"
+					position = { x = 0 y = 18 }
+					font = "hoi_36header"
+					text = "[?selected_state.GetName]"
+					format = center
+					maxWidth = 785
+					maxHeight = 38
+					fixedsize = yes
+				}
+			}
+			containerWindowType = {
+				name = "selected_country_parliament_info_container"
+				position = { x = 305 y = 194 }
+				size = { width = 780 height = 470 }
+
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_tiled_window_small_green"
+				}
+
+				containerWindowType = {
+					name = "horizontal_parliament_population_container"
+					position = { y = -180 }
+					size = { width = 596 height = 16 }
+					orientation = center
+					origo = center
+
+					iconType = {
+						name = "parliament_population_bg"
+						position = { x = -2 y = -2 }
+						spriteType = "GFX_horizontal_parliament_population_bg"
+						alwaystransparent=yes
+					}
+
+					#IN BACKWARDS FOR LAYERING
+						#Stratocratic
+							iconType = {
+								name = "parliament_stratocratic_ruling_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_stratocratic_ruling_population"
+							}
+							iconType = {
+								name = "parliament_stratocratic_coalition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_stratocratic_coalition_population"
+							}
+							iconType = {
+								name = "parliament_stratocratic_opposition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_stratocratic_opposition_population"
+							}
+							iconType = {
+								name = "parliament_stratocratic_ousted_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_stratocratic_ousted_population"
+							}
+						#
+						#Fascist
+							iconType = {
+								name = "parliament_fascist_ruling_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_fascist_ruling_population"
+							}
+							iconType = {
+								name = "parliament_fascist_coalition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_fascist_coalition_population"
+							}
+							iconType = {
+								name = "parliament_fascist_opposition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_fascist_opposition_population"
+							}
+							iconType = {
+								name = "parliament_fascist_ousted_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_fascist_ousted_population"
+							}
+						#
+						#Reactionary
+							iconType = {
+								name = "parliament_reactionary_ruling_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_reactionary_ruling_population"
+							}
+							iconType = {
+								name = "parliament_reactionary_coalition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_reactionary_coalition_population"
+							}
+							iconType = {
+								name = "parliament_reactionary_opposition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_reactionary_opposition_population"
+							}
+							iconType = {
+								name = "parliament_reactionary_ousted_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_reactionary_ousted_population"
+							}
+						#
+						#Conservative
+							iconType = {
+								name = "parliament_conservative_ruling_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_conservative_ruling_population"
+							}
+							iconType = {
+								name = "parliament_conservative_coalition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_conservative_coalition_population"
+							}
+							iconType = {
+								name = "parliament_conservative_opposition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_conservative_opposition_population"
+							}
+							iconType = {
+								name = "parliament_conservative_ousted_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_conservative_ousted_population"
+							}
+						#
+						#Agrarian
+							iconType = {
+								name = "parliament_agrarian_ruling_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_agrarian_ruling_population"
+							}
+							iconType = {
+								name = "parliament_agrarian_coalition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_agrarian_coalition_population"
+							}
+							iconType = {
+								name = "parliament_agrarian_opposition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_agrarian_opposition_population"
+							}
+							iconType = {
+								name = "parliament_agrarian_ousted_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_agrarian_ousted_population"
+							}
+						#
+						#Liberal
+							iconType = {
+								name = "parliament_liberal_ruling_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_liberal_ruling_population"
+							}
+							iconType = {
+								name = "parliament_liberal_coalition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_liberal_coalition_population"
+							}
+							iconType = {
+								name = "parliament_liberal_opposition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_liberal_opposition_population"
+							}
+							iconType = {
+								name = "parliament_liberal_ousted_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_liberal_ousted_population"
+							}
+						#
+						#Socialist
+							iconType = {
+								name = "parliament_socialist_ruling_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_socialist_ruling_population"
+							}
+							iconType = {
+								name = "parliament_socialist_coalition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_socialist_coalition_population"
+							}
+							iconType = {
+								name = "parliament_socialist_opposition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_socialist_opposition_population"
+							}
+							iconType = {
+								name = "parliament_socialist_ousted_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_socialist_ousted_population"
+							}
+						#
+						#Communist
+							iconType = {
+								name = "parliament_communist_ruling_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_communist_ruling_population"
+							}
+							iconType = {
+								name = "parliament_communist_coalition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_communist_coalition_population"
+							}
+							iconType = {
+								name = "parliament_communist_opposition_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_communist_opposition_population"
+							}
+							iconType = {
+								name = "parliament_communist_ousted_population_icon"
+								position = { x = 0 y = 0 }
+								spritetype = "GFX_horizontal_parliament_communist_ousted_population"
+							}
+						#
+
+						iconType = {
+							name = "parliament_population_frame"
+							position = { x = -7 y = -7 }
+							spriteType = "GFX_horizontal_parliament_population_frame"
+							# alwaystransparent=yes
+							pdx_tooltip = parliament_population_tt
+						}
+					#
+				}
+			}
+		}
+		containerWindowType = {
+			name = "parties_item"
+			position = { x = 0 y = 0}
+			size = { width = 255 height = 45 }
+
+			buttonType = {
+				name = "background_button"
+				position = { x = 0 y = 0 }
+				#size = { width = 255 height = 45 }
+				quadTextureSprite ="GFX_state_button_background_pressed"
+				buttonFont = "Main_14_black"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_close
+			}
+
+			buttonType = {
+				name = "background_button_clicked"
+				quadTextureSprite ="GFX_state_button_background"
+				position = { x = 0 y = 0 }
+				#size = { width = 255 height = 45 }
+				#pdx_tooltip = "COTTON_WOOL_TOOLTIP"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "party_color_icon"
+				position = { x = 7 y = 4 }
+			}
+
+			instantTextBoxType = {
+				name = "party_name"
+				position = { x = 27 y = 3 }
+				font = "hoi_18mbs"
+				format = left
+				maxWidth = 400
+				text = "[GetPartyNameInList]"
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "population_num"
+				position = { x = 22 y = 18 }
+				font = "hoi_18mbs"
+				format = right
+				maxWidth = 200
+				text = "[GetPartyPopularityInList]"
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "population_trend"
+				spriteType ="GFX_trend_arrow_up_green"
+				position = { x = 225 y = 20 }
+				alwaystransparent = yes
+			}
+		}
+	#
+	#Politics View
+		#Overview
+			containerWindowType = {
+				name = "country_government_container"
+				position = { x = 0 y = 428 }
+				size = { width = 550 height = 600 }
+
+				background = {
+					name = "Background"
+					spriteType = "GFX_tiled_window2_2b_border"
+					alwaystransparent=yes
+				}
+
+				buttonType = {
+					name = "laws_liberties_category_button"
+					position = { x = 20 y = 12 }
+					quadTextureSprite ="GFX_button_123x34"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_close
+					text = laws_liberties_category_button_tt
+					font = "hoi_18mbs"
+					pdx_tooltip = laws_liberties_category_button_tt
+				}
+				buttonType = {
+					name = "laws_politics_category_button"
+					position = { x = 144 y = 12 }
+					quadTextureSprite ="GFX_button_123x34"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_close
+					text = laws_politics_category_button_tt
+					font = "hoi_18mbs"
+					pdx_tooltip = laws_politics_category_button_tt
+				}
+				buttonType = {
+					name = "laws_economics_category_button"
+					position = { x = 268 y = 12 }
+					quadTextureSprite ="GFX_button_123x34"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_close
+					text = laws_economics_category_button_tt
+					font = "hoi_18mbs"
+					pdx_tooltip = laws_economics_category_button_tt
+				}
+				buttonType = {
+					name = "laws_demographics_category_button"
+					position = { x = 392 y = 12 }
+					quadTextureSprite ="GFX_button_123x34"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_close
+					text = laws_demographics_category_button_tt
+					font = "hoi_18mbs"
+					pdx_tooltip = laws_demographics_category_button_tt
+				}
+				buttonType = {
+					name = "laws_pass_debug_button"
+					position = { x = 520 y = 14 }
+					spriteType = "GFX_law_empty_grey_button"
+					clicksound = click_close
+					pdx_tooltip = "abcd"
+					pdx_tooltip_delayed = "Debug Button to Pass Bill"
+				}
+			}
+		#Law SubFolders
+			containerWindowType = {
+				name = "country_government_laws_liberties_container"
+			}
+			#Liberty Subcategories
+
+			#
+			containerWindowType = {
+				name = "country_government_laws_politics_container"
+			}
+			#Politics Subcategories
+
+			#
+			containerWindowType = {
+				name = "country_government_laws_economics_container"
+				position = { x = 12 y = 480 }
+				size = { width = 538 height = -6 }
+
+				verticalScrollbar = "right_vertical_slider"
+
+				background = {
+					name = "background"
+					quadTextureSprite ="GFX_tiled_window_transparent"
+				}
+
+				containerWindowType = { # economy
+					name = "subcategory_economy_container"
+					position = { x = 2 y = 4 }
+					size = { height = 100 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_economy_bg"
+						spriteType = "GFX_law_subcategory_economy_bg"
+						position = { x = 6 y = 6 }
+					}
+					buttonType = {
+						name = "subcategory_economy_name_bg"
+						position = { x = 6 y = 5 }
+						spriteType = "GFX_win_header_short"
+						alwaystransparent=yes
+					}
+					instantTextBoxType = {
+						name = "subcategory_economy_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_economy_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_economy_title_tt
+						pdx_tooltip_delayed = subcategory_economy_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_economy_name"
+						position = { x = 12 y = 32 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						font = "hoi_18mbs"
+						text = subcategory_economy_name_tt
+						pdx_tooltip = subcategory_economy_name_tt
+						pdx_tooltip_delayed = subcategory_economy_name_tt_delayed
+					}
+
+					instantTextBoxType = {
+						name = "subcategory_economy_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_economy_effect_tt
+						font = "hoi_16mbs"
+					}
+
+					containerWindowType = {
+						name = "subcategory_economy_list_container"
+						position = { x = 12 y = 56 }
+						size = { height = 33 width = 231 }
+
+						background = {
+							name = "background"
+							quadTextureSprite ="GFX_tiled_window_transparent"
+						}
+
+						gridboxtype = {
+							name = "subcategory_economy_list"
+							position = { x = 2 y = 2 }
+							size = { width = 231 height = 29 }
+							slotsize = { width = 29 height = 29 }
+							max_slots_horizontal = 9
+							max_slots_vertical = 1
+							add_horizontal = yes
+						}
+					}
+				}
+				containerWindowType = { # foreign_investment
+					name = "subcategory_foreign_investment_container"
+					position = { x = 2 y = 104 }
+					size = { height = 100 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_foreign_investment_bg"
+						spriteType = "GFX_law_subcategory_foreign_investment_bg"
+						position = { x = 6 y = 6 }
+					}
+					buttonType = {
+						name = "subcategory_foreign_investment_name_bg"
+						position = { x = 6 y = 5 }
+						spriteType = "GFX_win_header_short"
+						alwaystransparent=yes
+					}
+					instantTextBoxType = {
+						name = "subcategory_foreign_investment_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_foreign_investment_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_foreign_investment_title_tt
+						pdx_tooltip_delayed = subcategory_foreign_investment_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_foreign_investment_name"
+						position = { x = 12 y = 32 }
+						maxWidth = 230
+						maxHeight = 30
+						font = "hoi_18mbs"
+						fixedsize=yes
+						text = subcategory_foreign_investment_name_tt
+						pdx_tooltip = subcategory_foreign_investment_name_tt
+						pdx_tooltip_delayed = subcategory_foreign_investment_name_tt_delayed
+					}
+
+					instantTextBoxType = {
+						name = "subcategory_foreign_investment_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_foreign_investment_effect_tt
+						font = "hoi_16mbs"
+					}
+
+					containerWindowType = {
+						name = "subcategory_foreign_investment_list_container"
+						position = { x = 12 y = 56 }
+						size = { height = 33 width = 231 }
+
+						background = {
+							name = "background"
+							quadTextureSprite ="GFX_tiled_window_transparent"
+						}
+
+						gridboxtype = {
+							name = "subcategory_foreign_investment_list"
+							position = { x = 2 y = 2 }
+							size = { width = 231 height = 29 }
+							slotsize = { width = 29 height = 29 }
+							max_slots_horizontal = 9
+							max_slots_vertical = 1
+							add_horizontal = yes
+						}
+					}
+				}
+				containerWindowType = { # consumer_rights
+					name = "subcategory_consumer_rights_container"
+					position = { x = 2 y = 204 }
+					size = { height = 100 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_consumer_rights_bg"
+						spriteType = "GFX_law_subcategory_consumer_rights_bg"
+						position = { x = 6 y = 6 }
+					}
+					buttonType = {
+						name = "subcategory_consumer_rights_name_bg"
+						position = { x = 6 y = 5 }
+						spriteType = "GFX_win_header_short"
+						alwaystransparent=yes
+					}
+					instantTextBoxType = {
+						name = "subcategory_consumer_rights_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_consumer_rights_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_consumer_rights_title_tt
+						pdx_tooltip_delayed = subcategory_consumer_rights_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_consumer_rights_name"
+						position = { x = 12 y = 32 }
+						maxWidth = 230
+						maxHeight = 30
+						font = "hoi_18mbs"
+						fixedsize=yes
+						text = subcategory_consumer_rights_name_tt
+						pdx_tooltip = subcategory_consumer_rights_name_tt
+						pdx_tooltip_delayed = subcategory_consumer_rights_name_tt_delayed
+					}
+
+					instantTextBoxType = {
+						name = "subcategory_consumer_rights_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_consumer_rights_effect_tt
+						font = "hoi_16mbs"
+					}
+
+					containerWindowType = {
+						name = "subcategory_consumer_rights_list_container"
+						position = { x = 12 y = 56 }
+						size = { height = 33 width = 231 }
+
+						background = {
+							name = "background"
+							quadTextureSprite ="GFX_tiled_window_transparent"
+						}
+
+						gridboxtype = {
+							name = "subcategory_consumer_rights_list"
+							position = { x = 2 y = 2 }
+							size = { width = 231 height = 29 }
+							slotsize = { width = 29 height = 29 }
+							max_slots_horizontal = 9
+							max_slots_vertical = 1
+							add_horizontal = yes
+						}
+					}
+				}
+				containerWindowType = { # minimum_wage
+					name = "subcategory_minimum_wage_container"
+					position = { x = 2 y = 304 }
+					size = { height = 100 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_minimum_wage_bg"
+						spriteType = "GFX_law_subcategory_minimum_wage_bg"
+						position = { x = 6 y = 6 }
+					}
+					buttonType = {
+						name = "subcategory_minimum_wage_name_bg"
+						position = { x = 6 y = 5 }
+						spriteType = "GFX_win_header_short"
+						alwaystransparent=yes
+					}
+					instantTextBoxType = {
+						name = "subcategory_minimum_wage_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_minimum_wage_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_minimum_wage_title_tt
+						pdx_tooltip_delayed = subcategory_minimum_wage_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_minimum_wage_name"
+						position = { x = 12 y = 32 }
+						maxWidth = 230
+						maxHeight = 30
+						font = "hoi_18mbs"
+						fixedsize=yes
+						text = subcategory_minimum_wage_name_tt
+						pdx_tooltip = subcategory_minimum_wage_name_tt
+						pdx_tooltip_delayed = subcategory_minimum_wage_name_tt_delayed
+					}
+
+					instantTextBoxType = {
+						name = "subcategory_minimum_wage_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_minimum_wage_effect_tt
+						font = "hoi_16mbs"
+					}
+
+					containerWindowType = {
+						name = "subcategory_minimum_wage_list_container"
+						position = { x = 12 y = 56 }
+						size = { height = 33 width = 231 }
+
+						background = {
+							name = "background"
+							quadTextureSprite ="GFX_tiled_window_transparent"
+						}
+
+						gridboxtype = {
+							name = "subcategory_minimum_wage_list"
+							position = { x = 2 y = 2 }
+							size = { width = 231 height = 29 }
+							slotsize = { width = 29 height = 29 }
+							max_slots_horizontal = 9
+							max_slots_vertical = 1
+							add_horizontal = yes
+						}
+					}
+				}
+				containerWindowType = { # work_week
+					name = "subcategory_work_week_container"
+					position = { x = 2 y = 404 }
+					size = { height = 100 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_work_week_bg"
+						spriteType = "GFX_law_subcategory_work_week_bg"
+						position = { x = 6 y = 6 }
+					}
+					buttonType = {
+						name = "subcategory_work_week_name_bg"
+						position = { x = 6 y = 5 }
+						spriteType = "GFX_win_header_short"
+						alwaystransparent=yes
+					}
+					instantTextBoxType = {
+						name = "subcategory_work_week_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_work_week_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_work_week_title_tt
+						pdx_tooltip_delayed = subcategory_work_week_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_work_week_name"
+						position = { x = 12 y = 32 }
+						maxWidth = 230
+						maxHeight = 30
+						font = "hoi_18mbs"
+						fixedsize=yes
+						text = subcategory_work_week_name_tt
+						pdx_tooltip = subcategory_work_week_name_tt
+						pdx_tooltip_delayed = subcategory_work_week_name_tt_delayed
+					}
+
+					instantTextBoxType = {
+						name = "subcategory_work_week_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_work_week_effect_tt
+						font = "hoi_16mbs"
+					}
+
+					containerWindowType = {
+						name = "subcategory_work_week_list_container"
+						position = { x = 12 y = 56 }
+						size = { height = 33 width = 231 }
+
+						background = {
+							name = "background"
+							quadTextureSprite ="GFX_tiled_window_transparent"
+						}
+
+						gridboxtype = {
+							name = "subcategory_work_week_list"
+							position = { x = 2 y = 2 }
+							size = { width = 231 height = 29 }
+							slotsize = { width = 29 height = 29 }
+							max_slots_horizontal = 9
+							max_slots_vertical = 1
+							add_horizontal = yes
+						}
+					}
+				}
+				containerWindowType = { # safety_regulations
+					name = "subcategory_safety_regulations_container"
+					position = { x = 2 y = 504 }
+					size = { height = 100 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_safety_regulations_bg"
+						spriteType = "GFX_law_subcategory_safety_regulations_bg"
+						position = { x = 6 y = 6 }
+					}
+					buttonType = {
+						name = "subcategory_safety_regulations_name_bg"
+						position = { x = 6 y = 5 }
+						spriteType = "GFX_win_header_short"
+						alwaystransparent=yes
+					}
+					instantTextBoxType = {
+						name = "subcategory_safety_regulations_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_safety_regulations_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_safety_regulations_title_tt
+						pdx_tooltip_delayed = subcategory_safety_regulations_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_safety_regulations_name"
+						position = { x = 12 y = 32 }
+						maxWidth = 230
+						maxHeight = 30
+						font = "hoi_18mbs"
+						fixedsize=yes
+						text = subcategory_safety_regulations_name_tt
+						pdx_tooltip = subcategory_safety_regulations_name_tt
+						pdx_tooltip_delayed = subcategory_safety_regulations_name_tt_delayed
+					}
+
+					instantTextBoxType = {
+						name = "subcategory_safety_regulations_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_safety_regulations_effect_tt
+						font = "hoi_16mbs"
+					}
+
+					containerWindowType = {
+						name = "subcategory_safety_regulations_list_container"
+						position = { x = 12 y = 56 }
+						size = { height = 33 width = 231 }
+
+						background = {
+							name = "background"
+							quadTextureSprite ="GFX_tiled_window_transparent"
+						}
+
+						gridboxtype = {
+							name = "subcategory_safety_regulations_list"
+							position = { x = 2 y = 2 }
+							size = { width = 231 height = 29 }
+							slotsize = { width = 29 height = 29 }
+							max_slots_horizontal = 9
+							max_slots_vertical = 1
+							add_horizontal = yes
+						}
+					}
+				}
+				containerWindowType = { # financial_regulations
+					name = "subcategory_financial_regulations_container"
+					position = { x = 2 y = 604 }
+					size = { height = 100 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_financial_regulations_bg"
+						spriteType = "GFX_law_subcategory_financial_regulations_bg"
+						position = { x = 6 y = 6 }
+					}
+					buttonType = {
+						name = "subcategory_financial_regulations_name_bg"
+						position = { x = 6 y = 5 }
+						spriteType = "GFX_win_header_short"
+						alwaystransparent=yes
+					}
+					instantTextBoxType = {
+						name = "subcategory_financial_regulations_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_financial_regulations_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_financial_regulations_title_tt
+						pdx_tooltip_delayed = subcategory_financial_regulations_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_financial_regulations_name"
+						position = { x = 12 y = 32 }
+						maxWidth = 230
+						maxHeight = 30
+						font = "hoi_18mbs"
+						fixedsize=yes
+						text = subcategory_financial_regulations_name_tt
+						pdx_tooltip = subcategory_financial_regulations_name_tt
+						pdx_tooltip_delayed = subcategory_financial_regulations_name_tt_delayed
+					}
+
+					instantTextBoxType = {
+						name = "subcategory_financial_regulations_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_financial_regulations_effect_tt
+						font = "hoi_16mbs"
+					}
+
+					containerWindowType = {
+						name = "subcategory_financial_regulations_list_container"
+						position = { x = 12 y = 56 }
+						size = { height = 33 width = 231 }
+
+						background = {
+							name = "background"
+							quadTextureSprite ="GFX_tiled_window_transparent"
+						}
+
+						gridboxtype = {
+							name = "subcategory_financial_regulations_list"
+							position = { x = 2 y = 2 }
+							size = { width = 231 height = 29 }
+							slotsize = { width = 29 height = 29 }
+							max_slots_horizontal = 9
+							max_slots_vertical = 1
+							add_horizontal = yes
+						}
+					}
+				}
+				containerWindowType = { # business_regulations
+					name = "subcategory_business_regulations_container"
+					position = { x = 2 y = 704 }
+					size = { height = 100 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_business_regulations_bg"
+						spriteType = "GFX_law_subcategory_business_regulations_bg"
+						position = { x = 6 y = 6 }
+					}
+					buttonType = {
+						name = "subcategory_business_regulations_name_bg"
+						position = { x = 6 y = 5 }
+						spriteType = "GFX_win_header_short"
+						alwaystransparent=yes
+					}
+					instantTextBoxType = {
+						name = "subcategory_business_regulations_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_business_regulations_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_business_regulations_title_tt
+						pdx_tooltip_delayed = subcategory_business_regulations_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_business_regulations_name"
+						position = { x = 12 y = 32 }
+						maxWidth = 230
+						maxHeight = 30
+						font = "hoi_18mbs"
+						fixedsize=yes
+						text = subcategory_business_regulations_name_tt
+						pdx_tooltip = subcategory_business_regulations_name_tt
+						pdx_tooltip_delayed = subcategory_business_regulations_name_tt_delayed
+					}
+
+					instantTextBoxType = {
+						name = "subcategory_business_regulations_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_business_regulations_effect_tt
+						font = "hoi_16mbs"
+					}
+
+					containerWindowType = {
+						name = "subcategory_business_regulations_list_container"
+						position = { x = 12 y = 56 }
+						size = { height = 33 width = 231 }
+
+						background = {
+							name = "background"
+							quadTextureSprite ="GFX_tiled_window_transparent"
+						}
+
+						gridboxtype = {
+							name = "subcategory_business_regulations_list"
+							position = { x = 2 y = 2 }
+							size = { width = 231 height = 29 }
+							slotsize = { width = 29 height = 29 }
+							max_slots_horizontal = 9
+							max_slots_vertical = 1
+							add_horizontal = yes
+						}
+					}
+				}
+				containerWindowType = { # pollution_regulations
+					name = "subcategory_pollution_regulations_container"
+					position = { x = 2 y = 804 }
+					size = { height = 100 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_pollution_regulations_bg"
+						spriteType = "GFX_law_subcategory_pollution_regulations_bg"
+						position = { x = 6 y = 6 }
+					}
+					buttonType = {
+						name = "subcategory_pollution_regulations_name_bg"
+						position = { x = 6 y = 5 }
+						spriteType = "GFX_win_header_short"
+						alwaystransparent=yes
+					}
+					instantTextBoxType = {
+						name = "subcategory_pollution_regulations_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_pollution_regulations_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_pollution_regulations_title_tt
+						pdx_tooltip_delayed = subcategory_pollution_regulations_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_pollution_regulations_name"
+						position = { x = 12 y = 32 }
+						maxWidth = 230
+						maxHeight = 30
+						font = "hoi_18mbs"
+						fixedsize=yes
+						text = subcategory_pollution_regulations_name_tt
+						pdx_tooltip = subcategory_pollution_regulations_name_tt
+						pdx_tooltip_delayed = subcategory_pollution_regulations_name_tt_delayed
+					}
+
+					instantTextBoxType = {
+						name = "subcategory_pollution_regulations_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_pollution_regulations_effect_tt
+						font = "hoi_16mbs"
+					}
+
+					containerWindowType = {
+						name = "subcategory_pollution_regulations_list_container"
+						position = { x = 12 y = 56 }
+						size = { height = 33 width = 231 }
+
+						background = {
+							name = "background"
+							quadTextureSprite ="GFX_tiled_window_transparent"
+						}
+
+						gridboxtype = {
+							name = "subcategory_pollution_regulations_list"
+							position = { x = 2 y = 2 }
+							size = { width = 231 height = 29 }
+							slotsize = { width = 29 height = 29 }
+							max_slots_horizontal = 9
+							max_slots_vertical = 1
+							add_horizontal = yes
+						}
+					}
+				}
+				containerWindowType = { # small_business_grants
+					name = "subcategory_small_business_grants_container"
+					position = { x = 2 y = 904 }
+					size = { height = 100 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_small_business_grants_bg"
+						spriteType = "GFX_law_subcategory_small_business_grants_bg"
+						position = { x = 6 y = 6 }
+					}
+					buttonType = {
+						name = "subcategory_small_business_grants_name_bg"
+						position = { x = 6 y = 5 }
+						spriteType = "GFX_win_header_short"
+						alwaystransparent=yes
+					}
+					instantTextBoxType = {
+						name = "subcategory_small_business_grants_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_small_business_grants_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_small_business_grants_title_tt
+						pdx_tooltip_delayed = subcategory_small_business_grants_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_small_business_grants_name"
+						position = { x = 12 y = 32 }
+						maxWidth = 230
+						maxHeight = 30
+						font = "hoi_18mbs"
+						fixedsize=yes
+						text = subcategory_small_business_grants_name_tt
+						pdx_tooltip = subcategory_small_business_grants_name_tt
+						pdx_tooltip_delayed = subcategory_small_business_grants_name_tt_delayed
+					}
+
+					instantTextBoxType = {
+						name = "subcategory_small_business_grants_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_small_business_grants_effect_tt
+						font = "hoi_16mbs"
+					}
+
+					containerWindowType = {
+						name = "subcategory_small_business_grants_list_container"
+						position = { x = 12 y = 56 }
+						size = { height = 33 width = 231 }
+
+						background = {
+							name = "background"
+							quadTextureSprite ="GFX_tiled_window_transparent"
+						}
+
+						gridboxtype = {
+							name = "subcategory_small_business_grants_list"
+							position = { x = 2 y = 2 }
+							size = { width = 231 height = 29 }
+							slotsize = { width = 29 height = 29 }
+							max_slots_horizontal = 9
+							max_slots_vertical = 1
+							add_horizontal = yes
+						}
+					}
+				}
+				containerWindowType = { # subsidies
+					name = "subcategory_subsidies_container"
+					position = { x = 2 y = 1004 }
+					size = { height = 640 width = 510 }
+
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_decisions_bg_small"
+					}
+					iconType = {
+						name = "subcategory_subsidies_bg"
+						spriteType = "GFX_law_subcategory_subsidies_bg"
+						position = { x = 6 y = 6 }
+					}
+					# agricultural_subsidies
+						buttonType = {
+							name = "subcategory_agricultural_subsidies_name_bg"
+							position = { x = 6 y = 5 }
+							spriteType = "GFX_win_header_short"
+							alwaystransparent=yes
+						}
+						instantTextBoxType = {
+							name = "subcategory_agricultural_subsidies_name"
+							position = { x = 12 y = 32 }
+							maxWidth = 230
+							maxHeight = 30
+							font = "hoi_18mbs"
+							fixedsize=yes
+							text = subcategory_agricultural_subsidies_name_tt
+							pdx_tooltip = subcategory_agricultural_subsidies_name_tt
+							pdx_tooltip_delayed = subcategory_agricultural_subsidies_name_tt_delayed
+						}
+
+						containerWindowType = {
+							name = "subcategory_agricultural_subsidies_list_container"
+							position = { x = 12 y = 56 }
+							size = { height = 33 width = 231 }
+
+							background = {
+								name = "background"
+								quadTextureSprite ="GFX_tiled_window_transparent"
+							}
+
+							gridboxtype = {
+								name = "subcategory_agricultural_subsidies_list"
+								position = { x = 2 y = 2 }
+								size = { width = 231 height = 29 }
+								slotsize = { width = 29 height = 29 }
+								max_slots_horizontal = 9
+								max_slots_vertical = 1
+								add_horizontal = yes
+							}
+						}
+					#
+					# mining_subsidies
+						buttonType = {
+							name = "subcategory_mining_subsidies_name_bg"
+							position = { x = 6 y = 5 }
+							spriteType = "GFX_win_header_short"
+							alwaystransparent=yes
+						}
+						instantTextBoxType = {
+							name = "subcategory_mining_subsidies_name"
+							position = { x = 12 y = 92 }
+							maxWidth = 230
+							maxHeight = 30
+							font = "hoi_18mbs"
+							fixedsize=yes
+							text = subcategory_mining_subsidies_name_tt
+							pdx_tooltip = subcategory_mining_subsidies_name_tt
+							pdx_tooltip_delayed = subcategory_mining_subsidies_name_tt_delayed
+						}
+
+						containerWindowType = {
+							name = "subcategory_mining_subsidies_list_container"
+							position = { x = 12 y = 116 }
+							size = { height = 33 width = 231 }
+
+							background = {
+								name = "background"
+								quadTextureSprite ="GFX_tiled_window_transparent"
+							}
+
+							gridboxtype = {
+								name = "subcategory_mining_subsidies_list"
+								position = { x = 2 y = 2 }
+								size = { width = 231 height = 29 }
+								slotsize = { width = 29 height = 29 }
+								max_slots_horizontal = 9
+								max_slots_vertical = 1
+								add_horizontal = yes
+							}
+						}
+					#
+					# drilling_subsidies
+						buttonType = {
+							name = "subcategory_drilling_subsidies_name_bg"
+							position = { x = 6 y = 5 }
+							spriteType = "GFX_win_header_short"
+							alwaystransparent=yes
+						}
+						instantTextBoxType = {
+							name = "subcategory_drilling_subsidies_name"
+							position = { x = 12 y = 152 }
+							maxWidth = 230
+							maxHeight = 30
+							font = "hoi_18mbs"
+							fixedsize=yes
+							text = subcategory_drilling_subsidies_name_tt
+							pdx_tooltip = subcategory_drilling_subsidies_name_tt
+							pdx_tooltip_delayed = subcategory_drilling_subsidies_name_tt_delayed
+						}
+
+						containerWindowType = {
+							name = "subcategory_drilling_subsidies_list_container"
+							position = { x = 12 y = 176 }
+							size = { height = 33 width = 231 }
+
+							background = {
+								name = "background"
+								quadTextureSprite ="GFX_tiled_window_transparent"
+							}
+
+							gridboxtype = {
+								name = "subcategory_drilling_subsidies_list"
+								position = { x = 2 y = 2 }
+								size = { width = 231 height = 29 }
+								slotsize = { width = 29 height = 29 }
+								max_slots_horizontal = 9
+								max_slots_vertical = 1
+								add_horizontal = yes
+							}
+						}
+					#
+					# utilities_subsidies
+						buttonType = {
+							name = "subcategory_utilities_subsidies_name_bg"
+							position = { x = 6 y = 5 }
+							spriteType = "GFX_win_header_short"
+							alwaystransparent=yes
+						}
+						instantTextBoxType = {
+							name = "subcategory_utilities_subsidies_name"
+							position = { x = 12 y = 212 }
+							maxWidth = 230
+							maxHeight = 30
+							font = "hoi_18mbs"
+							fixedsize=yes
+							text = subcategory_utilities_subsidies_name_tt
+							pdx_tooltip = subcategory_utilities_subsidies_name_tt
+							pdx_tooltip_delayed = subcategory_utilities_subsidies_name_tt_delayed
+						}
+
+						containerWindowType = {
+							name = "subcategory_utilities_subsidies_list_container"
+							position = { x = 12 y = 236 }
+							size = { height = 33 width = 231 }
+
+							background = {
+								name = "background"
+								quadTextureSprite ="GFX_tiled_window_transparent"
+							}
+
+							gridboxtype = {
+								name = "subcategory_utilities_subsidies_list"
+								position = { x = 2 y = 2 }
+								size = { width = 231 height = 29 }
+								slotsize = { width = 29 height = 29 }
+								max_slots_horizontal = 9
+								max_slots_vertical = 1
+								add_horizontal = yes
+							}
+						}
+					#
+					# clean_energy_subsidies
+						buttonType = {
+							name = "subcategory_clean_energy_subsidies_name_bg"
+							position = { x = 6 y = 5 }
+							spriteType = "GFX_win_header_short"
+							alwaystransparent=yes
+						}
+						instantTextBoxType = {
+							name = "subcategory_clean_energy_subsidies_name"
+							position = { x = 12 y = 272 }
+							maxWidth = 230
+							maxHeight = 30
+							font = "hoi_18mbs"
+							fixedsize=yes
+							text = subcategory_clean_energy_subsidies_name_tt
+							pdx_tooltip = subcategory_clean_energy_subsidies_name_tt
+							pdx_tooltip_delayed = subcategory_clean_energy_subsidies_name_tt_delayed
+						}
+
+						containerWindowType = {
+							name = "subcategory_clean_energy_subsidies_list_container"
+							position = { x = 12 y = 296 }
+							size = { height = 33 width = 231 }
+
+							background = {
+								name = "background"
+								quadTextureSprite ="GFX_tiled_window_transparent"
+							}
+
+							gridboxtype = {
+								name = "subcategory_clean_energy_subsidies_list"
+								position = { x = 2 y = 2 }
+								size = { width = 231 height = 29 }
+								slotsize = { width = 29 height = 29 }
+								max_slots_horizontal = 9
+								max_slots_vertical = 1
+								add_horizontal = yes
+							}
+						}
+					#
+					# light_industry_subsidies
+						buttonType = {
+							name = "subcategory_light_industry_subsidies_name_bg"
+							position = { x = 6 y = 5 }
+							spriteType = "GFX_win_header_short"
+							alwaystransparent=yes
+						}
+						instantTextBoxType = {
+							name = "subcategory_light_industry_subsidies_name"
+							position = { x = 12 y = 332 }
+							maxWidth = 230
+							maxHeight = 30
+							font = "hoi_18mbs"
+							fixedsize=yes
+							text = subcategory_light_industry_subsidies_name_tt
+							pdx_tooltip = subcategory_light_industry_subsidies_name_tt
+							pdx_tooltip_delayed = subcategory_light_industry_subsidies_name_tt_delayed
+						}
+
+						containerWindowType = {
+							name = "subcategory_light_industry_subsidies_list_container"
+							position = { x = 12 y = 356 }
+							size = { height = 33 width = 231 }
+
+							background = {
+								name = "background"
+								quadTextureSprite ="GFX_tiled_window_transparent"
+							}
+
+							gridboxtype = {
+								name = "subcategory_light_industry_subsidies_list"
+								position = { x = 2 y = 2 }
+								size = { width = 231 height = 29 }
+								slotsize = { width = 29 height = 29 }
+								max_slots_horizontal = 9
+								max_slots_vertical = 1
+								add_horizontal = yes
+							}
+						}
+					#
+					# heavy_industry_subsidies
+						buttonType = {
+							name = "subcategory_heavy_industry_subsidies_name_bg"
+							position = { x = 6 y = 5 }
+							spriteType = "GFX_win_header_short"
+							alwaystransparent=yes
+						}
+						instantTextBoxType = {
+							name = "subcategory_heavy_industry_subsidies_name"
+							position = { x = 12 y = 392 }
+							maxWidth = 230
+							maxHeight = 30
+							font = "hoi_18mbs"
+							fixedsize=yes
+							text = subcategory_heavy_industry_subsidies_name_tt
+							pdx_tooltip = subcategory_heavy_industry_subsidies_name_tt
+							pdx_tooltip_delayed = subcategory_heavy_industry_subsidies_name_tt_delayed
+						}
+
+						containerWindowType = {
+							name = "subcategory_heavy_industry_subsidies_list_container"
+							position = { x = 12 y = 416 }
+							size = { height = 33 width = 231 }
+
+							background = {
+								name = "background"
+								quadTextureSprite ="GFX_tiled_window_transparent"
+							}
+
+							gridboxtype = {
+								name = "subcategory_heavy_industry_subsidies_list"
+								position = { x = 2 y = 2 }
+								size = { width = 231 height = 29 }
+								slotsize = { width = 29 height = 29 }
+								max_slots_horizontal = 9
+								max_slots_vertical = 1
+								add_horizontal = yes
+							}
+						}
+					#
+					# construction_subsidies
+						buttonType = {
+							name = "subcategory_construction_subsidies_name_bg"
+							position = { x = 6 y = 5 }
+							spriteType = "GFX_win_header_short"
+							alwaystransparent=yes
+						}
+						instantTextBoxType = {
+							name = "subcategory_construction_subsidies_name"
+							position = { x = 12 y = 452 }
+							maxWidth = 230
+							maxHeight = 30
+							font = "hoi_18mbs"
+							fixedsize=yes
+							text = subcategory_construction_subsidies_name_tt
+							pdx_tooltip = subcategory_construction_subsidies_name_tt
+							pdx_tooltip_delayed = subcategory_construction_subsidies_name_tt_delayed
+						}
+
+						containerWindowType = {
+							name = "subcategory_construction_subsidies_list_container"
+							position = { x = 12 y = 476 }
+							size = { height = 33 width = 231 }
+
+							background = {
+								name = "background"
+								quadTextureSprite ="GFX_tiled_window_transparent"
+							}
+
+							gridboxtype = {
+								name = "subcategory_construction_subsidies_list"
+								position = { x = 2 y = 2 }
+								size = { width = 231 height = 29 }
+								slotsize = { width = 29 height = 29 }
+								max_slots_horizontal = 9
+								max_slots_vertical = 1
+								add_horizontal = yes
+							}
+						}
+					#
+					# infrastructure_subsidies
+						buttonType = {
+							name = "subcategory_infrastructure_subsidies_name_bg"
+							position = { x = 6 y = 5 }
+							spriteType = "GFX_win_header_short"
+							alwaystransparent=yes
+						}
+						instantTextBoxType = {
+							name = "subcategory_infrastructure_subsidies_name"
+							position = { x = 12 y = 512 }
+							maxWidth = 230
+							maxHeight = 30
+							font = "hoi_18mbs"
+							fixedsize=yes
+							text = subcategory_infrastructure_subsidies_name_tt
+							pdx_tooltip = subcategory_infrastructure_subsidies_name_tt
+							pdx_tooltip_delayed = subcategory_infrastructure_subsidies_name_tt_delayed
+						}
+
+						containerWindowType = {
+							name = "subcategory_infrastructure_subsidies_list_container"
+							position = { x = 12 y = 536 }
+							size = { height = 33 width = 231 }
+
+							background = {
+								name = "background"
+								quadTextureSprite ="GFX_tiled_window_transparent"
+							}
+
+							gridboxtype = {
+								name = "subcategory_infrastructure_subsidies_list"
+								position = { x = 2 y = 2 }
+								size = { width = 231 height = 29 }
+								slotsize = { width = 29 height = 29 }
+								max_slots_horizontal = 9
+								max_slots_vertical = 1
+								add_horizontal = yes
+							}
+						}
+					#
+					# services_subsidies
+						buttonType = {
+							name = "subcategory_services_subsidies_name_bg"
+							position = { x = 6 y = 5 }
+							spriteType = "GFX_win_header_short"
+							alwaystransparent=yes
+						}
+						instantTextBoxType = {
+							name = "subcategory_services_subsidies_name"
+							position = { x = 12 y = 572 }
+							maxWidth = 230
+							maxHeight = 30
+							font = "hoi_18mbs"
+							fixedsize=yes
+							text = subcategory_services_subsidies_name_tt
+							pdx_tooltip = subcategory_services_subsidies_name_tt
+							pdx_tooltip_delayed = subcategory_services_subsidies_name_tt_delayed
+						}
+
+						containerWindowType = {
+							name = "subcategory_services_subsidies_list_container"
+							position = { x = 12 y = 596 }
+							size = { height = 33 width = 231 }
+
+							background = {
+								name = "background"
+								quadTextureSprite ="GFX_tiled_window_transparent"
+							}
+
+							gridboxtype = {
+								name = "subcategory_services_subsidies_list"
+								position = { x = 2 y = 2 }
+								size = { width = 231 height = 29 }
+								slotsize = { width = 29 height = 29 }
+								max_slots_horizontal = 9
+								max_slots_vertical = 1
+								add_horizontal = yes
+							}
+						}
+					#
+					instantTextBoxType = {
+						name = "subcategory_subsidies_title"
+						position = { x = 10 y = 3 }
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize=yes
+						text = subcategory_subsidies_title_tt
+						font = "hoi_24header"
+						pdx_tooltip = subcategory_subsidies_title_tt
+						pdx_tooltip_delayed = subcategory_subsidies_title_tt_delayed
+					}
+					instantTextBoxType = {
+						name = "subcategory_subsidies_effect"
+						position = { x = 270 y = 10 }
+						maxWidth = 230
+						maxHeight = 80
+						text = subcategory_subsidies_effect_tt
+						font = "hoi_16mbs"
+					}
+				}
+			}
+			#Economic Subcategories
+				containerWindowType = { # economy
+					name = "subcategory_economy_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_economy_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_economy_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_economy_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # foreign_investment
+					name = "subcategory_foreign_investment_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_foreign_investment_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_foreign_investment_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_foreign_investment_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # consumer_rights
+					name = "subcategory_consumer_rights_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_consumer_rights_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_consumer_rights_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_consumer_rights_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # minimum_wage
+					name = "subcategory_minimum_wage_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_minimum_wage_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_minimum_wage_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_minimum_wage_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # work_week
+					name = "subcategory_work_week_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_work_week_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_work_week_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_work_week_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # safety_regulations
+					name = "subcategory_safety_regulations_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_safety_regulations_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_safety_regulations_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_safety_regulations_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # financial_regulations
+					name = "subcategory_financial_regulations_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_financial_regulations_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_financial_regulations_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_financial_regulations_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # business_regulations
+					name = "subcategory_business_regulations_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_business_regulations_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_business_regulations_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_business_regulations_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # pollution_regulations
+					name = "subcategory_pollution_regulations_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_pollution_regulations_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_pollution_regulations_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_pollution_regulations_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # small_business_grants
+					name = "subcategory_small_business_grants_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_small_business_grants_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_small_business_grants_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_small_business_grants_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # agricultural_subsidies
+					name = "subcategory_agricultural_subsidies_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_agricultural_subsidies_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_agricultural_subsidies_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_agricultural_subsidies_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # mining_subsidies
+					name = "subcategory_mining_subsidies_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_mining_subsidies_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_mining_subsidies_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_mining_subsidies_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # drilling_subsidies
+					name = "subcategory_drilling_subsidies_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_drilling_subsidies_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_drilling_subsidies_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_drilling_subsidies_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # utilities_subsidies
+					name = "subcategory_utilities_subsidies_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_utilities_subsidies_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_utilities_subsidies_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_utilities_subsidies_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # clean_energy_subsidies
+					name = "subcategory_clean_energy_subsidies_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_clean_energy_subsidies_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_clean_energy_subsidies_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_clean_energy_subsidies_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # light_industry_subsidies
+					name = "subcategory_light_industry_subsidies_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_light_industry_subsidies_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_light_industry_subsidies_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_light_industry_subsidies_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # heavy_industry_subsidies
+					name = "subcategory_heavy_industry_subsidies_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_heavy_industry_subsidies_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_heavy_industry_subsidies_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_heavy_industry_subsidies_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # construction_subsidies
+					name = "subcategory_construction_subsidies_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_construction_subsidies_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_construction_subsidies_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_construction_subsidies_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # infrastructure_subsidies
+					name = "subcategory_infrastructure_subsidies_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_infrastructure_subsidies_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_infrastructure_subsidies_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_infrastructure_subsidies_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+				containerWindowType = { # services_subsidies
+					name = "subcategory_services_subsidies_entry"
+					position = { x = -100 }
+					iconType = {
+						name = "sublaw_bg"
+						spriteType = "GFX_law_empty_button"
+						alwaystransparent = yes
+					}
+					buttonType = {
+						name = "subcategory_services_subsidies_law_icon"
+						spriteType = "GFX_debug_law_icon"
+						pdx_tooltip = laws_change_sublaw_icon_tt
+						pdx_tooltip_delayed = laws_change_sublaw_icon_delayed_tt
+					}
+					iconType = {
+						name = "subcategory_services_subsidies_current_outline"
+						spriteType = "GFX_selected_button_outline_green"
+						alwaystransparent = yes
+					}
+					iconType = {
+						name = "subcategory_services_subsidies_select_outline"
+						spriteType = "GFX_selected_button_outline_yellow"
+						alwaystransparent = yes
+					}
+				}
+			#
+			containerWindowType = {
+				name = "country_government_laws_demographics_container"
+			}
+			#Demographic Subcategories
+
+			#
+		#
+	#
+	#Party List
+		containerWindowType = {
+			name = "country_politics_info_container"
+			position = { x = 182 y = 158 }
+			size = { width = 350 height = 138 }
+
+			iconType = {
+				name = "piechart_filler"
+				position = { x = 10 y = 64 }
+				spriteType = "GFX_dark_piechart_overlay"
+			}
+
+			iconType = {
+				name = "piechart_overlay"
+				position = { x = 10 y = 64 }
+				spriteType = "GFX_dark_piechart_overlay"
+				alwaystransparent=yes
+			}
+
+			instantTextBoxType = {
+				name = "piechart_strength"
+				position = { x = 40 y = 110 }
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 40
+				text = piechart_strength_tt
+				maxHeight = 24
+				fixedsize = yes
+				pdx_tooltip = piechart_strength_tt_delayed
+				pdx_tooltip_delayed = parliament_population_tt
+			}
+
+			buttonType = {
+				name = "internal_politics_button"
+				position = { x = 320 y = 6 }
+				spriteType = "GFX_internal_politics_button"
+			}
+
+			containerWindowType = {
+				name = "country_politics_party_info_container"
+				position = { x = 94 y = 36 }
+				size = { width = 230 height = 100 }
+
+				verticalScrollbar = "right_vertical_slider"
+
+				background = {
+					name = "background"
+					quadTextureSprite ="GFX_tiled_window_transparent"
+				}
+
+				gridBoxType = {
+					name = "country_politics_party_list"
+					position = { x = 0 y = 0 }
+					size = { width = 100% height = 100%% }
+					slotsize = { width = 230 height = 18 }
+					format = "UPPER_LEFT"
+					add_horizontal=no
+				}
+			}
+		}
+		containerWindowType = {
+			name = "country_parties_item"
+			position = { x = 2 y = 0 }
+			size = { width = 255 height = 45 }
+
+			iconType = {
+				name = "opposition_party_bg"
+				spriteType = "GFX_opposition_pol_party_bg"
+				pdx_tooltip = "opposition_party_entry_bg_tt"
+			}
+
+			iconType = {
+				name = "coalition_party_bg"
+				spriteType = "GFX_coalition_pol_party_bg"
+				pdx_tooltip = "coalition_party_entry_bg_tt"
+			}
+
+			iconType = {
+				name = "leading_party_bg"
+				spriteType = "GFX_leading_pol_party_bg"
+				pdx_tooltip = "leading_party_entry_bg_tt"
+			}
+
+			iconType = {
+				name = "ousted_party_bg"
+				spriteType = "GFX_ousted_pol_party_bg"
+				pdx_tooltip = "ousted_party_entry_bg_tt"
+			}
+
+			iconType = {
+				name = "party_color_icon"
+				position = { x = 1 y = -1 }
+			}
+
+			instantTextBoxType = {
+				name = "party_name"
+				position = { x = 20 y = -2 }
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 138
+				text = "[GetPartyNameInList]"
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "party_popularity"
+				position = { x = 154 y = -2 }
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 48
+				text = "[GetPartyPopularityInList]"
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			#iconType = {
+			#	name = "party_trend"
+			#	spriteType ="GFX_trend_arrow_up_green"
+			#	position = { x = 225 y = 20 }
+			#	alwaystransparent = yes
+			#}
+		}
+	#
+	#Diplomatic View
+		containerWindowType = {
+			name = "country_diplo_header_container"
+			position = { x = 14 y = 0 }
+			size = { width = 520 height = 70 }
+
+			background = {
+				name = "Background"
+				spriteType = "GFX_tiled_window_transparent"
+				alwaystransparent=yes
+			}
+
+			iconType = {
+				name ="coalition_bg"
+				spriteType = "GFX_diplo_variable_bg"
+				position = { x= 384 y = 44 }
+				alwaystransparent=yes
+			}
+
+			iconType = {
+				name ="coalition_icon"
+				spriteType = "GFX_coalition_icon"
+				position = { x= 384 y = 44 }
+				scale=0.85
+				alwaystransparent=yes
+			}
+
+			instantTextboxType = {
+				name = "coalition_value"
+				position = { x = 384 y = 46 }
+				font = "hoi_16mbs"
+				text = "coalition_value_diplo"
+				maxWidth = 54
+				maxHeight = 20
+				format = right
+				fixedsize=yes
+				pdx_tooltip=coalition_value_diplo_tt
+				pdx_tooltip_delayed = parliament_population_tt
+			}
+		}
+		containerWindowType = {
+			name = "country_diplo_info_container"
+			position = { x = 14 y = 0 }
+			size = { width = 520 height = 70 }
+
+			background = {
+				name = "Background"
+				spriteType = "GFX_tiled_window2_2b_border"
+				#alwaystransparent=yes
+			}
+
+			iconType = {
+				name ="coalition_bg"
+				spriteType = "GFX_diplo_unity_bg"
+				position = { x= 384 y = 44 }
+				alwaystransparent=yes
+			}
+
+			iconType = {
+				name ="coalition_icon"
+				spriteType = "GFX_coalition_icon"
+				position = { x= 384 y = 44 }
+				scale=0.85
+				alwaystransparent=yes
+			}
+
+			instantTextboxType = {
+				name = "coalition_value"
+				position = { x = 384 y = 46 }
+				font = "hoi_16mbs"
+				text = "coalition_value_diplo"
+				maxWidth = 54
+				maxHeight = 20
+				format = right
+				fixedsize=yes
+				pdx_tooltip=coalition_value_diplo_tt
+			}
+		}
+		containerWindowType = {
+			name = "country_diplo_parties_info_container"
+			position = { x = 14 y = 354 }
+			size = { width = 269 height = 160 }
+
+			background = {
+				name = "Background"
+				spriteType ="GFX_tiled_window_small_green"
+				alwaystransparent=yes
+			}
+
+			iconType = {
+				name = "background_cover"
+				spriteType ="GFX_diplo_parties_bg"
+				alwaystransparent=yes
+				position = { x = 4 y = 4 }
+			}
+
+			containerWindowType = {
+				name = "details_bg"
+				size = { width = 54 height = 150 }
+				position = { x = 4 y = 4 }
+
+				background = {
+					name = "info_bg"
+					quadTextureSprite = "GFX_tiled_window_small_small"
+					alwaystransparent=yes
+				}
+			}
+
+			iconType = {
+				name ="coalition_icon"
+				spriteType = "GFX_coalition_icon"
+				position = { x = 6 y = 10 }
+				scale=0.85
+				alwaystransparent=yes
+			}
+
+			instantTextboxType = {
+				name = "coalition_value"
+				position = { x = 4 y = 10 }
+				font = "hoi_16mbs"
+				text = "piechart_strength_tt"
+				maxWidth = 54
+				maxHeight = 20
+				format = right
+				fixedsize=yes
+				pdx_tooltip=coalition_value_diplo_tt
+				pdx_tooltip_delayed = diplo_parliament_population_tt
+			}
+
+			#iconType = {
+			#	name = "piechart_filler"
+			#	position = { x = 12 y =18 }
+			#	spriteType = "GFX_dark_piechart_overlay"
+			#}
+
+			#iconType = {
+			#	name = "piechart_overlay"
+			#	position = { x = 12 y = 18 }
+			#	spriteType = "GFX_dark_piechart_overlay"
+			#	alwaystransparent=yes
+			#}
+
+			#instantTextBoxType = {
+			#	name = "piechart_strength"
+			#	position = { x = 36 y = 70 }
+			#	font = "hoi_16mbs"
+			#	format = right
+			#	maxWidth = 40
+			#	text = piechart_strength_tt
+			#	maxHeight = 24
+			#	fixedsize = yes
+			#	pdx_tooltip = piechart_strength_tt_delayed
+			#}
+
+			containerWindowType = {
+				name = "country_politics_party_info_container"
+				position = { x = 56 y = 6 }
+				size = { width = 210 height = 160 }
+				margin = { top = 4 bottom = 6 }
+
+				#verticalScrollbar = "right_vertical_slider"
+
+
+				gridBoxType = {
+					name = "country_politics_party_list"
+					position = { x = 0 y = 0 }
+					size = { width = 100% height = 100%% }
+					slotsize = { width = 230 height = 18 }
+					format = "UPPER_LEFT"
+					add_horizontal=no
+				}
+			}
+		}
+	#
+}

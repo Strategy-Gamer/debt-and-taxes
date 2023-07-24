@@ -1,0 +1,37 @@
+
+state={
+	id=334
+	name="STATE_334"
+	resources={
+		rubber=75.000
+		oil=5.000
+	}
+
+	history={
+		owner = INS
+		add_core_of = INS
+		buildings = {
+			infrastructure = 1
+			1316 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_tropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1230 1304 1316 2170 2184 2222 4279 4335 4409 7227 7424 8221 10138 10282 10310 12110 12129 12280 12955 
+	}
+	manpower=2168600
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

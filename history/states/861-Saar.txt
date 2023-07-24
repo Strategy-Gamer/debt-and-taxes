@@ -1,0 +1,36 @@
+state={
+	id=861
+	name="STATE_861"
+	manpower=797334
+
+	state_category=large_town
+
+	provinces={
+		11531 
+	}
+	history={
+		owner=SAA
+		add_core_of=SAA
+		add_core_of=GER
+		buildings = {
+			infrastructure = 5
+		}
+		victory_points = {
+			11531 5
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+		add_dynamic_modifier = {
+			modifier = generic_state_untapped_mines
+		}
+		set_demilitarized_zone=yes
+	}
+	local_supplies=0.000
+}

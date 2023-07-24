@@ -1,0 +1,32 @@
+state={
+	id=656
+	name="STATE_656"
+	manpower = 80000
+	
+	state_category = rural
+	
+	history={
+		add_core_of = KUW
+		owner = ENG
+		victory_points = {
+			8085 1 
+		}
+		buildings = {
+			infrastructure = 2
+			8085 = {
+				naval_base = 4
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+	provinces={
+		8085
+	}
+
+	local_supplies=0.0 
+}

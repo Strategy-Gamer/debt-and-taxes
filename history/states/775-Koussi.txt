@@ -1,0 +1,27 @@
+
+state={
+	id=775
+	name="STATE_775"
+
+	history={
+		owner = FRA
+		add_core_of = CHA
+		buildings = {
+			infrastructure = 0
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		1473 1883 3181 4978 7919 
+	}
+	manpower=518744
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=1.000
+}

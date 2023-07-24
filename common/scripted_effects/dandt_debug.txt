@@ -1,0 +1,25 @@
+#For all the scripted effects that are used to debug problems in D&T. These are usually not used in the game.
+
+total_currency_amount = {
+	#Adds together the total currency amount in the country
+	#Country
+    set_variable = { total_currency = 0 }
+    every_controlled_state = {
+        state_total_currency_amount = yes
+        add_to_variable = { PREV.total_currency = total_currency }
+    }
+}
+state_total_currency_amount = {
+	#Adds together the total currency amount in the state
+	#State
+    set_variable = { total_currency = pops_money }
+    add_to_variable = { total_currency = pops_earnings }
+
+    for_each_loop = {
+        array = industries
+        value = industry_type
+        index = industry_index
+
+        add_to_variable = { total_currency = industries_money^industry_index }
+    }
+}

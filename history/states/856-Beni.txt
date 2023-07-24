@@ -1,0 +1,26 @@
+state={
+	id=856
+	name="STATE_856"
+	provinces={
+		5188 8211 8240 10924 10982 10996 12917 12973 12902 13421 13422
+	}
+	history = {
+		owner=BOL
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+	manpower=1
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,26 @@
+state={
+	id=862
+	name="STATE_862"
+	provinces={
+		543 557 5283 11525 
+	}
+	history={
+		owner=CZE
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_cool
+		}
+		buildings={
+			infrastructure=3
+			5283 = {
+				bunker = 1
+			}
+		}
+	}
+	state_category=town
+	manpower=683595
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

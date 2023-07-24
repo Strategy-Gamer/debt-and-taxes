@@ -1,0 +1,26 @@
+state={
+	id=876
+	name="STATE_876"
+	manpower=211034
+
+	state_category=wasteland
+
+	provinces={
+		4783 7727 7803 8102 10770 10899 
+	}
+	history = {
+		owner=XSM
+		add_core_of=XSM
+		add_core_of=MON
+		buildings = {
+			# infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+	}
+	local_supplies=0.000
+}

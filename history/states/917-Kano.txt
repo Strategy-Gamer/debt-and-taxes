@@ -1,0 +1,23 @@
+state={
+	id=917
+	name="STATE_917"
+	provinces={
+		1969 4938 4972 13320 13321 13322 
+	}
+	history={
+		owner=ENG
+		buildings={
+			infrastructure=1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+	state_category=rural
+	manpower=2572457
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

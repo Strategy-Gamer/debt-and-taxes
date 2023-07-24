@@ -1,0 +1,36 @@
+
+state={
+	id=871
+	name="STATE_871"
+
+	history={
+		owner = CDU
+		add_core_of = CDU
+		victory_points = {
+			4925 5 
+		}
+		victory_points = {
+			2045 1 
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1257 1395 2045 4375 4925 5193 7240 10132 13460 13462 
+	}
+	manpower=15932552
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

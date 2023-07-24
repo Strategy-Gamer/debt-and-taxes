@@ -1,0 +1,262 @@
+characters = {
+	#1928 Election
+		PAN_jorge_eduardo_boyd = {
+			name = PAN_jorge_eduardo_boyd
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_jorge_eduardo_boyd
+				}
+			}
+			#ideology_liberal
+		}
+		PAN_florencio_harmodio_arosemena_guillen = {
+			name = PAN_florencio_harmodio_arosemena_guillen
+			#https://en.wikipedia.org/wiki/Florencio_Harmodio_Arosemena
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_florencio_harmodio_arosemena_guillen
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1931 Coup
+		PAN_harmodio_arias_madrid = {
+			name = PAN_harmodio_arias_madrid
+			#https://en.wikipedia.org/wiki/Harmodio_Arias_Madrid
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_harmodio_arias_madrid
+				}
+			}
+			#ideology_reactionary
+		}
+		PAN_ricardo_joaquin_alfaro_jovane = {
+			name = PAN_ricardo_joaquin_alfaro_jovane
+			#https://en.wikipedia.org/wiki/Ricardo_J._Alfaro
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_ricardo_joaquin_alfaro_jovane
+				}
+			}
+		}
+	#
+	#1932 Election
+		PAN_francisco_arias_paredes = {
+			name = PAN_francisco_arias_paredes
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_francisco_arias_paredes
+				}
+			}
+			#ideology_liberal
+		}
+		PAN_augusto_samuel_boyd_briceno = {
+			name = PAN_augusto_samuel_boyd_briceno
+			#https://en.wikipedia.org/wiki/Augusto_Samuel_Boyd
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_augusto_samuel_boyd
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1936 Election
+		PAN_domingo_diaz_arosemena = {
+			name = PAN_domingo_diaz_arosemena
+			#https://en.wikipedia.org/wiki/Domingo_D%C3%ADaz_Arosemena
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_domingo_diaz_arosemena
+				}
+			}
+			#ideology_liberal
+		}
+		PAN_belsario_porras_barahona = {
+			name = PAN_belsario_porras_barahona
+			#https://en.wikipedia.org/wiki/Belisario_Porras_Barahona
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_belsario_porras_barahona
+				}
+			}
+			#ideology_agrarian
+		}
+		PAN_juan_demostenes_arosemena_barreati = {
+			name = PAN_juan_demostenes_arosemena_barreati
+			#https://en.wikipedia.org/wiki/Juan_Dem%C3%B3stenes_Arosemena
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_juan_demostenes_arosemena_barreati
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1940 Election
+		PAN_arnulfo_arias_madrid = {
+			name = PAN_arnulfo_arias_madrid
+			#https://en.wikipedia.org/wiki/Arnulfo_Arias
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_arnulfo_arias_madrid
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1941 Coup
+		PAN_ricardo_adolfo_de_la_guardia_arango = {
+			name = PAN_ricardo_adolfo_de_la_guardia_arango
+			#https://en.wikipedia.org/wiki/Ricardo_Adolfo_de_la_Guardia_Arango
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_ricardo_adolfo_de_la_guardia_arango
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1945 'Election'
+		PAN_enrique_adolfo_jimenez_brin = {
+			name = PAN_enrique_adolfo_jimenez_brin
+			#https://en.wikipedia.org/wiki/Enrique_Adolfo_Jim%C3%A9nez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_enrique_adolfo_jimenez_brin
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1948 Election
+		PAN_jose_isaac_fabrega = {
+			name = PAN_jose_isaac_fabrega
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_jose_isaac_fabrega
+				}
+			}
+			#ideology_socialist
+		}
+		PAN_sergio_gonzalez_ruiz = {
+			name = PAN_sergio_gonzalez_ruiz
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_sergio_gonzalez_ruiz
+				}
+			}
+			#ideology_liberal
+		}
+		PAN_demetrio_augusto_porras = {
+			name = PAN_demetrio_augusto_porras
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_demetrio_augusto_porras
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#Arosemna Death
+		PAN_daniel_chanis_pinzon = {
+			name = PAN_daniel_chanis_pinzon
+			#https://en.wikipedia.org/wiki/Daniel_Chanis_Pinz%C3%B3n
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_daniel_chanis_pinzon
+				}
+			}
+			#ideology_liberal
+		}
+		PAN_roberto_francisco_chiari_remon = {
+			name = PAN_roberto_francisco_chiari_remon
+			#https://en.wikipedia.org/wiki/Roberto_Francisco_Chiari_Rem%C3%B3n
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_roberto_francisco_chiari_remon
+				}
+			}
+			#ideology_liberal
+		}
+		PAN_alcibiades_arosemena_quinzada = {
+			name = PAN_alcibiades_arosemena_quinzada
+			#https://en.wikipedia.org/wiki/Alcib%C3%ADades_Arosemena
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_alcibiades_arosemena_quinzada
+				}
+			}
+			#ideology_fascist
+		}
+	#1952 Election
+		PAN_jose_antonio_remon_cantera = {
+			name = PAN_jose_antonio_remon_cantera
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Antonio_Rem%C3%B3n_Cantera
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_jose_antonio_remon_cantera
+				}
+			}
+			#ideology_stratocratic
+		}
+		PAN_pedro_moreno_correa = {
+			name = PAN_pedro_moreno_correa
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_pedro_moreno_correa
+				}
+			}
+			#ideology_conservative
+		}
+		PAN_jose_ramon_guizado_valdes = {
+			name = PAN_jose_ramon_guizado_valdes
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Ram%C3%B3n_Guizado
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_jose_ramon_guizado_valdes
+				}
+			}
+			#ideology_stratocratic
+		}
+		PAN_ricardo_manuel_arias_espinosa = {
+			name = PAN_ricardo_manuel_arias_espinosa
+			#https://en.wikipedia.org/wiki/Ricardo_Arias_(politician)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_ricardo_manuel_arias_espinosa
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1956 Election
+		PAN_victor_florencio_goytia = {
+			name = PAN_victor_florencio_goytia
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_victor_florencio_goytia
+				}
+			}
+			#ideology_liberal
+		}
+		PAN_ernesto_de_la_guardia_navarro = {
+			name = PAN_ernesto_de_la_guardia_navarro
+			#https://en.wikipedia.org/wiki/Ernesto_de_la_Guardia
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAN_ernesto_de_la_guardia_navarro
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+}

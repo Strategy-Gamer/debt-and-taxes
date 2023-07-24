@@ -1,0 +1,23 @@
+state={
+	id=925
+	name="STATE_925"
+	provinces={
+		10762 13247 13248 13255 13256 13257 13258 13260 13262 
+	}
+	history={
+		owner=FRA
+		buildings={
+			infrastructure=1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+	}
+	state_category=pastoral
+	manpower=1311541
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

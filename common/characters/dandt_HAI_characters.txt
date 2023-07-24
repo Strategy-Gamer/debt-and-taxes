@@ -1,0 +1,188 @@
+characters = {
+	#1922 Appointment
+		HAI_eustache_antoine_francois_joseph_louis_borno = {
+			name = HAI_eustache_antoine_francois_joseph_louis_borno
+			#https://en.wikipedia.org/wiki/Louis_Borno
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_eustache_antoine_francois_joseph_louis_borno
+				}
+			}
+			#ideology_stratocratic
+		}
+		HAI_louis_eugene_roy = {
+			name = HAI_louis_eugene_roy
+			#https://en.wikipedia.org/wiki/Louis_Eug%C3%A8ne_Roy
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_louis_eugene_roy
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1930 Appointment
+		HAI_stenio_joseph_vincent = {
+			name = HAI_stenio_joseph_vincent
+			#https://en.wikipedia.org/wiki/St%C3%A9nio_Vincent
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_stenio_joseph_vincent
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1941 Election
+		HAI_max_lelio_hudicourt = {
+			name = HAI_max_lelio_hudicourt
+			#https://en.wikipedia.org/wiki/Max_Hudicourt
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_max_lelio_hudicourt
+				}
+			}
+			#ideology_socialist
+		}
+		HAI_antoine_louis_leocardie_elie_lescot = {
+			name = HAI_antoine_louis_leocardie_elie_lescot
+			#https://en.wikipedia.org/wiki/%C3%89lie_Lescot
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_antoine_louis_leocardie_elie_lescot
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1946 Coup
+		HAI_franck_lavaud = {
+			name = HAI_franck_lavaud
+			#https://en.wikipedia.org/wiki/Franck_Lavaud
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_franck_lavaud
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1946 Election
+		HAI_felix_dorleans_juste_constant = {
+			name = HAI_felix_dorleans_juste_constant
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_felix_dorleans_juste_constant
+				}
+			}
+			#ideology_communist
+		}
+		HAI_dumarsais_estime = {
+			name = HAI_dumarsais_estime
+			#https://en.wikipedia.org/wiki/Dumarsais_Estim%C3%A9
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_dumarsais_estime
+				}
+			}
+			#ideology_agrarian
+		}
+		HAI_demosthenes_petrus_calixte = {
+			name = HAI_demosthenes_petrus_calixte
+			#https://en.wikipedia.org/wiki/D%C3%A9mosth%C3%A8nes_P%C3%A9trus_Calixte
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_demosthenes_petrus_calixte
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1950 Election
+		HAI_paul_eugene_magloire = {
+			name = HAI_paul_eugene_magloire
+			#https://en.wikipedia.org/wiki/Paul_Magloire
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_paul_eugene_magloire
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1955 Election
+		HAI_joseph_nemours_pierre_louis = {
+			name = HAI_joseph_nemours_pierre_louis
+			#https://en.wikipedia.org/wiki/Joseph_Nemours_Pierre-Louis
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_joseph_nemours_pierre_louis
+				}
+			}
+			#ideology_conservative
+		}
+		HAI_franck_sylvain = {
+			name = HAI_franck_sylvain
+			#https://en.wikipedia.org/wiki/Franck_Sylvain
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_franck_sylvain
+				}
+			}
+			#ideology_conservative
+		}
+		HAI_pierre_eustache_daniel_fignole = {
+			name = HAI_pierre_eustache_daniel_fignole
+			#https://en.wikipedia.org/wiki/Daniel_Fignol%C3%A9
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_pierre_eustache_daniel_fignole
+				}
+			}
+			#ideology_liberal
+		}
+		HAI_antonio_thrasylbule_kebreau = {
+			name = HAI_antonio_thrasylbule_kebreau
+			#https://en.wikipedia.org/wiki/Antonio_Thrasybule_K%C3%A9breau
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_antonio_thrasylbule_kebreau
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1957 Election
+		HAI_clemente_jumelle = {
+			name = HAI_clemente_jumelle
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_clemente_jumelle
+				}
+			}
+			#ideology_conservative
+		}
+		HAI_pierre_joseph_louis_dejoie = {
+			name = HAI_pierre_joseph_louis_dejoie
+			#https://en.wikipedia.org/wiki/Louis_D%C3%A9joie
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_pierre_joseph_louis_dejoie
+				}
+			}
+			#ideology_reactionary
+		}
+		HAI_francois_duvalier = {
+			name = HAI_francois_duvalier
+			#https://en.wikipedia.org/wiki/Fran%C3%A7ois_Duvalier
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HAI_francois_duvalier
+				}
+			}
+			#ideology_fascist
+		}
+	#
+}

@@ -1,0 +1,39 @@
+
+state={
+	id=431
+	name="STATE_431"
+	resources={
+		steel=13.000
+	}
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+			air_base = 2
+			4245 = {
+				naval_base = 6
+			}
+		}
+		victory_points = {
+			4245 5 
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1159 1609 4062 4204 4245 4644 7220 10077 12050 
+	}
+	manpower=15278100
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

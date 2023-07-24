@@ -1,0 +1,31 @@
+
+state={
+	id=584
+	name="STATE_584"
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = TMS
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		756 1632 1649 4482 4549 4958 5003 7491 7560 7924 9605 10357 10414 10742 
+	}
+	manpower=931458
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=4.000
+}

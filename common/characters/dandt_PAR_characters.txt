@@ -1,0 +1,220 @@
+characters = {
+	#1928 Election
+		PAR_lucas_ibarrola = {
+			name = PAR_lucas_ibarrola
+			#https://es.wikipedia.org/wiki/Lucas_Ibarrola
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_lucas_ibarrola
+				}
+			}
+			#ideology_communist
+		}
+		PAR_jose_patricio_guggiari_corniglione = {
+			name = PAR_jose_patricio_guggiari_corniglione
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Patricio_Guggiari
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_jose_patricio_guggiari_corniglione
+				}
+			}
+			#ideology_liberal
+		}
+		PAR_eduardo_fleitas = {
+			name = PAR_eduardo_fleitas
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_eduardo_fleitas
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1931 Impeachment
+		PAR_emiliano_gonzalaez_navero = {
+			name = PAR_emiliano_gonzalaez_navero
+			#https://en.wikipedia.org/wiki/Emiliano_Gonz%C3%A1lez_Navero
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_emiliano_gonzalaez_navero
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1932 Election
+		PAR_obdulio_barthe = {
+			name = PAR_obdulio_barthe
+			#https://es.wikipedia.org/wiki/Obdulio_Barthe
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_obdulio_barthe
+				}
+			}
+			#ideology_communist
+		}
+		PAR_eusebio_ayala = {
+			name = PAR_eusebio_ayala
+			#https://en.wikipedia.org/wiki/Eusebio_Ayala
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_eusebio_ayala
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1936 Coup
+		PAR_rafael_de_la_cruz_franco_ojeda = {
+			name = PAR_rafael_de_la_cruz_franco_ojeda
+			#https://en.wikipedia.org/wiki/Rafael_Franco
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_rafael_de_la_cruz_franco_ojeda
+				}
+			}
+			#ideology_socialist
+		}
+	#
+	#1937 Coup
+		PAR_felix_paiva = {
+			name = PAR_felix_paiva
+			#https://en.wikipedia.org/wiki/F%C3%A9lix_Paiva
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_felix_paiva
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1939 Election
+		PAR_jose_felix_estigarribia_insaurralde = {
+			name = PAR_jose_felix_estigarribia_insaurralde
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_F%C3%A9lix_Estigarribia
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_jose_felix_estigarribia_insaurralde
+				}
+			}
+			#ideology_liberal
+		}
+		PAR_juan_natalico_gonzalez_paredes = {
+			name = PAR_juan_natalico_gonzalez_paredes
+			#https://en.wikipedia.org/wiki/Juan_Natalicio_Gonz%C3%A1lez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_juan_natalico_gonzalez_paredes
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1939 Coup
+	#
+	#1940 Assasination
+		PAR_higinio_nicolas_morinigo_martinez = {
+			name = PAR_higinio_nicolas_morinigo_martinez
+			#https://en.wikipedia.org/wiki/Higinio_Mor%C3%ADnigo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_higinio_nicolas_morinigo_martinez
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1943 Civil War
+		PAR_oscar_credt = {
+			name = PAR_oscar_credt
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_oscar_credt
+				}
+			}
+			#ideology_communist
+		}
+		PAR_alfedo_stroessner_matiauda = {
+			name = PAR_alfedo_stroessner_matiauda
+			#https://en.wikipedia.org/wiki/Alfredo_Stroessner
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_alfedo_stroessner_matiauda
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1948 Coup
+		PAR_juan_manuel_frutos = {
+			name = PAR_juan_manuel_frutos
+			#https://en.wikipedia.org/wiki/Juan_Manuel_Frutos
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_juan_manuel_frutos
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1948 Election
+	#
+	#1949 Coup
+		PAR_raimundo_rolon_villasanti = {
+			name = PAR_raimundo_rolon_villasanti
+			#https://en.wikipedia.org/wiki/Raimundo_Rol%C3%B3n
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_raimundo_rolon_villasanti
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1949 Coup
+		PAR_felipe_benigno_molas_lopez = {
+			name = PAR_felipe_benigno_molas_lopez
+			#https://en.wikipedia.org/wiki/Felipe_Molas_L%C3%B3pez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_felipe_benigno_molas_lopez
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1949 Election
+	#
+	#1949 Coup
+		PAR_federico_chavez_careaga = {
+			name = PAR_federico_chavez_careaga
+			#https://en.wikipedia.org/wiki/Federico_Chaves
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_federico_chavez_careaga
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1953 Election
+	#
+	#1953 Coup
+		PAR_tomas_romero_pereira = {
+			name = PAR_tomas_romero_pereira
+			#https://en.wikipedia.org/wiki/Tom%C3%A1s_Romero_Pereira
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PAR_tomas_romero_pereira
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1954 Election
+	#
+	#1958 Election
+	#
+}

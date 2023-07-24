@@ -1,0 +1,34 @@
+state={
+	id=962
+	name="STATE_962"
+	provinces={
+		1330 1403 1417 4293 4336 4408 7254 7382 10154 10267 12125 12127 12197 12238 12267 
+	}
+	history={
+		owner=RAJ
+		add_core_of=BRM
+		buildings={
+			infrastructure=2
+			air_base = 1
+			1330 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			1330 5
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+	state_category=town
+	manpower=6244623
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

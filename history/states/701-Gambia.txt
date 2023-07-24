@@ -1,0 +1,36 @@
+
+state={
+	id=701
+	name="STATE_701"
+
+	history={
+		owner = ENG
+		add_core_of = GAM
+		victory_points = {
+			4989 1 
+		}
+		buildings = {
+			infrastructure = 2
+			4989 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_breadbasket
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		4989 
+	}
+	manpower=199520
+	buildings_max_level_factor=1.000
+	state_category=enclave
+	local_supplies=0.000
+}

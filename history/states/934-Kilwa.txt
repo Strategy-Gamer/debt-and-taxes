@@ -1,0 +1,26 @@
+state={
+	id=934
+	name="STATE_934"
+	provinces={
+		8182 8201 10845 12944 12967 
+	}
+	history={
+		owner=ENG
+		buildings={
+			infrastructure=1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+	state_category=pastoral
+	manpower=703158
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,24 @@
+state={
+	id=992
+	name="STATE_992"
+	provinces={
+		5158 7548 8219 8248 12981 
+	}
+	history = {
+		owner = POR
+		add_core_of = POR
+		buildings = {
+			infrastructure = 1
+			8248 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			8248 1 
+		}
+	}
+	state_category = state_cat
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

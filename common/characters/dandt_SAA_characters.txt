@@ -1,0 +1,16 @@
+characters = {
+	SAA_ernest_wilton = {
+		name = "Ernest Wilton"
+		portraits = {
+			civilian={
+				large=GFX_portrait_SAA_ernest_wilton
+			}
+		}
+		country_leader={
+			desc = "SAA_character_wilton_desc"
+			ideology = centrism
+			traits = { experience_diplomat }
+			expire="1952.12.5.1"
+		}
+	}
+}

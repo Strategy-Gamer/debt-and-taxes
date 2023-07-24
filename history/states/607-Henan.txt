@@ -1,0 +1,30 @@
+
+state={
+	id=607
+	name="STATE_607"
+
+	history={
+		owner = GUO
+		add_core_of = GUO
+		buildings = {
+			infrastructure = 3
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		4066 4158 7085 7540 7568 7656 10098 10434 10446 12012 12426 13473 13474 13475 
+	}
+	manpower=11889800
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=3.000
+}

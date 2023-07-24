@@ -1,0 +1,122 @@
+idea_categories = {
+	attitude_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	pop_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	pop_desc_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	industry_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	resources_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	culture_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	religion_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	law_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	law_category_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	law_desc_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	law_effect_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	policy_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	policy_desc_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	policy_effect_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+	party_tokens = {
+		hidden = yes
+
+		cost = -1
+		removal_cost = -1
+
+		ledger = hidden
+	}
+}

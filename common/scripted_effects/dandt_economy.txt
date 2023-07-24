@@ -1,0 +1,177 @@
+###################################################
+### D&T's scripted effects for general economy ####
+###################################################
+
+price_change = {
+	#This is the general pricing algorithm
+	#Any Scope
+	#Input: supply, demand, price
+	#Output: price
+	
+	#PRICE CHANGE BASED ON SUPPLY AND DEMAND
+	if = {
+		#If supply is x% more than demand, decrease prices
+		limit = {
+			check_variable = { supply > 0 }
+			set_temp_variable = { demand_temp = demand }
+			multiply_temp_variable = { demand_temp = global.price_elasticity }
+			check_variable = { supply > demand_temp }
+		}
+		set_temp_variable = { price_change_temp = demand }
+		divide_temp_variable = { price_change_temp = supply }
+		subtract_from_temp_variable = { price_change_temp = 1 }
+		#divide_temp_variable = { price_change_temp = 2 }
+		add_to_temp_variable = { price_change_temp = 1 }
+		if = {
+			limit = {
+				check_variable = { price_change_temp = 0 }
+			}
+			set_temp_variable = { price_change_temp = 0.1 }
+		}
+		multiply_temp_variable = { price = price_change_temp }
+	}
+	else_if = {
+		#Else if demand is x% more than supply, increase prices
+		limit = {
+			check_variable = { supply > 0 }
+			set_temp_variable = { supply_temp = supply }
+			multiply_temp_variable = { supply_temp = global.price_elasticity }
+			check_variable = { demand > supply_temp }
+		}
+		set_temp_variable = { price_change_temp = demand }
+		divide_temp_variable = { price_change_temp = supply }
+		subtract_from_temp_variable = { price_change_temp = 1 }
+		#divide_temp_variable = { price_change_temp = 2 }
+		add_to_temp_variable = { price_change_temp = 1 }
+		multiply_temp_variable = { price = price_change_temp }
+	}
+	#Note: If supply is 0 and there is demand, price should _not_ change
+	if = {
+		#Price should not go below a certain value
+		limit = {
+			check_variable = { price < 0.01 }
+		}
+		set_temp_variable = { price = 0.01 }
+	}
+}
+
+transaction = {
+	#This covers transactions: party A -> party B. If there is not enough money/stuff to be transferred, then it will provide the money/stuff outstanding
+	#Any Scope
+	#Input: a, b, amount
+	#Output: a, b, amount (transferred), (amount) outstanding
+
+	if = {
+		#If there is not enough money/stuff to handle the transaction
+		limit = {
+			check_variable = { a < amount }
+		}
+		set_temp_variable = { outstanding = amount }
+		subtract_from_temp_variable = { outstanding = a }
+
+		set_temp_variable = { amount = a }
+		subtract_from_temp_variable = { a = amount }
+		add_to_temp_variable = { b = amount }
+	}
+	else = {
+		#If there is enough
+		subtract_from_temp_variable = { a = amount }
+		add_to_temp_variable = { b = amount }
+	}
+}
+
+shopping_algorithm = {
+	#INPUT: 
+		#buy_amount - Amount of goods that the buyer wants to buy (regardless of cost)
+		#money_temp - Max amount of money to spend
+		#good_max_temp - Maximum Goods that the seller can sell
+		#good_price_temp - Price of the Goods
+
+	#OUTPUT:
+		#buy_amount - Amount of goods sold
+		#cost_temp - Total price for all goods sold
+
+	#Shopping
+	clamp_temp_variable = {
+		var = buy_amount
+		max = good_max_temp
+	}
+	clamp_temp_variable = {
+		var = buy_amount
+		min = 0
+	}
+	set_temp_variable = { cost_temp = buy_amount }
+	multiply_temp_variable = { cost_temp = good_price_temp }
+
+	if = {
+		limit = {
+			check_variable = { cost_temp > money_temp }
+		}
+		set_temp_variable = { cost_temp = money_temp }
+		set_temp_variable = { buy_amount = money_temp }
+		divide_temp_variable = { buy_amount = good_price_temp }
+		clamp_temp_variable = {
+			var = buy_amount
+			max = good_max_temp
+		}
+		clamp_temp_variable = {
+			var = buy_amount
+			min = 0
+		}
+	}
+}
+
+shopping_algorithm_adjusted = {
+	#Like the normal shopping algorithm, but the buyer buys only buys a portion of what they want
+	#They buy only their % of demand
+	#INPUT: 
+		#buy_amount - Amount of goods that the buyer wants to buy (regardless of cost)
+		#money_temp - Max amount of money to spend
+		#good_max_temp - Maximum Goods that the seller can sell
+		#good_price_temp - Price of the Goods
+		#good_demand_temp - Total Demand of the Good
+		#good_supply_temp - Total Supply of the Good
+
+	#OUTPUT:
+		#buy_amount - Amount of goods sold
+		#cost_temp - Total price for all goods sold
+
+	#Shopping
+	set_temp_variable = { actual_buy_amount = buy_amount }
+	multiply_temp_variable = { actual_buy_amount = good_supply_temp }
+	divide_temp_variable = { actual_buy_amount = good_demand_temp }
+	if = {
+		limit = {
+			check_variable = { actual_buy_amount < buy_amount }
+		}
+		set_temp_variable = { buy_amount = actual_buy_amount }
+	}
+
+	clamp_temp_variable = {
+		var = buy_amount
+		max = good_max_temp
+	}
+	clamp_temp_variable = {
+		var = buy_amount
+		min = 0
+	}
+	set_temp_variable = { cost_temp = buy_amount }
+	multiply_temp_variable = { cost_temp = good_price_temp }
+
+	if = {
+		limit = {
+			check_variable = { cost_temp > money_temp }
+		}
+		set_temp_variable = { cost_temp = money_temp }
+		set_temp_variable = { buy_amount = money_temp }
+		divide_temp_variable = { buy_amount = good_price_temp }
+		clamp_temp_variable = {
+			var = buy_amount
+			max = good_max_temp
+		}
+		clamp_temp_variable = {
+			var = buy_amount
+			min = 0
+		}
+	}
+}

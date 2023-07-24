@@ -1,0 +1,29 @@
+
+state={
+	id=674
+	name="STATE_674"
+	manpower=300
+
+	state_category=wasteland
+
+	history={
+		owner = AST
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = AST
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+	}
+
+	provinces={
+		2133 2177 2186 8134 8155 10473 12904 12912 12926 13132 
+	}
+
+	impassable = yes
+	local_supplies=0.000
+}

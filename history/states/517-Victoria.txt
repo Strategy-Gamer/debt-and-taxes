@@ -1,0 +1,42 @@
+
+state={
+	id=517
+	name="STATE_517"
+	manpower=1766000
+
+	state_category=large_city
+
+	resources={
+		steel=8.000
+		chromium=4.000
+	}
+
+	history={
+		owner = AST
+		buildings = {
+			infrastructure = 3 #was: 6
+
+			air_base = 3
+			7798 = {
+				naval_base = 4
+				coastal_bunker = 1
+			}
+		}
+		victory_points = {
+			7798 20
+		}
+		add_core_of = AST
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+	}
+
+	provinces={
+		1759 2130 2155 4776 4791 7755 7798 7811 10553 10581 10622 10637 12576 12932
+	}
+
+	local_supplies=0.0
+}

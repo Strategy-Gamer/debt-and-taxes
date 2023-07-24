@@ -1,0 +1,14 @@
+capital=875
+set_cosmetic_tag = XIK_1929_Cosmetic
+
+recruit_character = character_XIK_liu_xiang
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1928.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities={
+	neutrality=100
+}

@@ -1,0 +1,4431 @@
+###################################################
+### D&T's scripted effects for monthly effects ####
+###################################################
+
+events_hourly = {
+	#Hourly test events
+	358 = {
+		#on_monthly_state_effects = yes
+		on_monthly_temp = yes
+	}
+}
+
+calc_supply_demand = {
+	set_variable = { supply = 0 }
+	set_variable = { demand = 0 }
+	set_variable = { offers = 0 }
+	set_variable = { requests = 0 }
+	every_controlled_state = {
+		set_variable = { supply = production }
+		set_variable = { demand = need }
+		divide_variable = { demand = PREV.price }
+
+		set_temp_variable = { trade_temp = supply }
+		subtract_from_temp_variable = { trade_temp = demand }
+
+		if = {
+			limit = { 
+				check_variable = { trade_temp > 0 } #More Supply
+			}
+			if = {
+				limit = {
+					check_variable = { trade_temp > infra }
+				}
+				set_temp_variable = { trade_temp = infra }
+			}
+			set_variable = { trade_amount = trade_temp }
+			add_to_variable = { PREV.offers = trade_temp }
+			add_to_temp_variable = { trade_temp = demand }
+			
+			add_to_variable = { PREV.supply = trade_temp }
+			add_to_variable = { PREV.demand = demand }
+		}
+		if = {
+			limit = { 
+				check_variable = { trade_temp < 0 } #More Demand
+			}
+			multiply_temp_variable = { trade_temp = -1 }
+			if = {
+				limit = {
+					check_variable = { trade_temp > infra }
+				}
+				set_temp_variable = { trade_temp = infra }
+			}
+			set_variable = { trade_amount = trade_temp }
+			add_to_variable = { PREV.requests = trade_temp }
+			add_to_temp_variable = { trade_temp = supply }
+
+			add_to_variable = { PREV.supply = supply }
+			add_to_variable = { PREV.demand = trade_temp }
+		}
+	}
+}
+
+on_monthly_temp = {
+	#Reset
+		#Create & Reset Trade Nodes
+			for_each_scope_loop = {
+				array = trade_node_states
+
+				clear_array = tnr_price
+				clear_array = tnr_supply
+				clear_array = tnr_supply_min
+				clear_array = tnr_demand
+				clear_array = tnr_value
+				clear_array = tnr_money_acc
+
+				clear_array = tnr_ext_trade_amount
+				clear_array = tnr_ext_trade_value
+				clear_array = tnr_int_trade_amount
+				clear_array = tnr_int_trade_value
+			}
+			clear_array = trade_nodes
+			clear_array = trade_node_states
+			every_controlled_state = {
+				for_each_loop = {
+					array = PREV.trade_nodes
+					value = vv
+					index = ii
+					break = bb
+					if = {
+						limit = {
+							check_variable = { trade_node = vv }		
+						}
+						set_temp_variable = { bb = 1 }
+						set_variable = { trade_node_center = PREV.trade_node_states^ii }
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { bb = 0 }		
+					}
+					add_to_array = { PREV.trade_nodes = trade_node }
+					add_to_array = { PREV.trade_node_states = THIS }
+					set_variable = { trade_node_center = THIS }
+				}
+			}
+			for_each_scope_loop = {
+				array = trade_node_states
+
+				for_loop_effect = {
+					start = 0
+					end = global.resource_type_amount
+					value = r_type
+
+					add_to_array = { tnr_price = 0 }
+					add_to_array = { tnr_supply = 0 }
+					add_to_array = { tnr_supply_min = 0 }
+					add_to_array = { tnr_demand = 0 }
+					add_to_array = { tnr_value = 0 }
+					add_to_array = { tnr_money_acc = 0 }
+
+					add_to_array = { tnr_ext_trade_amount = 0 }
+					add_to_array = { tnr_ext_trade_value = 0 }
+					add_to_array = { tnr_int_trade_amount = 0 }
+					add_to_array = { tnr_int_trade_value = 0 }
+				}
+			}
+		#
+		for_each_loop = {
+			array = global.resources_array
+			value = r_type
+			set_variable = { resource_added_demand^r_type = 0 }
+			set_variable = { resource_consumption^r_type = 0 }
+			set_variable = { resource_supply^r_type = 0 }
+			set_variable = { resource_interstate_trade_amount^r_type = 0 }
+			set_variable = { resource_interstate_trade_value^r_type = 0 }
+			set_variable = { resource_international_trade_amount^r_type = 0 }
+			set_variable = { resource_international_trade_value^r_type = 0 }
+		}
+	#
+	if = {
+		limit = {
+			check_variable = { global.month = 12 }
+		}
+		set_variable = { global.month = 0 }
+		add_to_variable = { global.current_year = 1 }
+		add_to_variable = { global.age_timer = 1 }
+		if = {
+			limit = {
+				check_variable = { global.age_timer = 5 }
+			}
+			set_variable = { global.age_timer = 0 }
+		}
+	}
+
+	pops_base_needs_update = yes
+	industries_base_input_maintenance_update = yes
+	
+	every_controlled_state = {
+		#Pops get paid/Income Taxes
+			#TODO - Income Taxes
+			set_variable = { pops_spending = 0 }
+			add_to_variable = { pops_money = pops_earnings }
+
+		#
+		#Reset
+			#Resources
+				set_variable = { gdp_amount = 0 }
+
+				for_each_loop = {
+					array = global.resources_array
+					value = r_type
+					set_variable = { resource_added_demand^r_type = 0 }
+					set_variable = { resource_consumption^r_type = 0 }
+					set_variable = { resource_supply^r_type = 0 }
+					set_variable = { resource_interstate_trade_amount^r_type = 0 }
+					set_variable = { resource_interstate_trade_value^r_type = 0 }
+					set_variable = { resource_international_trade_amount^r_type = 0 }
+					set_variable = { resource_international_trade_value^r_type = 0 }
+
+					set_variable = { resource_sold^r_type = 0 }
+					set_variable = { resource_sold_value^r_type = 0 }
+					set_variable = { resource_bought^r_type = 0 }
+					set_variable = { resource_bought_value^r_type = 0 }
+				}
+			#
+
+			#Industries
+				for_each_loop = {
+					array = industries
+					value = ind_type_temp
+					index = ind
+					break = ind_break
+					
+					set_variable = { industries_goods_sold^ind = 0 }
+
+					set_variable = { industries_revenue_goods^ind = 0 }
+					set_variable = { industries_expenses_input^ind = 0 }
+					set_variable = { industries_expenses_maintenance^ind = 0 }
+
+					set_variable = { industries_input_1_expenses^ind = 0 }
+					set_variable = { industries_input_2_expenses^ind = 0 }
+					set_variable = { industries_input_3_expenses^ind = 0 }
+					set_variable = { industries_input_4_expenses^ind = 0 }
+					set_variable = { industries_input_5_expenses^ind = 0 }
+
+					set_variable = { industries_maintenance_1_expenses^ind = 0 }
+					set_variable = { industries_maintenance_2_expenses^ind = 0 }
+					set_variable = { industries_maintenance_3_expenses^ind = 0 }
+					set_variable = { industries_maintenance_4_expenses^ind = 0 }
+					set_variable = { industries_maintenance_5_expenses^ind = 0 }
+				}
+
+			#
+
+			#Pops
+				set_variable = { pops_earnings = 0 }
+				set_variable = { pops_unskilled_earnings = 0 }
+				set_variable = { pops_skilled_earnings = 0 }
+				set_variable = { pops_educated_earnings = 0 }
+
+				set_variable = { pops_goods_spending = 0 }
+			#
+		#
+		
+		#Update Production
+		industries_update_production_input_maintenance = yes
+		
+		#Industry Production & Consumption
+			for_each_loop = {
+				array = industries
+				value = ind_type_temp
+				index = ind
+				break = ind_break
+
+				#Production
+				set_variable = { industries_stockpile^ind = industries_production^ind }
+
+				#Consumption
+					#No fulfilled amount should resolve to being negative. If it does, it's not a big issue.
+					#Input
+						set_temp_variable = { consumption_temp = industries_input_1_fulfilled^ind }
+						subtract_from_variable = { industries_input_1_fulfilled^ind = consumption_temp }
+						add_to_variable = { resource_consumption^industries_input_1_resource^ind = consumption_temp }
+						
+						set_temp_variable = { consumption_temp = industries_input_2_fulfilled^ind }
+						subtract_from_variable = { industries_input_2_fulfilled^ind = consumption_temp }
+						add_to_variable = { resource_consumption^industries_input_2_resource^ind = consumption_temp }
+
+						set_temp_variable = { consumption_temp = industries_input_3_fulfilled^ind }
+						subtract_from_variable = { industries_input_3_fulfilled^ind = consumption_temp }
+						add_to_variable = { resource_consumption^industries_input_3_resource^ind = consumption_temp }
+
+						set_temp_variable = { consumption_temp = industries_input_4_fulfilled^ind }
+						subtract_from_variable = { industries_input_4_fulfilled^ind = consumption_temp }
+						add_to_variable = { resource_consumption^industries_input_4_resource^ind = consumption_temp }
+
+						set_temp_variable = { consumption_temp = industries_input_5_fulfilled^ind }
+						subtract_from_variable = { industries_input_5_fulfilled^ind = consumption_temp }
+						add_to_variable = { resource_consumption^industries_input_5_resource^ind = consumption_temp }
+					#
+					#Maintenance
+						set_temp_variable = { consumption_temp = industries_maintenance_1_fulfilled^ind }
+						subtract_from_variable = { industries_maintenance_1_fulfilled^ind = consumption_temp }
+						add_to_variable = { resource_consumption^industries_maintenance_1_resource^ind = consumption_temp }
+
+						set_temp_variable = { consumption_temp = industries_maintenance_2_fulfilled^ind }
+						subtract_from_variable = { industries_maintenance_2_fulfilled^ind = consumption_temp }
+						add_to_variable = { resource_consumption^industries_maintenance_2_resource^ind = consumption_temp }
+
+						set_temp_variable = { consumption_temp = industries_maintenance_3_fulfilled^ind }
+						subtract_from_variable = { industries_maintenance_3_fulfilled^ind = consumption_temp }
+						add_to_variable = { resource_consumption^industries_maintenance_3_resource^ind = consumption_temp }
+
+						set_temp_variable = { consumption_temp = industries_maintenance_4_fulfilled^ind }
+						subtract_from_variable = { industries_maintenance_4_fulfilled^ind = consumption_temp }
+						add_to_variable = { resource_consumption^industries_maintenance_4_resource^ind = consumption_temp }
+
+						set_temp_variable = { consumption_temp = industries_maintenance_5_fulfilled^ind }
+						subtract_from_variable = { industries_maintenance_5_fulfilled^ind = consumption_temp }
+						add_to_variable = { resource_consumption^industries_maintenance_5_resource^ind = consumption_temp }
+					#
+				#
+				
+			}
+		#
+
+		#Pop Consumption
+			for_each_loop = {
+				array = pops_needs_resource
+				value = resource_type
+				index = needs_index
+				
+				#Consumption
+				set_temp_variable = { pops_consumption_temp = pops_needs_amount^needs_index }
+				if = {
+					limit = {
+						check_variable = { pops_consumption_temp > pops_needs_fulfilled^needs_index }
+					}
+					set_temp_variable = { pops_consumption_temp = pops_needs_fulfilled^needs_index }
+					set_variable = { pops_needs_fulfilled_percentage^needs_index = pops_consumption_temp }
+					divide_variable = { pops_needs_fulfilled_percentage^needs_index = pops_needs_amount^needs_index }
+				}
+				else = {
+					set_variable = { pops_needs_fulfilled_percentage^needs_index = 1 }
+				}
+				set_variable = { pops_needs_fulfilled^needs_index = 0 }
+				add_to_variable = { resource_consumption^resource_type = pops_consumption_temp }
+
+			}
+		#
+
+		#Calculate Supply & Demand
+		update_demand = yes
+		calculate_supply = yes
+
+		
+		#Minimum goods supply to be in a state			
+			for_each_loop = {
+				array = global.resources_array
+				value = r_type
+				set_variable = { resource_supply_min^r_type = resource_supply^r_type } #Minimum number of goods the state will keep
+				multiply_variable = { resource_supply_min^r_type = 0.2 }
+				if = {
+					limit = {
+						set_temp_variable = { resource_demand_temp = resource_demand^r_type }
+						multiply_temp_variable = { resource_demand_temp = 0.9 }
+						check_variable = { resource_supply_min^r_type > resource_demand_temp }
+					}
+					set_variable = { resource_supply_min^r_type = resource_demand_temp }
+				}
+				else_if = {
+					limit = {
+						set_temp_variable = { resource_demand_temp = resource_demand^r_type }
+						multiply_temp_variable = { resource_demand_temp = 0.75 }
+						check_variable = { resource_supply_min^r_type < resource_demand_temp }
+					}
+					set_variable = { resource_supply_min^r_type = resource_demand_temp }
+				}
+			}
+		#
+
+		#Add to Trade Node
+			var:trade_node_center = {
+				for_each_loop = {
+					array = global.resources_array
+					value = r_type
+
+					add_to_variable = { tnr_demand^r_type = PREV.resource_demand^r_type }
+					add_to_variable = { tnr_supply^r_type = PREV.resource_supply^r_type }
+					add_to_variable = { tnr_supply_min^r_type = PREV.resource_supply_min^r_type }
+
+					set_temp_variable = { value_temp = PREV.resource_supply^r_type }
+					multiply_temp_variable = { value_temp = PREV.resource_price^r_type }
+					add_to_variable = { tnr_value^r_type = value_temp }
+				}
+			}
+		#
+	}
+	#Node Price
+		for_each_scope_loop = {
+			array = trade_node_states
+
+			for_each_loop = {
+				array = global.resources_array
+				value = r_type
+				set_variable = { tnr_price^r_type = tnr_value^r_type }
+				if = {
+					limit = {
+						check_variable = { tnr_supply^r_type > 0 }
+					}
+					divide_variable = { tnr_price^r_type = tnr_supply^r_type }
+				}
+			}
+		}
+	#
+
+	#TRADE
+		for_each_loop = {
+			array = global.resources_array
+			value = r_type
+			#Nodes get added to the trade array and get sorted by price. Also Final Price
+			clear_array = tn_price_array
+			clear_array = tn_state_array
+			for_each_scope_loop = {
+				array = trade_node_states
+				set_variable = { tn_goods_trade = 0 }
+				set_variable = { tn_goods_value = 0 }
+				if = {
+					limit = {
+						check_variable = { r_type = 13 }
+					}
+					set_variable = { gts = 0 }
+					set_variable = { gvs = 0 }
+				}
+
+				for_each_loop = {
+					array = PREV.tn_price_array
+					index = ii
+					value = vv
+					break = bb
+
+					if = {
+						limit = {
+							check_variable = { vv > tnr_price^r_type }
+						}
+						add_to_array = { 
+							array = PREV.tn_price_array 
+							value = tnr_price^r_type
+							index = ii
+						}
+						add_to_array = { 
+							array = PREV.tn_state_array 
+							value = THIS
+							index = ii
+						}
+						set_temp_variable = { bb = 1 }
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { bb = 0 }
+					}
+					add_to_array = { PREV.tn_price_array = tnr_price^r_type }
+					add_to_array = { PREV.tn_state_array = THIS }
+				}
+			}
+			#INTERNODE TRADE
+				#Loops from highest price states to lowest
+				set_temp_variable = { start_temp = 0 } #tn_state_array^num }
+				subtract_from_temp_variable = { start_temp = 1 }
+				for_loop_effect = {
+					start = start_temp
+					end = 0
+					compare = greater_than_or_equals
+					add = -1
+					value = ii
+
+
+					#Scopes to state
+					var:tn_state_array^ii = {
+						
+						#Loops thru cheapest states to buy from
+						for_each_loop = {
+							array = PREV.tn_state_array
+							value = state_temp
+							index = iii
+							break = cheapest_brk
+
+							#Checks if the state is cheaper & transport is affordabole 
+							#TODO - Transport cost
+							if = {
+								limit = {
+									check_variable = { state_temp:tnr_price^r_type < tnr_price^r_type }
+								}
+								if = {
+									limit = {
+										always = yes
+										#check_variable = { state_temp:goods_supply_min < state_temp:goods_supply }
+									}
+									#Transport Cost
+									# var:state_temp = {
+									# 	set_variable = { PREV.transport_cost = distance_to@PREV } #This needs to be a normal variable
+									# }
+									# divide_variable = { transport_cost = global.base_transport_cost_divisor }
+									# set_temp_variable = { modifier_temp = transport_cost_effect }
+									# add_to_temp_variable = { modifier_temp = 1 }
+									# multiply_variable = { transport_cost = modifier_temp }
+									# add_to_variable = { transport_cost = 1 }
+
+									set_temp_variable = { true_price = state_temp:tnr_price^r_type }
+									#multiply_temp_variable = { true_price = transport_cost }
+									if = {
+										limit = {
+											check_variable = { true_price < tnr_price^r_type }
+										}
+										#Do Trade
+										set_temp_variable = { u = true_price }
+										multiply_temp_variable = { u = state_temp:tnr_demand^r_type }
+										divide_temp_variable = { u = tnr_price^r_type }
+										divide_temp_variable = { u = tnr_demand^r_type }
+										
+										set_temp_variable = { buy_amount = tnr_supply^r_type }
+										multiply_temp_variable = { buy_amount = u }
+										multiply_temp_variable = { buy_amount = -1 }
+										add_to_temp_variable = { buy_amount = state_temp:tnr_supply^r_type }
+										add_to_temp_variable = { u = 1 }
+										divide_temp_variable = { buy_amount = u }
+										
+
+										#multiply_temp_variable = { buy_amount = transport_cost }
+
+										set_temp_variable = { good_max_temp = state_temp:tnr_supply^r_type }
+										
+										clamp_temp_variable = {
+											var = buy_amount
+											max = good_max_temp
+										}
+										clamp_temp_variable = {
+											var = buy_amount
+											min = 0
+										}
+
+										set_temp_variable = { cost_temp = buy_amount }
+										multiply_temp_variable = { cost_temp = state_temp:tnr_price^r_type }
+
+										subtract_from_variable = { state_temp:tnr_supply^r_type = buy_amount }
+										subtract_from_variable = { state_temp:tnr_value^r_type = cost_temp }
+										subtract_from_variable = { state_temp:tn_goods_trade = buy_amount }
+										subtract_from_variable = { state_temp:tn_goods_value = cost_temp }
+										add_to_variable = { state_temp:tnr_money_acc^r_type = cost_temp }
+
+										#subtract_from_variable = { resource_interstate_trade_amount^r_type = buy_amount }
+										#add_to_variable = { resource_interstate_trade_value^r_type = cost_temp }
+										#add_to_variable = { resource_sold^r_type = buy_amount }
+										#add_to_variable = { resource_sold_value^r_type = cost_temp }
+										#add_to_variable = { resource_stockpile^r_type = buy_amount }
+
+										#divide_temp_variable = { buy_amount = transport_cost }
+
+										add_to_variable = { tnr_supply^r_type = buy_amount }
+										add_to_variable = { tnr_value^r_type = cost_temp }
+										add_to_variable = { tn_goods_trade = buy_amount }
+										add_to_variable = { tn_goods_value = cost_temp }
+										subtract_from_variable = { tnr_money_acc^r_type = cost_temp }
+										
+										#add_to_variable = { resource_interstate_trade_amount^r_type = buy_amount }
+										#subtract_from_variable = { resource_interstate_trade_value^r_type = cost_temp }
+										#add_to_variable = { resource_bought^r_type = buy_amount }
+										#add_to_variable = { resource_bought_value^r_type = cost_temp }
+										#add_to_variable = { resource_stockpile^r_type = buy_amount }
+									}
+								}
+							}
+							else = {
+								set_temp_variable = { cheapest_brk = 1 }
+							}
+						}
+					}
+				}
+			#
+			
+			#Resolve Internode Trade
+				every_controlled_state = {
+					if = {
+						limit = {
+							check_variable = { r_type = 13 }
+						}
+						set_variable = { start = trade_node_center:tnr_money_acc^r_type }
+					}
+					set_temp_variable = { t_am = trade_node_center:tn_goods_trade }
+					if = {
+						limit = {
+							check_variable = { t_am > 0 }
+							check_variable = { resource_demand^r_type > 0 }
+						}
+						multiply_temp_variable = { t_am = 100 }
+						divide_temp_variable = { t_am = trade_node_center:tnr_demand^r_type }
+						multiply_temp_variable = { t_am = resource_demand^r_type }
+						divide_temp_variable = { t_am = 100 }
+
+						set_temp_variable = { cost_temp = resource_demand^r_type }
+						multiply_temp_variable = { cost_temp = 100 }
+						divide_temp_variable = { cost_temp = trade_node_center:tnr_demand^r_type }
+						multiply_temp_variable = { cost_temp = trade_node_center:tn_goods_value }
+						divide_temp_variable = { cost_temp = 100 }
+
+						add_to_variable = { trade_node_center:tnr_money_acc^r_type = cost_temp }
+					
+						set_temp_variable = { value_temp = resource_supply^r_type }
+						multiply_temp_variable = { value_temp = resource_price^r_type }
+						add_to_temp_variable = { value_temp = cost_temp }
+						add_to_variable = { resource_supply^r_type = t_am }
+						
+						set_variable = { resource_price^r_type = value_temp }
+						divide_variable = { resource_price^r_type = resource_supply^r_type }
+						add_to_variable = { resource_interstate_trade_amount^r_type = t_am }
+						subtract_from_variable = { resource_interstate_trade_value^r_type = cost_temp }
+						add_to_variable = { resource_bought^r_type = t_am }
+						add_to_variable = { resource_bought_value^r_type = cost_temp }
+						add_to_variable = { resource_stockpile^r_type = t_am }
+
+
+						if = {
+							limit = {
+								check_variable = { r_type = 13 }
+							}
+							add_to_variable = { trade_node_center:gts = t_am }
+							add_to_variable = { trade_node_center:gvs = cost_temp }
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { t_am < 0 }
+							check_variable = { resource_supply^r_type > 0 }
+						}
+						set_temp_variable = { tnr_supply_temp = trade_node_center:tnr_supply^r_type }
+						subtract_from_temp_variable = { tnr_supply_temp = t_am }
+
+						multiply_temp_variable = { t_am = 100 }
+						divide_temp_variable = { t_am = tnr_supply_temp }
+						multiply_temp_variable = { t_am = resource_supply^r_type }
+						divide_temp_variable = { t_am = 100 }
+
+						set_temp_variable = { cost_temp = resource_supply^r_type }
+						multiply_temp_variable = { cost_temp = 100 }
+						divide_temp_variable = { cost_temp = tnr_supply_temp }
+						multiply_temp_variable = { cost_temp = trade_node_center:tn_goods_value }
+						divide_temp_variable = { cost_temp = 100 }
+
+						add_to_variable = { trade_node_center:tnr_money_acc^r_type = cost_temp }
+
+
+						set_temp_variable = { value_temp = resource_supply^r_type }
+						multiply_temp_variable = { value_temp = resource_price^r_type }
+						add_to_temp_variable = { value_temp = cost_temp }
+						add_to_variable = { resource_supply^r_type = t_am }
+						
+						set_variable = { resource_price^r_type = value_temp }
+						divide_variable = { resource_price^r_type = resource_supply^r_type }
+						add_to_variable = { resource_interstate_trade_amount^r_type = t_am }
+						subtract_from_variable = { resource_interstate_trade_value^r_type = cost_temp }
+						subtract_from_variable = { resource_sold^r_type = t_am }
+						subtract_from_variable = { resource_sold_value^r_type = cost_temp }
+						add_to_variable = { resource_stockpile^r_type = t_am }
+
+
+						if = {
+							limit = {
+								check_variable = { r_type = 13 }
+							}
+							add_to_variable = { trade_node_center:gts = t_am }
+							add_to_variable = { trade_node_center:gvs = cost_temp }
+						}
+					}
+					if = {
+						limit = {
+							check_variable = { r_type = 13 }
+						}
+						set_variable = { gt = trade_node_center:tn_goods_trade }
+						set_variable = { gv = trade_node_center:tn_goods_value }
+						set_variable = { gts = trade_node_center:gts }
+						set_variable = { gvs = trade_node_center:gvs }
+						set_variable = { tr = t_am }
+						set_variable = { co = cost_temp }
+						set_variable = { left = trade_node_center:tnr_money_acc^r_type }
+					}
+				}
+			#
+			
+			#Final Price
+				for_each_scope_loop = {
+					array = trade_node_states
+
+					set_variable = { tnr_requests = 0 }
+					set_variable = { tnr_offers = 0 }
+
+					#Second Pricing (Accounting for out-of-node trade)
+					set_variable = { tnr_price^r_type = tnr_value^r_type }
+					if = {
+						limit = {
+							check_variable = { tnr_supply^r_type > 0 }
+						}
+						divide_variable = { tnr_price^r_type = tnr_supply^r_type }
+					}
+					
+					set_variable = { tnr_price_f = tnr_price^r_type }
+					if = {
+						limit = {
+							check_variable = { tnr_supply^r_type > 0 }
+						}
+						#set_temp_variable = { resource_prev_price_temp = tnr_price_f }
+						#multiply_temp_variable = { resource_prev_price_temp = 2 }
+						if = {
+							limit = {
+								check_variable = { tnr_supply^r_type < 1 }
+							}
+							divide_variable = { tnr_price_f = tnr_supply^r_type }
+							multiply_variable = { tnr_price_f = tnr_demand^r_type }
+						}
+						else = {
+							multiply_variable = { tnr_price_f = tnr_demand^r_type }
+							divide_variable = { tnr_price_f = tnr_supply^r_type }
+						}
+						if = {
+							limit = {
+								check_variable = { tnr_demand^r_type > 0 }
+								check_variable = { tnr_price_f < 0.025 }
+							}
+							set_variable = { tnr_price_f = 0.025 }
+						}
+						#add_to_variable = { tnr_price_f = resource_prev_price_temp }
+						#divide_variable = { tnr_price_f = 3 }
+					}
+				}
+			#
+
+			#INTERSTATE TRADE
+				#Requests & Offers
+				every_controlled_state = {
+					if = {
+						limit = {
+							check_variable = { trade_node_center:tnr_price_f > 0 }
+						}
+						set_temp_variable = { t_am = resource_demand^r_type }
+						multiply_temp_variable = { t_am = resource_price^r_type }
+						divide_temp_variable = { t_am = trade_node_center:tnr_price_f }
+						subtract_from_temp_variable = { t_am = resource_supply^r_type }
+
+						if = {
+							limit = {
+								check_variable = { t_am > 0 }
+							}
+							set_variable = { r_trade = t_am }
+							add_to_variable = { trade_node_center:tnr_requests = r_trade }
+						}
+						else = {
+							set_variable = { r_trade = t_am }
+							add_to_variable = { trade_node_center:tnr_offers = r_trade }
+						}
+						if = {
+							limit = {
+								check_variable = { r_type = 32 }
+							}
+							set_variable = { cons_t = t_am }
+						}
+					}
+				}
+				#Adjust & Commit
+				every_controlled_state = {
+					if = {
+						limit = {
+							check_variable = { trade_node_center:tnr_price_f > 0 }
+						}
+						set_temp_variable = { t_am = r_trade }
+						clear_variable = r_trade #No longer needed
+
+						set_temp_variable = { percent_temp = trade_node_center:tnr_offers }
+						multiply_temp_variable = { percent_temp = 100 }
+						divide_temp_variable = { percent_temp = trade_node_center:tnr_requests }
+						if = {
+							limit = {
+								check_variable = { percent_temp < 100 }
+							}
+							multiply_temp_variable = { t_am = percent_temp }
+							divide_temp_variable = { t_am = 100 }
+						}
+
+						set_temp_variable = { cost_temp = t_am }
+						multiply_temp_variable = { cost_temp = trade_node_center:tnr_price^r_type }
+
+						add_to_variable = { trade_node_center:tnr_money_acc^r_type = cost_temp }
+						if = {
+							limit = {
+								check_variable = { t_am > 0 }
+							}
+							add_to_variable = { resource_supply^r_type = t_am }
+							add_to_variable = { resource_interstate_trade_amount^r_type = t_am }
+							subtract_from_variable = { resource_interstate_trade_value^r_type = cost_temp }
+							add_to_variable = { resource_bought^r_type = t_am }
+							add_to_variable = { resource_bought_value^r_type = cost_temp }
+							add_to_variable = { resource_stockpile^r_type = t_am }
+						}
+						else = {
+							subtract_from_variable = { resource_demand^r_type = t_am }
+							add_to_variable = { resource_interstate_trade_amount^r_type = t_am }
+							subtract_from_variable = { resource_interstate_trade_value^r_type = cost_temp }
+							subtract_from_variable = { resource_sold^r_type = t_am }
+							subtract_from_variable = { resource_sold_value^r_type = cost_temp }
+							add_to_variable = { resource_stockpile^r_type = t_am }
+						}
+					}
+				}
+
+				#Resolve
+				for_each_scope_loop = {
+					array = trade_node_states
+
+					clear_variable = tnr_requests
+					clear_variable = tnr_offers
+					subtract_from_variable = { pops_money = tnr_money_acc^r_type }
+				}
+			#
+		}
+	#
+	
+	#INTERSTATE TRADE
+		#States with excess demand to supply will try to buy goods. States with highest price get first "bite"
+		#NOTE: It is assumed that all imported & exported supply & demand will be fulfilled so to eliminate intermediaries in the states and making the system more complicated
+				#than it needs to be
+
+				#I really don't need to write down these notes, do I. I'm probably gonna be the only one reading them lmao. Hello later me. Howya doin? 
+				# - Doing fine. Thanks for writing this, past me, btw. Really appreciate it while I'm making the international trade system.
+				# - - Debt and Taxes, YEET
+
+		#Trade Distance: State to State, Transport Cost
+
+		# for_each_loop = {
+		# 	array = global.resources_array
+		# 	value = r_type
+			
+		# 	#Get states sorted from lowest to highest price
+		# 		clear_array = trade_price_array
+		# 		clear_array = trade_state_array
+		# 		every_controlled_state = {
+		# 			for_each_loop = {
+		# 				array = PREV.trade_price_array
+		# 				index = ii
+		# 				value = vv
+		# 				break = bb
+
+		# 				if = {
+		# 					limit = {
+		# 						check_variable = { vv > resource_price^r_type }
+		# 					}
+		# 					add_to_array = { 
+		# 						array = PREV.trade_price_array 
+		# 						value = resource_price^r_type
+		# 						index = ii
+		# 					}
+		# 					add_to_array = { 
+		# 						array = PREV.trade_state_array 
+		# 						value = THIS
+		# 						index = ii
+		# 					}
+		# 					set_temp_variable = { bb = 1 }
+		# 				}
+		# 			}
+		# 			if = {
+		# 				limit = {
+		# 					check_variable = { bb = 0 }
+		# 				}
+		# 				add_to_array = { PREV.trade_price_array = resource_price^r_type }
+		# 				add_to_array = { PREV.trade_state_array = THIS }
+		# 			}
+		# 		}
+		# 	#
+
+		# 	#Trade Algorithm
+		# 		#Loops from highest price states to lowest
+		# 		set_temp_variable = { start_temp = trade_state_array^num }
+		# 		subtract_from_temp_variable = { start_temp = 1 }
+		# 		for_loop_effect = {
+		# 			start = start_temp
+		# 			end = 0
+		# 			compare = greater_than_or_equals
+		# 			add = -1
+		# 			value = ii
+
+
+		# 			#Scopes to state
+		# 			var:trade_state_array^ii = {
+						
+		# 				#Checks if the state actually has more demand than supply. If it doesn't, this is pointless
+		# 				if = {
+		# 					limit = {
+		# 						check_variable = { resource_demand^r_type > resource_supply^r_type }
+		# 					}
+		# 					set_temp_variable = { buy_amount_left = resource_demand^r_type }
+		# 					subtract_from_temp_variable = { buy_amount_left = resource_supply^r_type }
+
+		# 					#Loops thru cheapest states to buy from
+		# 					for_each_loop = {
+		# 						array = PREV.trade_state_array
+		# 						value = state_temp
+		# 						index = iii
+		# 						break = cheapest_brk
+
+		# 						#Checks if the state is cheaper & transport is affordabole 
+		# 						#TODO - Transport cost
+		# 						if = {
+		# 							limit = {
+		# 								check_variable = { state_temp:resource_price^r_type < resource_price^r_type }
+		# 								check_variable = { buy_amount_left > 0 }
+		# 								check_variable = { state_temp:resource_supply_min^r_type < state_temp:resource_supply^r_type }
+										
+		# 							}
+		# 							#Transport Cost
+		# 							#var:state_temp = {
+		# 							#	set_variable = { PREV.transport_cost = distance_to@PREV } #This needs to be a normal variable
+		# 							#}
+		# 							#divide_variable = { transport_cost = global.base_transport_cost_divisor }
+		# 							#set_temp_variable = { modifier_temp = transport_cost_effect }
+		# 							#add_to_temp_variable = { modifier_temp = 1 }
+		# 							#multiply_variable = { transport_cost = modifier_temp }
+		# 							#add_to_variable = { transport_cost = 1 }
+		# 							set_variable = { transport_cost = 1 }
+
+		# 							set_temp_variable = { true_price = state_temp:resource_price^r_type }
+		# 							#multiply_temp_variable = { true_price = transport_cost }
+		# 							if = {
+		# 								limit = {
+		# 									check_variable = { true_price < resource_price^r_type }
+		# 								}
+
+		# 								#Do Trade
+		# 								set_temp_variable = { buy_amount = buy_amount_left }
+
+		# 								#Depending on the actual price difference, the buy amount will be different
+		# 								set_temp_variable = { price_difference = resource_price^r_type }
+		# 								subtract_from_temp_variable = { price_difference = state_temp:resource_price^r_type }
+		# 								divide_temp_variable = { price_difference = state_temp:resource_price^r_type }
+		# 								divide_temp_variable = { price_difference = 2 }
+		# 								add_to_temp_variable = { price_difference = 1 }
+		# 								multiply_temp_variable = { buy_amount = price_difference } #buy_amount = buy_amount_left * ((resource_price - state_temp:resource_price) / (state_temp:resource_price * 2) + 1)
+										
+		# 								multiply_temp_variable = { buy_amount = 0.8 }
+
+		# 								multiply_temp_variable = { buy_amount = transport_cost }
+
+		# 								set_temp_variable = { good_max_temp = state_temp:resource_supply^r_type }
+		# 								subtract_from_temp_variable = { good_max_temp = state_temp:resource_supply_min^r_type }
+		# 								set_temp_variable = { good_price_temp = state_temp:resource_price^r_type }
+		# 								if = {
+		# 									limit = {
+		# 										check_variable = { buy_amount > 0 }
+		# 									}
+		# 									add_to_variable = { state_temp:resource_demand^r_type = buy_amount }
+		# 									clamp_temp_variable = {
+		# 										var = buy_amount
+		# 										max = good_max_temp
+		# 									}
+		# 									set_temp_variable = { cost_temp = buy_amount }
+		# 									multiply_temp_variable = { cost_temp = good_price_temp }
+		# 									add_to_variable = { state_temp:resource_supply_min^r_type = buy_amount }
+		# 									subtract_from_variable = { state_temp:resource_interstate_trade_amount^r_type = buy_amount }
+		# 									add_to_variable = { state_temp:resource_interstate_trade_value^r_type = cost_temp }
+		# 									add_to_variable = { state_temp:resource_sold^r_type = buy_amount }
+		# 									add_to_variable = { state_temp:resource_sold_value^r_type = cost_temp }
+		# 									subtract_from_variable = { state_temp:resource_stockpile^r_type = buy_amount }
+
+		# 									divide_temp_variable = { buy_amount = transport_cost }
+
+		# 									subtract_from_temp_variable = { buy_amount_left = buy_amount }
+		# 									add_to_variable = { resource_supply^r_type = buy_amount }
+		# 									add_to_variable = { resource_interstate_trade_amount^r_type = buy_amount }
+		# 									subtract_from_variable = { resource_interstate_trade_value^r_type = cost_temp }
+		# 									add_to_variable = { resource_bought^r_type = buy_amount }
+		# 									add_to_variable = { resource_bought_value^r_type = cost_temp }
+		# 									add_to_variable = { resource_stockpile^r_type = buy_amount }
+
+		# 									add_to_variable = { PREV.resource_interstate_trade_amount^r_type = buy_amount }
+		# 									add_to_variable = { PREV.resource_interstate_trade_value^r_type = cost_temp }
+		# 								}
+		# 							}
+		# 						}
+		# 						else_if = {
+		# 							limit = {
+		# 								OR = {
+		# 									NOT = { check_variable = { buy_amount_left > 0 } }
+		# 									NOT = {  check_variable = { state_temp:resource_price < resource_price } }
+		# 								}
+		# 							}
+		# 							set_temp_variable = { cheapest_brk = 1 }
+		# 						}
+		# 					}
+		# 				}
+		# 			}
+		# 		}
+		# 	#
+		# }
+	#
+
+	#Resolve Interstate Trade
+		every_controlled_state = {
+			for_each_loop = {
+				array = global.resources_array
+				value = r_type
+
+				#Importing
+				if = {
+					limit = {
+						#check_variable = { resource_interstate_trade_amount^r_type > 0 }
+						always = no
+					}
+					#Costs & goods absorbed by pops & industries
+					set_temp_variable = { trade_value_temp = resource_interstate_trade_value^r_type }
+
+					#Pops
+						set_temp_variable = { portion_temp = resource_pop_demand^r_type }
+						if = {
+							limit = {
+								check_variable = { portion_temp > 0 }
+							}
+							multiply_temp_variable = { portion_temp = 100 }
+							divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+							set_temp_variable = { pops_buy_amount = resource_interstate_trade_amount^r_type }
+
+							multiply_temp_variable = { pops_buy_amount = portion_temp }
+							divide_temp_variable = { pops_buy_amount = 100 }
+							
+							set_temp_variable = { excess_temp = pops_buy_amount }
+							for_each_loop = {
+								array = pops_needs_resource
+								value = needs_r_type
+								index = ni
+								break = pops_br
+								if = {
+									limit = {
+										check_variable = { r_type = needs_r_type }
+									}
+									add_to_variable = { pops_needs_fulfilled^ni = excess_temp }
+									if = {
+										limit = {
+											check_variable = { pops_needs_fulfilled^ni > pops_needs_amount^ni }
+										}
+										set_temp_variable = { excess_temp = pops_needs_fulfilled^ni }
+										subtract_from_temp_variable = { excess_temp = pops_needs_amount^ni }
+										subtract_from_temp_variable = { pops_needs_fulfilled^ni = excess_temp }
+									}
+									else = {
+										set_temp_variable = { excess_temp = 0 }
+										set_temp_variable = { pops_br = 1 }
+									}
+								}
+							}
+							set_temp_variable = { pops_cost_temp = resource_interstate_trade_value^r_type }
+							multiply_temp_variable = { pops_cost_temp = portion_temp }
+							divide_temp_variable = { pops_cost_temp = 100 }
+							subtract_from_temp_variable = { trade_value_temp = pops_cost_temp }
+							add_to_variable = { pops_money = pops_cost_temp }
+							subtract_from_variable = { pops_goods_spending = pops_cost_temp }
+						}
+					#
+
+					#Industries
+						if = {
+							limit = {
+								check_variable = { resource_industry_demand^r_type > 0 }
+							}
+
+							for_each_loop = {
+								array = industries
+								value = ind_type_temp
+								index = ind
+								break = ind_break
+
+								#Input
+									if = {
+										limit = {
+											check_variable = { industries_input_1_resource^ind = r_type }
+											check_variable = { industries_input_1_demand^ind > 0 }
+										}
+										set_temp_variable = { portion_temp = industries_input_1_demand^ind }
+										multiply_temp_variable = { portion_temp = 100 }
+										divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+										set_temp_variable = { buy_amount = resource_interstate_trade_amount^r_type }
+										multiply_temp_variable = { buy_amount = portion_temp }
+										divide_temp_variable = { buy_amount = 100 }
+
+										set_temp_variable = { industry_cost_temp = resource_interstate_trade_value^r_type }
+										multiply_temp_variable = { industry_cost_temp = portion_temp }
+										divide_temp_variable = { industry_cost_temp = 100 }
+										
+										add_to_variable = { industries_input_1_fulfilled^ind = buy_amount }
+										subtract_from_temp_variable = { trade_value_temp = industry_cost_temp }
+										add_to_variable = { industries_money^ind = industry_cost_temp }
+										subtract_from_variable = { industries_expenses_input^ind = industry_cost_temp }
+										BUL = { add_political_power = 1 }
+									}
+									if = {
+										limit = {
+											check_variable = { industries_input_2_resource^ind = r_type }
+											check_variable = { industries_input_2_demand^ind > 0 }
+										}
+										set_temp_variable = { portion_temp = industries_input_2_demand^ind }
+										multiply_temp_variable = { portion_temp = 100 }
+										divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+										set_temp_variable = { buy_amount = resource_interstate_trade_amount^r_type }
+										multiply_temp_variable = { buy_amount = portion_temp }
+										divide_temp_variable = { buy_amount = 100 }
+
+										set_temp_variable = { industry_cost_temp = resource_interstate_trade_value^r_type }
+										multiply_temp_variable = { industry_cost_temp = portion_temp }
+										divide_temp_variable = { industry_cost_temp = 100 }
+										
+										add_to_variable = { industries_input_2_fulfilled^ind = buy_amount }
+										subtract_from_temp_variable = { trade_value_temp = industry_cost_temp }
+										add_to_variable = { industries_money^ind = industry_cost_temp }
+										subtract_from_variable = { industries_expenses_input^ind = industry_cost_temp }
+									}
+
+									if = {
+										limit = {
+											check_variable = { industries_input_3_resource^ind = r_type }
+											check_variable = { industries_input_3_demand^ind > 0 }
+										}
+										set_temp_variable = { portion_temp = industries_input_3_demand^ind }
+										multiply_temp_variable = { portion_temp = 100 }
+										divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+										set_temp_variable = { buy_amount = resource_interstate_trade_amount^r_type }
+										multiply_temp_variable = { buy_amount = portion_temp }
+										divide_temp_variable = { buy_amount = 100 }
+
+										set_temp_variable = { industry_cost_temp = resource_interstate_trade_value^r_type }
+										multiply_temp_variable = { industry_cost_temp = portion_temp }
+										divide_temp_variable = { industry_cost_temp = 100 }
+										
+										add_to_variable = { industries_input_3_fulfilled^ind = buy_amount }
+										subtract_from_temp_variable = { trade_value_temp = industry_cost_temp }
+										add_to_variable = { industries_money^ind = industry_cost_temp }
+										subtract_from_variable = { industries_expenses_input^ind = industry_cost_temp }
+									}
+
+									if = {
+										limit = {
+											check_variable = { industries_input_4_resource^ind = r_type }
+											check_variable = { industries_input_4_demand^ind > 0 }
+										}
+										set_temp_variable = { portion_temp = industries_input_4_demand^ind }
+										multiply_temp_variable = { portion_temp = 100 }
+										divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+										set_temp_variable = { buy_amount = resource_interstate_trade_amount^r_type }
+										multiply_temp_variable = { buy_amount = portion_temp }
+										divide_temp_variable = { buy_amount = 100 }
+
+										set_temp_variable = { industry_cost_temp = resource_interstate_trade_value^r_type }
+										multiply_temp_variable = { industry_cost_temp = portion_temp }
+										divide_temp_variable = { industry_cost_temp = 100 }
+										
+										add_to_variable = { industries_input_4_fulfilled^ind = buy_amount }
+										subtract_from_temp_variable = { trade_value_temp = industry_cost_temp }
+										add_to_variable = { industries_money^ind = industry_cost_temp }
+										subtract_from_variable = { industries_expenses_input^ind = industry_cost_temp }
+									}
+
+									if = {
+										limit = {
+											check_variable = { industries_input_5_resource^ind = r_type }
+											check_variable = { industries_input_5_demand^ind > 0 }
+										}
+										set_temp_variable = { portion_temp = industries_input_5_demand^ind }
+										multiply_temp_variable = { portion_temp = 100 }
+										divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+										set_temp_variable = { buy_amount = resource_interstate_trade_amount^r_type }
+										multiply_temp_variable = { buy_amount = portion_temp }
+										divide_temp_variable = { buy_amount = 100 }
+
+										set_temp_variable = { industry_cost_temp = resource_interstate_trade_value^r_type }
+										multiply_temp_variable = { industry_cost_temp = portion_temp }
+										divide_temp_variable = { industry_cost_temp = 100 }
+										
+										add_to_variable = { industries_input_5_fulfilled^ind = buy_amount }
+										subtract_from_temp_variable = { trade_value_temp = industry_cost_temp }
+										add_to_variable = { industries_money^ind = industry_cost_temp }
+										subtract_from_variable = { industries_expenses_input^ind = industry_cost_temp }
+									}
+
+
+								#
+
+								#Maintenance
+									if = {
+										limit = {
+											check_variable = { industries_maintenance_1_resource^ind = r_type }
+											check_variable = { industries_maintenance_1_demand^ind > 0 }
+										}
+										set_temp_variable = { portion_temp = industries_maintenance_1_demand^ind }
+										multiply_temp_variable = { portion_temp = 100 }
+										divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+										set_temp_variable = { buy_amount = resource_interstate_trade_amount^r_type }
+										multiply_temp_variable = { buy_amount = portion_temp }
+										divide_temp_variable = { buy_amount = 100 }
+
+										set_temp_variable = { industry_cost_temp = resource_interstate_trade_value^r_type }
+										multiply_temp_variable = { industry_cost_temp = portion_temp }
+										divide_temp_variable = { industry_cost_temp = 100 }
+										
+										add_to_variable = { industries_maintenance_1_fulfilled^ind = buy_amount }
+										subtract_from_temp_variable = { trade_value_temp = industry_cost_temp }
+										add_to_variable = { industries_money^ind = industry_cost_temp }
+										subtract_from_variable = { industries_expenses_maintenance^ind = industry_cost_temp }
+									}
+									if = {
+										limit = {
+											check_variable = { industries_maintenance_2_resource^ind = r_type }
+											check_variable = { industries_maintenance_2_demand^ind > 0 }
+										}
+										set_temp_variable = { portion_temp = industries_maintenance_2_demand^ind }
+										multiply_temp_variable = { portion_temp = 100 }
+										divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+										set_temp_variable = { buy_amount = resource_interstate_trade_amount^r_type }
+										multiply_temp_variable = { buy_amount = portion_temp }
+										divide_temp_variable = { buy_amount = 100 }
+
+										set_temp_variable = { industry_cost_temp = resource_interstate_trade_value^r_type }
+										multiply_temp_variable = { industry_cost_temp = portion_temp }
+										divide_temp_variable = { industry_cost_temp = 100 }
+										
+										add_to_variable = { industries_maintenance_2_fulfilled^ind = buy_amount }
+										subtract_from_temp_variable = { trade_value_temp = industry_cost_temp }
+										add_to_variable = { industries_money^ind = industry_cost_temp }
+										subtract_from_variable = { industries_expenses_maintenance^ind = industry_cost_temp }
+									}
+
+									if = {
+										limit = {
+											check_variable = { industries_maintenance_3_resource^ind = r_type }
+											check_variable = { industries_maintenance_3_demand^ind > 0 }
+										}
+										set_temp_variable = { portion_temp = industries_maintenance_3_demand^ind }
+										multiply_temp_variable = { portion_temp = 100 }
+										divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+										set_temp_variable = { buy_amount = resource_interstate_trade_amount^r_type }
+										multiply_temp_variable = { buy_amount = portion_temp }
+										divide_temp_variable = { buy_amount = 100 }
+
+										set_temp_variable = { industry_cost_temp = resource_interstate_trade_value^r_type }
+										multiply_temp_variable = { industry_cost_temp = portion_temp }
+										divide_temp_variable = { industry_cost_temp = 100 }
+										
+										add_to_variable = { industries_maintenance_3_fulfilled^ind = buy_amount }
+										subtract_from_temp_variable = { trade_value_temp = industry_cost_temp }
+										add_to_variable = { industries_money^ind = industry_cost_temp }
+										subtract_from_variable = { industries_expenses_maintenance^ind = industry_cost_temp }
+									}
+
+									if = {
+										limit = {
+											check_variable = { industries_maintenance_4_resource^ind = r_type }
+											check_variable = { industries_maintenance_4_demand^ind > 0 }
+										}
+										set_temp_variable = { portion_temp = industries_maintenance_4_demand^ind }
+										multiply_temp_variable = { portion_temp = 100 }
+										divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+										set_temp_variable = { buy_amount = resource_interstate_trade_amount^r_type }
+										multiply_temp_variable = { buy_amount = portion_temp }
+										divide_temp_variable = { buy_amount = 100 }
+
+										set_temp_variable = { industry_cost_temp = resource_interstate_trade_value^r_type }
+										multiply_temp_variable = { industry_cost_temp = portion_temp }
+										divide_temp_variable = { industry_cost_temp = 100 }
+										
+										add_to_variable = { industries_maintenance_4_fulfilled^ind = buy_amount }
+										subtract_from_temp_variable = { trade_value_temp = industry_cost_temp }
+										add_to_variable = { industries_money^ind = industry_cost_temp }
+										subtract_from_variable = { industries_expenses_maintenance^ind = industry_cost_temp }
+									}
+
+									if = {
+										limit = {
+											check_variable = { industries_maintenance_5_resource^ind = r_type }
+											check_variable = { industries_maintenance_5_demand^ind > 0 }
+										}
+										set_temp_variable = { portion_temp = industries_maintenance_5_demand^ind }
+										multiply_temp_variable = { portion_temp = 100 }
+										divide_temp_variable = { portion_temp = resource_demand^r_type }
+
+										set_temp_variable = { buy_amount = resource_interstate_trade_amount^r_type }
+										multiply_temp_variable = { buy_amount = portion_temp }
+										divide_temp_variable = { buy_amount = 100 }
+
+										set_temp_variable = { industry_cost_temp = resource_interstate_trade_value^r_type }
+										multiply_temp_variable = { industry_cost_temp = portion_temp }
+										divide_temp_variable = { industry_cost_temp = 100 }
+										
+										add_to_variable = { industries_maintenance_5_fulfilled^ind = buy_amount }
+										subtract_from_temp_variable = { trade_value_temp = industry_cost_temp }
+										add_to_variable = { industries_money^ind = industry_cost_temp }
+										subtract_from_variable = { industries_expenses_maintenance^ind = industry_cost_temp }
+									}
+
+
+								#
+
+							}
+						}
+					#
+					#Excess gets rolled into Pops
+						add_to_variable = { pops_money = trade_value_temp }
+						subtract_from_variable = { pops_goods_spending = trade_value_temp }
+					#
+				}
+				#Exporting - Already covered by trade algorithm using resource sold
+				else_if = {
+					limit = {
+						#check_variable = { resource_interstate_trade_amount^r_type < 0 }
+						always = no
+					}
+					#Revenue & goods sold absorbed by industries
+		
+					for_each_loop = {
+						array = industries
+						value = ind_type_temp
+						index = ind
+						break = ind_break
+					
+						
+					}
+					#add_to_variable = { pops_money = resource_interstate_trade_value^r_type } #Add to either earnings or money. Never both
+					add_to_variable = { pops_earnings = resource_interstate_trade_value^r_type }
+					add_to_variable = { rgos_earnings = resource_interstate_trade_value^r_type }
+					subtract_from_variable = { pops_rgos_life_goods_sold = resource_interstate_trade_amount^r_type }
+				}
+			}
+		}
+	#
+	
+	every_controlled_state = {
+		#Shopping
+			#Infra Shopping
+			#
+			#Industry Shopping
+				set_variable = { resource_sold_check = 0 }
+				set_variable = { resource_sold_check2 = 0 }
+				for_each_loop = {
+					array = industries
+					value = ind_type_temp
+					index = ind
+					break = ind_break
+
+					#Input
+						if = {
+							limit = {
+								check_variable = { industries_input_1_demand^ind > 0 }
+							}
+							set_temp_variable = { foreign_bought = 0 }
+							if = {
+								limit = {
+									check_variable = { resource_bought^industries_input_1_resource^ind > 0 }
+								}
+								#Buying from Out-of-State Sources
+								set_temp_variable = { buy_amount = industries_input_1_demand^ind }
+
+								set_temp_variable = { actual_buy_amount = buy_amount }
+								multiply_temp_variable = { actual_buy_amount = resource_supply^industries_input_1_resource^ind }
+								divide_temp_variable = { actual_buy_amount = resource_demand^industries_input_1_resource^ind }
+								if = {
+									limit = {
+										check_variable = { actual_buy_amount < buy_amount }
+									}
+									set_temp_variable = { buy_amount = actual_buy_amount }
+								}
+
+								clamp_temp_variable = {
+									var = buy_amount
+									max = resource_bought^industries_input_1_resource^ind
+								}
+								clamp_temp_variable = {
+									var = buy_amount
+									min = 0
+								}
+								
+								set_temp_variable = { cost_temp = resource_bought_value^industries_input_1_resource^ind }
+								if = {
+									limit = {
+										check_variable = { buy_amount < resource_bought^industries_input_1_resource^ind }
+									}
+									multiply_temp_variable = { cost_temp = buy_amount }
+									divide_temp_variable = { cost_temp = resource_bought^industries_input_1_resource^ind }
+								}
+								
+								#Resolve
+								subtract_from_variable = { resource_bought^industries_input_1_resource^ind = buy_amount }
+								subtract_from_variable = { resource_bought_value^industries_input_1_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_input_1_resource^ind = buy_amount }
+								
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_input^ind = cost_temp }
+								add_to_variable = { industries_input_1_expenses^ind = cost_temp }
+								add_to_variable = { industries_input_1_fulfilled^ind = buy_amount }
+								add_to_variable = { foreign_bought = buy_amount }
+							}
+							
+							set_temp_variable = { buy_amount = industries_input_1_demand^ind }
+							subtract_from_temp_variable = { buy_amount = foreign_bought }
+							if = {
+								limit = {
+									check_variable = { buy_amount > 0 }
+								}
+								#Buying from Local Buildings
+
+								set_temp_variable = { money_temp = industries_money^ind } #Can theoretically be infinite
+								set_temp_variable = { good_max_temp = resource_stockpile^industries_input_1_resource^ind }
+								set_temp_variable = { good_price_temp = resource_price^industries_input_1_resource^ind }
+								set_temp_variable = { good_demand_temp = resource_demand^industries_input_1_resource^ind }
+								set_temp_variable = { good_supply_temp = resource_supply^industries_input_1_resource^ind }
+
+								shopping_algorithm_adjusted = yes
+
+								#Resolve
+								add_to_variable = { resource_sold^industries_input_1_resource^ind = buy_amount }
+								add_to_variable = { resource_sold_value^industries_input_1_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_input_1_resource^ind = buy_amount }
+
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_input^ind = cost_temp }
+								add_to_variable = { industries_input_1_expenses^ind = cost_temp }
+								add_to_variable = { industries_input_1_fulfilled^ind = buy_amount }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { industries_input_2_demand^ind > 0 }
+							}
+							set_temp_variable = { foreign_bought = 0 }
+							if = {
+								limit = {
+									check_variable = { resource_bought^industries_input_2_resource^ind > 0 }
+								}
+								#Buying from Out-of-State Sources
+								set_temp_variable = { buy_amount = industries_input_2_demand^ind }
+
+								set_temp_variable = { actual_buy_amount = buy_amount }
+								multiply_temp_variable = { actual_buy_amount = resource_supply^industries_input_2_resource^ind }
+								divide_temp_variable = { actual_buy_amount = resource_demand^industries_input_2_resource^ind }
+								if = {
+									limit = {
+										check_variable = { actual_buy_amount < buy_amount }
+									}
+									set_temp_variable = { buy_amount = actual_buy_amount }
+								}
+
+								clamp_temp_variable = {
+									var = buy_amount
+									max = resource_bought^industries_input_2_resource^ind
+								}
+								clamp_temp_variable = {
+									var = buy_amount
+									min = 0
+								}
+								
+								set_temp_variable = { cost_temp = resource_bought_value^industries_input_2_resource^ind }
+								if = {
+									limit = {
+										check_variable = { buy_amount < resource_bought^industries_input_2_resource^ind }
+									}
+									multiply_temp_variable = { cost_temp = buy_amount }
+									divide_temp_variable = { cost_temp = resource_bought^industries_input_2_resource^ind }
+								}
+								
+								#Resolve
+								subtract_from_variable = { resource_bought^industries_input_2_resource^ind = buy_amount }
+								subtract_from_variable = { resource_bought_value^industries_input_2_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_input_2_resource^ind = buy_amount }
+								
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_input^ind = cost_temp }
+								add_to_variable = { industries_input_2_expenses^ind = cost_temp }
+								add_to_variable = { industries_input_2_fulfilled^ind = buy_amount }
+								add_to_variable = { foreign_bought = buy_amount }
+							}
+							
+							set_temp_variable = { buy_amount = industries_input_2_demand^ind }
+							subtract_from_temp_variable = { buy_amount = foreign_bought }
+							if = {
+								limit = {
+									check_variable = { buy_amount > 0 }
+								}
+								#Buying from Local Buildings
+
+								set_temp_variable = { money_temp = industries_money^ind } #Can theoretically be infinite
+								set_temp_variable = { good_max_temp = resource_stockpile^industries_input_2_resource^ind }
+								set_temp_variable = { good_price_temp = resource_price^industries_input_2_resource^ind }
+								set_temp_variable = { good_demand_temp = resource_demand^industries_input_2_resource^ind }
+								set_temp_variable = { good_supply_temp = resource_supply^industries_input_2_resource^ind }
+
+								shopping_algorithm_adjusted = yes
+
+								#Resolve
+								add_to_variable = { resource_sold^industries_input_2_resource^ind = buy_amount }
+								add_to_variable = { resource_sold_value^industries_input_2_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_input_2_resource^ind = buy_amount }
+
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_input^ind = cost_temp }
+								add_to_variable = { industries_input_2_expenses^ind = cost_temp }
+								add_to_variable = { industries_input_2_fulfilled^ind = buy_amount }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { industries_input_3_demand^ind > 0 }
+							}
+							set_temp_variable = { foreign_bought = 0 }
+							if = {
+								limit = {
+									check_variable = { resource_bought^industries_input_3_resource^ind > 0 }
+								}
+								#Buying from Out-of-State Sources
+								set_temp_variable = { buy_amount = industries_input_3_demand^ind }
+
+								set_temp_variable = { actual_buy_amount = buy_amount }
+								multiply_temp_variable = { actual_buy_amount = resource_supply^industries_input_3_resource^ind }
+								divide_temp_variable = { actual_buy_amount = resource_demand^industries_input_3_resource^ind }
+								if = {
+									limit = {
+										check_variable = { actual_buy_amount < buy_amount }
+									}
+									set_temp_variable = { buy_amount = actual_buy_amount }
+								}
+
+								clamp_temp_variable = {
+									var = buy_amount
+									max = resource_bought^industries_input_3_resource^ind
+								}
+								clamp_temp_variable = {
+									var = buy_amount
+									min = 0
+								}
+								
+								set_temp_variable = { cost_temp = resource_bought_value^industries_input_3_resource^ind }
+								if = {
+									limit = {
+										check_variable = { buy_amount < resource_bought^industries_input_3_resource^ind }
+									}
+									multiply_temp_variable = { cost_temp = buy_amount }
+									divide_temp_variable = { cost_temp = resource_bought^industries_input_3_resource^ind }
+								}
+								
+								#Resolve
+								subtract_from_variable = { resource_bought^industries_input_3_resource^ind = buy_amount }
+								subtract_from_variable = { resource_bought_value^industries_input_3_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_input_3_resource^ind = buy_amount }
+								
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_input^ind = cost_temp }
+								add_to_variable = { industries_input_3_expenses^ind = cost_temp }
+								add_to_variable = { industries_input_3_fulfilled^ind = buy_amount }
+								add_to_variable = { foreign_bought = buy_amount }
+							}
+							
+							set_temp_variable = { buy_amount = industries_input_3_demand^ind }
+							subtract_from_temp_variable = { buy_amount = foreign_bought }
+							if = {
+								limit = {
+									check_variable = { buy_amount > 0 }
+								}
+								#Buying from Local Buildings
+
+								set_temp_variable = { money_temp = industries_money^ind } #Can theoretically be infinite
+								set_temp_variable = { good_max_temp = resource_stockpile^industries_input_3_resource^ind }
+								set_temp_variable = { good_price_temp = resource_price^industries_input_3_resource^ind }
+								set_temp_variable = { good_demand_temp = resource_demand^industries_input_3_resource^ind }
+								set_temp_variable = { good_supply_temp = resource_supply^industries_input_3_resource^ind }
+
+								shopping_algorithm_adjusted = yes
+
+								#Resolve
+								add_to_variable = { resource_sold^industries_input_3_resource^ind = buy_amount }
+								add_to_variable = { resource_sold_value^industries_input_3_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_input_3_resource^ind = buy_amount }
+
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_input^ind = cost_temp }
+								add_to_variable = { industries_input_3_expenses^ind = cost_temp }
+								add_to_variable = { industries_input_3_fulfilled^ind = buy_amount }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { industries_input_4_demand^ind > 0 }
+							}
+							set_temp_variable = { foreign_bought = 0 }
+							if = {
+								limit = {
+									check_variable = { resource_bought^industries_input_4_resource^ind > 0 }
+								}
+								#Buying from Out-of-State Sources
+								set_temp_variable = { buy_amount = industries_input_4_demand^ind }
+
+								set_temp_variable = { actual_buy_amount = buy_amount }
+								multiply_temp_variable = { actual_buy_amount = resource_supply^industries_input_4_resource^ind }
+								divide_temp_variable = { actual_buy_amount = resource_demand^industries_input_4_resource^ind }
+								if = {
+									limit = {
+										check_variable = { actual_buy_amount < buy_amount }
+									}
+									set_temp_variable = { buy_amount = actual_buy_amount }
+								}
+
+								clamp_temp_variable = {
+									var = buy_amount
+									max = resource_bought^industries_input_4_resource^ind
+								}
+								clamp_temp_variable = {
+									var = buy_amount
+									min = 0
+								}
+								
+								set_temp_variable = { cost_temp = resource_bought_value^industries_input_4_resource^ind }
+								if = {
+									limit = {
+										check_variable = { buy_amount < resource_bought^industries_input_4_resource^ind }
+									}
+									multiply_temp_variable = { cost_temp = buy_amount }
+									divide_temp_variable = { cost_temp = resource_bought^industries_input_4_resource^ind }
+								}
+								
+								#Resolve
+								subtract_from_variable = { resource_bought^industries_input_4_resource^ind = buy_amount }
+								subtract_from_variable = { resource_bought_value^industries_input_4_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_input_4_resource^ind = buy_amount }
+								
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_input^ind = cost_temp }
+								add_to_variable = { industries_input_4_expenses^ind = cost_temp }
+								add_to_variable = { industries_input_4_fulfilled^ind = buy_amount }
+								add_to_variable = { foreign_bought = buy_amount }
+							}
+							
+							set_temp_variable = { buy_amount = industries_input_4_demand^ind }
+							subtract_from_temp_variable = { buy_amount = foreign_bought }
+							if = {
+								limit = {
+									check_variable = { buy_amount > 0 }
+								}
+								#Buying from Local Buildings
+
+								set_temp_variable = { money_temp = industries_money^ind } #Can theoretically be infinite
+								set_temp_variable = { good_max_temp = resource_stockpile^industries_input_4_resource^ind }
+								set_temp_variable = { good_price_temp = resource_price^industries_input_4_resource^ind }
+								set_temp_variable = { good_demand_temp = resource_demand^industries_input_4_resource^ind }
+								set_temp_variable = { good_supply_temp = resource_supply^industries_input_4_resource^ind }
+
+								shopping_algorithm_adjusted = yes
+
+								#Resolve
+								add_to_variable = { resource_sold^industries_input_4_resource^ind = buy_amount }
+								add_to_variable = { resource_sold_value^industries_input_4_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_input_4_resource^ind = buy_amount }
+
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_input^ind = cost_temp }
+								add_to_variable = { industries_input_4_expenses^ind = cost_temp }
+								add_to_variable = { industries_input_4_fulfilled^ind = buy_amount }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { industries_input_5_demand^ind > 0 }
+							}
+							set_temp_variable = { foreign_bought = 0 }
+							if = {
+								limit = {
+									check_variable = { resource_bought^industries_input_5_resource^ind > 0 }
+								}
+								#Buying from Out-of-State Sources
+								set_temp_variable = { buy_amount = industries_input_5_demand^ind }
+
+								set_temp_variable = { actual_buy_amount = buy_amount }
+								multiply_temp_variable = { actual_buy_amount = resource_supply^industries_input_5_resource^ind }
+								divide_temp_variable = { actual_buy_amount = resource_demand^industries_input_5_resource^ind }
+								if = {
+									limit = {
+										check_variable = { actual_buy_amount < buy_amount }
+									}
+									set_temp_variable = { buy_amount = actual_buy_amount }
+								}
+
+								clamp_temp_variable = {
+									var = buy_amount
+									max = resource_bought^industries_input_5_resource^ind
+								}
+								clamp_temp_variable = {
+									var = buy_amount
+									min = 0
+								}
+								
+								set_temp_variable = { cost_temp = resource_bought_value^industries_input_5_resource^ind }
+								if = {
+									limit = {
+										check_variable = { buy_amount < resource_bought^industries_input_5_resource^ind }
+									}
+									multiply_temp_variable = { cost_temp = buy_amount }
+									divide_temp_variable = { cost_temp = resource_bought^industries_input_5_resource^ind }
+								}
+								
+								#Resolve
+								subtract_from_variable = { resource_bought^industries_input_5_resource^ind = buy_amount }
+								subtract_from_variable = { resource_bought_value^industries_input_5_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_input_5_resource^ind = buy_amount }
+								
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_input^ind = cost_temp }
+								add_to_variable = { industries_input_5_expenses^ind = cost_temp }
+								add_to_variable = { industries_input_5_fulfilled^ind = buy_amount }
+								add_to_variable = { foreign_bought = buy_amount }
+							}
+							
+							set_temp_variable = { buy_amount = industries_input_5_demand^ind }
+							subtract_from_temp_variable = { buy_amount = foreign_bought }
+							if = {
+								limit = {
+									check_variable = { buy_amount > 0 }
+								}
+								#Buying from Local Buildings
+
+								set_temp_variable = { money_temp = industries_money^ind } #Can theoretically be infinite
+								set_temp_variable = { good_max_temp = resource_stockpile^industries_input_5_resource^ind }
+								set_temp_variable = { good_price_temp = resource_price^industries_input_5_resource^ind }
+								set_temp_variable = { good_demand_temp = resource_demand^industries_input_5_resource^ind }
+								set_temp_variable = { good_supply_temp = resource_supply^industries_input_5_resource^ind }
+
+								shopping_algorithm_adjusted = yes
+
+								#Resolve
+								add_to_variable = { resource_sold^industries_input_5_resource^ind = buy_amount }
+								add_to_variable = { resource_sold_value^industries_input_5_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_input_5_resource^ind = buy_amount }
+
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_input^ind = cost_temp }
+								add_to_variable = { industries_input_5_expenses^ind = cost_temp }
+								add_to_variable = { industries_input_5_fulfilled^ind = buy_amount }
+							}
+						}
+					#
+					#Maintenance
+						if = {
+							limit = {
+								check_variable = { industries_maintenance_1_demand^ind > 0 }
+							}
+							set_temp_variable = { foreign_bought = 0 }
+							if = {
+								limit = {
+									check_variable = { resource_bought^industries_maintenance_1_resource^ind > 0 }
+								}
+								#Buying from Out-of-State Sources
+								set_temp_variable = { buy_amount = industries_maintenance_1_demand^ind }
+
+								set_temp_variable = { actual_buy_amount = buy_amount }
+								multiply_temp_variable = { actual_buy_amount = resource_supply^industries_maintenance_1_resource^ind }
+								divide_temp_variable = { actual_buy_amount = resource_demand^industries_maintenance_1_resource^ind }
+								if = {
+									limit = {
+										check_variable = { actual_buy_amount < buy_amount }
+									}
+									set_temp_variable = { buy_amount = actual_buy_amount }
+								}
+
+								clamp_temp_variable = {
+									var = buy_amount
+									max = resource_bought^industries_maintenance_1_resource^ind
+								}
+								clamp_temp_variable = {
+									var = buy_amount
+									min = 0
+								}
+								
+								set_temp_variable = { cost_temp = resource_bought_value^industries_maintenance_1_resource^ind }
+								if = {
+									limit = {
+										check_variable = { buy_amount < resource_bought^industries_maintenance_1_resource^ind }
+									}
+									multiply_temp_variable = { cost_temp = buy_amount }
+									divide_temp_variable = { cost_temp = resource_bought^industries_maintenance_1_resource^ind }
+								}
+								
+								#Resolve
+								subtract_from_variable = { resource_bought^industries_maintenance_1_resource^ind = buy_amount }
+								subtract_from_variable = { resource_bought_value^industries_maintenance_1_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_maintenance_1_resource^ind = buy_amount }
+								
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_maintenance^ind = cost_temp }
+								add_to_variable = { industries_maintenance_1_expenses^ind = cost_temp }
+								add_to_variable = { industries_maintenance_1_fulfilled^ind = buy_amount }
+								add_to_variable = { foreign_bought = buy_amount }
+							}
+							
+							set_temp_variable = { buy_amount = industries_maintenance_1_demand^ind }
+							subtract_from_temp_variable = { buy_amount = foreign_bought }
+							if = {
+								limit = {
+									check_variable = { buy_amount > 0 }
+								}
+								#Buying from Local Buildings
+
+								set_temp_variable = { money_temp = industries_money^ind } #Can theoretically be infinite
+								set_temp_variable = { good_max_temp = resource_stockpile^industries_maintenance_1_resource^ind }
+								set_temp_variable = { good_price_temp = resource_price^industries_maintenance_1_resource^ind }
+								set_temp_variable = { good_demand_temp = resource_demand^industries_maintenance_1_resource^ind }
+								set_temp_variable = { good_supply_temp = resource_supply^industries_maintenance_1_resource^ind }
+
+								shopping_algorithm_adjusted = yes
+
+								#Resolve
+								add_to_variable = { resource_sold^industries_maintenance_1_resource^ind = buy_amount }
+								add_to_variable = { resource_sold_value^industries_maintenance_1_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_maintenance_1_resource^ind = buy_amount }
+
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_maintenance^ind = cost_temp }
+								add_to_variable = { industries_maintenance_1_expenses^ind = cost_temp }
+								add_to_variable = { industries_maintenance_1_fulfilled^ind = buy_amount }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { industries_maintenance_2_demand^ind > 0 }
+							}
+							set_temp_variable = { foreign_bought = 0 }
+							if = {
+								limit = {
+									check_variable = { resource_bought^industries_maintenance_2_resource^ind > 0 }
+								}
+								#Buying from Out-of-State Sources
+								set_temp_variable = { buy_amount = industries_maintenance_2_demand^ind }
+
+								set_temp_variable = { actual_buy_amount = buy_amount }
+								multiply_temp_variable = { actual_buy_amount = resource_supply^industries_maintenance_2_resource^ind }
+								divide_temp_variable = { actual_buy_amount = resource_demand^industries_maintenance_2_resource^ind }
+								if = {
+									limit = {
+										check_variable = { actual_buy_amount < buy_amount }
+									}
+									set_temp_variable = { buy_amount = actual_buy_amount }
+								}
+
+								clamp_temp_variable = {
+									var = buy_amount
+									max = resource_bought^industries_maintenance_2_resource^ind
+								}
+								clamp_temp_variable = {
+									var = buy_amount
+									min = 0
+								}
+								
+								set_temp_variable = { cost_temp = resource_bought_value^industries_maintenance_2_resource^ind }
+								if = {
+									limit = {
+										check_variable = { buy_amount < resource_bought^industries_maintenance_2_resource^ind }
+									}
+									multiply_temp_variable = { cost_temp = buy_amount }
+									divide_temp_variable = { cost_temp = resource_bought^industries_maintenance_2_resource^ind }
+								}
+								
+								#Resolve
+								subtract_from_variable = { resource_bought^industries_maintenance_2_resource^ind = buy_amount }
+								subtract_from_variable = { resource_bought_value^industries_maintenance_2_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_maintenance_2_resource^ind = buy_amount }
+								
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_maintenance^ind = cost_temp }
+								add_to_variable = { industries_maintenance_2_expenses^ind = cost_temp }
+								add_to_variable = { industries_maintenance_2_fulfilled^ind = buy_amount }
+								add_to_variable = { foreign_bought = buy_amount }
+							}
+							
+							set_temp_variable = { buy_amount = industries_maintenance_2_demand^ind }
+							subtract_from_temp_variable = { buy_amount = foreign_bought }
+							if = {
+								limit = {
+									check_variable = { buy_amount > 0 }
+								}
+								#Buying from Local Buildings
+
+								set_temp_variable = { money_temp = industries_money^ind } #Can theoretically be infinite
+								set_temp_variable = { good_max_temp = resource_stockpile^industries_maintenance_2_resource^ind }
+								set_temp_variable = { good_price_temp = resource_price^industries_maintenance_2_resource^ind }
+								set_temp_variable = { good_demand_temp = resource_demand^industries_maintenance_2_resource^ind }
+								set_temp_variable = { good_supply_temp = resource_supply^industries_maintenance_2_resource^ind }
+
+								shopping_algorithm_adjusted = yes
+
+								#Resolve
+								add_to_variable = { resource_sold^industries_maintenance_2_resource^ind = buy_amount }
+								add_to_variable = { resource_sold_value^industries_maintenance_2_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_maintenance_2_resource^ind = buy_amount }
+
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_maintenance^ind = cost_temp }
+								add_to_variable = { industries_maintenance_2_expenses^ind = cost_temp }
+								add_to_variable = { industries_maintenance_2_fulfilled^ind = buy_amount }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { industries_maintenance_3_demand^ind > 0 }
+							}
+							set_temp_variable = { foreign_bought = 0 }
+							if = {
+								limit = {
+									check_variable = { resource_bought^industries_maintenance_3_resource^ind > 0 }
+								}
+								#Buying from Out-of-State Sources
+								set_temp_variable = { buy_amount = industries_maintenance_3_demand^ind }
+
+								set_temp_variable = { actual_buy_amount = buy_amount }
+								multiply_temp_variable = { actual_buy_amount = resource_supply^industries_maintenance_3_resource^ind }
+								divide_temp_variable = { actual_buy_amount = resource_demand^industries_maintenance_3_resource^ind }
+								if = {
+									limit = {
+										check_variable = { actual_buy_amount < buy_amount }
+									}
+									set_temp_variable = { buy_amount = actual_buy_amount }
+								}
+
+								clamp_temp_variable = {
+									var = buy_amount
+									max = resource_bought^industries_maintenance_3_resource^ind
+								}
+								clamp_temp_variable = {
+									var = buy_amount
+									min = 0
+								}
+								
+								set_temp_variable = { cost_temp = resource_bought_value^industries_maintenance_3_resource^ind }
+								if = {
+									limit = {
+										check_variable = { buy_amount < resource_bought^industries_maintenance_3_resource^ind }
+									}
+									multiply_temp_variable = { cost_temp = buy_amount }
+									divide_temp_variable = { cost_temp = resource_bought^industries_maintenance_3_resource^ind }
+								}
+								
+								#Resolve
+								subtract_from_variable = { resource_bought^industries_maintenance_3_resource^ind = buy_amount }
+								subtract_from_variable = { resource_bought_value^industries_maintenance_3_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_maintenance_3_resource^ind = buy_amount }
+								
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_maintenance^ind = cost_temp }
+								add_to_variable = { industries_maintenance_3_expenses^ind = cost_temp }
+								add_to_variable = { industries_maintenance_3_fulfilled^ind = buy_amount }
+								add_to_variable = { foreign_bought = buy_amount }
+							}
+							
+							set_temp_variable = { buy_amount = industries_maintenance_3_demand^ind }
+							subtract_from_temp_variable = { buy_amount = foreign_bought }
+							if = {
+								limit = {
+									check_variable = { buy_amount > 0 }
+								}
+								#Buying from Local Buildings
+
+								set_temp_variable = { money_temp = industries_money^ind } #Can theoretically be infinite
+								set_temp_variable = { good_max_temp = resource_stockpile^industries_maintenance_3_resource^ind }
+								set_temp_variable = { good_price_temp = resource_price^industries_maintenance_3_resource^ind }
+								set_temp_variable = { good_demand_temp = resource_demand^industries_maintenance_3_resource^ind }
+								set_temp_variable = { good_supply_temp = resource_supply^industries_maintenance_3_resource^ind }
+
+								shopping_algorithm_adjusted = yes
+
+								#Resolve
+								add_to_variable = { resource_sold^industries_maintenance_3_resource^ind = buy_amount }
+								add_to_variable = { resource_sold_value^industries_maintenance_3_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_maintenance_3_resource^ind = buy_amount }
+
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_maintenance^ind = cost_temp }
+								add_to_variable = { industries_maintenance_3_expenses^ind = cost_temp }
+								add_to_variable = { industries_maintenance_3_fulfilled^ind = buy_amount }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { industries_maintenance_4_demand^ind > 0 }
+							}
+							set_temp_variable = { foreign_bought = 0 }
+							if = {
+								limit = {
+									check_variable = { resource_bought^industries_maintenance_4_resource^ind > 0 }
+								}
+								#Buying from Out-of-State Sources
+								set_temp_variable = { buy_amount = industries_maintenance_4_demand^ind }
+
+								set_temp_variable = { actual_buy_amount = buy_amount }
+								multiply_temp_variable = { actual_buy_amount = resource_supply^industries_maintenance_4_resource^ind }
+								divide_temp_variable = { actual_buy_amount = resource_demand^industries_maintenance_4_resource^ind }
+								if = {
+									limit = {
+										check_variable = { actual_buy_amount < buy_amount }
+									}
+									set_temp_variable = { buy_amount = actual_buy_amount }
+								}
+
+								clamp_temp_variable = {
+									var = buy_amount
+									max = resource_bought^industries_maintenance_4_resource^ind
+								}
+								clamp_temp_variable = {
+									var = buy_amount
+									min = 0
+								}
+								
+								set_temp_variable = { cost_temp = resource_bought_value^industries_maintenance_4_resource^ind }
+								if = {
+									limit = {
+										check_variable = { buy_amount < resource_bought^industries_maintenance_4_resource^ind }
+									}
+									multiply_temp_variable = { cost_temp = buy_amount }
+									divide_temp_variable = { cost_temp = resource_bought^industries_maintenance_4_resource^ind }
+								}
+								
+								#Resolve
+								subtract_from_variable = { resource_bought^industries_maintenance_4_resource^ind = buy_amount }
+								subtract_from_variable = { resource_bought_value^industries_maintenance_4_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_maintenance_4_resource^ind = buy_amount }
+								
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_maintenance^ind = cost_temp }
+								add_to_variable = { industries_maintenance_4_expenses^ind = cost_temp }
+								add_to_variable = { industries_maintenance_4_fulfilled^ind = buy_amount }
+								add_to_variable = { foreign_bought = buy_amount }
+							}
+							
+							set_temp_variable = { buy_amount = industries_maintenance_4_demand^ind }
+							subtract_from_temp_variable = { buy_amount = foreign_bought }
+							if = {
+								limit = {
+									check_variable = { buy_amount > 0 }
+								}
+								#Buying from Local Buildings
+
+								set_temp_variable = { money_temp = industries_money^ind } #Can theoretically be infinite
+								set_temp_variable = { good_max_temp = resource_stockpile^industries_maintenance_4_resource^ind }
+								set_temp_variable = { good_price_temp = resource_price^industries_maintenance_4_resource^ind }
+								set_temp_variable = { good_demand_temp = resource_demand^industries_maintenance_4_resource^ind }
+								set_temp_variable = { good_supply_temp = resource_supply^industries_maintenance_4_resource^ind }
+
+								shopping_algorithm_adjusted = yes
+
+								#Resolve
+								add_to_variable = { resource_sold^industries_maintenance_4_resource^ind = buy_amount }
+								add_to_variable = { resource_sold_value^industries_maintenance_4_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_maintenance_4_resource^ind = buy_amount }
+
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_maintenance^ind = cost_temp }
+								add_to_variable = { industries_maintenance_4_expenses^ind = cost_temp }
+								add_to_variable = { industries_maintenance_4_fulfilled^ind = buy_amount }
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { industries_maintenance_5_demand^ind > 0 }
+							}
+							set_temp_variable = { foreign_bought = 0 }
+							if = {
+								limit = {
+									check_variable = { resource_bought^industries_maintenance_5_resource^ind > 0 }
+								}
+								#Buying from Out-of-State Sources
+								set_temp_variable = { buy_amount = industries_maintenance_5_demand^ind }
+
+								set_temp_variable = { actual_buy_amount = buy_amount }
+								multiply_temp_variable = { actual_buy_amount = resource_supply^industries_maintenance_5_resource^ind }
+								divide_temp_variable = { actual_buy_amount = resource_demand^industries_maintenance_5_resource^ind }
+								if = {
+									limit = {
+										check_variable = { actual_buy_amount < buy_amount }
+									}
+									set_temp_variable = { buy_amount = actual_buy_amount }
+								}
+
+								clamp_temp_variable = {
+									var = buy_amount
+									max = resource_bought^industries_maintenance_5_resource^ind
+								}
+								clamp_temp_variable = {
+									var = buy_amount
+									min = 0
+								}
+								
+								set_temp_variable = { cost_temp = resource_bought_value^industries_maintenance_5_resource^ind }
+								if = {
+									limit = {
+										check_variable = { buy_amount < resource_bought^industries_maintenance_5_resource^ind }
+									}
+									multiply_temp_variable = { cost_temp = buy_amount }
+									divide_temp_variable = { cost_temp = resource_bought^industries_maintenance_5_resource^ind }
+								}
+								
+								#Resolve
+								subtract_from_variable = { resource_bought^industries_maintenance_5_resource^ind = buy_amount }
+								subtract_from_variable = { resource_bought_value^industries_maintenance_5_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_maintenance_5_resource^ind = buy_amount }
+								
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_maintenance^ind = cost_temp }
+								add_to_variable = { industries_maintenance_5_expenses^ind = cost_temp }
+								add_to_variable = { industries_maintenance_5_fulfilled^ind = buy_amount }
+								add_to_variable = { foreign_bought = buy_amount }
+							}
+							
+							set_temp_variable = { buy_amount = industries_maintenance_5_demand^ind }
+							subtract_from_temp_variable = { buy_amount = foreign_bought }
+							if = {
+								limit = {
+									check_variable = { buy_amount > 0 }
+								}
+								#Buying from Local Buildings
+
+								set_temp_variable = { money_temp = industries_money^ind } #Can theoretically be infinite
+								set_temp_variable = { good_max_temp = resource_stockpile^industries_maintenance_5_resource^ind }
+								set_temp_variable = { good_price_temp = resource_price^industries_maintenance_5_resource^ind }
+								set_temp_variable = { good_demand_temp = resource_demand^industries_maintenance_5_resource^ind }
+								set_temp_variable = { good_supply_temp = resource_supply^industries_maintenance_5_resource^ind }
+
+								shopping_algorithm_adjusted = yes
+
+								#Resolve
+								add_to_variable = { resource_sold^industries_maintenance_5_resource^ind = buy_amount }
+								add_to_variable = { resource_sold_value^industries_maintenance_5_resource^ind = cost_temp }
+								subtract_from_variable = { resource_stockpile^industries_maintenance_5_resource^ind = buy_amount }
+
+								subtract_from_variable = { industries_money^ind = cost_temp }
+								add_to_variable = { industries_expenses_maintenance^ind = cost_temp }
+								add_to_variable = { industries_maintenance_5_expenses^ind = cost_temp }
+								add_to_variable = { industries_maintenance_5_fulfilled^ind = buy_amount }
+							}
+						}
+					#
+				}
+			#
+			#Pops Shopping
+				for_each_loop = {
+					array = pops_needs_resource
+					value = resource_type
+					index = need
+					break = shopping_break
+
+					if = {
+						limit = {
+							check_variable = { pops_needs_demand^need > 0 }
+						}
+						set_temp_variable = { foreign_bought = 0 }
+						if = {
+							limit = {
+								check_variable = { resource_bought^resource_type > 0 }
+							}
+							#Buying from Out-of-State Sources
+							set_temp_variable = { buy_amount = pops_needs_demand^need }
+
+							set_temp_variable = { actual_buy_amount = buy_amount }
+							multiply_temp_variable = { actual_buy_amount = resource_supply^resource_type }
+							divide_temp_variable = { actual_buy_amount = resource_demand^resource_type }
+							if = {
+								limit = {
+									check_variable = { actual_buy_amount < buy_amount }
+								}
+								set_temp_variable = { buy_amount = actual_buy_amount }
+							}
+
+							clamp_temp_variable = {
+								var = buy_amount
+								max = resource_bought^resource_type
+							}
+							clamp_temp_variable = {
+								var = buy_amount
+								min = 0
+							}
+							
+							set_temp_variable = { cost_temp = resource_bought_value^resource_type }
+							if = {
+								limit = {
+									check_variable = { buy_amount < resource_bought^resource_type }
+								}
+								multiply_temp_variable = { cost_temp = buy_amount }
+								divide_temp_variable = { cost_temp = resource_bought^resource_type }
+							}
+							
+							#Resolve
+							subtract_from_variable = { resource_bought^resource_type = buy_amount }
+							subtract_from_variable = { resource_bought_value^resource_type = cost_temp }
+							subtract_from_variable = { resource_stockpile^resource_type = buy_amount }
+
+							subtract_from_variable = { pops_money = cost_temp }
+							add_to_variable = { pops_goods_spending = cost_temp }
+							add_to_variable = { pops_needs_fulfilled^need = buy_amount }
+							add_to_variable = { foreign_bought = buy_amount }
+						}
+						
+						set_temp_variable = { buy_amount = pops_needs_demand^need }
+						subtract_from_temp_variable = { buy_amount = foreign_bought }
+						if = {
+							limit = {
+								check_variable = { buy_amount > 0 }
+							}
+							#Buying from Local Buildings
+
+							set_temp_variable = { money_temp = pops_money } #Can theoretically be infinite
+							set_temp_variable = { good_max_temp = resource_stockpile^resource_type }
+							set_temp_variable = { good_price_temp = resource_price^resource_type }
+							set_temp_variable = { good_demand_temp = resource_demand^resource_type }
+							set_temp_variable = { good_supply_temp = resource_supply^resource_type }
+
+							shopping_algorithm_adjusted = yes
+
+							#Resolve
+							add_to_variable = { resource_sold^resource_type = buy_amount }
+							add_to_variable = { resource_sold_value^resource_type = cost_temp }
+							subtract_from_variable = { resource_stockpile^resource_type = buy_amount }
+
+							subtract_from_variable = { pops_money = cost_temp }
+							add_to_variable = { pops_goods_spending = cost_temp }
+							add_to_variable = { pops_needs_fulfilled^need = buy_amount }
+						}
+					}
+				}
+			#
+
+			#Resolve
+				for_each_loop = {
+					array = industries
+					value = ind_type_temp
+					index = ind
+					break = ind_break
+
+					if = {
+						limit = {
+							check_variable = { resource_sold^industries_resource^ind > 0 }
+						}
+						
+						if = {
+							limit = {
+								NOT = { check_variable = { resource_sold^industries_resource^ind > industries_stockpile^ind } }
+							}
+							subtract_from_variable = { industries_stockpile^ind = resource_sold^industries_resource^ind }
+							add_to_variable = { industries_goods_sold^ind = resource_sold^industries_resource^ind }
+							add_to_variable = { industries_revenue_goods^ind = resource_sold_value^industries_resource^ind }
+							add_to_variable = { industries_money^ind = resource_sold_value^industries_resource^ind }
+							set_variable = { resource_sold_value^industries_resource^ind = 0 }
+							set_variable = { resource_sold^industries_resource^ind = 0 }
+						}
+						else = {
+							subtract_from_variable = { resource_sold^industries_resource^ind = industries_stockpile^ind }
+							add_to_variable = { industries_goods_sold^ind = industries_stockpile^ind }
+							set_temp_variable = { cost_temp = industries_stockpile^ind }
+							multiply_temp_variable = { cost_temp = resource_price^industries_resource^ind }
+							subtract_from_variable= { resource_sold_value^industries_resource^ind = cost_temp }
+							set_variable = { industries_stockpile^ind = 0 }
+							add_to_variable = { industries_revenue_goods^ind = cost_temp }
+							add_to_variable = { industries_money^ind = cost_temp }
+						}
+					}
+				}
+				for_each_loop = {
+					array = global.resources_array
+					value = r_type
+					subtract_from_variable = { pops_money = resource_bought_value^r_type }
+					set_variable = { resource_bought_value^r_type = 0 }
+					add_to_variable = { pops_money = resource_sold_value^r_type }
+					set_variable = { resource_sold_value^r_type = 0 }
+				}
+			#
+		#
+
+		#Exports & Imports
+			set_variable = { total_exports = 0 }
+			set_variable = { total_imports = 0 }
+			for_each_loop = {
+				array = global.resources_array
+				value = r_type
+				if = {
+					limit = {
+						check_variable = { resource_interstate_trade_value^r_type > 0 }
+					}
+					add_to_variable = { total_exports = resource_interstate_trade_value^r_type }
+				}
+				else = {
+					subtract_from_variable = { total_imports = resource_interstate_trade_value^r_type }
+				}
+			}
+		#
+
+		#Industry Wages & Profit
+			for_each_loop = {
+				array = industries
+				value = ind_type_temp
+				index = ind
+				break = ind_break
+
+				set_temp_variable = { projected_revenue_temp = industries_max_production^ind }
+				multiply_temp_variable = { projected_revenue_temp = resource_price^industries_resource^ind }
+				multiply_temp_variable = { projected_revenue_temp = industries_production_percentage^ind }
+				divide_temp_variable = { projected_revenue_temp = 100 }
+				
+				set_variable = { industries_expenses_payroll^ind = 0 }
+				#Wages
+					if = {
+						limit = {
+							check_variable = { industries_money^ind > 0  }
+						}
+						set_temp_variable = { educated_payroll_temp = industries_employees_educated_amount^ind }
+						multiply_temp_variable = { educated_payroll_temp = global.industry_educated_payroll_expenditure }
+						multiply_temp_variable = { educated_payroll_temp = projected_revenue_temp }
+						divide_temp_variable = { educated_payroll_temp = industries_employees_amount^ind }
+						if = {
+							limit = {
+								check_variable = { educated_payroll_temp > industries_money^ind }
+							}
+							set_temp_variable = { educated_payroll_temp = industries_money^ind }
+							
+							add_to_variable = { industries_expenses_payroll^ind = educated_payroll_temp }
+							add_to_variable = { pops_educated_earnings = educated_payroll_temp }
+							subtract_from_variable = { industries_money^ind = educated_payroll_temp }
+						}
+						else = {
+							add_to_variable = { industries_expenses_payroll^ind = educated_payroll_temp }
+							add_to_variable = { pops_educated_earnings = educated_payroll_temp }
+							subtract_from_variable = { industries_money^ind = educated_payroll_temp }
+
+							set_temp_variable = { skilled_payroll_temp = industries_employees_skilled_amount^ind }
+							multiply_temp_variable = { skilled_payroll_temp = global.industry_skilled_payroll_expenditure }
+							multiply_temp_variable = { skilled_payroll_temp = projected_revenue_temp }
+							divide_temp_variable = { skilled_payroll_temp = industries_employees_amount^ind }
+							if = {
+								limit = {
+									check_variable = { skilled_payroll_temp > industries_money^ind }
+								}
+								set_temp_variable = { skilled_payroll_temp = industries_money^ind }
+								
+								add_to_variable = { industries_expenses_payroll^ind = skilled_payroll_temp }
+								add_to_variable = { pops_skilled_earnings = skilled_payroll_temp }
+								subtract_from_variable = { industries_money^ind = skilled_payroll_temp }
+							}
+							else = {
+								add_to_variable = { industries_expenses_payroll^ind = skilled_payroll_temp }
+								add_to_variable = { pops_skilled_earnings = skilled_payroll_temp }
+								subtract_from_variable = { industries_money^ind = skilled_payroll_temp }
+
+								set_temp_variable = { unskilled_payroll_temp = industries_employees_unskilled_amount^ind }
+								multiply_temp_variable = { unskilled_payroll_temp = global.industry_unskilled_payroll_expenditure }
+								multiply_temp_variable = { unskilled_payroll_temp = projected_revenue_temp }
+								divide_temp_variable = { unskilled_payroll_temp = industries_employees_amount^ind }
+								if = {
+									limit = {
+										check_variable = { unskilled_payroll_temp > industries_money^ind }
+									}
+									set_temp_variable = { unskilled_payroll_temp = industries_money^ind }
+									
+									add_to_variable = { industries_expenses_payroll^ind = unskilled_payroll_temp }
+									add_to_variable = { pops_unskilled_earnings = unskilled_payroll_temp }
+									subtract_from_variable = { industries_money^ind = unskilled_payroll_temp }
+								}
+								add_to_variable = { industries_expenses_payroll^ind = unskilled_payroll_temp }
+								add_to_variable = { pops_unskilled_earnings = unskilled_payroll_temp }
+								subtract_from_variable = { industries_money^ind = unskilled_payroll_temp }
+							}
+						}
+					}
+				#
+				#Profit
+					set_variable = { industries_revenue^ind = industries_revenue_goods^ind }
+
+					set_variable = { industries_expenses^ind = industries_expenses_input^ind }
+					add_to_variable = { industries_expenses^ind = industries_expenses_maintenance^ind }
+					add_to_variable = { industries_expenses^ind = industries_expenses_payroll^ind }
+
+					set_variable = { industries_profit^ind = industries_revenue^ind }
+					subtract_from_variable = { industries_profit^ind = industries_expenses^ind }
+					
+					#Bonuses
+						#Bonuses from Profit
+						if = {
+							limit = {
+								check_variable = { industries_profit^ind > 0 }
+							}
+							set_variable = { industries_expenses_bonuses^ind = industries_profit^ind }
+							multiply_variable = { industries_expenses_bonuses^ind = global.industry_bonuses_percentage }
+
+							subtract_from_variable = { industries_money^ind = industries_expenses_bonuses^ind }
+							add_to_variable = { pops_earnings = industries_expenses_bonuses^ind }
+							add_to_variable = { industries_expenses^ind = industries_expenses_bonuses^ind }
+						}
+						else = {
+							set_variable = { industries_expenses_bonuses^ind = 0 }
+						}
+						
+						#Bonuses from going over the money limit
+						if = {
+							limit = {
+								check_variable = { industries_money^ind > industries_money_limit^ind }
+							}
+							set_temp_variable = { money_limit_bonus_temp = industries_money^ind }
+							subtract_from_temp_variable = { money_limit_bonus_temp = industries_money_limit^ind }
+
+							subtract_from_variable = { industries_money^ind = money_limit_bonus_temp }
+							add_to_variable = { pops_earnings = money_limit_bonus_temp }
+
+							add_to_variable = { industries_expenses^ind = money_limit_bonus_temp }
+							add_to_variable = { industries_expenses_bonuses^ind = money_limit_bonus_temp  }
+						}
+					#
+
+					set_variable = { industries_profit^ind = industries_revenue^ind }
+					subtract_from_variable = { industries_profit^ind = industries_expenses^ind }
+					
+					if = {
+						limit = {
+							check_variable = { industries_revenue^ind > 0 }
+						}
+						set_variable = { industries_profitability^ind = industries_profit^ind }
+						add_to_variable = { industries_profitability^ind = industries_expenses_bonuses^ind }
+						divide_variable = { industries_profitability^ind = industries_revenue^ind }
+					}
+					else = {
+						set_variable = { industries_profitability^ind = -1 }
+					}
+
+					if = { 
+						limit = {
+							check_variable = { industries_expenses^ind > industries_revenue^ind }
+						}
+						multiply_variable = { industries_profit^ind = -1 }
+					}
+				#
+			}
+		#
+
+		#Pop Demographics
+			#pops_demographic_change = yes
+		#
+
+		#Industry Hiring & Firing, GDP
+			# for_each_loop = {
+			# 	array = industries
+			# 	value = ind_type_temp
+			# 	index = ind
+			# 	break = ind_break
+
+			# 	set_temp_variable = { gdp_temp = industries_production^ind }
+			# 	multiply_temp_variable = { gdp_temp = resource_price^industries_resource^ind }
+			# 	add_to_variable = { gdp_amount = gdp_temp }
+				
+			# 	set_temp_variable = { desired_employment_percent = industries_employment_percentage^ind }
+			# 	#Desired Employment Amount
+			# 		#Supply > Demand = SET
+			# 			if = {
+			# 				limit = {
+			# 					check_variable = { resource_supply^industries_resource^ind > resource_demand^industries_resource^ind }
+			# 				}
+			# 				if = {
+			# 					limit = {
+			# 						check_variable = { new_percent_temp < desired_employment_percent }
+			# 					}
+			# 					multiply_temp_variable = { desired_employment_percent = 4 }
+			# 					add_to_temp_variable = { desired_employment_percent = new_percent_temp }
+			# 					divide_temp_variable = { desired_employment_percent = 5 }
+			# 				}
+			# 				subtract_from_temp_variable = { desired_employment_percent = 2 }
+			# 			}
+			# 		#
+			# 		#Demand > Supply = SET
+			# 			else_if = {
+			# 				limit = {
+			# 					check_variable = { resource_demand^industries_resource^ind > resource_supply^industries_resource^ind }
+			# 				}
+			# 				if = {
+			# 					limit = {
+			# 						check_variable = { industries_revenue^ind > industries_expenses^ubd }
+			# 					}
+			# 					set_temp_variable = { new_percent_temp = industries_employment_percentage^ind }
+
+			# 					set_temp_variable = { multiplier_temp = resource_demand^industries_resource^ind }
+			# 					divide_temp_variable = { multiplier_temp = resource_supply^industries_resource^ind }
+			# 					divide_temp_variable = { new_percent_temp = multiplier_temp }
+								
+			# 					if = {
+			# 						limit = {
+			# 							check_variable = { new_percent_temp > desired_employment_percent }
+			# 						}
+			# 						multiply_temp_variable = { desired_employment_percent = 4 }
+			# 						add_to_temp_variable = { desired_employment_percent = new_percent_temp }
+			# 						divide_temp_variable = { desired_employment_percent = 5 }
+			# 					}
+			# 				}
+			# 				add_to_temp_variable = { desired_employment_percent = 2 }
+			# 			}
+			# 		#
+			# 		#Production % < 100 = SUBTRACT
+			# 			if = {
+			# 				limit = {
+			# 					check_variable = { industries_production_percentage^ind < 100 } 
+			# 				}
+			# 				subtract_from_temp_variable = { desired_employment_percent = 5 }
+			# 			}
+			# 		#
+			# 		#Payroll > Revenue = SUBTRACT
+			# 			if = {
+			# 				limit = {
+			# 					check_variable = { industries_revenue^ind > 0 }
+			# 					check_variable = { industries_expenses_payroll^ind > industries_revenue^ind } 
+			# 				}
+			# 				subtract_from_temp_variable = { desired_employment_percent = 5 }
+			# 			}
+			# 		#
+			# 		#Profitability > 0 = ADD
+			# 			if = {
+			# 				limit = {
+			# 					check_variable = { industries_profitability^ind > 0 } 
+			# 				}
+			# 				add_to_temp_variable = { desired_employment_percent = 5 }
+			# 				if = {
+			# 					limit = {
+			# 						check_variable = { industries_profitability^ind > 0.25 } 
+			# 					}
+			# 					add_to_temp_variable = { desired_employment_percent = 5 }
+			# 					if = {
+			# 						limit = {
+			# 							check_variable = { industries_profitability^ind > 0.5 } 
+			# 						}
+			# 						add_to_temp_variable = { desired_employment_percent = 5 }
+			# 					}
+			# 				}
+			# 			}
+			# 		#
+
+			# 		#Desired Employment < 5 = ADD
+			# 			if = {
+			# 				limit = {
+			# 					check_variable = { desired_employment_percent < 5 } 
+			# 				}
+			# 				set_temp_variable = { desired_employment_percent = 5 }
+			# 			}
+			# 		#
+			# 	#
+
+			# 	#Adjusting Employment Level
+			# 		clamp_temp_variable = {
+			# 			var = desired_employment_percent
+			# 			max = 100
+			# 			min = 0
+			# 		}
+			# 		set_temp_variable = { total_change_amount_temp = desired_employment_percent }
+			# 		subtract_from_temp_variable = { total_change_amount_temp = industries_employment_percentage^ind }
+			# 		if = {
+			# 			limit = {
+			# 				NOT = { check_variable = { total_change_amount_temp = 0 } }
+			# 			}
+
+			# 			multiply_temp_variable = { total_change_amount_temp = industries_jobs_amount^ind }
+			# 			divide_temp_variable = { total_change_amount_temp = 100 }
+
+			# 			set_temp_variable = { new_employment_level = industries_employment^ind }
+			# 			add_to_temp_variable = { new_employment_level = total_change_amount_temp }
+			# 			if = {
+			# 				limit = {
+			# 					check_variable = { new_employment_level < 0 }
+			# 				}
+			# 				add_to_temp_variable = { total_change_amount_temp = new_employment_level }
+			# 			}
+			# 			else_if = {
+			# 				limit = {
+			# 					check_variable = { new_employment_level > industries_jobs_amount^ind }
+			# 				}
+			# 				subtract_from_temp_variable = { new_employment_level = industries_jobs_amount^ind }
+			# 				subtract_from_temp_variable = { total_change_amount_temp = new_employment_level }
+			# 			}
+
+			# 			#Hiring
+			# 				if = {
+			# 					limit = {
+			# 						check_variable = { total_change_amount_temp > 0 }
+			# 					}
+			# 					#Educated
+			# 						if = {
+			# 							limit = {
+			# 								is_in_array = { global.educated_industries_array = ind_type_temp }
+			# 								check_variable = { educated_unemployed_amount > 0 }
+			# 							}
+			# 							set_temp_variable = { change_amount_temp = total_change_amount_temp }
+			# 							if = {
+			# 								limit = {
+			# 									check_variable = { change_amount_temp > educated_unemployed_amount }
+			# 								}
+			# 								set_temp_variable = { change_amount_temp = educated_unemployed_amount }
+			# 							}
+			# 							add_to_variable = { industries_employees_educated_amount^ind = change_amount_temp }
+			# 							subtract_from_temp_variable = { total_change_amount_temp = change_amount_temp }
+			# 							subtract_from_variable = { educated_unemployed_amount = change_amount_temp }
+			# 						}
+			# 					#
+			# 					#Skilled
+			# 						if = {
+			# 							limit = {
+			# 								is_in_array = { global.skilled_industries_array = ind_type_temp }
+			# 								check_variable = { skilled_unemployed_amount > 0 }
+			# 							}
+			# 							set_temp_variable = { change_amount_temp = total_change_amount_temp }
+			# 							if = {
+			# 								limit = {
+			# 									check_variable = { change_amount_temp > skilled_unemployed_amount }
+			# 								}
+			# 								set_temp_variable = { change_amount_temp = skilled_unemployed_amount }
+			# 							}
+			# 							add_to_variable = { industries_employees_skilled_amount^ind = change_amount_temp }
+			# 							subtract_from_temp_variable = { total_change_amount_temp = change_amount_temp }
+			# 							subtract_from_variable = { skilled_unemployed_amount = change_amount_temp }
+			# 						}
+			# 					#
+			# 					#Unskilled
+			# 						if = {
+			# 							limit = {
+			# 								is_in_array = { global.unskilled_industries_array = ind_type_temp }
+			# 								check_variable = { unskilled_unemployed_amount > 0 }
+			# 							}
+			# 							set_temp_variable = { change_amount_temp = total_change_amount_temp }
+			# 							if = {
+			# 								limit = {
+			# 									check_variable = { change_amount_temp > unskilled_unemployed_amount }
+			# 								}
+			# 								set_temp_variable = { change_amount_temp = unskilled_unemployed_amount }
+			# 							}
+			# 							add_to_variable = { industries_employees_unskilled_amount^ind = change_amount_temp }
+			# 							subtract_from_temp_variable = { total_change_amount_temp = change_amount_temp }
+			# 							subtract_from_variable = { unskilled_unemployed_amount = change_amount_temp }
+			# 						}
+			# 					#
+			# 					#Slaves
+			# 						if = {
+			# 							limit = {
+			# 								is_in_array = { global.slaves_industries_array = ind_type_temp }
+			# 								check_variable = { slaves_unemployed_amount > 0 }
+			# 							}
+			# 							set_temp_variable = { change_amount_temp = total_change_amount_temp }
+			# 							if = {
+			# 								limit = {
+			# 									check_variable = { change_amount_temp > slaves_unemployed_amount }
+			# 								}
+			# 								set_temp_variable = { change_amount_temp = slaves_unemployed_amount }
+			# 							}
+			# 							add_to_variable = { industries_employees_slaves_amount^ind = change_amount_temp }
+			# 							subtract_from_temp_variable = { total_change_amount_temp = change_amount_temp }
+			# 							subtract_from_variable = { slaves_unemployed_amount = change_amount_temp }
+			# 						}
+			# 					#
+			# 				}
+			# 			#
+			# 			#Firing
+			# 				if = {
+			# 					limit = {
+			# 						check_variable = { total_change_amount_temp < 0 }
+			# 					}
+			# 					#Slaves
+			# 						if = {
+			# 							limit = {
+			# 								is_in_array = { global.slaves_industries_array = ind_type_temp }
+			# 								check_variable = { industries_employees_slaves_amount^ind > 0 }
+			# 							}
+			# 							set_temp_variable = { change_amount_temp = total_change_amount_temp }
+			# 							multiply_temp_variable = { change_amount_temp = -1 }
+			# 							if = {
+			# 								limit = {
+			# 									check_variable = { change_amount_temp > industries_employees_slaves_amount^ind }
+			# 								}
+			# 								set_temp_variable = { change_amount_temp = industries_employees_slaves_amount^ind }
+			# 							}
+			# 							subtract_from_variable = { industries_employees_slaves_amount^ind = change_amount_temp }
+			# 							add_to_temp_variable = { total_change_amount_temp = change_amount_temp }
+			# 							add_to_variable = { slaves_unemployed_amount = change_amount_temp }
+			# 						}
+			# 					#
+			# 					#Unskilled
+			# 						if = {
+			# 							limit = {
+			# 								is_in_array = { global.unskilled_industries_array = ind_type_temp }
+			# 								check_variable = { industries_employees_unskilled_amount^ind > 0 }
+			# 							}
+			# 							set_temp_variable = { change_amount_temp = total_change_amount_temp }
+			# 							multiply_temp_variable = { change_amount_temp = -1 }
+			# 							if = {
+			# 								limit = {
+			# 									check_variable = { change_amount_temp > industries_employees_unskilled_amount^ind }
+			# 								}
+			# 								set_temp_variable = { change_amount_temp = industries_employees_unskilled_amount^ind }
+			# 							}
+			# 							subtract_from_variable = { industries_employees_unskilled_amount^ind = change_amount_temp }
+			# 							add_to_temp_variable = { total_change_amount_temp = change_amount_temp }
+			# 							add_to_variable = { unskilled_unemployed_amount = change_amount_temp }
+			# 						}
+			# 					#
+			# 					#Skilled
+			# 						if = {
+			# 							limit = {
+			# 								is_in_array = { global.skilled_industries_array = ind_type_temp }
+			# 								check_variable = { industries_employees_skilled_amount^ind > 0 }
+			# 							}
+			# 							set_temp_variable = { change_amount_temp = total_change_amount_temp }
+			# 							multiply_temp_variable = { change_amount_temp = -1 }
+			# 							if = {
+			# 								limit = {
+			# 									check_variable = { change_amount_temp > industries_employees_skilled_amount^ind }
+			# 								}
+			# 								set_temp_variable = { change_amount_temp = industries_employees_skilled_amount^ind }
+			# 							}
+			# 							subtract_from_variable = { industries_employees_skilled_amount^ind = change_amount_temp }
+			# 							add_to_temp_variable = { total_change_amount_temp = change_amount_temp }
+			# 							add_to_variable = { skilled_unemployed_amount = change_amount_temp }
+			# 						}
+			# 					#
+			# 					#Educated
+			# 						if = {
+			# 							limit = {
+			# 								is_in_array = { global.educated_industries_array = ind_type_temp }
+			# 								check_variable = { industries_employees_educated_amount^ind > 0 }
+			# 							}
+			# 							set_temp_variable = { change_amount_temp = total_change_amount_temp }
+			# 							multiply_temp_variable = { change_amount_temp = -1 }
+			# 							if = {
+			# 								limit = {
+			# 									check_variable = { change_amount_temp > industries_employees_educated_amount^ind }
+			# 								}
+			# 								set_temp_variable = { change_amount_temp = industries_employees_educated_amount^ind }
+			# 							}
+			# 							subtract_from_variable = { industries_employees_educated_amount^ind = change_amount_temp }
+			# 							add_to_temp_variable = { total_change_amount_temp = change_amount_temp }
+			# 							add_to_variable = { educated_unemployed_amount = change_amount_temp }
+			# 						}
+			# 					#
+			# 				}
+			# 			#
+			# 		}
+			# 	#
+			# }
+		#
+		
+		#Pop Life/Daily/Luxury Needs Fulfillment & Cost/Standard of Living
+			set_variable = { pops_life_needs_fulfilled_percentage = 0 }
+			set_temp_variable = { life_needs_amount_temp = 0 }
+			set_variable = { pops_daily_needs_fulfilled_percentage = 0 }
+			set_temp_variable = { daily_needs_amount_temp = 0 }
+			set_variable = { pops_luxury_needs_fulfilled_percentage = 0 }
+			set_temp_variable = { luxury_needs_amount_temp = 0 }
+			set_temp_variable = { total_needs_fulfilled_temp = 0 }
+			for_each_loop = {
+				array = pops_needs_resource
+				value = needs_resource
+				index = needs_index
+
+				add_to_temp_variable = { total_needs_fulfilled_temp = pops_needs_fulfilled^needs_index }
+				if = {
+					limit = {
+						check_variable = { pops_needs_type^needs_index = 1 } #Life
+					}
+					add_to_variable = { pops_life_needs_fulfilled_percentage = pops_needs_fulfilled_percentage^needs_index }
+					add_to_temp_variable = { life_needs_amount_temp = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { pops_needs_type^needs_index = 2 } #Daily
+					}
+					add_to_variable = { pops_daily_needs_fulfilled_percentage = pops_needs_fulfilled_percentage^needs_index }
+					add_to_temp_variable = { daily_needs_amount_temp = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { pops_needs_type^needs_index = 3 } #Luxury
+					}
+					add_to_variable = { pops_luxury_needs_fulfilled_percentage = pops_needs_fulfilled_percentage^needs_index }
+					add_to_temp_variable = { luxury_needs_amount_temp = 1 }
+				}
+			}
+			divide_variable = { pops_life_needs_fulfilled_percentage = life_needs_amount_temp }
+			divide_variable = { pops_daily_needs_fulfilled_percentage = daily_needs_amount_temp }
+			divide_variable = { pops_luxury_needs_fulfilled_percentage = luxury_needs_amount_temp }
+
+			#Frame
+				set_variable = { pops_life_needs_fulfilled_frame = pops_life_needs_fulfilled_percentage }
+				multiply_variable = { pops_life_needs_fulfilled_frame = 10 }
+				round_variable = pops_life_needs_fulfilled_frame
+				add_to_variable = { pops_life_needs_fulfilled_frame = 1 }
+				
+				set_variable = { pops_daily_needs_fulfilled_frame = pops_daily_needs_fulfilled_percentage }
+				multiply_variable = { pops_daily_needs_fulfilled_frame = 10 }
+				round_variable = pops_daily_needs_fulfilled_frame
+				add_to_variable = { pops_daily_needs_fulfilled_frame = 1 }
+				
+				set_variable = { pops_luxury_needs_fulfilled_frame = pops_luxury_needs_fulfilled_percentage }
+				multiply_variable = { pops_luxury_needs_fulfilled_frame = 10 }
+				round_variable = pops_luxury_needs_fulfilled_frame
+				add_to_variable = { pops_luxury_needs_fulfilled_frame = 1 }
+			#
+
+			#Standard of Living
+				set_temp_variable = { sol_temp = pops_life_needs_fulfilled_percentage }
+				add_to_temp_variable = { sol_temp = pops_daily_needs_fulfilled_percentage }
+				add_to_temp_variable = { sol_temp = pops_daily_needs_fulfilled_percentage }
+				add_to_temp_variable = { sol_temp = pops_luxury_needs_fulfilled_percentage }
+				add_to_temp_variable = { sol_temp = pops_luxury_needs_fulfilled_percentage }
+				add_to_temp_variable = { sol_temp = pops_luxury_needs_fulfilled_percentage }
+				divide_temp_variable = { sol_temp = 0.06 }
+
+				add_to_array = { 
+					array = pops_standard_of_living
+					value = sol_temp
+					index = 0
+				}
+				if = {
+					limit = {
+						check_variable = { pops_standard_of_living^num > 25 }
+					}
+					remove_from_array = { array = pops_standard_of_living }
+				}
+			
+				set_variable = { pops_standard_of_living_this_year = 0 }
+				set_temp_variable = { this_year_months_temp = 0 }
+				set_variable = { pops_standard_of_living_last_year = 0 }
+				set_temp_variable = { last_year_months_temp = 0 }
+				for_each_loop = {
+					array = pops_standard_of_living
+					value = vv
+					index = ii
+					if = {
+						limit = {
+							check_variable = { ii < 12 }
+						}
+						add_to_variable = { pops_standard_of_living_this_year = vv }
+						add_to_temp_variable = { this_year_months_temp = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { ii < 24 }
+						}
+						add_to_variable = { pops_standard_of_living_last_year = vv }
+						add_to_temp_variable = { last_year_months_temp = 1 }
+					}
+				}
+				divide_variable = { pops_standard_of_living_this_year = this_year_months_temp }
+				divide_variable = { pops_standard_of_living_last_year = last_year_months_temp }
+			#
+
+			#Cost of Living
+				set_temp_variable = { col_temp = pops_goods_spending }
+				divide_temp_variable = { col_temp = total_needs_fulfilled_temp }
+
+				add_to_array = { 
+					array = pops_col
+					value = col_temp
+					index = 0
+				}
+				if = {
+					limit = {
+						check_variable = { pops_col^num > 25 }
+					}
+					remove_from_array = { array = pops_col }
+				}
+			
+				set_variable = { pops_col_this_year = 0 }
+				set_temp_variable = { this_year_months_temp = 0 }
+				set_variable = { pops_col_last_year = 0 }
+				set_temp_variable = { last_year_months_temp = 0 }
+				for_each_loop = {
+					array = pops_col
+					value = vv
+					index = ii
+					if = {
+						limit = {
+							check_variable = { ii < 12 }
+						}
+						add_to_variable = { pops_col_this_year = vv }
+						add_to_temp_variable = { this_year_months_temp = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { ii < 24 }
+						}
+						add_to_variable = { pops_col_last_year = vv }
+						add_to_temp_variable = { last_year_months_temp = 1 }
+					}
+				}
+				divide_variable = { pops_col_this_year = this_year_months_temp }
+				divide_variable = { pops_col_last_year = last_year_months_temp }
+			#
+		#
+
+		#GDP
+			divide_variable = { gdp_amount = pops_col_this_year }
+			add_to_array = { 
+				array = gdp
+				value = gdp_amount
+				index = 0
+			}
+			if = {
+				limit = {
+					check_variable = { gdp^num > 25 }
+				}
+				remove_from_array = { array = gdp }
+			}
+		
+			set_variable = { gdp_this_year = 0 }
+			set_temp_variable = { this_year_months_temp = 0 }
+			set_variable = { gdp_last_year = 0 }
+			set_temp_variable = { last_year_months_temp = 0 }
+			for_each_loop = {
+				array = gdp
+				value = vv
+				index = ii
+				if = {
+					limit = {
+						check_variable = { ii < 12 }
+					}
+					add_to_variable = { gdp_this_year = vv }
+					add_to_temp_variable = { this_year_months_temp = 1 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { ii < 24 }
+					}
+					add_to_variable = { gdp_last_year = vv }
+					add_to_temp_variable = { last_year_months_temp = 1 }
+				}
+			}
+			divide_variable = { gdp_this_year = this_year_months_temp }
+			divide_variable = { gdp_last_year = last_year_months_temp }
+			set_variable = { gdp_change = gdp_this_year }
+			subtract_from_variable = { gdp_change = gdp_last_year }
+
+			
+		#
+	}
+
+	#Currency Supply
+		# total_currency_amount = yes
+	#
+
+	every_controlled_state = {
+		
+		#Wealth - TODO
+			
+		#
+
+		#Graph Stuff
+			#Population
+			add_to_array = { 
+				array = population_graph_array
+				value = pops_amount
+				index = 0
+			}
+			if = {
+				limit = {
+					check_variable = { population_graph_array^num > 25 }
+				}
+				remove_from_array = { array = population_graph_array }
+			}
+
+			#GDP
+			add_to_array = { 
+				array = gdp_graph_array
+				value = gdp_this_year
+				index = 0
+			}
+			if = {
+				limit = {
+					check_variable = { gdp_graph_array^num > 25 }
+				}
+				remove_from_array = { array = gdp_graph_array }
+			}
+
+			#Standard of Living
+			add_to_array = { 
+				array = standard_of_living_graph_array
+				value = pops_standard_of_living_this_year
+				index = 0
+			}
+			if = {
+				limit = {
+					check_variable = { standard_of_living_graph_array^num > 25 }
+				}
+				remove_from_array = { array = standard_of_living_graph_array }
+			}
+
+			#Cost of Living
+			add_to_array = { 
+				array = col_graph_array
+				value = pops_col_this_year
+				index = 0
+			}
+			if = {
+				limit = {
+					check_variable = { col_graph_array^num > 25 }
+				}
+				remove_from_array = { array = col_graph_array }
+			}
+		#
+
+		add_to_variable = { pops_earnings = pops_unskilled_earnings }
+		add_to_variable = { pops_earnings = pops_skilled_earnings }
+		add_to_variable = { pops_earnings = pops_educated_earnings }
+		add_to_variable = { pops_spending = pops_goods_spending }
+
+		pops_update = yes
+		#update_state_modifiers = yes
+		industries_update = yes		
+	}
+	resources_statistics = yes
+
+	country_pops_update = yes
+	refresh_state_list = yes
+	create_state_pie_charts = yes
+	create_population_pyramid = yes
+
+	create_overview_graph = yes
+
+	add_to_variable = { global.month = 1 }
+}
+pops_demographic_change = {
+	set_variable = { pops_amount_last_month = pops_amount } #Recordkeeping
+	
+	#Aging & Pop Growth
+	if = {
+		limit = {
+			check_variable = { global.month = 0 }
+		}
+		clear_array = deaths_amount_array
+		clear_array = deaths_amount_array_2
+		
+		for_loop_effect = {
+			start = pops_age_amount^num
+			add = -1
+			end = 0
+			compare = greater_than_or_equals
+			value = age
+
+			#Between age 20 and 35 is age for "baby production"
+			set_temp_variable = { births_amount_temp = 0 }
+			if = {
+				limit = {
+					check_variable = { age > 3 } #Greater than 15-19
+					check_variable = { age < 7 } #Less than 35-39
+				}
+				add_to_temp_variable = { births_amount_temp = pops_age_amount^age }
+				add_to_temp_variable = { births_amount_temp = pops_age_aged_amount^age }
+			}
+			multiply_temp_variable = { births_amount_temp = 100 } #This is enough to sustain population
+			multiply_temp_variable = { births_amount_temp = pops_births_per_woman }
+			divide_temp_variable = { births_amount_temp = 100 }
+			divide_temp_variable = { births_amount_temp = 35 }
+			divide_temp_variable = { births_amount_temp = pops_male_female_ratio }
+
+			add_to_variable = { pops_age_aged_amount^0 = births_amount_temp }
+
+
+			#Death by Natural Causes
+			set_temp_variable = { deaths_amount_temp = 0 }
+			set_temp_variable = { deaths_amount_temp_2 = 0 }
+			if = {
+				limit = {
+					check_variable = { age < 3 }
+				}
+				set_temp_variable = { age_sqr = 3 }			#age_sqr = (age - 10)^2
+				subtract_from_temp_variable = { age_sqr = age }	# Basically inverse of age squared. At 0-4 it's 9x
+				multiply_temp_variable = { age_sqr = age_sqr } 
+
+				set_temp_variable = { health_sqr = pops_health_percentage }
+				multiply_temp_variable = { health_sqr = 5 } #Child Mortality ceases to exist at >=60% health
+				multiply_temp_variable = { health_sqr = health_sqr }
+				subtract_from_temp_variable = { age_sqr = health_sqr } #Health prevents ppl from dying
+				if = {
+					limit = {
+						check_variable = { age_sqr > 0 }
+					}
+					
+					set_temp_variable = { cause_death_amount_temp = pops_age_amount^age }
+					divide_temp_variable = { cause_death_amount_temp = 100 }
+					multiply_temp_variable = { cause_death_amount_temp = age_sqr } #People progressively die more as they age
+
+					add_to_temp_variable = { deaths_amount_temp = cause_death_amount_temp }
+
+					set_temp_variable = { cause_death_amount_temp = pops_age_aged_amount^age }
+					divide_temp_variable = { cause_death_amount_temp = 100 }
+					multiply_temp_variable = { cause_death_amount_temp = age_sqr } #People progressively die more as they age
+
+					add_to_temp_variable = { deaths_amount_temp_2 = cause_death_amount_temp }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { age > 10 }
+				}
+				set_temp_variable = { age_sqr = age }
+				subtract_from_temp_variable = { age_sqr = 10 }
+				multiply_temp_variable = { age_sqr = 2 }
+
+				set_temp_variable = { health_eff = pops_health_percentage }
+				multiply_temp_variable = { health_eff = 10 }
+				subtract_from_temp_variable = { age_sqr = health_eff }
+
+				if = {
+					limit = {
+						check_variable = { age_sqr > 0 }
+					}
+
+					set_temp_variable = { cause_death_amount_temp = pops_age_amount^age }
+					divide_temp_variable = { cause_death_amount_temp = 100 }
+					multiply_temp_variable = { cause_death_amount_temp = age_sqr } #People progressively die more as they age
+
+					add_to_temp_variable = { deaths_amount_temp = cause_death_amount_temp }
+
+					set_temp_variable = { cause_death_amount_temp = pops_age_aged_amount^age }
+					divide_temp_variable = { cause_death_amount_temp = 100 }
+					multiply_temp_variable = { cause_death_amount_temp = age_sqr } #People progressively die more as they age
+
+					add_to_temp_variable = { deaths_amount_temp_2 = cause_death_amount_temp }
+				}
+			}
+			if = {
+				limit = { #Too few people in the age group
+					check_variable = { pops_age_amount^age < 0.020 }
+					check_variable = { pops_age_amount^age > 0 }
+				}
+				add_to_temp_variable = { deaths_amount_temp = 0.001 }
+			}
+			if = {
+				limit = { #Too few people in the age group
+					check_variable = { pops_age_aged_amount^age < 0.020 }
+					check_variable = { pops_age_aged_amount^age > 0 }
+				}
+				add_to_temp_variable = { deaths_amount_temp_2 = 0.001 }
+			}
+			add_to_array = { deaths_amount_array = deaths_amount_temp }
+			add_to_array = { deaths_amount_array_2 = deaths_amount_temp_2 }
+			subtract_from_variable = { pops_age_amount^age = deaths_amount_temp }
+			subtract_from_variable = { pops_age_aged_amount^age = deaths_amount_temp_2 }
+
+			#Retirement
+			#if = {
+			#	limit = {
+			#		set_temp_variable = { retirement_age_temp = global.pops_retirement_age }
+			#		divide_temp_variable = { retirement_age_temp = 5 }
+			#		check_variable = { age > retirement_age_temp }
+			#	}
+			#	set_temp_variable = { retirement_amount = pops_age_amount^age }
+			#	divide_temp_variable = { retirement_amount = 5 } #20% of people who can retire retire every year
+			#	subtract_from_variable = { pops_age_amount^age = retirement_amount }
+			#	add_to_variable = { retirees_age_amount^age = retirement_amount }
+			#}
+
+			#Age increase amount
+			if = {
+				limit = {
+					NOT = { check_variable = { age = 20 } }
+				}
+				set_temp_variable = { age_temp = age }
+				add_to_temp_variable = { age_temp = 1 }
+
+				set_temp_variable = { age_increase_amount_temp = pops_age_amount^age }
+				add_to_temp_variable = { age_increase_amount_temp = pops_age_aged_amount^age_temp }
+				divide_temp_variable = { age_increase_amount_temp = 5 }
+
+				subtract_from_variable = { pops_age_amount^age = age_increase_amount_temp }
+				add_to_variable = { pops_age_aged_amount^age_temp = age_increase_amount_temp }
+			}
+			if = {
+				limit = {
+					check_variable = { global.age_timer = 0 } #Happens every 5 years
+				}
+				
+				add_to_variable = { pops_age_amount^age = pops_age_aged_amount^age }
+				set_variable = { pops_age_aged_amount^age = 0 }
+			}
+			
+			if = {
+				limit = {
+					check_variable = { pops_age_amount^age < 0 }
+				}
+				set_variable = { pops_age_amount^age = 0 }
+			}
+			if = {
+				limit = {
+					check_variable = { pops_age_aged_amount^age < 0 }
+				}
+				set_variable = { pops_age_aged_amount^age = 0 }
+			}
+		}
+	}
+	
+	#
+}
+
+on_monthly_tick = {
+	on_monthly_national_reset = yes # Resets all statistics & derived values
+
+	modifiers_update = yes # Updates country-level modifiers (in-case something changes)
+	industries_base_attractiveness_calc = yes # Attractiveness for investment, required for following every-state block
+
+	every_controlled_state = {
+		state_modifiers_update = yes #Updates state-Level modifers
+
+		on_monthly_industry = yes # Industries accumulate cash
+
+		on_monthly_industry_construction = yes # Decreases amount left on construction & adds new buildings if completed
+		industry_productivity_sort = yes # Sorts industries by "base" productivity
+		base_wage_calculation = yes # Calculates the base wage of a state
+		
+		industries_update_finances = yes # Update finances (for changed wages) before hiring
+		on_monthly_industry_adjust_employment_target = yes # Adjust Target Employment
+		on_monthly_industry_employment = yes # Hiring & Firing
+
+		#Subsistence Farms
+		set_variable = { peasants_employed_subsistence_farm = peasants_workforce_amount }
+		set_variable = { elites_employed_subsistence_farm = elites_jobs_subsistence_farm }
+		multiply_variable = { elites_employed_subsistence_farm = employment_percentage_subsistence_farm }
+		divide_variable = { elites_employed_subsistence_farm = 100 }
+
+		arable_land_update = yes # Updates the amount of arable land
+		subsistence_farm_update = yes # Updates all aspects of subsistence farms
+		industries_update = yes # Updates all aspects of industries
+		pops_update = yes # Updates all aspects of pops
+
+		#Investment Fund
+		#on_monthly_investment = yes
+
+		#Pops
+		on_monthly_pop_finances = yes # Changes to Pop Finances & SoL Changes
+		on_monthly_pop_changes = yes # Changes to Pop Type Distribution
+
+		# Update Pops
+		calculate_pop_needs = yes
+	}
+	
+	if = {
+		limit = {
+			check_variable = { employed_industries > 0 }
+		}
+		divide_variable = { base_wage = employed_industries }
+	}
+	else = {
+		set_variable = { base_wage = 0 }
+	}
+
+	# Update Supply/Demand & Prices
+	#	This makes updating all financial stuff relating to resource prices a must
+	calc_supply = yes
+	calc_demand = yes
+	get_resource_prices = yes
+
+	every_controlled_state = {
+		for_each_loop = {
+			array = industries
+			value = iu_token
+
+			industry_update_finances = yes # Update only finance
+		}
+		calculate_pop_needs = yes # Update only pop needs & finances
+		pops_update_finances = yes
+
+		industries_update_civ_count = yes # Updates state's civilian factory counts
+
+		# Statistics
+		on_monthly_state_statistics = yes
+	}
+	on_monthly_national_statistics = yes
+}
+
+# Reset
+on_monthly_national_reset = {
+	# TODO - Add up country-level statistics properly
+	set_variable = { global.highest_state_gdp = 0 }
+	set_variable = { global.highest_state_sol = 0 }
+
+	for_each_loop = {
+		array = global.industries_token_array
+		value = iuc_token
+		set_variable = { under_construction@var:iuc_token = 0 }
+	}
+	every_controlled_state = {
+		for_each_loop = {
+			array = industries
+			value = iuc_token
+			add_to_variable = { PREV.under_construction@var:iuc_token = under_construction@var:iuc_token }
+		}
+	}
+}
+on_monthly_state_reset = {
+	# TODO - Add up state-level statistics properly
+}
+
+# Industry
+on_monthly_industry = {
+	for_each_loop = {
+		array = industries
+		value = om_industry
+
+		#Money Accumulation
+		add_to_variable = { money@var:om_industry = profit@var:om_industry }
+		if = { #Excess goes to owners
+			limit = {
+				check_variable = { money@var:om_industry > money_limit@var:om_industry }
+			}
+			set_variable = { money_transfer@var:om_industry = money@var:om_industry }
+			subtract_from_variable = { money_transfer@var:om_industry = money_limit@var:om_industry }
+
+			subtract_from_variable = { money@var:om_industry = money_transfer@var:om_industry }
+		}
+		else = {
+			set_variable = { money_transfer@var:om_industry = 0 }
+		}
+		if = {
+			limit = {
+				check_variable = { money@var:om_industry < 0 }
+			}
+			set_variable = { money@var:om_industry = 0 }
+			# TODO - Add debt/reduce money transfer
+		}
+	}
+}
+
+on_monthly_industry_construction = {
+	industries_update_construction = yes # Updates Construction
+		# Loops through industries and updates total industries under construction & adds
+		# Industries under construction to industries_under_construction_array
+
+	for_each_loop = {
+		array = industries_under_construction_array
+		value = om_industry
+
+		# Subtract speed from needed amount
+		subtract_from_variable = { construction_amount@var:om_industry = construction_speed@var:om_industry }
+		if = { # If zero or less is left then add the under_construction amount to size
+			limit = {
+				check_variable = { construction_amount@var:om_industry < 0.001 }
+			}
+			set_variable = { construction_amount@var:om_industry = 0 }
+			add_to_variable = { size@var:om_industry = under_construction@var:om_industry }
+			set_variable = { under_construction@var:om_industry = 0 }
+		}
+		
+		if = { # Reset the speed
+			limit = {
+				check_variable = { construction_speed@var:om_industry > construction_amount@var:om_industry }
+			}
+			set_variable = { construction_speed@var:om_industry = construction_amount@var:om_industry }
+		}
+	}
+}
+industry_productivity_sort = {
+	# Puts industries into an array sorted by the base productivity
+
+	clear_array = industries_productivity_sort
+	for_each_loop = {
+		array = industries
+		value = om_industry
+		
+		set_temp_variable = { effective_wage_om = base_productivity@var:om_industry }
+
+		for_each_loop = {
+			array = industries_productivity_sort
+			index = ii
+			value = vv
+			break = bb
+
+			set_temp_variable = { effective_wage_vv = base_productivity@var:vv }
+
+			if = {
+				limit = {
+					check_variable = { effective_wage_vv < effective_wage_om }
+				}
+				add_to_array = { 
+					array = industries_productivity_sort 
+					value = om_industry
+					index = ii
+				}
+				set_temp_variable = { bb = 1 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { bb = 0 }
+			}
+			add_to_array = { industries_productivity_sort = om_industry }
+		}
+	}
+}
+base_wage_calculation = {
+
+	set_temp_variable = { base_wage_counting = 0 }
+
+	set_temp_variable = { jobs_to_account_for = 0.1 }
+	set_temp_variable = { weight_temp = laborers_workforce_amount }
+	multiply_temp_variable = { weight_temp = 2 }
+	add_to_temp_variable = { jobs_to_account_for = weight_temp }
+	set_temp_variable = { weight_temp = workers_workforce_amount }
+	multiply_temp_variable = { weight_temp = 5 }
+	add_to_temp_variable = { jobs_to_account_for = weight_temp }
+	set_temp_variable = { weight_temp = professionals_workforce_amount }
+	multiply_temp_variable = { weight_temp = 10 }
+	add_to_temp_variable = { jobs_to_account_for = weight_temp }
+	set_temp_variable = { weight_temp = elites_workforce_amount }
+	multiply_temp_variable = { weight_temp = 25 }
+	add_to_temp_variable = { jobs_to_account_for = weight_temp }
+
+	set_temp_variable = { jobs_accounted_for = jobs_to_account_for }
+
+	for_each_loop = {
+		array = industries_productivity_sort
+		value = om_industry
+		
+		# Base Wage Addition
+		if = {
+			limit = {
+				check_variable = { jobs_to_account_for > 0 }
+			}
+			# If there are still jobs to account for, then weight the jobs from this industry and add them up
+			set_temp_variable = { jobs_wage_to_count = 0 }
+			set_temp_variable = { weight_temp = laborers_jobs@var:om_industry }
+			multiply_temp_variable = { weight_temp = 2 }
+			add_to_temp_variable = { jobs_wage_to_count = weight_temp }
+			set_temp_variable = { weight_temp = workers_jobs@var:om_industry }
+			multiply_temp_variable = { weight_temp = 5 }
+			add_to_temp_variable = { jobs_wage_to_count = weight_temp }
+			set_temp_variable = { weight_temp = professionals_jobs@var:om_industry }
+			multiply_temp_variable = { weight_temp = 10 }
+			add_to_temp_variable = { jobs_wage_to_count = weight_temp }
+			set_temp_variable = { weight_temp = elites_jobs@var:om_industry }
+			multiply_temp_variable = { weight_temp = 25 }
+			add_to_temp_variable = { jobs_wage_to_count = weight_temp }
+
+			if = { limit = { check_variable = { jobs_wage_to_count > jobs_to_account_for } } set_temp_variable = { jobs_wage_to_count = jobs_to_account_for } }
+			subtract_from_temp_variable = { jobs_to_account_for = jobs_wage_to_count }
+			
+			if = {
+				limit = {
+					check_variable = { base_productivity@var:om_industry > 0.5 }
+				}
+				multiply_temp_variable = { jobs_wage_to_count = base_productivity@var:om_industry }
+			}
+			else = {
+				multiply_temp_variable = { jobs_wage_to_count = 0.5 }
+			}
+			add_to_temp_variable = { base_wage_counting = jobs_wage_to_count }
+		}
+	}
+
+	subtract_from_temp_variable = { jobs_accounted_for = jobs_to_account_for }
+
+	if = {
+		limit = {
+			check_variable = { jobs_to_account_for > 0 }
+		}
+		set_temp_variable = { jobs_to_account_for = peasants_workforce_amount }
+		multiply_temp_variable = { jobs_to_account_for = 0.5 } # Base productivity of 0.5 (Approximation of Subsistence Farms being 1 divided by 2 as 
+		add_to_temp_variable = { base_wage_counting = jobs_to_account_for }				#  Laborers earn twice as much as peasants do )
+	}
+
+	set_variable = { base_wage = base_wage_counting }
+	divide_variable = { base_wage = jobs_accounted_for }
+
+	set_variable = { laborers_wage = base_wage }
+	multiply_variable = { laborers_wage = 2 }
+	
+	set_variable = { workers_wage = base_wage }
+	multiply_variable = { workers_wage = 5 }
+	
+	set_variable = { professionals_wage = base_wage }
+	multiply_variable = { professionals_wage = 10 }
+	
+	set_variable = { elites_wage = base_wage }
+	multiply_variable = { elites_wage = 25 }
+}
+on_monthly_industry_adjust_employment_target = {
+	set_temp_variable = { icm_temp = controller:modifier@investment_confidence_modifier }
+	divide_temp_variable = { icm_temp = 100 }
+	divide_temp_variable = { icm_temp = 2 }
+	add_to_temp_variable = { icm_temp = 0.5 }
+	
+	set_temp_variable = { prod_ubound = base_wage }
+	divide_temp_variable = { prod_ubound = icm_temp } # >100 should decrease it
+
+	set_temp_variable = { prod_ubound2 = prod_ubound }
+	multiply_temp_variable = { prod_ubound2 = 1.25 }
+
+	set_temp_variable = { prod_lbound = base_wage }
+	multiply_temp_variable = { prod_lbound = 0.8 }
+	divide_temp_variable = { prod_lbound = icm_temp }  # >100 should decrease it
+
+	for_each_loop = {
+		array = industries
+		value = om_industry
+		break = prod_break
+
+		if = {
+			limit = {
+				check_variable = { base_productivity@var:om_industry > prod_ubound }
+			}
+			if = {
+				limit = {
+					check_variable = { base_productivity@var:om_industry > prod_ubound2 }
+				}
+				add_to_variable = { employment_target@var:om_industry = 0.05 }
+			}
+
+			add_to_variable = { employment_target@var:om_industry = 0.05 }
+			if = {
+				limit = {
+					check_variable = { employment_target@var:om_industry > 1 }
+				}
+				set_variable = { employment_target@var:om_industry = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { base_productivity@var:om_industry < prod_lbound }
+			}
+
+			if = {
+				limit = {
+					check_variable = { base_productivity@var:om_industry > 0.5 }
+				}
+				subtract_from_variable = { employment_target@var:om_industry = 0.05 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { base_productivity@var:om_industry > 0 }
+				}
+				subtract_from_variable = { employment_target@var:om_industry = 0.1 }
+			}
+			else = {
+				subtract_from_variable = { employment_target@var:om_industry = 0.2 }
+			}
+
+			
+			if = {
+				limit = {
+					check_variable = { employment_target@var:om_industry < 0 }
+				}
+				set_variable = { employment_target@var:om_industry = 0 }
+			}
+		}
+	}
+}
+on_monthly_industry_employment = {	
+	# The pool of available jobs is added up from positively productive buildings. Then 
+	# 	there is a general "hiring" of the population. This pool of hired personnel then 
+	# 	gets distributed weighted by available jobs and PPP among positively produtive buildings.
+
+	# Firing
+	for_each_loop = {
+		array = industries_productivity_sort
+		value = industry_token
+		break = prod_break
+
+		if = {
+			limit = {
+				check_variable = { employment_target@var:industry_token < employment_percentage@var:industry_token }
+			}
+			# x_percent_temp is the percentage of industry jobs to fire (as it is negative in this context)
+			set_temp_variable = { x_percent_temp = employment_target@var:industry_token }
+			subtract_from_temp_variable = { x_percent_temp = employment_percentage@var:industry_token }
+
+			change_industry_employment_by_x_percent = yes # Firing
+		}
+	}
+
+	pops_open_jobs_calc = yes # Adds up the pool of open jobs from positively productive buildings
+	
+	# Sets jobs_multiplier to the min of % of jobs of each type that can be filled
+	set_temp_variable = { jobs_multiplier = 1 }
+	set_temp_variable = { laborers_mult = laborers_unemployed_amount }
+	divide_temp_variable = { laborers_mult = laborers_open_jobs_amount }
+	set_temp_variable = { workers_mult = workers_unemployed_amount }
+	divide_temp_variable = { workers_mult = workers_open_jobs_amount }
+	set_temp_variable = { professionals_mult = professionals_unemployed_amount }
+	divide_temp_variable = { professionals_mult = professionals_open_jobs_amount }
+	set_temp_variable = { elites_mult = elites_unemployed_amount }
+	divide_temp_variable = { elites_mult = elites_open_jobs_amount }
+	if = {
+		limit = {
+			check_variable = { laborers_mult < jobs_multiplier }
+		}
+		set_temp_variable = { jobs_multiplier = laborers_mult }
+	}
+	if = {
+		limit = {
+			check_variable = { workers_mult < jobs_multiplier }
+		}
+		set_temp_variable = { jobs_multiplier = workers_mult }
+	}
+	if = {
+		limit = {
+			check_variable = { professionals_mult < jobs_multiplier }
+		}
+		set_temp_variable = { jobs_multiplier = professionals_mult }
+	}
+	if = {
+		limit = {
+			check_variable = { elites_mult < jobs_multiplier }
+		}
+		set_temp_variable = { jobs_multiplier = elites_mult }
+	}
+
+
+	if = {
+		limit = {
+			check_variable = { jobs_multiplier > 0 }
+		}
+		# Hiring
+		for_each_loop = {
+			array = industries_productivity_sort
+			value = industry_token
+			break = prod_break
+
+			if = {
+				limit = {
+					check_variable = { base_productivity@var:industry_token > 0 }
+					check_variable = { employment_target@var:industry_token > employment_percentage@var:industry_token }
+				}
+				set_temp_variable = { hiring_percentage_mult = jobs_multiplier }
+				if = {
+					limit = {
+						check_variable = { base_productivity@var:industry_token < base_wage }
+					}
+					multiply_temp_variable = { hiring_percentage_mult = base_productivity@var:industry_token }
+					divide_temp_variable = { hiring_percentage_mult = base_wage }
+				}
+
+				if = {
+					limit = {
+						check_variable = { hiring_percentage_mult > 1 }
+					}
+					set_temp_variable = { hiring_percentage_mult = 1 }
+				}
+
+				# x_percent_temp is the percentage of industry jobs to hire
+				set_temp_variable = { x_percent_temp = employment_target@var:industry_token }
+				subtract_from_temp_variable = { x_percent_temp = employment_percentage@var:industry_token }
+				multiply_temp_variable = { x_percent_temp = hiring_percentage_mult }
+
+				change_industry_employment_by_x_percent = yes # Hiring
+			}
+			else_if = {
+				limit = {
+					check_variable = { base_productivity@var:industry_token < 0 }
+				}
+				set_temp_variable = { prod_break = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { jobs_multiplier < 0 }
+		}
+		# Workforce Change
+
+	}
+}
+
+# Investment Fund
+on_monthly_investment = {
+	# Updates Investment Funds
+	# Spends Money
+	# Changes Confidence
+	# Updates Target Spending
+	# Adds new investments (New building construction)
+
+	investment_fund_update = yes
+
+	add_to_variable = { investment_fund = investment_fund_earnings }
+	subtract_from_variable = { investment_fund = investment_fund_spending }
+	if = {
+		limit = {
+			check_variable = { investment_fund < 0 }
+		}
+		subtract_from_variable = { investment_fund_debt = investment_fund }
+		set_variable = { investment_fund = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { investment_fund_debt > 0 }
+		}
+		if = {
+			limit = {
+				check_variable = { investment_fund_debt > investment_fund }
+			}
+			subtract_from_variable = { investment_fund_debt = investment_fund }
+			set_variable = { investment_fund = 0 }
+		}
+		else = {
+			subtract_from_variable = { investment_fund = investment_fund_debt }
+			set_variable = { investment_fund_debt = 0 }
+		}
+	}
+
+	investment_fund_update_confidence = yes
+
+	if = {
+		limit = {
+			check_variable = { investment_fund_target_spending > investment_fund_spending }
+		}
+		#Increase Spending through construction
+
+		set_temp_variable = { industry_token = 0 }
+		set_temp_variable = { most_attractive_value_temp = 0 }
+		for_each_loop = {
+			array = controller:attractive_industries_array
+			value = attracti_token
+
+			if = {
+				limit = {
+					check_variable = { attractiveness@var:attracti_token > most_attractive_value_temp }
+				}
+				set_temp_variable = { most_attractive_value_temp = attractiveness@var:attracti_token }
+				set_temp_variable = { industry_token = attracti_token }
+			}
+		}
+		#log = "[?THIS.GetName] = [?industry_token.GetTokenLocalizedKey]: [?most_attractive_value_temp]"
+
+		set_temp_variable = { emp_val = industries_jobs_amount }
+		subtract_from_temp_variable = { emp_val = industries_employees_amount }
+		divide_temp_variable = { emp_val = industries_jobs_amount }
+		if = {
+			limit = {
+				check_variable = { emp_val > 0.05 }
+			}
+			multiply_temp_variable = { emp_val = 200 }
+		}
+		else = {
+			set_temp_variable = { emp_val = 10 }
+		}
+
+		if = {
+			limit = {
+				check_variable = { most_attractive_value_temp > emp_val }
+			}
+			set_temp_variable = { const_r = global.industry_base_construction_resource@var:industry_token }
+			
+			set_temp_variable = { x_temp = investment_fund_target_spending }
+			subtract_from_temp_variable = { x_temp = investment_fund_spending }
+			divide_temp_variable = { x_temp = global.industry_base_construction_speed@var:industry_token }
+			divide_temp_variable = { x_temp = price@var:const_r }
+			add_to_temp_variable = { x_temp = 0.5 }
+			round_temp_variable = x_temp
+
+			if = {
+				limit = {
+					check_variable = { x_temp > 2 }
+				}
+				set_temp_variable = { x_temp = 2 }
+			}
+			
+			log = "[?THIS.GetName] - [?industry_token.GetTokenLocalizedKey]: [?x_temp]"
+
+			construct_x_industries_no_update = yes
+			add_to_array = { industries_under_construction_array = industry_token }
+			add_to_variable = { industries_under_construction_amount = x_temp }
+			controller = {
+				set_temp_variable = { subtract_temp = x_temp }
+				multiply_temp_variable = { subtract_temp = global.attractivenss_decrease_from_construction }
+				subtract_from_variable = { attractiveness@var:industry_token = subtract_temp }
+				every_controlled_state = {
+					subtract_from_variable = { attractiveness@var:industry_token = subtract_temp }
+				}
+			}
+
+			investment_fund_update = yes
+		}
+	}
+	else = {
+		#Take measures to decrease spending:
+		# 1 - Decrease/Finish Construction
+		# 2 - Close unprofitable factories
+	}
+}
+
+# Pops
+on_monthly_pop_finances = {
+	#Earnings & Spending
+	add_to_variable = { slaves_money = slaves_earnings }
+	add_to_variable = { peasants_money = peasants_earnings }
+	add_to_variable = { laborers_money = laborers_earnings }
+	add_to_variable = { workers_money = workers_earnings }
+	add_to_variable = { professionals_money = professionals_earnings }
+	add_to_variable = { elites_money = elites_earnings }
+	add_to_variable = { bureaucrats_money = bureaucrats_earnings }
+	add_to_variable = { soldiers_money = soldiers_earnings }
+	
+	subtract_from_variable = { slaves_money = slaves_needs_spending }
+	subtract_from_variable = { peasants_money = peasants_needs_spending }
+	subtract_from_variable = { laborers_money = laborers_needs_spending }
+	subtract_from_variable = { workers_money = workers_needs_spending }
+	subtract_from_variable = { professionals_money = professionals_needs_spending }
+	subtract_from_variable = { elites_money = elites_needs_spending }
+	subtract_from_variable = { bureaucrats_money = bureaucrats_needs_spending }
+	subtract_from_variable = { soldiers_money = soldiers_needs_spending }
+
+	#SoL changes
+		#Slaves
+			if = {
+				limit = {
+					check_variable = { slaves_money < 0 }
+				}
+				set_temp_variable = { regression_temp = slaves_money }
+				divide_temp_variable = { regression_temp = slaves_needs_spending }
+				multiply_temp_variable = { regression_temp = 10 }
+
+				if = {
+					limit = {
+						check_variable = { slaves_sol > 1 }
+					}
+					add_to_variable = { slaves_sol_progress = regression_temp }
+				}
+				else_if = {
+					limit = {
+						check_variable = { slaves_sol_progress < 0 }
+					}
+					set_variable = { slaves_sol_progress = 0 }
+				}
+				set_variable = { slaves_money = 0 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { slaves_money > slaves_needs_spending }
+				}
+				set_temp_variable = { progression_temp = slaves_money }
+				subtract_from_temp_variable = { progression_temp = slaves_needs_spending }
+				divide_temp_variable = { progression_temp = slaves_needs_spending }
+				multiply_temp_variable = { progression_temp = 10 }
+
+				add_to_variable = { slaves_sol_progress = progression_temp }
+				set_variable = { slaves_money = slaves_needs_spending }
+			}
+
+			if = {
+				limit = {
+					check_variable = { slaves_sol_progress > 0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { slaves_sol_progress > 5 }
+					}
+					set_variable = { slaves_sol_progress = 5 }
+				}
+				set_temp_variable = { progression_temp = slaves_sol_progress }
+				subtract_from_temp_variable = { progression_temp = 0.5 }
+				round_temp_variable = progression_temp
+
+				subtract_from_variable = { slaves_sol_progress = progression_temp }
+				add_to_variable = { slaves_sol = progression_temp }
+			}
+			else_if = {
+				limit = {
+					check_variable = { slaves_sol_progress < -0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { regression_temp < -5 }
+					}
+					set_variable = { slaves_sol_progress = -5 }
+				}
+				set_temp_variable = { regression_temp = slaves_sol_progress }
+				add_to_temp_variable = { regression_temp = 0.5 }
+				round_temp_variable = regression_temp
+
+				subtract_from_variable = { slaves_sol_progress = regression_temp }
+				add_to_variable = { slaves_sol = regression_temp }
+			}
+
+			if = {
+				limit = {
+					check_variable = { slaves_sol < 1 }
+				}
+				set_variable = { slaves_sol = 1 }
+			}
+		#
+		#Peasants
+			if = {
+				limit = {
+					check_variable = { peasants_money < 0 }
+				}
+				set_temp_variable = { regression_temp = peasants_money }
+				divide_temp_variable = { regression_temp = peasants_needs_spending }
+				multiply_temp_variable = { regression_temp = 10 }
+
+				if = {
+					limit = {
+						check_variable = { peasants_sol > 1 }
+					}
+					add_to_variable = { peasants_sol_progress = regression_temp }
+				}
+				else_if = {
+					limit = {
+						check_variable = { peasants_sol_progress < 0 }
+					}
+					set_variable = { peasants_sol_progress = 0 }
+				}
+				set_variable = { peasants_money = 0 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { peasants_money > peasants_needs_spending }
+				}
+				set_temp_variable = { progression_temp = peasants_money }
+				subtract_from_temp_variable = { progression_temp = peasants_needs_spending }
+				divide_temp_variable = { progression_temp = peasants_needs_spending }
+				multiply_temp_variable = { progression_temp = 10 }
+
+				add_to_variable = { peasants_sol_progress = progression_temp }
+				set_variable = { peasants_money = peasants_needs_spending }
+			}
+
+			if = {
+				limit = {
+					check_variable = { peasants_sol_progress > 0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { peasants_sol_progress > 5 }
+					}
+					set_variable = { peasants_sol_progress = 5 }
+				}
+				set_temp_variable = { progression_temp = peasants_sol_progress }
+				subtract_from_temp_variable = { progression_temp = 0.5 }
+				round_temp_variable = progression_temp
+
+				subtract_from_variable = { peasants_sol_progress = progression_temp }
+				add_to_variable = { peasants_sol = progression_temp }
+			}
+			else_if = {
+				limit = {
+					check_variable = { peasants_sol_progress < -0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { regression_temp < -5 }
+					}
+					set_variable = { peasants_sol_progress = -5 }
+				}
+				set_temp_variable = { regression_temp = peasants_sol_progress }
+				add_to_temp_variable = { regression_temp = 0.5 }
+				round_temp_variable = regression_temp
+
+				subtract_from_variable = { peasants_sol_progress = regression_temp }
+				add_to_variable = { peasants_sol = regression_temp }
+			}
+
+			if = {
+				limit = {
+					check_variable = { peasants_sol < 1 }
+				}
+				set_variable = { peasants_sol = 1 }
+			}
+		#
+		#Laborers
+			if = {
+				limit = {
+					check_variable = { laborers_money < 0 }
+				}
+				set_temp_variable = { regression_temp = laborers_money }
+				divide_temp_variable = { regression_temp = laborers_needs_spending }
+				multiply_temp_variable = { regression_temp = 10 }
+
+				if = {
+					limit = {
+						check_variable = { laborers_sol > 1 }
+					}
+					add_to_variable = { laborers_sol_progress = regression_temp }
+				}
+				else_if = {
+					limit = {
+						check_variable = { laborers_sol_progress < 0 }
+					}
+					set_variable = { laborers_sol_progress = 0 }
+				}
+				set_variable = { laborers_money = 0 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { laborers_money > laborers_needs_spending }
+				}
+				set_temp_variable = { progression_temp = laborers_money }
+				subtract_from_temp_variable = { progression_temp = laborers_needs_spending }
+				divide_temp_variable = { progression_temp = laborers_needs_spending }
+				multiply_temp_variable = { progression_temp = 10 }
+
+				add_to_variable = { laborers_sol_progress = progression_temp }
+				set_variable = { laborers_money = laborers_needs_spending }
+			}
+
+			if = {
+				limit = {
+					check_variable = { laborers_sol_progress > 0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { laborers_sol_progress > 5 }
+					}
+					set_variable = { laborers_sol_progress = 5 }
+				}
+				set_temp_variable = { progression_temp = laborers_sol_progress }
+				subtract_from_temp_variable = { progression_temp = 0.5 }
+				round_temp_variable = progression_temp
+
+				subtract_from_variable = { laborers_sol_progress = progression_temp }
+				add_to_variable = { laborers_sol = progression_temp }
+			}
+			else_if = {
+				limit = {
+					check_variable = { laborers_sol_progress < -0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { regression_temp < -5 }
+					}
+					set_variable = { laborers_sol_progress = -5 }
+				}
+				set_temp_variable = { regression_temp = laborers_sol_progress }
+				add_to_temp_variable = { regression_temp = 0.5 }
+				round_temp_variable = regression_temp
+
+				subtract_from_variable = { laborers_sol_progress = regression_temp }
+				add_to_variable = { laborers_sol = regression_temp }
+			}
+
+			if = {
+				limit = {
+					check_variable = { laborers_sol < 1 }
+				}
+				set_variable = { laborers_sol = 1 }
+			}
+		#
+		#Workers
+			if = {
+				limit = {
+					check_variable = { workers_money < 0 }
+				}
+				set_temp_variable = { regression_temp = workers_money }
+				divide_temp_variable = { regression_temp = workers_needs_spending }
+				multiply_temp_variable = { regression_temp = 10 }
+
+				if = {
+					limit = {
+						check_variable = { workers_sol > 1 }
+					}
+					add_to_variable = { workers_sol_progress = regression_temp }
+				}
+				else_if = {
+					limit = {
+						check_variable = { workers_sol_progress < 0 }
+					}
+					set_variable = { workers_sol_progress = 0 }
+				}
+				set_variable = { workers_money = 0 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { workers_money > workers_needs_spending }
+				}
+				set_temp_variable = { progression_temp = workers_money }
+				subtract_from_temp_variable = { progression_temp = workers_needs_spending }
+				divide_temp_variable = { progression_temp = workers_needs_spending }
+				multiply_temp_variable = { progression_temp = 10 }
+
+				add_to_variable = { workers_sol_progress = progression_temp }
+				set_variable = { workers_money = workers_needs_spending }
+			}
+
+			if = {
+				limit = {
+					check_variable = { workers_sol_progress > 0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { workers_sol_progress > 5 }
+					}
+					set_variable = { workers_sol_progress = 5 }
+				}
+				set_temp_variable = { progression_temp = workers_sol_progress }
+				subtract_from_temp_variable = { progression_temp = 0.5 }
+				round_temp_variable = progression_temp
+
+				subtract_from_variable = { workers_sol_progress = progression_temp }
+				add_to_variable = { workers_sol = progression_temp }
+			}
+			else_if = {
+				limit = {
+					check_variable = { workers_sol_progress < -0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { regression_temp < -5 }
+					}
+					set_variable = { workers_sol_progress = -5 }
+				}
+				set_temp_variable = { regression_temp = workers_sol_progress }
+				add_to_temp_variable = { regression_temp = 0.5 }
+				round_temp_variable = regression_temp
+
+				subtract_from_variable = { workers_sol_progress = regression_temp }
+				add_to_variable = { workers_sol = regression_temp }
+			}
+
+			if = {
+				limit = {
+					check_variable = { workers_sol < 1 }
+				}
+				set_variable = { workers_sol = 1 }
+			}
+		#
+		#Professionals
+			if = {
+				limit = {
+					check_variable = { professionals_money < 0 }
+				}
+				set_temp_variable = { regression_temp = professionals_money }
+				divide_temp_variable = { regression_temp = professionals_needs_spending }
+				multiply_temp_variable = { regression_temp = 10 }
+
+				if = {
+					limit = {
+						check_variable = { professionals_sol > 1 }
+					}
+					add_to_variable = { professionals_sol_progress = regression_temp }
+				}
+				else_if = {
+					limit = {
+						check_variable = { professionals_sol_progress < 0 }
+					}
+					set_variable = { professionals_sol_progress = 0 }
+				}
+				set_variable = { professionals_money = 0 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { professionals_money > professionals_needs_spending }
+				}
+				set_temp_variable = { progression_temp = professionals_money }
+				subtract_from_temp_variable = { progression_temp = professionals_needs_spending }
+				divide_temp_variable = { progression_temp = professionals_needs_spending }
+				multiply_temp_variable = { progression_temp = 10 }
+
+				add_to_variable = { professionals_sol_progress = progression_temp }
+				set_variable = { professionals_money = professionals_needs_spending }
+			}
+
+			if = {
+				limit = {
+					check_variable = { professionals_sol_progress > 0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { professionals_sol_progress > 5 }
+					}
+					set_variable = { professionals_sol_progress = 5 }
+				}
+				set_temp_variable = { progression_temp = professionals_sol_progress }
+				subtract_from_temp_variable = { progression_temp = 0.5 }
+				round_temp_variable = progression_temp
+
+				subtract_from_variable = { professionals_sol_progress = progression_temp }
+				add_to_variable = { professionals_sol = progression_temp }
+			}
+			else_if = {
+				limit = {
+					check_variable = { professionals_sol_progress < -0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { regression_temp < -5 }
+					}
+					set_variable = { professionals_sol_progress = -5 }
+				}
+				set_temp_variable = { regression_temp = professionals_sol_progress }
+				add_to_temp_variable = { regression_temp = 0.5 }
+				round_temp_variable = regression_temp
+
+				subtract_from_variable = { professionals_sol_progress = regression_temp }
+				add_to_variable = { professionals_sol = regression_temp }
+			}
+
+			if = {
+				limit = {
+					check_variable = { professionals_sol < 1 }
+				}
+				set_variable = { professionals_sol = 1 }
+			}
+		#
+		#Elites
+			if = {
+				limit = {
+					check_variable = { elites_money < 0 }
+				}
+				set_temp_variable = { regression_temp = elites_money }
+				divide_temp_variable = { regression_temp = elites_needs_spending }
+				multiply_temp_variable = { regression_temp = 10 }
+
+				if = {
+					limit = {
+						check_variable = { elites_sol > 1 }
+					}
+					add_to_variable = { elites_sol_progress = regression_temp }
+				}
+				else_if = {
+					limit = {
+						check_variable = { elites_sol_progress < 0 }
+					}
+					set_variable = { elites_sol_progress = 0 }
+				}
+				set_variable = { elites_money = 0 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { elites_money > elites_needs_spending }
+				}
+				set_temp_variable = { progression_temp = elites_money }
+				subtract_from_temp_variable = { progression_temp = elites_needs_spending }
+				divide_temp_variable = { progression_temp = elites_needs_spending }
+				multiply_temp_variable = { progression_temp = 10 }
+
+				add_to_variable = { elites_sol_progress = progression_temp }
+				set_variable = { elites_money = elites_needs_spending }
+			}
+
+			if = {
+				limit = {
+					check_variable = { elites_sol_progress > 0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { elites_sol_progress > 5 }
+					}
+					set_variable = { elites_sol_progress = 5 }
+				}
+				set_temp_variable = { progression_temp = elites_sol_progress }
+				subtract_from_temp_variable = { progression_temp = 0.5 }
+				round_temp_variable = progression_temp
+
+				subtract_from_variable = { elites_sol_progress = progression_temp }
+				add_to_variable = { elites_sol = progression_temp }
+			}
+			else_if = {
+				limit = {
+					check_variable = { elites_sol_progress < -0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { regression_temp < -5 }
+					}
+					set_variable = { elites_sol_progress = -5 }
+				}
+				set_temp_variable = { regression_temp = elites_sol_progress }
+				add_to_temp_variable = { regression_temp = 0.5 }
+				round_temp_variable = regression_temp
+
+				subtract_from_variable = { elites_sol_progress = regression_temp }
+				add_to_variable = { elites_sol = regression_temp }
+			}
+
+			if = {
+				limit = {
+					check_variable = { elites_sol < 1 }
+				}
+				set_variable = { elites_sol = 1 }
+			}
+		#
+		#Bureaucrats
+			if = {
+				limit = {
+					check_variable = { bureaucrats_money < 0 }
+				}
+				set_temp_variable = { regression_temp = bureaucrats_money }
+				divide_temp_variable = { regression_temp = bureaucrats_needs_spending }
+				multiply_temp_variable = { regression_temp = 10 }
+
+				if = {
+					limit = {
+						check_variable = { bureaucrats_sol > 1 }
+					}
+					add_to_variable = { bureaucrats_sol_progress = regression_temp }
+				}
+				else_if = {
+					limit = {
+						check_variable = { bureaucrats_sol_progress < 0 }
+					}
+					set_variable = { bureaucrats_sol_progress = 0 }
+				}
+				set_variable = { bureaucrats_money = 0 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { bureaucrats_money > bureaucrats_needs_spending }
+				}
+				set_temp_variable = { progression_temp = bureaucrats_money }
+				subtract_from_temp_variable = { progression_temp = bureaucrats_needs_spending }
+				divide_temp_variable = { progression_temp = bureaucrats_needs_spending }
+				multiply_temp_variable = { progression_temp = 10 }
+
+				add_to_variable = { bureaucrats_sol_progress = progression_temp }
+				set_variable = { bureaucrats_money = bureaucrats_needs_spending }
+			}
+
+			if = {
+				limit = {
+					check_variable = { bureaucrats_sol_progress > 0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { bureaucrats_sol_progress > 5 }
+					}
+					set_variable = { bureaucrats_sol_progress = 5 }
+				}
+				set_temp_variable = { progression_temp = bureaucrats_sol_progress }
+				subtract_from_temp_variable = { progression_temp = 0.5 }
+				round_temp_variable = progression_temp
+
+				subtract_from_variable = { bureaucrats_sol_progress = progression_temp }
+				add_to_variable = { bureaucrats_sol = progression_temp }
+			}
+			else_if = {
+				limit = {
+					check_variable = { bureaucrats_sol_progress < -0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { regression_temp < -5 }
+					}
+					set_variable = { bureaucrats_sol_progress = -5 }
+				}
+				set_temp_variable = { regression_temp = bureaucrats_sol_progress }
+				add_to_temp_variable = { regression_temp = 0.5 }
+				round_temp_variable = regression_temp
+
+				subtract_from_variable = { bureaucrats_sol_progress = regression_temp }
+				add_to_variable = { bureaucrats_sol = regression_temp }
+			}
+
+			if = {
+				limit = {
+					check_variable = { bureaucrats_sol < 1 }
+				}
+				set_variable = { bureaucrats_sol = 1 }
+			}
+		#
+		#Soldiers
+			if = {
+				limit = {
+					check_variable = { soldiers_money < 0 }
+				}
+				set_temp_variable = { regression_temp = soldiers_money }
+				divide_temp_variable = { regression_temp = soldiers_needs_spending }
+				multiply_temp_variable = { regression_temp = 10 }
+
+				if = {
+					limit = {
+						check_variable = { soldiers_sol > 1 }
+					}
+					add_to_variable = { soldiers_sol_progress = regression_temp }
+				}
+				else_if = {
+					limit = {
+						check_variable = { soldiers_sol_progress < 0 }
+					}
+					set_variable = { soldiers_sol_progress = 0 }
+				}
+				set_variable = { soldiers_money = 0 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { soldiers_money > soldiers_needs_spending }
+				}
+				set_temp_variable = { progression_temp = soldiers_money }
+				subtract_from_temp_variable = { progression_temp = soldiers_needs_spending }
+				divide_temp_variable = { progression_temp = soldiers_needs_spending }
+				multiply_temp_variable = { progression_temp = 10 }
+
+				add_to_variable = { soldiers_sol_progress = progression_temp }
+				set_variable = { soldiers_money = soldiers_needs_spending }
+			}
+
+			if = {
+				limit = {
+					check_variable = { soldiers_sol_progress > 0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { soldiers_sol_progress > 5 }
+					}
+					set_variable = { soldiers_sol_progress = 5 }
+				}
+				set_temp_variable = { progression_temp = soldiers_sol_progress }
+				subtract_from_temp_variable = { progression_temp = 0.5 }
+				round_temp_variable = progression_temp
+
+				subtract_from_variable = { soldiers_sol_progress = progression_temp }
+				add_to_variable = { soldiers_sol = progression_temp }
+			}
+			else_if = {
+				limit = {
+					check_variable = { soldiers_sol_progress < -0.999 }
+				}
+				if = {
+					limit = {
+						check_variable = { regression_temp < -5 }
+					}
+					set_variable = { soldiers_sol_progress = -5 }
+				}
+				set_temp_variable = { regression_temp = soldiers_sol_progress }
+				add_to_temp_variable = { regression_temp = 0.5 }
+				round_temp_variable = regression_temp
+
+				subtract_from_variable = { soldiers_sol_progress = regression_temp }
+				add_to_variable = { soldiers_sol = regression_temp }
+			}
+
+			if = {
+				limit = {
+					check_variable = { soldiers_sol < 1 }
+				}
+				set_variable = { soldiers_sol = 1 }
+			}
+		#
+	#
+}
+on_monthly_pop_changes = {
+	#Changing Pop Types
+	pops_balance = yes
+
+	pops_update = yes
+}
+
+# Statistics
+on_monthly_state_statistics = {
+	if = {
+		limit = {
+			check_variable = { gdp > global.highest_state_gdp }
+		}
+		set_variable = { global.highest_state_gdp = gdp }
+	}
+	if = {
+		limit = {
+			check_variable = { pops_sol > global.highest_state_sol }
+		}
+		set_variable = { global.highest_state_sol = pops_sol }
+	}
+}
+on_monthly_national_statistics = {
+	country_pops_update = yes # National Statistics
+	country_calc_gdp = yes # National Statistics
+}

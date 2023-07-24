@@ -1,0 +1,27 @@
+focus_tree  ={
+	id = dandt_CHI_ft
+	country = {
+		factor = 0
+		modifier = {
+			add = 11
+			tag = CHI
+			has_dlc = "Waking the Tiger"
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1000 }
+
+	focus = {
+		id = CHI_demobilization_conference
+
+		x = 5
+
+		cost = 10
+
+		completion_reward = {
+			country_event = CHI_central_plains_war.1
+		}
+	}
+}

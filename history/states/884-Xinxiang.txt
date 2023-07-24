@@ -1,0 +1,24 @@
+state={
+	id=884
+	name="STATE_884"
+	provinces={
+		1139 1180 1575 4058 4114 4144 4606 7074 
+	}
+	history={
+		owner=GUO
+		add_core_of=GUO
+		buildings={
+			infrastructure=2
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+	}
+	manpower=8293719
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

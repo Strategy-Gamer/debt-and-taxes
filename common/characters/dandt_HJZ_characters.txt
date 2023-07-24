@@ -1,0 +1,30 @@
+characters = {
+	#
+		HJZ_ali_bin_hussein_hashim = {
+			name = "Ali bin Hussein Hashim"
+			#https://en.wikipedia.org/wiki/Ali_bin_Hussein,_King_of_Hejaz
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HJZ_ali_bin_hussein_hashim
+				}
+			}
+			country_leader = {
+				ideology = despotism
+			}
+			#ideology_conservative
+		}
+		HJZ_abdullah_bin_ali_hashim = {
+			name = "Abdullah_bin_ali_hashim"
+			#https://en.wikipedia.org/wiki/Abd_al-Ilah
+			portraits = {
+				civilian = {
+					large = GFX_portrait_HJZ_abdullah_bin_ali_hashim
+				}
+			}
+			country_leader = {
+				ideology = despotism
+			}
+			#ideology_liberal
+		}
+	#
+}

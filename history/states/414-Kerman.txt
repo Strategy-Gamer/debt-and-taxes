@@ -1,0 +1,39 @@
+
+state={
+	id=414
+	name="STATE_414"
+
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 1
+			7982 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			10913 1 
+		}
+		victory_points = {
+			7990 1 
+		}
+		victory_points = {
+			7982 3
+		}
+		add_core_of = PER
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		1986 7982 7990 10759 10828 10890 10913 11249 12739 12809 12863 12895 12852
+	}
+	manpower=486013
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

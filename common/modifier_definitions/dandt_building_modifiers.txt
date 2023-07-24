@@ -1,0 +1,18 @@
+#General Modifiers
+	#Subsistence Farms
+		#Ouput
+			subsistence_farm_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = country
+			}
+			local_subsistence_farm_output_factor = {
+				color_type = good
+				value_type = percentage
+				precision = 1
+				category = state
+			}
+		#
+	#
+#

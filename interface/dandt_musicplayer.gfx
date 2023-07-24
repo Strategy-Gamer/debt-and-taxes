@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_dandt_l_cover"
+		textureFile = "gfx/interface/topbar/musicplayer/classic_album_art.dds"
+		noOfFrames = 2
+	}
+}

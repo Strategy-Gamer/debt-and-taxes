@@ -1,0 +1,170 @@
+ideas = {
+	pop_tokens = {
+		pop_slaves = { allowed = { always = no } }
+		pop_peasants = { allowed = { always = no } }
+		pop_laborers = { allowed = { always = no } }
+		pop_workers = { allowed = { always = no } }
+		pop_professionals = { allowed = { always = no } }
+		pop_elites = { allowed = { always = no } }
+		pop_bureaucrats = { allowed = { always = no } }
+		pop_soldiers = { allowed = { always = no } }
+	}
+	pop_desc_tokens = {
+		pop_slaves_desc = { allowed = { always = no } }
+		pop_peasants_desc = { allowed = { always = no } }
+		pop_laborers_desc = { allowed = { always = no } }
+		pop_workers_desc = { allowed = { always = no } }
+		pop_professionals_desc = { allowed = { always = no } }
+		pop_elites_desc = { allowed = { always = no } }
+		pop_bureaucrats_desc = { allowed = { always = no } }
+		pop_soldiers_desc = { allowed = { always = no } }
+	}
+	attitude_tokens = { # Ideologies
+		ideology_apolitical = {
+			allowed = { always = no }
+		}
+		ideology_communist = {
+			allowed = { always = no }
+		}
+		ideology_socialist = {
+			allowed = { always = no }
+		}
+		ideology_liberal = {
+			allowed = { always = no }
+		}
+		ideology_agrarian = {
+			allowed = { always = no }
+		}
+		ideology_conservative = {
+			allowed = { always = no }
+		}
+		ideology_reactionary = {
+			allowed = { always = no }
+		}
+		ideology_fascist = {
+			allowed = { always = no }
+		}
+		ideology_stratocratic = {
+			allowed = { always = no }
+		}
+	}
+	attitude_tokens = { # Economic
+		attitude_economic_socialist = {
+			allowed = { always = no }
+		}
+		attitude_economic_progressive = {
+			allowed = { always = no }
+		}
+		attitude_economic_mixed = {
+			allowed = { always = no }
+		}
+		attitude_economic_market = {
+			allowed = { always = no }
+		}
+		attitude_economic_capitalist = {
+			allowed = { always = no }
+		}
+	}
+	attitude_tokens = { # Trade
+		attitude_trade_free = {
+			allowed = { always = no }
+		}
+		attitude_trade_protectionist = {
+			allowed = { always = no }
+		}
+		attitude_trade_nationalist = {
+			allowed = { always = no }
+		}
+		attitude_trade_mercantalist = {
+			allowed = { always = no }
+		}
+		attitude_trade_autarkist = {
+			allowed = { always = no }
+		}
+	}
+	attitude_tokens = { # Control
+		attitude_control_anarchist = {
+			allowed = { always = no }
+		}
+		attitude_control_minarchist = {
+			allowed = { always = no }
+		}
+		attitude_control_statist = {
+			allowed = { always = no }
+		}
+		attitude_control_authoritarian = {
+			allowed = { always = no }
+		}
+		attitude_control_totalitarian = {
+			allowed = { always = no }
+		}
+	}
+	attitude_tokens = { # Piety
+		attitude_piety_fundamentalist = {
+			allowed = { always = no }
+		}
+		attitude_piety_moralist = {
+			allowed = { always = no }
+		}
+		attitude_piety_pluralist = {
+			allowed = { always = no }
+		}
+		attitude_piety_secular = {
+			allowed = { always = no }
+		}
+		attitude_piety_atheist = {
+			allowed = { always = no }
+		}
+	}
+	attitude_tokens = { # Diplomacy
+		attitude_diplomacy_jingoist = {
+			allowed = { always = no }
+		}
+		attitude_diplomacy_interventionist = {
+			allowed = { always = no }
+		}
+		attitude_diplomacy_pragmaticist = {
+			allowed = { always = no }
+		}
+		attitude_diplomacy_non_interventionist = {
+			allowed = { always = no }
+		}
+		attitude_diplomacy_isolationist = {
+			allowed = { always = no }
+		}
+	}
+	attitude_tokens = { # Military
+		attitude_military_militarist = {
+			allowed = { always = no }
+		}
+		attitude_military_pro = {
+			allowed = { always = no }
+		}
+		attitude_military_limited = {
+			allowed = { always = no }
+		}
+		attitude_military_anti = {
+			allowed = { always = no }
+		}
+		attitude_military_pacifist = {
+			allowed = { always = no }
+		}
+	}
+	attitude_tokens = { # Immigration
+		attitude_immigration_xenophile = {
+			allowed = { always = no }
+		}
+		attitude_immigration_globalist = {
+			allowed = { always = no }
+		}
+		attitude_immigration_moderate = {
+			allowed = { always = no }
+		}
+		attitude_immigration_nativist = {
+			allowed = { always = no }
+		}
+		attitude_immigration_xenophobic = {
+			allowed = { always = no }
+		}
+	}
+}

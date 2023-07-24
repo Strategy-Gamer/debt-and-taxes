@@ -1,0 +1,627 @@
+technologies = {
+
+	#Power
+	watt_steam_engine = {
+			
+		path = {
+			leads_to_tech = steam_indicator 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = double_acting_engine 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = rotary_power 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = d_slide_valve 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1776
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 2 y = 0 }
+		}
+		
+		on_research_complete = {
+			custom_effect_tooltip = increase_coal_mine_output_tech_20
+			custom_effect_tooltip = increase_mine_size_1
+			custom_effect_tooltip = requirement_separator
+			custom_effect_tooltip = requirement_requires_one
+			custom_effect_tooltip = requirement_20_coal_in_a_state
+			custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+	steam_indicator = {
+		
+		path = {
+			leads_to_tech = centrifugal_governor 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1784
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 3 y = 2 }
+		}
+		
+		on_research_complete = {
+			custom_effect_tooltip = increase_daily_industry_xp_0.05
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+
+	centrifugal_governor = {
+		
+		path = {
+			leads_to_tech = high_pressure_steam_engine 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1784
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 3 y = 3 }
+		}
+		
+		on_research_complete = {
+			custom_effect_tooltip = factory_machinery_upkeep_0.8x
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	double_acting_engine = {
+
+		path = {
+			leads_to_tech = compound_engine
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1784
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 2 y = 2 }
+		}
+		
+		on_research_complete = {
+			custom_effect_tooltip = increase_coal_mine_output_tech_20
+			custom_effect_tooltip = increase_mine_size_1
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+
+	compound_engine = {
+		
+		path = {
+			leads_to_tech = high_pressure_steam_engine 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1784
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 2 y = 3 }
+		}
+		
+		on_research_complete = {
+			custom_effect_tooltip = increase_coal_mine_output_tech_20
+			custom_effect_tooltip = increase_mine_size_1
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	rotary_power = {
+		
+		path = {
+			leads_to_tech = parallel_motion 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1784
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 1 y = 2 }
+		}
+		
+		on_research_complete = {
+			custom_effect_tooltip = factory_throughput_33
+			custom_effect_tooltip = factory_machinery_upkeep_2x
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+
+	parallel_motion = {
+		
+		path = {
+			leads_to_tech = high_pressure_steam_engine 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1784
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 1 y = 3 }
+		}
+		
+		on_research_complete = {
+			custom_effect_tooltip = factory_throughput_17
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	########################### 1800's ###########################
+	
+	d_slide_valve = {
+	
+		research_speed_factor = -0.87
+
+		
+		#path = {
+		#	leads_to_tech = improved_machine_tools 
+		#	research_cost_coeff = 1
+		#}
+
+		research_cost = 1
+		start_year = 1800
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+	high_pressure_steam_engine = {
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		dependencies = {
+			centrifugal_governor = 1
+			compound_engine = 1
+			parallel_motion = 1
+		}
+
+		path = {
+			leads_to_tech = cornish_system 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = improved_condensing 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = double_expansion_steam_engine
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1800
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 2 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	improved_condensing = {
+	
+		production_factory_max_efficiency_factor = 0.1
+
+		path = {
+			leads_to_tech = compound_high_pressure_engine 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1800
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	compound_high_pressure_engine = {
+	
+		production_factory_max_efficiency_factor = 0.1
+
+		research_cost = 1
+		start_year = 1800
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 5 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	cornish_system = {
+	
+		production_factory_max_efficiency_factor = 0.1
+
+		path = {
+			leads_to_tech = cornish_boiler
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1808
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	cornish_boiler = {
+	
+		production_factory_max_efficiency_factor = 0.1
+
+		path = {
+			leads_to_tech = watt_steam_engine_replacement 
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = lancashire_boiler 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1808
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 4 y = 9 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	lancashire_boiler = {
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		path = {
+			leads_to_tech = galloway_tubes 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1840
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 4 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	galloway_tubes = {
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		#path = {
+		#	leads_to_tech = improved_machine_tools 
+		#	research_cost_coeff = 1
+		#}
+
+		research_cost = 1
+		start_year = 1848
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 4 y = 18 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+	watt_steam_engine_replacement = {
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		#path = {
+		#	leads_to_tech = improved_machine_tools 
+		#	research_cost_coeff = 1
+		#}
+
+		research_cost = 1
+		start_year = 1832
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 3 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+	double_expansion_steam_engine = {
+	
+		dependencies = {
+			cornish_boiler = 1
+		}
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		path = {
+			leads_to_tech = multiple_expansion_engine 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = corliss_steam_engine 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1840
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 2 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+	multiple_expansion_engine = {
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		#path = {
+		#	leads_to_tech = improved_machine_tools 
+		#	research_cost_coeff = 1
+		#}
+
+		research_cost = 1
+		start_year = 1864
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 0 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+	corliss_steam_engine = {
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		path = {
+			leads_to_tech = porter_allen_high_speed_steam_engine 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1856
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 2 y = 18 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+	porter_allen_high_speed_steam_engine = {
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		path = {
+			leads_to_tech = superheated_steam 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1864
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 2 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+	superheated_steam = {
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		path = {
+			leads_to_tech = steam_engine_piston_valves 
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1880
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 1 y = 26 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+	steam_engine_piston_valves = {
+	
+		dependencies = {
+			d_slide_valve = 1
+		}
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		#path = {
+		#	leads_to_tech = improved_machine_tools 
+		#	research_cost_coeff = 1
+		#}
+
+		research_cost = 2
+		start_year = 1900
+		folder = {
+			name = dandt_tech_folder
+			position = { x = 0 y = 32 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+		}
+	}
+
+}

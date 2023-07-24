@@ -1,0 +1,104 @@
+Resources:
+	During World War II, production peaked again, exceeding 1,000,000 metric tons (1,100 tons) for the first time in 1941
+	Aluminum Production: 3,090,000 tons in 1954
+	
+	Meanwhile, aluminium gained uses elsewhere. Aluminium began to be used for the mass production of houseware that quickly and almost completely replaced copper and cast iron utensils. Aluminium frying pans and saucepans are light, warm and cool quickly and do not rust.
+	Robert Victor Neher invented the method used for continuous aluminium rolling foil production in Switzerland in 1907. He launched the world's first foil rolling mill in 1910.
+	Another critical moment for the aluminium industry began in 1920, when a group of scientists under the leadership of Soderberg from Norway invented a new aluminium production process that made the Hall- Héroult method much cheaper. Previously, pre-baked coal blocks were used as anode cells during reduction; they were consumed quickly and so the use of new ones was required constantly. Soderberg solved this problem with the help of a continuous electrode. It is formed in a special reduction chamber from a coke and tar paste and added to the upper hole of the electrolyte cell when required.
+	The aluminium can, an iconic product that became one of the largest aluminium commodities, the symbol of environmental friendliness and a focal point in the field of art and design, emerged in the USA in 1958.
+
+Political Spectrums:
+Ideology: [Left] Communist - Socialist - Liberal - Centrist - Conservative - Reactionary - Nationalist [Right]
+Economy: [Socialism] Socialist - Progressive - Centrist - Market - Capitalist [Capitalism]
+Trade: [Free Trade] Free Trade - Protectionist - Nationalist - Mercantalist - Autarkist [Closed Economy]
+Government: [Liberty] Anarchist - Minarchist - Statist - Authoritarian - Totalitarian [Authority]
+Piety: [Religious] Fundamentalist - Moralist - Pluralist - Secular - Athiest [Non-Religious]
+Foreign Policy - [Hawk] Jingoist - Interventionist - Pragmatic Interventionist - Non-Interventionist - Isolationist [Dove]
+Military - [Pro-Military] Militarist - Pro-Military - Limited Military - Anti-Military - Pacifist [Anti-Military]
+Immigration - [Pro-Immigration] Open Borders - Mass Immigration - Moderated Immigration - Nativist - Radical Xenophobe [Anti-Immigration]
+
+
+Technologies:
+	Synthetic Polymers
+		Rayon
+		Bakelite
+
+	Electric Iron (1905)
+	Washing Machine (1907)
+	Vacuum Cleaner (1907)
+	Model T Automobile (1908)
+	Electric Toaster (1909)
+	Assembly Line (1913)
+	Radio (1913)
+	Electric Refrigerator (1913)
+	Electric Dishwasher (1913)
+	Plastic (1917)
+	The Convertible (1922)
+	Traffic Signal (1923)
+	Bulldozer (1923)
+	Frozen Food (1929)
+
+	Freon (Regrigerators) (1930)
+	Automatic Bread Slicer (1930)
+	Synthetic Rubber, Duprene (1931)
+	Car Radio (1933)
+	Synthetic Rubber, Neoprene (1937)
+	Nylon (1938)
+
+	Bosch introduced the rotary hammer in 1932, then the breaker hammer in 1950
+
+	
+US Workforce Stats
+All numbers are in thousands.
+
+Population                123,202
+Total Workforce           48,829 (38,077 Male, 10,752 Female)
+
+Agriculture               10,483
+Fishing                   74
+Lumber                    649
+
+Coal                      691
+Copper                    51
+Precious Metals           80
+Iron                      31*
+Oil & Gas                 198
+Misc Mining               411
+
+Electricity               289
+Cement                    261
+Silicates                 97
+Chemicals/Plastics        404
+Textiles                  1,183
+Machinery/Tools           280*
+Steel                     620*
+Other I/S/M/T             1,218
+
+Fertilizer                28
+Oil Refinery              173
+Rubber                    166
+Automobiles               898
+Electronics               383
+Food Processing           907
+Clothing                  1,158
+Consumer Goods            1794
+Shipyards                 93
+
+Other Manufacturing       899
+
+Construction              3,028
+Transport                 3,618
+Shipping                  299
+Finance                   1,195
+Housing                   347
+Entertainment             443
+
+Public Service            1,049
+Professional Service      2,965
+Domestic Service**        4,814
+Retail**                  5,851
+
+Other                     1,687
+
+* - These numbers may be larger b/c of "Other I/S/M/T"
+** - Not represented in D&T

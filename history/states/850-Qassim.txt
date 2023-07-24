@@ -1,0 +1,28 @@
+state={
+	id=850
+	name="STATE_850"
+	provinces={
+		2057 4968 4974 5027 5058 5099 7970 8101 10815 10850 10892 10901 10923 12455 12749 12758 13373 13374 
+	}
+	history={
+		owner=SAU
+		add_claim_by=HJZ
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			4968 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		set_demilitarized_zone = yes
+	}
+	manpower=473867
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=pastoral
+}

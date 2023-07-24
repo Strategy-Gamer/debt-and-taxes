@@ -1,0 +1,27 @@
+
+state={
+	id=614
+	name="STATE_614"
+
+	history={
+		owner = SHX
+		add_core_of = SHX
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+	}
+
+	provinces={
+		4032 4093 4190 4208 7000 7109 10003 10022 10053 
+	}
+	manpower=5834900
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

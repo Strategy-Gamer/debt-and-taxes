@@ -1,0 +1,36 @@
+
+state={
+	id=606
+	name="STATE_606"
+	resources={
+		steel=11.000
+	}
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = {
+			7222 1 
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1083 1146 4203 7035 7094 7222 10008 10017 10064 11994 12036 12061 
+	}
+	manpower=10045966
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=2.000
+}

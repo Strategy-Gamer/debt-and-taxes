@@ -1,0 +1,42 @@
+
+The overall structure of Debt and Taxes ought to be realistic yet abstracted enough so it can run on HOI4 smoothly.
+
+REQS:
+
+There are 58 industries for 49 resources.
+    Each industry
+        - has inputs which must be satisfied to produce an output.
+        Has employees
+            Two Statuses:
+                - Worker (Gets paid a wage)
+                - Unemployed (Either b/c not enough jobs or hard financial times)
+        Buildings:
+            - Provides jobs for unskilled/skilled/specialist labor
+            - Has set wages for employees
+                -Different pop type wages are proportional to each other
+            - Profits go to corporations/pops
+            - Has maintenance goods reqs
+        Industry Tech:
+            - Changes jobs proportionality
+            Types:
+                - Mechanization, reqs machinery
+                - Electrification, reqs electricity
+                - Automation, reqs computers
+            - Has maintenance goods reqs
+        Has a collective money pool
+            - Used to buy input/maintenance goods
+            - Profits dished out proportional to production
+
+There are 8 pop types
+    Thrall
+    Unskilled
+    Skilled
+    Specialist
+
+    Soldier
+    Bureaucrat
+    Capitalist
+    Retiree
+
+    Each have their own money pool & needs reqs.
+    

@@ -1,0 +1,1183 @@
+spriteTypes = {	
+	
+### Death and Taxes ###
+	spriteType = {
+		name = "GFX_mapmode_buttons_selected_small_test_map_mode"
+		textureFile = "gfx/interface/mapmode/mapmode_buttons_selected_small_test_map_mode"
+	}
+	spriteType = {
+		name = "GFX_mapmode_buttons_deselected_small_test_map_mode"
+		textureFile = "gfx/interface/mapmode/mapmode_buttons_deselected_small_test_map_mode"
+	}
+
+	#Buttons
+	spriteType = {
+		name = "GFX_economy_button"
+		texturefile = "gfx/interface/topbar/toolbar/economy_button.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_state_list_button"
+		texturefile = "gfx/interface/topbar/toolbar/state_list_button.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_state_button_background"
+		texturefile = "gfx/interface/buttons/state_button_background.dds"
+	}
+	spriteType = {
+		name = "GFX_state_button_background_pressed"
+		texturefile = "gfx/interface/buttons/state_button_background_pressed.dds"
+	}
+	spriteType = {
+		name = "GFX_state_economy_button"
+		texturefile = "gfx/interface/buttons/state_economy_button.dds"
+	}	
+	spriteType = {
+		name = "GFX_mini_add_button"
+		texturefile = "gfx/interface/buttons/mini_add_button.dds"
+	}
+	spriteType = {
+		name = "GFX_button_182x34"
+		texturefile = "gfx/interface/buttons/button_182x34.dds"
+	}
+	spriteType = {
+		name = "GFX_button_steel_129x33_pressed"
+		texturefile = "gfx/interface/buttons/button_steel_129x33_pressed.dds"
+	}
+	spriteType = {
+		name = "GFX_button_steel_149x33_pressed"
+		texturefile = "gfx/interface/buttons/button_steel_149x33_pressed.dds"
+	}
+	spriteType = {
+		name = "GFX_button_steel_129x33_unpressed"
+		texturefile = "gfx/interface/buttons/button_steel_129x33_unpressed.dds"
+	}
+	spriteType = {
+		name = "GFX_button_steel_149x33_unpressed"
+		texturefile = "gfx/interface/buttons/button_steel_149x33_unpressed.dds"
+	}
+	spriteType = {
+		name = "GFX_button_steel_203x41"
+		texturefile = "gfx/interface/buttons/button_steel_203x41.dds"
+	}
+	spriteType = {
+		name = "GFX_button_steel_252x35"
+		texturefile = "gfx/interface/buttons/button_steel_252x35.dds"
+	}
+	spriteType = {
+		name = "GFX_button_steel_orange_252x35"
+		texturefile = "gfx/interface/buttons/button_steel_orange_252x35.dds"
+	}
+	spriteType = {
+		name = "GFX_button_graph_pressed"
+		texturefile = "gfx/interface/buttons/button_graph_pressed.dds"
+	}
+	spriteType = {
+		name = "GFX_button_graph_unpressed"
+		texturefile = "gfx/interface/buttons/button_graph_unpressed.dds"
+	}
+	spriteType = {
+		name = "GFX_building_tab_button"
+		texturefile = "gfx/interface/buttons/building_tab_button.dds"
+	}
+	spriteType = {
+		name = "GFX_building_tab_button_selected"
+		texturefile = "gfx/interface/buttons/building_tab_button_selected.dds"
+	}
+	spriteType = {
+		name = "GFX_market_tab_button"
+		texturefile = "gfx/interface/buttons/market_tab_button.dds"
+	}
+	spriteType = {
+		name = "GFX_increase_size_button"
+		texturefile = "gfx/interface/buttons/increase_size_button.dds"
+	}
+	spriteType = {
+		name = "GFX_decrease_size_button"
+		texturefile = "gfx/interface/buttons/decrease_size_button.dds"
+	}
+
+	#Interface
+	spriteType = {
+		name = "GFX_state_overview_background"
+		texturefile = "gfx/interface/gui/state_overview_background.dds"
+	}
+	spriteType = {
+		name = "GFX_selected_resource_background"
+		texturefile = "gfx/interface/gui/selected_resource_background.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_industry_construction_background"
+		texturefile = "gfx/interface/gui/industry_construction_background.dds"
+		borderSize = { x = 0 y = 0 }
+		size = {  x = 286 y = 447 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	} 
+	spriteType = {
+		name = "GFX_revenue_background"
+		texturefile = "gfx/interface/gui/revenue_background.dds"
+	}
+	spriteType = {
+		name = "GFX_expenditure_background"
+		texturefile = "gfx/interface/gui/expenditure_background.dds"
+	}
+	spriteType = {
+		name = "GFX_final_budget_background"
+		texturefile = "gfx/interface/gui/final_budget_background.dds"
+	}
+	spriteType = {
+		name = "GFX_pops_menu_background"
+		texturefile = "gfx/interface/gui/pops_menu_background.dds"
+	}
+	spriteType = {
+		name = "GFX_pops_menu_palpy_background"
+		texturefile = "gfx/interface/gui/pops_menu_palpy_background.dds"
+	}
+	spriteType = {
+		name = "GFX_subsistence_farms_background"
+		texturefile = "gfx/interface/gui/subsistence_farms_background.dds"
+	}
+	spriteType = {
+		name = "GFX_market_capital_background"
+		texturefile = "gfx/interface/gui/market_capital_background.dds"
+	}
+	spriteType = {
+		name = "GFX_market_balance_background"
+		texturefile = "gfx/interface/gui/market_balance_background.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_trade_route_background"
+		texturefile = "gfx/interface/gui/dandt_trade_route_background.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_trade_resource_background"
+		texturefile = "gfx/interface/gui/dandt_trade_resource_background.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_trade_resource_background_red"
+		texturefile = "gfx/interface/gui/dandt_trade_resource_background_red.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_trade_resource_background_green"
+		texturefile = "gfx/interface/gui/dandt_trade_resource_background_green.dds"
+	}
+	spriteType = {
+		name = "GFX_market_entry_background"
+		texturefile = "gfx/interface/gui/market_entry_background.dds"
+	}
+	spriteType = {
+		name = "GFX_market_entry_background_green"
+		texturefile = "gfx/interface/gui/market_entry_background_green.dds"
+	}
+	spriteType = {
+		name = "GFX_market_entry_background_red"
+		texturefile = "gfx/interface/gui/market_entry_background_red.dds"
+	}
+	spriteType = {
+		name = "GFX_market_square_background"
+		texturefile = "gfx/interface/gui/market_square_background.dds"
+	}
+	spriteType = {
+		name = "GFX_market_rectangle_background"
+		texturefile = "gfx/interface/gui/market_rectangle_background.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_header_wide"
+		texturefile = "gfx/interface/gui/generic_header_wide.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_header_slightly_wider"
+		texturefile = "gfx/interface/gui/generic_header_slightly_wider.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_header_wider"
+		texturefile = "gfx/interface/gui/generic_header_wider.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_generic_large_header_lime"
+		texturefile = "gfx/interface/gui/dandt_generic_large_header_lime.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_generic_large_header_yellow"
+		texturefile = "gfx/interface/gui/dandt_generic_large_header_yellow.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_generic_large_header_red"
+		texturefile = "gfx/interface/gui/dandt_generic_large_header_red.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_generic_large_header_blue"
+		texturefile = "gfx/interface/gui/dandt_generic_large_header_blue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dandt_generic_large_section_divider"
+		texturefile = "gfx/interface/gui/dandt_generic_large_section_divider.dds"
+	}
+	spriteType = {
+		name = "GFX_dual_bar_small"
+		texturefile = "gfx/interface/gui/dual_bar_small.dds"
+	}
+	progressbartype = {
+		name = "GFX_trade_resource_balance_negative"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 1.0 }
+		textureFile1 = "gfx//interface//graphs//dual_bar_small_blue.dds" # <<< Path of Transparent Icon
+		textureFile2 = "gfx//interface//graphs//dual_bar_small_transparent.dds" # <<< Path of Blue Icon
+		size = { x = 40 y = 7 } # <<< Size of Bar (when full)
+		effectFile = "gfx//FX//progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_trade_resource_balance_positive"
+		color = { 0.8 0.2 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx//interface//graphs//dual_bar_small_transparent.dds" # <<< Path of Orange Icon
+		textureFile2 = "gfx//interface//graphs//dual_bar_small_orange.dds" # <<< Path of Transparent Icon
+		size = { x = 40 y = 7 } # <<< Size of Bar (when full)
+		effectFile = "gfx//FX//progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_trade_resource_price_negative"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 1.0 }
+		textureFile1 = "gfx//interface//graphs//dual_bar_small_transparent.dds" # <<< Path of Transparent Icon
+		textureFile2 = "gfx//interface//graphs//dual_bar_small_blue.dds" # <<< Path of Blue Icon
+		size = { x = 40 y = 7 } # <<< Size of Bar (when full)
+		effectFile = "gfx//FX//progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_trade_resource_price_positive"
+		color = { 0.8 0.2 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx//interface//graphs//dual_bar_small_orange.dds" # <<< Path of Orange Icon
+		textureFile2 = "gfx//interface//graphs//dual_bar_small_transparent.dds" # <<< Path of Transparent Icon
+		size = { x = 40 y = 7 } # <<< Size of Bar (when full)
+		effectFile = "gfx//FX//progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_dandt_header_industry"
+		texturefile = "gfx/interface/gui/dandt_header_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_header_infrastructure"
+		texturefile = "gfx/interface/gui/dandt_header_infrastructure.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_header_terrain"
+		texturefile = "gfx/interface/gui/dandt_header_terrain.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_header_workforce"
+		texturefile = "gfx/interface/gui/dandt_header_workforce.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dandt_resource_entry"
+		texturefile = "gfx/interface/gui/dandt_resource_entry.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_resource_market_entry"
+		texturefile = "gfx/interface/gui/dandt_resource_market_entry.dds"
+	}
+	spriteType = {
+		name = "GFX_industry_background"
+		texturefile = "gfx/interface/gui/industry_background.dds"
+	}
+	spriteType = {
+		name = "GFX_infrastructure_background"
+		texturefile = "gfx/interface/gui/infrastructure_background.dds"
+	}
+	spriteType = {
+		name = "GFX_select_production_method_box"
+		texturefile = "gfx/interface/gui/select_production_method_box.dds"
+	}
+	
+	
+	#Sprites
+	spriteType = {
+		name = "GFX_league_of_nations_icon"
+		texturefile = "gfx/interface/icons/league_of_nations_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pop_icons"
+		texturefile = "gfx/interface/icons/pop_icons.dds"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_pop_icons_dark"
+		texturefile = "gfx/interface/icons/pop_icons_dark.dds"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_pop_icons_halved"
+		texturefile = "gfx/interface/icons/pop_icons_halved.dds"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hat_elites_icon"
+		texturefile = "gfx/interface/icons/hat_elites_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pops_life_needs_fulfilled_strip"
+		texturefile = "gfx/interface/icons/pops_life_needs_fulfilled_strip.dds"
+		noOfFrames = 11
+	}
+	spriteType = {
+		name = "GFX_pops_everyday_needs_fulfilled_strip"
+		texturefile = "gfx/interface/icons/pops_everyday_needs_fulfilled_strip.dds"
+		noOfFrames = 11
+	}
+	spriteType = {
+		name = "GFX_pops_luxury_needs_fulfilled_strip"
+		texturefile = "gfx/interface/icons/pops_luxury_needs_fulfilled_strip.dds"
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_workforce_icon"
+		texturefile = "gfx/interface/icons/workforce_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_workforce_icon_small"
+		texturefile = "gfx/interface/icons/workforce_icon_small.dds"
+	}
+	spriteType = {
+		name = "GFX_employed_icon"
+		texturefile = "gfx/interface/icons/employed_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_unemployed_icon"
+		texturefile = "gfx/interface/icons/unemployed_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_literacy_icon"
+		texturefile = "gfx/interface/icons/literacy_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_schooling_icon"
+		texturefile = "gfx/interface/icons/schooling_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_education_icon"
+		texturefile = "gfx/interface/icons/education_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_consciousness_icon"
+		texturefile = "gfx/interface/icons/consciousness_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_militancy_icon"
+		texturefile = "gfx/interface/icons/militancy_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_standard_of_living_icon"
+		texturefile = "gfx/interface/icons/standard_of_living_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_cost_of_living_icon"
+		texturefile = "gfx/interface/icons/cost_of_living_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gdp_icon"
+		texturefile = "gfx/interface/icons/gdp_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_imports_icon"
+		texturefile = "gfx/interface/icons/imports_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_exports_icon"
+		texturefile = "gfx/interface/icons/exports_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_currency_supply_icon"
+		texturefile = "gfx/interface/icons/currency_supply_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_wealth_icon"
+		texturefile = "gfx/interface/icons/wealth_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_price_very_expensive"
+		texturefile = "gfx/interface/icons/price_very_expensive.dds"
+	}
+	spriteType = {
+		name = "GFX_price_expensive"
+		texturefile = "gfx/interface/icons/price_expensive.dds"
+	}
+	spriteType = {
+		name = "GFX_price_slightly_expensive"
+		texturefile = "gfx/interface/icons/price_slightly_expensive.dds"
+	}
+	spriteType = {
+		name = "GFX_price_average"
+		texturefile = "gfx/interface/icons/price_average.dds"
+	}
+	spriteType = {
+		name = "GFX_price_very_cheap"
+		texturefile = "gfx/interface/icons/price_very_cheap.dds"
+	}
+	spriteType = {
+		name = "GFX_price_cheap"
+		texturefile = "gfx/interface/icons/price_cheap.dds"
+	}
+	spriteType = {
+		name = "GFX_price_slightly_cheap"
+		texturefile = "gfx/interface/icons/price_slightly_cheap.dds"
+	}
+
+	spriteType = {
+		name = "GFX_industry_icon"
+		texturefile = "gfx/interface/icons/industry_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_icon"
+		texturefile = "gfx/interface/icons/tech_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_automation_icon"
+		texturefile = "gfx/interface/icons/automation_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_priority_icon_none"
+		texturefile = "gfx/interface/icons/priority_icon_none.dds"
+	}
+	spriteType = {
+		name = "GFX_priority_icon_low"
+		texturefile = "gfx/interface/icons/priority_icon_low.dds"
+	}
+	spriteType = {
+		name = "GFX_priority_icon_medium"
+		texturefile = "gfx/interface/icons/priority_icon_medium.dds"
+	}
+	spriteType = {
+		name = "GFX_priority_icon_high"
+		texturefile = "gfx/interface/icons/priority_icon_high.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_none"
+		texturefile = "gfx/interface/icons/employment_icon_0.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_1"
+		texturefile = "gfx/interface/icons/employment_icon_1.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_2"
+		texturefile = "gfx/interface/icons/employment_icon_2.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_3"
+		texturefile = "gfx/interface/icons/employment_icon_3.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_4"
+		texturefile = "gfx/interface/icons/employment_icon_4.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_5"
+		texturefile = "gfx/interface/icons/employment_icon_5.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_6"
+		texturefile = "gfx/interface/icons/employment_icon_6.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_7"
+		texturefile = "gfx/interface/icons/employment_icon_7.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_8"
+		texturefile = "gfx/interface/icons/employment_icon_8.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_9"
+		texturefile = "gfx/interface/icons/employment_icon_9.dds"
+	}
+	spriteType = {
+		name = "GFX_employment_icon_10"
+		texturefile = "gfx/interface/icons/employment_icon_10.dds"
+	}
+	spriteType = {
+		name = "GFX_production_method_basic_button"
+		texturefile = "gfx/interface/buttons/production_method_basic_button.dds"
+	}
+	spriteType = {
+		name = "GFX_production_method_industrialized_button"
+		texturefile = "gfx/interface/buttons/production_method_industrialized_button.dds"
+	}
+	spriteType = {
+		name = "GFX_production_method_mechanized_button"
+		texturefile = "gfx/interface/buttons/production_method_mechanized_button.dds"
+	}
+	spriteType = {
+		name = "GFX_production_method_modernized_button"
+		texturefile = "gfx/interface/buttons/production_method_modernized_button.dds"
+	}
+	spriteType = {
+		name = "GFX_production_method_automatized_button"
+		texturefile = "gfx/interface/buttons/production_method_automatized_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_road_icon"
+		texturefile = "gfx/interface/icons/road_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_highway_icon"
+		texturefile = "gfx/interface/icons/highway_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_rail_icon"
+		texturefile = "gfx/interface/icons/rail_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_waterway_icon"
+		texturefile = "gfx/interface/icons/waterway_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_port_icon"
+		texturefile = "gfx/interface/icons/port_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_airport_icon"
+		texturefile = "gfx/interface/icons/airport_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_infrastructure_construction_in_progress_icon"
+		texturefile = "gfx/interface/icons/infrastructure_construction_in_progress_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dandt_terrain_icon"
+		texturefile = "gfx/interface/icons/dandt_terrain_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_dandt_river_icon"
+		texturefile = "gfx/interface/icons/dandt_river_icon.dds"
+	}
+
+	
+	spriteType = {
+		name = "GFX_trend_arrow_down_red"
+		texturefile = "gfx/interface/icons/trend_arrow_down_red.dds"
+	}
+	spriteType = {
+		name = "GFX_trend_arrow_down_green"
+		texturefile = "gfx/interface/icons/trend_arrow_down_green.dds"
+	}
+	spriteType = {
+		name = "GFX_trend_arrow_right_yellow"
+		texturefile = "gfx/interface/icons/trend_arrow_right_yellow.dds"
+	}
+	spriteType = {
+		name = "GFX_trend_arrow_up_green"
+		texturefile = "gfx/interface/icons/trend_arrow_up_green.dds"
+	}
+	spriteType = {
+		name = "GFX_trend_arrow_up_red"
+		texturefile = "gfx/interface/icons/trend_arrow_up_red.dds"
+	}
+
+	
+	spriteType = {
+		name = "GFX_government_icon"
+		texturefile = "gfx/interface/icons/government_icon.dds"
+	}
+
+	#Buttons
+	spriteType = {
+		name = "GFX_generic_checkbox_checked"
+		texturefile = "gfx/interface/buttons/generic_checkbox_checked.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_checkbox_unchecked"
+		texturefile = "gfx/interface/buttons/generic_checkbox_unchecked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_stats_menu_button"
+		texturefile = "gfx/interface/buttons/stats_menu_button.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_button"
+		texturefile = "gfx/interface/buttons/population_pyramid_button.dds"
+	}
+	spriteType = {
+		name = "GFX_subsidy_button_none"
+		texturefile = "gfx/interface/buttons/subsidy_button_none.dds"
+	}
+	spriteType = {
+		name = "GFX_subsidy_button_keep_afloat"
+		texturefile = "gfx/interface/buttons/subsidy_button_keep_afloat.dds"
+	}
+	spriteType = {
+		name = "GFX_subsidy_button_subsidize_output"
+		texturefile = "gfx/interface/buttons/subsidy_button_subsidize_output.dds"
+	}
+	spriteType = {
+		name = "GFX_subsidy_button_bankroll"
+		texturefile = "gfx/interface/buttons/subsidy_button_bankroll.dds"
+	}
+	spriteType = {
+		name = "GFX_infrastructure_construction_button"
+		texturefile = "gfx/interface/buttons/infrastructure_construction_button.dds"
+	}
+	spriteType = {
+		name = "GFX_build_industry_button"
+		texturefile = "gfx/interface/buttons/build_industry_button.dds"
+	}
+	spriteType = {
+		name = "GFX_build_factory_button"
+		texturefile = "gfx/interface/buttons/build_factory_button.dds"
+	}
+	spriteType = {
+		name = "GFX_propose_budget_button"
+		texturefile = "gfx/interface/buttons/propose_budget_button.dds"
+	}
+	spriteType = {
+		name = "GFX_propose_budget_button_green"
+		texturefile = "gfx/interface/buttons/propose_budget_button_green.dds"
+	}
+	spriteType = {
+		name = "GFX_propose_budget_button_yellow"
+		texturefile = "gfx/interface/buttons/propose_budget_button_yellow.dds"
+	}
+	spriteType = {
+		name = "GFX_propose_budget_button_red"
+		texturefile = "gfx/interface/buttons/propose_budget_button_red.dds"
+	}
+	spriteType = {
+		name = "GFX_new_export_route_button"
+		texturefile = "gfx/interface/buttons/new_export_route_button.dds"
+	}
+	spriteType = {
+		name = "GFX_new_import_route_button"
+		texturefile = "gfx/interface/buttons/new_import_route_button.dds"
+	}
+	spriteType = {
+		name = "GFX_import_more_button"
+		texturefile = "gfx/interface/buttons/import_more_button.dds"
+	}
+	spriteType = {
+		name = "GFX_export_more_button"
+		texturefile = "gfx/interface/buttons/export_more_button.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trade_filter_btn_resource"
+		texturefile = "gfx/interface/buttons/trade_filter_btn_resource.dds"
+	}
+	spriteType = {
+		name = "GFX_trade_filter_btn_flag"
+		texturefile = "gfx/interface/buttons/trade_filter_btn_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_trade_filter_btn_center"
+		texturefile = "gfx/interface/buttons/trade_filter_btn_center.dds"
+	}
+	spriteType = {
+		name = "GFX_trade_filter_btn_size"
+		texturefile = "gfx/interface/buttons/trade_filter_btn_size.dds"
+	}
+	spriteType = {
+		name = "GFX_trade_filter_btn_supply_demand"
+		texturefile = "gfx/interface/buttons/trade_filter_btn_supply_demand.dds"
+	}
+	spriteType = {
+		name = "GFX_trade_filter_btn_price"
+		texturefile = "gfx/interface/buttons/trade_filter_btn_price.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_market_natural_resources_filter"
+		texturefile = "gfx/interface/buttons/market_natural_resources_filter.dds"
+	}
+	spriteType = {
+		name = "GFX_market_produced_resources_filter"
+		texturefile = "gfx/interface/buttons/market_produced_resources_filter.dds"
+	}
+	spriteType = {
+		name = "GFX_market_service_resources_filter"
+		texturefile = "gfx/interface/buttons/market_service_resources_filter.dds"
+	}
+	spriteType = {
+		name = "GFX_market_military_resources_filter"
+		texturefile = "gfx/interface/buttons/market_military_resources_filter.dds"
+	}
+	spriteType = {
+		name = "GFX_market_natural_resources_filter_active"
+		texturefile = "gfx/interface/buttons/market_natural_resources_filter_active.dds"
+	}
+	spriteType = {
+		name = "GFX_market_produced_resources_filter_active"
+		texturefile = "gfx/interface/buttons/market_produced_resources_filter_active.dds"
+	}
+	spriteType = {
+		name = "GFX_market_service_resources_filter_active"
+		texturefile = "gfx/interface/buttons/market_service_resources_filter_active.dds"
+	}
+	spriteType = {
+		name = "GFX_market_military_resources_filter_active"
+		texturefile = "gfx/interface/buttons/market_military_resources_filter_active.dds"
+	}
+
+	#Resource Icons
+	spriteType = {
+		name = "GFX_resource_crude_oil"
+		texturefile = "gfx/interface/resources/resource_crude_oil.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_aluminum"
+		texturefile = "gfx/interface/resources/resource_aluminum.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_rubber"
+		texturefile = "gfx/interface/resources/resource_rubber.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_tungsten"
+		texturefile = "gfx/interface/resources/resource_tungsten.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_iron"
+		texturefile = "gfx/interface/resources/resource_iron.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_chromium"
+		texturefile = "gfx/interface/resources/resource_chromium.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_copper"
+		texturefile = "gfx/interface/resources/resource_copper.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_precious_metals"
+		texturefile = "gfx/interface/resources/resource_precious_metals.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_coal"
+		texturefile = "gfx/interface/resources/resource_coal.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_lumber"
+		texturefile = "gfx/interface/resources/resource_lumber.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_fiber"
+		texturefile = "gfx/interface/resources/resource_fiber.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_foodstuffs"
+		texturefile = "gfx/interface/resources/resource_foodstuffs.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_electricity"
+		texturefile = "gfx/interface/resources/resource_electricity.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_steel"
+		texturefile = "gfx/interface/resources/resource_steel.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_rare_earth_metals"
+		texturefile = "gfx/interface/resources/resource_rare_earth_metals.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_cement"
+		texturefile = "gfx/interface/resources/resource_cement.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_silicates"
+		texturefile = "gfx/interface/resources/resource_silicates.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_chemicals"
+		texturefile = "gfx/interface/resources/resource_chemicals.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_fabric"
+		texturefile = "gfx/interface/resources/resource_fabric.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_machinery"
+		texturefile = "gfx/interface/resources/resource_machinery.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_plastics"
+		texturefile = "gfx/interface/resources/resource_plastics.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_fertilizer"
+		texturefile = "gfx/interface/resources/resource_fertilizer.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_hydrocarbons"
+		texturefile = "gfx/interface/resources/resource_hydrocarbons.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_automobiles"
+		texturefile = "gfx/interface/resources/resource_automobiles.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_airplanes"
+		texturefile = "gfx/interface/resources/resource_airplanes.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_computers"
+		texturefile = "gfx/interface/resources/resource_computers.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_electronics"
+		texturefile = "gfx/interface/resources/resource_electronics.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_groceries"
+		texturefile = "gfx/interface/resources/resource_groceries.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_pharmaceuticals"
+		texturefile = "gfx/interface/resources/resource_pharmaceuticals.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_clothing"
+		texturefile = "gfx/interface/resources/resource_clothing.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_consumer_goods"
+		texturefile = "gfx/interface/resources/resource_consumer_goods.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_sulfur"
+		texturefile = "gfx/interface/resources/resource_sulfur.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_convoys"
+		texturefile = "gfx/interface/resources/resource_convoys.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_small_arms"
+		texturefile = "gfx/interface/resources/resource_small_arms.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_artillery"
+		texturefile = "gfx/interface/resources/resource_artillery.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_tanks"
+		texturefile = "gfx/interface/resources/resource_tanks.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_ammunition"
+		texturefile = "gfx/interface/resources/resource_ammunition.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_rockets"
+		texturefile = "gfx/interface/resources/resource_rockets.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_construction"
+		texturefile = "gfx/interface/resources/resource_construction.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_tools"
+		texturefile = "gfx/interface/resources/resource_tools.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_healthcare"
+		texturefile = "gfx/interface/resources/resource_healthcare.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_basic_education"
+		texturefile = "gfx/interface/resources/resource_basic_education.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_higher_education"
+		texturefile = "gfx/interface/resources/resource_higher_education.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_transport"
+		texturefile = "gfx/interface/resources/resource_transport.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_shipping"
+		texturefile = "gfx/interface/resources/resource_shipping.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_finance"
+		texturefile = "gfx/interface/resources/resource_finance.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_housing"
+		texturefile = "gfx/interface/resources/resource_housing.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_entertainment"
+		texturefile = "gfx/interface/resources/resource_entertainment.dds"
+	}
+
+
+	#Scripted GUI Pie Chart
+	
+	spriteType = {
+		name = "GFX_pie_chart_segment"
+		texturefile = "gfx/interface/graphs/pie_chart_segment.dds"
+		noOfFrames = 12 # change to how many frames you have, index starts at 1
+	}
+
+	#GUI
+	corneredTileSpriteType = {
+		name = "GFX_tiled_decisions_bg_small_paper"
+		size = { x=48 y=48 }
+		texturefile = "gfx/interface/tiles/tiled_decisions_bg_small_paper.dds"
+		borderSize = { x=16 y=16 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tiled_decisions_bg_small_gray"
+		size = { x=48 y=48 }
+		texturefile = "gfx/interface/tiles/tiled_decisions_bg_small_gray.dds"
+		borderSize = { x=16 y=16 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	#Decisions
+
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_0"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_0.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_1"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_1.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_2"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_2.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_3"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_3.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_4"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_4.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_5"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_5.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_6"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_6.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_7"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_7.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_8"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_8.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_9"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_9.dds"
+	}
+	spriteType = {
+		name = "GFX_mapmodes_highlight_red_to_purple_10"
+		texturefile = "gfx/interface/decisions/mapmodes_highlight_red_to_purple_10.dds"
+	}
+
+	#Graphs
+	spriteType = {
+		name = "GFX_graph_point_icon_strip"
+		texturefile = "gfx/interface/graphs/graph_point_icon_strip.dds"
+		noOfFrames = 3
+	}
+
+	#Population Pyramid
+	spriteType = {
+		name = "GFX_population_pyramid_graph_background"
+		texturefile = "gfx/interface/graphs/population_pyramid_graph_background.dds"
+	}
+
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_187x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_187x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_178x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_178x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_168x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_168x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_159x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_159x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_150x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_150x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_140x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_140x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_131x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_131x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_122x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_122x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_112x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_112x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_103x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_103x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_94x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_94x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_84x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_84x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_75x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_75x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_65x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_65x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_56x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_56x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_47x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_47x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_37x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_37x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_28x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_28x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_19x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_19x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_9x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_9x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_female_0x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_female_0x10.dds"
+	}
+
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_187x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_187x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_178x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_178x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_168x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_168x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_159x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_159x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_150x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_150x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_140x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_140x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_131x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_131x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_122x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_122x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_112x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_112x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_103x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_103x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_94x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_94x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_84x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_84x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_75x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_75x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_65x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_65x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_56x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_56x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_47x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_47x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_37x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_37x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_28x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_28x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_19x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_19x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_9x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_9x10.dds"
+	}
+	spriteType = {
+		name = "GFX_population_pyramid_bar_male_0x10"
+		texturefile = "gfx/interface/graphs/population_pyramid_bar_male_0x10.dds"
+	}
+}

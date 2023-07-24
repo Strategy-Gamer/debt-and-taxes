@@ -1,0 +1,24 @@
+state={
+	id=897
+	name="STATE_897"
+	provinces={
+		1169 1188 11933 12062 13478 
+	}
+	history={
+		owner = GUO
+		add_core_of = GUO
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+	}
+	manpower=4338219
+	state_category=large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

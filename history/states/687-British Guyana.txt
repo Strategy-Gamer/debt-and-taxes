@@ -1,0 +1,36 @@
+
+state={
+	id=687
+	name="STATE_687"
+	resources={
+		aluminium=64.000
+	}
+
+	history={
+		add_core_of = GYA
+		owner = ENG
+		victory_points = {
+			13212 1 
+		}
+		buildings = {
+			infrastructure = 1
+			13212 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_tropic
+		}
+	}
+
+	provinces={
+		1928 4982 8107 12716 13211 13212 13401 
+	}
+	manpower=309000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=5.000
+}

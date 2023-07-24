@@ -1,0 +1,31 @@
+
+state={
+	id=554
+	name="STATE_554"
+
+	history={
+		owner = FRA
+		victory_points = {
+			4111 5 
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+		}
+		add_core_of = SYR
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		1074 4111 4486 4550 7184 10383 12442 
+	}
+	manpower=547797
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=2.000
+}

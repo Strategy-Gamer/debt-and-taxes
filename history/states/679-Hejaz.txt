@@ -1,0 +1,42 @@
+
+state={
+	id=679
+	name="STATE_679"
+
+	history={
+		owner = SAU
+		add_core_of = HJZ
+		victory_points = {
+			13378 1 
+		}
+		victory_points = {
+			13395 2
+		}
+		victory_points = {
+			13375 1
+		}
+		victory_points = {
+			13601 3
+		}
+		buildings = {
+			infrastructure = 2
+			13378 = {
+				naval_base = 5
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		1033 2027 2033 2095 4981 8092 10835 11976 12101 12883 13375 13376 13377 13378 13379 13394 13395 13396 13397 13398 13399 13601
+	}
+	manpower=1211002
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

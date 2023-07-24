@@ -1,0 +1,29 @@
+state={
+	id=867
+	name="STATE_867"
+	provinces={
+		589 3530 3574 3692 6542 6568 6712 11640 
+	}
+	history={
+		owner=GER
+		buildings = {
+			infrastructure = 4
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+		set_demilitarized_zone=yes
+		dandt_on_startup_1929 = yes
+		dandt_on_startup = yes
+	}
+	manpower=2600203
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=city
+}

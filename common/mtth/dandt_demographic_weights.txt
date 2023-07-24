@@ -1,0 +1,92 @@
+culture_voter_enthusiasm_weight = {
+	base = 1
+	modifier = {
+		is_primary_culture = yes
+		add = modifier@primary_culture_voter_enthusiasm_modifier
+		factor = modifier@primary_culture_voter_enthusiasm_factor
+	}
+	modifier = {
+		is_accepted_culture = yes
+		add = modifier@accepted_culture_voter_enthusiasm_modifier
+		factor = modifier@accepted_culture_voter_enthusiasm_factor
+	}
+	modifier = {
+		is_marginalized_culture = yes
+		add = modifier@marginalized_culture_voter_enthusiasm_modifier
+		factor = modifier@marginalized_culture_voter_enthusiasm_factor
+	}
+}
+religion_voter_enthusiasm_weight = {
+	base = 1
+	modifier = {
+		is_primary_religion = yes
+		add = modifier@primary_religion_voter_enthusiasm_modifier
+		factor = modifier@primary_religion_voter_enthusiasm_factor
+	}
+	modifier = {
+		is_accepted_religion = yes
+		add = modifier@accepted_religion_voter_enthusiasm_modifier
+		factor = modifier@accepted_religion_voter_enthusiasm_factor
+	}
+	modifier = {
+		is_marginalized_religion = yes
+		add = modifier@marginalized_religion_voter_enthusiasm_modifier
+		factor = modifier@marginalized_religion_voter_enthusiasm_factor
+	}
+}
+slaves_voter_enthusiasm_weight = {
+	base = 1
+	modifier = {
+		always = yes
+		factor = 0
+	}
+}
+peasants_voter_enthusiasm_weight = {
+	base = 1
+	modifier = {
+		always = yes
+		factor = 1
+	}
+}
+laborers_voter_enthusiasm_weight = {
+	base = 1
+	modifier = {
+		always = yes
+		factor = 1
+	}
+}
+workers_voter_enthusiasm_weight = {
+	base = 1
+	modifier = {
+		always = yes
+		factor = 1
+	}
+}
+professionals_voter_enthusiasm_weight = {
+	base = 1
+	modifier = {
+		always = yes
+		factor = 1
+	}
+}
+elites_voter_enthusiasm_weight = {
+	base = 1
+	modifier = {
+		always = yes
+		factor = 1
+	}
+}
+bureaucrats_voter_enthusiasm_weight = {
+	base = 1
+	modifier = {
+		always = yes
+		factor = 1
+	}
+}
+soldiers_voter_enthusiasm_weight = {
+	base = 1
+	modifier = {
+		always = yes
+		factor = 1
+	}
+}

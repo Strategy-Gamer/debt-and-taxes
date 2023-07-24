@@ -1,0 +1,35 @@
+
+state={
+	id=445
+	name="STATE_445" # Quetta
+	manpower = 405100
+	
+	state_category = wasteland
+
+	history={
+		victory_points = {
+			5105 1
+		}
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+			air_base = 4
+		}
+		add_core_of = PAK
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1107 4990 5105 7847 7903 7975 8044 8098 10813 
+	}
+
+	local_supplies=0.0 
+}

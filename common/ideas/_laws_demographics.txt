@@ -1,0 +1,47 @@
+ideas = {
+	law_tokens = { # Family Planning
+		law_family_planning_one_child = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_demographics_family_planning
+				set_variable = { laws_demographics_family_planning = token:law_family_planning_one_child }
+			}
+		}
+		law_family_planning_two_child = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_demographics_family_planning
+				set_variable = { laws_demographics_family_planning = token:law_family_planning_two_child }
+			}
+		}
+		law_family_planning_legal_abortions = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_demographics_family_planning
+				set_variable = { laws_demographics_family_planning = token:law_family_planning_legal_abortions }
+			}
+		}
+		law_family_planning_abortions_banned = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_demographics_family_planning
+				set_variable = { laws_demographics_family_planning = token:law_family_planning_abortions_banned }
+			}
+		}
+		law_family_planning_encouraged_growth = {
+			allowed = { always = no }
+
+			on_add = {
+				remove_ideas = var:laws_demographics_family_planning
+				set_variable = { laws_demographics_family_planning = token:law_family_planning_encouraged_growth }
+			}
+		}
+	}
+	law_tokens = { # Immigration
+
+	}
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=922
+	name="STATE_922"
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		8034 10831 13295 13296 13311 13499 13500
+	}
+	manpower=4488380
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

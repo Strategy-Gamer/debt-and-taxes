@@ -1,0 +1,906 @@
+spriteTypes = {	
+	
+### Debt and Taxes ###
+
+	#Scripted GUI Pie Chart & Color
+	spriteType = {
+		name = "GFX_dark_piechart_overlay"
+		texturefile = "gfx//interface//graphs//piecharts//dark_piechart_overlay.dds"
+	}
+	spriteType = {
+		name = "GFX_square_color_overlay"
+		texturefile = "gfx//interface//graphs//piecharts//square_colour_overlay.dds"
+	}
+
+
+
+	#Religion
+	spriteType = {
+		name = "GFX_undefined_religion_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//undefined_religion_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_undefined_religion_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//undefined_religion_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_irreligious_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//irreligious_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_irreligious_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//irreligious_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_catholic_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//catholic_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_catholic_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//catholic_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_protestant_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//protestant_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_protestant_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//protestant_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_orthodox_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//orthodox_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_orthodox_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//orthodox_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_mormon_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//mormon_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_mormon_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//mormon_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_coptic_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//coptic_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_coptic_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//coptic_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_judaism_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//judaism_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_judaism_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//judaism_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_sunni_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//sunni_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_sunni_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//sunni_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_shia_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//shia_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_shia_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//shia_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_ibadi_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//ibadi_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_ibadi_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//ibadi_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_vajrayana_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//vajrayana_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_vajrayana_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//vajrayana_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_mahayana_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//mahayana_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_mahayana_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//mahayana_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_thervada_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//thervada_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_thervada_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//thervada_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_hindu_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//hindu_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_hindu_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//hindu_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_sikh_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//sikh_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_sikh_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//sikh_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_confucianism_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//confucianism_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_confucianism_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//confucianism_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_shinto_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//shinto_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_shinto_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//shinto_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_indigenous_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//indigenous_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_indigenous_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//indigenous_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_african_folk_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//african_folk_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_african_folk_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//african_folk_square_colour.png"
+	}
+
+
+
+	#Culture
+	spriteType = {
+		name = "GFX_undefined_culture_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//undefined_culture_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_undefined_culture_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//undefined_culture_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_pacificer_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//pacificer_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_pacificer_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//pacificer_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_pioneer_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//pioneer_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_pioneer_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//pioneer_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_canadian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//canadian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_canadian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//canadian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_quebecois_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//quebecois_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_quebecois_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//quebecois_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_yankee_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//yankee_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_yankee_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//yankee_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_appalachian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//appalachian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_appalachian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//appalachian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_dixie_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//dixie_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_dixie_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//dixie_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_african-american_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//african-american_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_african-american_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//african-american_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_el_norte_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//el_norte_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_el_norte_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//el_norte_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_mexican_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//mexican_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_mexican_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//mexican_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_amerindian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//amerindian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_amerindian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//amerindian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_pacific_islander_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//pacific_islander_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_pacific_islander_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//pacific_islander_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_ashkenazi_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//ashkenazi_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_ashkenazi_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//ashkenazi_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_japanese_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//japanese_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_japanese_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//japanese_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_english_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//english_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_english_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//english_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_scottish_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//scottish_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_scottish_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//scottish_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_welsh_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//welsh_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_welsh_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//welsh_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_irish_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//irish_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_irish_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//irish_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_dutch_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//dutch_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_dutch_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//dutch_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_flemish_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//flemish_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_flemish_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//flemish_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_walloon_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//walloon_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_walloon_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//walloon_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_french_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//french_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_french_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//french_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_breton_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//breton_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_breton_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//breton_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_catalan_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//catalan_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_catalan_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//catalan_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_basque_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//basque_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_basque_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//basque_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_castillian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//castillian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_castillian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//castillian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_andalucian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//andalucian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_andalucian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//andalucian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_galician_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//galician_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_galician_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//galician_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_portugese_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//portugese_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_portugese_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//portugese_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_north_italian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//north_italian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_north_italian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//north_italian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_south_italian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//south_italian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_south_italian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//south_italian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_north_german_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//north_german_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_north_german_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//north_german_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_south_german_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//south_german_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_south_german_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//south_german_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_danish_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//danish_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_danish_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//danish_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_norwegian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//norwegian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_norwegian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//norwegian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_swedish_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//swedish_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_swedish_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//swedish_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_finnish_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//finnish_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_finnish_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//finnish_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_icelandic_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//icelandic_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_icelandic_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//icelandic_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_slovenian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//slovenian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_slovenian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//slovenian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_croatian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//croatian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_croatian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//croatian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_bosniak_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//bosniak_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_bosniak_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//bosniak_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_serbian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//serbian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_serbian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//serbian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_albanian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//albanian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_albanian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//albanian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_macedonian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//macedonian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_macedonian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//macedonian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_greek_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//greek_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_greek_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//greek_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_bulgarian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//bulgarian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_bulgarian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//bulgarian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_turkish_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//turkish_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_turkish_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//turkish_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_kurdish_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//kurdish_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_kurdish_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//kurdish_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_romanian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//romanian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_romanian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//romanian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_romani_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//romani_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_romani_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//romani_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_hungarian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//hungarian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_hungarian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//hungarian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_slovakian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//slovakian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_slovakian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//slovakian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_czech_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//czech_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_czech_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//czech_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_polish_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//polish_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_polish_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//polish_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_lithuanian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//lithuanian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_lithuanian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//lithuanian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_latvian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//latvian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_latvian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//latvian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_estonian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//estonian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_estonian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//estonian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_byelorussian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//byelorussian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_byelorussian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//byelorussian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_ukranian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//ukranian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_ukranian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//ukranian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_russian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//russian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_russian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//russian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_tatars_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//tatars_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_tatars_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//tatars_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_bashkir_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//bashkir_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_bashkir_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//bashkir_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_caucasian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//caucasian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_caucasian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//caucasian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_georgian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//georgian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_georgian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//georgian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_armenian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//armenian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_armenian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//armenian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_azeri_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//azeri_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_azeri_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//azeri_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_mongol_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//mongol_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_mongol_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//mongol_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_siberian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//siberian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_siberian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//siberian_square_colour.png"
+	}
+
+
+
+	#Ideology
+	spriteType = {
+		name = "GFX_undefined_ideology_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//undefined_ideology_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_undefined_ideology_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//undefined_ideology_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_apolitical_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//apolitical_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_apolitical_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//apolitical_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_communist_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//communist_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_communist_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//communist_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_socialist_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//socialist_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_socialist_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//socialist_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_liberal_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//liberal_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_liberal_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//liberal_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_agrarian_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//agrarian_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_agrarian_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//agrarian_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_conservative_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//conservative_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_conservative_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//conservative_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_reactionary_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//reactionary_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_reactionary_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//reactionary_square_colour.png"
+	}
+
+	spriteType = {
+		name = "GFX_fascist_pie_chart_segment"
+		texturefile = "gfx//interface//graphs//piecharts//fascist_pie_chart_segment.png"
+	}
+	spriteType = {
+		name = "GFX_fascist_square_color"
+		texturefile = "gfx//interface//graphs//piecharts//fascist_square_colour.png"
+	}
+
+}

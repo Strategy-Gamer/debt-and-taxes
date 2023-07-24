@@ -1,0 +1,40 @@
+
+state={
+	id=619
+	name="STATE_619" # Yarkand
+	manpower = 1430700
+
+	state_category = pastoral
+
+	resources={
+		aluminium=2 # was: 2
+		chromium=2 # was: 3
+	}
+
+	history={
+		owner = SIK
+		add_core_of = SIK
+		buildings={
+			infrastructure = 2
+		}
+		victory_points = {
+			2015 2
+		}
+		add_dynamic_modifier = {	
+			modifier = climate_arid_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+
+	provinces={
+		1766 1970 2015 4828 5016 5087 7790 7949 12119
+	}
+
+	local_supplies=0.0
+}

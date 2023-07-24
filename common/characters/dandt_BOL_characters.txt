@@ -1,0 +1,284 @@
+characters = {
+	#1925 Election
+		BOL_hernando_siles_reyes = {
+			name = BOL_hernando_siles_reyes
+			#https://en.wikipedia.org/wiki/Hernando_Siles
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_hernando_siles_reyes
+				}
+			}
+			#ideology_reactionary
+		}
+		BOL_daniel_domingo_salamanca_urey = {
+			name = BOL_daniel_domingo_salamanca_urey
+			#https://en.wikipedia.org/wiki/Daniel_Salamanca
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_daniel_domingo_salamanca_urey
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1931 Election
+		BOL_jose_luis_tejada_sorzano = {
+			name = BOL_jose_luis_tejada_sorzano
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Luis_Tejada_Sorzano
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_jose_luis_tejada_sorzano
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1934 Election
+		BOL_juan_maria_zalles = {
+			name = BOL_juan_maria_zalles
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_juan_maria_zalles
+				}
+			}
+			#ideology_liberal
+		}
+		BOL_franz_tamayo_solares = {
+			name = BOL_franz_tamayo_solares
+			#https://en.wikipedia.org/wiki/Franz_Tamayo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_franz_tamayo_solares
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1936 Coup
+		BOL_jose_david_toro_ruilova = {
+			name = BOL_jose_david_toro_ruilova
+			#https://en.wikipedia.org/wiki/David_Toro
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_jose_david_toro_ruilova
+				}
+			}
+			#ideology_socialist
+		}
+	#
+	#1937 Coup
+		BOL_victor_german_busch_becerra = {
+			name = BOL_victor_german_busch_becerra
+			#https://en.wikipedia.org/wiki/Germ%C3%A1n_Busch
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_victor_german_busch_becerra
+				}
+			}
+			#ideology_socialist
+		}
+	#
+	#1939 Coup
+		BOL_carlos_quintanilla_quiroga = {
+			name = BOL_carlos_quintanilla_quiroga
+			#https://en.wikipedia.org/wiki/Carlos_Quintanilla
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_carlos_quintanilla_quiroga
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1940 Election
+		BOL_jose_antonio_arze = {
+			name = BOL_jose_antonio_arze
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_jose_antonio_arze
+				}
+			}
+			#ideology_communist
+		}
+		BOL_enrique_penaranda_del_castillo = {
+			name = BOL_enrique_penaranda_del_castillo
+			#https://en.wikipedia.org/wiki/Enrique_Pe%C3%B1aranda
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_enrique_penaranda_del_castillo
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1943 Coup
+		BOL_gualberto_villarroel_lopez = {
+			name = BOL_gualberto_villarroel_lopez
+			#https://en.wikipedia.org/wiki/Gualberto_Villarroel
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_gualberto_villarroel_lopez
+				}
+			}
+			#ideology_socialist
+		}
+		BOL_nestor_guillen_olmos = {
+			name = BOL_nestor_guillen_olmos
+			#https://en.wikipedia.org/wiki/N%C3%A9stor_Guill%C3%A9n
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_nestor_guillen_olmos
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1946 Coup
+		BOL_tomas_monje_gutierrez = {
+			name = BOL_tomas_monje_gutierrez
+			#https://en.wikipedia.org/wiki/Tom%C3%A1s_Monje
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_tomas_monje_gutierrez
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1947 Election
+		BOL_luis_fernando_guachalla = {
+			name = BOL_luis_fernando_guachalla
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_luis_fernando_guachalla
+				}
+			}
+			#ideology_socialist
+		}
+		BOL_jose_enrique_hertzog_garaizabal = {
+			name = BOL_jose_enrique_hertzog_garaizabal
+			#https://en.wikipedia.org/wiki/Enrique_Hertzog
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_jose_enrique_hertzog_garaizabal
+				}
+			}
+			#ideology_conservative
+		}
+		BOL_angel_victor_paz_estenssoro = {
+			name = BOL_angel_victor_paz_estenssoro
+			#https://en.wikipedia.org/wiki/V%C3%ADctor_Paz_Estenssoro
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_angel_victor_paz_estenssoro
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1949 Coup
+		BOL_mamerto_urriolagoitia_harriague = {
+			name = BOL_mamerto_urriolagoitia_harriague
+			#https://en.wikipedia.org/wiki/Mamerto_Urriolagoit%C3%ADa
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_mamerto_urriolagoitia_harriague
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1951 Election
+		BOL_gabriel_gosalvez_tejada = {
+			name = BOL_gabriel_gosalvez_tejada
+			#https://en.wikipedia.org/wiki/Gabriel_Gos%C3%A1lvez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_gabriel_gosalvez_tejada
+				}
+			}
+			#ideology_socialist
+		}
+		BOL_bernardino_bilbao_rioja = {
+			name = BOL_bernardino_bilbao_rioja
+			#https://en.wikipedia.org/wiki/Bernardino_Bilbao_Rioja
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_bernardino_bilbao_rioja
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1951 Coup
+		BOL_hugo_ballivian_rojas = {
+			name = BOL_hugo_ballivian_rojas
+			#https://en.wikipedia.org/wiki/Hugo_Ballivi%C3%A1n
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_hugo_ballivian_rojas
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1952 Revolution
+		BOL_hernan_siles_zuazo = {
+			name = BOL_hernan_siles_zuazo
+			#https://en.wikipedia.org/wiki/Hern%C3%A1n_Siles_Zuazo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_hernan_siles_zuazo
+				}
+			}
+			#ideology_socialist
+		}
+	#
+	#1956 Election
+		BOL_oscar_unzaga_de_la_bega = {
+			name = BOL_oscar_unzaga_de_la_bega
+			#https://en.wikipedia.org/wiki/%C3%93scar_%C3%9Anzaga
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_oscar_unzaga_de_la_bega
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1960 Election
+		BOL_hugo_gonzalez_moscoso = {
+			name = BOL_hugo_gonzalez_moscoso
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_hugo_gonzalez_moscoso
+				}
+			}
+			#ideology_communist
+		}
+		BOL_walter_guevara_arze = {
+			name = BOL_walter_guevara_arze
+			#https://en.wikipedia.org/wiki/W%C3%A1lter_Guevara
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BOL_walter_guevara_arze
+				}
+			}
+			#ideology_reactionary
+		}
+		BOL_mario_gutierrez = {
+			name = BOL_mario_gutierrez
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_
+				}
+			}
+			#ideology_fascist
+		}
+	#
+}

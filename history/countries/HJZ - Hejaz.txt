@@ -1,0 +1,12 @@
+capital = 679
+
+recruit_character = HJZ_ali_bin_hussein_hashim
+recruit_character = HJZ_abdullah_bin_ali_hashim
+
+set_popularities = {
+	neutrality = 100
+}
+set_politics = {
+	ruling_party = neutrality
+	elections_allowed = no
+}

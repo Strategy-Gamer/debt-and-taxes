@@ -1,0 +1,38 @@
+state = {
+	id = 822
+	name = "STATE_822" #Chukotka
+	manpower = 34182
+
+	state_category = "pastoral"
+
+	history = {
+		owner = SOV
+		victory_points = {
+			13063 1 
+		}
+		buildings = {
+			infrastructure = 1
+			13204 ={
+				naval_base = 1
+			}
+		}
+		add_core_of = SOV
+		add_core_of = CKK
+		add_core_of = FER
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_polar
+		}
+	}
+
+	provinces = {
+		4744 5264 13062 13063 13204
+	}
+
+	local_supplies = 0.0 
+}

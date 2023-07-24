@@ -1,0 +1,294 @@
+
+
+#Budget/Economy Screen
+	#Net Budget
+		#GetNetBudgetText
+			defined_text = {
+				name = GetNetBudgetText
+				text = {
+					trigger = {
+						check_variable = { net_budget_final > 0 }
+					}
+					localization_key = "net_budget_title_surplus"
+				}
+				text = {
+					trigger = {
+						check_variable = { net_budget_final < 0 }
+					}
+					localization_key = "net_budget_title_deficit"
+				}
+				text = {
+					localization_key = "net_budget_title_balanced"
+				}
+			}
+		#
+		#GetNetBudgetAmount
+			defined_text = {
+				name = GetNetBudgetAmount
+				text = {
+					trigger = {
+						check_variable = { net_budget_final > 0 }
+					}
+					localization_key = "net_budget_amount_surplus"
+				}
+				text = {
+					trigger = {
+						check_variable = { net_budget_final < 0 }
+					}
+					localization_key = "net_budget_amount_deficit"
+				}
+				text = {
+					localization_key = "net_budget_amount_balanced"
+				}
+			}
+		#
+		#GetNetBudgetVariable
+			defined_text = {
+				name = GetNetBudgetVariable
+				text = {
+					trigger = {
+						check_variable = { net_budget_final < 0 }
+						set_temp_variable = { nbf = net_budget_final }
+						multiply_temp_variable = { nbf = -1 }
+					}
+					localization_key = "[?nbf|3]"
+				}
+				text = {
+					localization_key = "[?net_budget_final|3]"
+				}
+			}
+		#
+		#GetProposeBudgetButton
+			defined_text = {
+				name = GetProposeBudgetButton
+				text = {
+					trigger = {
+						budget_unchanged = yes
+					}
+					localization_key = "GFX_propose_budget_button"
+				}
+				text = {
+					trigger = {
+						always = yes #Will pass, TODO - implement legislature approval process
+					}
+					localization_key = "GFX_propose_budget_button_green"
+				}
+				text = {
+					trigger = {
+						always = yes #If significant chance of passing
+					}
+					localization_key = "GFX_propose_budget_button_yellow"
+				}
+				text = {
+					trigger = {
+						always = yes #legislature will not pass
+					}
+					localization_key = "GFX_propose_budget_button_red"
+				}
+				text = {
+					localization_key = "GFX_propose_budget_button"
+				}
+			}
+		#
+		#GetProposeButtonText
+			defined_text = {
+				name = GetProposeButtonText
+				text = {
+					trigger = {
+						always = yes #TODO - implement legislature approval process
+					}
+					localization_key = "propose_budget_title_implement"
+				}
+				text = {
+					localization_key = "propose_budget_title_propose"
+				}
+			}
+		#
+	#
+	#Revenue
+		#GetUpperIncomeTaxPercentage
+			defined_text = {
+				name = GetUpperIncomeTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { upper_income_tax_change = 0 }
+					}
+					localization_key = upper_income_tax_percentage
+				}
+				text = {
+					localization_key = upper_income_tax_percentage_change
+				}
+			}
+		#
+		#GetMiddleIncomeTaxPercentage
+			defined_text = {
+				name = GetMiddleIncomeTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { middle_income_tax_change = 0 }
+					}
+					localization_key = middle_income_tax_percentage
+				}
+				text = {
+					localization_key = middle_income_tax_percentage_change
+				}
+			}
+		#
+		#GetLowerIncomeTaxPercentage
+			defined_text = {
+				name = GetLowerIncomeTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { lower_income_tax_change = 0 }
+					}
+					localization_key = lower_income_tax_percentage
+				}
+				text = {
+					localization_key = lower_income_tax_percentage_change
+				}
+			}
+		#
+		#GetIncomeTaxPercentage
+			defined_text = {
+				name = GetIncomeTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { income_tax_change = 0 }
+					}
+					localization_key = income_tax_percentage
+				}
+				text = {
+					localization_key = income_tax_percentage_change
+				}
+			}
+		#
+		
+		#GetPayrollTaxPercentage
+			defined_text = {
+				name = GetPayrollTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { payroll_tax_change = 0 }
+					}
+					localization_key = payroll_tax_percentage
+				}
+				text = {
+					localization_key = payroll_tax_percentage_change
+				}
+			}
+		#
+		#GetPropertyTaxPercentage
+			defined_text = {
+				name = GetPropertyTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { property_tax_change = 0 }
+					}
+					localization_key = property_tax_percentage
+				}
+				text = {
+					localization_key = property_tax_percentage_change
+				}
+			}
+		#
+		
+		#GetCorporateTaxPercentage
+			defined_text = {
+				name = GetCorporateTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { corporate_tax_change = 0 }
+					}
+					localization_key = corporate_tax_percentage
+				}
+				text = {
+					localization_key = corporate_tax_percentage_change
+				}
+			}
+		#
+		#GetCapitalGainsTaxPercentage
+			defined_text = {
+				name = GetCapitalGainsTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { capital_gains_tax_change = 0 }
+					}
+					localization_key = capital_gains_tax_percentage
+				}
+				text = {
+					localization_key = capital_gains_tax_percentage_change
+				}
+			}
+		#
+		#GetWealthTaxPercentage
+			defined_text = {
+				name = GetWealthTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { wealth_tax_change = 0 }
+					}
+					localization_key = wealth_tax_percentage
+				}
+				text = {
+					localization_key = wealth_tax_percentage_change
+				}
+			}
+		#
+		
+		#GetSalesTaxPercentage
+			defined_text = {
+				name = GetSalesTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { sales_tax_change = 0 }
+					}
+					localization_key = sales_tax_percentage
+				}
+				text = {
+					localization_key = sales_tax_percentage_change
+				}
+			}
+		#
+		#GetValueAddedTaxPercentage
+			defined_text = {
+				name = GetValueAddedTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { value_added_tax_change = 0 }
+					}
+					localization_key = value_added_tax_percentage
+				}
+				text = {
+					localization_key = value_added_tax_percentage_change
+				}
+			}
+		#
+		#GetLuxuryTaxPercentage
+			defined_text = {
+				name = GetLuxuryTaxPercentage
+				text = {
+					trigger = {
+						check_variable = { luxury_tax_change = 0 }
+					}
+					localization_key = luxury_tax_percentage
+				}
+				text = {
+					localization_key = luxury_tax_percentage_change
+				}
+			}
+		#
+		#GetTariffsPercentage
+			defined_text = {
+				name = GetTariffsPercentage
+				text = {
+					trigger = {
+						check_variable = { tariffs_change = 0 }
+					}
+					localization_key = tariffs_percentage
+				}
+				text = {
+					localization_key = tariffs_percentage_change
+				}
+			}
+		#
+	#

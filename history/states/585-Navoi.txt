@@ -1,0 +1,33 @@
+state = {
+	id = 585
+	name = "STATE_585" #Navoiy
+	manpower = 465174 # 9/10ths of before
+
+	state_category = rural
+
+	history = {
+		
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = UZB
+		
+		victory_points = {
+			1554 1 
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_cool
+		}
+	}
+
+	provinces = {
+		1532 1554 4499 7501 7507 10420
+	}
+
+	local_supplies = 0.0 
+}

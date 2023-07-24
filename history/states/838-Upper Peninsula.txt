@@ -1,0 +1,32 @@
+state={
+	id=838
+	name="STATE_838"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = USA
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+		add_dynamic_modifier = {
+			modifier = generic_state_dense_forests
+		}
+	}
+	provinces={
+		709 751 4854 5205 10599
+	}
+	manpower=321000
+
+
+	buildings_max_level_factor=1.000
+	state_category=state_cat
+}

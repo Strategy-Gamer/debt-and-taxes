@@ -1,0 +1,31 @@
+
+state={
+	id=879
+	name="STATE_879"
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = SHA
+		victory_points = {
+			12015 1 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+	}
+
+	provinces={
+		1124 4181 9956 9971 12015 13476 
+	}
+	manpower=2729302
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

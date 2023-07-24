@@ -1,0 +1,36 @@
+
+state={
+	id=464
+	name="STATE_464"
+	manpower = 490912
+
+	state_category = rural
+
+	history={
+		owner = CAN
+		victory_points = {
+			7361 3
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			air_base = 3
+			7361 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = CAN
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_cool
+		}
+	}
+
+	provinces={
+		1354 4360 4430 4623 7304 7361 7644 10244
+	}
+
+
+	local_supplies=11.0
+}

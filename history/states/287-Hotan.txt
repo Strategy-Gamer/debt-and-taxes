@@ -1,0 +1,31 @@
+state={
+	id=287
+	name="STATE_287"
+
+	history={
+		owner = SIK
+		add_core_of = SIK
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			8112 2
+		}
+		add_dynamic_modifier = {	
+			modifier = climate_arid_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+	}
+
+
+	provinces={
+		4973 8042 8112 10911 13436 13437
+	}
+	manpower=408000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+
+	local_supplies=4.0 
+}

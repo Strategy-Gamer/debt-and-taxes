@@ -1,0 +1,1823 @@
+# Initialize Randomized Political Climate (country)
+	govt_country_setup = {
+		# Parties
+			govt_parties_setup = yes
+		#
+		# Randomize Climate
+			if = {
+				limit = {
+					check_variable = { popularity@token:ideology_communist = 0 }
+					check_variable = { popularity@token:ideology_socialist = 0 }
+					check_variable = { popularity@token:ideology_liberal = 0 }
+					check_variable = { popularity@token:ideology_agrarian = 0 }
+					check_variable = { popularity@token:ideology_conservative = 0 }
+					check_variable = { popularity@token:ideology_reactionary = 0 }
+					check_variable = { popularity@token:ideology_fascist = 0 }
+					check_variable = { popularity@token:ideology_stratocratic = 0 }
+				}
+				# Randomize per Outlook
+					if = {
+						limit = { has_government = democratic }
+						random_list = {
+							1 = {
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 1
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 2
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 2
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 2
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 2
+									max = 6
+									distribution = uniform
+								}
+							}
+							1 = {
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 2
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 2
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 2
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 2
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = fascist_temp
+									min = 1
+									max = 3
+									distribution = uniform
+								}
+							}
+							1 = {
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 2
+									max = 9
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 2
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 2
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 2
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = fascist_temp
+									min = 1
+									max = 3
+									distribution = uniform
+								}
+							}
+							1 = {
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 1
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 2
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 2
+									max = 9
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 2
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 2
+									max = 6
+									distribution = uniform
+								}
+							}
+							1 = {
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 5
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 2
+									max = 9
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 5
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 2
+									max = 6
+									distribution = uniform
+								}
+							}
+							1 = {
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 2
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 5
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 2
+									max = 9
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 5
+									max = 10
+									distribution = uniform
+								}
+							}
+						}
+						random_list = {
+							7 = {
+								randomize_temp_variable = {
+									var = stratocratic_temp
+									min = 2
+									max = 3
+									distribution = uniform
+								}
+							}
+							1 = {
+								modifier = {
+									OR = {
+										is_subject = yes
+										is_major = no
+									}
+									add = 5
+								}
+								randomize_temp_variable = {
+									var = stratocratic_temp
+									min = 3
+									max = 7
+									distribution = uniform
+								}
+							}
+							10 = {
+
+							}
+						}
+					}
+					else_if = {
+						limit = { has_government = neutrality }
+						random_list = {
+							3 = {
+								modifier = {
+									is_chinese_tag = yes
+									add = 10
+								}
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 2
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 3
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 0
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 0
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = stratocratic_temp
+									min = 4
+									max = 6
+									distribution = uniform
+								}
+							}
+							2 = {
+								modifier = {
+									OR = {
+										is_latin_american_tag = yes
+										is_developing_colonial_tag = yes
+									}
+									add = 10
+								}
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 1
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 0
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = fascist_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = stratocratic_temp
+									min = 4
+									max = 10
+									distribution = uniform
+								}
+							}
+							5 = {
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 0
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 0
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 5
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = fascist_temp
+									min = 0
+									max = 2
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = stratocratic_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = { has_government = communism }
+						random_list = {
+							5 = {
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 4
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 3
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 0
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 0
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = stratocratic_temp
+									min = 0
+									max = 4
+									distribution = uniform
+								}
+							}
+							3 = {
+								modifier = {
+									is_european_tag = yes
+								}
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 4
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 3
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 0
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 0
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 0
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = fascist_temp
+									min = 0
+									max = 1
+									distribution = uniform
+								}
+							}
+							2 = {
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 3
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 5
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 4
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 2
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = stratocratic_temp
+									min = 3
+									max = 6
+									distribution = uniform
+								}
+							}
+						}
+					}
+					else = {
+						# has_government = fascism
+						random_list = {
+							5 = {
+								randomize_temp_variable = {
+									var = fascist_temp
+									min = 6
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 2
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 3
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 0
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 0
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 0
+									max = 4
+									distribution = uniform
+								}
+							}
+							3 = {
+								modifier = {
+									is_european_tag = yes
+								}
+								randomize_temp_variable = {
+									var = fascist_temp
+									min = 4
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 3
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = conservative_temp
+									min = 0
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 0
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = socialist_temp
+									min = 0
+									max = 5
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 0
+									max = 1
+									distribution = uniform
+								}
+							}
+							2 = {
+								randomize_temp_variable = {
+									var = fascist_temp
+									min = 3
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 5
+									max = 12
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 4
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 2
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = stratocratic_temp
+									min = 3
+									max = 6
+									distribution = uniform
+								}
+							}
+							1 = {
+								modifier = {
+									OR = {
+										is_subject = yes
+										# military law
+										# coup
+									}
+									add = 20
+								}
+								randomize_temp_variable = {
+									var = stratocratic_temp
+									min = 6
+									max = 10
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = fascist_temp
+									min = 1
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = reactionary_temp
+									min = 3
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = liberal_temp
+									min = 3
+									max = 6
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = agrarian_temp
+									min = 1
+									max = 3
+									distribution = uniform
+								}
+								randomize_temp_variable = {
+									var = communist_temp
+									min = 2
+									max = 6
+									distribution = uniform
+								}
+							}
+						}
+					}
+				#
+				#Apply
+					set_variable = { popularity@token:ideology_communist = communist_temp }
+					set_temp_variable = { communist_temp = 0 }
+					set_variable = { popularity@token:ideology_socialist = socialist_temp }
+					set_temp_variable = { socialist_temp = 0 }
+					set_variable = { popularity@token:ideology_liberal = liberal_temp }
+					set_temp_variable = { liberal_temp = 0 }
+					set_variable = { popularity@token:ideology_agrarian = agrarian_temp }
+					set_temp_variable = { agrarian_temp = 0 }
+					set_variable = { popularity@token:ideology_conservative = conservative_temp }
+					set_temp_variable = { conservative_temp = 0 }
+					set_variable = { popularity@token:ideology_reactionary = reactionary_temp }
+					set_temp_variable = { reactionary_temp = 0 }
+					set_variable = { popularity@token:ideology_fascist = fascist_temp }
+					set_temp_variable = { fascist_temp = 0 }
+					set_variable = { popularity@token:ideology_stratocratic = stratocratic_temp }
+					set_temp_variable = { stratocratic_temp = 0 }
+				#
+			}
+		#
+		# House
+			govt_house_setup = yes
+			govt_house_update = yes
+		#
+		#
+			govt_coalition_setup = yes
+		#
+	}
+# Initialize Default Political Parties (country)
+	govt_parties_setup = {
+		if = {
+			limit = {
+				check_variable = { party@token:ideology_communist = 0 }
+			}
+			set_variable = { party@token:ideology_communist = token:party_generic_communist_party }
+		}
+		if = {
+			limit = {
+				check_variable = { party@token:ideology_socialist = 0 }
+			}
+			set_variable = { party@token:ideology_socialist = token:party_generic_socialist_party }
+		}
+		if = {
+			limit = {
+				check_variable = { party@token:ideology_liberal = 0 }
+			}
+			set_variable = { party@token:ideology_liberal = token:party_generic_liberal_party }
+		}
+		if = {
+			limit = {
+				check_variable = { party@token:ideology_agrarian = 0 }
+			}
+			set_variable = { party@token:ideology_agrarian = token:party_generic_agrarian_party }
+		}
+		if = {
+			limit = {
+				check_variable = { party@token:ideology_conservative = 0 }
+			}
+			set_variable = { party@token:ideology_conservative = token:party_generic_conservative_party }
+		}
+		if = {
+			limit = {
+				check_variable = { party@token:ideology_reactionary = 0 }
+			}
+			set_variable = { party@token:ideology_reactionary = token:party_generic_reactionary_party }
+		}
+		if = {
+			limit = {
+				check_variable = { party@token:ideology_fascist = 0 }
+			}
+			set_variable = { party@token:ideology_fascist = token:party_generic_fascist_party }
+		}
+		if = {
+			limit = {
+				check_variable = { party@token:ideology_stratocratic = 0 }
+			}
+			if = {
+				limit = { is_subject = no }
+				set_variable = { party@token:ideology_stratocratic = token:party_generic_stratocratic_party }
+			}
+			else = {
+				set_variable = { party@token:ideology_stratocratic = token:party_generic_occupation }
+			}
+		}
+	}
+# Initialize House (country)
+	govt_house_setup = {
+		clear_array = govt_ideology_array
+
+		for_each_loop = {
+			array = global.govt_ideology_array
+			index = ii
+			value = vv
+			break = bb
+
+			if = {
+				limit = {
+					check_variable = { popularity@var:vv > 0.09 }
+				}
+				for_each_loop = {
+					array = govt_ideology_array
+					index = iii
+					value = vvv
+					break = bbb
+
+					if = {
+						limit = { 
+							check_variable = { popularity@var:vvv < popularity@var:vv }
+						}
+						add_to_array = {
+							array = govt_ideology_array
+							value = vv
+							index = iii
+						}
+						set_temp_variable = { bbb = 1 }
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { bbb = 0 }
+					}
+					add_to_array = {
+						array = govt_ideology_array
+						value = vv
+					}
+				}
+			}
+		}
+	}
+# Update House (country)
+	govt_house_update = {
+		#Store
+			for_each_loop = {
+				array = global.govt_ideology_array
+				value = vv
+				set_variable = { past_popularity@var:vv = popularity@var:vv }
+			}
+		#
+		#Apply
+			add_to_variable = { popularity@token:ideology_communist = communist_temp }
+			clamp_variable = { var = popularity@token:ideology_communist min = 0 }
+			set_temp_variable = {communist_temp = 0 }
+			add_to_variable = { popularity@token:ideology_socialist = socialist_temp }
+			clamp_variable = { var = popularity@token:ideology_socialist min = 0 }
+			set_temp_variable = {socialist_temp = 0 }
+			add_to_variable = { popularity@token:ideology_liberal = communist_temp }
+			clamp_variable = { var = popularity@token:ideology_liberal min = 0 }
+			set_temp_variable = {communist_temp = 0 }
+			add_to_variable = { popularity@token:ideology_agrarian = socialist_temp }
+			clamp_variable = { var = popularity@token:ideology_agrarian min = 0 }
+			set_temp_variable = {socialist_temp = 0 }
+			add_to_variable = { popularity@token:ideology_conservative = conservative_temp }
+			clamp_variable = { var = popularity@token:ideology_conservative min = 0 }
+			set_temp_variable = {conservative_temp = 0 }
+			add_to_variable = { popularity@token:ideology_reactionary = reactionary_temp }
+			clamp_variable = { var = popularity@token:ideology_reactionary min = 0 }
+			set_temp_variable = {reactionary_temp = 0 }
+			add_to_variable = { popularity@token:ideology_fascist = fascist_temp }
+			clamp_variable = { var = popularity@token:ideology_fascist min = 0 }
+			set_temp_variable = {fascist_temp = 0 }
+			add_to_variable = { popularity@token:ideology_stratocratic = stratocratic_temp }
+			clamp_variable = { var = popularity@token:ideology_stratocratic min = 0 }
+			set_temp_variable = {stratocratic_temp = 0 }
+		#
+		#Normalize
+			govt_house_normalize = yes
+		#
+	}
+# Elect House
+	govt_house_election = {
+		set_variable = { weighted_culture_voting_power = 0 }
+		set_variable =	{ weighted_religion_voting_power = 0 }
+		set_variable =	{ weighted_class_voting_power = 0 }
+
+		for_each_loop = {
+			array = pops_culture_type
+			value = vv
+
+			set_temp_variable = { voter_temp = voting_perentage@var:vv }
+			multiply_temp_variable = { voter_temp = mtth:culture_voter_enthusiasm_weight }
+
+			set_variable = { weighted_voting_power@var:vv = voter_temp }
+			add_to_variable = { weighted_culture_voting_power = weighted_voting_power@var:vv }
+		}
+		for_each_loop = {
+			array = pops_culture_type
+			value = vv
+
+			set_variable = { weighted_voting_percentage@var:vv = weighted_voting_power@var:vv }
+			divide_variable = { weighted_voting_percentage@var:vv = weighted_culture_voting_power }
+		}
+		for_each_loop = {
+			array = pops_religion_type
+			value = vv
+
+			set_temp_variable = { voter_temp = voting_perentage@var:vv }
+			multiply_temp_variable = { voter_temp = mtth:religion_voter_enthusiasm_weight }
+
+			set_variable = { weighted_voting_power@var:vv = voter_temp }
+			add_to_variable = { weighted_religion_voting_power = weighted_voting_power@var:vv }
+		}
+		for_each_loop = {
+			array = pops_religion_type
+			value = vv
+
+			set_variable = { weighted_voting_percentage@var:vv = weighted_voting_power@var:vv }
+			divide_variable = { weighted_voting_percentage@var:vv = weighted_religion_voting_power }
+		}
+
+		for_each_loop = {
+			array = global.law_categories_array
+			value = vv
+
+			set_temp_variable = { stance_weight_temp = 0 }
+
+			law_calculate_culture_stance = yes
+			law_calculate_religion_stance = yes
+			law_calculate_class_stance = yes
+
+			set_temp_variable = { culture_stance_temp = culture_stance@var:vv }
+			multiply_temp_variable = { culture_stance_weight_temp = culture_stance_weight@var:vv }
+			add_to_temp_variable = { stance_weight_temp = culture_stance_weight@var:vv }
+
+			set_temp_variable = { religion_stance_temp = religion_stance@var:vv }
+			multiply_temp_variable = { religion_stance_weight_temp = religion_stance_weight@var:vv }
+			add_to_temp_variable = { stance_weight_temp = religion_stance_weight@var:vv }
+
+			set_temp_variable = { class_stance_temp = class_stance@var:vv }
+			multiply_temp_variable = { class_stance_weight_temp = class_stance_weight@var:vv }
+			add_to_temp_variable = { stance_weight_temp = class_stance_weight@var:vv }
+
+			set_variable = { stance@var:vv = culture_stance_temp }
+			add_to_variable = { stance@var:vv = religion_stance_temp }
+			add_to_variable = { stance@var:vv = class_stance_temp }
+			divide_variable = { stance@var:vv = stance_weight_temp }
+		}
+	}
+# Normalize House (country)
+	govt_house_normalize = {
+		#Normalize (Pt.1 ~ Check)
+			set_temp_variable = { total_percentage_temp = 0 }
+
+			for_each_loop = {
+				array = global.govt_ideology_array
+				value = vv
+
+				if = {
+					limit = { NOT = { check_variable = { popularity@var:vv = 0 } } }
+					add_to_variable = { popularity@var:vv = 0.002 }
+				}
+				add_to_temp_variable = { total_percentage_temp = popularity@var:vv }
+				#log = "[?vv.GetTokenLocalizedKey]: popularity-[?popularity@var:vv] count-[?total_percentage_temp]"
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = { total_percentage_temp = 100 }
+					}
+				}
+				#log = "total percentage: [?total_percentage_temp]%"
+				set_temp_variable = { total_percentage_adjustment_temp = 100 }
+				divide_temp_variable = { total_percentage_adjustment_temp = total_percentage_temp }
+				set_temp_variable = { total_percentage_temp_2 = 0 }
+				set_temp_variable = { largest_popularity_temp = 0 }
+
+				for_each_loop = {
+					array = global.govt_ideology_array
+					value = vv
+
+					multiply_variable = { popularity@var:vv = total_percentage_adjustment_temp }
+					add_to_temp_variable = { total_percentage_temp_2 = popularity@var:vv }
+
+					if = {
+						limit = {
+							check_variable = {
+								popularity@var:vv > popularity@var:largest_popularity_temp
+							}
+						}
+						set_temp_variable = { largest_popularity_temp = vv }
+					}
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							check_variable = { total_percentage_temp_2 = 100 }
+						}
+					}
+					set_temp_variable = { total_percentage_adjustment_temp = 100 }
+					subtract_from_temp_variable = { total_percentage_adjustment_temp = total_percentage_temp_2 }
+					add_to_variable = { popularity@var:largest_popularity_temp = total_percentage_adjustment_temp }
+				}
+			}
+
+			#Normalize & Display (Pt.3 ~ Micro Adjustment)
+				govt_house_setup = yes
+				for_each_loop = {
+					array = global.govt_ideology_array
+					value = vv
+					set_variable = { popularity_change@var:vv	= popularity@var:vv }
+					subtract_from_variable = { popularity_change@var:vv = past_popularity@var:vv }
+				}
+				for_each_loop = {
+					array = govt_ideology_array
+					value = vv
+					custom_effect_tooltip = govt_house_parties_change_generic_tt
+				}
+			#
+	}
+# Initialize Coalition (country)
+	govt_coalition_setup = {
+		#Reset
+			clear_array = govt_coalition_leader_array
+			clear_array = govt_coalition_array
+			clear_array = govt_opposition_array
+			
+			clear_variable = govt_coalition_leader
+			clear_variable = govt_coalition_popularity
+			clear_variable = govt_coalition_strength
+			clear_variable = govt_coalition_strength_percentage
+			clear_variable = govt_coalition_unity
+			
+			clear_variable = govt_opposition_popularity
+			clear_variable = govt_opposition_strength
+			clear_variable = govt_opposition_strength_percentage
+			
+			clear_variable = govt_ousted_popularity
+		#
+		#Ruling Party
+			if = {
+				limit = { has_variable = govt_coup_ideology }
+					set_variable = {
+					var = govt_coalition_leader
+					value = govt_coup_ideology
+				}
+			}
+			else = {
+				for_each_loop = {
+					array = govt_ideology_array
+					value = vv
+					break = bb
+					
+					if = {
+						limit = {
+							NOT = {
+								is_ousted_party_loop = yes
+							}
+						}
+						set_variable = {
+							var = govt_coalition_leader
+							value = vv
+						}
+						set_temp_variable = { bb = 1 }
+					}
+				}
+			}
+			add_to_array = {
+				array = govt_coalition_leader_array
+				value = govt_coalition_leader
+			}
+			add_to_array = {
+				array = govt_coalition_array
+				value = govt_coalition_leader
+			}
+			add_to_variable = {
+				var = govt_coalition_popularity
+				value = popularity@var:govt_coalition_leader
+			}
+			add_to_variable = {
+				var = govt_coalition_strength
+				value = popularity@var:govt_coalition_leader
+			}
+			add_to_variable = {
+				var = govt_coalition_strength
+				value = modifier@coalition_strength_modifier
+			}
+			set_variable = {
+				var = govt_coalition_unity
+				value = 100
+			}
+			add_to_variable = {
+				var = govt_coalition_unity
+				value = modifier@coalition_unity_modifier
+			}
+			add_to_variable = {
+				var = govt_opposition_strength
+				value = modifier@opposition_strength_modifier
+			}
+		#
+		#Strength Pre-Calculation
+			for_each_loop = {
+				array = govt_ousted_array
+				value = vv
+				add_to_variable = {
+					var = govt_ousted_popularity
+					value = popularity@var:vv
+				}
+			}
+			set_variable = {
+				var = govt_unousted_strength
+				value = 100
+			}
+			subtract_from_variable = {
+				var = govt_unousted_strength
+				value = govt_ousted_popularity
+			}
+			add_to_variable = {
+				var = govt_unousted_strength
+				value = modifier@coalition_strength_modifier
+			}
+			add_to_variable = {
+				var = govt_unousted_strength
+				value = modifier@opposition_strength_modifier
+			}
+		#
+		#Fill Coalition
+			if = { #communist
+				limit = {
+					is_in_array = {
+						array = govt_coalition_leader_array
+						value = token:ideology_communist
+					}
+				}
+				for_each_loop = {
+					array = global.govt_coalition_ideology_communist_array
+					value = vv
+					break = bb
+					
+					
+					if = {
+						limit = { NOT = { is_ousted_party_loop = yes } }
+						if = {
+							limit = {
+								NOT = { is_majority_coalition = yes }
+								is_eligible_for_coalition_loop = yes
+							}
+							add_to_array = {
+								array = govt_coalition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_coalition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_coalition_strength
+								value = popularity@var:vv
+							}
+							if = {
+								limit = {
+									NOT = { has_variable = govt_coup_ideology }
+								}
+								if = {
+									limit = {
+										check_variable = {
+											popularity@var:vv > 20
+										}
+									}
+									set_temp_variable = {
+										var = half_popularity_temp
+										value = popularity@var:vv
+									}
+									divide_temp_variable = {
+										var = half_popularity_temp
+										value = 2
+									}
+									subtract_from_variable = {
+									var = govt_coalition_unity
+									value = half_popularity_temp
+								}
+							}
+							else = {
+								subtract_from_variable = {
+									var = govt_coalition_unity
+									value = 10
+								}
+							}
+						}
+						else = {
+							subtract_from_variable = {
+								var = govt_coalition_unity
+								value = 5
+							}
+						}
+						}
+						else_if = { #Opposition
+							limit = { NOT = { is_coalition_party_loop = yes } }
+							add_to_array = {
+								array = govt_opposition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_opposition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_opposition_strength
+								value = popularity@var:vv
+							}
+						}
+					}
+				}
+			}
+			else_if = { #socialist
+				limit = {
+					is_in_array = {
+						array = govt_coalition_leader_array
+						value = token:ideology_socialist
+					}
+				}
+				for_each_loop = {
+					array = global.govt_coalition_ideology_socialist_array
+					value = vv
+					break = bb
+					
+					
+					if = {
+						limit = { NOT = { is_ousted_party_loop = yes } }
+						if = {
+							limit = {
+								NOT = { is_majority_coalition = yes }
+								is_eligible_for_coalition_loop = yes
+							}
+							add_to_array = {
+								array = govt_coalition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_coalition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_coalition_strength
+								value = popularity@var:vv
+							}
+							if = {
+								limit = {
+									NOT = { has_variable = govt_coup_ideology }
+								}
+								if = {
+									limit = {
+										check_variable = {
+											popularity@var:vv > 20
+										}
+									}
+									set_temp_variable = {
+										var = half_popularity_temp
+										value = popularity@var:vv
+									}
+									divide_temp_variable = {
+										var = half_popularity_temp
+										value = 2
+									}
+									subtract_from_variable = {
+									var = govt_coalition_unity
+									value = half_popularity_temp
+								}
+							}
+							else = {
+								subtract_from_variable = {
+									var = govt_coalition_unity
+									value = 10
+								}
+							}
+						}
+						else = {
+							subtract_from_variable = {
+								var = govt_coalition_unity
+								value = 5
+							}
+						}
+						}
+						else_if = { #Opposition
+							limit = { NOT = { is_coalition_party_loop = yes } }
+							add_to_array = {
+								array = govt_opposition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_opposition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_opposition_strength
+								value = popularity@var:vv
+							}
+						}
+					}
+				}
+			}
+			else_if = { #liberal
+				limit = {
+					is_in_array = {
+						array = govt_coalition_leader_array
+						value = token:ideology_liberal
+					}
+				}
+				for_each_loop = {
+					array = global.govt_coalition_ideology_liberal_array
+					value = vv
+					break = bb
+					
+					
+					if = {
+						limit = { NOT = { is_ousted_party_loop = yes } }
+						if = {
+							limit = {
+								NOT = { is_majority_coalition = yes }
+								is_eligible_for_coalition_loop = yes
+							}
+							add_to_array = {
+								array = govt_coalition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_coalition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_coalition_strength
+								value = popularity@var:vv
+							}
+							if = {
+								limit = {
+									NOT = { has_variable = govt_coup_ideology }
+								}
+								if = {
+									limit = {
+										check_variable = {
+											popularity@var:vv > 20
+										}
+									}
+									set_temp_variable = {
+										var = half_popularity_temp
+										value = popularity@var:vv
+									}
+									divide_temp_variable = {
+										var = half_popularity_temp
+										value = 2
+									}
+									subtract_from_variable = {
+									var = govt_coalition_unity
+									value = half_popularity_temp
+								}
+							}
+							else = {
+								subtract_from_variable = {
+									var = govt_coalition_unity
+									value = 10
+								}
+							}
+						}
+						else = {
+							subtract_from_variable = {
+								var = govt_coalition_unity
+								value = 5
+							}
+						}
+						}
+						else_if = { #Opposition
+							limit = { NOT = { is_coalition_party_loop = yes } }
+							add_to_array = {
+								array = govt_opposition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_opposition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_opposition_strength
+								value = popularity@var:vv
+							}
+						}
+					}
+				}
+			}
+			else_if = { #agrarian
+				limit = {
+					is_in_array = {
+						array = govt_coalition_leader_array
+						value = token:ideology_agrarian
+					}
+				}
+				for_each_loop = {
+					array = global.govt_coalition_ideology_agrarian_array
+					value = vv
+					break = bb
+					
+					
+					if = {
+						limit = { NOT = { is_ousted_party_loop = yes } }
+						if = {
+							limit = {
+								NOT = { is_majority_coalition = yes }
+								is_eligible_for_coalition_loop = yes
+							}
+							add_to_array = {
+								array = govt_coalition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_coalition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_coalition_strength
+								value = popularity@var:vv
+							}
+							if = {
+								limit = {
+									NOT = { has_variable = govt_coup_ideology }
+								}
+								if = {
+									limit = {
+										check_variable = {
+											popularity@var:vv > 20
+										}
+									}
+									set_temp_variable = {
+										var = half_popularity_temp
+										value = popularity@var:vv
+									}
+									divide_temp_variable = {
+										var = half_popularity_temp
+										value = 2
+									}
+									subtract_from_variable = {
+									var = govt_coalition_unity
+									value = half_popularity_temp
+								}
+							}
+							else = {
+								subtract_from_variable = {
+									var = govt_coalition_unity
+									value = 10
+								}
+							}
+						}
+						else = {
+							subtract_from_variable = {
+								var = govt_coalition_unity
+								value = 5
+							}
+						}
+						}
+						else_if = { #Opposition
+							limit = { NOT = { is_coalition_party_loop = yes } }
+							add_to_array = {
+								array = govt_opposition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_opposition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_opposition_strength
+								value = popularity@var:vv
+							}
+						}
+					}
+				}
+			}
+			else_if = { #conservative
+				limit = {
+					is_in_array = {
+						array = govt_coalition_leader_array
+						value = token:ideology_conservative
+					}
+				}
+				for_each_loop = {
+					array = global.govt_coalition_ideology_conservative_array
+					value = vv
+					break = bb
+					
+					
+					if = {
+						limit = { NOT = { is_ousted_party_loop = yes } }
+						if = {
+							limit = {
+								NOT = { is_majority_coalition = yes }
+								is_eligible_for_coalition_loop = yes
+							}
+							add_to_array = {
+								array = govt_coalition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_coalition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_coalition_strength
+								value = popularity@var:vv
+							}
+							if = {
+								limit = {
+									NOT = { has_variable = govt_coup_ideology }
+								}
+								if = {
+									limit = {
+										check_variable = {
+											popularity@var:vv > 20
+										}
+									}
+									set_temp_variable = {
+										var = half_popularity_temp
+										value = popularity@var:vv
+									}
+									divide_temp_variable = {
+										var = half_popularity_temp
+										value = 2
+									}
+									subtract_from_variable = {
+										var = govt_coalition_unity
+										value = half_popularity_temp
+									}
+							}
+								else = {
+									subtract_from_variable = {
+										var = govt_coalition_unity
+										value = 10
+									}
+								}
+							}
+							else = {
+								subtract_from_variable = {
+									var = govt_coalition_unity
+									value = 5
+								}
+							}
+						}
+						else_if = { #Opposition
+							limit = { NOT = { is_coalition_party_loop = yes } }
+							add_to_array = {
+								array = govt_opposition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_opposition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_opposition_strength
+								value = popularity@var:vv
+							}
+						}
+					}
+				}
+			}
+			else_if = { #reactionary
+				limit = {
+					is_in_array = {
+						array = govt_coalition_leader_array
+						value = token:ideology_reactionary
+					}
+				}
+				for_each_loop = {
+					array = global.govt_coalition_ideology_reactionary_array
+					value = vv
+					break = bb
+					
+					
+					if = {
+						limit = { NOT = { is_ousted_party_loop = yes } }
+						if = {
+							limit = {
+								NOT = { is_majority_coalition = yes }
+								is_eligible_for_coalition_loop = yes
+							}
+							add_to_array = {
+								array = govt_coalition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_coalition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_coalition_strength
+								value = popularity@var:vv
+							}
+							if = {
+								limit = {
+									NOT = { has_variable = govt_coup_ideology }
+								}
+								if = {
+									limit = {
+										check_variable = {
+											popularity@var:vv > 20
+										}
+									}
+									set_temp_variable = {
+										var = half_popularity_temp
+										value = popularity@var:vv
+									}
+									divide_temp_variable = {
+										var = half_popularity_temp
+										value = 2
+									}
+									subtract_from_variable = {
+									var = govt_coalition_unity
+									value = half_popularity_temp
+								}
+							}
+							else = {
+								subtract_from_variable = {
+									var = govt_coalition_unity
+									value = 10
+								}
+							}
+						}
+						else = {
+							subtract_from_variable = {
+								var = govt_coalition_unity
+								value = 5
+							}
+						}
+						}
+						else_if = { #Opposition
+							limit = { NOT = { is_coalition_party_loop = yes } }
+							add_to_array = {
+								array = govt_opposition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_opposition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_opposition_strength
+								value = popularity@var:vv
+							}
+						}
+					}
+				}
+			}
+			else_if = { #fascist
+				limit = {
+					is_in_array = {
+						array = govt_coalition_leader_array
+						value = token:ideology_fascist
+					}
+				}
+				for_each_loop = {
+					array = global.govt_coalition_ideology_fascist_array
+					value = vv
+					break = bb
+					
+					
+					if = {
+						limit = { NOT = { is_ousted_party_loop = yes } }
+						if = {
+							limit = {
+								NOT = { is_majority_coalition = yes }
+								is_eligible_for_coalition_loop = yes
+							}
+							add_to_array = {
+								array = govt_coalition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_coalition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_coalition_strength
+								value = popularity@var:vv
+							}
+							if = {
+								limit = {
+									NOT = { has_variable = govt_coup_ideology }
+								}
+								if = {
+									limit = {
+										check_variable = {
+											popularity@var:vv > 20
+										}
+									}
+									set_temp_variable = {
+										var = half_popularity_temp
+										value = popularity@var:vv
+									}
+									divide_temp_variable = {
+										var = half_popularity_temp
+										value = 2
+									}
+									subtract_from_variable = {
+									var = govt_coalition_unity
+									value = half_popularity_temp
+								}
+							}
+							else = {
+								subtract_from_variable = {
+									var = govt_coalition_unity
+									value = 10
+								}
+							}
+						}
+						else = {
+							subtract_from_variable = {
+								var = govt_coalition_unity
+								value = 5
+							}
+						}
+						}
+						else_if = { #Opposition
+							limit = { NOT = { is_coalition_party_loop = yes } }
+							add_to_array = {
+								array = govt_opposition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_opposition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_opposition_strength
+								value = popularity@var:vv
+							}
+						}
+					}
+				}
+			}
+			else_if = { #stratocratic
+				limit = {
+					is_in_array = {
+						array = govt_coalition_leader_array
+						value = token:ideology_stratocratic
+					}
+				}
+				for_each_loop = {
+					array = global.govt_coalition_ideology_stratocratic_array
+					value = vv
+					break = bb
+					
+					
+					if = {
+						limit = { NOT = { is_ousted_party_loop = yes } }
+						if = {
+							limit = {
+								NOT = { is_majority_coalition = yes }
+								is_eligible_for_coalition_loop = yes
+							}
+							add_to_array = {
+								array = govt_coalition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_coalition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_coalition_strength
+								value = popularity@var:vv
+							}
+							if = {
+								limit = {
+									NOT = { has_variable = govt_coup_ideology }
+								}
+								if = {
+									limit = {
+										check_variable = {
+											popularity@var:vv > 20
+										}
+									}
+									set_temp_variable = {
+										var = half_popularity_temp
+										value = popularity@var:vv
+									}
+									divide_temp_variable = {
+										var = half_popularity_temp
+										value = 2
+									}
+									subtract_from_variable = {
+									var = govt_coalition_unity
+									value = half_popularity_temp
+								}
+							}
+							else = {
+								subtract_from_variable = {
+									var = govt_coalition_unity
+									value = 10
+								}
+							}
+						}
+						else = {
+							subtract_from_variable = {
+								var = govt_coalition_unity
+								value = 5
+							}
+						}
+						}
+						else_if = { #Opposition
+							limit = { NOT = { is_coalition_party_loop = yes } }
+							add_to_array = {
+								array = govt_opposition_array
+								value = vv
+							}
+							add_to_variable = {
+								var = govt_opposition_popularity
+								value = popularity@var:vv
+							}
+							add_to_variable = {
+								var = govt_opposition_strength
+								value = popularity@var:vv
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_subject = yes
+					check_variable = { popularity@token:ideology_stratocratic > 2 }
+					NOT = {
+						is_in_array = {
+							array = govt_ousted_array
+							value = token:ideology_stratocratic
+						}
+						is_in_array = {
+							array = govt_coalition_array
+							value = token:ideology_stratocratic
+						}
+					}
+				}
+				add_to_array = {
+					array = govt_coalition_array
+					value = token:ideology_stratocratic
+				}
+				remove_from_array = {
+					array = govt_opposition_array
+					value = token:ideology_stratocratic
+				}
+			}
+		#
+		#Strength Post-Calculation
+			set_variable = {
+				var = govt_coalition_strength_percentage
+				value = govt_coalition_strength
+			}
+			divide_variable = {
+				var = govt_coalition_strength_percentage
+				value = govt_unousted_strength
+			}
+			multiply_variable = {
+				var = govt_coalition_strength_percentage
+				value = 100
+			}
+			set_variable = {
+				var = govt_opposition_strength_percentage
+				value = 100
+			}
+			subtract_from_variable = {
+				var = govt_opposition_strength_percentage
+				value = govt_coalition_strength_percentage
+			}
+		#
+	}
+#
+govt_incorporate_annexed = {
+	# THIS is annexing country
+	# PREV is annexed country
+}

@@ -1,0 +1,29 @@
+state={
+	id=924
+	name="STATE_924"
+	provinces={
+		2050 13292 13307 13308 13309 
+	}
+	history={
+		owner=ENG
+		buildings={
+			infrastructure=2
+			2050 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			2050 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+	}
+	state_category=town
+	manpower=3759341
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,28 @@
+state={
+	id=977
+	name="STATE_977"
+	provinces={
+		4976 5006 8030 13391 13622
+	}
+	history = {
+		owner = SAU
+		add_core_of = YEM
+		buildings = {
+			infrastructure = 1
+		}
+		set_demilitarized_zone=yes
+		victory_points = {
+			13391 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+	}
+	state_category=pastoral
+	manpower=165039
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

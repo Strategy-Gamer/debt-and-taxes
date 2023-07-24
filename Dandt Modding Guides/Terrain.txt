@@ -1,0 +1,191 @@
+Terrain Types:
+    #Value  #Terrain
+    1       Flat
+    2       Hilly
+    3       Mountainous
+    4       Dunes
+    5       Swamp
+
+Terrain:
+    Terrain Type %'s do _not_ change throughout the game
+
+    #Effects
+    #At 100%
+    #Building slot count is rounded up
+    Flat:
+        +10 Building Slots
+    Hilly:
+        +5 Building Slots
+        +25% Build Cost
+        +25% Building Maintenance
+        +20% Transport Cost
+    Mountainous:
+        +100% Build Cost
+        +50% Building Maintenance
+        +150% Transport Cost
+        -25% Livestock Ranch Foodstuffs Output Modifier
+    Dunes:
+        +25% Build Cost
+        +20% Building Maintenance
+        +100% Transport Cost
+        -100% Grain Farm Foodstuffs Output Modifier
+        -50% Livestock Ranch Foodstuffs Output Modifier
+    Swamp:
+        +200% Build Cost
+        +50% Building Maintenance
+        +200% Transport Cost
+        -50% Grain Farm Foodstuffs Output Modifier
+        -25% Livestock Ranch Foodstuffs Output Modifier
+
+Forest Coverage:
+    Forest Coverage can change:
+        -2% Forest Coverage for every new industry
+        -0.1% Forest Coverage for every increase of industry size
+        -0.5% for every expansion of infrastructure
+        Lumber Lodges will slowly reduce forest coverage
+    
+    #Effects (At 100%)
+        -100% Building Slots from Terrain
+        +100% Build Cost
+        +20% Building Maintenance
+        +50% Transport Cost
+        +100% Lumber Lodge Output Modifier
+
+Navigable Rivers:
+    #Effects
+    None:
+    
+    Miniscule:
+        -5% Build Cost
+        -5% Transport Cost
+        +5% Grain Farm Output Modifier
+    Minor:
+        -10% Build Cost
+        -10% Transport Cost
+        -3% Adjacent Transport Cost
+        -3% Shipping Cost
+        +10% Grain Farm Output Modifier
+    Moderate:
+        +1 Building Slot
+        -14% Build Cost
+        -14% Transport Cost
+        -7% Adjacent Transport Cost
+        -7% Shipping Cost
+        +20% Grain Farm Output Modifier
+    Major:
+        +1 Building Slot
+        -18% Build Cost
+        -18% Transport Cost
+        -10% Adjacent Transport Cost
+        -10% Shipping Cost
+        +30% Grain Farm Output Modifier
+    Extensive:
+        +2 Building Slot
+        -22% Build Cost
+        -22% Transport Cost
+        -12% Adjacent Transport Cost
+        -12% Shipping Cost
+        +40% Grain Farm Output Modifier
+    Expansive:
+        +2 Building Slot
+        -25% Build Cost
+        -25% Transport Cost
+        -15% Adjacent Transport Cost
+        -15% Shipping Cost
+        +50% Grain Farm Output Modifier
+
+Unnavigable Rivers:
+    #Effects
+    None:
+    
+    Miniscule:
+        -5% Build Cost
+        +5% Grain Farm Output Modifier
+    Minor:
+        -10% Build Cost
+        +5% Grain Farm Output Modifier
+    Moderate:
+        +1 Building Slot
+        -14% Build Cost
+        +20% Grain Farm Output Modifier
+    Major:
+        +1 Building Slot
+        -18% Build Cost
+        -4% Adjacent Transport Cost
+        +30% Grain Farm Output Modifier
+    Extensive:
+        +2 Building Slot
+        -22% Build Cost
+        -7% Adjacent Transport Cost
+        +40% Grain Farm Output Modifier
+    Expansive:
+        +2 Building Slot
+        -25% Build Cost
+        -10% Adjacent Transport Cost
+        +50% Grain Farm Output Modifier
+
+Soil Quality:
+    #Effects
+    None:
+        0.5x Grain Farm Output Multiplier
+    Poor:
+        0.75x Grain Farm Output Multiplier
+    Below Average:
+        0.9x Grain Farm Output Multiplier
+    Average:
+        
+    Above Average:
+        1.1x Grain Farm Output Multiplier
+    Good:
+        1.25x Grain Farm Output Multiplier
+    Excellent:
+        1.5x Grain Farm Output Multiplier
+
+Growth Period:
+    #Effects
+    None:
+        0.5x Grain Farm Output Multiplier
+    Poor:
+        0.75x Grain Farm Output Multiplier
+    Below Average:
+        0.9x Grain Farm Output Multiplier
+    Average:
+        
+    Above Average:
+        1.1x Grain Farm Output Multiplier
+    Good:
+        1.25x Grain Farm Output Multiplier
+    Excellent:
+        1.5x Grain Farm Output Multiplier
+
+Vars:
+    flat_percentage
+    hilly_percentage
+    mountainous_percentage
+    dunes_percentage
+    swamp_percentage
+
+    forest_percentage
+    navigable_rivers #0 is none, 1 is miniscule, 2 is minor, 3 is moderate, 4 is major, 5 is extensive, 6 is expansive
+    unnavigable_rivers #Same as above
+    soil_quality #0 is none, 1 is poor, 2 is below average, 3 is average, 4 is above average, 5 is good, 6 is excellent
+    growth_period #Same as above
+
+
+    terrain_building_slots
+    terrain_build_cost_modifier
+    terrain_building_maintenance_modifier
+    terrain_transport_cost_modifier
+    terrain_grain_farm_output_modifier
+    terrain_livestock_ranch_output_modifier
+    terrain_lumber_lodge_output_modifier
+
+    river_building_slots
+    river_build_cost_modifier
+    river_building_maintenance_modifier
+    river_transport_cost_modifier
+    river_shipping_cost_modifier
+    river_grain_farm_output_modifier
+
+    terrain_grain_farm_output_multiplier
+    

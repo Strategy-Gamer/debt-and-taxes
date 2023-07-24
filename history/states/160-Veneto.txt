@@ -1,0 +1,42 @@
+state={
+	id=160
+	name="STATE_160"
+	resources={
+		steel=20 # was: 32.000
+		aluminium=11 # was: 18.000
+	}
+
+	state_category = large_city
+
+	history={
+		owner = ITA
+		victory_points = {
+			11584 10
+		}
+		buildings = {
+			infrastructure = 3 #was: 6
+			air_base = 3
+			11584 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = ITA
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		603 628 3604 3657 6656 9582 9613 11584
+	}
+	manpower=3963151
+	buildings_max_level_factor=1.000
+
+	local_supplies=5.0
+}

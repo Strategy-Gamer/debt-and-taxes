@@ -1,0 +1,31 @@
+
+state={
+	id=958
+	name="STATE_958"
+	provinces={
+		1170 1566 1607 2061 4175 4210 4585 7400 7562 7603 7647 7909 7974 12363 
+	}
+	history={
+		owner=RAJ
+		add_core_of=BRM
+		buildings={
+			infrastructure=1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+		add_dynamic_modifier = {
+			modifier = unique_state_rajput_state
+		}
+	}
+	state_category=pastoral
+	manpower=922643
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

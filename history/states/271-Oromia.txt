@@ -1,0 +1,44 @@
+
+state={
+	id=271
+	name="STATE_271"
+	resources={
+		rubber=2.000
+	}
+
+	history={
+		owner = ETH
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+		}
+		victory_points = {
+			5010 5 
+		}
+		victory_points = {
+			7980 1.0 
+		}
+		add_core_of = ETH
+		1936.6.1 = {
+			owner = ITA
+			controller = ITA
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		5010 7980 8036 10734 13416 
+	}
+	manpower=2041920
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,37 @@
+
+state={
+	id=11
+	name="STATE_11"
+
+	history={
+		owner = LIT
+		victory_points = {
+			6296 5
+		}
+		victory_points = {
+			9357 1 #Ukmerge
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = LIT
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		327 6296 6360 9357 9404
+	}
+
+	local_supplies=10.0
+	manpower=971940
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,30 @@
+scripted_gui = {
+	dandt_topbar = {
+		context_type = player_context
+		parent_window_token = top_bar
+
+		window_name = "dandt_topbar_container"
+		
+		visible = {
+            always = yes
+		}
+	
+		effects = {
+			list_button_click = {
+				if = {
+					limit = {
+						has_country_flag = list_view_open
+					}
+					clr_country_flag = list_view_open
+				}
+				else = {
+					set_country_flag = list_view_open
+					refresh_state_list = yes
+					refresh_industry_list = yes
+				}
+			}
+		}
+	}
+	
+}
+

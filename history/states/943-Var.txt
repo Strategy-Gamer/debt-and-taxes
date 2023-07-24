@@ -1,0 +1,40 @@
+state={
+	id=943
+	name="STATE_943"
+	provinces={
+		911 956 3928 3961 
+	}
+	manpower = 485000
+
+	state_category = large_town
+
+	history={
+		owner = FRA
+		victory_points = {
+			911 1
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 3
+			911 = {
+				naval_base = 10
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = OCC
+		add_core_of = FRA
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		1939.1.1 = {
+			buildings = {
+				dockyard = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

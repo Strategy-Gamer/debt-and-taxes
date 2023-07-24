@@ -1,0 +1,30 @@
+state={
+	id=976
+	name="STATE_976"
+	provinces={
+		13600 
+	}
+	history = {
+		owner = SHR
+		add_core_of = OMA
+		buildings = {
+			infrastructure = 1
+			13600 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			13600 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_subtropic
+		}
+	}
+	manpower=82893
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

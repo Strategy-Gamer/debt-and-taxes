@@ -1,0 +1,32 @@
+
+state={
+	id=436
+	name="STATE_436"
+	resources={
+		chromium=4.000
+	}
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1510 4557 4883 4950 4953 5096 7430 7497 7574 7619 8120 10030 10171 10401 10801 10872 12375 12420 12480 12781 12799 12854 13569 13570 13579 13580 13581 13582 13583 13584 13585 13586 13587 13588 13589 13591 13594 13595 13596 
+	}
+	manpower=12023100
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

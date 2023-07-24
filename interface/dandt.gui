@@ -1,0 +1,3907 @@
+guiTypes = {
+	containerWindowType = { #Topbar
+		name = "dandt_topbar_container"
+		position = { x = -4 y = -1 }
+		
+		buttonType = {
+			name = "list_button"
+			position = { x = 508 y = 71 }
+			quadTextureSprite ="GFX_state_list_button"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+			oversound = ui_menu_over
+
+			frame = 1
+			
+			#pdx_tooltip = "ECONOMY_TOOLTIP"
+			#pdx_tooltip_delayed = "ECONOMY_TOOLTIP_DELAYED"
+		}
+	}
+	containerWindowType = { #State View
+		name = "state_view_economy_container"
+		position = { x = 0 y = 0 }
+		
+		containerWindowType = {
+			name = "state_building_entries"
+			position = { x=155 y=43 }
+
+			containerWindowType = {
+				name = "civilian_factory_entry"
+				position = { x=0 y=0 }
+				size = { width=110 height= 70 }
+				clipping = no
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_building_entry_stateview"
+				}
+				
+				iconType = {
+					name = "civilian_factory_level_bg"
+					position = { x=58 y=11 }	
+					spriteType = "GFX_generic_text_bg_48"
+				}
+				
+				instantTextboxType = {
+					name = "civilian_factory_level"
+					position = { x = 58 y = 14 }
+					font = "hoi_20b"
+					text = "[?building_level@industrial_complex]"
+					maxWidth = 50
+					maxHeight = 20
+					format = center
+					#alwaystransparent = yes
+				}
+				
+				buttonType = {
+					name = "civilian_factory_building_picture"
+					position = { x = 13 y = 3 }
+					quadTextureSprite ="GFX_buildings_strip"
+					alwaystransparent = yes
+				}
+				
+				iconType = {
+					name = "civilian_factory_damage_bar"
+					spriteType = "GFX_damage_bar"
+					position = { x=10 y=36 }
+					rotation = 1.5708		
+				}
+			}
+			containerWindowType = {
+				name = "military_factory_entry"
+				position = { x=109 y=0 }
+				size = { width=110 height= 70 }
+				clipping = no
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_building_entry_stateview"
+				}
+				
+				iconType = {
+					name = "military_factory_level_bg"
+					position = { x=58 y=11 }	
+					spriteType = "GFX_generic_text_bg_48"
+				}
+				
+				instantTextboxType = {
+					name = "military_factory_level"
+					position = { x = 58 y = 14 }
+					font = "hoi_20b"
+					text = "[?building_level@arms_factory]"
+					maxWidth = 50
+					maxHeight = 20
+					format = center
+					#alwaystransparent = yes
+				}
+				
+				buttonType = {
+					name = "military_factory_building_picture"
+					position = { x = 13 y = 3 }
+					quadTextureSprite ="GFX_buildings_strip"
+					frame = 2
+					alwaystransparent = yes
+				}
+				
+				iconType = {
+					name = "military_factory_damage_bar"
+					spriteType = "GFX_damage_bar"
+					position = { x=10 y=36 }
+					rotation = 1.5708		
+				}
+			}
+			containerWindowType = {
+				name = "dockyard_entry"
+				position = { x=218 y=0 }
+				size = { width=110 height= 70 }
+				clipping = no
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_building_entry_stateview"
+				}
+				
+				iconType = {
+					name = "dockyard_level_bg"
+					position = { x=58 y=11 }	
+					spriteType = "GFX_generic_text_bg_48"
+				}
+				
+				instantTextboxType = {
+					name = "dockyard_level"
+					position = { x = 58 y = 14 }
+					font = "hoi_20b"
+					text = "[?building_level@dockyard]"
+					maxWidth = 50
+					maxHeight = 20
+					format = center
+					#alwaystransparent = yes
+				}
+				
+				buttonType = {
+					name = "dockyard_building_picture"
+					position = { x = 13 y = 3 }
+					quadTextureSprite ="GFX_buildings_strip"
+					frame = 4
+					alwaystransparent = yes
+				}
+				
+				iconType = {
+					name = "dockyard_damage_bar"
+					spriteType = "GFX_damage_bar"
+					position = { x=10 y=36 }
+					rotation = 1.5708
+				}
+			}
+			containerWindowType = {
+				name = "air_base_entry"
+				position = { x=327 y=0 }
+				size = { width=110 height= 70 }
+				clipping = no
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_building_entry_stateview"
+				}
+				
+				iconType = {
+					name = "air_base_level_bg"
+					position = { x=58 y=11 }	
+					spriteType = "GFX_generic_text_bg_48"
+				}
+				
+				instantTextboxType = {
+					name = "air_base_level"
+					position = { x = 58 y = 14 }
+					font = "hoi_20b"
+					text = "[?building_level@anti_air_building]/10"
+					maxWidth = 50
+					maxHeight = 20
+					format = center
+					#alwaystransparent = yes
+				}
+				
+				buttonType = {
+					name = "air_base_building_picture"
+					position = { x = 13 y = 3 }
+					quadTextureSprite ="GFX_buildings_strip"
+					frame = 5
+					alwaystransparent = yes
+				}
+				
+				iconType = {
+					name = "air_base_damage_bar"
+					spriteType = "GFX_damage_bar"
+					position = { x=10 y=36 }
+					rotation = 1.5708
+				}
+			}
+			containerWindowType = {
+				name = "nuclear_reactor_entry"
+				position = { x=436 y=0 }
+				size = { width=110 height= 70 }
+				clipping = no
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_building_entry_stateview"
+				}
+				
+				iconType = {
+					name = "nuclear_reactor_level_bg"
+					position = { x=58 y=11 }	
+					spriteType = "GFX_generic_text_bg_48"
+				}
+				
+				instantTextboxType = {
+					name = "nuclear_reactor_level"
+					position = { x = 58 y = 14 }
+					font = "hoi_20b"
+					text = "[?building_level@nuclear_reactor]/1"
+					maxWidth = 50
+					maxHeight = 20
+					format = center
+					#alwaystransparent = yes
+				}
+				
+				buttonType = {
+					name = "nuclear_reactor_building_picture"
+					position = { x = 13 y = 3 }
+					quadTextureSprite ="GFX_buildings_strip"
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				iconType = {
+					name = "nuclear_reactor_damage_bar"
+					spriteType = "GFX_damage_bar"
+					position = { x=10 y=36 }
+					rotation = 1.5708
+				}
+			}
+			
+			containerWindowType = {
+				name = "infrastructure_entry"
+				position = { x=0 y=52 }
+				size = { width=110 height= 70 }
+				clipping = no
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_building_entry_stateview"
+				}
+				
+				iconType = {
+					name = "infrastructure_level_bg"
+					position = { x=58 y=11 }	
+					spriteType = "GFX_generic_text_bg_48"
+				}
+				
+				instantTextboxType = {
+					name = "infrastructure_level"
+					position = { x = 58 y = 14 }
+					font = "hoi_20b"
+					text = "[?building_level@infrastructure]/5"
+					maxWidth = 50
+					maxHeight = 20
+					format = center
+					#alwaystransparent = yes
+				}
+				
+				buttonType = {
+					name = "infrastructure_building_picture"
+					position = { x = 13 y = 3 }
+					quadTextureSprite ="GFX_buildings_strip"
+					frame = 3
+					alwaystransparent = yes
+				}
+				
+				iconType = {
+					name = "infrastructure_damage_bar"
+					spriteType = "GFX_damage_bar"
+					position = { x=10 y=36 }
+					rotation = 1.5708
+				}
+			}
+			containerWindowType = {
+				name = "railroad_entry"
+				position = { x=109 y=52 }
+				size = { width=110 height= 70 }
+				clipping = no
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_building_entry_stateview"
+				}
+				
+				iconType = {
+					name = "railroad_level_bg"
+					position = { x=58 y=11 }	
+					spriteType = "GFX_generic_text_bg_48"
+				}
+				
+				instantTextboxType = {
+					name = "railroad_level"
+					position = { x = 58 y = 14 }
+					font = "hoi_20b"
+					text = "0/5"
+					maxWidth = 50
+					maxHeight = 20
+					format = center
+					#alwaystransparent = yes
+				}
+				
+				buttonType = {
+					name = "railroad_building_picture"
+					position = { x = 13 y = 3 }
+					quadTextureSprite ="GFX_buildings_strip"
+					frame = 16
+					alwaystransparent = yes
+				}
+				
+				iconType = {
+					name = "railroad_damage_bar"
+					spriteType = "GFX_damage_bar"
+					position = { x=10 y=36 }
+					rotation = 1.5708
+				}
+			}
+			containerWindowType = {
+				name = "anti_air_entry"
+				position = { x=218 y=52 }
+				size = { width=110 height= 70 }
+				clipping = no
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_building_entry_stateview"
+				}
+				
+				iconType = {
+					name = "anti_air_level_bg"
+					position = { x=58 y=11 }	
+					spriteType = "GFX_generic_text_bg_48"
+				}
+				
+				instantTextboxType = {
+					name = "anti_air_level"
+					position = { x = 58 y = 14 }
+					font = "hoi_20b"
+					text = "[?building_level@anti_air_building]/5"
+					maxWidth = 50
+					maxHeight = 20
+					format = center
+					#alwaystransparent = yes
+				}
+				
+				buttonType = {
+					name = "anti_air_building_picture"
+					position = { x = 13 y = 3 }
+					quadTextureSprite ="GFX_buildings_strip"
+					frame = 9
+					alwaystransparent = yes
+				}
+				
+				iconType = {
+					name = "anti_air_damage_bar"
+					spriteType = "GFX_damage_bar"
+					position = { x=10 y=36 }
+					rotation = 1.5708
+				}
+			}
+			containerWindowType = {
+				name = "radar_entry"
+				position = { x=327 y=52 }
+				size = { width=110 height= 70 }
+				clipping = no
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_building_entry_stateview"
+				}
+				
+				iconType = {
+					name = "radar_level_bg"
+					position = { x=58 y=11 }	
+					spriteType = "GFX_generic_text_bg_48"
+				}
+				
+				instantTextboxType = {
+					name = "radar_level"
+					position = { x = 58 y = 14 }
+					font = "hoi_20b"
+					text = "[?building_level@radar_station]/5"
+					maxWidth = 50
+					maxHeight = 20
+					format = center
+					#alwaystransparent = yes
+				}
+				
+				buttonType = {
+					name = "radar_building_picture"
+					position = { x = 13 y = 3 }
+					quadTextureSprite ="GFX_buildings_strip"
+					frame = 11
+					alwaystransparent = yes
+				}
+				
+				iconType = {
+					name = "radar_damage_bar"
+					spriteType = "GFX_damage_bar"
+					position = { x=10 y=36 }
+					rotation = 1.5708
+				}
+			}
+			containerWindowType = {
+				name = "rocket_site_entry"
+				position = { x=436 y=52 }
+				size = { width=110 height= 70 }
+				clipping = no
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_building_entry_stateview"
+				}
+				
+				iconType = {
+					name = "rocket_site_level_bg"
+					position = { x=58 y=11 }	
+					spriteType = "GFX_generic_text_bg_48"
+				}
+				
+				instantTextboxType = {
+					name = "rocket_site_level"
+					position = { x = 58 y = 14 }
+					font = "hoi_20b"
+					text = "[?building_level@rocket_site]/5"
+					maxWidth = 50
+					maxHeight = 20
+					format = center
+					#alwaystransparent = yes
+				}
+				
+				buttonType = {
+					name = "rocket_site_building_picture"
+					position = { x = 13 y = 3 }
+					quadTextureSprite ="GFX_buildings_strip"
+					frame = 12
+					alwaystransparent = yes
+				}
+				
+				iconType = {
+					name = "rocket_site_damage_bar"
+					spriteType = "GFX_damage_bar"
+					position = { x=10 y=36 }
+					rotation = 1.5708
+				}
+			}
+		}
+		
+		buttonType = {
+			name = "state_view_economy_button"
+			position = { x = 430 y = 347 }
+			quadTextureSprite ="GFX_state_economy_button"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+			oversound = ui_menu_over
+			
+			#pdx_tooltip = "ECONOMY_TOOLTIP"
+			#pdx_tooltip_delayed = "ECONOMY_TOOLTIP_DELAYED"
+		}
+	}
+	containerWindowType = { #Budget/Eco Tab
+		name = "dandt_budget_economy_tab"
+		position = { x = 4 y = 0 }
+		size = { width=1054 height= 100% }
+
+		
+		containerWindowType = {
+			name = "dandt_final_budget_container"
+			position = { x = 0 y = 82 }
+			size = { width=521 height= 96 }
+
+			
+			background = {
+				name = "final_budget_background"
+				quadTextureSprite = "GFX_final_budget_background"
+			}
+
+			instantTextboxType = {
+				name = "net_budget_title"
+				position = { x = 19 y = 18 }
+				font = "hoi_30header"
+				text = "net_budget_title"
+				maxWidth = 190
+				maxHeight = 20
+				format = center
+				fixedsize = yes
+				#alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "net_budget_amount"
+				position = { x = 219 y = 18 }
+				font = "hoi_30header"
+				text = "net_budget_amount"
+				maxWidth = 284
+				maxHeight = 20
+				format = right
+				fixedsize = yes
+				#alwaystransparent = yes
+			}
+
+
+			instantTextboxType = {
+				name = "budget_political_power_cost"
+				position = { x = 240 y = 59 }
+				font = "hoi_18mbs"
+				text = "budget_political_power_cost"
+				maxWidth = 70
+				maxHeight = 20
+				format = center
+				fixedsize = yes
+				#alwaystransparent = yes
+			}
+			iconType = {
+				name = "budget_political_power_icon"
+				position = { x = 220 y = 55 }
+				quadTextureSprite ="GFX_pol_power_icon"
+			}
+
+			buttonType = {
+				name = "propose_budget_button"
+				position = { x = 318 y = 53 }
+				quadTextureSprite ="GFX_propose_budget_button"
+				clicksound = click_close
+				oversound = ui_menu_over
+				pdx_tooltip = budget_political_power_cost_tt
+			}
+
+			instantTextboxType = {
+				name = "propose_budget_title"
+				position = { x = 320 y = 54 }
+				font = "hoi_30header"
+				text = "propose_budget_title"
+				maxWidth = 180
+				maxHeight = 20
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+		}
+	}
+	containerWindowType = { #Budget Tab
+		name = "dandt_budget_tab"
+		position = { x = 4 y = 82 }
+		size = { width=1054 height= 92% }
+		margin = { top = 0 bottom = 10 left = 0 right = 0 }
+
+		background = {
+			name = "budget_background"
+			quadTextureSprite = "GFX_tiled_window_thin_border"
+		}
+		verticalScrollbar = "right_vertical_slider"
+		vertical_scroll_step = 98
+		scroll_wheel_factor = 98
+		smooth_scrolling = yes
+		
+		containerWindowType = {
+			name = "revenue_container"
+			position = { x = 0 y = 86 }
+			size = { width=542 height= 595 }
+			background = {
+				name = "revenue_background"
+				quadTextureSprite = "GFX_revenue_background"
+			}
+
+			instantTextboxType = {
+				name = "revenue"
+				position = { x = 30 y = 6 }
+				font = "hoi_30header"
+				text = "revenue_title"
+				maxWidth = 155
+				maxHeight = 20
+				format = left
+				fixedsize = yes
+				#alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "upper_income_tax_container"
+				position = { x = -9 y = 42 }
+
+				instantTextboxType = {
+					name = "upper_income_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "upper_income_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_upper_income_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_upper_income_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "upper_income_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetUpperIncomeTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "upper_income_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "upper_income_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "middle_income_tax_container"
+				position = { x = -9 y = 71 }
+
+				instantTextboxType = {
+					name = "middle_income_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "middle_income_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_middle_income_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_middle_income_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "middle_income_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetMiddleIncomeTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "middle_income_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "middle_income_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "lower_income_tax_container"
+				position = { x = -9 y = 100 }
+
+				instantTextboxType = {
+					name = "lower_income_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "lower_income_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_lower_income_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_lower_income_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "lower_income_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetLowerIncomeTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "lower_income_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "lower_income_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "income_tax_container"
+				position = { x = -9 y = 129 }
+
+				instantTextboxType = {
+					name = "income_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "income_tax_title"
+					maxWidth = 205
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "income_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetIncomeTaxPercentage]"
+					maxWidth = 170
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "income_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "income_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			
+			containerWindowType = {
+				name = "payroll_tax_container"
+				position = { x = -9 y = 170 }
+
+				instantTextboxType = {
+					name = "payroll_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "payroll_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_payroll_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_payroll_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "payroll_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetPayrollTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "payroll_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "payroll_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "property_tax_container"
+				position = { x = -9 y = 199 }
+
+				instantTextboxType = {
+					name = "property_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "property_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_property_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_property_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "property_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetPropertyTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "property_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "property_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			
+			containerWindowType = {
+				name = "corporate_tax_container"
+				position = { x = -9 y = 239 }
+
+				instantTextboxType = {
+					name = "corporate_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "corporate_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_corporate_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_corporate_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "corporate_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetCorporateTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "corporate_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "corporate_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "capital_gains_tax_container"
+				position = { x = -9 y = 268 }
+
+				instantTextboxType = {
+					name = "capital_gains_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "capital_gains_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_capital_gains_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_capital_gains_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "capital_gains_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetCapitalGainsTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "capital_gains_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "capital_gains_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "wealth_tax_container"
+				position = { x = -9 y = 297 }
+
+				instantTextboxType = {
+					name = "wealth_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "wealth_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_wealth_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_wealth_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "wealth_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetWealthTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "wealth_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "wealth_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "sales_tax_container"
+				position = { x = -9 y = 338 }
+
+				instantTextboxType = {
+					name = "sales_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "sales_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_sales_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_sales_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "sales_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetSalesTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "sales_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "sales_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "value_added_tax_container"
+				position = { x = -9 y = 366 }
+
+				instantTextboxType = {
+					name = "value_added_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "value_added_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_value_added_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_value_added_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "value_added_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetValueAddedTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "value_added_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "value_added_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "luxury_tax_container"
+				position = { x = -9 y = 396 }
+
+				instantTextboxType = {
+					name = "luxury_tax"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "luxury_tax_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_luxury_tax_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_luxury_tax_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "luxury_tax_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetLuxuryTaxPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "luxury_tax_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "luxury_tax_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "tariffs_container"
+				position = { x = -9 y = 425 }
+
+				instantTextboxType = {
+					name = "tariffs"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "tariffs_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_tariffs_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_tariffs_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "tariffs_percentage"
+					position = { x = 230 y = 2 }
+					font = "hoi_18mbs"
+					text = "[GetTariffsPercentage]"
+					maxWidth = 130
+					maxHeight = 20
+					format = left
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "tariffs_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "tariffs_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			
+			containerWindowType = {
+				name = "public_enterprises_container"
+				position = { x = -9 y = 466 }
+
+				instantTextboxType = {
+					name = "public_enterprises"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "public_enterprises_title"
+					maxWidth = 205
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "public_enterprises_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "public_enterprises_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "diplomacy_container"
+				position = { x = -9 y = 495 }
+
+				instantTextboxType = {
+					name = "diplomacy"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "diplomacy_title"
+					maxWidth = 205
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "diplomacy_revenue"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "diplomacy_revenue"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			
+			containerWindowType = {
+				name = "total_revenue_container"
+				position = { x = -9 y = 541 }
+
+				instantTextboxType = {
+					name = "total_revenue_title"
+					position = { x = 8 y = 0 }
+					font = "hoi_30header"
+					text = "total_revenue_title"
+					maxWidth = 205
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "total_revenue"
+					position = { x = 220 y = 0 }
+					font = "hoi_30header"
+					text = "total_revenue"
+					maxWidth = 290
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+		}
+		
+		containerWindowType = {
+			name = "expenditure_container"
+			position = { x = 514 y = 0 }
+			size = { width=542 height= 1300 }
+			background = {
+				name = "expenditure_background"
+				quadTextureSprite = "GFX_expenditure_background"
+			}
+
+			instantTextboxType = {
+				name = "expenditure"
+				position = { x = 30 y = 6 }
+				font = "hoi_30header"
+				text = "expenditure_title"
+				maxWidth = 155
+				maxHeight = 20
+				format = left
+				fixedsize = yes
+				#alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "bureaucracy_spending_container"
+				position = { x = -9 y = 43 }
+
+				instantTextboxType = {
+					name = "bureaucracy_spending"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "bureaucracy_spending_title"
+					maxWidth = 205
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "bureaucracy_spending_expenditure"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "bureaucracy_spending_expenditure"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "public_payroll_spending_container"
+				position = { x = -9 y = 72 }
+
+				instantTextboxType = {
+					name = "public_payroll_spending"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "public_payroll_spending_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_public_payroll_spending_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_public_payroll_spending_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "public_payroll_spending_expenditure"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "public_payroll_spending_expenditure"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			
+			containerWindowType = {
+				name = "military_spending_container"
+				position = { x = 0 y = 110 }
+
+				instantTextboxType = {
+					name = "military_spending"
+					position = { x = 22 y = -2 }
+					font = "hoi_30header"
+					text = "military_spending_title"
+					maxWidth = 185
+					maxHeight = 20
+					format = center
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+
+				containerWindowType = {
+					name = "operations_spending_container"
+					position = { x = -9 y = 35 }
+
+					instantTextboxType = {
+						name = "operations_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "operations_spending_title"
+						maxWidth = 155
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					buttonType = {
+						name = "decrease_operations_spending_button"
+						position = { x = 173 y = 1 }
+						quadTextureSprite ="GFX_decrease_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					buttonType = {
+						name = "increase_operations_spending_button"
+						position = { x = 198 y = 1 }
+						quadTextureSprite ="GFX_increase_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					instantTextboxType = {
+						name = "operations_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "operations_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "orders_spending_container"
+					position = { x = -9 y = 64 }
+
+					instantTextboxType = {
+						name = "orders_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "orders_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "orders_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "orders_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "contracts_spending_container"
+					position = { x = -9 y = 93 }
+
+					instantTextboxType = {
+						name = "contracts_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "contracts_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "contracts_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "contracts_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "military_maintenance_spending_container"
+					position = { x = -9 y = 122 }
+
+					instantTextboxType = {
+						name = "military_maintenance_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "military_maintenance_spending_title"
+						maxWidth = 155
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					buttonType = {
+						name = "decrease_military_maintenance_spending_button"
+						position = { x = 173 y = 1 }
+						quadTextureSprite ="GFX_decrease_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					buttonType = {
+						name = "increase_military_maintenance_spending_button"
+						position = { x = 198 y = 1 }
+						quadTextureSprite ="GFX_increase_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					instantTextboxType = {
+						name = "military_maintenance_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "military_maintenance_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "personnel_spending_container"
+					position = { x = -9 y = 151 }
+
+					instantTextboxType = {
+						name = "personnel_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "personnel_spending_title"
+						maxWidth = 155
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					buttonType = {
+						name = "decrease_personnel_spending_button"
+						position = { x = 173 y = 1 }
+						quadTextureSprite ="GFX_decrease_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					buttonType = {
+						name = "increase_personnel_spending_button"
+						position = { x = 198 y = 1 }
+						quadTextureSprite ="GFX_increase_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					instantTextboxType = {
+						name = "personnel_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "personnel_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "military_benefits_spending_container"
+					position = { x = -9 y = 180 }
+
+					instantTextboxType = {
+						name = "military_benefits_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "military_benefits_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "military_benefits_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "military_benefits_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+
+				instantTextboxType = {
+					name = "military_spending_expenditure"
+					position = { x = 241 y = 217 }
+					font = "hoi_18mbs"
+					text = "military_spending_expenditure"
+					maxWidth = 260
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "intelligence_spending_container"
+				position = { x = -9 y = 364 }
+
+				instantTextboxType = {
+					name = "intelligence_spending"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "intelligence_spending_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_intelligence_spending_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_intelligence_spending_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "intelligence_spending_expenditure"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "intelligence_spending_expenditure"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			
+			containerWindowType = {
+				name = "public_services_spending_container"
+				position = { x = 0 y = 407 }
+
+				instantTextboxType = {
+					name = "public_services_spending"
+					position = { x = 22 y = -2 }
+					font = "hoi_30header"
+					text = "public_services_spending_title"
+					maxWidth = 225
+					maxHeight = 20
+					format = center
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+
+				containerWindowType = {
+					name = "law_and_order_spending_container"
+					position = { x = -9 y = 35 }
+
+					instantTextboxType = {
+						name = "law_and_order_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "law_and_order_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "law_and_order_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "law_and_order_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "public_education_spending_container"
+					position = { x = -9 y = 64 }
+
+					instantTextboxType = {
+						name = "public_education_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "public_education_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "public_education_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "public_education_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "public_healthcare_spending_container"
+					position = { x = -9 y = 93 }
+
+					instantTextboxType = {
+						name = "public_healthcare_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "public_healthcare_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "public_healthcare_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "public_healthcare_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "public_transport_spending_container"
+					position = { x = -9 y = 122 }
+
+					instantTextboxType = {
+						name = "public_transport_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "public_transport_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "public_transport_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "public_transport_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "public_housing_spending_container"
+					position = { x = -9 y = 151 }
+
+					instantTextboxType = {
+						name = "public_housing_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "public_housing_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "public_housing_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "public_housing_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+
+				instantTextboxType = {
+					name = "public_services_spending_expenditure"
+					position = { x = 241 y = 189 }
+					font = "hoi_18mbs"
+					text = "public_services_spending_expenditure"
+					maxWidth = 260
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "regulations_spending_container"
+				position = { x = -9 y = 633 }
+
+				instantTextboxType = {
+					name = "regulations_spending"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "regulations_spending_title"
+					maxWidth = 155
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				buttonType = {
+					name = "decrease_regulations_spending_button"
+					position = { x = 173 y = 1 }
+					quadTextureSprite ="GFX_decrease_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				buttonType = {
+					name = "increase_regulations_spending_button"
+					position = { x = 198 y = 1 }
+					quadTextureSprite ="GFX_increase_size_button"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
+				instantTextboxType = {
+					name = "regulations_spending_expenditure"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "regulations_spending_expenditure"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "social_programs_spending_container"
+				position = { x = 0 y = 676 }
+
+				instantTextboxType = {
+					name = "social_programs_spending"
+					position = { x = 22 y = -2 }
+					font = "hoi_30header"
+					text = "social_programs_spending_title"
+					maxWidth = 225
+					maxHeight = 20
+					format = center
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+
+				containerWindowType = {
+					name = "family_benefits_spending_container"
+					position = { x = -9 y = 35 }
+
+					instantTextboxType = {
+						name = "family_benefits_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "family_benefits_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "family_benefits_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "family_benefits_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "unemployment_benefits_spending_container"
+					position = { x = -9 y = 64 }
+
+					instantTextboxType = {
+						name = "unemployment_benefits_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "unemployment_benefits_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "unemployment_benefits_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "unemployment_benefits_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "state_pensions_spending_container"
+					position = { x = -9 y = 93 }
+
+					instantTextboxType = {
+						name = "state_pensions_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "state_pensions_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "state_pensions_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "state_pensions_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "welfare_spending_container"
+					position = { x = -9 y = 122 }
+
+					instantTextboxType = {
+						name = "welfare_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "welfare_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "welfare_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "welfare_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+
+				instantTextboxType = {
+					name = "social_programs_spending_expenditure"
+					position = { x = 241 y = 160 }
+					font = "hoi_18mbs"
+					text = "social_programs_spending_expenditure"
+					maxWidth = 260
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "subsidies_spending_container"
+				position = { x = 0 y = 878 }
+
+				instantTextboxType = {
+					name = "subsidies_spending"
+					position = { x = 22 y = -2 }
+					font = "hoi_30header"
+					text = "subsidies_spending_title"
+					maxWidth = 185
+					maxHeight = 20
+					format = center
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+
+				containerWindowType = {
+					name = "import_subsidies_spending_container"
+					position = { x = -9 y = 35 }
+
+					instantTextboxType = {
+						name = "import_subsidies_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "import_subsidies_spending_title"
+						maxWidth = 155
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					buttonType = {
+						name = "decrease_import_subsidies_spending_button"
+						position = { x = 173 y = 1 }
+						quadTextureSprite ="GFX_decrease_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					buttonType = {
+						name = "increase_import_subsidies_spending_button"
+						position = { x = 198 y = 1 }
+						quadTextureSprite ="GFX_increase_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					instantTextboxType = {
+						name = "import_subsidies_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "import_subsidies_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "export_subsidies_spending_container"
+					position = { x = -9 y = 64 }
+
+					instantTextboxType = {
+						name = "export_subsidies_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "export_subsidies_spending_title"
+						maxWidth = 155
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					buttonType = {
+						name = "decrease_export_subsidies_spending_button"
+						position = { x = 173 y = 1 }
+						quadTextureSprite ="GFX_decrease_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					buttonType = {
+						name = "increase_export_subsidies_spending_button"
+						position = { x = 198 y = 1 }
+						quadTextureSprite ="GFX_increase_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					instantTextboxType = {
+						name = "export_subsidies_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "export_subsidies_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "research_subsidies_spending_container"
+					position = { x = -9 y = 93 }
+
+					instantTextboxType = {
+						name = "research_subsidies_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "research_subsidies_spending_title"
+						maxWidth = 155
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					buttonType = {
+						name = "decrease_research_subsidies_spending_button"
+						position = { x = 173 y = 1 }
+						quadTextureSprite ="GFX_decrease_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					buttonType = {
+						name = "increase_research_subsidies_spending_button"
+						position = { x = 198 y = 1 }
+						quadTextureSprite ="GFX_increase_size_button"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+					instantTextboxType = {
+						name = "research_subsidies_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "research_subsidies_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "industrial_subsidies_spending_container"
+					position = { x = -9 y = 122 }
+
+					instantTextboxType = {
+						name = "industrial_subsidies_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "industrial_subsidies_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "industrial_subsidies_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "industrial_subsidies_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "infrastructrue_subsidies_spending_container"
+					position = { x = -9 y = 151 }
+
+					instantTextboxType = {
+						name = "infrastructrue_subsidies_spending"
+						position = { x = 8 y = 2 }
+						font = "hoi_18mbs"
+						text = "infrastructure_subsidies_spending_title"
+						maxWidth = 205
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+					instantTextboxType = {
+						name = "infrastructrue_subsidies_spending_expenditure"
+						position = { x = 350 y = 2 }
+						font = "hoi_18mbs"
+						text = "infrastructure_subsidies_spending_expenditure"
+						maxWidth = 160
+						maxHeight = 20
+						format = right
+						fixedsize = yes
+						#alwaystransparent = yes
+					}
+				}
+
+				instantTextboxType = {
+					name = "subsidies_spending_expenditure"
+					position = { x = 241 y = 189 }
+					font = "hoi_18mbs"
+					text = "subsidies_spending_expenditure"
+					maxWidth = 260
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "public_construction_spending_container"
+				position = { x = -9 y = 1111 }
+
+				instantTextboxType = {
+					name = "public_construction_spending"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "public_construction_spending_title"
+					maxWidth = 205
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "public_construction_spending_expenditure"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "public_construction_spending_expenditure"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "public_enterprises_spending_container"
+				position = { x = -9 y = 1140 }
+
+				instantTextboxType = {
+					name = "public_enterprises_spending"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "public_enterprises_spending_title"
+					maxWidth = 205
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "public_enterprises_spending_expenditure"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "public_enterprises_spending_expenditure"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "diplomacy_spending_container"
+				position = { x = -9 y = 1169 }
+
+				instantTextboxType = {
+					name = "diplomacy_spending"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "diplomacy_spending_title"
+					maxWidth = 205
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "diplomacy_spending_expenditure"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "diplomacy_spending_expenditure"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "interest_spending_container"
+				position = { x = -9 y = 1198 }
+
+				instantTextboxType = {
+					name = "interest_spending"
+					position = { x = 8 y = 2 }
+					font = "hoi_18mbs"
+					text = "interest_spending_title"
+					maxWidth = 205
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "interest_spending_expenditure"
+					position = { x = 350 y = 2 }
+					font = "hoi_18mbs"
+					text = "interest_spending_expenditure"
+					maxWidth = 160
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+			
+			containerWindowType = {
+				name = "total_expenditure_container"
+				position = { x = -9 y = 1250 }
+
+				instantTextboxType = {
+					name = "total_expenditure_title"
+					position = { x = 8 y = 0 }
+					font = "hoi_30header"
+					text = "total_expenditure_title"
+					maxWidth = 205
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "total_expenditure"
+					position = { x = 220 y = 0 }
+					font = "hoi_30header"
+					text = "total_expenditure"
+					maxWidth = 290
+					maxHeight = 20
+					format = right
+					fixedsize = yes
+					#alwaystransparent = yes
+				}
+			}
+		}
+	}
+	containerWindowType = { #Trade Tab Buttons
+		name = "dandt_trade_buttons_window"
+		position = { x = 4 y = 0 }
+		size = { width=550 height= 100% }
+
+		buttonType = {
+			name = "dandt_market_button"
+			position = { x = 20 y = 45 }
+			quadTextureSprite ="GFX_market_tab_button"
+		}
+		instantTextboxType = {
+			name = "dandt_market_title"
+			position = { x = 24 y = 45 }
+			font = "hoi_30header"
+			text = "dandt_market_title"
+			maxWidth = 240
+			maxHeight = 18
+			format = center
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "dandt_trade_button"
+			position = { x = 266 y = 45 }
+			quadTextureSprite ="GFX_market_tab_button"
+		}
+		instantTextboxType = {
+			name = "dandt_trade_title"
+			position = { x = 270 y = 45 }
+			font = "hoi_30header"
+			text = "dandt_trade_title"
+			maxWidth = 240
+			maxHeight = 18
+			format = center
+			fixedsize = yes
+		}
+	}
+	containerWindowType = { #Market List
+		name = "market_list_view"
+		position = { x=-356 y=0 }
+		show_position = { x=544 y =0 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		size = { width=375 height=100%% }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_1b_thin_border"
+		}
+
+		iconType = {
+			name = "market_list_header_bg"
+			spriteType = "GFX_subview_header_bg_375x101"
+			position = { x = 1 y = 0 }
+		}
+
+		instantTextboxType = {
+			name = "market_list_title"
+			position = { x = 20 y = 8 }
+			maxWidth = 336
+			font = "hoi_36header"
+			text = "market_list_title"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "markets"
+			position = { x=2 y=214 }
+			size = { width=375 height=100%% }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 40
+			smooth_scrolling = yes
+			margin = { bottom = 8 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_transparent"
+			}
+
+			gridboxtype = {
+				name = "markets_grid"
+				position = { x = 10 y = 0 }
+				size = { width = 355 height = 100%% }
+				slotsize = { width = 355 height = 70 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {
+			name = "filters_window"
+			position = { x=1 y=96 }
+			size = { width=373 height=120 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_plain_bg_small"
+			}
+
+			buttonType = {
+				name = "can_trade_checkbox"
+				position = { x = 18 y = 7 }
+				quadTextureSprite ="GFX_generic_checkbox_unchecked"
+				clicksound = click_checkbox
+			}
+			instantTextboxType = {
+				name = "can_trade_filter_title"
+				position = { x = 59 y = 11 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 0 }
+				text = "can_trade_filter_title"
+				maxWidth = 288
+				maxHeight = 20
+				format = left
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			
+			buttonType = {
+				name = "allied_checkbox"
+				position = { x = 18 y = 42 }
+				quadTextureSprite ="GFX_generic_checkbox_unchecked"
+				clicksound = click_checkbox
+			}
+			instantTextboxType = {
+				name = "allied_filter_title"
+				position = { x = 59 y = 46 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 0 }
+				text = "allied_filter_title"
+				maxWidth = 288
+				maxHeight = 20
+				format = left
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			
+			buttonType = {
+				name = "enemy_checkbox"
+				position = { x = 18 y = 77 }
+				quadTextureSprite ="GFX_generic_checkbox_unchecked"
+				clicksound = click_checkbox
+			}
+			instantTextboxType = {
+				name = "enemy_filter_title"
+				position = { x = 59 y = 81 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 0 }
+				text = "enemy_filter_title"
+				maxWidth = 288
+				maxHeight = 20
+				format = left
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "global_market_button"
+			position = { x = 105 y = 56 }
+			quadTextureSprite ="GFX_division_designer_button"
+			buttonFont = "hoi_18mbs"
+			buttonText = "global_market_button_text"
+			clicksound = click_default
+		}
+		iconType = {
+			name = "league_of_nations_icon1"
+			spriteType = "GFX_league_of_nations_icon"
+			position = { x = 17 y = 47 }
+		}
+		iconType = {
+			name = "league_of_nations_icon2"
+			spriteType = "GFX_league_of_nations_icon"
+			position = { x = 280 y = 47 }
+		}
+	}
+	containerWindowType = { #Market Tab
+		name = "dandt_market_tab"
+		position = { x = 4 y = 0 }
+		size = { width=550 height= 100% }
+
+		iconType ={
+			name ="dandt_trade_filter_bg"
+			spriteType = "GFX_trade_filter_bg"
+			position = { x= 13 y = 78 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		containerWindowType = {
+			name = "market_section"
+			position = { x=22 y=78 }
+			size = { width=341 height=72 }
+
+			iconType = {
+				name = "market_background"
+				quadTextureSprite ="GFX_market_entry_background"
+				position = { x=-5 y=0 }
+			}
+
+			iconType ={
+				name ="dandt_market_flag"
+				spriteType = "GFX_shield_medium"
+				position = { x= 2 y = 10 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType ={
+				name ="dandt_global_market_icon"
+				spriteType = "GFX_league_of_nations_icon"
+				position = { x= 2 y = 10 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "market_screen_market_text"
+				position = { x = 102 y = 16 }
+				font = "hoi_18mbs"
+				text = "market_screen_market_text"
+				format = left
+				maxWidth = 215
+				maxHeight = 20
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "market_screen_size"
+				position = { x = 102 y = 36 }
+				font = "hoi_18mbs"
+				text = "market_screen_size"
+				format = left
+				maxWidth = 215
+				maxHeight = 20
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "market_screen_gdp"
+				position = { x = 102 y = 36 }
+				font = "hoi_18mbs"
+				text = "market_screen_gdp"
+				format = right
+				maxWidth = 215
+				maxHeight = 20
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "filter_section"
+			position = { x=368 y=76 }
+			size = { width=141 height=123 }
+
+			iconType ={
+				name ="market_square_bg"
+				spriteType = "GFX_market_square_background"
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			buttonType ={
+				name ="natural_resources_filter"
+				spriteType = "GFX_market_natural_resources_filter"
+				position = { x= 15 y = 12 }
+				Orientation = "UPPER_LEFT"
+			}
+			buttonType ={
+				name ="produced_resources_filter"
+				spriteType = "GFX_market_produced_resources_filter"
+				position = { x= 75 y = 12 }
+				Orientation = "UPPER_LEFT"
+			}
+			buttonType ={
+				name ="service_resources_filter"
+				spriteType = "GFX_market_service_resources_filter"
+				position = { x= 15 y = 63 }
+				Orientation = "UPPER_LEFT"
+			}
+			buttonType ={
+				name ="military_resources_filter"
+				spriteType = "GFX_market_military_resources_filter"
+				position = { x= 75 y = 63 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {
+			name = "market_capital_section"
+			position = { x=15 y=147 }
+			size = { width=350 height=52 }
+
+			buttonType ={
+				name ="market_rectangle_bg"
+				spriteType = "GFX_market_rectangle_background"
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType ={
+				name ="market_capital_icon"
+				spriteType = "GFX_onmap_victorypoints_strip"
+				position = { x= 13 y = 11 }
+				frame = 4
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "market_screen_capital_button_text"
+				position = { x = 46 y = 15 }
+				font = "hoi_18mbs"
+				text = "market_screen_capital_button_text"
+				format = left
+				maxWidth = 160
+				maxHeight = 18
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "market_screen_capital_productivity_text"
+				position = { x = 252 y = 10 }
+				font = "hoi_16mbs"
+				text = "market_screen_capital_productivity_text"
+				format = right
+				maxWidth = 80
+				maxHeight = 18
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "market_screen_capital_employeees_text"
+				position = { x = 252 y = 26 }
+				font = "hoi_16mbs"
+				text = "market_screen_capital_employees_text"
+				format = right
+				maxWidth = 80
+				maxHeight = 18
+				fixedsize = yes
+			}
+		}
+		
+		#Sort
+			#Resource
+			buttonType = {
+				name = "dandt_sort_resource"
+				position = { x = 13 y = 200 }
+				quadTextureSprite ="GFX_trade_filter_btn_resource"
+				clicksound = click_scroll
+				pdx_tooltip = "dandt_sort_resource_title_tooltip"
+				pdx_tooltip_delayed = "dandt_sort_resource_title_tooltip_delayed"
+			}
+			instantTextboxType = {
+				name = "dandt_sort_resource_title"
+				position = { x = 15 y = 207 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_resource_title"
+				maxWidth = 40
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			#Supply
+			buttonType = {
+				name = "dandt_sort_supply"
+				position = { x = 56 y = 200 }
+				quadTextureSprite ="GFX_trade_filter_btn_supply_demand"
+				clicksound = click_scroll
+				pdx_tooltip = "dandt_sort_supply_tooltip"
+				pdx_tooltip_delayed = "dandt_sort_supply_tooltip_delayed"
+			}
+			instantTextboxType = {
+				name = "dandt_sort_supply_title"
+				position = { x = 58 y = 207 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_supply_title"
+				maxWidth = 60
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			#Demand
+			buttonType = {
+				name = "dandt_sort_demand"
+				position = { x = 119 y = 200 }
+				quadTextureSprite ="GFX_trade_filter_btn_supply_demand"
+				clicksound = click_scroll
+				pdx_tooltip = "dandt_sort_demand_tooltip"
+				pdx_tooltip_delayed = "dandt_sort_demand_tooltip_delayed"
+			}
+			instantTextboxType = {
+				name = "dandt_sort_demand_title"
+				position = { x = 121 y = 207 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_demand_title"
+				maxWidth = 60
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+		#Balance
+			buttonType = {
+				name = "dandt_sort_balance"
+				position = { x = 182 y = 200 }
+				quadTextureSprite ="GFX_trade_filter_btn_size"
+				clicksound = click_scroll
+				pdx_tooltip = "dandt_sort_balance_tooltip"
+			pdx_tooltip_delayed = "dandt_sort_balance_tooltip_delayed"
+			}
+			instantTextboxType = {
+				name = "dandt_sort_balance_title"
+				position = { x = 196 y = 207 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_balance_title"
+				maxWidth = 108
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+			}
+			#Price
+			buttonType = {
+				name = "dandt_sort_price"
+				position = { x = 316 y = 200 }
+				quadTextureSprite ="GFX_trade_filter_btn_price"
+				clicksound = click_scroll
+			}
+			instantTextboxType = {
+				name = "dandt_sort_price_title"
+				position = { x = 320 y = 207 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_price_title"
+				maxWidth = 194
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+			}
+		#
+		containerWindowType = {
+			name = "resource_list_container"
+			position = { x = 10 y = 230 }
+			size = { width = 536 height = -10 }
+			margin = { top = 0 bottom = 4 left = 0 right = 0 }
+			Orientation = upper_left
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+			}
+
+			verticalScrollbar = "right_vertical_slider"
+			vertical_scroll_step = 98
+			scroll_wheel_factor = 98
+			smooth_scrolling = yes
+		
+			gridboxtype = {
+				name = "market_resource_list"
+				position = { x = 250 y = 0 }
+				size = { width = 0 height = 0 }
+				slotsize = { width = 500 height = 47 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+		
+	}
+	containerWindowType = { #Trade Tab
+		name = "dandt_trade_tab"
+		position = { x = 4 y = 0 }
+		size = { width=550 height= 100% }
+
+		#Balance Lists
+		containerWindowType = {
+			name = "high_balance_list_container"
+			position = { x = 11 y = 78 }
+			size = { width = 254 height = 189 }
+			Orientation = upper_left
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_market_balance_background"
+			}
+
+			instantTextBoxType = {
+				name = "high_balance_title"
+				position = { x = 5 y = -1 }
+				font = "hoi_18mbs"
+				text = "high_balance_title"
+				format = center
+				maxWidth = 244
+				maxHeight = 18
+				fixedsize = yes
+			}
+
+			containerWindowType = {
+				name = "high_balance_first_entry"
+				position = { x = 4 y = 19 } 
+				size = { width = 110 height = 33 }
+
+				buttonType = {
+					name = "high_balance_first_entry_background"
+					quadTextureSprite ="GFX_dandt_resource_market_entry"
+					position = { x = -2 y = -2 }
+				}
+
+				iconType = {
+					name = "high_balance_first_entry_icon"
+					quadTextureSprite ="GFX_resources_strip"
+					position = { x = 3 y = 3 }
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "high_balance_first_entry_loc"
+					position = { x = 40 y = 7 }
+					font = "hoi_18mbs"
+					text = "high_balance_first_entry_loc"
+					format = left
+					maxWidth = 104
+					maxHeight = 20
+					fixedsize = yes
+				}
+				
+				instantTextBoxType = {
+					name = "high_balance_first_entry_price"
+					position = { x = 134 y = 7 }
+					font = "hoi_18mbs"
+					text = "high_balance_first_entry_price"
+					format = right
+					maxWidth = 74
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "high_balance_first_entry_price_icon"
+					quadTextureSprite ="GFX_price_average"
+					position = { x = 208 y = 4 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "high_balance_second_entry"
+				position = { x = 4 y = 52 } 
+				size = { width = 110 height = 33 }
+
+				buttonType = {
+					name = "high_balance_second_entry_background"
+					quadTextureSprite ="GFX_dandt_resource_market_entry"
+					position = { x = -2 y = -2 }
+				}
+
+				iconType = {
+					name = "high_balance_second_entry_icon"
+					quadTextureSprite ="GFX_resources_strip"
+					position = { x = 3 y = 3 }
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "high_balance_second_entry_loc"
+					position = { x = 40 y = 7 }
+					font = "hoi_18mbs"
+					text = "high_balance_second_entry_loc"
+					format = left
+					maxWidth = 104
+					maxHeight = 20
+					fixedsize = yes
+				}
+				
+				instantTextBoxType = {
+					name = "high_balance_second_entry_price"
+					position = { x = 134 y = 7 }
+					font = "hoi_18mbs"
+					text = "high_balance_second_entry_price"
+					format = right
+					maxWidth = 74
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "high_balance_second_entry_price_icon"
+					quadTextureSprite ="GFX_price_average"
+					position = { x = 208 y = 4 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "high_balance_third_entry"
+				position = { x = 4 y = 85 } 
+				size = { width = 110 height = 33 }
+
+				buttonType = {
+					name = "high_balance_third_entry_background"
+					quadTextureSprite ="GFX_dandt_resource_market_entry"
+					position = { x = -2 y = -2 }
+				}
+
+				iconType = {
+					name = "high_balance_third_entry_icon"
+					quadTextureSprite ="GFX_resources_strip"
+					position = { x = 3 y = 3 }
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "high_balance_third_entry_loc"
+					position = { x = 40 y = 7 }
+					font = "hoi_18mbs"
+					text = "high_balance_third_entry_loc"
+					format = left
+					maxWidth = 104
+					maxHeight = 20
+					fixedsize = yes
+				}
+				
+				instantTextBoxType = {
+					name = "high_balance_third_entry_price"
+					position = { x = 134 y = 7 }
+					font = "hoi_18mbs"
+					text = "high_balance_third_entry_price"
+					format = right
+					maxWidth = 74
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "high_balance_third_entry_price_icon"
+					quadTextureSprite ="GFX_price_average"
+					position = { x = 208 y = 4 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "high_balance_fourth_entry"
+				position = { x = 4 y = 118 } 
+				size = { width = 110 height = 33 }
+
+				buttonType = {
+					name = "high_balance_fourth_entry_background"
+					quadTextureSprite ="GFX_dandt_resource_market_entry"
+					position = { x = -2 y = -2 }
+				}
+
+				iconType = {
+					name = "high_balance_fourth_entry_icon"
+					quadTextureSprite ="GFX_resources_strip"
+					position = { x = 3 y = 3 }
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "high_balance_fourth_entry_loc"
+					position = { x = 40 y = 7 }
+					font = "hoi_18mbs"
+					text = "high_balance_fourth_entry_loc"
+					format = left
+					maxWidth = 104
+					maxHeight = 20
+					fixedsize = yes
+				}
+				
+				instantTextBoxType = {
+					name = "high_balance_fourth_entry_price"
+					position = { x = 134 y = 7 }
+					font = "hoi_18mbs"
+					text = "high_balance_fourth_entry_price"
+					format = right
+					maxWidth = 74
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "high_balance_fourth_entry_price_icon"
+					quadTextureSprite ="GFX_price_average"
+					position = { x = 208 y = 4 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "high_balance_fifth_entry"
+				position = { x = 4 y = 151 } 
+				size = { width = 110 height = 33 }
+
+				buttonType = {
+					name = "high_balance_fifth_entry_background"
+					quadTextureSprite ="GFX_dandt_resource_market_entry"
+					position = { x = -2 y = -2 }
+				}
+
+				iconType = {
+					name = "high_balance_fifth_entry_icon"
+					quadTextureSprite ="GFX_resources_strip"
+					position = { x = 3 y = 3 }
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "high_balance_fifth_entry_loc"
+					position = { x = 40 y = 7 }
+					font = "hoi_18mbs"
+					text = "high_balance_fifth_entry_loc"
+					format = left
+					maxWidth = 104
+					maxHeight = 20
+					fixedsize = yes
+				}
+				
+				instantTextBoxType = {
+					name = "high_balance_fifth_entry_price"
+					position = { x = 134 y = 7 }
+					font = "hoi_18mbs"
+					text = "high_balance_fifth_entry_price"
+					format = right
+					maxWidth = 74
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "high_balance_fifth_entry_price_icon"
+					quadTextureSprite ="GFX_price_average"
+					position = { x = 208 y = 4 }
+					alwaystransparent = yes
+				}
+			}
+		
+		}
+		containerWindowType = {
+			name = "low_balance_list_container"
+			position = { x = 266 y = 78 }
+			size = { width = 254 height = 189 }
+			Orientation = upper_left
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_market_balance_background"
+			}
+
+			instantTextBoxType = {
+				name = "low_balance_title"
+				position = { x = 5 y = -1 }
+				font = "hoi_18mbs"
+				text = "low_balance_title"
+				format = center
+				maxWidth = 244
+				maxHeight = 18
+				fixedsize = yes
+			}
+
+			containerWindowType = {
+				name = "low_balance_first_entry"
+				position = { x = 4 y = 19 } 
+				size = { width = 110 height = 33 }
+
+				buttonType = {
+					name = "low_balance_first_entry_background"
+					quadTextureSprite ="GFX_dandt_resource_market_entry"
+					position = { x = -2 y = -2 }
+				}
+
+				iconType = {
+					name = "low_balance_first_entry_icon"
+					quadTextureSprite ="GFX_resources_strip"
+					position = { x = 3 y = 3 }
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "low_balance_first_entry_loc"
+					position = { x = 40 y = 7 }
+					font = "hoi_18mbs"
+					text = "low_balance_first_entry_loc"
+					format = left
+					maxWidth = 104
+					maxHeight = 20
+					fixedsize = yes
+				}
+				
+				instantTextBoxType = {
+					name = "low_balance_first_entry_price"
+					position = { x = 134 y = 7 }
+					font = "hoi_18mbs"
+					text = "low_balance_first_entry_price"
+					format = right
+					maxWidth = 74
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "low_balance_first_entry_price_icon"
+					quadTextureSprite ="GFX_price_average"
+					position = { x = 208 y = 4 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "low_balance_second_entry"
+				position = { x = 4 y = 52 } 
+				size = { width = 110 height = 33 }
+
+				buttonType = {
+					name = "low_balance_second_entry_background"
+					quadTextureSprite ="GFX_dandt_resource_market_entry"
+					position = { x = -2 y = -2 }
+				}
+
+				iconType = {
+					name = "low_balance_second_entry_icon"
+					quadTextureSprite ="GFX_resources_strip"
+					position = { x = 3 y = 3 }
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "low_balance_second_entry_loc"
+					position = { x = 40 y = 7 }
+					font = "hoi_18mbs"
+					text = "low_balance_second_entry_loc"
+					format = left
+					maxWidth = 104
+					maxHeight = 20
+					fixedsize = yes
+				}
+				
+				instantTextBoxType = {
+					name = "low_balance_second_entry_price"
+					position = { x = 134 y = 7 }
+					font = "hoi_18mbs"
+					text = "low_balance_second_entry_price"
+					format = right
+					maxWidth = 74
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "low_balance_second_entry_price_icon"
+					quadTextureSprite ="GFX_price_average"
+					position = { x = 208 y = 4 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "low_balance_third_entry"
+				position = { x = 4 y = 85 } 
+				size = { width = 110 height = 33 }
+
+				buttonType = {
+					name = "low_balance_third_entry_background"
+					quadTextureSprite ="GFX_dandt_resource_market_entry"
+					position = { x = -2 y = -2 }
+				}
+
+				iconType = {
+					name = "low_balance_third_entry_icon"
+					quadTextureSprite ="GFX_resources_strip"
+					position = { x = 3 y = 3 }
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "low_balance_third_entry_loc"
+					position = { x = 40 y = 7 }
+					font = "hoi_18mbs"
+					text = "low_balance_third_entry_loc"
+					format = left
+					maxWidth = 104
+					maxHeight = 20
+					fixedsize = yes
+				}
+				
+				instantTextBoxType = {
+					name = "low_balance_third_entry_price"
+					position = { x = 134 y = 7 }
+					font = "hoi_18mbs"
+					text = "low_balance_third_entry_price"
+					format = right
+					maxWidth = 74
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "low_balance_third_entry_price_icon"
+					quadTextureSprite ="GFX_price_average"
+					position = { x = 208 y = 4 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "low_balance_fourth_entry"
+				position = { x = 4 y = 118 } 
+				size = { width = 110 height = 33 }
+
+				buttonType = {
+					name = "low_balance_fourth_entry_background"
+					quadTextureSprite ="GFX_dandt_resource_market_entry"
+					position = { x = -2 y = -2 }
+				}
+
+				iconType = {
+					name = "low_balance_fourth_entry_icon"
+					quadTextureSprite ="GFX_resources_strip"
+					position = { x = 3 y = 3 }
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "low_balance_fourth_entry_loc"
+					position = { x = 40 y = 7 }
+					font = "hoi_18mbs"
+					text = "low_balance_fourth_entry_loc"
+					format = left
+					maxWidth = 104
+					maxHeight = 20
+					fixedsize = yes
+				}
+				
+				instantTextBoxType = {
+					name = "low_balance_fourth_entry_price"
+					position = { x = 134 y = 7 }
+					font = "hoi_18mbs"
+					text = "low_balance_fourth_entry_price"
+					format = right
+					maxWidth = 74
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "low_balance_fourth_entry_price_icon"
+					quadTextureSprite ="GFX_price_average"
+					position = { x = 208 y = 4 }
+					alwaystransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "low_balance_fifth_entry"
+				position = { x = 4 y = 151 } 
+				size = { width = 110 height = 33 }
+
+				buttonType = {
+					name = "low_balance_fifth_entry_background"
+					quadTextureSprite ="GFX_dandt_resource_market_entry"
+					position = { x = -2 y = -2 }
+				}
+
+				iconType = {
+					name = "low_balance_fifth_entry_icon"
+					quadTextureSprite ="GFX_resources_strip"
+					position = { x = 3 y = 3 }
+					frame = 13
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "low_balance_fifth_entry_loc"
+					position = { x = 40 y = 7 }
+					font = "hoi_18mbs"
+					text = "low_balance_fifth_entry_loc"
+					format = left
+					maxWidth = 104
+					maxHeight = 20
+					fixedsize = yes
+				}
+				
+				instantTextBoxType = {
+					name = "low_balance_fifth_entry_price"
+					position = { x = 134 y = 7 }
+					font = "hoi_18mbs"
+					text = "low_balance_fifth_entry_price"
+					format = right
+					maxWidth = 74
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "low_balance_fifth_entry_price_icon"
+					quadTextureSprite ="GFX_price_average"
+					position = { x = 208 y = 4 }
+					alwaystransparent = yes
+				}
+			}
+
+		}
+
+		iconType ={
+			name ="dandt_trade_divider"
+			spriteType = "GFX_divider"
+			position = { x= 8 y = 267 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType ={
+			name ="dandt_trade_filter_bg"
+			spriteType = "GFX_trade_filter_bg"
+			position = { x= 13 y = 278 }
+			Orientation = "UPPER_LEFT"
+		}
+		#New Import
+			buttonType = {
+				name = "dandt_new_import_route_button"
+				position = { x = 20 y = 280 }
+				quadTextureSprite ="GFX_new_import_route_button"
+				pdx_tooltip = "dandt_new_import_route_loc_tooltip"
+				pdx_tooltip_delayed = "dandt_new_import_route_loc_tooltip_delayed"
+			}
+			iconType = {
+				name = "dandt_new_import_route_icon"
+				position = { x = 35 y = 294 }
+				quadTextureSprite ="GFX_imports_icon"
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "dandt_new_import_route_loc"
+				position = { x = 72 y = 293 }
+				font = "hoi_30header"
+				text = "dandt_new_import_route_loc"
+				maxWidth = 130
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+		#
+		#New Export
+			buttonType = {
+				name = "dandt_new_export_route_button"
+				position = { x = 20 y = 338 }
+				quadTextureSprite ="GFX_new_export_route_button"
+				pdx_tooltip = "dandt_new_export_route_loc_tooltip"
+				pdx_tooltip_delayed = "dandt_new_export_route_loc_tooltip_delayed"
+			}
+			iconType = {
+				name = "dandt_new_export_route_icon"
+				position = { x = 35 y = 352 }
+				quadTextureSprite ="GFX_exports_icon"
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "dandt_new_export_route_loc"
+				position = { x = 72 y = 351 }
+				font = "hoi_30header"
+				text = "dandt_new_export_route_loc"
+				maxWidth = 130
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+		#
+		#Sort
+			#Resource
+			buttonType = {
+				name = "dandt_sort_resource"
+				position = { x = 13 y = 400 }
+				quadTextureSprite ="GFX_trade_filter_btn_resource"
+				clicksound = click_scroll
+				pdx_tooltip = "dandt_sort_resource_title_tooltip"
+				pdx_tooltip_delayed = "dandt_sort_resource_title_tooltip_delayed"
+			}
+			instantTextboxType = {
+				name = "dandt_sort_resource_title"
+				position = { x = 15 y = 407 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_resource_title"
+				maxWidth = 40
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			#Exporter
+			buttonType = {
+				name = "dandt_sort_exporter"
+				position = { x = 56 y = 400 }
+				quadTextureSprite ="GFX_trade_filter_btn_flag"
+				clicksound = click_scroll
+				pdx_tooltip = "dandt_sort_exporter_title_tooltip"
+				pdx_tooltip_delayed = "dandt_sort_exporter_title_tooltip_delayed"
+			}
+			instantTextboxType = {
+				name = "dandt_sort_exporter_title"
+				position = { x = 58 y = 407 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_exporter_title"
+				maxWidth = 64
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			#Productivity
+			buttonType = {
+				name = "dandt_sort_productivity"
+				position = { x = 122 y = 400 }
+				quadTextureSprite ="GFX_trade_filter_btn_center"
+				clicksound = click_scroll
+				pdx_tooltip = "dandt_sort_productivity_title_tooltip"
+				pdx_tooltip_delayed = "dandt_sort_productivity_title_tooltip_delayed"
+			}
+			instantTextboxType = {
+				name = "dandt_sort_productivity_title"
+				position = { x = 124 y = 407 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_productivity_title"
+				maxWidth = 94
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			#Amount
+			buttonType = {
+				name = "dandt_sort_amount"
+				position = { x = 220 y = 400 }
+				quadTextureSprite ="GFX_trade_filter_btn_center"
+				clicksound = click_scroll
+				pdx_tooltip = "dandt_sort_amount_title_tooltip"
+				pdx_tooltip_delayed = "dandt_sort_amount_title_tooltip_delayed"
+			}
+			instantTextboxType = {
+				name = "dandt_sort_amount_title"
+				position = { x = 222 y = 407 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_amount_title"
+				maxWidth = 94
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			#Importer
+			buttonType = {
+				name = "dandt_sort_importer"
+				position = { x = 318 y = 400 }
+				quadTextureSprite ="GFX_trade_filter_btn_flag"
+				clicksound = click_scroll
+				pdx_tooltip = "dandt_sort_importer_title_tooltip"
+				pdx_tooltip_delayed = "dandt_sort_importer_title_tooltip_delayed"
+			}
+			instantTextboxType = {
+				name = "dandt_sort_importer_title"
+				position = { x = 320 y = 407 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_importer_title"
+				maxWidth = 64
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			#Size
+			buttonType = {
+				name = "dandt_sort_size"
+				position = { x=384 y= 400 }
+				quadTextureSprite ="GFX_trade_filter_btn_size"
+				clicksound = click_scroll
+				pdx_tooltip = "dandt_sort_size_title_tooltip"
+				pdx_tooltip_delayed = "dandt_sort_size_title_tooltip_delayed"
+			}
+			instantTextboxType = {
+				name = "dandt_sort_size_title"
+				position = { x=398 y= 407 }
+				font = "hoi_16mbs"
+				text = "dandt_sort_size_title"
+				maxWidth = 108
+				maxHeight = 18
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+		#
+		containerWindowType = {
+			name = "trade_route_list_container"
+			position = { x = 10 y = 430 }
+			size = { width = 536 height = -10 }
+			margin = { top = 0 bottom = 4 left = 0 right = 0 }
+			Orientation = upper_left
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+			}
+
+			verticalScrollbar = "right_vertical_slider"
+			vertical_scroll_step = 98
+			scroll_wheel_factor = 98
+			smooth_scrolling = yes
+		
+			gridboxtype = {
+				name = "trade_route_list"
+				position = { x = 250 y = 0 }
+				size = { width = 0 height = 0 }
+				slotsize = { width = 500 height = 47 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+	}
+	
+
+	containerWindowType = { #Trade Route Entry
+		name = "dandt_trade_route_entry"
+		position = { x = 0 y = 0 }
+		size = { width=510 height= 47 }
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_dandt_trade_route_background"
+		}
+		
+		iconType ={
+			name ="dandt_trade_routes_icon"
+			position = { x = 10 y = 10 }
+			spriteType = "GFX_resources_strip"
+			frame = 13
+			pdx_tooltip = "dandt_trade_routes_icon_tooltip"
+		}
+
+		instantTextBoxType = {
+			name = "dandt_trade_route_productivity_loc"
+			position = { x = 60 y = 12 }
+			font = "hoi_18mbs"
+			text = "dandt_trade_route_productivity_loc"
+			format = left
+			maxWidth = 90
+			maxHeight = 20
+			fixedsize = yes
+			pdx_tooltip = "dandt_trade_route_productivity_tooltip"
+		}
+		instantTextBoxType = {
+			name = "dandt_trade_route_amount_loc"
+			position = { x = 140 y = 12 }
+			font = "hoi_18mbs"
+			text = "dandt_trade_route_amount_loc"
+			format = right
+			maxWidth = 92
+			maxHeight = 20
+			fixedsize = yes
+			pdx_tooltip = "dandt_trade_route_amount_tooltip"
+		}
+
+		instantTextBoxType = {
+			name = "dandt_trade_route_shipping_use_loc"
+			position = { x = 265 y = 14 }
+			font = "hoi_18mbs"
+			text = "dandt_trade_route_shipping_use_loc"
+			format = center
+			maxWidth = 80
+			maxHeight = 20
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "dandt_trade_route_decrease_size"
+			position = { x = 397 y = 9 }
+			spriteType = "GFX_export_more_button"
+			pdx_tooltip = "dandt_trade_route_decrease_size_tooltip"
+		}
+		buttonType = {
+			name = "dandt_trade_route_increase_size"
+			position = { x = 425 y = 9 }
+			spriteType = "GFX_import_more_button"
+			pdx_tooltip = "dandt_trade_route_increase_size_tooltip"
+		}
+		buttonType = {
+			name = "dandt_trade_route_remove_route"
+			position = { x = 470 y = 9 }
+			spriteType = "GFX_cancel_import_button"
+		}
+	}
+	containerWindowType = { #Trade Resource Entry
+		name = "dandt_trade_resource_entry"
+		position = { x = 0 y = 0 }
+		size = { width=510 height= 47 }
+
+		buttonType = {
+			name = "dandt_trade_resource_background"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_dandt_trade_resource_background"
+		}
+		
+		iconType ={
+			name ="dandt_trade_resource_icon"
+			position = { x = 10 y = 10 }
+			spriteType = "GFX_resources_strip"
+			frame = 13
+		}
+
+		instantTextBoxType = {
+			name = "dandt_trade_resource_supply_loc"
+			position = { x = 57 y = 6 }
+			font = "hoi_16mbs"
+			text = "dandt_trade_resource_supply_loc"
+			format = left
+			maxWidth = 105
+			maxHeight = 20
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "dandt_trade_resource_demand_loc"
+			position = { x = 61 y = 24 }
+			font = "hoi_16mbs"
+			text = "dandt_trade_resource_demand_loc"
+			format = right
+			maxWidth = 105
+			maxHeight = 20
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "dandt_trade_resource_balance_loc"
+			position = { x = 184 y = 7 }
+			font = "hoi_18mbs"
+			text = "dandt_trade_resource_balance_loc"
+			format = center
+			maxWidth = 110
+			maxHeight = 20
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "dandt_trade_resource_balance_bar_negative"
+			position = { x = 238 y = 24 }
+			spritetype = "GFX_trade_resource_balance_negative"
+			rotation = 3.1415
+		}
+		iconType = {
+			name = "dandt_trade_resource_balance_bar_positive"
+			position = { x = 280 y = 24 }
+			spritetype = "GFX_trade_resource_balance_positive"
+			rotation = 3.1415
+		}
+		iconType ={
+			name ="dandt_trade_resource_balance_bar_frame"
+			position = { x = 192 y = 26 }
+			spriteType = "GFX_dual_bar_small"
+		}
+
+		instantTextBoxType = {
+			name = "dandt_trade_resource_price_loc"
+			position = { x = 305 y = 12 }
+			font = "hoi_18mbs"
+			text = "dandt_trade_resource_price_loc"
+			format = center
+			maxWidth = 70
+			maxHeight = 20
+			fixedsize = yes
+		}
+		iconType ={
+			name ="dandt_trade_resource_price_icon"
+			position = { x = 382 y = 10 }
+			spriteType = "GFX_price_average"
+		}
+		instantTextBoxType = {
+			name = "dandt_trade_resource_relative_price_loc"
+			position = { x = 410 y = 7 }
+			font = "hoi_18mbs"
+			text = "dandt_trade_resource_relative_price_loc"
+			format = center
+			maxWidth = 92
+			maxHeight = 20
+			fixedsize = yes
+		}
+		
+		iconType = {
+			name = "dandt_trade_resource_price_bar_negative"
+			position = { x = 415 y = 29 }
+			spritetype = "GFX_trade_resource_price_negative"
+		}
+		iconType = {
+			name = "dandt_trade_resource_price_bar_positive"
+			position = { x = 457 y = 29 }
+			spritetype = "GFX_trade_resource_price_positive"
+		}
+		iconType ={
+			name ="dandt_trade_resource_price_bar_frame"
+			position = { x = 408 y = 26 }
+			spriteType = "GFX_dual_bar_small"
+		}
+	}
+	containerWindowType = { #New Route Entry
+		name = "dandt_new_route_entry"
+		position = { x = 0 y = 0 }
+		size = { width=510 height= 47 }
+
+		buttonType = {
+			name = "dandt_new_route_entry_background"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_dandt_trade_route_background"
+		}
+		
+		iconType ={
+			name ="dandt_new_route_resource_icon"
+			position = { x = 10 y = 10 }
+			spriteType = "GFX_resource_foodstuffs"
+		}
+
+		iconType ={
+			name ="dandt_new_route_exporter_flag"
+			position = { x = 48 y = 3 }
+			spriteType = "GFX_flag_medium"
+		}
+
+		instantTextBoxType = {
+			name = "dandt_new_route_productivity_loc"
+			position = { x = 122 y = 12 }
+			font = "hoi_18mbs"
+			text = "dandt_new_route_productivity_loc"
+			format = left
+			maxWidth = 90
+			maxHeight = 20
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "dandt_new_route_amount_loc"
+			position = { x = 202 y = 12 }
+			font = "hoi_18mbs"
+			text = "dandt_new_route_amount_loc"
+			format = right
+			maxWidth = 92
+			maxHeight = 20
+			fixedsize = yes
+		}
+
+		iconType ={
+			name ="dandt_new_route_importer_flag"
+			position = { x = 310 y = 3 }
+			spriteType = "GFX_flag_medium"
+		}
+
+		instantTextBoxType = {
+			name = "dandt_new_route_shipping_use_loc"
+			position = { x = 402 y = 12 }
+			font = "hoi_18mbs"
+			text = "dandt_new_route_shipping_use_loc"
+			format = center
+			maxWidth = 80
+			maxHeight = 20
+			fixedsize = yes
+		}
+	}
+
+	containerWindowType = { #Market Entry
+		name = "market_entry"
+		position = { x=0 y=0 }
+		size = { width=341 height=72 }
+
+		buttonType = {
+			name = "market_background"
+			quadTextureSprite ="GFX_market_entry_background"
+			position = { x=-5 y=0 }
+		}
+
+		iconType ={
+			name ="market_flag"
+			spriteType = "GFX_shield_medium"
+			position = { x= 2 y = 10 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "market_entry_title"
+			position = { x = 102 y = 16 }
+			font = "hoi_18mbs"
+			text = "market_entry_title"
+			format = left
+			maxWidth = 215
+			maxHeight = 20
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "market_entry_size"
+			position = { x = 102 y = 36 }
+			font = "hoi_18mbs"
+			text = "market_entry_size"
+			format = left
+			maxWidth = 215
+			maxHeight = 20
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "market_entry_gdp"
+			position = { x = 102 y = 36 }
+			font = "hoi_18mbs"
+			text = "market_entry_gdp"
+			format = right
+			maxWidth = 215
+			maxHeight = 20
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+	}
+}

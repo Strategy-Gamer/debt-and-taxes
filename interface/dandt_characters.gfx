@@ -1,0 +1,75 @@
+spriteTypes = {	
+	
+### Death and Taxes Characters ###
+
+	#USA
+	spriteType = {
+		name = "GFX_portrait_USA_calvin_coolidge"
+		textureFile = "gfx/leaders/USA/portrait_USA_calvin_coolidge.dds"
+	}
+	#SAA
+	spriteType = {
+		name = "GFX_portrait_SAA_ernest_wilton"
+		textureFile = "gfx/leaders/SAA/portrait_SAA_ernest_wilton.png"
+	}
+	# Germany
+	spriteType = {
+		name = "GFX_portrait_GER_hindenburg"
+		textureFile = "gfx/leaders/GER/portrait_GER_hindenburg.png"
+	}
+	# FRA
+	spriteType = {
+		name = "GFX_portrait_FRA_raymond"
+		textureFile = "gfx/leaders/FRA/portrait_FRA_raymond.png"
+	}
+	# KML
+	spriteType = {
+		name = "GFX_portrait_KML_yulbars_khan"
+		textureFile = "gfx/leaders/KML/portrait_KML_yulbars_khan.png"
+	}
+	#XSM
+	spriteType = {
+		name = "GFX_portrait_XSM_ma_hongkui"
+		textureFile = "gfx/leaders/XSM/portrait_XSM_ma_hongkui.png"
+	}
+	#FEG
+	spriteType = {
+		name = "GFX_portrait_FEG_chang_shueliang"
+		textureFile = "gfx/leaders/FEG/portrait_FEG_chang_shueliang.png"
+	}
+	#GUI
+	spriteType = {
+		name = "GFX_portrait_GUI_wang_jialie"
+		textureFile = "gfx/leaders/GUI/portrait_GUI_wang_jialie.png"
+	}
+	#GUO
+	spriteType = {
+		name = "GFX_portrait_GUO_feng_yuxiang"
+		textureFile = "gfx/leaders/GUO/portrait_GUO_feng_yuxiang.png"
+	}
+	#GGD
+	spriteType = {
+		name = "GFX_portrait_GGD_chen_jitang"
+		textureFile = "gfx/leaders/GGD/portrait_GGD_chen_jitang.png"
+	}
+	#BAZ
+	spriteType = {
+		name = "GFX_portrait_BAZ_tian_songyao"
+		textureFile = "gfx/leaders/BAZ/portrait_BAZ_tian_songyao.png"
+	}
+	#CGQ
+	spriteType = {
+		name = "GFX_portrait_CGQ_liu_wenhai"
+		textureFile = "gfx/leaders/CGQ/portrait_CGQ_liu_wenhai.png"
+	}
+	#CGQ
+	spriteType = {
+		name = "GFX_portrait_XIK_liu_xiang"
+		textureFile = "gfx/leaders/XIK/portrait_XIK_liu_xiang.png"
+	}
+	#CDU
+	spriteType = {
+		name = "GFX_portrait_CDU_yang_sen"
+		textureFile = "gfx/leaders/CDU/portrait_CDU_yang_sen.png"
+	}
+}

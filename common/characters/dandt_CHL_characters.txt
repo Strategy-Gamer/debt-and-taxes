@@ -1,0 +1,338 @@
+characters = {
+	#1927 Election
+		CHL_elias_lafertte = {
+			name = CHL_elias_lafertte
+			#https://en.wikipedia.org/wiki/El%C3%ADas_Lafertte
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_elias_lafertte
+				}
+			}
+			#ideology_communist
+		}
+		CHL_carlos_ibanez_del_campo = {
+			name = CHL_carlos_ibanez_del_campo
+			#https://en.wikipedia.org/wiki/Carlos_Ib%C3%A1%C3%B1ez_del_Campo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_carlos_ibanez_del_campo
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1931 Resignation
+		CHL_pedro_opasco_letelier = {
+			name = CHL_pedro_opasco_letelier
+			#https://en.wikipedia.org/wiki/Pedro_Opaso
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_pedro_opasco_letelier
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1931 Resignation
+		CHL_manuel_trucco_franzani = {
+			name = CHL_manuel_trucco_franzani
+			#https://en.wikipedia.org/wiki/Manuel_Trucco
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_manuel_trucco_franzani
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1931 Election
+		CHL_manuel_hidalgo = {
+			name = CHL_manuel_hidalgo
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_manuel_hidalgo
+				}
+			}
+			#ideology_socialist
+		}
+		CHL_juan_esteban_montero_rodriquez = {
+			name = CHL_juan_esteban_montero_rodriquez
+			#https://en.wikipedia.org/wiki/Juan_Esteban_Montero
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_juan_esteban_montero_rodriquez
+				}
+			}
+			#ideology_liberal
+		}
+		CHL_arturo_fortunato_alessandri_palma = {
+			name = CHL_arturo_fortunato_alessandri_palma
+			#https://en.wikipedia.org/wiki/Arturo_Alessandri
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_arturo_fortunato_alessandri_palma
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1932 Coup
+		CHL_artugo_puga_osorio = {
+			name = CHL_artugo_puga_osorio
+			#https://en.wikipedia.org/wiki/Arturo_Puga
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_artugo_puga_osorio
+				}
+			}
+			#ideology_stratocratic
+		}
+		CHL_carlos_gregorio_davilia_espinoza = {
+			name = CHL_carlos_gregorio_davilia_espinoza
+			#https://en.wikipedia.org/wiki/Carlos_D%C3%A1vila
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_carlos_gregorio_davilia_espinoza
+				}
+			}
+			#ideology_socialist
+		}
+	#
+	#1932 Resignation
+		CHL_bartolome_guillermo_blance_espejo = {
+			name = CHL_bartolome_guillermo_blance_espejo
+			#https://en.wikipedia.org/wiki/Bartolom%C3%A9_Blanche
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_bartolome_guillermo_blance_espejo
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1932 Coup
+		CHL_abraham_oyanedel_urrutia = {
+			name = CHL_abraham_oyanedel_urrutia
+			#https://en.wikipedia.org/wiki/Abraham_Oyanedel
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_abraham_oyanedel_urrutia
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1932 Election
+		CHL_marmaduke_grove_vallejo = {
+			name = CHL_marmaduke_grove_vallejo
+			#https://en.wikipedia.org/wiki/Marmaduke_Grove
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_marmaduke_grove_vallejo
+				}
+			}
+			#ideology_socialist
+		}
+		CHL_enrique_zanatru_prieto = {
+			name = CHL_enrique_zanatru_prieto
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_enrique_zanatru_prieto
+				}
+			}
+			#ideology_liberal
+		}
+		CHL_hector_rodriguez = {
+			name = CHL_hector_rodriguez
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_hector_rodriguez
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1938 Election
+		CHL_pedro_abelino_aguirre_cerda = {
+			name = CHL_pedro_abelino_aguirre_cerda
+			#https://en.wikipedia.org/wiki/Pedro_Aguirre_Cerda
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_pedro_abelino_aguirre_cerda
+				}
+			}
+			#ideology_liberal
+		}
+		CHL_gustavo_ross = {
+			name = CHL_gustavo_ross
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_gustavo_ross
+				}
+			}
+			#ideology_conservative
+		}
+		CHL_jeronimo_mendez_arancibia = {
+			name = CHL_jeronimo_mendez_arancibia
+			#https://en.wikipedia.org/wiki/Jer%C3%B3nimo_M%C3%A9ndez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_jeronimo_mendez_arancibia
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1942 Election
+		CHL_juan_antonio_rios_morales = {
+			name = CHL_juan_antonio_rios_morales
+			#https://en.wikipedia.org/wiki/Juan_Antonio_R%C3%ADos
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_juan_antonio_rios_morales
+				}
+			}
+			#ideology_liberal
+		}
+		CHL_alfredo_duhalde_vasquez = {
+			name = CHL_alfredo_duhalde_vasquez
+			#https://en.wikipedia.org/wiki/Alfredo_Duhalde
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_alfredo_duhalde_vasquez
+				}
+			}
+			#ideology_liberal
+		}
+		CHL_vicente_merino_bielich = {
+			name = CHL_vicente_merino_bielich
+			#https://en.wikipedia.org/wiki/Vicente_Merino
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_vicente_merino_bielich
+				}
+			}
+			#ideology_stratocratic
+		}
+		CHL_juan_antonio_iribarren_cabezas = {
+			name = CHL_juan_antonio_iribarren_cabezas
+			#https://en.wikipedia.org/wiki/Juan_Antonio_Iribarren
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_juan_antonio_iribarren_cabezas
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1946 Election
+		CHL_bernardo_ibanez_aguila = {
+			name = CHL_bernardo_ibanez_aguila
+			#https://en.wikipedia.org/wiki/Bernardo_Ib%C3%A1%C3%B1ez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_bernardo_ibanez_aguila
+				}
+			}
+			#ideology_socialist
+		}
+		CHL_gabriel_enrique_gonzalez_videla = {
+			name = CHL_gabriel_enrique_gonzalez_videla
+			#https://en.wikipedia.org/wiki/Gabriel_Gonz%C3%A1lez_Videla
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_gabriel_enrique_gonzalez_videla
+				}
+			}
+			#ideology_liberal
+		}
+		CHL_fernando_alessandri_rodriguez = {
+			name = CHL_fernando_alessandri_rodriguez
+			#https://en.wikipedia.org/wiki/Fernando_Alessandri
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_fernando_alessandri_rodriguez
+				}
+			}
+			#ideology_conservative
+		}
+		CHL_eduardo_cruz_coke_lassabe = {
+			name = CHL_eduardo_cruz_coke_lassabe
+			#https://en.wikipedia.org/wiki/Eduardo_Cruz-Coke
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_eduardo_cruz_coke_lassabe
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1952 Election
+		CHL_salvador_guillermo_allende_gossens = {
+			name = CHL_salvador_guillermo_allende_gossens
+			#https://en.wikipedia.org/wiki/Salvador_Allende
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_salvador_guillermo_allende_gossens
+				}
+			}
+			#ideology_socialist
+		}
+		CHL_pedro_enrique_alfonso = {
+			name = CHL_pedro_enrique_alfonso
+			#https://en.wikipedia.org/wiki/1952_Chilean_presidential_election
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_pedro_enrique_alfonso
+				}
+			}
+			#ideology_liberal
+		}
+		CHL_arturo_matte_larrain = {
+			name = CHL_arturo_matte_larrain
+			#https://en.wikipedia.org/wiki/1952_Chilean_presidential_election
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_arturo_matte_larrain
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1958 Election
+		CHL_luis_bossay = {
+			name = CHL_luis_bossay
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_luis_bossay
+				}
+			}
+			#ideology_liberal
+		}
+		CHL_eduardo_nicanor_frei_montalva = {
+			name = CHL_eduardo_nicanor_frei_montalva
+			#https://en.wikipedia.org/wiki/Eduardo_Frei_Montalva
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_eduardo_nicanor_frei_montalva
+				}
+			}
+			#ideology_agrarian
+		}
+		CHL_jorge_eduardo_alessandri_rodriguez = {
+			name = CHL_jorge_eduardo_alessandri_rodriguez
+			#https://en.wikipedia.org/wiki/Jorge_Alessandri
+			portraits = {
+				civilian = {
+					large = GFX_portrait_CHL_jorge_eduardo_alessandri_rodriguez
+				}
+			}
+			#ideology_conservative
+		}
+	#
+}

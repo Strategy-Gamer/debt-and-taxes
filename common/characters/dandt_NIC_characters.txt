@@ -1,0 +1,178 @@
+characters = {
+	#1928 Election
+		NIC_jose_maria_moncada_tapia = {
+			name = NIC_jose_maria_moncada_tapia
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Moncada
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_jose_maria_moncada_tapia
+				}
+			}
+			#ideology_liberal
+		}
+		NIC_augusto_cesar_sandino = {
+			name = NIC_augusto_cesar_sandino
+			#https://en.wikipedia.org/wiki/Augusto_C%C3%A9sar_Sandino
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_augusto_cesar_sandino
+				}
+			}
+			#ideology_agrarian
+		}
+		NIC_martin_benard = {
+			name = NIC_martin_benard
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_martin_benard
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1932 Election
+		NIC_juan_baustista_sacasa = {
+			name = NIC_juan_baustista_sacasa
+			#https://en.wikipedia.org/wiki/Juan_Bautista_Sacasa
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_juan_baustista_sacasa
+				}
+			}
+			#ideology_liberal
+		}
+		NIC_adolfo_diaz_recinos = {
+			name = NIC_adolfo_diaz_recinos
+			#https://en.wikipedia.org/wiki/Adolfo_D%C3%ADaz
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_adolfo_diaz_recinos
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1936 Coup
+		NIC_julian_irias = {
+			name = NIC_julian_irias
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_julian_irias
+				}
+			}
+			#ideology_reactionary
+		}
+		NIC_carlos_alberto_brenes_jarquin = {
+			name = NIC_carlos_alberto_brenes_jarquin
+			#https://en.wikipedia.org/wiki/Carlos_Alberto_Brenes
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_carlos_alberto_brenes_jarquin
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1936 Election
+		NIC_leonardo_arguello_barreto = {
+			name = NIC_leonardo_arguello_barreto
+			#https://en.wikipedia.org/wiki/Leonardo_Arg%C3%BCello_Barreto
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_leonardo_arguello_barreto
+				}
+			}
+			#ideology_conservative
+		}
+		NIC_anastasio_somoza_garcia = {
+			name = NIC_anastasio_somoza_garcia
+			#https://en.wikipedia.org/wiki/Anastasio_Somoza_Garc%C3%ADa
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_anastasio_somoza_garcia
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1947 Election
+		NIC_enoc_aguado = {
+			name = NIC_enoc_aguado
+			#https://en.wikipedia.org/wiki/Enoc_Aguado
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_enoc_aguado
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1947 Coup
+		NIC_benjamin_lacayo_sacasa = {
+			name = NIC_benjamin_lacayo_sacasa
+			#https://en.wikipedia.org/wiki/Benjam%C3%ADn_Lacayo_Sacasa
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_benjamin_lacayo_sacasa
+				}
+			}
+			#ideology_conservative
+		}
+		NIC_victor_manuel_roman_y_reyes = {
+			name = NIC_victor_manuel_roman_y_reyes
+			#https://en.wikipedia.org/wiki/V%C3%ADctor_Manuel_Rom%C3%A1n_y_Reyes
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_victor_manuel_roman_y_reyes
+				}
+			}
+			#ideology_fascist
+		}
+		NIC_manuel_fernando_zurita = {
+			name = NIC_manuel_fernando_zurita
+			#https://en.wikipedia.org/wiki/Manuel_Fernando_Zurita
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_manuel_fernando_zurita
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1950 Election
+		NIC_emiliano_chamorro_vargas = {
+			name = NIC_emiliano_chamorro_vargas
+			#https://en.wikipedia.org/wiki/Emiliano_Chamorro_Vargas
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_emiliano_chamorro_vargas
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1956 Coup
+		NIC_edmundo_amador_pineda = {
+			name = NIC_edmundo_amador_pineda
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_edmundo_amador_pineda
+				}
+			}
+			#ideology_reactionary
+		}
+		NIC_luis_somoza_debayle = {
+			name = NIC_luis_somoza_debayle
+			#https://en.wikipedia.org/wiki/Luis_Somoza_Debayle
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NIC_luis_somoza_debayle
+				}
+			}
+			#ideology_fascist
+		}
+	#
+}

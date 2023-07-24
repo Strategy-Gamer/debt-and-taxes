@@ -1,0 +1,29 @@
+state={
+	id=933
+	name="STATE_933"
+	provinces={
+		2080 5036 5054 13349 13350 13351 13352 13353 13354 13406 
+	}
+	history={
+		owner=FRA
+		victory_points = {
+			2080 1
+		}
+		buildings={
+			infrastructure=1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+	state_category=pastoral
+	manpower=679846
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

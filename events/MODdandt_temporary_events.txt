@@ -1,0 +1,349 @@
+add_namespace = dandt_skeleton_history
+
+country_event = {
+	id = dandt_skeleton_history.1
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		BEL = { news_event = { id = dandt_skeleton_history.2 days = 9 } }
+		AFG = { news_event = { id = dandt_skeleton_history.3 days = 13 } }
+		SOV = { news_event = { id = dandt_skeleton_history.5 days = 30 } }
+		RAJ = { news_event = { id = dandt_skeleton_history.6 days = 96 } }
+		ARG = { news_event = { id = dandt_skeleton_history.7 days = 150 } }
+		ITA = { news_event = { id = dandt_skeleton_history.8 days = 156 } }
+		MEX = { news_event = { id = dandt_skeleton_history.9 days = 170 } }
+		SWI = { news_event = { id = dandt_skeleton_history.10 days = 206 } }
+		ENG = { news_event = { id = dandt_skeleton_history.11 days = 226 } }
+		YUG = { news_event = { id = dandt_skeleton_history.12 days = 274 } }
+		CAN = { news_event = { id = dandt_skeleton_history.13 days = 289 } }
+		USA = { news_event = { id = dandt_skeleton_history.14 days = 295 } }
+	}
+}
+
+# (BEL) Adventures of Tintin 29.1.10
+news_event = {
+	id = dandt_skeleton_history.2
+	title = dandt_skeleton_history.2.t
+	desc = dandt_skeleton_history.2.d
+	picture = GFX_news_event_tintin
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.2.a
+		trigger = {
+			tag = BEL
+		}
+		add_political_power = 5
+		add_timed_idea = {
+			idea = generic_booming_printing_industry
+			days = 1000
+		}
+	}
+	option = {
+		name = Ok
+		trigger = {
+			NOT = { tag = BEL }
+		}
+	}
+}
+
+# (AFG) Aghani Civil War 29.1.14
+news_event = {
+	id = dandt_skeleton_history.3
+	title = dandt_skeleton_history.3.t
+	desc = dandt_skeleton_history.3.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.3.a
+		trigger = {
+			tag = AFG
+		}
+		add_stability = -0.30
+		267 = {
+			transfer_state_to = AFH
+			add_core_of = AFH
+		}
+		AFH = {
+			declare_war_on = {
+				target = AFG
+				type = civil_war
+			}
+			hidden_effect = {
+				news_event = { id = dandt_skeleton_history.4 days = 3 }
+			}
+		}
+	}
+	option = {
+		name = Ok
+		trigger = { NOT = { tag = AFG } }
+	}
+}
+
+# (AFH) Emir Abidates 29.1.17
+news_event = {
+	id = dandt_skeleton_history.4
+	title = dandt_skeleton_history.4.t
+	desc = dandt_skeleton_history.4.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.4.a
+		trigger = { 
+			tag = AFH
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = Ok
+		trigger = {
+			NOT = { tag = AFH }
+		}
+	}
+}
+
+# (SOV) Leon Trotsky Exiled 29.1.31
+news_event = {
+	id = dandt_skeleton_history.5
+	title = dandt_skeleton_history.5.t
+	desc = dandt_skeleton_history.5.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.5.a
+		trigger = {
+			tag = SOV
+		}
+		add_stability = 0.20
+		add_political_power = -25
+	}
+	option = {
+		name = Ok
+		trigger = {
+			NOT = { tag = SOV }
+		}
+	}
+}
+
+# (RAJ) Bombs at Delhi Central Assembly 29.4.8
+news_event = {
+	id = dandt_skeleton_history.6
+	title = dandt_skeleton_history.6.t
+	desc = dandt_skeleton_history.6.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.6.a
+		trigger = { tag = ITA }
+		
+	}
+	option = {
+		name = Ok
+		trigger = { NOT = { tag= ITA } }
+	}
+}
+
+# (ARG) First Conference of Communist Parties of Latin America 29.6.1
+news_event = {
+	id = dandt_skeleton_history.7
+	title = dandt_skeleton_history.7.t
+	desc = dandt_skeleton_history.7.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.7.a
+		trigger = { tag = RAJ }
+		
+	}
+	option = {
+		name = Ok
+		trigger = { NOT = { tag= RAJ } }
+	}
+}
+
+# (ITA) The Lateran Treaty 29.6.7
+news_event = {
+	id = dandt_skeleton_history.8
+	title = dandt_skeleton_history.8.t
+	desc = dandt_skeleton_history.8.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.8.a
+		trigger = { tag = ARG }
+		
+	}
+	option = {
+		name = Ok
+		trigger = { NOT = { tag= ARG } }
+	}
+}
+
+# (MEX) End of Cistero War 29.6.21
+news_event = {
+	id = dandt_skeleton_history.9
+	title = dandt_skeleton_history.9.t
+	desc = dandt_skeleton_history.9.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.9.a
+		trigger = { tag = MEX }
+		annex_country = {
+			target = MEC
+			transfer_troops = yes
+		}
+	}
+	option = {
+		name = Ok
+		trigger = { NOT = { tag= MEX } }
+	}
+}
+
+# (SWI) Geneva Convention 1929.7.27
+news_event = {
+	id = dandt_skeleton_history.10
+	title = dandt_skeleton_history.10.t
+	desc = dandt_skeleton_history.10.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.10.a
+		trigger = { tag = SWI }
+		add_named_threat = { 
+			threat = -2
+			name = dandt_skeleton_history.10.t
+		}
+	}
+	option = {
+		name = Ok
+		trigger = { NOT = { tag= SWI } }
+	}
+}
+
+# (ENG) Palestine Riots 1929.8.16
+news_event = {
+	id = dandt_skeleton_history.11
+	title = dandt_skeleton_history.11.t
+	desc = dandt_skeleton_history.11.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.11.a
+		trigger = { tag = ENG }
+		
+	}
+	option = {
+		name = Ok
+		trigger = { NOT = { tag= ENG } }
+	}
+}
+
+# (YUG) Formation of Yugoslavia 1929.10.3
+news_event = {
+	id = dandt_skeleton_history.12
+	title = dandt_skeleton_history.12.t
+	desc = dandt_skeleton_history.12.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.12.a
+		trigger = { tag = YUG }
+		drop_cosmetic_tag = yes
+	}
+	option = {
+		name = Ok
+		trigger = { NOT = { tag= YUG } }
+	}
+}
+
+# (CAN) Women are considered persons 29.10.18
+news_event = {
+	id = dandt_skeleton_history.13
+	title = dandt_skeleton_history.13.t
+	desc = dandt_skeleton_history.13.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.13.a
+		trigger = { tag = ITA }
+		
+	}
+	option = {
+		name = Ok
+		trigger = { NOT = { tag= ITA } }
+	}
+}
+
+# (USA) Wall Street Crash! 29.10.24
+news_event = {
+	id = dandt_skeleton_history.14
+	title = dandt_skeleton_history.14.t
+	desc = dandt_skeleton_history.14.d
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.14.a
+		trigger = { tag = ITA }
+		
+	}
+	option = {
+		name = Ok
+		trigger = { NOT = { tag= ITA } }
+	}
+}
+
+# (USA, HAI) Les Cayes Masscare
+news_event = {
+	id = dandt_skeleton_history.15
+	title = dandt_skeleton_history.15.t
+	desc = dandt_skeleton_history.15.d
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = dandt_skeleton_history.15.a
+	}
+}

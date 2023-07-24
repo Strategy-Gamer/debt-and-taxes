@@ -1,0 +1,35 @@
+
+state={
+	id=25
+	name="STATE_25"
+	manpower = 1343700
+
+
+	state_category = large_town
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			620 5
+		}
+		add_core_of = OCC
+		add_core_of = FRA
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		620 625 755 3598 3771 6618 6775 6792 9717 9734 9751 11718 11720 
+	}
+
+	local_supplies=0.0 
+}

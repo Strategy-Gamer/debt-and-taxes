@@ -1,0 +1,1152 @@
+#GetResourcePriceColor_resource_crude_oil
+	defined_text = { 
+		name = GetResourcePriceColor_resource_crude_oil
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_crude_oil }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_crude_oil < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_crude_oil }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_crude_oil > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_aluminum
+	defined_text = { 
+		name = GetResourcePriceColor_resource_aluminum
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_aluminum }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_aluminum < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_aluminum }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_aluminum > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_rubber
+	defined_text = { 
+		name = GetResourcePriceColor_resource_rubber
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_rubber }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_rubber < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_rubber }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_rubber > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_tungsten
+	defined_text = { 
+		name = GetResourcePriceColor_resource_tungsten
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_tungsten }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_tungsten < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_tungsten }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_tungsten > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_iron
+	defined_text = { 
+		name = GetResourcePriceColor_resource_iron
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_iron }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_iron < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_iron }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_iron > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_chromium
+	defined_text = { 
+		name = GetResourcePriceColor_resource_chromium
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_chromium }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_chromium < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_chromium }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_chromium > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_copper
+	defined_text = { 
+		name = GetResourcePriceColor_resource_copper
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_copper }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_copper < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_copper }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_copper > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_precious_metals
+	defined_text = { 
+		name = GetResourcePriceColor_resource_precious_metals
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_precious_metals }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_precious_metals < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_precious_metals }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_precious_metals > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_coal
+	defined_text = { 
+		name = GetResourcePriceColor_resource_coal
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_coal }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_coal < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_coal }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_coal > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_lumber
+	defined_text = { 
+		name = GetResourcePriceColor_resource_lumber
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_lumber }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_lumber < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_lumber }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_lumber > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_fiber
+	defined_text = { 
+		name = GetResourcePriceColor_resource_fiber
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_fiber }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_fiber < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_fiber }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_fiber > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_foodstuffs
+	defined_text = { 
+		name = GetResourcePriceColor_resource_foodstuffs
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_foodstuffs }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_foodstuffs < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_foodstuffs }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_foodstuffs > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_steel
+	defined_text = { 
+		name = GetResourcePriceColor_resource_steel
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_steel }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_steel < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_steel }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_steel > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_electricity
+	defined_text = { 
+		name = GetResourcePriceColor_resource_electricity
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_electricity }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_electricity < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_electricity }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_electricity > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_rare_earth_metals
+	defined_text = { 
+		name = GetResourcePriceColor_resource_rare_earth_metals
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_rare_earth_metals }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_rare_earth_metals < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_rare_earth_metals }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_rare_earth_metals > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_cement
+	defined_text = { 
+		name = GetResourcePriceColor_resource_cement
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_cement }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_cement < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_cement }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_cement > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_silicates
+	defined_text = { 
+		name = GetResourcePriceColor_resource_silicates
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_silicates }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_silicates < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_silicates }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_silicates > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_chemicals
+	defined_text = { 
+		name = GetResourcePriceColor_resource_chemicals
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_chemicals }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_chemicals < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_chemicals }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_chemicals > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_fabric
+	defined_text = { 
+		name = GetResourcePriceColor_resource_fabric
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_fabric }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_fabric < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_fabric }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_fabric > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_machinery
+	defined_text = { 
+		name = GetResourcePriceColor_resource_machinery
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_machinery }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_machinery < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_machinery }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_machinery > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_plastics
+	defined_text = { 
+		name = GetResourcePriceColor_resource_plastics
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_plastics }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_plastics < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_plastics }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_plastics > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_fertilizer
+	defined_text = { 
+		name = GetResourcePriceColor_resource_fertilizer
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_fertilizer }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_fertilizer < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_fertilizer }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_fertilizer > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_hydrocarbons
+	defined_text = { 
+		name = GetResourcePriceColor_resource_hydrocarbons
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_hydrocarbons }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_hydrocarbons < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_hydrocarbons }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_hydrocarbons > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_automobiles
+	defined_text = { 
+		name = GetResourcePriceColor_resource_automobiles
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_automobiles }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_automobiles < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_automobiles }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_automobiles > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_airplanes
+	defined_text = { 
+		name = GetResourcePriceColor_resource_airplanes
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_airplanes }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_airplanes < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_airplanes }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_airplanes > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_computers
+	defined_text = { 
+		name = GetResourcePriceColor_resource_computers
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_computers }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_computers < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_computers }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_computers > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_electronics
+	defined_text = { 
+		name = GetResourcePriceColor_resource_electronics
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_electronics }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_electronics < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_electronics }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_electronics > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_groceries
+	defined_text = { 
+		name = GetResourcePriceColor_resource_groceries
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_groceries }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_groceries < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_groceries }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_groceries > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_pharmaceuticals
+	defined_text = { 
+		name = GetResourcePriceColor_resource_pharmaceuticals
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_pharmaceuticals }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_pharmaceuticals < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_pharmaceuticals }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_pharmaceuticals > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_clothing
+	defined_text = { 
+		name = GetResourcePriceColor_resource_clothing
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_clothing }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_clothing < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_clothing }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_clothing > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_consumer_goods
+	defined_text = { 
+		name = GetResourcePriceColor_resource_consumer_goods
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_consumer_goods }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_consumer_goods < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_consumer_goods }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_consumer_goods > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_sulfur
+	defined_text = { 
+		name = GetResourcePriceColor_resource_sulfur
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_sulfur }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_sulfur < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_sulfur }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_sulfur > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_convoys
+	defined_text = { 
+		name = GetResourcePriceColor_resource_convoys
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_convoys }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_convoys < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_convoys }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_convoys > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_small_arms
+	defined_text = { 
+		name = GetResourcePriceColor_resource_small_arms
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_small_arms }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_small_arms < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_small_arms }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_small_arms > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_artillery
+	defined_text = { 
+		name = GetResourcePriceColor_resource_artillery
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_artillery }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_artillery < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_artillery }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_artillery > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_tanks
+	defined_text = { 
+		name = GetResourcePriceColor_resource_tanks
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_tanks }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_tanks < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_tanks }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_tanks > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_ammunition
+	defined_text = { 
+		name = GetResourcePriceColor_resource_ammunition
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_ammunition }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_ammunition < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_ammunition }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_ammunition > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_rockets
+	defined_text = { 
+		name = GetResourcePriceColor_resource_rockets
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_rockets }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_rockets < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_rockets }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_rockets > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_construction
+	defined_text = { 
+		name = GetResourcePriceColor_resource_construction
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_construction }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_construction < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_construction }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_construction > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_tools
+	defined_text = { 
+		name = GetResourcePriceColor_resource_tools
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_tools }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_tools < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_tools }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_tools > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_healthcare
+	defined_text = { 
+		name = GetResourcePriceColor_resource_healthcare
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_healthcare }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_healthcare < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_healthcare }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_healthcare > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_basic_education
+	defined_text = { 
+		name = GetResourcePriceColor_resource_basic_education
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_basic_education }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_basic_education < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_basic_education }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_basic_education > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_higher_education
+	defined_text = { 
+		name = GetResourcePriceColor_resource_higher_education
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_higher_education }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_higher_education < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_higher_education }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_higher_education > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_transport
+	defined_text = { 
+		name = GetResourcePriceColor_resource_transport
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_transport }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_transport < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_transport }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_transport > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_shipping
+	defined_text = { 
+		name = GetResourcePriceColor_resource_shipping
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_shipping }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_shipping < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_shipping }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_shipping > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_finance
+	defined_text = { 
+		name = GetResourcePriceColor_resource_finance
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_finance }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_finance < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_finance }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_finance > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_housing
+	defined_text = { 
+		name = GetResourcePriceColor_resource_housing
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_housing }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_housing < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_housing }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_housing > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#
+#GetResourcePriceColor_resource_entertainment
+	defined_text = { 
+		name = GetResourcePriceColor_resource_entertainment
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_entertainment }
+				multiply_temp_variable = { grpc_temp = 0.9 }
+				check_variable = { selected_state:price@token:resource_entertainment < grpc_temp }
+			}
+			localization_key = "§G"
+		}
+		text = { 
+			trigger = { 
+				set_temp_variable = { grpc_temp = global.base_price@token:resource_entertainment }
+				multiply_temp_variable = { grpc_temp = 1.1 }
+				check_variable = { selected_state:price@token:resource_entertainment > grpc_temp }
+			}
+			localization_key = "§R"
+		}
+		text = { 
+			localization_key = "§Y"
+		}
+	}
+#

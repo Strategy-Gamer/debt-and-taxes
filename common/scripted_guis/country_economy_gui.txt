@@ -1,0 +1,355 @@
+scripted_gui = {
+	budget_tab = {
+		window_name = "dandt_budget_tab"
+		parent_window_token = construction_tab
+
+		context_type = player_context
+
+		effects = {
+			#Individual Income Tax
+				increase_upper_income_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_upper_income_tax = yes
+				}
+				increase_upper_income_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_upper_income_tax = yes
+				}
+				increase_upper_income_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_upper_income_tax = yes
+				}
+				decrease_upper_income_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_upper_income_tax = yes
+				}
+				decrease_upper_income_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_upper_income_tax = yes
+				}
+				decrease_upper_income_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_upper_income_tax = yes
+				}
+				
+				increase_middle_income_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_middle_income_tax = yes
+				}
+				increase_middle_income_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_middle_income_tax = yes
+				}
+				increase_middle_income_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_middle_income_tax = yes
+				}
+				decrease_middle_income_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_middle_income_tax = yes
+				}
+				decrease_middle_income_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_middle_income_tax = yes
+				}
+				decrease_middle_income_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_middle_income_tax = yes
+				}
+				
+				increase_lower_income_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_lower_income_tax = yes
+				}
+				increase_lower_income_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_lower_income_tax = yes
+				}
+				increase_lower_income_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_lower_income_tax = yes
+				}
+				decrease_lower_income_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_lower_income_tax = yes
+				}
+				decrease_lower_income_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_lower_income_tax = yes
+				}
+				decrease_lower_income_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_lower_income_tax = yes
+				}
+			#
+
+			#Payroll Tax
+				increase_payroll_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_payroll_tax = yes
+				}
+				increase_payroll_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_payroll_tax = yes
+				}
+				increase_payroll_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_payroll_tax = yes
+				}
+				decrease_payroll_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_payroll_tax = yes
+				}
+				decrease_payroll_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_payroll_tax = yes
+				}
+				decrease_payroll_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_payroll_tax = yes
+				}
+			#
+			#Property Tax
+				increase_property_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_property_tax = yes
+				}
+				increase_property_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_property_tax = yes
+				}
+				increase_property_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_property_tax = yes
+				}
+				decrease_property_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_property_tax = yes
+				}
+				decrease_property_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_property_tax = yes
+				}
+				decrease_property_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_property_tax = yes
+				}
+			#
+			
+			#Corporate Tax
+				increase_corporate_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_corporate_tax = yes
+				}
+				increase_corporate_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_corporate_tax = yes
+				}
+				increase_corporate_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_corporate_tax = yes
+				}
+				decrease_corporate_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_corporate_tax = yes
+				}
+				decrease_corporate_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_corporate_tax = yes
+				}
+				decrease_corporate_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_corporate_tax = yes
+				}
+			#
+			#Capital Gains Tax
+				increase_capital_gains_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_capital_gains_tax = yes
+				}
+				increase_capital_gains_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_capital_gains_tax = yes
+				}
+				increase_capital_gains_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_capital_gains_tax = yes
+				}
+				decrease_capital_gains_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_capital_gains_tax = yes
+				}
+				decrease_capital_gains_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_capital_gains_tax = yes
+				}
+				decrease_capital_gains_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_capital_gains_tax = yes
+				}
+			#
+			#Wealth Tax
+				increase_wealth_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_wealth_tax = yes
+				}
+				increase_wealth_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_wealth_tax = yes
+				}
+				increase_wealth_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_wealth_tax = yes
+				}
+				decrease_wealth_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_wealth_tax = yes
+				}
+				decrease_wealth_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_wealth_tax = yes
+				}
+				decrease_wealth_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_wealth_tax = yes
+				}
+			#
+			
+			#Sales Tax
+				increase_sales_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_sales_tax = yes
+				}
+				increase_sales_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_sales_tax = yes
+				}
+				increase_sales_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_sales_tax = yes
+				}
+				decrease_sales_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_sales_tax = yes
+				}
+				decrease_sales_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_sales_tax = yes
+				}
+				decrease_sales_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_sales_tax = yes
+				}
+			#
+			#Value Added Tax
+				increase_value_added_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_value_added_tax = yes
+				}
+				increase_value_added_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_value_added_tax = yes
+				}
+				increase_value_added_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_value_added_tax = yes
+				}
+				decrease_value_added_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_value_added_tax = yes
+				}
+				decrease_value_added_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_value_added_tax = yes
+				}
+				decrease_value_added_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_value_added_tax = yes
+				}
+			#
+			#Luxury Tax
+				increase_luxury_tax_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_luxury_tax = yes
+				}
+				increase_luxury_tax_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_luxury_tax = yes
+				}
+				increase_luxury_tax_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_luxury_tax = yes
+				}
+				decrease_luxury_tax_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_luxury_tax = yes
+				}
+				decrease_luxury_tax_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_luxury_tax = yes
+				}
+				decrease_luxury_tax_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_luxury_tax = yes
+				}
+			#
+			#Payroll Tax
+				increase_tariffs_button_click = {
+					set_temp_variable = { change_temp = 0.01 }
+					change_tariffs = yes
+				}
+				increase_tariffs_button_shift_click = {
+					set_temp_variable = { change_temp = 0.05 }
+					change_tariffs = yes
+				}
+				increase_tariffs_button_control_click = {
+					set_temp_variable = { change_temp = 0.1 }
+					change_tariffs = yes
+				}
+				decrease_tariffs_button_click = {
+					set_temp_variable = { change_temp = -0.01 }
+					change_tariffs = yes
+				}
+				decrease_tariffs_button_shift_click = {
+					set_temp_variable = { change_temp = -0.05 }
+					change_tariffs = yes
+				}
+				decrease_tariffs_button_control_click = {
+					set_temp_variable = { change_temp = -0.1 }
+					change_tariffs = yes
+				}
+			#
+		}
+		triggers = {
+		}
+	}
+	budget_economy_tab = {
+		window_name = "dandt_budget_economy_tab"
+		parent_window_token = construction_tab
+
+		context_type = player_context
+
+		triggers = {
+			propose_budget_button_click_enabled = {
+				has_political_power > var:budget_power_cost
+			}
+		}
+
+		effects = {
+			propose_budget_button_click = {
+				set_temp_variable = { power_cost_temp = budget_power_cost }
+				multiply_temp_variable = { power_cost_temp = -1 }
+				add_political_power = var:power_cost_temp
+				hidden_effect = {
+					propose_budget_changes = yes
+				}
+			}
+		}
+
+		properties = {
+			propose_budget_button = {
+				image = "[GetProposeBudgetButton]"
+			}
+		}
+	}
+}

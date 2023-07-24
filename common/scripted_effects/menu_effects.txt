@@ -1,0 +1,371 @@
+#########################################
+### D&T's scripted effects for menus ####
+#########################################
+
+refresh_state_list = {
+    clear_array = controlled_states_array
+    clear_array = states_population
+    clear_array = states_population_magnitude
+    clear_array = states_population_change
+    if = {
+        limit = {
+            check_variable = { selected_state = 0 }
+        }
+        set_variable = { selected_state = ROOT }
+    }
+    set_variable = { country_population = 0 }
+    set_variable = { country_population_change = 0 }
+    every_state = {
+        limit = {
+            is_controlled_by = PREV
+        }
+        PREV = {
+            set_temp_variable = { i_temp = controlled_states_array^num }
+            add_to_array = { controlled_states_array = PREV }
+            add_to_array = { states_population = PREV.pops_amount }
+            add_to_array = { states_population_change = PREV.pops_amount }
+            subtract_from_variable = { states_population_change^i_temp = PREV.pops_prev_amount }
+            
+            add_to_variable = { country_population = PREV.pops_amount }
+            add_to_variable = { country_population_change = PREV.pops_amount }
+            subtract_from_variable = { country_population_change = PREV.pops_prev_amount }
+        }
+    }
+    set_temp_variable = { length_temp = controlled_states_array^num }
+    for_loop_effect = {
+        end = length_temp
+        find_highest_in_array = {
+            array = states_population
+            index = hi
+        }
+        
+        add_to_temp_array = { 
+            array = controlled_states_temp
+            value = controlled_states_array^hi
+        }
+        add_to_temp_array = { 
+            array = states_population_temp
+            value = states_population^hi
+        }
+        add_to_temp_array = { 
+            array = states_population_change_temp
+            value = states_population_change^hi
+        }
+        remove_from_array = {
+            array = controlled_states_array
+            index = hi
+        }
+        remove_from_array = {
+            array = states_population
+            index = hi
+        }
+        remove_from_array = {
+            array = states_population_change
+            index = hi
+        }
+    }
+    for_loop_effect = {
+        end = length_temp
+        value = v
+        add_to_array = { 
+            array = controlled_states_array
+            value = controlled_states_temp^v
+        }
+        add_to_array = { 
+            array = states_population
+            value = states_population_temp^v
+        }
+        add_to_array = { 
+            array = states_population_change
+            value = states_population_change_temp^v
+        }
+        if = {
+            limit = {
+                check_variable = { states_population^v < 1 }
+            }
+            add_to_array = { states_population_magnitude = 1 } #1 is ones
+            multiply_variable = { states_population^v = 1000 }
+        }
+        else_if = {
+            limit = { 
+                check_variable = { states_population^v < 1000 }
+            }
+            add_to_array = { states_population_magnitude = 2 } #2 is thousands
+        }
+        else = {
+            add_to_array = { states_population_magnitude = 3 } #3 is millions
+            divide_variable = { states_population^v = 1000 }
+        }
+    }
+    if = {
+        limit = {
+            check_variable = { country_population < 1 }
+        }
+        set_variable = { country_population_magnitude = 1 } #1 is ones
+        multiply_variable = { country_population = 1000 }
+    }
+    else_if = {
+        limit = { 
+            check_variable = { country_population < 1000 }
+        }
+        set_variable = { country_population_magnitude = 2 } #2 is thousands
+    }
+    else_if = {
+        limit = { 
+            check_variable = { country_population < 1000000 }
+        }
+        set_variable = { country_population_magnitude = 3 } #3 is millions
+        divide_variable = { country_population = 1000 }
+    }
+    else = {
+        set_variable = { country_population_magnitude = 4 } #4 is billions
+        divide_variable = { country_population = 1000000 }
+    }
+}
+
+refresh_industry_list = {
+    clear_array = industries_show
+	clear_variable = industries_pm_selected
+
+    clear_temp_array = extractors_temp
+    clear_temp_array = factories_temp
+    clear_temp_array = services_temp
+    for_each_loop = {
+        array = selected_state:industries
+        value = r_ind
+
+        if = {
+            limit = {
+                is_in_array = { global.extractors_token_array = r_ind }
+            }
+            add_to_temp_array = { extractors_temp = r_ind }
+        }
+        else_if = {
+            limit = {
+                is_in_array = { global.factories_token_array = r_ind }
+            }
+            add_to_temp_array = { factories_temp = r_ind }
+        }
+        else_if = {
+            limit = {
+                is_in_array = { global.services_token_array = r_ind }
+            }
+            add_to_temp_array = { services_temp = r_ind }
+        }
+    }
+    
+    set_temp_variable = { wl_index = 0 }
+    while_loop_effect = {
+        limit = {
+            OR = {
+                check_variable = { wl_index < extractors_temp^num }
+                check_variable = { wl_index < factories_temp^num }
+                check_variable = { wl_index < services_temp^num }
+            }
+        }
+        add_to_array = { industries_show = extractors_temp^wl_index }
+        add_to_array = { industries_show = factories_temp^wl_index }
+        add_to_array = { industries_show = services_temp^wl_index }
+
+        add_to_temp_variable = { wl_index = 1 }
+    }
+}
+
+refresh_construction_list = {
+    clear_array = construction_show
+
+    for_each_loop = {
+        array = global.industries_token_array
+        value = clist_token
+
+        if = {
+            limit = {
+                NOT = { is_in_array = { selected_state:industries = clist_token } }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        check_variable = { global.industry_uses_deposits@var:clist_token = 0 }
+                        AND = {
+                            check_variable = { global.industry_uses_deposits@var:clist_token = 1 }
+                            check_variable = { selected_state:deposits@var:clist_token > 0 }
+                        }
+                    }
+                    OR = {
+                        check_variable = { global.industry_uses_arable_land@var:clist_token = 0 }
+                        AND = {
+                            check_variable = { global.industry_uses_arable_land@var:clist_token = 1 }
+                            check_variable = { selected_state:arable_land > selected_state:arable_land_used }
+                        }
+                    }
+                    OR = {
+                        check_variable = { global.industry_coastal@var:clist_token = 0 }
+                        AND = {
+                            check_variable = { global.industry_coastal@var:clist_token = 1 }
+                            var:selected_state = {
+                                is_coastal = yes
+                            }
+                        }
+                    }
+                }
+                add_to_array = { construction_show = clist_token }
+            }
+        }
+    }
+}
+
+create_overview_graph = {
+    #Country Scope
+    #Input: state_graph_type (var) where:
+        #0 = population
+        #1 = gdp
+        #2 = standard of living
+        #3 = cost of living
+        #4 = wealth
+        #5 = imports
+        #6 = exports
+        #7 = unemployment
+        #8 = workforce
+        
+    set_variable = { state_graph_min = 2000000 }
+    set_variable = { state_graph_middle = 0 }
+    set_variable = { state_graph_max = 0 }
+    clear_array = state_graph_amount_array
+    clear_array = state_graph_color_array
+    clear_array = state_graph_y_array
+
+    clear_temp_array = state_graph_array_temp
+    if = {
+        limit = {
+            check_variable = { state_graph_type = 0 } #Pops
+        }
+        for_each_loop = {
+            array = selected_state:population_graph_array
+            value = v
+
+            add_to_temp_array = { state_graph_array_temp = v }
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = { state_graph_type = 1 } #GDP
+        }
+        for_each_loop = {
+            array = selected_state:gdp_graph_array
+            value = v
+
+            add_to_temp_array = { state_graph_array_temp = v }
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = { state_graph_type = 2 } #Standard of Living
+        }
+        for_each_loop = {
+            array = selected_state:standard_of_living_graph_array
+            value = v
+
+            add_to_temp_array = { state_graph_array_temp = v }
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = { state_graph_type = 3 } #Cost of Living
+        }
+        for_each_loop = {
+            array = selected_state:cost_of_living_graph_array
+            value = v
+
+            add_to_temp_array = { state_graph_array_temp = v }
+        }
+    }
+
+
+    set_temp_variable = { start_temp = state_graph_array_temp^num }
+    add_to_temp_variable = { start_temp = -1 }
+    for_loop_effect = {
+        start = start_temp
+        end = 0
+        compare = greater_than_or_equals
+        add = -1
+        value = ii
+        set_temp_variable = { vv = state_graph_array_temp^ii }
+        if = {
+            limit = {
+                check_variable = { vv > state_graph_max }
+            }
+            set_variable = { state_graph_max = vv }
+        }
+        if = {
+            limit = {
+                check_variable = { vv < state_graph_min }
+            }
+            set_variable = { state_graph_min = vv }
+        }
+        
+        if = {
+            limit = {
+                check_variable = { ii > 0 }
+            }
+            add_to_array = { state_graph_amount_array = vv }
+
+            set_temp_variable = { prev_i = ii }
+            subtract_from_temp_variable = { prev_i = 1 }
+
+            set_temp_variable = { value_temp = vv }
+            add_to_temp_variable = { value_temp = state_graph_array_temp^prev_i }
+            divide_temp_variable = { value_temp = 2 }
+            add_to_array = { state_graph_amount_array = value_temp }
+
+            if = {
+                limit = {
+                    check_variable = { vv < state_graph_array_temp^prev_i }
+                }
+                add_to_array = { state_graph_color_array = 1 }
+                add_to_array = { state_graph_color_array = 1 }
+            }
+            else_if = {
+                limit = {
+                    check_variable = { vv = state_graph_array_temp^prev_i }
+                }
+                add_to_array = { state_graph_color_array = 2 }
+                add_to_array = { state_graph_color_array = 2 }
+            }
+            else = {
+                add_to_array = { state_graph_color_array = 3 }
+                add_to_array = { state_graph_color_array = 3 }
+            }
+
+        }
+        else = {
+            add_to_array = { state_graph_amount_array = vv }
+            add_to_array = { state_graph_color_array = 2 }
+        }
+        set_variable = { state_graph_middle = state_graph_max }
+        add_to_variable = { state_graph_middle = state_graph_min }
+        divide_variable = { state_graph_middle = 2 }
+    }
+
+    #Creating the State_graph
+    for_each_loop = {
+        array = state_graph_amount_array
+        value = vv
+        index = ii
+
+        set_temp_variable = { per_y_temp = state_graph_max }
+        subtract_from_temp_variable = { per_y_temp = state_graph_min }
+
+        set_temp_variable = { y_temp = vv }
+        subtract_from_temp_variable = { y_temp = state_graph_max }
+        multiply_temp_variable = { y_temp = -156 } #156 Pixels, making it negative b/c going from top to bottom
+        divide_temp_variable = { y_temp = per_y_temp }
+        round_temp_variable = y_temp
+        if = {
+            limit = {
+                check_variable = { y_temp > 1000 }
+            }
+            set_temp_variable = { y_temp = 1000 }
+        }
+        add_to_array = { state_graph_y_array = y_temp }
+    }
+}

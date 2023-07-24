@@ -1,0 +1,4 @@
+color = rgb { 180 200 180 }
+color_ui = rgb { 122 247 158 }
+graphical_culture = asian_gfx
+graphical_culture_2d = asian_2d

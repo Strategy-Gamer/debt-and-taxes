@@ -1,0 +1,195 @@
+ideas = {
+	industry_tokens = {
+		#Extractors
+		industry_grain_farm = {
+			allowed = { always = no }
+		}
+		industry_rice_paddy = {
+			allowed = { always = no }
+		}
+		industry_livestock_ranch = {
+			allowed = { always = no }
+		}
+		industry_fishing_wharf = {
+			allowed = { always = no }
+		}
+		industry_sheep_ranch = {
+			allowed = { always = no }
+		}
+		industry_lumber_lodge = {
+			allowed = { always = no }
+		}
+		industry_cotton_plantation = {
+			allowed = { always = no }
+		}
+		industry_silk_plantation = {
+			allowed = { always = no }
+		}
+		industry_oil_rig = {
+			allowed = { always = no }
+		}
+		industry_gas_rig = {
+			allowed = { always = no }
+		}
+		industry_offshore_oil_rig = {
+			allowed = { always = no }
+		}
+		industry_bauxite_mine = {
+			allowed = { always = no }
+		}
+		industry_rubber_lodge = {
+			allowed = { always = no }
+		}
+		industry_tungsten_mine = {
+			allowed = { always = no }
+		}
+		industry_iron_mine = {
+			allowed = { always = no }
+		}
+		industry_chromium_mine = {
+			allowed = { always = no }
+		}
+		industry_copper_mine = {
+			allowed = { always = no }
+		}
+		industry_precious_metals_mine = {
+			allowed = { always = no }
+		}
+		industry_coal_mine = {
+			allowed = { always = no }
+		}
+		industry_rare_earth_metals_mine = {
+			allowed = { always = no }
+		}
+		industry_sulfur_mine = {
+			allowed = { always = no }
+		}
+
+		#Factories
+		industry_coal_power_plant = {
+			allowed = { always = no }
+		}
+		industry_oil_power_plant = {
+			allowed = { always = no }
+		}
+		industry_nuclear_power_plant = {
+			allowed = { always = no }
+		}
+		industry_wind_power_farm = {
+			allowed = { always = no }
+		}
+		industry_solar_power_farm = {
+			allowed = { always = no }
+		}
+		industry_hydroelectric_dam = {
+			allowed = { always = no }
+		}
+		industry_steel_mill = {
+			allowed = { always = no }
+		}
+		industry_cement_factory = {
+			allowed = { always = no }
+		}
+		industry_silicates_factory = {
+			allowed = { always = no }
+		}
+		industry_chemical_plant = {
+			allowed = { always = no }
+		}
+		industry_textile_mill = {
+			allowed = { always = no }
+		}
+		industry_machinery_factory = {
+			allowed = { always = no }
+		}
+		industry_plastics_factory = {
+			allowed = { always = no }
+		}
+		industry_fertilizer_factory = {
+			allowed = { always = no }
+		}
+		industry_oil_refinery = {
+			allowed = { always = no }
+		}
+		industry_synthetic_oil_refinery = {
+			allowed = { always = no }
+		}
+		industry_synthetic_rubber_plant = {
+			allowed = { always = no }
+		}
+		industry_automobile_factory = {
+			allowed = { always = no }
+		}
+		industry_airplane_factory = {
+			allowed = { always = no }
+		}
+		industry_computer_factory = {
+			allowed = { always = no }
+		}
+		industry_electronics_factory = {
+			allowed = { always = no }
+		}
+		industry_food_processing_plant = {
+			allowed = { always = no }
+		}
+		industry_pharmaceuticals_factory = {
+			allowed = { always = no }
+		}
+		industry_clothing_factory = {
+			allowed = { always = no }
+		}
+		industry_consumer_goods_factory = {
+			allowed = { always = no }
+		}
+		industry_convoys_shipyard = {
+			allowed = { always = no }
+		}
+		industry_small_arms_factory = {
+			allowed = { always = no }
+		}
+		industry_artillery_factory = {
+			allowed = { always = no }
+		}
+		industry_tank_factory = {
+			allowed = { always = no }
+		}
+		industry_ammunition_factory = {
+			allowed = { always = no }
+		}
+		industry_rocket_factory = {
+			allowed = { always = no }
+		}
+		industry_tools_factory = {
+			allowed = { always = no }
+		}
+
+		#Services
+		industry_real_estate = {
+			allowed = { always = no }
+		}
+		industry_construction_yard = {
+			allowed = { always = no }
+		}
+		industry_hospital = {
+			allowed = { always = no }
+		}
+		industry_school = {
+			allowed = { always = no }
+		}
+		industry_university = {
+			allowed = { always = no }
+		}
+		industry_transport_hub = {
+			allowed = { always = no }
+		}
+		industry_shipping_hub = {
+			allowed = { always = no }
+		}
+		industry_finance_hub = {
+			allowed = { always = no }
+		}
+		industry_entertainment_complex = {
+			allowed = { always = no }
+		}
+	}
+}

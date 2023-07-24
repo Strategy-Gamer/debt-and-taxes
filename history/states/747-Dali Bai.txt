@@ -1,0 +1,33 @@
+
+state={
+	id=747
+	name="STATE_747"
+
+	history={
+		owner = YUN
+		add_core_of = YUN
+		victory_points = {
+			7965 3 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		4937 5009 7965 7976 8126 10413 10863 12789 12898 
+	}
+	manpower=995040
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

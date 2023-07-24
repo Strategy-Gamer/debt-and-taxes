@@ -1,0 +1,39 @@
+
+state={
+	id=482
+	name="STATE_482"
+	manpower = 491751
+	
+	state_category = rural
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MEX
+		add_core_of = MEC
+		victory_points = {
+			8097 10
+		}
+		victory_points = {
+			10830 10
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		2037 4898 7935 8097 10809 10830 10916 12745 12827 12850 12897 
+	}
+	
+
+	local_supplies=0.0 
+}

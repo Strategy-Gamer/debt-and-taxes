@@ -1,0 +1,27 @@
+
+state={
+	id=846
+	name="STATE_846"
+	manpower=16678
+
+	state_category=pastoral
+
+	provinces={
+		1060 4191 10104 10754 13358 13359 13360 
+	}
+	history={
+		owner=EGY
+		buildings = {
+			# infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		set_demilitarized_zone = yes
+	}
+	local_supplies=0.000
+	# impassable=yes
+}

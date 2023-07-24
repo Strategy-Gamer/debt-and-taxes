@@ -1,0 +1,49 @@
+
+state={
+	id=131
+	name="STATE_131"
+	manpower = 2128860
+
+	state_category = city
+	resources={
+		steel=38 # was: 60
+		aluminium=5 # was: 8
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			351 10
+		}
+		victory_points = {
+			11332 1 #Cockermouth
+		}
+		victory_points = {
+			3311 1 #Douglas
+		}
+		buildings = {
+			infrastructure = 3 #was: 6  BB AROUND 9
+
+			air_base = 6
+			351 = {
+				naval_base = 6
+			}
+			3311 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = ENG
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_warm
+		}
+	}
+
+	provinces={
+		219 351 3311 6399 9285 11270 11299 11332
+	}
+
+	local_supplies=14.0
+}

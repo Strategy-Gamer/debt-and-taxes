@@ -1,0 +1,202 @@
+characters = {
+	#1927 Election
+		ELS_pio_romero_bosque = {
+			name = ELS_pio_romero_bosque
+			#https://en.wikipedia.org/wiki/P%C3%ADo_Romero_Bosque
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_pio_romero_bosque
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1931 Election 
+		ELS_arturo_araujo = {
+			name = ELS_arturo_araujo
+			#https://en.wikipedia.org/wiki/Arturo_Araujo
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_arturo_araujo
+				}
+			}
+			#ideology_socialist
+		}
+		ELS_enrique_cordova = {
+			name = ELS_enrique_cordova
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_enrique_cordova
+				}
+			}
+			#ideology_liberal
+		}
+		ELS_miguel_tomas_molina = {
+			name = ELS_miguel_tomas_molina
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_miguel_tomas_molina
+				}
+			}
+			#ideology_conservative
+		}
+		ELS_maximiliano_hernandez_martinez = {
+			name = ELS_maximiliano_hernandez_martinez
+			#https://en.wikipedia.org/wiki/Maximiliano_Hern%C3%A1ndez_Mart%C3%ADnez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_maximiliano_hernandez_martinez
+				}
+			}
+			#ideology_fascistideology_reactionary
+		}
+		ELS_alberto_gomez_zarate = {
+			name = ELS_alberto_gomez_zarate
+			#https://en.wikipedia.org/wiki/Alberto_G%C3%B3mez_Z%C3%A1rate
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_alberto_gomez_zarate
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1931 Coup
+	#
+	#1944 Coup
+		ELS_andres_ignacio_menendez = {
+			name = ELS_andres_ignacio_menendez
+			#https://en.wikipedia.org/wiki/Andr%C3%A9s_Ignacio_Men%C3%A9ndez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_andres_ignacio_menendez
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1944 Election
+		ELS_osman_aguirre_y_salinas = {
+			name = ELS_osman_aguirre_y_salinas
+			#https://en.wikipedia.org/wiki/Osm%C3%ADn_Aguirre_y_Salinas
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_osman_aguirre_y_salinas
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1945 Election
+		ELS_napoleon_viera_altamirano = {
+			name = ELS_napoleon_viera_altamirano
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_napoleon_viera_altamirano
+				}
+			}
+			#ideology_socialist
+		}
+		ELS_arturo_romero = {
+			name = "Arturo Romero"
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_arturo_romero
+				}
+			}
+			#ideology_conservative
+		}
+	#
+		ELS_salvador_castaneda_castro = {
+			name = ELS_salvador_castaneda_castro
+			#https://en.wikipedia.org/wiki/Salvador_Castaneda_Castro
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_salvador_castaneda_castro
+				}
+			}
+			#ideology_stratocratic
+		}
+	#1948 Coup
+		ELS_manuel_de_jesus_cordova = {
+			name = ELS_manuel_de_jesus_cordova
+			#https://es.wikipedia.org/wiki/Manuel_de_Jes%C3%BAs_C%C3%B3rdova
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_manuel_de_jesus_cordova
+				}
+			}
+			#ideology_stratocratic
+		}
+		ELS_oscar_osorio = {
+			name = ELS_oscar_osorio
+			#https://en.wikipedia.org/wiki/%C3%93scar_Osorio
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_oscar_osorio
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1950 Election
+		ELS_jose_ascencio_menedez = {
+			name = ELS_jose_ascencio_menedez
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Asencio_Men%C3%A9ndez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_jose_ascencio_menedez
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1956 Election
+		ELS_enrique_magana_menedez = {
+			name = ELS_enrique_magana_menedez
+			#https://en.wikipedia.org/wiki/Enrique_Maga%C3%B1a_Men%C3%A9ndez
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_enrique_magana_menedez
+				}
+			}
+			#ideology_liberal
+		}
+		ELS_rafael_carranza_anaya = {
+			name = ELS_rafael_carranza_anaya
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_rafael_carranza_anaya
+				}
+			}
+			#ideology_conservative
+		}
+		ELS_jose_maria_lemus = {
+			name = ELS_jose_maria_lemus
+			#https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Lemus
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_jose_maria_lemus
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1960 Coup
+		ELS_miguel_angel_castillo_maldonado = {
+			name = ELS_miguel_angel_castillo_maldonado
+			#https://es.wikipedia.org/wiki/Miguel_%C3%81ngel_Castillo_Maldonado
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ELS_miguel_angel_castillo_maldonado
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+}

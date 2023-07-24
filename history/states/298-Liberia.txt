@@ -1,0 +1,38 @@
+
+state={
+	id=298
+	name="STATE_298"
+	manpower=745000
+
+	state_category=rural
+
+	resources={
+		rubber=6.000
+	}
+
+	history={
+		owner = LIB
+		buildings = {
+			infrastructure = 1
+
+			13244 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			13244 3
+		}
+		add_core_of = LIB
+		add_dynamic_modifier = {
+			modifier = climate_mild_tropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+	}
+
+	provinces={
+		7959 8006 13242 13243 13244 13245 13246 13254
+	}
+	local_supplies=0.000
+}

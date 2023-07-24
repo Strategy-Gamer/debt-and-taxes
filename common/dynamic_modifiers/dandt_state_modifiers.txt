@@ -1,0 +1,304 @@
+#Soil Quality
+	soil_quality_breadbasket = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_soil_breadbasket
+
+		local_industry_grain_farm_input_factor = -0.6
+		local_industry_rice_paddy_input_factor = -0.6
+
+		local_industry_agriculture_output_factor = 0.1
+		local_industry_cotton_plantation_output_factor = 0.1
+
+		local_industry_agriculture_attractiveness_factor = 0.2
+	}
+	soil_quality_farmland = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_soil_farmland
+
+		local_industry_grain_farm_input_factor = -0.3
+		local_industry_rice_paddy_input_factor = -0.3
+
+		local_industry_agriculture_output_factor = 0.05
+		local_industry_cotton_plantation_output_factor = 0.05
+		#input -30
+		#output +5
+	}
+	soil_quality_average = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_soil_average
+
+		industry_cotton_plantation_output_factor = -0.05
+	}
+	soil_quality_marginal = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_soil_marginal
+
+		local_industry_grain_farm_input_factor = 0.1
+		local_industry_rice_paddy_input_factor = 0.1
+
+		local_industry_agriculture_output_factor = -0.05
+		local_industry_cotton_plantation_output_factor = -0.05
+		#input +10
+		#output -5
+	}
+	soil_quality_wasteland = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_soil_non_arable
+
+		local_industry_grain_farm_input_factor = 0.25
+		local_industry_rice_paddy_input_factor = 0.25
+
+		local_industry_agriculture_output_factor = -0.25
+		local_industry_cotton_plantation_output_factor = -0.10
+		#input +25
+		#output -25
+		local_industry_agriculture_attractiveness_factor = -0.25
+	}
+#
+#Climate
+	climate_humid_tropic = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_humid_tropic
+
+		local_industry_agriculture_input_factor = 0.05
+		local_industry_agriculture_output_factor = 0.025
+		local_industry_rice_paddy_throughput_factor = 0.15
+	}
+	climate_arid_tropic = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_arid_tropic
+
+		local_industry_agriculture_input_factor = 0.10
+		local_industry_agriculture_output_factor = -0.10
+		local_industry_rice_paddy_throughput_factor = -0.025
+		local_industry_lumber_lodge_output_factor = -0.1
+	}
+	climate_mild_tropic = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_mild_tropic
+
+		local_industry_agriculture_input_factor = 0.05
+		local_industry_agriculture_output_factor = 0.025
+		local_industry_rice_paddy_throughput_factor = 0.05
+	}
+	climate_continental_tropic = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_continental_tropic
+
+		local_industry_agriculture_input_factor = 0.025
+		local_industry_agriculture_output_factor = 0.025
+	}
+	climate_humid_subtropic = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_humid_subtropic
+
+		local_industry_agriculture_input_factor = 0.03
+		local_industry_agriculture_output_factor = 0.025
+		local_industry_rice_paddy_throughput_factor = 0.05
+	}
+	climate_arid_subtropic = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_arid_subtropic
+
+		local_industry_agriculture_input_factor = 0.06
+		local_industry_agriculture_output_factor = -0.075
+		local_industry_rice_paddy_throughput_factor = -0.05
+		local_industry_lumber_lodge_output_factor = -0.1
+
+	}
+	climate_mild_subtropic = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_mild_subtropic
+
+	}
+	climate_continental_subtropic = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_continental_subtropic
+
+	}
+	climate_mild_warm = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_mild_warm
+
+	}
+	climate_continental_warm = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_continental_warm
+
+	}
+	climate_humid_cool = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_humid_cool
+
+	}
+	climate_arid_cool = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_arid_cool
+
+	}
+	climate_mild_cool = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_mild_cool
+
+	}
+	climate_continental_cool = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_continental_cool
+
+	}
+	climate_humid_polar = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_humid_polar
+
+	}
+	climate_arid_polar = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_arid_polar
+
+	}
+	climate_mild_polar = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_mild_polar
+
+	}
+	climate_continental_polar = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_climate_continental_polar
+
+	}
+#
+#Rivers
+	terrain_large_navigable_river = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_terrain_large_navigable_river
+
+		local_industry_transport_hub_output_factor = 0.15
+		local_industry_shipping_hub_output_factor = 0.075
+		local_industry_agriculture_output_factor = 0.06
+		local_industry_agriculture_maintenance_factor = -0.08
+		local_industry_agriculture_attractiveness_factor = 0.05
+		local_industry_factory_maintenance_factor = -0.05
+		local_industry_factory_attractiveness_factor = 0.025
+	}
+	terrain_small_navigable_river = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_terrain_small_navigable_river
+
+		local_industry_transport_hub_output_factor = 0.075
+		local_industry_shipping_hub_output_factor = 0.05
+		local_industry_agriculture_output_factor = 0.04
+		local_industry_agriculture_maintenance_factor = -0.06
+		local_industry_agriculture_attractiveness_factor = 0.025
+		local_industry_factory_maintenance_factor = -0.025
+	}
+	terrain_large_river = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_terrain_large_river
+
+		local_industry_agriculture_output_factor = 0.04
+		local_industry_agriculture_maintenance_factor = -0.04
+		local_industry_agriculture_attractiveness_factor = 0.025
+	}
+	terrain_small_river = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_terrain_small_river
+
+		local_industry_agriculture_output_factor = 0.02
+		local_industry_agriculture_maintenance_factor = -0.02
+	}
+#
+#Weather
+	weather_monsoon = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_weather_monsoon
+
+		local_industry_agriculture_throughput_factor = -0.075
+		local_industry_drill_throughput_factor = -0.05
+		local_industry_mine_throughput_factor = -0.05
+	}
+	weather_wet_season = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_weather_wet_season
+
+		local_industry_agriculture_input_factor = -0.05
+		local_industry_agriculture_output_factor = 0.05
+	}
+	weather_drought = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_weather_mild_drought
+
+		local_industry_agriculture_input_factor = 0.1
+		local_industry_agriculture_output_factor = -0.2
+		local_industry_rice_paddy_output_factor = -0.2
+	}
+	weather_dust_bowl = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_weather_dust_bowl
+
+		local_industry_agriculture_input_factor = 0.175
+		local_industry_agriculture_output_factor = -0.35
+		local_industry_rice_paddy_output_factor = -0.2
+	}
+#
+#Generic
+	generic_state_untapped_mines = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_generic_state_untapped_mines
+
+		local_industry_mine_throughput_factor = 0.20
+		local_industry_mine_output_factor = 0.10
+	}
+	generic_state_dense_forests = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_generic_state_untapped_mines
+
+		local_industry_lumber_lodge_throughput_factor = 0.20
+		local_industry_lumber_lodge_output_factor = 0.10
+	}
+	generic_state_natural_harbor = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_generic_state_natural_harbor
+	}
+#Other
+	disaster_boll_weevil_infestation = {
+		enable = { always = yes }
+
+		icon = GFX_state_modifier_disaster_boll_weevil_infestation
+
+		local_industry_cotton_plantation_input_factor = 0.10
+		local_industry_cotton_plantation_output_factor = -0.10
+	}

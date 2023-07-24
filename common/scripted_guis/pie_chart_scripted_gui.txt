@@ -1,0 +1,364 @@
+# Scripted GUI Pie Charts by Yard1
+
+scripted_gui = {
+	
+	pie_chart_religion_sg = {
+		window_name = "pie_pops_religion_container"
+		parent_window_name = "state_list_container"
+
+		context_type = player_context
+
+		visible = {
+			has_country_flag = list_view_open
+			has_country_flag = population_on
+		}
+
+		ai_enabled = { 
+			always = no
+		}
+
+		properties = {
+			# pie0 = { image = "[?pie_chart_religion^0.GetValueToReligionColor]" }
+			# pie1 = { image = "[?pie_chart_religion^1.GetValueToReligionColor]" }
+			# pie2 = { image = "[?pie_chart_religion^2.GetValueToReligionColor]" }
+			# pie3 = { image = "[?pie_chart_religion^3.GetValueToReligionColor]" }
+			# pie4 = { image = "[?pie_chart_religion^4.GetValueToReligionColor]" }
+			# pie5 = { image = "[?pie_chart_religion^5.GetValueToReligionColor]" }
+			# pie6 = { image = "[?pie_chart_religion^6.GetValueToReligionColor]" }
+			# pie7 = { image = "[?pie_chart_religion^7.GetValueToReligionColor]" }
+			# pie8 = { image = "[?pie_chart_religion^8.GetValueToReligionColor]" }
+			# pie9 = { image = "[?pie_chart_religion^9.GetValueToReligionColor]" }
+			# pie10 = { image = "[?pie_chart_religion^10.GetValueToReligionColor]" }
+			# pie11 = { image = "[?pie_chart_religion^11.GetValueToReligionColor]" }
+			# pie12 = { image = "[?pie_chart_religion^12.GetValueToReligionColor]" }
+			# pie13 = { image = "[?pie_chart_religion^13.GetValueToReligionColor]" }
+			# pie14 = { image = "[?pie_chart_religion^14.GetValueToReligionColor]" }
+			# pie15 = { image = "[?pie_chart_religion^15.GetValueToReligionColor]" }
+			# pie16 = { image = "[?pie_chart_religion^16.GetValueToReligionColor]" }
+			# pie17 = { image = "[?pie_chart_religion^17.GetValueToReligionColor]" }
+			# pie18 = { image = "[?pie_chart_religion^18.GetValueToReligionColor]" }
+			# pie19 = { image = "[?pie_chart_religion^19.GetValueToReligionColor]" }
+			# pie20 = { image = "[?pie_chart_religion^20.GetValueToReligionColor]" }
+			# pie21 = { image = "[?pie_chart_religion^21.GetValueToReligionColor]" }
+			# pie22 = { image = "[?pie_chart_religion^22.GetValueToReligionColor]" }
+			# pie23 = { image = "[?pie_chart_religion^23.GetValueToReligionColor]" }
+			# pie24 = { image = "[?pie_chart_religion^24.GetValueToReligionColor]" }
+			# pie25 = { image = "[?pie_chart_religion^25.GetValueToReligionColor]" }
+			# pie26 = { image = "[?pie_chart_religion^26.GetValueToReligionColor]" }
+			# pie27 = { image = "[?pie_chart_religion^27.GetValueToReligionColor]" }
+			# pie28 = { image = "[?pie_chart_religion^28.GetValueToReligionColor]" }
+			# pie29 = { image = "[?pie_chart_religion^29.GetValueToReligionColor]" }
+			# pie30 = { image = "[?pie_chart_religion^30.GetValueToReligionColor]" }
+			# pie31 = { image = "[?pie_chart_religion^31.GetValueToReligionColor]" }
+			# pie32 = { image = "[?pie_chart_religion^32.GetValueToReligionColor]" }
+			# pie33 = { image = "[?pie_chart_religion^33.GetValueToReligionColor]" }
+			# pie34 = { image = "[?pie_chart_religion^34.GetValueToReligionColor]" }
+			# pie35 = { image = "[?pie_chart_religion^35.GetValueToReligionColor]" }
+			# pie36 = { image = "[?pie_chart_religion^36.GetValueToReligionColor]" }
+			# pie37 = { image = "[?pie_chart_religion^37.GetValueToReligionColor]" }
+			# pie38 = { image = "[?pie_chart_religion^38.GetValueToReligionColor]" }
+			# pie39 = { image = "[?pie_chart_religion^39.GetValueToReligionColor]" }
+			# pie40 = { image = "[?pie_chart_religion^40.GetValueToReligionColor]" }
+			# pie41 = { image = "[?pie_chart_religion^41.GetValueToReligionColor]" }
+			# pie42 = { image = "[?pie_chart_religion^42.GetValueToReligionColor]" }
+			# pie43 = { image = "[?pie_chart_religion^43.GetValueToReligionColor]" }
+			# pie44 = { image = "[?pie_chart_religion^44.GetValueToReligionColor]" }
+			# pie45 = { image = "[?pie_chart_religion^45.GetValueToReligionColor]" }
+			# pie46 = { image = "[?pie_chart_religion^46.GetValueToReligionColor]" }
+			# pie47 = { image = "[?pie_chart_religion^47.GetValueToReligionColor]" }
+			# pie48 = { image = "[?pie_chart_religion^48.GetValueToReligionColor]" }
+			# pie49 = { image = "[?pie_chart_religion^49.GetValueToReligionColor]" }
+			# pie50 = { image = "[?pie_chart_religion^50.GetValueToReligionColor]" }
+			# pie51 = { image = "[?pie_chart_religion^51.GetValueToReligionColor]" }
+			# pie52 = { image = "[?pie_chart_religion^52.GetValueToReligionColor]" }
+			# pie53 = { image = "[?pie_chart_religion^53.GetValueToReligionColor]" }
+			# pie54 = { image = "[?pie_chart_religion^54.GetValueToReligionColor]" }
+			# pie55 = { image = "[?pie_chart_religion^55.GetValueToReligionColor]" }
+			# pie56 = { image = "[?pie_chart_religion^56.GetValueToReligionColor]" }
+			# pie57 = { image = "[?pie_chart_religion^57.GetValueToReligionColor]" }
+			# pie58 = { image = "[?pie_chart_religion^58.GetValueToReligionColor]" }
+			# pie59 = { image = "[?pie_chart_religion^59.GetValueToReligionColor]" }
+			# pie60 = { image = "[?pie_chart_religion^60.GetValueToReligionColor]" }
+			# pie61 = { image = "[?pie_chart_religion^61.GetValueToReligionColor]" }
+			# pie62 = { image = "[?pie_chart_religion^62.GetValueToReligionColor]" }
+			# pie63 = { image = "[?pie_chart_religion^63.GetValueToReligionColor]" }
+			# pie64 = { image = "[?pie_chart_religion^64.GetValueToReligionColor]" }
+			# pie65 = { image = "[?pie_chart_religion^65.GetValueToReligionColor]" }
+			# pie66 = { image = "[?pie_chart_religion^66.GetValueToReligionColor]" }
+			# pie67 = { image = "[?pie_chart_religion^67.GetValueToReligionColor]" }
+			# pie68 = { image = "[?pie_chart_religion^68.GetValueToReligionColor]" }
+			# pie69 = { image = "[?pie_chart_religion^69.GetValueToReligionColor]" }
+			# pie70 = { image = "[?pie_chart_religion^70.GetValueToReligionColor]" }
+			# pie71 = { image = "[?pie_chart_religion^71.GetValueToReligionColor]" }
+			# pie72 = { image = "[?pie_chart_religion^72.GetValueToReligionColor]" }
+			# pie73 = { image = "[?pie_chart_religion^73.GetValueToReligionColor]" }
+			# pie74 = { image = "[?pie_chart_religion^74.GetValueToReligionColor]" }
+			# pie75 = { image = "[?pie_chart_religion^75.GetValueToReligionColor]" }
+			# pie76 = { image = "[?pie_chart_religion^76.GetValueToReligionColor]" }
+			# pie77 = { image = "[?pie_chart_religion^77.GetValueToReligionColor]" }
+			# pie78 = { image = "[?pie_chart_religion^78.GetValueToReligionColor]" }
+			# pie79 = { image = "[?pie_chart_religion^79.GetValueToReligionColor]" }
+			# pie80 = { image = "[?pie_chart_religion^80.GetValueToReligionColor]" }
+			# pie81 = { image = "[?pie_chart_religion^81.GetValueToReligionColor]" }
+			# pie82 = { image = "[?pie_chart_religion^82.GetValueToReligionColor]" }
+			# pie83 = { image = "[?pie_chart_religion^83.GetValueToReligionColor]" }
+			# pie84 = { image = "[?pie_chart_religion^84.GetValueToReligionColor]" }
+			# pie85 = { image = "[?pie_chart_religion^85.GetValueToReligionColor]" }
+			# pie86 = { image = "[?pie_chart_religion^86.GetValueToReligionColor]" }
+			# pie87 = { image = "[?pie_chart_religion^87.GetValueToReligionColor]" }
+			# pie88 = { image = "[?pie_chart_religion^88.GetValueToReligionColor]" }
+			# pie89 = { image = "[?pie_chart_religion^89.GetValueToReligionColor]" }
+			# pie90 = { image = "[?pie_chart_religion^90.GetValueToReligionColor]" }
+			# pie91 = { image = "[?pie_chart_religion^91.GetValueToReligionColor]" }
+			# pie92 = { image = "[?pie_chart_religion^92.GetValueToReligionColor]" }
+			# pie93 = { image = "[?pie_chart_religion^93.GetValueToReligionColor]" }
+			# pie94 = { image = "[?pie_chart_religion^94.GetValueToReligionColor]" }
+			# pie95 = { image = "[?pie_chart_religion^95.GetValueToReligionColor]" }
+			# pie96 = { image = "[?pie_chart_religion^96.GetValueToReligionColor]" }
+			# pie97 = { image = "[?pie_chart_religion^97.GetValueToReligionColor]" }
+			# pie98 = { image = "[?pie_chart_religion^98.GetValueToReligionColor]" }
+			# pie99 = { image = "[?pie_chart_religion^99.GetValueToReligionColor]" }
+		}
+
+	}
+	pie_chart_culture_sg = {
+		window_name = "pie_pops_culture_container"
+		parent_window_name = "state_list_container"
+
+		context_type = player_context
+
+		visible = {
+			has_country_flag = list_view_open
+			has_country_flag = population_on
+		}
+
+		ai_enabled = { 
+			always = no
+		}
+
+		properties = {
+			# pie0 = { image = "[?pie_chart_culture^0.GetValueToCultureColor]" }
+			# pie1 = { image = "[?pie_chart_culture^1.GetValueToCultureColor]" }
+			# pie2 = { image = "[?pie_chart_culture^2.GetValueToCultureColor]" }
+			# pie3 = { image = "[?pie_chart_culture^3.GetValueToCultureColor]" }
+			# pie4 = { image = "[?pie_chart_culture^4.GetValueToCultureColor]" }
+			# pie5 = { image = "[?pie_chart_culture^5.GetValueToCultureColor]" }
+			# pie6 = { image = "[?pie_chart_culture^6.GetValueToCultureColor]" }
+			# pie7 = { image = "[?pie_chart_culture^7.GetValueToCultureColor]" }
+			# pie8 = { image = "[?pie_chart_culture^8.GetValueToCultureColor]" }
+			# pie9 = { image = "[?pie_chart_culture^9.GetValueToCultureColor]" }
+			# pie10 = { image = "[?pie_chart_culture^10.GetValueToCultureColor]" }
+			# pie11 = { image = "[?pie_chart_culture^11.GetValueToCultureColor]" }
+			# pie12 = { image = "[?pie_chart_culture^12.GetValueToCultureColor]" }
+			# pie13 = { image = "[?pie_chart_culture^13.GetValueToCultureColor]" }
+			# pie14 = { image = "[?pie_chart_culture^14.GetValueToCultureColor]" }
+			# pie15 = { image = "[?pie_chart_culture^15.GetValueToCultureColor]" }
+			# pie16 = { image = "[?pie_chart_culture^16.GetValueToCultureColor]" }
+			# pie17 = { image = "[?pie_chart_culture^17.GetValueToCultureColor]" }
+			# pie18 = { image = "[?pie_chart_culture^18.GetValueToCultureColor]" }
+			# pie19 = { image = "[?pie_chart_culture^19.GetValueToCultureColor]" }
+			# pie20 = { image = "[?pie_chart_culture^20.GetValueToCultureColor]" }
+			# pie21 = { image = "[?pie_chart_culture^21.GetValueToCultureColor]" }
+			# pie22 = { image = "[?pie_chart_culture^22.GetValueToCultureColor]" }
+			# pie23 = { image = "[?pie_chart_culture^23.GetValueToCultureColor]" }
+			# pie24 = { image = "[?pie_chart_culture^24.GetValueToCultureColor]" }
+			# pie25 = { image = "[?pie_chart_culture^25.GetValueToCultureColor]" }
+			# pie26 = { image = "[?pie_chart_culture^26.GetValueToCultureColor]" }
+			# pie27 = { image = "[?pie_chart_culture^27.GetValueToCultureColor]" }
+			# pie28 = { image = "[?pie_chart_culture^28.GetValueToCultureColor]" }
+			# pie29 = { image = "[?pie_chart_culture^29.GetValueToCultureColor]" }
+			# pie30 = { image = "[?pie_chart_culture^30.GetValueToCultureColor]" }
+			# pie31 = { image = "[?pie_chart_culture^31.GetValueToCultureColor]" }
+			# pie32 = { image = "[?pie_chart_culture^32.GetValueToCultureColor]" }
+			# pie33 = { image = "[?pie_chart_culture^33.GetValueToCultureColor]" }
+			# pie34 = { image = "[?pie_chart_culture^34.GetValueToCultureColor]" }
+			# pie35 = { image = "[?pie_chart_culture^35.GetValueToCultureColor]" }
+			# pie36 = { image = "[?pie_chart_culture^36.GetValueToCultureColor]" }
+			# pie37 = { image = "[?pie_chart_culture^37.GetValueToCultureColor]" }
+			# pie38 = { image = "[?pie_chart_culture^38.GetValueToCultureColor]" }
+			# pie39 = { image = "[?pie_chart_culture^39.GetValueToCultureColor]" }
+			# pie40 = { image = "[?pie_chart_culture^40.GetValueToCultureColor]" }
+			# pie41 = { image = "[?pie_chart_culture^41.GetValueToCultureColor]" }
+			# pie42 = { image = "[?pie_chart_culture^42.GetValueToCultureColor]" }
+			# pie43 = { image = "[?pie_chart_culture^43.GetValueToCultureColor]" }
+			# pie44 = { image = "[?pie_chart_culture^44.GetValueToCultureColor]" }
+			# pie45 = { image = "[?pie_chart_culture^45.GetValueToCultureColor]" }
+			# pie46 = { image = "[?pie_chart_culture^46.GetValueToCultureColor]" }
+			# pie47 = { image = "[?pie_chart_culture^47.GetValueToCultureColor]" }
+			# pie48 = { image = "[?pie_chart_culture^48.GetValueToCultureColor]" }
+			# pie49 = { image = "[?pie_chart_culture^49.GetValueToCultureColor]" }
+			# pie50 = { image = "[?pie_chart_culture^50.GetValueToCultureColor]" }
+			# pie51 = { image = "[?pie_chart_culture^51.GetValueToCultureColor]" }
+			# pie52 = { image = "[?pie_chart_culture^52.GetValueToCultureColor]" }
+			# pie53 = { image = "[?pie_chart_culture^53.GetValueToCultureColor]" }
+			# pie54 = { image = "[?pie_chart_culture^54.GetValueToCultureColor]" }
+			# pie55 = { image = "[?pie_chart_culture^55.GetValueToCultureColor]" }
+			# pie56 = { image = "[?pie_chart_culture^56.GetValueToCultureColor]" }
+			# pie57 = { image = "[?pie_chart_culture^57.GetValueToCultureColor]" }
+			# pie58 = { image = "[?pie_chart_culture^58.GetValueToCultureColor]" }
+			# pie59 = { image = "[?pie_chart_culture^59.GetValueToCultureColor]" }
+			# pie60 = { image = "[?pie_chart_culture^60.GetValueToCultureColor]" }
+			# pie61 = { image = "[?pie_chart_culture^61.GetValueToCultureColor]" }
+			# pie62 = { image = "[?pie_chart_culture^62.GetValueToCultureColor]" }
+			# pie63 = { image = "[?pie_chart_culture^63.GetValueToCultureColor]" }
+			# pie64 = { image = "[?pie_chart_culture^64.GetValueToCultureColor]" }
+			# pie65 = { image = "[?pie_chart_culture^65.GetValueToCultureColor]" }
+			# pie66 = { image = "[?pie_chart_culture^66.GetValueToCultureColor]" }
+			# pie67 = { image = "[?pie_chart_culture^67.GetValueToCultureColor]" }
+			# pie68 = { image = "[?pie_chart_culture^68.GetValueToCultureColor]" }
+			# pie69 = { image = "[?pie_chart_culture^69.GetValueToCultureColor]" }
+			# pie70 = { image = "[?pie_chart_culture^70.GetValueToCultureColor]" }
+			# pie71 = { image = "[?pie_chart_culture^71.GetValueToCultureColor]" }
+			# pie72 = { image = "[?pie_chart_culture^72.GetValueToCultureColor]" }
+			# pie73 = { image = "[?pie_chart_culture^73.GetValueToCultureColor]" }
+			# pie74 = { image = "[?pie_chart_culture^74.GetValueToCultureColor]" }
+			# pie75 = { image = "[?pie_chart_culture^75.GetValueToCultureColor]" }
+			# pie76 = { image = "[?pie_chart_culture^76.GetValueToCultureColor]" }
+			# pie77 = { image = "[?pie_chart_culture^77.GetValueToCultureColor]" }
+			# pie78 = { image = "[?pie_chart_culture^78.GetValueToCultureColor]" }
+			# pie79 = { image = "[?pie_chart_culture^79.GetValueToCultureColor]" }
+			# pie80 = { image = "[?pie_chart_culture^80.GetValueToCultureColor]" }
+			# pie81 = { image = "[?pie_chart_culture^81.GetValueToCultureColor]" }
+			# pie82 = { image = "[?pie_chart_culture^82.GetValueToCultureColor]" }
+			# pie83 = { image = "[?pie_chart_culture^83.GetValueToCultureColor]" }
+			# pie84 = { image = "[?pie_chart_culture^84.GetValueToCultureColor]" }
+			# pie85 = { image = "[?pie_chart_culture^85.GetValueToCultureColor]" }
+			# pie86 = { image = "[?pie_chart_culture^86.GetValueToCultureColor]" }
+			# pie87 = { image = "[?pie_chart_culture^87.GetValueToCultureColor]" }
+			# pie88 = { image = "[?pie_chart_culture^88.GetValueToCultureColor]" }
+			# pie89 = { image = "[?pie_chart_culture^89.GetValueToCultureColor]" }
+			# pie90 = { image = "[?pie_chart_culture^90.GetValueToCultureColor]" }
+			# pie91 = { image = "[?pie_chart_culture^91.GetValueToCultureColor]" }
+			# pie92 = { image = "[?pie_chart_culture^92.GetValueToCultureColor]" }
+			# pie93 = { image = "[?pie_chart_culture^93.GetValueToCultureColor]" }
+			# pie94 = { image = "[?pie_chart_culture^94.GetValueToCultureColor]" }
+			# pie95 = { image = "[?pie_chart_culture^95.GetValueToCultureColor]" }
+			# pie96 = { image = "[?pie_chart_culture^96.GetValueToCultureColor]" }
+			# pie97 = { image = "[?pie_chart_culture^97.GetValueToCultureColor]" }
+			# pie98 = { image = "[?pie_chart_culture^98.GetValueToCultureColor]" }
+			# pie99 = { image = "[?pie_chart_culture^99.GetValueToCultureColor]" }
+		}
+
+	}
+	pie_chart_ideology_sg = {
+		window_name = "pie_pops_ideology_container"
+		parent_window_name = "state_list_container"
+
+		context_type = player_context
+
+		visible = {
+			has_country_flag = list_view_open
+			has_country_flag = population_on
+		}
+
+		ai_enabled = { 
+			always = no
+		}
+
+		properties = {
+			# pie0 = { image = "[?pie_chart_ideology^0.GetValueToIdeologyColor]" }
+			# pie1 = { image = "[?pie_chart_ideology^1.GetValueToIdeologyColor]" }
+			# pie2 = { image = "[?pie_chart_ideology^2.GetValueToIdeologyColor]" }
+			# pie3 = { image = "[?pie_chart_ideology^3.GetValueToIdeologyColor]" }
+			# pie4 = { image = "[?pie_chart_ideology^4.GetValueToIdeologyColor]" }
+			# pie5 = { image = "[?pie_chart_ideology^5.GetValueToIdeologyColor]" }
+			# pie6 = { image = "[?pie_chart_ideology^6.GetValueToIdeologyColor]" }
+			# pie7 = { image = "[?pie_chart_ideology^7.GetValueToIdeologyColor]" }
+			# pie8 = { image = "[?pie_chart_ideology^8.GetValueToIdeologyColor]" }
+			# pie9 = { image = "[?pie_chart_ideology^9.GetValueToIdeologyColor]" }
+			# pie10 = { image = "[?pie_chart_ideology^10.GetValueToIdeologyColor]" }
+			# pie11 = { image = "[?pie_chart_ideology^11.GetValueToIdeologyColor]" }
+			# pie12 = { image = "[?pie_chart_ideology^12.GetValueToIdeologyColor]" }
+			# pie13 = { image = "[?pie_chart_ideology^13.GetValueToIdeologyColor]" }
+			# pie14 = { image = "[?pie_chart_ideology^14.GetValueToIdeologyColor]" }
+			# pie15 = { image = "[?pie_chart_ideology^15.GetValueToIdeologyColor]" }
+			# pie16 = { image = "[?pie_chart_ideology^16.GetValueToIdeologyColor]" }
+			# pie17 = { image = "[?pie_chart_ideology^17.GetValueToIdeologyColor]" }
+			# pie18 = { image = "[?pie_chart_ideology^18.GetValueToIdeologyColor]" }
+			# pie19 = { image = "[?pie_chart_ideology^19.GetValueToIdeologyColor]" }
+			# pie20 = { image = "[?pie_chart_ideology^20.GetValueToIdeologyColor]" }
+			# pie21 = { image = "[?pie_chart_ideology^21.GetValueToIdeologyColor]" }
+			# pie22 = { image = "[?pie_chart_ideology^22.GetValueToIdeologyColor]" }
+			# pie23 = { image = "[?pie_chart_ideology^23.GetValueToIdeologyColor]" }
+			# pie24 = { image = "[?pie_chart_ideology^24.GetValueToIdeologyColor]" }
+			# pie25 = { image = "[?pie_chart_ideology^25.GetValueToIdeologyColor]" }
+			# pie26 = { image = "[?pie_chart_ideology^26.GetValueToIdeologyColor]" }
+			# pie27 = { image = "[?pie_chart_ideology^27.GetValueToIdeologyColor]" }
+			# pie28 = { image = "[?pie_chart_ideology^28.GetValueToIdeologyColor]" }
+			# pie29 = { image = "[?pie_chart_ideology^29.GetValueToIdeologyColor]" }
+			# pie30 = { image = "[?pie_chart_ideology^30.GetValueToIdeologyColor]" }
+			# pie31 = { image = "[?pie_chart_ideology^31.GetValueToIdeologyColor]" }
+			# pie32 = { image = "[?pie_chart_ideology^32.GetValueToIdeologyColor]" }
+			# pie33 = { image = "[?pie_chart_ideology^33.GetValueToIdeologyColor]" }
+			# pie34 = { image = "[?pie_chart_ideology^34.GetValueToIdeologyColor]" }
+			# pie35 = { image = "[?pie_chart_ideology^35.GetValueToIdeologyColor]" }
+			# pie36 = { image = "[?pie_chart_ideology^36.GetValueToIdeologyColor]" }
+			# pie37 = { image = "[?pie_chart_ideology^37.GetValueToIdeologyColor]" }
+			# pie38 = { image = "[?pie_chart_ideology^38.GetValueToIdeologyColor]" }
+			# pie39 = { image = "[?pie_chart_ideology^39.GetValueToIdeologyColor]" }
+			# pie40 = { image = "[?pie_chart_ideology^40.GetValueToIdeologyColor]" }
+			# pie41 = { image = "[?pie_chart_ideology^41.GetValueToIdeologyColor]" }
+			# pie42 = { image = "[?pie_chart_ideology^42.GetValueToIdeologyColor]" }
+			# pie43 = { image = "[?pie_chart_ideology^43.GetValueToIdeologyColor]" }
+			# pie44 = { image = "[?pie_chart_ideology^44.GetValueToIdeologyColor]" }
+			# pie45 = { image = "[?pie_chart_ideology^45.GetValueToIdeologyColor]" }
+			# pie46 = { image = "[?pie_chart_ideology^46.GetValueToIdeologyColor]" }
+			# pie47 = { image = "[?pie_chart_ideology^47.GetValueToIdeologyColor]" }
+			# pie48 = { image = "[?pie_chart_ideology^48.GetValueToIdeologyColor]" }
+			# pie49 = { image = "[?pie_chart_ideology^49.GetValueToIdeologyColor]" }
+			# pie50 = { image = "[?pie_chart_ideology^50.GetValueToIdeologyColor]" }
+			# pie51 = { image = "[?pie_chart_ideology^51.GetValueToIdeologyColor]" }
+			# pie52 = { image = "[?pie_chart_ideology^52.GetValueToIdeologyColor]" }
+			# pie53 = { image = "[?pie_chart_ideology^53.GetValueToIdeologyColor]" }
+			# pie54 = { image = "[?pie_chart_ideology^54.GetValueToIdeologyColor]" }
+			# pie55 = { image = "[?pie_chart_ideology^55.GetValueToIdeologyColor]" }
+			# pie56 = { image = "[?pie_chart_ideology^56.GetValueToIdeologyColor]" }
+			# pie57 = { image = "[?pie_chart_ideology^57.GetValueToIdeologyColor]" }
+			# pie58 = { image = "[?pie_chart_ideology^58.GetValueToIdeologyColor]" }
+			# pie59 = { image = "[?pie_chart_ideology^59.GetValueToIdeologyColor]" }
+			# pie60 = { image = "[?pie_chart_ideology^60.GetValueToIdeologyColor]" }
+			# pie61 = { image = "[?pie_chart_ideology^61.GetValueToIdeologyColor]" }
+			# pie62 = { image = "[?pie_chart_ideology^62.GetValueToIdeologyColor]" }
+			# pie63 = { image = "[?pie_chart_ideology^63.GetValueToIdeologyColor]" }
+			# pie64 = { image = "[?pie_chart_ideology^64.GetValueToIdeologyColor]" }
+			# pie65 = { image = "[?pie_chart_ideology^65.GetValueToIdeologyColor]" }
+			# pie66 = { image = "[?pie_chart_ideology^66.GetValueToIdeologyColor]" }
+			# pie67 = { image = "[?pie_chart_ideology^67.GetValueToIdeologyColor]" }
+			# pie68 = { image = "[?pie_chart_ideology^68.GetValueToIdeologyColor]" }
+			# pie69 = { image = "[?pie_chart_ideology^69.GetValueToIdeologyColor]" }
+			# pie70 = { image = "[?pie_chart_ideology^70.GetValueToIdeologyColor]" }
+			# pie71 = { image = "[?pie_chart_ideology^71.GetValueToIdeologyColor]" }
+			# pie72 = { image = "[?pie_chart_ideology^72.GetValueToIdeologyColor]" }
+			# pie73 = { image = "[?pie_chart_ideology^73.GetValueToIdeologyColor]" }
+			# pie74 = { image = "[?pie_chart_ideology^74.GetValueToIdeologyColor]" }
+			# pie75 = { image = "[?pie_chart_ideology^75.GetValueToIdeologyColor]" }
+			# pie76 = { image = "[?pie_chart_ideology^76.GetValueToIdeologyColor]" }
+			# pie77 = { image = "[?pie_chart_ideology^77.GetValueToIdeologyColor]" }
+			# pie78 = { image = "[?pie_chart_ideology^78.GetValueToIdeologyColor]" }
+			# pie79 = { image = "[?pie_chart_ideology^79.GetValueToIdeologyColor]" }
+			# pie80 = { image = "[?pie_chart_ideology^80.GetValueToIdeologyColor]" }
+			# pie81 = { image = "[?pie_chart_ideology^81.GetValueToIdeologyColor]" }
+			# pie82 = { image = "[?pie_chart_ideology^82.GetValueToIdeologyColor]" }
+			# pie83 = { image = "[?pie_chart_ideology^83.GetValueToIdeologyColor]" }
+			# pie84 = { image = "[?pie_chart_ideology^84.GetValueToIdeologyColor]" }
+			# pie85 = { image = "[?pie_chart_ideology^85.GetValueToIdeologyColor]" }
+			# pie86 = { image = "[?pie_chart_ideology^86.GetValueToIdeologyColor]" }
+			# pie87 = { image = "[?pie_chart_ideology^87.GetValueToIdeologyColor]" }
+			# pie88 = { image = "[?pie_chart_ideology^88.GetValueToIdeologyColor]" }
+			# pie89 = { image = "[?pie_chart_ideology^89.GetValueToIdeologyColor]" }
+			# pie90 = { image = "[?pie_chart_ideology^90.GetValueToIdeologyColor]" }
+			# pie91 = { image = "[?pie_chart_ideology^91.GetValueToIdeologyColor]" }
+			# pie92 = { image = "[?pie_chart_ideology^92.GetValueToIdeologyColor]" }
+			# pie93 = { image = "[?pie_chart_ideology^93.GetValueToIdeologyColor]" }
+			# pie94 = { image = "[?pie_chart_ideology^94.GetValueToIdeologyColor]" }
+			# pie95 = { image = "[?pie_chart_ideology^95.GetValueToIdeologyColor]" }
+			# pie96 = { image = "[?pie_chart_ideology^96.GetValueToIdeologyColor]" }
+			# pie97 = { image = "[?pie_chart_ideology^97.GetValueToIdeologyColor]" }
+			# pie98 = { image = "[?pie_chart_ideology^98.GetValueToIdeologyColor]" }
+			# pie99 = { image = "[?pie_chart_ideology^99.GetValueToIdeologyColor]" }
+		}
+
+	}
+
+}
+

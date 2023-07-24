@@ -1,0 +1,32 @@
+
+state={
+	id=744
+	name="STATE_744"
+
+	history={
+		owner = GUO
+		victory_points = {
+			7418 1 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		1976 2006 4167 4256 4295 7301 7418 10257 12713 13469 13470 
+	}
+	manpower=8903022
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

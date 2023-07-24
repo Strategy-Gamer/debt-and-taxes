@@ -1,0 +1,32 @@
+
+state={
+	id = 561
+	name = "STATE_561" # Amur
+	manpower = 454281
+
+	state_category = rural
+
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = FER
+		add_dynamic_modifier = {	
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces = {
+		1730 1739 1845 4731 4847 7691 7754 7785 7851 10678 12543 12591 12657 12660
+	}
+
+	local_supplies = 6.0
+}

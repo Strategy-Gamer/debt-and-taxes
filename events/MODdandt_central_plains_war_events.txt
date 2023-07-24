@@ -1,0 +1,358 @@
+add_namespace = CHI_central_plains_war
+
+# Start Conference
+country_event = {
+	id = CHI_central_plains_war.1
+	title = CHI_central_plains_war.1.t
+	desc = CHI_central_plains_war.1.d
+
+	picture = placeholder
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_central_plains_war.1.a
+		hidden_effect = {
+			for_each_scope_loop = {
+				array = allied_cliques
+				if = {
+					limit = { is_ai = no is_subject = no }
+					add_to_array = {
+						array = CHI.demobilization_conference_attendees
+						value = THIS.id
+					}
+					log = "Player Attendee: [THIS.GetName]"
+				}
+				else_if = {
+					limit = { is_subject = no }
+					add_to_array = {
+						array = CHI.demobilization_conference_attendees_ai
+						value = THIS.id
+					}
+					log = "AI Attendee: [THIS.GetName]"
+				}
+			}
+			for_each_scope_loop = {
+				array = demobilization_conference_attendees_ai
+				add_to_array = {
+					array = CHI.demobilization_conference_attendees
+					value = THIS.id
+				}
+			}
+			clear_array = demobilization_conference_attendees_ai
+			add_to_array = {
+				array = CHI.demobilization_conference_attendees
+				value = THIS.id
+			}
+			log = "Host: [THIS.GetName]"
+		}
+		news_event = CHI_central_plains_war.2
+	}
+}
+
+news_event = {
+	id = CHI_central_plains_war.2
+	title = CHI_central_plains_war.2.t
+	desc = CHI_central_plains_war.2.d
+
+	picture = placeholder
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = CHI_central_plains_war.2.a
+		trigger = { tag = CHI }
+		add_timed_idea = {
+			idea = CHI_demobilization_conference
+			days = 49
+		}
+		country_event = CHI_central_plains_war.3
+	}
+	option = {
+		name = CHI_central_plains_war.2.b
+		trigger = { is_chinese_tag = yes NOT = { tag = CHI } }
+		add_timed_idea = {
+			idea = CHI_demobilization_conference
+			days = 49
+		}
+	}
+	option = {
+		name = CHI_central_plains_war.2.c
+		trigger = { is_chinese_tag = no }
+	}
+}
+
+country_event = {
+	id = CHI_central_plains_war.3
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { check_variable = { CHI.demobilization_conference_attendees^0 = CHI.id } }
+			log = "Sending Ping to [CHI.GetName]"
+			if = {
+				limit = { has_global_flag = CHI_faction_northern_coalition_flag }
+				country_event = CHI_central_plains_war.5
+			}
+			else = {
+				country_event = CHI_central_plains_war.7
+			}
+		}
+		else = {
+			var:demobilization_conference_attendees^0 = {
+				log = "Sending Ping to [THIS.GetName]"
+				country_event = CHI_central_plains_war.4
+			}
+		}
+	}
+}
+
+#Would you like to leave?
+country_event = {
+	id = CHI_central_plains_war.4
+	title = CHI_central_plains_war.4.t
+	desc = CHI_central_plains_war.4.d
+
+	picture = placeholder
+
+	is_triggered_only = yes
+
+	option = { #Yes & Fight
+		name = CHI_central_plains_war.4.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = yes
+				OR = {
+					tag = GXC
+					tag = GUO
+					tag = SHX
+					tag = FEG
+					tag = SHA
+				}
+				add = 100
+			}
+			modifier = {
+				is_historical_focus_on = no
+				add = 20
+				add = var:num_of_factories
+				add = var:popularity@token:ideology_stratocratic
+				add = var:popularity@token:ideology_fascist
+			}
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = -20
+		}
+		if = {
+			limit = { NOT = { has_global_flag = CHI_faction_northern_coalition_flag } }
+			set_global_flag = CHI_faction_northern_coalition_flag
+			set_variable = { global.faction_northern_coaltion_leader = THIS.id }
+			leave_faction = yes
+			create_faction = CHI_faction_northern_coalition
+			log = "Founded Opposition: [THIS.GetName]"
+		}
+		else = {
+			leave_faction = yes
+			var:global.faction_northern_coaltion_leader = {
+				add_to_faction = PREV
+			}
+			log = "Joined Opposition: [THIS.GetName]"
+		}
+		remove_from_array = {
+			array = CHI.demobilization_conference_attendees
+			value = THIS.id
+		}
+		CHI = {
+			country_event = { id = CHI_central_plains_war.3 days = 1 }
+		}
+	}
+	option = { #Yes & Neutral
+		name = CHI_central_plains_war.4.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = yes
+				OR = {
+					tag = SIK
+					tag = YUN
+					tag = BAZ
+				}
+				add = 100
+			}
+			modifier = {
+				is_historical_focus_on = no
+				NOT = { tag = PRC }
+				add = 10
+				add = var:num_of_factories
+				add = var:popularity@token:ideology_communist
+				add = var:popularity@token:ideology_socialist
+				add = var:popularity@token:ideology_agrarian
+			}
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 5
+		}
+		log = "Join Neutrality: [THIS.GetName]"
+		leave_faction = yes
+		drop_cosmetic_tag = yes
+		remove_from_array = {
+			array = CHI.demobilization_conference_attendees
+			value = THIS.id
+		}
+		CHI = {
+			country_event = { id = CHI_central_plains_war.3 days = 1 }
+		}
+	}
+	option = { #No
+		name = CHI_central_plains_war.4.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = yes
+				NOT = {
+					OR = {
+						tag = GXC
+						tag = GUO
+						tag = SHX
+						tag = FEG
+						tag = SHA
+						tag = SIK
+						tag = YUN
+						tag = BAZ
+					}
+				}
+				add = 100
+			}
+			modifier = {
+				is_historical_focus_on = no
+				add = 80
+				add = var:CHI.num_of_factories
+				add = var:popularity@token:ideology_liberal
+				add = var:popularity@token:ideology_conservative
+				add = var:popularity@token:ideology_reactionary
+			}
+			modifier = {
+				tag = PRC
+				add = 200
+			}
+		}
+		log = "Stayed Loyal: [THIS.GetName]"
+		add_popularity = {
+			ideology = neutrality
+			popularity = 20
+		}
+		remove_from_array = {
+			array = CHI.demobilization_conference_attendees
+			value = THIS.id
+		}
+		CHI = {
+			country_event = { id = CHI_central_plains_war.3 days = 1 }
+		}
+	}
+}
+
+# Central Plains War
+country_event = {
+	id = CHI_central_plains_war.5
+	title = CHI_central_plains_war.5.t
+	desc = CHI_central_plains_war.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_central_plains_war.5.a
+		every_country = {
+			limit = { is_ally_with = CHI }
+			var:global.faction_northern_coaltion_leader = {
+				declare_war_on = {
+					target = PREV
+					type = central_plains_wargoal
+				}
+			}
+		}
+		every_country = {
+			limit = { is_ally_with = var:faction_northern_coaltion_leader }
+			CHI = {
+				declare_war_on = {
+					target = PREV
+					type = central_plains_wargoal
+				}
+			}
+		}
+		news_event = CHI_central_plains_war.6
+	}
+}
+
+news_event = {
+	id = CHI_central_plains_war.6
+	title = CHI_central_plains_war.6.t
+	desc = CHI_central_plains_war.6.d
+
+	picture = placeholder
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_central_plains_war.6.a
+	}
+}
+
+#No Central Plains War
+country_event = {
+	id = CHI_central_plains_war.7
+	title = CHI_central_plains_war.7.t
+	desc = CHI_central_plains_war.6.d
+
+	picture = placeholder
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_central_plains_war.7.a
+		drop_cosmetic_tag = yes
+		every_subject_country = {
+			limit = { is_chinese_tag = yes }
+			CHI = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+				govt_incorporate_annexed = yes
+			}
+		}
+		every_country = {
+			limit = { is_ally_with = CHI is_ai = yes is_chinese_tag = yes }
+			CHI = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_clique
+				}
+			}
+		}
+		news_event = CHI_central_plains_war.8
+	}
+}
+
+news_event = {
+	id = CHI_central_plains_war.8
+	title = CHI_central_plains_war.8.t
+	desc = CHI_central_plains_war.8.d
+
+	picture = placeholder
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_central_plains_war.8.a
+	}
+}

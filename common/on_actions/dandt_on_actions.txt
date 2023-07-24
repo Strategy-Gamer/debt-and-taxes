@@ -1,0 +1,94 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			add_to_variable = { global.next_month = 1 }
+			set_variable = { global.hour_loops = 12 }
+			USA = {
+				dandt_setup = yes
+				every_country = {
+					#Pops
+
+					#
+					#Economy
+
+					#
+					#Government
+						govt_country_setup = yes
+					#Laws
+						laws_country_startup = yes #PREFERABLY ECO SHOULD BE RUN BEFORE THIS
+					#
+				}
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			#if = {
+			#	#Code credited to Yard1, the scripting guru
+			#	# don't touch!
+			#	limit = {
+			#		NOT = { 
+			#			has_global_flag = on_monthly_done
+			#		}
+			#		meta_trigger = {
+			#			text = {
+			#				date > [YEAR].[MONTH].1
+			#			}
+			#			YEAR = "[?global.year]"
+			#			MONTH = "[?global.next_month]"
+			#		}
+			#	}
+			#	add_to_variable = { global.month = 1 }
+			#	add_to_variable = { global.next_month = 1 }
+			#	set_global_flag = { flag = on_monthly_done value = 1 days = 27 }
+			#	if = {
+			#		limit = { check_variable = { global.month > 12 } }
+			#		set_variable = { global.month = 1 }
+			#	}
+			#	if = {
+			#		limit = { check_variable = { global.next_month > 12 } }
+			#		set_variable = { global.next_month = 1 }
+			#		set_global_flag = { flag = on_monthly_done value = 1 days = 31 }
+			#	}
+			#	# this is done only ONCE per month, even though on_daily fires for every country
+			#	# will also be done on startup
+			#
+			#	#ON-MONTHLY CODE:
+			#	every_state = {
+			#		#Gets the controller of the state
+			#		controller = {
+			#			set_variable = { PREV.state_controller = THIS }
+			#		}
+			#	}
+			#}
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_global_flag = on_daily_done
+			#		}
+			#	}
+			#	set_global_flag = { flag = on_daily_done value = 1 days = 1 }
+			#	set_variable = { global.hour_loops = 0 }
+			#	USA = {
+			#		#country_event = dandt.241
+			#	}
+			#}
+		}
+	}
+
+	on_release = {
+		effect = {
+			#Pops
+
+			#
+			#Economy
+
+			#
+			#Government
+				govt_country_setup = yes
+			#Laws
+				laws_country_startup = yes #PREFERABLY ECO SHOULD BE RUN BEFORE THIS
+			#
+		}
+	}
+}

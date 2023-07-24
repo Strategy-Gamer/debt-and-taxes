@@ -1,0 +1,37 @@
+
+state={
+	id=681
+	name="STATE_681"
+
+	history={
+		owner = SAF
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			12589 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			12589 10 
+		}
+		add_core_of = SAF
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+
+	provinces={
+		10415 12589 12692 
+	}
+	manpower=1044203
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

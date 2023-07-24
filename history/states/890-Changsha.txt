@@ -1,0 +1,33 @@
+state={
+	id=890
+	name="STATE_890"
+	provinces={
+		1640 7097 7101 7502 9999 10517 12483 13140 13143 
+	}
+	history={
+		owner=GXC
+		add_core_of=GXC
+		buildings={
+			infrastructure=2
+		}
+		victory_points = {
+			7101 10
+		}
+		victory_points = {
+			7097 5
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_navigable_river
+		}
+	}
+	state_category=town
+	manpower=7262991
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=748
+	name="STATE_748"
+
+	history={
+		owner = GUI
+		add_core_of = GUI
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			1010 3 
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_warm
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_average
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1010 4325 10763 13457 13458 13459 
+	}
+	manpower=1914051
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

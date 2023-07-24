@@ -1,0 +1,1720 @@
+#Pops
+	defined_text = {
+		name = GetPopsTexticon
+		text = {
+			localization_key = pops_texticon_tt
+		}
+	}
+#
+# Parties
+	# General
+		defined_text = {
+			name = GetPartyName
+			text = {
+				trigger = {
+					set_temp_variable = { gpn = party@var:v }
+				}
+				localization_key = "[?gpn.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetPartyIdeology
+			text = {
+				localization_key = "[?v.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetPartyColor
+			text = {
+				localization_key = "GFX_[?v.GetTokenKey]_texticon"
+			}
+		}
+		defined_text = {
+			name = GetPartyColorInText
+			text = {
+				trigger = {
+					check_variable = {
+						var = token:ideology_communist
+						value = v
+					}
+				}
+				localization_key = "ideology_communist_color_texticon_tt"
+			}
+			text = {
+				trigger = {
+					check_variable = {
+						var = token:ideology_socialist
+						value = v
+					}
+				}
+				localization_key = "ideology_socialist_color_texticon_tt"
+			}
+			text = {
+				trigger = {
+					check_variable = {
+						var = token:ideology_liberal
+						value = v
+					}
+				}
+				localization_key = "ideology_liberal_color_texticon_tt"
+			}
+			text = {
+				trigger = {
+					check_variable = {
+						var = token:ideology_agrarian
+						value = v
+					}
+				}
+				localization_key = "ideology_agrarian_color_texticon_tt"
+			}
+			text = {
+				trigger = {
+					check_variable = {
+						var = token:ideology_conservative
+						value = v
+					}
+				}
+				localization_key = "ideology_conservative_color_texticon_tt"
+			}
+			text = {
+				trigger = {
+					check_variable = {
+						var = token:ideology_reactionary
+						value = v
+					}
+				}
+				localization_key = "ideology_reactionary_color_texticon_tt"
+			}
+			text = {
+				trigger = {
+					check_variable = {
+						var = token:ideology_fascist
+						value = v
+					}
+				}
+				localization_key = "ideology_fascist_color_texticon_tt"
+			}
+			text = {
+				trigger = {
+					check_variable = {
+						var = token:ideology_stratocratic
+						value = v
+					}
+				}
+				localization_key = "ideology_stratocratic_color_texticon_tt"
+			}
+		}
+	#
+	#Party in Parliament
+		defined_text = {
+			name = GetPartyPopularity
+			text = {
+				trigger = {
+					set_temp_variable = { gpp = popularity@var:v }
+				}
+				localization_key = "[?gpp|1]%"
+			}
+		}
+		defined_text = {
+			name = GetPartyBasePopularity
+			text = {
+				trigger = {
+					set_temp_variable = { gpbp = base_popularity@var:v }
+				}
+				localization_key = "[?gpbp|1]%"
+			}
+		}
+		defined_text = {
+			name = GetPartyPastPopularity
+			text = {
+				trigger = {
+					set_temp_variable = { gppp = last_popularity@var:v }
+				}
+				localization_key = "[?gppp|1]%"
+			}
+		}
+		defined_text = {
+			name = GetPartyPopularityChange
+			text = {
+				trigger = {
+					set_temp_variable = { gppc = popularity@var:v }
+					subtract_from_temp_variable = { gppc = last_popularity@var:v }
+					check_variable = { gppc > 0 }
+				}
+				localization_key = "$green$[?gppc|1]%§!"
+			}
+			text = {
+				trigger = {
+					check_variable = { gppc < 0 }
+				}
+				localization_key = "$red$[?gppc|1]%§!"
+			}
+			text = {
+				localization_key = "No Change"
+			}
+		}
+		defined_text = {
+			name = GetPartyPopularityWeight
+			text = {
+				trigger = {
+					if = {
+						limit = { check_variable = { v = token:ideology_communist } }
+						set_temp_variable = { gppw = mtth:communist_popularity_weight }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_socialist } }
+						set_temp_variable = { gppw = mtth:socialist_popularity_weight }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_liberal } }
+						set_temp_variable = { gppw = mtth:liberal_popularity_weight }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_agrarian } }
+						set_temp_variable = { gppw = mtth:agrarian_popularity_weight }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_conservative } }
+						set_temp_variable = { gppw = mtth:conservative_popularity_weight }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_reactionary } }
+						set_temp_variable = { gppw = mtth:reactionary_popularity_weight }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_fascist } }
+						set_temp_variable = { gppw = mtth:fascist_popularity_weight }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_stratocratic } }
+						set_temp_variable = { gppw = mtth:stratocratic_popularity_weight }
+					}
+				}
+				localization_key = "[?gppw]"
+			}
+		}
+		defined_text = {
+			name = GetPartyPopularityModifier
+			text = {
+				trigger = {
+					if = {
+						limit = { check_variable = { v = token:ideology_communist } }
+						set_temp_variable = { gppm = modifier@communist_popularity_modifier }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_socialist } }
+						set_temp_variable = { gppm = modifier@socialist_popularity_modifier }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_liberal } }
+						set_temp_variable = { gppm = modifier@liberal_popularity_modifier }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_agrarian } }
+						set_temp_variable = { gppm = modifier@agrarian_popularity_modifier }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_conservative } }
+						set_temp_variable = { gppm = modifier@conservative_popularity_modifier }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_reactionary } }
+						set_temp_variable = { gppm = modifier@reactionary_popularity_modifier }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_fascist } }
+						set_temp_variable = { gppm = modifier@fascist_popularity_modifier }
+					}
+					else_if = {
+						limit = { check_variable = { v = token:ideology_stratocratic } }
+						set_temp_variable = { gppm = modifier:stratocratic_popularity_modifier }
+					}
+
+					if = {
+						limit = {
+							is_in_array = {
+								array = govt_coalition_array
+								value = v
+							}
+						}
+						add_to_temp_variable = { gppm = modifier@ruling_party_popularity_modifier }
+						if = {
+							limit = {
+								is_in_array = {
+									array = govt_coalition_leader_array
+									value = v
+								}
+							}
+							add_to_temp_variable = { gppm = modifier@coalition_popularity_modifier }
+						}
+					}
+					else_if = {
+						limit = {
+							is_in_array = {
+								array = govt_opposition_array
+								value = v
+							}
+						}
+						add_to_temp_variable = { gppm = modifier@opposition_popularity_modifier }
+					}
+					else = {
+						add_to_temp_variable = { gppm = modifier@ousted_popularity_modifier }
+					}
+
+				}
+				localization_key = "[?gppm]"
+			}
+		}
+		defined_text = {
+			name = GetPartyStrength
+			text = {
+				trigger = {
+					set_temp_variable = { gps = strength@var:v }
+				}
+				localization_key = "[?gps|1]%"
+			}
+		}
+		defined_text = {
+			name = GetPartyLastStrength
+			trigger = {
+				set_temp_variable = { gpls = last_strength@var:v }
+			}
+			localization_key = "[?gpls|1]%"
+		}
+		defined_text = {
+			name = GetPartyStrengthChange
+			text = {
+				trigger = {
+					set_temp_variable = { gpsc = strength@var:v }
+					subtract_from_temp_variable = { gpsc = last_strength@var:v }
+					check_variable = { gpsc > 0 }
+				}
+				localization_key = "$green$[?gpsc|1]%§!"
+			}
+			text = {
+				trigger = {
+					check_variable = { gpsc < 0 }
+				}
+				localization_key = "$red$[?gpsc|1]%§!"
+			}
+			text = {
+				localization_key = "No Change"
+			}
+		}
+		defined_text = {
+			name = GetPartyStrengthModifier
+			text = {
+				trigger = {
+					if = {
+						limit = {
+							check_variable = { v = token:ideology_communist }
+						}
+						set_temp_variable = { gpsm = mtth:communist_strength_modifier }
+					}
+
+
+
+					set_temp_variable = { gpsm = modifier@}
+				}
+			}
+		}
+
+# Parties
+	#Generic
+		defined_text = {
+			name = GetPartyPopularity
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gpp = popularity@var:v
+					}
+				}
+				localization_key = "[?gpp|1]%"
+			}
+		}
+		defined_text = {
+			name = GetPartyPopularityChange
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gppc = popularity_change@var:
+					}
+				}
+				localization_key = "[?gppc|1]%"
+			}
+		}
+	#
+	# InList
+		defined_text = {
+			name = GetPartyNameInList
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gpnil1 = party@var:v
+					}
+				}
+				localization_key = "[?gpnil1.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetPartyPopularityInList
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gpnil1 = popularity@var:v
+					}
+				}
+				localization_key = "[?gpnil1|1]%"
+			}
+		}
+		defined_text = {
+			name = GetPartyPopularityChangeInList
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gppcil1 = popularity_change@var:v
+					}
+				}
+				localization_key = "[?gppcil1|1]%"
+			}
+		}
+		defined_text = {
+			name = GetPartyColor
+			text = {
+				localization_key = "GFX_[?v.GetTokenKey]_texticon"
+			}
+		}
+		defined_text = {
+			name = GetPartyLeaderInList
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gplil1 = leader@var:v
+					}
+					check_variable = {
+						gplil1 > 0
+					}
+				}
+				localization_key = "[?gplil1.GetTokenLocalizedKey]"
+			}
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gpcil1 = heir@var:v
+					}
+					check_variable = {
+						gpcil1 > 0
+					}
+				}
+				localization_key = "[?gpcil1.GetTokenLocalizedKey]"
+			}
+			text = {
+				localization_key = "[GetRandomCharacterName]"
+			}
+		}
+		defined_text = {
+			name = GetPartyCandidateInList
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gpcil1 = heir@var:v
+					}
+					check_variable = {
+						gpcil1 > 0
+					}
+				}
+				localization_key = "[?gpcil1.GetTokenLocalizedKey]"
+			}
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gplil2 = heir_type@var:v
+					}
+					check_variable = {
+						gplil2 > 0
+					}
+				}
+				localization_key = "None"
+			}
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gplil3 = leader@var:v
+					}
+					check_variable = {
+						gplil3 > 0
+					}
+				}
+				localization_key = "[?gplil3.GetTokenLocalizedKey]"
+			}
+			text = {
+				localization_key = "[GetRandomCharacterName]"
+			}
+		}
+		defined_text = {
+			name = GetPartyDesignatoryTypeInList
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gpdtil1 = heir_type@var:v
+					}
+					check_variable = {
+						gpdtil1 = 0
+					}
+				}
+				localization_key = "Candidate"
+			}
+			text = {
+				trigger  = {
+					check_variable = {
+						gpdtil1 = 1
+					}
+				}
+				localization_key = "Successor"
+			}
+			text = {
+				localization_key = "Heir"
+			}
+		}
+	#
+	# Communist
+		defined_text = {
+			name = GetCommunistPartyName
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gcompn = popularity@token:ideology_communist
+					}
+				}
+				localization_key = "[?gcompn.GetTokenLocalizedKey]"
+			}
+		}
+	# Socialist
+		defined_text = {
+			name = GetSocialistPartyName
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gsocpn = party@token:ideology_socialist
+					}
+				}
+				localization_key = "[?gsocpn.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetSocialistPartyPopularity
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gsocpp = popularity@token:ideology_socialist
+					}
+
+				}
+				localization_key = "[?gsocpp|1]%"
+			}
+		}
+		defined_text = {
+			name = GetSocialistPartyPopularityChange
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gsocppc =  popularity_change@token:ideology_socialist
+					}
+				}
+				localization_key = "[?gsocppc|1+]%"
+			}
+		}
+		defined_text = {
+			name = GetSocialistPartyColor
+			text = {
+				localization_key = "GFX_ideology_socialist_texticon"
+			}
+		}
+		defined_text = {
+			name = GetSocialistPartyXPosition
+			text = {
+				trigger =  {
+					set_temp_variable = { gspxp = 0 }
+					add_to_temp_variable = { gspxp = popularity@token:ideology_communist }
+					add_to_temp_variable = { gspxp = popularity@token:ideology_socialist }
+				}
+				localization_key = "[?gspxp]"
+			}
+		}
+		defined_text = {
+
+		}
+	#
+	# Liberal
+		defined_text = {
+			name = GetLiberalPartyName
+			text = {
+				trigger = {
+					set_temp_variable = {
+						glibpn = party@token:ideology_liberal
+					}
+				}
+				localization_key = "[?glibpn.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetLiberalPartyPopularity
+			text = {
+				trigger = {
+					set_temp_variable = {
+						glibpp = popularity@token:ideology_liberal
+					}
+
+				}
+				localization_key = "[?glibpp|1]%"
+			}
+		}
+		defined_text = {
+			name = GetLiberalPartyPopularityChange
+			text = {
+				trigger = {
+					set_temp_variable = {
+						glibppc =  popularity_change@token:ideology_liberal
+					}
+				}
+				localization_key = "[?glibppc|1+]%"
+			}
+		}
+		defined_text = {
+			name = GetLiberalPartyColor
+			text = {
+				localization_key = "GFX_ideology_liberal_texticon"
+			}
+		}
+		defined_text = {
+			name = GetLiberalPartyXPosition
+			text = {
+				trigger =  {
+					set_temp_variable = { glpxp = 0 }
+					add_to_temp_variable = { glpxp = popularity@token:ideology_communist }
+					add_to_temp_variable = { glpxp = popularity@token:ideology_socialist }
+				}
+				localization_key = "[?glpxp]"
+			}
+		}
+	#
+	# Libertarian
+		defined_text = {
+			name = GetLibertarianPartyName
+			text = {
+				trigger = {
+					set_temp_variable = {
+						glibtpn = party@token:ideology_agrarian
+					}
+				}
+				localization_key = "[?glibtpn.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetLibertarianPartyPopularity
+			text = {
+				trigger = {
+					set_temp_variable = {
+						glibtpp = popularity@token:ideology_agrarian
+					}
+
+				}
+				localization_key = "[?glibtpp|1]%"
+			}
+		}
+		defined_text = {
+			name = GetLibertarianPartyPopularityChange
+			text = {
+				trigger = {
+					set_temp_variable = {
+						glibtppc =  popularity_change@token:ideology_agrarian
+					}
+				}
+				localization_key = "[?glibtppc|1+]%"
+			}
+		}
+		defined_text = {
+			name = GetLibertarianPartyColor
+			text = {
+				localization_key = "GFX_ideology_agrarian_texticon"
+			}
+		}
+		defined_text = {
+			name = GetLibertarianPartyXPosition
+			text = {
+				trigger =  {
+					set_temp_variable = { gltpxp = 0 }
+					add_to_temp_variable = { gltpxp = popularity@token:ideology_communist }
+					add_to_temp_variable = { gltpxp = popularity@token:ideology_socialist }
+					add_to_temp_variable = { gltpxp = popularity@token:ideology_liberal }
+				}
+				localization_key = "[?gltpxp]"
+			}
+		}
+	#
+	# Conservative
+		defined_text = {
+			name = GetConservativePartyName
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gconpn = party@token:ideology_conservative
+					}
+				}
+				localization_key = "[?gconpn.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetConservativePartyPopularity
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gconpp = popularity@token:ideology_conservative
+					}
+
+				}
+				localization_key = "[?gconpp|1]%"
+			}
+		}
+		defined_text = {
+			name = GetConservativePartyPopularityChange
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gconppc =  popularity_change@token:ideology_conservative
+					}
+				}
+				localization_key = "[?gconppc|1+]%"
+			}
+		}
+		defined_text = {
+			name = GetConservativePartyColor
+			text = {
+				localization_key = "GFX_ideology_conservative_texticon"
+			}
+		}
+		defined_text = {
+			name = GetConservativePartyXPosition
+			text = {
+				trigger =  {
+					set_temp_variable = { gcpxp = 0 }
+					add_to_temp_variable = { gcpxp = popularity@token:ideology_communist }
+					add_to_temp_variable = { gcpxp = popularity@token:ideology_socialist }
+					add_to_temp_variable = { gcpxp = popularity@token:ideology_liberal }
+					add_to_temp_variable = { gcpxp = popularity@token:ideology_agrarian }
+				}
+				localization_key = "[?gcpxp]"
+			}
+		}
+	#
+	# Reactionary
+		defined_text = {
+			name = GetReactionaryPartyName
+			text = {
+				trigger = {
+					set_temp_variable = {
+						greapn = party@token:ideology_reactionary
+					}
+				}
+				localization_key = "[?greapn.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetReactionaryPartyPopularity
+			text = {
+				trigger = {
+					set_temp_variable = {
+						greapp = popularity@token:ideology_reactionary
+					}
+
+				}
+				localization_key = "[?greapp|1]%"
+			}
+		}
+		defined_text = {
+			name = GetReactionaryPartyPopularityChange
+			text = {
+				trigger = {
+					set_temp_variable = {
+						greappc =  popularity_change@token:ideology_reactionary
+					}
+				}
+				localization_key = "[?greappc|1+]%"
+			}
+		}
+		defined_text = {
+			name = GetReactionaryPartyColor
+			text = {
+				localization_key = "GFX_ideology_reactionary_texticon"
+			}
+		}
+		defined_text = {
+			name = GetReactionaryPartyXPosition
+			text = {
+				trigger =  {
+					set_temp_variable = { grpxp = 0 }
+					add_to_temp_variable = { grpxp = popularity@token:ideology_communist }
+					add_to_temp_variable = { grpxp = popularity@token:ideology_socialist }
+					add_to_temp_variable = { grpxp = popularity@token:ideology_liberal }
+					add_to_temp_variable = { grpxp = popularity@token:ideology_agrarian }
+					add_to_temp_variable = { grpxp = popularity@token:ideology_conservative }
+				}
+				localization_key = "[?grpxp]"
+			}
+		}
+	#
+	# Fascist
+		defined_text = {
+			name = GetFascistPartyName
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gfaspn = party@token:ideology_fascist
+					}
+				}
+				localization_key = "[?gfaspn.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetFascistPartyPopularity
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gfaspp = popularity@token:ideology_fascist
+					}
+
+				}
+				localization_key = "[?gfaspp|1]%"
+			}
+		}
+		defined_text = {
+			name = GetFascistPartyPopularityChange
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gfasppc =  popularity_change@token:ideology_fascist
+					}
+				}
+				localization_key = "[?gfasppc|1+]%"
+			}
+		}
+		defined_text = {
+			name = GetFascistPartyColor
+			text = {
+				localization_key = "GFX_ideology_fascist_texticon"
+			}
+		}
+		defined_text = {
+			name = GetFascistPartyXPosition
+			text = {
+				trigger =  {
+					set_temp_variable = { gfpxp = 0 }
+					add_to_temp_variable = { gfpxp = popularity@token:ideology_communist }
+					add_to_temp_variable = { gfpxp = popularity@token:ideology_socialist }
+					add_to_temp_variable = { gfpxp = popularity@token:ideology_liberal }
+					add_to_temp_variable = { gfpxp = popularity@token:ideology_agrarian }
+					add_to_temp_variable = { gfpxp = popularity@token:ideology_conservative }
+					add_to_temp_variable = { gfpxp = popularity@token:ideology_reactionary }
+				}
+				localization_key = "[?gfpxp]"
+			}
+		}
+	#
+#
+# Coalition
+	defined_text = {
+		name = GetCoalitionStrengthColor
+		text = {
+			trigger = {
+				check_variable = {
+					var = THIS.govt_coalition_strength
+					value = 50
+					compare = less_than
+				}
+			}
+			localization_key = red
+		}
+		text = {
+			trigger = {
+				check_variable = {
+					var = THIS.govt_coalition_strength
+					value = 51
+					compare = less_than
+				}
+			}
+			localization_key = yellow
+		}
+		text = {
+			localization_key = green
+		}
+	}
+	defined_text = {
+		name = GetCoalitionStrengthPercentageColor
+		text = {
+			trigger = {
+				check_variable = {
+					var = THIS.govt_coalition_strength_percentage
+					value = 50
+					compare = less_than
+				}
+			}
+			localization_key = red
+		}
+		text = {
+			trigger = {
+				check_variable = {
+					var = THIS.govt_coalition_strength_percentage
+					value = 51
+					compare = less_than
+				}
+			}
+			localization_key = yellow
+		}
+		text = {
+			localization_key = green
+		}
+	}
+	defined_text = {
+		name = GetCoalitionLeader
+		text = {
+			trigger = {
+				set_temp_variable = {
+					gcl = govt_coalition_leader_array^0
+				}
+				set_temp_variable = {
+					gcl1 = party@var:gcl
+				}
+			}
+			localization_key = coalition_leader_name_tt
+		}
+	}
+	defined_text = {
+		name = GetCoalitionIdeology
+		text = {
+			trigger = {
+				set_temp_variable = {
+					gcl = govt_coalition_leader_array^0
+				}
+			}
+			localization_key = coalition_leader_ideology_tt
+		}
+	}
+	defined_text = {
+		name = GetCoalitionRuler
+		text = {
+			trigger = {
+				set_temp_variable = {
+					gcl = govt_coalition_leader_array^0
+				}
+				set_temp_variable = {
+					gcl2 = heir@var:gcl
+				}
+				check_variable = {
+					gcl2 > 0
+				}
+			}
+			localization_key = coalition_leader_ruler_tt
+		}
+		text = {
+			localization_key = "[GetRandomCharacterFirstName] [GetRandomCharacterLastName]"
+		}
+	}
+	defined_text = {
+		name = GetCoalitionPartiesList
+		text = {
+			trigger = {
+				clear_temp_array = param_array
+				all_of = { array = govt_coalition_array value = val add_to_temp_array = { param_array = val } }
+				set_temp_variable = { param_renderer = token:array_element_renderer_get_party_color_and_popularity }
+				set_temp_variable = { param_cutoff = 6 }
+				set_temp_variable = { param_cutoff_suffix = token:array_cutoff_suffix_none }
+			}
+			localization_key = "[render_array]"
+		}
+	}
+	defined_text = {
+		name = GetOppositionPartiesList
+		text = {
+			trigger = {
+				clear_temp_array = param_array
+				all_of = { array = govt_opposition_array value = val add_to_temp_array = { param_array = val } }
+				set_temp_variable = { param_renderer = token:array_element_renderer_get_party_color_and_popularity }
+				set_temp_variable = { param_cutoff = 6 }
+				set_temp_variable = { param_cutoff_suffix = token:array_cutoff_suffix_none }
+			}
+			localization_key = "[render_array]"
+		}
+	}
+	defined_text = {
+		name = GetOustedPartiesList
+		text = {
+			trigger = {
+				clear_temp_array = param_array
+				all_of = { array = govt_ousted_array value = val add_to_temp_array = { param_array = val } }
+				set_temp_variable = { param_renderer = token:array_element_renderer_get_party_color_and_popularity }
+				set_temp_variable = { param_cutoff = 6 }
+				set_temp_variable = { param_cutoff_suffix = token:array_cutoff_suffix_none }
+			}
+			localization_key = "[render_array]"
+		}
+	}
+# Laws
+	# General
+		defined_text = {
+			name = GetLawNameInList
+			text = {
+				localization_key = "[?v.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetLawIconInList
+			text = {
+				localization_key = "GFX_[?v.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetLawDescInList
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gldil = global.desc@var:v
+					}
+				}
+				localization_key = "[?gldil.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetLawEffectInList
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gleil = global.effect@var:v
+					}
+				}
+				localization_key = "[?gleil.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# Economic System
+		defined_text = {
+			name = GetEconomicSystemName
+			text = {
+				localization_key = "[?laws_economics_economy.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetEconomicSystemIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_economy.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetEconomicSystemDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gesd = global.desc@var:laws_economics_economy
+					}
+				}
+				localization_key = "[?gesd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetEconomicSystemEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gese = global.effect@var:laws_economics_economy
+					}
+				}
+				localization_key = "[?gese.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# Foreign Investment
+		defined_text = {
+			name = GetForeignInvestmentName
+			text = {
+				localization_key = "[?laws_economics_foreign_investment.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetForeignInvestmentIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_foreign_investment.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetForeignInvestmentDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gfid = global.desc@var:laws_economics_foreign_investment
+					}
+				}
+				localization_key = "[?gfid.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetForeignInvestmentEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gfie = global.effect@var:laws_economics_foreign_investment
+					}
+				}
+				localization_key = "[?gfie.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# Consumer Rights
+		defined_text = {
+			name = GetConsumerRightsName
+			text = {
+				localization_key = "[?laws_economics_consumer_rights.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetConsumerRightsIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_consumer_rights.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetConsumerRightsDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gcrd = global.desc@var:laws_economics_consumer_rights
+					}
+				}
+				localization_key = "[?gcrd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetConsumerRightsEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gcre = global.effect@var:laws_economics_consumer_rights
+					}
+				}
+				localization_key = "[?gcre.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# Minimum Wage
+		defined_text = {
+			name = GetMinimumWageName
+			text = {
+				localization_key = "[?laws_economics_minimum_wage.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetMinimumWageIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_minimum_wage.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetMinimumWageDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gmwd = global.desc@var:laws_economics_minimum_wage
+					}
+				}
+				localization_key = "[?gmwd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetMinimumWageEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gmwe = global.effect@var:laws_economics_minimum_wage
+					}
+				}
+				localization_key = "[?gmwe.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# Work Week
+		defined_text = {
+			name = GetWorkWeekName
+			text = {
+				localization_key = "[?laws_economics_work_week.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetWorkWeekIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_work_week.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetWorkWeekDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gwwd = global.desc@var:laws_economics_work_week
+					}
+				}
+				localization_key = "[?gwwd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetWorkWeekEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gwwe = global.effect@var:laws_economics_work_week
+					}
+				}
+				localization_key = "[?gwwe.GetTokenLocalizedKey]"
+			}
+		}
+	#
+
+	# Safety Regulations
+		defined_text = {
+			name = GetSafetyRegulationsName
+			text = {
+				localization_key = "[?laws_economics_safety_regulations.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetSafetyRegulationsIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_safety_regulations.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetSafetyRegulationsDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gsrd = global.desc@var:laws_economics_safety_regulations
+					}
+				}
+				localization_key = "[?gsrd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetSafetyRegulationsEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gsre = global.effect@var:laws_economics_safety_regulations
+					}
+				}
+				localization_key = "[?gsre.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# Financial Regulations
+		defined_text = {
+			name = GetFinancialRegulationsName
+			text = {
+				localization_key = "[?laws_economics_financial_regulations.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetFinancialRegulationsIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_financial_regulations.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetFinancialRegulationsDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gfrd = global.desc@var:laws_economics_financial_regulations
+					}
+				}
+				localization_key = "[?gfrd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetFinancialRegulationsEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gfre = global.effect@var:laws_economics_financial_regulations
+					}
+				}
+				localization_key = "[?gfre.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# Business Regulations
+		defined_text = {
+			name = GetBusinessRegulationsName
+			text = {
+				localization_key = "[?laws_economics_business_regulations.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetBusinessRegulationsIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_business_regulations.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetBusinessRegulationsDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gbrd = global.desc@var:laws_economics_business_regulations
+					}
+				}
+				localization_key = "[?gbrd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetBusinessRegulationsEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gbre = global.effect@var:laws_economics_business_regulations
+					}
+				}
+				localization_key = "[?gbre.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# Pollution
+		defined_text = {
+			name = GetPollutionRegulationsName
+			text = {
+				localization_key = "[?laws_economics_pollution_regulations.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetPollutionRegulationsIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_pollution_regulations.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetPollutionRegulationsDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gprd = global.desc@var:laws_economics_pollution_regulations
+					}
+				}
+				localization_key = "[?gprd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetPollutionRegulationsEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gpre = global.effect@var:laws_economics_pollution_regulations
+					}
+				}
+				localization_key = "[?gpre.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# Small Business Grants
+		defined_text = {
+			name = GetSmallBusinessGrantsName
+			text = {
+				localization_key = "[?laws_economics_small_business_grants.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetSmallBusinessGrantsIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_small_business_grants.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetSmallBusinessGrantsDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gsbgd = global.desc@var:laws_economics_small_business_grants
+					}
+				}
+				localization_key = "[?gsbgd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetSmallBusinessGrantsEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gsbge = global.effect@var:laws_economics_small_business_grants
+					}
+				}
+				localization_key = "[?gsbge.GetTokenLocalizedKey]"
+			}
+		}
+	#
+
+	# AgriculturalSubsidies
+		defined_text = {
+			name = GetAgriculturalSubsidiesName
+			text = {
+				localization_key = "[?laws_economics_agricultural_subsidies.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetAgriculturalSubsidiesIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_agricultural_subsidies.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetAgriculturalSubsidiesDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gasd = global.desc@var:laws_economics_agricultural_subsidies
+					}
+				}
+				localization_key = "[?gasd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetAgriculturalSubsidiesEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gase = global.effect@var:laws_economics_agricultural_subsidies
+					}
+				}
+				localization_key = "[?gase.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# MiningSubsidies
+		defined_text = {
+			name = GetMiningSubsidiesName
+			text = {
+				localization_key = "[?laws_economics_mining_subsidies.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetMiningSubsidiesIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_mining_subsidies.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetMiningSubsidiesDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gmsd = global.desc@var:laws_economics_mining_subsidies
+					}
+				}
+				localization_key = "[?gmsd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetMiningSubsidiesEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gmse = global.effect@var:laws_economics_mining_subsidies
+					}
+				}
+				localization_key = "[?gmse.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# DrillingSubsidies
+		defined_text = {
+			name = GetDrillingSubsidiesName
+			text = {
+				localization_key = "[?laws_economics_drilling_subsidies.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetDrillingSubsidiesIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_drilling_subsidies.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetDrillingSubsidiesDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gdsd = global.desc@var:laws_economics_drilling_subsidies
+					}
+				}
+				localization_key = "[?gdsd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetDrillingSubsidiesEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gdse = global.effect@var:laws_economics_drilling_subsidies
+					}
+				}
+				localization_key = "[?gdse.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# UtilitiesSubsidies
+		defined_text = {
+			name = GetUtilitiesSubsidiesName
+			text = {
+				localization_key = "[?laws_economics_utilities_subsidies.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetUtilitiesSubsidiesIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_utilities_subsidies.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetUtilitiesSubsidiesDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gusd = global.desc@var:laws_economics_utilities_subsidies
+					}
+				}
+				localization_key = "[?gusd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetUtilitiesSubsidiesEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						guse = global.effect@var:laws_economics_utilities_subsidies
+					}
+				}
+				localization_key = "[?guse.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# CleanEnergySubsidies
+		defined_text = {
+			name = GetCleanEnergySubsidiesName
+			text = {
+				localization_key = "[?laws_economics_clean_energy_subsidies.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetCleanEnergySubsidiesIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_clean_energy_subsidies.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetCleanEnergySubsidiesDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gcesd = global.desc@var:laws_economics_clean_energy_subsidies
+					}
+				}
+				localization_key = "[?gcesd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetCleanEnergySubsidiesEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gcese = global.effect@var:laws_economics_clean_energy_subsidies
+					}
+				}
+				localization_key = "[?gcese.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# LightIndustrySubsidies
+		defined_text = {
+			name = GetLightIndustrySubsidiesName
+			text = {
+				localization_key = "[?laws_economics_light_industry_subsidies.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetLightIndustrySubsidiesIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_light_industry_subsidies.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetLightIndustrySubsidiesDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						glisd = global.desc@var:laws_economics_light_industry_subsidies
+					}
+				}
+				localization_key = "[?glisd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetLightIndustrySubsidiesEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						glise = global.effect@var:laws_economics_light_industry_subsidies
+					}
+				}
+				localization_key = "[?glise.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# HeavyIndustrySubsidies
+		defined_text = {
+			name = GetHeavyIndustrySubsidiesName
+			text = {
+				localization_key = "[?laws_economics_heavy_industry_subsidies.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetHeavyIndustrySubsidiesIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_heavy_industry_subsidies.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetHeavyIndustrySubsidiesDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						ghisd = global.desc@var:laws_economics_heavy_industry_subsidies
+					}
+				}
+				localization_key = "[?ghisd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetHeavyIndustrySubsidiesEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						ghise = global.effect@var:laws_economics_heavy_industry_subsidies
+					}
+				}
+				localization_key = "[?ghise.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# ConstructionSubsidies
+		defined_text = {
+			name = GetConstructionSubsidiesName
+			text = {
+				localization_key = "[?laws_economics_construction_subsidies.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetConstructionSubsidiesIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_construction_subsidies.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetConstructionSubsidiesDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gcsd = global.desc@var:laws_economics_construction_subsidies
+					}
+				}
+				localization_key = "[?gcsd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetConstructionSubsidiesEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gcse = global.effect@var:laws_economics_construction_subsidies
+					}
+				}
+				localization_key = "[?gcse.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# InfrastructureSubsidies
+		defined_text = {
+			name = GetInfrastructureSubsidiesName
+			text = {
+				localization_key = "[?laws_economics_infrastructure_subsidies.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetInfrastructureSubsidiesIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_infrastructure_subsidies.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetInfrastructureSubsidiesDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gicd = global.desc@var:laws_economics_infrastructure_subsidies
+					}
+				}
+				localization_key = "[?gicd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetInfrastructureSubsidiesEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gise = global.effect@var:laws_economics_infrastructure_subsidies
+					}
+				}
+				localization_key = "[?gise.GetTokenLocalizedKey]"
+			}
+		}
+	#
+	# ServicesSubsidies
+		defined_text = {
+			name = GetServicesSubsidiesName
+			text = {
+				localization_key = "[?laws_economics_services_subsidies.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetServicesSubsidiesIcon
+			text = {
+				localization_key = "GFX_[?laws_economics_services_subsidies.GetTokenKey]"
+			}
+		}
+		defined_text = {
+			name = GetServicesSubsidiesDesc
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gssd = global.desc@var:laws_economics_services_subsidies
+					}
+				}
+				localization_key = "[?gssd.GetTokenLocalizedKey]"
+			}
+		}
+		defined_text = {
+			name = GetServicesSubsidiesEffect
+			text = {
+				trigger = {
+					set_temp_variable = {
+						gsse = global.effect@var:laws_economics_services_subsidies
+					}
+				}
+				localization_key = "[?gsse.GetTokenLocalizedKey]"
+			}
+		}
+	#
+

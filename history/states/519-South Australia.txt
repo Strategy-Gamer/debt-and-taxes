@@ -1,0 +1,36 @@
+
+state={
+	id=519
+	name="STATE_519"
+	manpower=580000
+
+	state_category=rural
+
+	history={
+		owner = AST
+		buildings = {
+			infrastructure = 1
+			12910 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			12910 15 
+		}
+		add_core_of = AST
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_navigable_river
+		}
+	}
+
+	provinces={
+		1773 2205 2219 5138 5183 5197 5211 5225 7567 7623 8165 8186 8206 8220 10925 10927 12906 12910 12918 12924 13131 13169 13170 13171 13172 
+	}
+	local_supplies=0.000
+}

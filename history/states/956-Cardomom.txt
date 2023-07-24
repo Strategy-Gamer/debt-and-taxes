@@ -1,0 +1,29 @@
+state={
+	id=956
+	name="STATE_956"
+	provinces={
+		1353 4251 4359 7319 7376 7404 7432 10134 10177 10289 10317 12191 
+	}
+	history={
+		owner=VIN
+		buildings={
+			infrastructure=1
+			7432 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			7376 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_humid_subtropic
+		}
+	}
+	state_category=rural
+	manpower=1344651
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,41 @@
+
+state={
+	id=387
+	name="STATE_387"
+	manpower = 445031
+
+
+
+	state_category = state_cat
+
+	resources={
+		steel=18 # was: 32
+		chromium=1 # was: 2
+		tungsten=18 # was: 34
+		copper = 4
+		lumber = 16
+		foodstuffs = 10
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+		add_dynamic_modifier = {
+			modifier = soil_quality_farmland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		1789 1832 3781 4778 7845 9616 9695 10556 10602 10672 12124 12535 12607
+	}
+
+}

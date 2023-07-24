@@ -1,0 +1,569 @@
+
+#If you're going through this file, make sure you're using something like VSCode so you can hide large sections of this, otherwise it is near unreadable
+
+#General
+
+
+#State List
+	#GetMajorityTerrainType
+		defined_text = {
+			name = GetMajorityTerrainType
+			text = {
+				trigger = {
+					check_variable = { selected_state:flat_percentage > 0.5 }
+				}
+				localization_key = flat_terrain_majority
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:hilly_percentage > 0.5 }
+				}
+				localization_key = hilly_terrain_majority
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:mountainous_percentage > 0.5 }
+				}
+				localization_key = mountainous_terrain_majority
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:dunes_percentage > 0.5 }
+				}
+				localization_key = dunes_terrain_majority
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:swamp_percentage > 0.5 }
+				}
+				localization_key = swamp_terrain_majority
+			}
+			text = {
+				localization_key = mixed_terrain_majority
+			}
+		}
+	#GetNavigableRiverType
+		defined_text = {
+			name = GetNavigableRiverType
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 0 }
+				}
+				localization_key = navigable_river_0
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 1 }
+				}
+				localization_key = navigable_river_1
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 2 }
+				}
+				localization_key = navigable_river_2
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 3 }
+				}
+				localization_key = navigable_river_3
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 4 }
+				}
+				localization_key = navigable_river_4
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 5 }
+				}
+				localization_key = navigable_river_5
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 6 }
+				}
+				localization_key = navigable_river_6
+			}
+			text = {
+				localization_key = error
+			}
+		}
+	#GetUnnavigableRiverType
+		defined_text = {
+			name = GetUnnavigableRiverType
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 0 }
+				}
+				localization_key = unnavigable_river_0
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 1 }
+				}
+				localization_key = unnavigable_river_1
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 2 }
+				}
+				localization_key = unnavigable_river_2
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 3 }
+				}
+				localization_key = unnavigable_river_3
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 4 }
+				}
+				localization_key = unnavigable_river_4
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 5 }
+				}
+				localization_key = unnavigable_river_5
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 6 }
+				}
+				localization_key = unnavigable_river_6
+			}
+			text = {
+				localization_key = error
+			}
+		}
+	#GetSoilQualityType
+		defined_text = {
+			name = GetSoilQualityType
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 0 }
+				}
+				localization_key = soil_quality_0
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 1 }
+				}
+				localization_key = soil_quality_1
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 2 }
+				}
+				localization_key = soil_quality_2
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 3 }
+				}
+				localization_key = soil_quality_3
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 4 }
+				}
+				localization_key = soil_quality_4
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 5 }
+				}
+				localization_key = soil_quality_5
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 6 }
+				}
+				localization_key = soil_quality_6
+			}
+			text = {
+				localization_key = error
+			}
+		}
+	#GetGrowthPeriodType
+		defined_text = {
+			name = GetGrowthPeriodType
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 0 }
+				}
+				localization_key = growth_period_0
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 1 }
+				}
+				localization_key = growth_period_1
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 2 }
+				}
+				localization_key = growth_period_2
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 3 }
+				}
+				localization_key = growth_period_3
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 4 }
+				}
+				localization_key = growth_period_4
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 5 }
+				}
+				localization_key = growth_period_5
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 6 }
+				}
+				localization_key = growth_period_6
+			}
+			text = {
+				localization_key = error
+			}
+		}
+	#GetNavigableRiverTypeEffect
+		defined_text = {
+			name = GetNavigableRiverTypeEffect
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 0 }
+				}
+				localization_key = navigable_river_0_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 1 }
+				}
+				localization_key = navigable_river_1_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 2 }
+				}
+				localization_key = navigable_river_2_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 3 }
+				}
+				localization_key = navigable_river_3_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 4 }
+				}
+				localization_key = navigable_river_4_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 5 }
+				}
+				localization_key = navigable_river_5_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:navigable_rivers = 6 }
+				}
+				localization_key = navigable_river_6_effect
+			}
+			text = {
+				localization_key = error
+			}
+		}
+	#GetUnnavigableRiverTypeEffect
+		defined_text = {
+			name = GetUnnavigableRiverTypeEffect
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 0 }
+				}
+				localization_key = unnavigable_river_0_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 1 }
+				}
+				localization_key = unnavigable_river_1_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 2 }
+				}
+				localization_key = unnavigable_river_2_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 3 }
+				}
+				localization_key = unnavigable_river_3_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 4 }
+				}
+				localization_key = unnavigable_river_4_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 5 }
+				}
+				localization_key = unnavigable_river_5_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:unnavigable_rivers = 6 }
+				}
+				localization_key = unnavigable_river_6_effect
+			}
+			text = {
+				localization_key = error
+			}
+		}
+	#GetSoilQualityTypeEffect
+		defined_text = {
+			name = GetSoilQualityTypeEffect
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 0 }
+				}
+				localization_key = soil_quality_0_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 1 }
+				}
+				localization_key = soil_quality_1_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 2 }
+				}
+				localization_key = soil_quality_2_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 3 }
+				}
+				localization_key = soil_quality_3_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 4 }
+				}
+				localization_key = soil_quality_4_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 5 }
+				}
+				localization_key = soil_quality_5_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:soil_quality = 6 }
+				}
+				localization_key = soil_quality_6_effect
+			}
+			text = {
+				localization_key = error
+			}
+		}
+	#GetGrowthPeriodTypeEffect
+		defined_text = {
+			name = GetGrowthPeriodTypeEffect
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 0 }
+				}
+				localization_key = growth_period_0_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 1 }
+				}
+				localization_key = growth_period_1_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 2 }
+				}
+				localization_key = growth_period_2_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 3 }
+				}
+				localization_key = growth_period_3_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 4 }
+				}
+				localization_key = growth_period_4_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 5 }
+				}
+				localization_key = growth_period_5_effect
+			}
+			text = {
+				trigger = {
+					check_variable = { selected_state:growth_period = 6 }
+				}
+				localization_key = growth_period_6_effect
+			}
+			text = {
+				localization_key = error
+			}
+		}
+#
+#Mapmode
+	#Soil Quality
+		defined_text = {
+			name = GetSoilQuality
+			text = {
+				trigger = { has_dynamic_modifier = { modifier = soil_quality_breadbasket } }
+				localization_key = soil_quality_breadbasket
+			}
+			text = {
+				trigger = { has_dynamic_modifier = { modifier = soil_quality_farmland } }
+				localization_key = soil_quality_farmland
+			}
+			text = {
+				trigger = { has_dynamic_modifier = { modifier = soil_quality_average } }
+				localization_key = soil_quality_average
+			}
+			text = {
+				trigger = { has_dynamic_modifier = { modifier = soil_quality_marginal } }
+				localization_key = soil_quality_marginal
+			}
+			text = {
+				trigger = { has_dynamic_modifier = { modifier = soil_quality_wasteland } }
+				localization_key = soil_quality_wasteland
+			}
+		}
+	#
+	#Climate
+		defined_text = {
+			name = GetClimateHumidity
+			text = {
+				trigger = {
+					OR = {
+						has_dynamic_modifier = { modifier = climate_arid_tropic }
+						has_dynamic_modifier = { modifier = climate_arid_subtropic }
+						has_dynamic_modifier = { modifier = climate_arid_cool }
+						has_dynamic_modifier = { modifier = climate_arid_polar }
+					}
+				}
+				localization_key = climate_arid
+			}
+			text = {
+				trigger = {
+					OR = {
+						has_dynamic_modifier = { modifier = climate_continental_tropic }
+						has_dynamic_modifier = { modifier = climate_continental_subtropic }
+						has_dynamic_modifier = { modifier = climate_continental_warm }
+						has_dynamic_modifier = { modifier = climate_continental_cool }
+						has_dynamic_modifier = { modifier = climate_continental_polar }
+					}
+				}
+				localization_key = climate_continental
+			}
+			text = {
+				trigger = {
+					OR = {
+						has_dynamic_modifier = { modifier = climate_mild_tropic }
+						has_dynamic_modifier = { modifier = climate_mild_subtropic }
+						has_dynamic_modifier = { modifier = climate_mild_warm }
+						has_dynamic_modifier = { modifier = climate_mild_cool }
+						has_dynamic_modifier = { modifier = climate_mild_polar }
+					}
+				}
+				localization_key = climate_mild
+			}
+			text = {
+				trigger = {
+					OR = {
+						has_dynamic_modifier = { modifier = climate_humid_tropic }
+						has_dynamic_modifier = { modifier = climate_humid_subtropic }
+						has_dynamic_modifier = { modifier = climate_humid_cool }
+						has_dynamic_modifier = { modifier = climate_humid_polar }
+					}
+				}
+				localization_key = climate_humid
+			}
+		}
+		defined_text = {
+			name = GetClimateTemperature
+			text = {
+				trigger = {
+					OR = {
+						has_dynamic_modifier = { modifier = climate_humid_tropic }
+						has_dynamic_modifier = { modifier = climate_arid_tropic }
+						has_dynamic_modifier = { modifier = climate_mild_tropic }
+						has_dynamic_modifier = { modifier = climate_continental_tropic }
+					}
+				}
+				localization_key = climate_tropic
+			}
+			text = {
+				trigger = {
+					OR = {
+						has_dynamic_modifier = { modifier = climate_humid_subtropic }
+						has_dynamic_modifier = { modifier = climate_arid_subtropic }
+						has_dynamic_modifier = { modifier = climate_mild_subtropic }
+						has_dynamic_modifier = { modifier = climate_continental_subtropic }
+					}
+				}
+				localization_key = climate_subtropic
+			}
+			text = {
+				trigger = {
+					OR = {
+						has_dynamic_modifier = { modifier = climate_mild_warm }
+						has_dynamic_modifier = { modifier = climate_continental_warm }
+					}
+				}
+				localization_key = climate_warm
+			}
+			text = {
+				trigger = {
+					OR = {
+						has_dynamic_modifier = { modifier = climate_humid_cool }
+						has_dynamic_modifier = { modifier = climate_arid_cool }
+						has_dynamic_modifier = { modifier = climate_mild_cool }
+						has_dynamic_modifier = { modifier = climate_continental_cool }
+					}
+				}
+				localization_key = climate_cool
+			}
+			text = {
+				trigger = {
+					OR = {
+						has_dynamic_modifier = { modifier = climate_humid_polar }
+						has_dynamic_modifier = { modifier = climate_arid_polar }
+						has_dynamic_modifier = { modifier = climate_mild_polar }
+						has_dynamic_modifier = { modifier = climate_continental_polar }
+					}
+				}
+				localization_key = climate_polar
+			}
+		}

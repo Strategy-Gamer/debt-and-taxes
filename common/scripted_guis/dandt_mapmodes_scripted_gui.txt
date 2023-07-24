@@ -1,0 +1,169 @@
+scripted_gui = {
+	dandt_buildings_mapmode_macro_gui = {
+		context_type = player_context
+		mapmode = buildings_map_mode
+		window_name = "dandt_buildings_mapmode_macro_container"
+		triggers = {
+			construction_industries_button_visible = {
+				has_country_flag = construction_view_buildings_category_open
+			}
+			construction_buildings_button_visible = {
+				NOT = { has_country_flag = construction_view_buildings_category_open }
+			}
+			construction_buildings_list_container_visible = {
+				has_country_flag = construction_view_buildings_category_open
+			}
+
+
+			construction_entry_background_click_enabled = {
+				set_temp_variable = { industry_token = construction_show^i }
+				if = {
+					limit = {
+						check_variable = { construction_pm_selected = 0 }
+					}
+					set_temp_variable = { tech_token = global.industry_base_tech_unlock@var:industry_token }
+				}
+				else_if = {
+					limit = {
+						check_variable = { construction_pm_selected = 1 }
+					}
+					set_temp_variable = { tech_token = global.industry_industrialized_tech_unlock@var:industry_token }
+				}
+				else_if = {
+					limit = {
+						check_variable = { construction_pm_selected = 2 }
+					}
+					set_temp_variable = { tech_token = global.industry_mechanized_tech_unlock@var:industry_token }
+				}
+				else_if = {
+					limit = {
+						check_variable = { construction_pm_selected = 3 }
+					}
+					set_temp_variable = { tech_token = global.industry_modernized_tech_unlock@var:industry_token }
+				}
+
+				NOT = { check_variable = { tech_token = -1 } }
+				OR = {
+					check_variable = { tech_token = 0 }
+					has_tech = var:tech_token
+				}
+			}
+			# industry_construction_background_visible = {
+			# 	has_country_flag = construction_view_open
+			# }
+			# construction_entry_background_visible = {
+			# 	has_country_flag = construction_view_open
+			# }
+		}
+
+		effects = {
+			construction_industries_button_click = {
+				clr_country_flag = construction_view_buildings_category_open
+			}
+			construction_buildings_button_click = {
+				set_country_flag = construction_view_buildings_category_open
+			}
+			construction_pm_button_click = {
+				add_to_variable = { construction_pm_selected = 1 }
+				if = {
+					limit = {
+						check_variable = { construction_pm_selected > 3 }
+					}
+					set_variable = { construction_pm_selected = 3 }
+				}
+			} 
+			construction_pm_button_right_click = {
+				subtract_from_variable = { construction_pm_selected = 1 }
+				if = {
+					limit = {
+						check_variable = { construction_pm_selected < 0 }
+					}
+					set_variable = { construction_pm_selected = 0 }
+				}
+			}
+
+			construction_entry_background_click = {
+				set_variable = { selected_building_construction = construction_show^i }
+				# var:selected_state = {
+				# 	set_temp_variable = { industry_token = PREV.construction_show^i }
+				# 	set_temp_variable = { x_temp = 1 }
+				# 	set_variable = { production_method@var:industry_token = PREV.construction_pm_selected }
+				# 	construct_x_industries = yes
+				# }
+				# clr_country_flag = construction_view_open
+			}
+		}
+
+		dynamic_lists = {
+			construction_industries_list = {
+				array = global.industries_token_array
+				entry_container = construction_entry
+			}
+			construction_buildings_list = {
+				array = global.buildings_token_array
+				entry_container = construction_entry
+			}
+		}
+
+		properties = {
+			construction_entry_resource = {
+				image = "[GetIndustryResourceIcon]"
+			}
+			construction_pm_button = {
+				image = "[GetIndustriesConstructionProductionMethodButton]"
+			}
+		}
+	}
+	dandt_buildings_mapmode_state_gui = {
+		context_type = player_context
+		# parent_window_token = tob_bar
+		# mapmode = buildings_map_mode
+		window_name = "dandt_buildings_mapmode_state_container"
+
+		visible = {
+			always = no
+		}
+
+		properties = {
+			industry_resource = {
+				image = "[GetIndustryResourceIcon]"
+			}
+			industry_resource_output = {
+				image = "[GetIndustryResourceIcon]"
+			}
+			employment = {
+				image = "[GetIndustryEmploymentIcon]"
+			}
+			industry_input_resource_0 = {
+				image = "[GetIndustryInput1Icon]"
+			}
+			industry_input_resource_1 = {
+				image = "[GetIndustryInput2Icon]"
+			}
+			industry_input_resource_2 = {
+				image = "[GetIndustryInput3Icon]"
+			}
+			industry_input_resource_3 = {
+				image = "[GetIndustryInput4Icon]"
+			}
+			industry_input_resource_4 = {
+				image = "[GetIndustryInput5Icon]"
+			}
+			industry_input_resource_5 = {
+				image = "[GetIndustryInput6Icon]"
+			}
+			production_method_button = {
+				image = "[GetIndustryProductionMethodButton]"
+			}
+			priority_button = {
+				image = "[GetIndustryPriorityIcon]"
+			}
+			subsidy_button = {
+				image = "[GetIndustrySubsidyButton]"
+			}
+			expansion_button = {
+				image = "[GetIndustryExpansionButton]"
+			}
+		}
+	}
+}

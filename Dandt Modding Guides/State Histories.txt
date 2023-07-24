@@ -1,0 +1,53 @@
+
+Every one of these values can be fulfilled on the national level (and there is a global value but it's not recommended to use it)
+
+MINIMUM REQUIRED VARS FOR STATES
+    pops_amount/population (If both are present, pops_amount is preferred)
+    [Pop_Type]_percentage #for each pop type except Retirees.
+        #Default pop type are farmers, so if it doesn't add to 100%, then the excess will be farmers
+        #Rounding with math may also cause the farmers type to be slightly larger, to match population
+        #If you set [Pop_Type]_amount, you don't need to set the percentage
+        #If the percentages/amounts go over 100%/pops_amount, it will just add pops
+        #Retirees are gotten from people over the retirement age. By default, this is 60. 
+            #Every year at and after this point, 20% more of that group is retirees.
+            #By default, every 65 and up will be retired.
+
+    [Industry_Type]_size #Check Industries.txt to see the list of industries
+   
+
+POTENTIALLY REQUIRED VARS FOR STATES
+    #These may be satisfied by national level vars (Owner)
+    pops_religion_type (Array)
+    pops_religion_percentage (Array)
+    pops_culture_type (Array)
+    pops_culture_percentage (Array)
+    pops_ideology_type (Array)
+    pops_ideology_percentage (Array)
+
+    #You don't need these if you've specified a population pyramid
+    pops_median_age #Half of pops above/below this age - This should be an integer (No decimals)
+    pops_life_span #How long do people live - Should be an integer
+    pops_elder_spread #0.5 is constant, 0.6 is more young, 0.4 is more old, I'd recommend not going beyond those values
+    pops_youth_spread #Same as above
+    #I recommend going to this link to see the exact values you want to use: https://repl.it/@Strategy_Gamer/Population-Pyramid
+
+    #Otherwise you can specify a population pyramid
+    pops_pyramid_setup (Array)
+        #Each index is 5 years, starting at 0-4 for index 0, 5-9 for 1, etc.
+        #The array is 21 long (Last one representing 100+)
+        #The value is the population in each age group. It does not need to equal the total population, it's just to make getting the proportion easier
+        #After setting up the temporary array, do population_pyramid_setup = yes to set it up
+        #NOTE: Only works with pops_pyramid_setup, no specific pop types
+
+    pops_literacy_percentage
+    pops_education_percentage
+
+
+ADDITIONAL VARS FOR STATES
+    #These are additional vars which are not needed but can be set
+    
+    [Pop_Type]_above_vars #The vars in the categories above may be specified to their pop type
+        #It prefers local generic vars over national specific vars
+            #If pops_median_age is set in a state, but farmers_median_age is set nationally, the farmer pop in the tate will choose the state's pops_median_age
+
+    pops_male_female_ratio #Ratio of males to females. Naturally it's around 1.04

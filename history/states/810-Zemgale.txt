@@ -1,0 +1,39 @@
+
+state={
+	id=810
+	name="STATE_810"
+
+	history={
+		owner = LAT
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+			310 = {
+				bunker = 2
+			}
+		}
+		add_core_of = LAT
+		victory_points = {
+			310 3 #Daugavpils
+		}
+		victory_points = {
+			222 1 #Rezekne
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_continental_cool
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+
+	provinces={
+		222 310 319 341 3298 6459 7482 9275 11222
+	}
+	manpower=600250
+	buildings_max_level_factor=1.000
+	state_category=town
+}

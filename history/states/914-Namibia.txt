@@ -1,0 +1,28 @@
+
+state={
+	id=914
+	name="STATE_914"
+
+	history={
+		owner = SAF
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SAF
+		add_core_of = NMB
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+	}
+
+	provinces={
+		7770 8136 10957 10978 12519 12921 13217 
+	}
+	manpower=298718
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

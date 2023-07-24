@@ -1,0 +1,92 @@
+#All the stuff for the state list
+
+defined_text = {
+	name = GetNumAbbreviation
+	text = {
+		trigger = {
+			state = 1
+		}
+		localization_key = ""
+	}
+	text = {
+		trigger = {
+			state = 2
+		}
+		localization_key = "K"
+	}
+	text = {
+		trigger = {
+			state = 3
+		}
+		localization_key = "M"
+	}
+	text = {
+		trigger = {
+			state = 4
+		}
+		localization_key = "B"
+	}
+	text = {
+		localization_key = "T"
+	}
+}
+defined_text = {
+	name = GetStatePopulationTrendGFX
+	text = {
+		trigger = {
+			check_variable = { states_population_change^i > 0 }
+		}
+		localization_key = "GFX_trend_arrow_up_green"
+	}
+	text = {
+		trigger = {
+			check_variable = { states_population_change^i < 0 }
+		}
+		localization_key = "GFX_trend_arrow_down_red"
+	}
+	text = {
+		localization_key = "GFX_trend_arrow_right_yellow"
+	}
+}
+defined_text = {
+	name = GetCountryPopulationTrendGFX
+	text = {
+		trigger = {
+			check_variable = { country_population_change > 0 }
+		}
+		localization_key = "GFX_trend_arrow_up_green"
+	}
+	text = {
+		trigger = {
+			check_variable = { country_population_change < 0 }
+		}
+		localization_key = "GFX_trend_arrow_down_red"
+	}
+	text = {
+		localization_key = "GFX_trend_arrow_right_yellow"
+	}
+}
+defined_text = {
+	name = GetPopNumAbbreviation
+	text = {
+		trigger = {
+			check_variable = { selected_state = ROOT }
+		}
+		localization_key = "M"
+	}
+	text = {
+		localization_key = "K"
+	}
+}
+defined_text = {
+	name = GetMoneyNumAbbreviation
+	text = {
+		trigger = {
+			check_variable = { selected_state = ROOT }
+		}
+		localization_key = "K"
+	}
+	text = {
+		localization_key = ""
+	}
+}

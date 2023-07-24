@@ -1,0 +1,528 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_factory_texticon"
+		texturefile = "gfx/texticons/industry/factory_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_subsistence_farm_texticon"
+		texturefile = "gfx/texticons/industry/subsistence_farm_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_agriculture_texticon"
+		texturefile = "gfx/texticons/industry/agriculture_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_service_texticon"
+		texturefile = "gfx/texticons/industry/service_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_drill_texticon"
+		texturefile = "gfx/texticons/industry/drill_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_mine_texticon"
+		texturefile = "gfx/texticons/industry/mine_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_crude_oil_texticon"
+		texturefile = "gfx/texticons/resources/oil_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_aluminum_texticon"
+		texturefile = "gfx/texticons/resources/aluminum_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_rubber_texticon"
+		texturefile = "gfx/texticons/resources/rubber_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_tungsten_texticon"
+		texturefile = "gfx/texticons/resources/tungsten_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_iron_texticon"
+		texturefile = "gfx/texticons/resources/iron_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_chromium_texticon"
+		texturefile = "gfx/texticons/resources/chromium_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_copper_texticon"
+		texturefile = "gfx/texticons/resources/copper_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_precious_metals_texticon"
+		texturefile = "gfx/texticons/resources/precious_metals_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_coal_texticon"
+		texturefile = "gfx/texticons/resources/coal_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_lumber_texticon"
+		texturefile = "gfx/texticons/resources/lumber_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_fiber_texticon"
+		texturefile = "gfx/texticons/resources/fiber_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_foodstuffs_texticon"
+		texturefile = "gfx/texticons/resources/foodstuffs_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_electricity_texticon"
+		texturefile = "gfx/texticons/resources/electricity_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_steel_texticon"
+		texturefile = "gfx/texticons/resources/steel_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_rare_earth_metals_texticon"
+		texturefile = "gfx/texticons/resources/rare_earth_metals_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_cement_texticon"
+		texturefile = "gfx/texticons/resources/cement_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_silicates_texticon"
+		texturefile = "gfx/texticons/resources/silicates_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_chemicals_texticon"
+		texturefile = "gfx/texticons/resources/chemicals_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_fabric_texticon"
+		texturefile = "gfx/texticons/resources/fabric_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_machinery_texticon"
+		texturefile = "gfx/texticons/resources/machinery_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_plastics_texticon"
+		texturefile = "gfx/texticons/resources/plastics_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_fertilizer_texticon"
+		texturefile = "gfx/texticons/resources/fertilizer_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_hydrocarbons_texticon"
+		texturefile = "gfx/texticons/resources/hydrocarbons_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_automobiles_texticon"
+		texturefile = "gfx/texticons/resources/automobiles_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_airplanes_texticon"
+		texturefile = "gfx/texticons/resources/airplanes_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_computers_texticon"
+		texturefile = "gfx/texticons/resources/computers_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_electronics_texticon"
+		texturefile = "gfx/texticons/resources/electronics_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_groceries_texticon"
+		texturefile = "gfx/texticons/resources/groceries_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_pharmaceuticals_texticon"
+		texturefile = "gfx/texticons/resources/pharmaceuticals_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_clothing_texticon"
+		texturefile = "gfx/texticons/resources/clothing_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_consumer_goods_texticon"
+		texturefile = "gfx/texticons/resources/consumer_goods_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_sulfur_texticon"
+		texturefile = "gfx/texticons/resources/sulfur_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_convoys_texticon"
+		texturefile = "gfx/texticons/resources/convoys_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_small_arms_texticon"
+		texturefile = "gfx/texticons/resources/small_arms_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_artillery_texticon"
+		texturefile = "gfx/texticons/resources/artillery_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_tanks_texticon"
+		texturefile = "gfx/texticons/resources/tanks_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_explosives_texticon"
+		texturefile = "gfx/texticons/resources/explosives_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_ammunition_texticon"
+		texturefile = "gfx/texticons/resources/ammunition_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_rockets_texticon"
+		texturefile = "gfx/texticons/resources/rockets_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_construction_texticon"
+		texturefile = "gfx/texticons/resources/construction_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_tools_texticon"
+		texturefile = "gfx/texticons/resources/tools_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_healthcare_texticon"
+		texturefile = "gfx/texticons/resources/healthcare_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_basic_education_texticon"
+		texturefile = "gfx/texticons/resources/basic_education_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_higher_education_texticon"
+		texturefile = "gfx/texticons/resources/higher_education_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_transport_texticon"
+		texturefile = "gfx/texticons/resources/transport_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_shipping_texticon"
+		texturefile = "gfx/texticons/resources/shipping_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_finance_texticon"
+		texturefile = "gfx/texticons/resources/finance_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_housing_texticon"
+		texturefile = "gfx/texticons/resources/housing_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_resource_entertainment_texticon"
+		texturefile = "gfx/texticons/resources/entertainment_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_peasants_texticon"
+		texturefile = "gfx/texticons/pops/peasants_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_laborers_texticon"
+		texturefile = "gfx/texticons/pops/laborers_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_workers_texticon"
+		texturefile = "gfx/texticons/pops/workers_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_professionals_texticon"
+		texturefile = "gfx/texticons/pops/professionals_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_elites_texticon"
+		texturefile = "gfx/texticons/pops/elites_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_bureaucrats_texticon"
+		texturefile = "gfx/texticons/pops/bureaucrats_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_soldiers_texticon"
+		texturefile = "gfx/texticons/pops/soldiers_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_price_very_cheap_texticon"
+		texturefile = "gfx/texticons/economy/price_very_cheap_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_price_cheap_texticon"
+		texturefile = "gfx/texticons/economy/price_cheap_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_price_slightly_cheap_texticon"
+		texturefile = "gfx/texticons/economy/price_slightly_cheap_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_price_average_texticon"
+		texturefile = "gfx/texticons/economy/price_average_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_price_slightly_expensive_texticon"
+		texturefile = "gfx/texticons/economy/price_slightly_expensive_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_price_expensive_texticon"
+		texturefile = "gfx/texticons/economy/price_expensive_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_price_very_expensive_texticon"
+		texturefile = "gfx/texticons/economy/price_very_expensive_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_left_arrow_green_texticon"
+		texturefile = "gfx/texticons/arrows/left_arrow_green.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_left_arrow_green_texticon"
+		texturefile = "gfx/texticons/arrows/left_arrow_green.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_left_arrow_green_texticon"
+		texturefile = "gfx/texticons/arrows/left_arrow_green.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_left_arrow_red_texticon"
+		texturefile = "gfx/texticons/arrows/left_arrow_red.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_left_arrow_white_texticon"
+		texturefile = "gfx/texticons/arrows/left_arrow_white.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_left_arrow_yellow_texticon"
+		texturefile = "gfx/texticons/arrows/left_arrow_yellow.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_right_arrow_green_texticon"
+		texturefile = "gfx/texticons/arrows/right_arrow_green.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_right_arrow_red_texticon"
+		texturefile = "gfx/texticons/arrows/right_arrow_red.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_right_arrow_white_texticon"
+		texturefile = "gfx/texticons/arrows/right_arrow_white.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_right_arrow_yellow_texticon"
+		texturefile = "gfx/texticons/arrows/right_arrow_yellow.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_ideology_communist_texticon"
+		texturefile = "gfx/texticons/ideologies/color_communist.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_socialist_texticon"
+		texturefile = "gfx/texticons/ideologies/color_socialist.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_liberal_texticon"
+		texturefile = "gfx/texticons/ideologies/color_liberal.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_agrarian_texticon"
+		texturefile = "gfx/texticons/ideologies/color_agrarian.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_conservative_texticon"
+		texturefile = "gfx/texticons/ideologies/color_conservative.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_reactionary_texticon"
+		texturefile = "gfx/texticons/ideologies/color_reactionary.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_fascist_texticon"
+		texturefile = "gfx/texticons/ideologies/color_fascist.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_stratocratic_texticon"
+		texturefile = "gfx/texticons/ideologies/color_stratocratic.dds"
+		legacy_lazy_load = no
+	}
+
+	
+	spriteType = {
+		name = "GFX_sol_starving_texticon"
+		texturefile = "gfx/texticons/sol/starving_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_hungry_texticon"
+		texturefile = "gfx/texticons/sol/hungry_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_struggling_texticon"
+		texturefile = "gfx/texticons/sol/struggling_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_destitute_texticon"
+		texturefile = "gfx/texticons/sol/destitute_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_impoverished_texticon"
+		texturefile = "gfx/texticons/sol/impoverished_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_poor_texticon"
+		texturefile = "gfx/texticons/sol/poor_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_middling_texticon"
+		texturefile = "gfx/texticons/sol/middling_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_secure_texticon"
+		texturefile = "gfx/texticons/sol/secure_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_comfortable_texticon"
+		texturefile = "gfx/texticons/sol/comfortable_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_well_off_texticon"
+		texturefile = "gfx/texticons/sol/well_off_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_prosperous_texticon"
+		texturefile = "gfx/texticons/sol/prosperous_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_affluent_texticon"
+		texturefile = "gfx/texticons/sol/affluent_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_rich_texticon"
+		texturefile = "gfx/texticons/sol/rich_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_wealthy_texticon"
+		texturefile = "gfx/texticons/sol/wealthy_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_lavish_texticon"
+		texturefile = "gfx/texticons/sol/lavish_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_extravagant_texticon"
+		texturefile = "gfx/texticons/sol/extravagant_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sol_opulent_texticon"
+		texturefile = "gfx/texticons/sol/opulent_texticon.dds"
+		legacy_lazy_load = no
+	}
+}

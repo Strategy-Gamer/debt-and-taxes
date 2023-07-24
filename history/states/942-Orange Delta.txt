@@ -1,0 +1,29 @@
+
+state={
+	id=942
+	name="STATE_942"
+
+	history={
+		owner = SAF
+		buildings = {
+			infrastructure = 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_wasteland
+		}
+		add_dynamic_modifier = {
+			modifier = climate_arid_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_small_river
+		}
+	}
+
+	provinces={
+		1509 4528 5203 10442 10668 12419 
+	}
+	manpower=202747
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

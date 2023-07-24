@@ -1,0 +1,406 @@
+ideas = {
+	party_tokens = {
+		party_generic_communist_party = { allowed = { always = no } }
+		party_generic_socialist_party = { allowed = { always = no } }
+		party_generic_liberal_party = { allowed = { always = no } }
+		party_generic_libertarian_party = { allowed = { always = no } }
+		party_generic_conservative_party = { allowed = { always = no } }
+		party_generic_reactionary_party = { allowed = { always = no } }
+		party_generic_fascist_party = { allowed = { always = no } }
+		party_generic_stratocratic_party = { allowed = { always = no } }
+		party_generic_labor_party = { allowed = { always = no } }
+		party_generic_labour_party = { allowed = { always = no } }
+		party_generic_independence_party = { allowed = { always = no } }
+		party_generic_independent_party = { allowed = { always = no } }
+		party_generic_progressive_party = { allowed = { always = no } }
+		party_generic_progress_party = { allowed = { always = no } }
+		party_generic_catholic_party = { allowed = { always = no } }
+		party_generic_orthodox_party = { allowed = { always = no } }
+		party_generic_islamic_party = { allowed = { always = no } }
+		party_generic_democratic_party = { allowed = { always = no } }
+		party_generic_republican_party = { allowed = { always = no } }
+		party_generic_constitutionalist_party = { allowed = { always = no } }
+		party_generic_agrarian_party = { allowed = { always = no } }
+		party_generic_peoples_party = { allowed = { always = no } }
+		party_generic_workers_party = { allowed = { always = no } }
+		party_generic_socialist_workers_party = { allowed = { always = no } }
+		party_generic_unionist_party = { allowed = { always = no } }
+		party_generic_progressive_liberal_party = { allowed = { always = no } }
+		party_generic_national_liberation_party = { allowed = { always = no } }
+		party_generic_national_liberal_party = { allowed = { always = no } }
+		party_generic_national_democratic_party ={ allowed = { always = no } }
+		party_generic_national_republican_party = { allowed = { always = no } }
+		party_generic_national_labor_party = { allowed = { always = no } }
+		party_generic_national_party = { allowed = { always = no } }
+		party_generic_nationalist_party = { allowed = { always = no } }
+		party_generic_reformist_party = { allowed = { always = no } }
+		party_generic_national_union_party = { allowed = { always = no } }
+		party_generic_social_democratic_party = { allowed = { always = no } }
+		party_generic_revolutionary_party = { allowed = { always = no } }
+		party_generic_centre_party = { allowed = { always = no } }
+		party_generic_monarchist_party = { allowed = { always = no } }
+		party_generic_occupation = { allowed = { always = no } }
+		party_generic_peasants_party = { allowed = { always = no } }
+		party_generic_democratic_peoples_party = { allowed = { always = no } }
+		party_generic_liberty_party = { allowed = { always = no } }
+		party_generic_liberal_democratic_party = { allowed = { always = no } }
+		party_generic_farmer_labor_party = { allowed = { always = no } }
+		party_generic_socialist_labor_party = { allowed = { always = no } }
+		#BEL
+		party_BEL_frontpartij = { allowed = { always = no } }
+		#CAN
+		party_CAN_cooperative_commonwealth = { allowed = { always = no } }
+		party_CAN_new_democracy = { allowed = { always = no } }
+		party_CAN_canadian_popular_bloc = { allowed = { always = no } }
+		#USA
+		party_USA_democratic_party = { allowed = { always = no } }
+		party_USA_republican_party = { allowed = { always = no } }
+		party_USA_prohibition_party = { allowed = { always = no } }
+		party_USA_christian_party = { allowed = { always = no } }
+		party_USA_state_rights_democratic_party = { allowed = { always = no } }
+		#MEX
+		party_MEX_national_revolutionary_party = { allowed = { always = no } }
+		party_MEX_national_action_party = { allowed = { always = no } }
+		party_MEX_progressive_constitutionalist_party = { allowed = { always = no } }
+		party_MEX_revolutionary_unification_party = { allowed = { always = no } }
+		party_MEX_popular_force_party = { allowed = { always = no } }
+		party_MEX_federation_of_mexican_peoples = { allowed = { always = no } }
+		party_MEX_league_for_religious_liberty = { allowed = { always = no } }
+		#GUA
+		party_GUA_national_renovation_party = { allowed = { always = no } }
+		party_gua_national_democratic_movement = { allowed = { always = no } }
+		party_GUA_national_democratic_reconcilliation_party = { allowed = { always = no } }
+		#ELS
+		party_ELS_zaratista_party = { allowed = { always = no } }
+		party_ELS_natiional_pro_patria_party = { allowed = { always = no } }
+		party_ELS_social_democratic_union_party = { allowed = { always = no } }
+		party_ELS_renovating_action_party = { allowed = { always = no } }
+		#HON
+		party_HON_national_reformist_movement = { allowed = { always = no } }
+		#NIC
+		party_NIC_sandinista_national_liberation_front = { allowed = { always = no } }
+		party_NIC_nationalist_liberal_party = { allowed = { always = no } }
+		party_NIC_conservative_nationalist_party = { allowed = { always = no } }
+		party_NIC_constitutional_liberal_party = { allowed = { always = no } }
+		party_NIC_independent_liberal_party = { allowed = { always = no } }
+		#COS
+		party_COS_historical_republicans = { allowed = { always = no } }
+		party_COS_republican_union = { allowed = { always = no } }
+		party_COS_guanacastecan_brotherhood = { allowed = { always = no } }
+		party_COS_national_fellowship_party = { allowed = { always = no } }
+		#PAN
+		party_PAN_authentic_revolutionary_party = { allowed = { always = no } }
+		party_PAN_liberal_union = { allowed = { always = no } }
+		party_PAN_popular_union_party = { allowed = { always = no } }
+		party_PAN_national_patriotic_coalition = { allowed = { always = no } }
+		#VEN
+		party_VEN_national_liberation_board = { allowed = { always = no } }
+		party_falcon_movement = { allowed = { always = no } }
+		party_VEN_democratic_action = { allowed = { always = no } }
+		party_VEN_copei = { allowed = { always = no } }
+		#ECU
+		party_ECU_radical_liberal_party = { allowed = { always = no } }
+		party_ECU_national_democratic_alliance = { allowed = { always = no } }
+		party_ECU_velasquista_national_federation = { allowed = { always = no } }
+		party_ECU_social_christian_party = { allowed = { always = no } }
+		party_ECU_national_revolutionary_action = { allowed = { always = no } }
+		#PRU
+		party_PRU_reformist_democratic_party = { allowed = { always = no } }
+		party_PRU_revolutionary_union = { allowed = { always = no } }
+		party_PRU_popular_revolutionary_alliance = { allowed = { always = no } }
+		party_PRU_republican_action = { allowed = { always = no } }
+		party_PRU_constitutional_renewal_party = { allowed = { always = no } }
+		party_PRU_patriotic_front = { allowed = { always = no } }
+		#BOL
+		party_BOL_socialist_republican_party = { allowed = { always = no } }
+		party_BOL_socialist_single_front = { allowed = { always = no } }
+		party_BOL_genuine_republican_party = { allowed = { always = no } }
+		party_BOL_united_socialist_party = { allowed = { always = no } }
+		party_BOL_revolutionary_left_party = { allowed = { always = no } }
+		party_BOL_workers_socialist_party = { allowed = { always = no } }
+		party_BOL_revlutionary_nationalist_movement = { allowed = { always = no } }
+		party_BOL_reason_for_fatherland = { allowed = { always = no } }
+		party_BOL_republican_socialist_unity_party = { allowed = { always = no } }
+		party_BOL_antifascist_democratic_front = { allowed = { always = no } }
+		party_BOL_mining_parliamentary_bloc = { allowed = { always = no } }
+		party_BOL_bolivian_socialist_falange = { allowed = { always = no } }
+		#CHL
+		party_CHL_radical_party = { allowed = { always = no } }
+		party_CHL_new_public_action  = { allowed = { always = no } }
+		party_CHL_popular_freedom_alliance = { allowed = { always = no } }
+		#ARG
+		party_ARG_radical_civic_union = { allowed = { always = no } }
+		party_ARG_antipersonalists = { allowed = { always = no } }
+		party_ARG_democratic_progressive_party = { allowed = { always = no } }
+		party_ARG_national_autonomist_party = { allowed = { always = no } }
+		party_ARG_united_officers_group = { allowed = { always = no } }
+		party_ARG_national_recovery = { allowed = { always = no } }
+		party_ARG_peronist_party = { allowed = { always = no } }
+		party_ARG_liberating_revolution = { allowed = { always = no } }
+		party_ARG_intransigent_radical_civic_union = { allowed = { always = no } }
+		party_ARG_peoples_radical_civic_union = { allowed = { always = no } }
+		#PAR
+		party_PAR_colorado_party = { allowed = { always = no } }
+		party_PAR_revolutionary_fevrerista_party = { allowed = { always = no } }
+		#URG
+		party_URG_radical_white_party = { allowed = { always = no } }
+		party_URG_public_liberties_party = { allowed = { always = no } }
+		party_URG_patriotic_concentration_party = { allowed = { always = no } }
+		#BRA
+		party_BRA_liberator_party = { allowed = { always = no } }
+		party_BRA_democratic_republican_party = { allowed = { always = no } }
+		party_BRA_liberal_alliance = { allowed = { always = no } }
+		party_BRA_new_state = { allowed = { always = no } }
+		party_BRA_national_democratic_union = { allowed = { always = no } }
+		party_BRA_progressive_social_party = { allowed = { always = no } }
+		party_BRA_popular_representation_party = { allowed = { always = no } }
+		#CUB
+		party_CUB_cuban_popular_party = { allowed = { always = no } }
+		party_CUB_national_league = { allowed = { always = no } }
+		party_CUB_democratic_national_association = { allowed = { always = no } }
+		party_CUB_authentic_party = { allowed = { always = no } }
+		party_CUB_popular_socialist_party = { allowed = { always = no } }
+		party_CUB_national_agrarian_party = { allowed = { always = no } }
+		party_CUB_progressive_action_party = { allowed = { always = no } }
+		party_CUB_united_cuba_party = { allowed = { always = no } }
+		#HAI
+		party_HAI_peasant_worker_movement = { allowed = { always = no } }
+		party_HAI_national_unity_party = { allowed = { always = no } }
+		party_HAI_democratic_national_party = { allowed = { always = no } }
+		party_HAI_national_labour_party = { allowed = { always = no } }
+		#DOM
+		party_DOM_blue_party = { allowed = { always = no } }
+		party_DOM_red_party = { allowed = { always = no } }
+		party_DOM_patriotic_coalition_of_citizens = { allowed = { always = no } }
+		party_DOM_domincan_party = { allowed = { always = no } }
+		party_DOM_national_civic_union = { allowed = { always = no } }
+		#DEN
+		party_DEN_venstre = { allowed = { always = no } }
+		party_DEN_social_liberal_party = { allowed = { always = no } }
+		party_DEN_justice_party = { allowed = { always = no } }
+		party_DEN_danish_unity_party = { allowed = { always = no } }
+		#NOR
+		party_NOR_society_party = { allowed = { always = no } }
+		#SWE
+		party_SWE_farmers_league = { allowed = { always = no } }
+		party_SWE_general_electoral_league = { allowed = { always = no } }
+		party_SWE_right_party = { allowed = { always = no } }
+		#FIN
+		party_FIN_socialist_electoral_organisation = { allowed = { always = no } }
+		party_FIN_national_coalition_party = { allowed = { always = no } }
+		party_FIN_patriotic_peoples_movement = { allowed = { always = no } }
+		#SOV
+		party_SOV_trotskyists = { allowed = { always = no } }
+		#EST
+		party_EST_farmers_assembly = { allowed = { always = no } }
+		#LAT
+		party_LAT_christian_national_union = { allowed = { always = no } }
+		#LIT
+		party_LIT_christian_democratic_party = { allowed = { always = no } }
+		party_LIT_democratic_union = { allowed = { always = no } }
+		#IRE
+		party_IRE_gaelic_society = { allowed = { always = no } }
+		party_IRE_national_farmers_party = { allowed = { always = no } }
+		party_IRE_gaelic_family = { allowed = { always = no } }
+		#SPR
+		party_SPR_radical_republican_party = { allowed = { always = no } }
+		party_SPR_liberal_republican_party = { allowed = { always = no } }
+		party_SPR_ceda = { allowed = { always = no } }
+		party_SPR_fet = { allowed = { always = no } }
+		#FRA
+		party_FRA_democratic_republican_alliance = { allowed = { always = no } }
+		party_FRA_republican_federation = { allowed = { always = no } }
+		party_FRA_french_workers_international = { allowed = { always = no } }
+		#SAA
+		party_SAA_economy_party = { allowed = { always = no } }
+		#HOL
+		party_HOL_anti_revolutionary_party = { allowed = { always = no } }
+		#GER
+		party_GER_national_peoples_party = { allowed = { always = no } }
+		party_GER_national_socialist_party = { allowed = { always = no } }
+		#DNZ
+		party_DNZ_german_social_party = { allowed = { always = no } }
+		#POL
+		party_POL_polish_minorities_block = { allowed = { always = no } }
+		party_POL_bloc_for_cooperation = { allowed = { always = no } }
+		#CZE
+		party_CZE_hlinkas_party = { allowed = { always = no } }
+		party_CZE_national_democracy = { allowed = { always = no } }
+		#AUS
+		party_AUS_christian_social_party = { allowed = { always = no } }
+		party_AUS_landbund = { allowed = { always = no } }
+		party_AUS_homeland_bloc = { allowed = { always = no } }
+		#SWI
+		party_SWI_conservative_peoples_party = { allowed = { always = no } }
+		party_SWI_evangelical_peoples_party = { allowed = { always = no } }
+		party_SWI_union_for_defense = { allowed = { always = no } }
+		#ITA
+		party_ITA_national_fascist_party = { allowed = { always = no } }
+		party_ITA_unitary_socialist_party = { allowed = { always = no } }
+		party_ITA_common_mans_front = { allowed = { always = no } }
+		#ALB
+		party_ALB_house_of_zog = { allowed = { always = no } }
+		party_ALB_democratic_front = { allowed = { always = no } }
+		#YUG
+		party_YUG_radical_peoples_party = { allowed = { always = no } }
+		party_YUG_yugoslav_organization = { allowed = { always = no } }
+		#HUN
+		party_HUN_unity_party = { allowed = { always = no } }
+		party_HUN_christian_national_union = { allowed = { always = no } }
+		party_HUN_civic_freedom_party = { allowed = { always = no } }
+		party_HUN_radical_defense_party = { allowed = { always = no } }
+		party_HUN_agrarian_workers_and_civic_party = { allowed = { always = no } }
+		party_HUN_national_peasant_party = { allowed = { always = no } }
+		party_HUN_civic_democratic_party = { allowed = { always = no } }
+		party_HUN_independent_smallholders_party = { allowed = { always = no } }
+		#ROM
+		party_ROM_peasant_workers_bloc = { allowed = { always = no } }
+		party_ROM_national_christian_defense_league = { allowed = { always = no } }
+		#BUL
+		party_BUL_agrarian_national_union = { allowed = { always = no } }
+		party_BUL_democratic_alliance = { allowed = { always = no } }
+		party_BUL_radical_democratic_party = { allowed = { always = no } }
+		#GRE
+		party_GRE_agricultural_and_labour_party = { allowed = { always = no } }
+		party_GRE_united_front = { allowed = { always = no } }
+		party_GRE_freethinkers_party = { allowed = { always = no } }
+		#TUR
+		party_TUR_republican_peoples_party = { allowed = { always = no } }
+		party_TUR_republican_nation_party = { allowed = { always = no } }
+		party_TUR_republican_villagers_party = { allowed = { always = no } }
+		party_TUR_new_turkiye_party = { allowed = { always = no } }
+		#LIB
+		party_LIB_true_whig_party = { allowed = { always = no } }
+		#SAF
+		party_SAF_south_african_party = { allowed = { always = no } }
+		#YEM
+		party_YEM_house_of_rassid = { allowed = { always = no } }
+		party_YEM_house_of_sayyid = { allowed = { always = no } }
+		#OMA
+		party_OMA_dhofar_movement = { allowed = { always = no } }
+		party_OMA_house_of_al_said = { allowed = { always = no } }
+		party_OMA_oman_party = { allowed = { always = no } }
+		party_OMA_pan_arab_commitee = { allowed = { always = no } }
+		#SAU
+		party_SAU_house_of_saud = { allowed = { always = no } }
+		party_SAU_ikhwan = { allowed = { always = no } }
+		#ASR
+		party_ASR_house_of_idrisid = { allowed = { always = no } }
+		#EGY
+		party_EGY_arab_socialist_party = { allowed = { always = no } }
+		party_EGY_house_of_farouk = { allowed = { always = no } }
+		#ISR
+		party_ISR_labour_unity_party = { allowed = { always = no } }
+		party_ISR_young_worker_party = { allowed = { always = no } }
+		party_ISR_sephardim_and_oriental_communities = { allowed = { always = no } }
+		party_ISR_zionist_revisionist_party = { allowed = { always = no } }
+		party_ISR_agricultural_bloc = { allowed = { always = no } }
+		party_ISR_religious_centre = { allowed = { always = no } }
+		party_ISR_united_workers_party = { allowed = { always = no } }
+		party_ISR_united_religious_front = { allowed = { always = no } }
+		party_ISR_freedom_party = { allowed = { always = no } }
+		#ISR
+		party_SYR_arab_socialist_baath_party = { allowed = { always = no } }
+		#
+		party_JOR_umma_party = { allowed = { always = no } }
+		#IRQ
+		party_IRQ_house_of_hashim = { allowed = { always = no } }
+		party_IRQ_convenant_party = { allowed = { always = no } }
+		party_IRQ_national_brotherhood_party = { allowed = { always = no } }
+		#KUR
+		party_KUR_self_determination = { allowed = { always = yes } }
+		party_KUR_kurdish_national_force = { allowed = { always = yes } }
+		#PER
+		party_PER_house_of_palavi = { allowed = { always = no } }
+		party_PER_revival_party = { allowed = { always = no } }
+		party_PER_reformers_party = { allowed = { always = no } }
+		party_PER_fatherland_party = { allowed = { always = no } }
+		party_PER_iran_party = { allowed = { always = no } }
+		party_PER_comrades_party = { allowed = { always = no } }
+		party_PER_national_front = { allowed = { always = no } }
+		#AFG
+		party_AFG_house_of_barakzai = { allowed = { always = no } }
+		party_AFG_saqqawist_movement = { allowed = { always = no } }
+		#PAK
+		party_PAK_awami_league = { allowed = { always = no } }
+		party_PAK_islamic_congress = { allowed = { always = no } }
+		party_PAK_pakistan_muslim_league = { allowed = { always = no } }
+		party_PAK_council_muslim_league = { allowed = { always = no } }
+		party_PAK_jamiat_ulema_e_islam = { allowed = { always = no } }
+		party_PAK_national_awami_party = { allowed = { always = no } }
+		#RAJ
+		party_RAJ_congress_swaraj_party = { allowed = { always = no } }
+		party_RAJ_congress_national_party = { allowed = { always = no } }
+		party_RAJ_all_india_muslim_league = { allowed = { always = no } }
+		party_RAJ_indian_national_congress = { allowed = { always = no } }
+		#NEP
+		party_NEP_house_of_rana = { allowed = { always = no } }
+		party_NEP_house_of_shah = { allowed = { always = no } }
+		party_NEP_nepali_congress = { allowed = { always = no } }
+		party_NEP_rastriya_praja_party = { allowed = { always = no } }
+		party_NEP_nepal_rastrabadi_gorkha_parishad = { allowed = { always = no } }
+		party_NEP_united_democratic_party = { allowed = { always = no } }
+		#BHU
+		party_BHU_house_of_wangchuck = { allowed = { always = no } }
+		#BRM
+		party_BRM_national_parliamentary_organisation = { allowed = { always = no } }
+		party_BRM_separation_league = { allowed = { always = no } }
+		party_BRM_anti_separation_league = { allowed = { always = no } }
+		party_BRM_general_council_of_burmese_associations = { allowed = { always = no } }
+		party_BRM_poor_mans_party = { allowed = { always = no } }
+		party_BRM_we_burmans_association = { allowed = { always = no } }
+		party_BRM_antifascist_peoples_freedom_league = { allowed = { always = no } }
+		party_BRM_karen_party = { allowed = { always = no } }
+		party_BRM_peoples_democratic_front = { allowed = { always = no } }
+		party_BRM_national_united_front = { allowed = { always = no } }
+		party_BRM_united_hill_peoples_congress = { allowed = { always = no } }
+		#SIA
+		party_SIA_poetic_spirit = { allowed = { always = no } }
+		party_SIA_free_democracy = { allowed = { always = no } }
+		party_SIA_hyde_park_movement = { allowed = { always = no } }
+		party_SIA_united_thai_peoples_party = { allowed = { always = no } }
+		party_SIA_house_of_mahidol = { allowed = { always = no } }
+		#LAO
+		party_LAO_national_progressive_party = { allowed = { always = no } }
+		party_LAO_peace_and_neutrality_party = { allowed = { always = no } }
+		#CAM
+		party_CAM_victorious_party = { allowed = { always = no } }
+		party_CAM_khmer_renovation = { allowed = { always = no } }
+		party_CAM_popular_community = { allowed = { always = no } }
+		#VIN
+		party_VIN_stalinist_party = { allowed = { always = no } }
+		party_VIN_workers_list = { allowed = { always = no } }
+		party_VIN_forces_for_national_reconciliation = { allowed = { always = no } }
+		party_VIN_national_social_democratic_front = { allowed = { always = no } }
+		party_VIN_personalist_labor_revolutionary_party = { allowed = { always = no } }
+		party_VIN_house_of_nguyen = { allowed = { always = no } }
+		#MAL
+		party_MAL_united_malays_national_organization = { allowed = { always = no } }
+		party_MAL_young_malays_union = { allowed = { always = no } }
+		party_MAL_democratic_union = { allowed = { always = no } }
+		#INS
+		party_INS_indo_european_alliance = { allowed = { always = no } }
+		party_INS_fatherland_club = { allowed = { always = no } }
+		party_INS_native_administrative_official_union = { allowed = { always = no } }
+		party_INS_political_economic_union = { allowed = { always = no } }
+		party_INS_council_of_indonesian_muslim_association = { allowed = { always = no } }
+		party_INS_islamic_union_party = { allowed = { always = no } }
+		#AST
+		party_AST_country_party = { allowed = { always = no } }
+		party_AST_united_australia_party = { allowed = { always = no } }
+		party_AST_social_credit_party = { allowed = { always = no } }
+		party_AST_defence_movement = { allowed = { always = no } }
+		party_AST_democratic_labour_party = { allowed = { always = no } }
+		#NZL
+		party_NZL_united_party = { allowed = { always = no } }
+		#JAP
+		party_JAP_constitutional_democratic = { allowed = { always = no } }
+		party_JAP_association_of_friends_of_constitutional_government = { allowed = { always = no } }
+		party_JAP_labour_famer_party = { allowed = { always = no } }
+		party_JAP_business_fellow_thinkers_club = { allowed = { always = no } }
+		party_JAP_house_of_yamato = { allowed = { always = no } }
+		party_JAP_navy  = { allowed = { always = no } }
+		#CHI
+		party_CHI_national_revolutionary_army = { allowed = { always = no } }
+	}
+}

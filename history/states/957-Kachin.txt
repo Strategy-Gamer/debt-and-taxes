@@ -1,0 +1,30 @@
+state={
+	id=957
+	name="STATE_957"
+	provinces={
+		1082 1197 1934 4087 4318 4425 4588 4996 8063 10920 
+	}
+	history={
+		owner=RAJ
+		add_core_of=BRM
+		buildings={
+			infrastructure=1
+		}
+		victory_points = {
+			4425 1
+		}
+		add_dynamic_modifier = {
+			modifier = soil_quality_marginal
+		}
+		add_dynamic_modifier = {
+			modifier = climate_mild_subtropic
+		}
+		add_dynamic_modifier = {
+			modifier = terrain_large_river
+		}
+	}
+	state_category=pastoral
+	manpower=278338
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

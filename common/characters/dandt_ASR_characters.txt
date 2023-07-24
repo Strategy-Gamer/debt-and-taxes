@@ -1,0 +1,17 @@
+characters = {
+	#
+		ASR_sayyid_al_hasan_ibn_al_idrisid = {
+			name = "Sayyid al-Hasan ibn al-Isdrisid"
+			#https://en.wikipedia.org/wiki/Idrisid_Emirate_of_Asir
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ASR_sayyid_al_hasan_ibn_al_idrisid
+				}
+			}
+			country_leader = {
+				ideology = despotism
+			}
+			#ideology_reactionary
+		}
+	#
+}
