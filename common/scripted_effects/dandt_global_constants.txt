@@ -1,0 +1,824 @@
+dandt_constants_setup = {
+
+	# Country Colors
+	GER = {
+		set_variable = { global.red@THIS = 0.541 } # 138
+		set_variable = { global.green@THIS = 0.607 } # 155
+		set_variable = { global.blue@THIS = 0.627 } # 454
+	} #
+	CZE = {
+		set_variable = { global.red@THIS = 0.211 } # 54
+		set_variable = { global.green@THIS = 0.654 } # 167
+		set_variable = { global.blue@THIS = 0.611 } # 156
+	} #
+	HOL = {
+		set_variable = { global.red@THIS = 0.796 } # 203
+		set_variable = { global.green@THIS = 0.541 } # 138
+		set_variable = { global.blue@THIS = 0.290 } # 74
+	} #
+	BEL = {
+		set_variable = { global.red@THIS = 0.756 } # 193
+		set_variable = { global.green@THIS = 0.670 } # 171
+		set_variable = { global.blue@THIS = 0.031 } # 8
+	} #
+	LUX = {
+		set_variable = { global.red@THIS = 0.254 } # 65
+		set_variable = { global.green@THIS = 0.686 } # 175
+		set_variable = { global.blue@THIS = 0.701 } # 179
+	} #
+	FRA = {
+		set_variable = { global.red@THIS = 0.223 } # 57
+		set_variable = { global.green@THIS = 0.443 } # 113
+		set_variable = { global.blue@THIS = 0.894 } # 228
+	} #
+	SWE = {
+		set_variable = { global.red@THIS = 0.141 } # 36
+		set_variable = { global.green@THIS = 0.517 } # 132
+		set_variable = { global.blue@THIS = 0.968 } # 247
+	} #
+	SOV = {
+		set_variable = { global.red@THIS = 0.490 } # 125
+		set_variable = { global.green@THIS = 0.050 } # 13
+		set_variable = { global.blue@THIS = 0.094 } # 24
+	} #
+	ENG = {
+		set_variable = { global.red@THIS = 0.788 } # 201
+		set_variable = { global.green@THIS = 0.219 } # 56
+		set_variable = { global.blue@THIS = 0.364 } # 93
+	} #
+	POL = {
+		set_variable = { global.red@THIS = 0.839 } # 214
+		set_variable = { global.green@THIS = 0.4 } # 102
+		set_variable = { global.blue@THIS = 0.545 } # 139
+	} #
+	AUS = {
+		set_variable = { global.red@THIS = 0.760 } # 194
+		set_variable = { global.green@THIS = 0.776 } # 198
+		set_variable = { global.blue@THIS = 0.843 } # 215
+	} #
+	LIT = {
+		set_variable = { global.red@THIS = 0.858 } # 219
+		set_variable = { global.green@THIS = 0.858 } # 219
+		set_variable = { global.blue@THIS = 0.466 } # 119
+	} #
+	EST = {
+		set_variable = { global.red@THIS = 0.196 } # 50
+		set_variable = { global.green@THIS = 0.529 } # 135
+		set_variable = { global.blue@THIS = 0.686 } # 175
+	} #
+	LAT = {
+		set_variable = { global.red@THIS = 0.294 } # 75
+		set_variable = { global.green@THIS = 0.301 } # 77
+		set_variable = { global.blue@THIS = 0.729 } # 186
+	} #
+	SPR = {
+		set_variable = { global.red@THIS = 0.921 } # 235
+		set_variable = { global.green@THIS = 0.686 } # 175
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	ITA = {
+		set_variable = { global.red@THIS = 0.262 } # 67
+		set_variable = { global.green@THIS = 0.498 } # 127
+		set_variable = { global.blue@THIS = 0.247 } # 63
+	} #
+	ROM = {
+		set_variable = { global.red@THIS = 0.843 } # 215
+		set_variable = { global.green@THIS = 0.768 } # 196
+		set_variable = { global.blue@THIS = 0.282 } # 72
+	} #
+	YUG = {
+		set_variable = { global.red@THIS = 0.282 } # 72
+		set_variable = { global.green@THIS = 0.286 } # 73
+		set_variable = { global.blue@THIS = 0.494 } # 126
+	} #
+	SWI = {
+		set_variable = { global.red@THIS = 0.627 } # 160
+		set_variable = { global.green@THIS = 0 } # 0
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	TUR = {
+		set_variable = { global.red@THIS = 0.792 } # 202
+		set_variable = { global.green@THIS = 0.074 } # 19
+		set_variable = { global.blue@THIS = 0.156 } # 40
+	} #
+	GRE = {
+		set_variable = { global.red@THIS = 0.364 } # 93
+		set_variable = { global.green@THIS = 0.709 } # 181
+		set_variable = { global.blue@THIS = 0.890 } # 227
+	} #
+	ALB = {
+		set_variable = { global.red@THIS = 0.584 } # 149
+		set_variable = { global.green@THIS = 0.176 } # 45
+		set_variable = { global.blue@THIS = 0.4 } # 102
+	} #
+	NOR = {
+		set_variable = { global.red@THIS = 0.435 } # 111
+		set_variable = { global.green@THIS = 0.278 } # 71
+		set_variable = { global.blue@THIS = 0.278 } # 71
+	} #
+	DEN = {
+		set_variable = { global.red@THIS = 0.658 } # 168
+		set_variable = { global.green@THIS = 0.219 } # 56
+		set_variable = { global.blue@THIS = 0.196 } # 50
+	} #
+	BUL = {
+		set_variable = { global.red@THIS = 0.2 } # 51
+		set_variable = { global.green@THIS = 0.607 } # 155
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	POR = {
+		set_variable = { global.red@THIS = 0.152 } # 39
+		set_variable = { global.green@THIS = 0.454 } # 116
+		set_variable = { global.blue@THIS = 0.274 } # 70
+	} #
+	FIN = {
+		set_variable = { global.red@THIS = 0.803 } # 205
+		set_variable = { global.green@THIS = 0.831 } # 212
+		set_variable = { global.blue@THIS = 0.894 } # 228
+	} #
+	IRE = {
+		set_variable = { global.red@THIS = 0.313 } # 80
+		set_variable = { global.green@THIS = 0.623 } # 159
+		set_variable = { global.blue@THIS = 0.352 } # 90
+	} #
+	HUN = {
+		set_variable = { global.red@THIS = 0.976 } # 249
+		set_variable = { global.green@THIS = 0.494 } # 126
+		set_variable = { global.blue@THIS = 0.384 } # 98
+	} #
+	AFG = {
+		set_variable = { global.red@THIS = 0.250 } # 64
+		set_variable = { global.green@THIS = 0.627 } # 160
+		set_variable = { global.blue@THIS = 0.654 } # 167
+	} #
+	ARG = {
+		set_variable = { global.red@THIS = 0.333 } # 85
+		set_variable = { global.green@THIS = 0.588 } # 150
+		set_variable = { global.blue@THIS = 0.784 } # 200
+	} #
+	ASR = {
+		set_variable = { global.red@THIS = 0.666 } # 170
+		set_variable = { global.green@THIS = 0.549 } # 140
+		set_variable = { global.blue@THIS = 0.176 } # 45
+	} #
+	AST = {
+		set_variable = { global.red@THIS = 0.019 } # 5
+		set_variable = { global.green@THIS = 0.039 } # 10
+		set_variable = { global.blue@THIS = 0.701 } # 179
+	} #
+	BHU = {
+		set_variable = { global.red@THIS = 0.674 } # 172
+		set_variable = { global.green@THIS = 0.478 } # 122
+		set_variable = { global.blue@THIS = 0.345 } # 88
+	} #
+	BOL = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.705 } # 180
+		set_variable = { global.blue@THIS = 0.533 } # 136
+	} #
+	BRA = {
+		set_variable = { global.red@THIS = 0.298 } # 76
+		set_variable = { global.green@THIS = 0.568 } # 145
+		set_variable = { global.blue@THIS = 0.247 } # 63
+	} #
+	CAN = {
+		set_variable = { global.red@THIS = 0.913 } # 233
+		set_variable = { global.green@THIS = 0.231 } # 59
+		set_variable = { global.blue@THIS = 0.231 } # 59
+	} #
+	CHI = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 0.290 } # 74
+		set_variable = { global.blue@THIS = 0.498 } # 127
+	} #
+	CHL = {
+		set_variable = { global.red@THIS = 0.607 } # 155
+		set_variable = { global.green@THIS = 0.396 } # 101
+		set_variable = { global.blue@THIS = 0.419 } # 107
+	} #
+	COL = {
+		set_variable = { global.red@THIS = 0.870 } # 222
+		set_variable = { global.green@THIS = 0.733 } # 187
+		set_variable = { global.blue@THIS = 0.356 } # 91
+	} #
+	COS = {
+		set_variable = { global.red@THIS = 0.823 } # 210
+		set_variable = { global.green@THIS = 0.745 } # 190
+		set_variable = { global.blue@THIS = 0.058 } # 15
+	} #
+	ECU = {
+		set_variable = { global.red@THIS = 0.976 } # 249
+		set_variable = { global.green@THIS = 0.572 } # 146
+		set_variable = { global.blue@THIS = 0.384 } # 98
+	} #
+	ELS = {
+		set_variable = { global.red@THIS = 0.078 } # 20
+		set_variable = { global.green@THIS = 0.490 } # 125
+		set_variable = { global.blue@THIS = 0.901 } # 230
+	} #
+	ETH = {
+		set_variable = { global.red@THIS = 0.768 } # 196
+		set_variable = { global.green@THIS = 0.486 } # 124
+		set_variable = { global.blue@THIS = 0.407 } # 104
+	} #
+	GUA = {
+		set_variable = { global.red@THIS = 0.282 } # 72
+		set_variable = { global.green@THIS = 0.192 } # 49
+		set_variable = { global.blue@THIS = 0.439 } # 112
+	} #
+	HON = {
+		set_variable = { global.red@THIS = 0.501 } # 128
+		set_variable = { global.green@THIS = 0.568 } # 145
+		set_variable = { global.blue@THIS = 0.254 } # 65
+	} #
+	IRQ = {
+		set_variable = { global.red@THIS = 0.768 } # 196
+		set_variable = { global.green@THIS = 0.615 } # 157
+		set_variable = { global.blue@THIS = 0.639 } # 163
+	} #
+	JAP = {
+		set_variable = { global.red@THIS = 0.976 } # 
+		set_variable = { global.green@THIS = 0.494 } # 
+		set_variable = { global.blue@THIS = 0.384 } # 
+	} #
+	LIB = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 0.588 } # 150
+		set_variable = { global.blue@THIS = 0.588 } # 150
+	} #
+	MEX = {
+		set_variable = { global.red@THIS = 0.407 } # 104
+		set_variable = { global.green@THIS = 0.596 } # 152
+		set_variable = { global.blue@THIS = 0.325 } # 83
+	} #
+	MEC = {
+		set_variable = { global.red@THIS = 0.549 } # 140
+		set_variable = { global.green@THIS = 0.784 } # 200
+		set_variable = { global.blue@THIS = 0.470 } # 120
+	} #
+	NEP = {
+		set_variable = { global.red@THIS = 0.596 } # 152
+		set_variable = { global.green@THIS = 0.509 } # 130
+		set_variable = { global.blue@THIS = 0.749 } # 191
+	} #
+	NIC = {
+		set_variable = { global.red@THIS = 0.572 } # 146
+		set_variable = { global.green@THIS = 0.701 } # 179
+		set_variable = { global.blue@THIS = 0.749 } # 191
+	} #
+	NZL = {
+		set_variable = { global.red@THIS = 0.627 } # 160
+		set_variable = { global.green@THIS = 0.627 } # 160
+		set_variable = { global.blue@THIS = 0.627 } # 160
+	} #
+	PAN = {
+		set_variable = { global.red@THIS = 0.941 } # 240
+		set_variable = { global.green@THIS = 0.235 } # 60
+		set_variable = { global.blue@THIS = 0.509 } # 130
+	} #
+	PER = {
+		set_variable = { global.red@THIS = 0.392 } # 100
+		set_variable = { global.green@THIS = 0.392 } # 100
+		set_variable = { global.blue@THIS = 0.392 } # 100
+	} #
+	PHI = {
+		set_variable = { global.red@THIS = 0.768 } # 196
+		set_variable = { global.green@THIS = 0.384 } # 98
+		set_variable = { global.blue@THIS = 0.435 } # 111
+	} #
+	PRU = {
+		set_variable = { global.red@THIS = 0.647 } # 165
+		set_variable = { global.green@THIS = 0.058 } # 15
+		set_variable = { global.blue@THIS = 0.117 } # 30
+	} #
+	SAF = {
+		set_variable = { global.red@THIS = 0.764 } # 195
+		set_variable = { global.green@THIS = 0.419 } # 107
+		set_variable = { global.blue@THIS = 0.627 } # 160
+	} #
+	SAU = {
+		set_variable = { global.red@THIS = 0.098 } # 25
+		set_variable = { global.green@THIS = 0.490 } # 125
+		set_variable = { global.blue@THIS = 0.137 } # 35
+	} #
+	SIA = {
+		set_variable = { global.red@THIS = 0.392 } # 100
+		set_variable = { global.green@THIS = 0.627 } # 160
+		set_variable = { global.blue@THIS = 0.686 } # 175
+	} #
+	SIK = {
+		set_variable = { global.red@THIS = 0.278 } # 71
+		set_variable = { global.green@THIS = 0.745 } # 190
+		set_variable = { global.blue@THIS = 0.596 } # 152
+	} #
+	TIB = {
+		set_variable = { global.red@THIS = 0.313 } # 80
+		set_variable = { global.green@THIS = 0.450 } # 115
+		set_variable = { global.blue@THIS = 0.176 } # 45
+	} #
+	URG = {
+		set_variable = { global.red@THIS = 0.670 } # 171
+		set_variable = { global.green@THIS = 0.745 } # 190
+		set_variable = { global.blue@THIS = 0.596 } # 152
+	} #
+	VEN = {
+		set_variable = { global.red@THIS = 0.470 } # 120
+		set_variable = { global.green@THIS = 0.470 } # 120
+		set_variable = { global.blue@THIS = 0.470 } # 120
+	} #
+	YUN = {
+		set_variable = { global.red@THIS = 0.447 } # 114
+		set_variable = { global.green@THIS = 0.580 } # 148
+		set_variable = { global.blue@THIS = 0.313 } # 80
+	} #
+	USA = {
+		set_variable = { global.red@THIS = 0.078 } # 20
+		set_variable = { global.green@THIS = 0.521 } # 133
+		set_variable = { global.blue@THIS = 0.929 } # 237
+	} #
+	MON = {
+		set_variable = { global.red@THIS = 0.423 } # 108
+		set_variable = { global.green@THIS = 0.549 } # 140
+		set_variable = { global.blue@THIS = 0.164 } # 42
+	} #
+	MEN = {
+		set_variable = { global.red@THIS = 0.725 } # 185
+		set_variable = { global.green@THIS = 1 } # 255
+		set_variable = { global.blue@THIS = 0.596 } # 152
+	} #
+	TAN = {
+		set_variable = { global.red@THIS = 0.596 } # 152
+		set_variable = { global.green@THIS = 0.509 } # 130
+		set_variable = { global.blue@THIS = 0.749 } # 191
+	} #
+	PAR = {
+		set_variable = { global.red@THIS = 0.301 } # 77
+		set_variable = { global.green@THIS = 0.443 } # 113
+		set_variable = { global.blue@THIS = 0.894 } # 228
+	} #
+	CUB = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.392 } # 100
+		set_variable = { global.blue@THIS = 0.392 } # 100
+	} #
+	DOM = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 1 } # 255
+		set_variable = { global.blue@THIS = 1 } # 255
+	} #
+	HAI = {
+		set_variable = { global.red@THIS = 0.682 } # 174
+		set_variable = { global.green@THIS = 0.443 } # 113
+		set_variable = { global.blue@THIS = 0.443 } # 113
+	} #
+	YEM = {
+		set_variable = { global.red@THIS = 0.490 } # 125
+		set_variable = { global.green@THIS = 0.278 } # 71
+		set_variable = { global.blue@THIS = 0.301 } # 77
+	} #
+	OMA = {
+		set_variable = { global.red@THIS = 0.607 } # 155
+		set_variable = { global.green@THIS = 0.396 } # 101
+		set_variable = { global.blue@THIS = 0.419 } # 107
+	} #
+	SLO = {
+		set_variable = { global.red@THIS = 0.619 } # 158
+		set_variable = { global.green@THIS = 0.631 } # 161
+		set_variable = { global.blue@THIS = 0.737 } # 188
+	} #
+	RAJ = {
+		set_variable = { global.red@THIS = 0.886 } # 226
+		set_variable = { global.green@THIS = 0.529 } # 135
+		set_variable = { global.blue@THIS = 0.156 } # 40
+	} #
+	CRO = {
+		set_variable = { global.red@THIS = 0.901 } # 230
+		set_variable = { global.green@THIS = 0.274 } # 70
+		set_variable = { global.blue@THIS = 0.705 } # 180
+	} #
+	PRC = {
+		set_variable = { global.red@THIS = 0.960 } # 245
+		set_variable = { global.green@THIS = 0.047 } # 12
+		set_variable = { global.blue@THIS = 0.215 } # 55
+	} #
+	GXC = {
+		set_variable = { global.red@THIS = 0.278 } # 71
+		set_variable = { global.green@THIS = 0.443 } # 113
+		set_variable = { global.blue@THIS = 0.380 } # 97
+	} #
+	SHX = {
+		set_variable = { global.red@THIS = 0.549 } # 140
+		set_variable = { global.green@THIS = 0.313 } # 80
+		set_variable = { global.blue@THIS = 0.078 } # 20
+	} #
+	XSM = {
+		set_variable = { global.red@THIS = 0.411 } # 105
+		set_variable = { global.green@THIS = 0.352 } # 90
+		set_variable = { global.blue@THIS = 0.517 } # 132
+	} #
+	LBA = {
+		set_variable = { global.red@THIS = 0.784 } # 200
+		set_variable = { global.green@THIS = 0.705 } # 180
+		set_variable = { global.blue@THIS = 0.352 } # 90
+	} #
+	EGY = {
+		set_variable = { global.red@THIS = 0.901 } # 230
+		set_variable = { global.green@THIS = 0.901 } # 230
+		set_variable = { global.blue@THIS = 0.274 } # 70
+	} #
+	PAL = {
+		set_variable = { global.red@THIS = 0.666 } # 170
+		set_variable = { global.green@THIS = 0.490 } # 125
+		set_variable = { global.blue@THIS = 0.313 } # 80
+	} #
+	LEB = {
+		set_variable = { global.red@THIS = 0.509 } # 130
+		set_variable = { global.green@THIS = 0.588 } # 150
+		set_variable = { global.blue@THIS = 0.235 } # 60
+	} #
+	JOR = {
+		set_variable = { global.red@THIS = 0.435 } # 111
+		set_variable = { global.green@THIS = 0.215 } # 55
+		set_variable = { global.blue@THIS = 0.305 } # 78
+	} #
+	SYR = {
+		set_variable = { global.red@THIS = 0.392 } # 100
+		set_variable = { global.green@THIS = 0.392 } # 100
+		set_variable = { global.blue@THIS = 0.588 } # 150
+	} #
+	SER = {
+		set_variable = { global.red@THIS = 0.627 } # 160
+		set_variable = { global.green@THIS = 0.431 } # 110
+		set_variable = { global.blue@THIS = 0.431 } # 110
+	} #
+	ICE = {
+		set_variable = { global.red@THIS = 0.392 } # 100
+		set_variable = { global.green@THIS = 0.490 } # 125
+		set_variable = { global.blue@THIS = 0.686 } #  175
+	} #
+	UKR = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 0.313 } # 80
+		set_variable = { global.blue@THIS = 0.901 } # 230
+	} #
+	AZR = {
+		set_variable = { global.red@THIS = 0.270 } # 69
+		set_variable = { global.green@THIS = 0.592 } # 151
+		set_variable = { global.blue@THIS = 0.192 } # 49
+	} #
+	GEO = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.588 } # 150
+		set_variable = { global.blue@THIS = 0.588 } # 150
+	} #
+	ARM = {
+		set_variable = { global.red@THIS = 0.690 } # 176
+		set_variable = { global.green@THIS = 0.4 } # 102
+		set_variable = { global.blue@THIS = 0.705 } # 180
+	} #
+	LAO = {
+		set_variable = { global.red@THIS = 0.690 } # 176
+		set_variable = { global.green@THIS = 0.4 } # 102
+		set_variable = { global.blue@THIS = 0.533 } # 136
+	} #
+	INS = {
+		set_variable = { global.red@THIS = 0.156 } # 40
+		set_variable = { global.green@THIS = 0.196 } # 50
+		set_variable = { global.blue@THIS = 0.470 } # 120
+	} #
+	CAM = {
+		set_variable = { global.red@THIS = 0.392 } # 100
+		set_variable = { global.green@THIS = 0.278 } # 71
+		set_variable = { global.blue@THIS = 0.588 } # 150
+	} #
+	MAL = {
+		set_variable = { global.red@THIS = 0.772 } # 197
+		set_variable = { global.green@THIS = 0.376 } # 96
+		set_variable = { global.blue@THIS = 0.392 } # 100
+	} #
+	MNT = {
+		set_variable = { global.red@THIS = 0.301 } # 77
+		set_variable = { global.green@THIS = 0.352 } # 90
+		set_variable = { global.blue@THIS = 0.411 } # 105
+	} #
+	BLR = {
+		set_variable = { global.red@THIS = 0.705 } # 180
+		set_variable = { global.green@THIS = 0.862 } # 220
+		set_variable = { global.blue@THIS = 0.745 } # 190
+	} #
+	MAN = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.470 } # 120
+		set_variable = { global.blue@THIS = 0.278 } # 71
+	} #
+	ANG = {
+		set_variable = { global.red@THIS = 0.145 } # 37
+		set_variable = { global.green@THIS = 0.549 } # 140
+		set_variable = { global.blue@THIS = 0.239 } # 61
+	} #
+	COG = {
+		set_variable = { global.red@THIS = 0.596 } # 152
+		set_variable = { global.green@THIS = 0.623 } # 159
+		set_variable = { global.blue@THIS = 0.819 } # 209
+	} #
+	MZB = {
+		set_variable = { global.red@THIS = 0.439 } # 112
+		set_variable = { global.green@THIS = 0.243 } # 62
+		set_variable = { global.blue@THIS = 0.352 } # 90
+	} #
+	KEN = {
+		set_variable = { global.red@THIS = 0.568 } # 145
+		set_variable = { global.green@THIS = 0.403 } # 103
+		set_variable = { global.blue@THIS = 0.054 } # 14
+	} #
+	ZIM = {
+		set_variable = { global.red@THIS = 0.027 } # 7
+		set_variable = { global.green@THIS = 0.027 } # 7
+		set_variable = { global.blue@THIS = 0.937 } # 239
+	} #
+	BOT = {
+		set_variable = { global.red@THIS = 0.043 } # 11
+		set_variable = { global.green@THIS = 0.517 } # 132
+		set_variable = { global.blue@THIS = 0.439 } # 112
+	} #
+	PAK = {
+		set_variable = { global.red@THIS = 0.082 } # 21
+		set_variable = { global.green@THIS = 0.149 } # 38
+		set_variable = { global.blue@THIS = 0.258 } # 66
+	} #
+	WGR = {
+		set_variable = { global.red@THIS = 0.764 } # 195
+		set_variable = { global.green@THIS = 0.925 } # 236
+		set_variable = { global.blue@THIS = 0.901 } # 230
+	} #
+	DDR = {
+		set_variable = { global.red@THIS = 0.470 } # 120
+		set_variable = { global.green@THIS = 0.588 } # 150
+		set_variable = { global.blue@THIS = 0.313 } # 80
+	} #
+	KOR = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.941 } # 240
+		set_variable = { global.blue@THIS = 0.764 } # 195
+	} #
+	ISR = {
+		set_variable = { global.red@THIS = 0.596 } # 152
+		set_variable = { global.green@THIS = 0.509 } # 130
+		set_variable = { global.blue@THIS = 0.749 } # 191
+	} #
+	CSA = {
+		set_variable = { global.red@THIS = 0.568 } # 145
+		set_variable = { global.green@THIS = 0.639 } # 163
+		set_variable = { global.blue@THIS = 0.690 } # 176
+	} #
+	BAY = {
+		set_variable = { global.red@THIS = 0.913 } # 233
+		set_variable = { global.green@THIS = 0.905 } # 231
+		set_variable = { global.blue@THIS = 0.964 } # 246
+	} #
+	MEK = {
+		set_variable = { global.red@THIS = 0.729 } # 186
+		set_variable = { global.green@THIS = 0.960 } # 245
+		set_variable = { global.blue@THIS = 0.337 } # 86
+	} #
+	PRE = {
+		set_variable = { global.red@THIS = 0.627 } # 160
+		set_variable = { global.green@THIS = 0.627 } # 160
+		set_variable = { global.blue@THIS = 0.627 } # 160
+	} #
+	SAX = {
+		set_variable = { global.red@THIS = 0.4 } # 102
+		set_variable = { global.green@THIS = 0.4 } # 102
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	HAN = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0 } # 0
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	WUR = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.8 } # 204
+		set_variable = { global.blue@THIS = 0.6 } # 153
+	} #
+	SHL = {
+		set_variable = { global.red@THIS = 0.2 } # 51
+		set_variable = { global.green@THIS = 0.2 } # 51
+		set_variable = { global.blue@THIS = 1 } # 255
+	} #
+	ALT = {
+		set_variable = { global.red@THIS = 0.8 } # 204
+		set_variable = { global.green@THIS = 1 } # 255
+		set_variable = { global.blue@THIS = 1 } # 255
+	} #
+	KAL = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.8 } # 204
+		set_variable = { global.blue@THIS = 0 } # 0 
+	} #
+	CRI = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.313 } # 80
+		set_variable = { global.blue@THIS = 0.313 } # 80
+	} #
+	TAT = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.2 } # 51
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	CIN = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 0.8 } # 204
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	DAG = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 0.8 } # 204
+		set_variable = { global.blue@THIS = 1 } # 255
+	} #
+	BYA = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 0.250 } # 64
+		set_variable = { global.blue@THIS = 1 } # 255
+	} #
+	FER = {
+		set_variable = { global.red@THIS = 0.701 } # 179
+		set_variable = { global.green@THIS = 0.176 } # 45
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	CKK = {
+		set_variable = { global.red@THIS = 0.701 } # 179
+		set_variable = { global.green@THIS = 0.701 } # 179
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	YAK = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 1 } # 255
+		set_variable = { global.blue@THIS = 1 } # 255
+	} #
+	VLA = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.8 } # 204
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	KKP = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.501 } # 128
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	YAM = {
+		set_variable = { global.red@THIS = 0.8 } # 204
+		set_variable = { global.green@THIS = 0.6 } # 153
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	TAY = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 0.4 } # 102
+		set_variable = { global.blue@THIS = 0.6 } # 153
+	} #
+	OVO = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 0.8 } # 153
+		set_variable = { global.blue@THIS = 1 } # 51
+	} #
+	NEN = {
+		set_variable = { global.red@THIS = 0 } # 204
+		set_variable = { global.green@THIS = 0.6 } # 255
+		set_variable = { global.blue@THIS = 0.8 } # 204
+	} #
+	KOM = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 0.901 } # 230
+		set_variable = { global.blue@THIS = 0.721 } # 184
+	} #
+	ABK = {
+		set_variable = { global.red@THIS = 0.2 } # 51
+		set_variable = { global.green@THIS = 0.8 } # 204
+		set_variable = { global.blue@THIS = 0.2 } # 51
+	} #
+	KBK = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.278 } # 71
+		set_variable = { global.blue@THIS = 0.101 } # 26
+	} #
+	NOA = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.666 } # 170
+		set_variable = { global.blue@THIS = 0 } # 0
+	} #
+	VGE = {
+		set_variable = { global.red@THIS = 0.6 } # 153
+		set_variable = { global.green@THIS = 0.6 } # 153
+		set_variable = { global.blue@THIS = 0.6 } # 153
+	} #
+	BSK = {
+		set_variable = { global.red@THIS = 0.2 } # 51
+		set_variable = { global.green@THIS = 0.8 } # 204
+		set_variable = { global.blue@THIS = 0.2 } # 51
+	} #
+	BUK = {
+		set_variable = { global.red@THIS = 0.8 } # 204
+		set_variable = { global.green@THIS = 0.6 } # 153
+		set_variable = { global.blue@THIS = 0.4 } # 102
+	} #
+	KHI = {
+		set_variable = { global.red@THIS = 0.2 } # 51
+		set_variable = { global.green@THIS = 0.8 } # 204
+		set_variable = { global.blue@THIS = 1 } # 255
+	} #
+	UDM = {
+		set_variable = { global.red@THIS = 0.250 } # 64
+		set_variable = { global.green@THIS = 0.250 } # 64
+		set_variable = { global.blue@THIS = 0.250 } # 64
+	} #
+	MEL = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.901 } # 230
+		set_variable = { global.blue@THIS = 0.901 } # 230
+	} #
+	CHU = {
+		set_variable = { global.red@THIS = 0.749 } # 191
+		set_variable = { global.green@THIS = 0.501 } # 128
+		set_variable = { global.blue@THIS = 0.250 } # 64
+	} #
+	AFA = {
+		set_variable = { global.red@THIS = 0.392 } # 100
+		set_variable = { global.green@THIS = 0.352 } # 90
+		set_variable = { global.blue@THIS = 0.521 } # 133
+	} #
+	SAA = {
+		set_variable = { global.red@THIS = 0.227 } # 58
+		set_variable = { global.green@THIS = 0.447 } # 114
+		set_variable = { global.blue@THIS = 0.898 } # 229
+	} #
+	TKS = {
+		set_variable = { global.red@THIS = 0.784 } # 200
+		set_variable = { global.green@THIS = 0.352 } # 90
+		set_variable = { global.blue@THIS = 0.521 } # 133
+	} #
+	DGS = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.509 } # 130
+		set_variable = { global.blue@THIS = 0.078 } # 20
+	} #
+	DGS = {
+		set_variable = { global.red@THIS = 0.8 } # 204
+		set_variable = { global.green@THIS = 0.6 } # 153
+		set_variable = { global.blue@THIS = 1 } # 255
+	} #
+	GSU = {
+		set_variable = { global.red@THIS = 0.392 } # 100
+		set_variable = { global.green@THIS = 0.392 } # 100
+		set_variable = { global.blue@THIS = 1 } # 255
+	} #
+	XIK = {
+		set_variable = { global.red@THIS = 0.705 } # 180
+		set_variable = { global.green@THIS = 0.784 } # 200
+		set_variable = { global.blue@THIS = 0.705 } # 180
+	} #
+	CGQ = {
+		set_variable = { global.red@THIS = 0.517 } # 132
+		set_variable = { global.green@THIS = 0.188 } # 48
+		set_variable = { global.blue@THIS = 0.352 } # 90
+	} #
+	CDU = {
+		set_variable = { global.red@THIS = 0.427 } # 109
+		set_variable = { global.green@THIS = 0.301 } # 77
+		set_variable = { global.blue@THIS = 0.196 } # 50
+	} #
+	BAZ = {
+		set_variable = { global.red@THIS = 0.658 } # 168
+		set_variable = { global.green@THIS = 0.333 } # 85
+		set_variable = { global.blue@THIS = 0.192 } # 49
+	} #
+	GUI = {
+		set_variable = { global.red@THIS = 0.078 } # 20
+		set_variable = { global.green@THIS = 0.6 } # 153
+		set_variable = { global.blue@THIS = 0.6 } # 153
+	} #
+	GGD = {
+		set_variable = { global.red@THIS = 0 } # 0
+		set_variable = { global.green@THIS = 0.4 } # 102
+		set_variable = { global.blue@THIS = 0.215 } # 55
+	} #
+	FEG = {
+		set_variable = { global.red@THIS = 1 } # 255
+		set_variable = { global.green@THIS = 0.698 } # 178
+		set_variable = { global.blue@THIS = 0.498 } # 127
+	} #
+	GUO = {
+		set_variable = { global.red@THIS = 0.929 } # 237
+		set_variable = { global.green@THIS = 0.662 } # 169
+		set_variable = { global.blue@THIS = 0.035 } # 9
+	} #
+	SHA = {
+		set_variable = { global.red@THIS = 0.929 } # 237
+		set_variable = { global.green@THIS = 0.141 } # 36
+		set_variable = { global.blue@THIS = 0.035 } # 9
+	} #
+	KML = {
+		set_variable = { global.red@THIS = 0.411 } # 105
+		set_variable = { global.green@THIS = 0.411 } # 105
+		set_variable = { global.blue@THIS = 0.078 } # 20
+	} #
+}
