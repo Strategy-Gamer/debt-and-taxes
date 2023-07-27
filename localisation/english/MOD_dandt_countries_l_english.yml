@@ -117,7 +117,7 @@
  XIK_1929_Cosmetic_ADJ: "Xikangese"
 
  CGQ: "Chongqing"
- CGQ_DEF: "the Autonomous Republic of Chongqing"
+ CGQ_DEF: "the Autonomous City of Chongqing"
  CGQ_ADJ: "Chongqingese"
 
  CGQ_1929_Cosmetic: "Chongqing Clique"
@@ -148,7 +148,7 @@
  GUI_1929_Cosmetic_DEF: "the Guizhou Clique"
  GUI_1929_Cosmetic_ADJ: "Guizhoun"
 
- GXC: "Guangxi DC"
+ GXC: "Guangxi Defense Council"
  GXC_DEF: "the Guangxi Defense Council"
  GXC_ADJ: "Guangxi"
 
@@ -156,8 +156,8 @@
  GXC_1929_Cosmetic_DEF: "the Guangxi Clique"
  GXC_1929_Cosmetic_ADJ: "Guangxi"
 
- GGD: "Guangdong"
- GGD_DEF: "the United Provinces of Guangdong"
+ GGD: "Guangdong Federation"
+ GGD_DEF: "the Federated Municipalities of Guangdong"
  GGD_ADJ: "Guangdongese"
 
  GGD_1929_Cosmetic: "Guangdong Clique"
@@ -176,8 +176,8 @@
  FEG_1929_Cosmetic_DEF: "the Fengtian Clique"
  FEG_1929_Cosmetic_ADJ: "Manchurian"
 
- GUO: "Jin"
- GUO_DEF: "the Constitutional Kingdom of Jin"
+ GUO: "Yellow River Republic"
+ GUO_DEF: "the Constitutional Christian Republic of the Yellow River"
  GUO_ADJ: "Jin"
 
  GUO_1929_Cosmetic: "Guominjun"
@@ -246,11 +246,11 @@
 
  SIK: "Xinjiang"
  SIK_DEF: "Xinjiang"
- SIK_ADJ: "Xinjiang"
+ SIK_ADJ: "Xinjiangese"
 
  SIK_1929_Cosmetic: "Xinjiang Clique"
- SIK_1929_Cosmetic_DEF: "Xinjiang Clique"
- SIK_1929_Cosmetic_ADJ: "Xinjiang Clique"
+ SIK_1929_Cosmetic_DEF: "the Xinjiang Clique"
+ SIK_1929_Cosmetic_ADJ: "Xinjiangese"
 
  VIN_1929_Cosmetic: "French Cochinchina"
  VIN_1929_Cosmetic_DEF: "the Constituent Territory of French Cochinchina"

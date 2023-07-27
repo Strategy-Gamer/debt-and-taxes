@@ -149,7 +149,7 @@
  MAPMODE_MARKET_MAP_MODE: "Markets"
  MAPMODE_MARKET_MAP_MODE_NAME: "Markets"
  MAPMODE_MARKET_MAP_MODE_DESCRIPTION: ""
- market_map_mode_tooltip: "§YTrade Market§! of §C[FROM.CONTROLLER.GetNameWithFlag]§!:\n  §LMarket:§! [FROM.GetControllerMarketWithFlag]\n  §LCapital:§! [FROM.GetControllerMarketCapital]\n  §LMembership:§! [FROM.GetControllerMarketMembershipRank]\n\n§YTrade Access:§! [?FROM.GetControllerTradeStatus]"
+ market_map_mode_tooltip: "§YTrade Market§! of [FROM.CONTROLLER.GetFlag] §C[FROM.CONTROLLER.GetName]§!:\n  §LZone:§! [FROM.GetControllerMarketWithFlag]\n  §LCapital:§! [FROM.GetControllerMarketCapital]\n  §LMembership:§! [FROM.GetControllerMarketMembershipRank]\n\n§YTrade Access:§! [?FROM.GetControllerTradeStatus]"
  market_map_mode_tooltip_delayed: ""
 #Unique
 

@@ -20,6 +20,8 @@ focus_tree  ={
 
 		cost = 10
 
+		ai_will_do = { base = 1 }
+
 		completion_reward = {
 			country_event = CHI_central_plains_war.1
 		}
