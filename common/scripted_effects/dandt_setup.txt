@@ -864,26 +864,56 @@ setup = {
 #COUNTRIES
 	market_setup = {
 		# Market Capitals
+		clear_variable = market_leader
 		if = {
 			limit = {
 				NOT = { has_variable = market_capital }
 			}
 			set_variable = { market_capital = capital }
 		}
-		set_variable = { selected_market = market_capital:controller }
+		set_variable = { selected_market = market_capital.controller }
 
 		# Market Countries & Leader
+
+
 		if = {
 			limit = {
 				OR = {
-					NOT = { has_variable = market_leader }
 					check_variable = { market_leader = THIS }
+					AND = {
+						NOT = { has_variable = market_leader }
+						is_subject = no
+					}
 				}
 			}
 			set_variable = { market_leader = THIS }
-			
-			clear_array = market_countries
-			add_to_array = { market_countries = THIS }
+			if = {
+				limit = {
+					NOT = {
+						is_in_array = {
+							array = market_countries
+							value = THIS
+						}
+					}
+				}
+				add_to_array = { market_countries = THIS }
+			}
+			for_each_scope_loop = {
+				array = subjects
+				
+				set_variable = { market_leader = OVERLORD }
+				if = {
+					limit = {
+						NOT = {
+							is_in_array = {
+								array = OVERLORD.market_countries
+								value = THIS
+							}
+						}
+					}
+					add_to_array = { OVERLORD:market_countries = THIS }
+				}
+			}
 		}
 	}
 	country_resource_setup = {
