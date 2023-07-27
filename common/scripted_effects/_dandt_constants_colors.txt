@@ -384,9 +384,9 @@ dandt_constants_2 = {
 	#
 	#Countries
 		GER = {
-			set_variable = { global.red@THIS = 0.541 } # 138
-			set_variable = { global.green@THIS = 0.607 } # 155
-			set_variable = { global.blue@THIS = 0.627 } # 454
+			set_variable = { global.red@THIS = 0.176 } # 45
+			set_variable = { global.green@THIS = 0.207 } # 53
+			set_variable = { global.blue@THIS = 0.254 } # 65
 		} #
 		CZE = {
 			set_variable = { global.red@THIS = 0.211 } # 54
@@ -1203,5 +1203,10 @@ dandt_constants_2 = {
 			set_variable = { global.green@THIS = 0.411 } # 105
 			set_variable = { global.blue@THIS = 0.078 } # 20
 		}
+		VIN = {
+			set_variable = { global.red@THIS = 0.223 } # 57
+			set_variable = { global.green@THIS = 0.443 } # 113
+			set_variable = { global.blue@THIS = 0.894 } # 228
+		} #
 	#
 }
