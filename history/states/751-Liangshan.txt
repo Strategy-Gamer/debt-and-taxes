@@ -19,7 +19,7 @@ state={
 			modifier = soil_quality_marginal
 		}
 		add_dynamic_modifier = {
-			modifier = terrain_large_navigable_river
+			modifier = terrain_small_navigable_river
 		}
 	}
 

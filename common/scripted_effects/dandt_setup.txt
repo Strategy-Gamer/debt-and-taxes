@@ -53,6 +53,8 @@ setup = {
 	add_to_array = { global.dandt_countries = BUL }
 	add_to_array = { global.dandt_countries = SWI }
 	add_to_array = { global.dandt_countries = BEL }
+	add_to_array = { global.dandt_countries = ENG }
+	add_to_array = { global.dandt_countries = SAF }
 
 	for_each_scope_loop = {
 		array = global.dandt_countries
@@ -864,54 +866,73 @@ setup = {
 #COUNTRIES
 	market_setup = {
 		# Market Capitals
-		clear_variable = market_leader
-		if = {
-			limit = {
-				NOT = { has_variable = market_capital }
-			}
-			set_variable = { market_capital = capital }
-		}
 		set_variable = { selected_market = market_capital.controller }
 
 		# Market Countries & Leader
 
-
 		if = {
-			limit = {
-				OR = {
-					check_variable = { market_leader = THIS }
-					AND = {
-						NOT = { has_variable = market_leader }
-						is_subject = no
-					}
-				}
-			}
-			set_variable = { market_leader = THIS }
+			limit = { is_subject = no }
 			if = {
 				limit = {
-					NOT = {
-						is_in_array = {
-							array = market_countries
-							value = THIS
-						}
+					OR = {
+						check_variable = { market_leader = THIS }
+						NOT = { has_variable = market_leader }
 					}
 				}
-				add_to_array = { market_countries = THIS }
-			}
-			for_each_scope_loop = {
-				array = subjects
-				
-				set_variable = { market_leader = OVERLORD }
+				set_variable = { market_leader = THIS }
+				set_variable = { market_capital = capital }
 				if = {
 					limit = {
 						NOT = {
 							is_in_array = {
-								array = OVERLORD.market_countries
+								array = market_countries
 								value = THIS
 							}
 						}
 					}
-					add_to_array = { OVERLORD:market_countries = THIS }
+					add_to_array = {
+						array = market_countries
+						value = THIS
+					}
+				}
+			}
+			else = {
+				set_variable = { market_capital = market_leader:capital }
+				if = {
+					limit = {
+						NOT = {
+							is_in_array = {
+								array = market_leader.market_countries
+								value = THIS
+							}
+						}
+					}
+					add_to_array = {
+						array = market_leader.market_countries
+						value = THIS
+					}
+				}
+			}
+		}
+		for_each_scope_loop = {
+			array = subjects
+			
+			set_variable = { market_leader = PREV.market_leader }
+			set_variable = { market_capital = PREV.market_capital }
+			PREV = {
+				if = {
+					limit = {
+						NOT = {
+							is_in_array = {
+								array = market_leader:market_countries
+								value = PREV
+							}
+						}
+					}
+					add_to_array = {
+						array = market_leader:market_countries
+						value = PREV
+					}
 				}
 			}
 		}

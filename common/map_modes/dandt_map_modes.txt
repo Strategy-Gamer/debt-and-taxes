@@ -1020,19 +1020,21 @@ scripted_map_modes = {
 			type = country
 
 			color = {
-				if = {
-					limit = { has_variable = market_leader }
-					set_temp_variable = { red = global.red@var:market_leader }
-					set_temp_variable = { green = global.green@var:market_leader }
-					set_temp_variable = { blue = global.blue@var:market_leader }
+				FROM = {
+					if = {
+						limit = { has_variable = market_leader }
+						set_temp_variable = { red = global.red@var:market_leader }
+						set_temp_variable = { green = global.green@var:market_leader }
+						set_temp_variable = { blue = global.blue@var:market_leader }
+					}
+					else = {
+						set_temp_variable = { red = global.red@var:THIS }
+						set_temp_variable = { green = global.green@var:THIS }
+						set_temp_variable = { blue = global.blue@var:THIS }
+					}
+					set_temp_variable = { alpha = 1 }
+					set_temp_variable = { thickness = 40 }
 				}
-				else = {
-					set_temp_variable = { red = global.red@var:THIS }
-					set_temp_variable = { green = global.green@var:THIS }
-					set_temp_variable = { blue = global.blue@var:THIS }
-				}
-				set_temp_variable = { alpha = 1 }
-				set_temp_variable = { thickness = 40 }
 			}
 
 			targets = {
@@ -1054,15 +1056,15 @@ scripted_map_modes = {
 						}
 						set_temp_variable = { red = 0.5 }
 						set_temp_variable = { green = 0.5 }
-						set_temp_variable = { blue = 0.8 }
-						set_temp_variable = { alpha = 0.65 }
+						set_temp_variable = { blue = 0.7 }
+						set_temp_variable = { alpha = 0.55 }
 						if = {
 							limit = {
 								check_variable = {
 									market_leader = THIS
 								}
 							}
-							set_temp_variable = { alpha = 0.85 }
+							set_temp_variable = { alpha = 0.75 }
 						}
 					}
 					else_if = {
@@ -1070,16 +1072,16 @@ scripted_map_modes = {
 							set_temp_variable = { country_temp = THIS }
 							ROOT = { can_trade_with = no }
 						}
-						set_temp_variable = { red = 0.8 }
+						set_temp_variable = { red = 0.7 }
 						set_temp_variable = { green = 0.5 }
 						set_temp_variable = { blue = 0.5 }
-						set_temp_variable = { alpha = 0.65 }
+						set_temp_variable = { alpha = 0.55 }
 					}
 					else = {
 						set_temp_variable = { red = 0.5 }
-						set_temp_variable = { green = 0.8 }
+						set_temp_variable = { green = 0.7 }
 						set_temp_variable = { blue = 0.5 }
-						set_temp_variable = { alpha = 0.65 }
+						set_temp_variable = { alpha = 0.55 }
 					}
 				}
 				# set_temp_variable = { alpha = 0.65 }
