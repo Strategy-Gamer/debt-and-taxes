@@ -1898,10 +1898,10 @@
 			trigger = {
 				has_variable = market_capital
 			}
-			localization_key = "[?market_capital.GetName]"
+			localization_key = "[?market_capital.GetCapitalVictoryPointName]"
 		}
 		text = {
-			localization_key = "[?capital.GetName]"
+			localization_key = "[?capital.GetCapitalVictoryPointName]"
 		}
 	}
 	defined_text = {
@@ -1910,10 +1910,10 @@
 			trigger = {
 				CONTROLLER = { has_variable = market_capital }
 			}
-			localization_key = "[?controller:market_capital.GetName]"
+			localization_key = "[?controller:market_capital.GetCapitalVictoryPointName]"
 		}
 		text = {
-			localization_key = "[?owner:capital.GetName]"
+			localization_key = "[?owner:capital.GetCapitalVictoryPointName]"
 		}
 	}
 	defined_text = {

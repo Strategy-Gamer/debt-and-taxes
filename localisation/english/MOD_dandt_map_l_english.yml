@@ -91,48 +91,25 @@
  unique_state_danish_belt: "Danish Belt"
  unique_state_rajput_state: "Autonomous Rajput State"
  unique_state_rajput_state_desc: "This state is an autonomous princedom under the Rajput System"
+#
+# Map Modes
+ MAPMODE_GOVERNMENT_MAP_MODE: "Government"
+ MAPMODE_GOVERNMENT_MAP_MODE_NAME: "Government"
+ MAPMODE_GOVERNMENT_MAP_MODE_DESCRIPTION: "Displays the ruling government of each country."
+ government_map_mode_tooltip: "§YRuling Government§! in §C[FROM.OWNER.GetNameWithFlag]§!:\n  §LParty:§! [FROM.OWNER.GetCoalitionLeader]\n  §LIdeology:§! [FROM.OWNER.GetCoalitionIdeology]\n  §LLeader:§! [FROM.OWNER.GetCoalitionRuler]\n  §LPopularity:§! [?FROM.OWNER:govt_coalition_popularity|1]%\n  §LStrength:§! [?FROM.OWNER:govt_coalition_strength|1]% ([?FROM.OWNER:govt_coalition_strength_percentage|1]%)"
+ government_map_mode_tooltip_delayed: "Government represents the institutionized political environment of a country.\n\nThe color of the country represents the general ideology of the ruling ideology. The intensity indicates how firm said ideology is within official government institutions."
 
-#Map Modes
- MAPMODE_TEST_MAP_MODE: "Test Map Mode Type"
- MAPMODE_TEST_MAP_MODE_NAME: "Test Map Mode"
- MAPMODE_TEST_MAP_MODE_DESCRIPTION: "Test Map Mode Description"
- test_map_mode_tooltip: "This is a tooltip"
+ MAPMODE_ALIGNMENT_MAP_MODE: "Alignment"
+ MAPMODE_ALIGNMENT_MAP_MODE_NAME: "Alignment"
+ MAPMODE_ALIGNMENT_MAP_MODE_DESCRIPTION: "Displays the diplomatic leanings of each country."
+ mapmode_alignment_map_mode_tooltip: ""
+ mapmode_alignment_map_mode_tooltip_delayed: ""
 
- MAPMODE_CULTURE_MAP_MODE: "Culture"
- MAPMODE_CULTURE_MAP_MODE_NAME: "Culture"
- MAPMODE_CULTURE_MAP_MODE_DESCRIPTION: "Displays the plurality culture of each state."
- culture_map_mode_tooltip: "§YCultures§! in §C[FROM.GetName]§!\n[FROM.GetCulture0][FROM.GetCulture1][FROM.GetCulture2][FROM.GetCulture3][FROM.GetCulture4][FROM.GetCulture5]"
- culture_map_mode_tooltip_delayed: "Culture represents the combination of the behaviors, values, and symbols that pops accept.\n\nThe color of the state conveys what plurality culture is present. The intensity indicates how firm the majority is."
-
- MAPMODE_RELIGION_MAP_MODE: "Religion"
- MAPMODE_RELIGION_MAP_MODE_NAME: "Religion"
- MAPMODE_RELIGION_MAP_MODE_DESCRIPTION: "Displays the plurality religion of each state."
- religion_map_mode_tooltip: "§YReligion§! in §C[FROM.GetName]§!\n[FROM.GetReligion0][FROM.GetReligion1][FROM.GetReligion2][FROM.GetReligion3][FROM.GetReligion4][FROM.GetReligion5]"
- religion_map_mode_tooltip_delayed: "Religion represents the set of beliefs that pops believe.\n\nThe color of the state conveys what plurality religion is present. The intensity indicates how firm the majority is."
-
- MAPMODE_IDEOLOGY_MAP_MODE: "Ideology"
- MAPMODE_IDEOLOGY_MAP_MODE_NAME: "Ideology"
- MAPMODE_IDEOLOGY_MAP_MODE_DESCRIPTION: "Displays the plurality ideology of each state."
- ideology_map_mode_tooltip: "§YIdeology§! in §C[FROM.GetName]§!\n[FROM.GetIdeology0][FROM.GetIdeology1][FROM.GetIdeology2][FROM.GetIdeology3][FROM.GetIdeology4][FROM.GetIdeology5]"
- ideology_map_mode_tooltip_delayed: "Ideology represents the set of political beliefs that pops want.\n\nThe color of the state conveys what plurality ideology is present. The intensity indicates how firm the majority is."
-
- MAPMODE_RULING_IDEOLOGY_MAP_MODE: "Government"
- MAPMODE_RULING_IDEOLOGY_MAP_MODE_NAME: "Government"
- MAPMODE_RULING_IDEOLOGY_MAP_MODE_DESCRIPTION: "Displays the ruling government of each country."
- ruling_ideology_map_mode_tooltip: "§YRuling Government§! in §C[FROM.OWNER.GetNameWithFlag]§!:\n  §LParty:§! [FROM.OWNER.GetCoalitionLeader]\n  §LIdeology:§! [FROM.OWNER.GetCoalitionIdeology]\n  §LLeader:§! [FROM.OWNER.GetCoalitionRuler]\n  §LPopularity:§! [?FROM.OWNER:govt_coalition_popularity|1]%\n  §LStrength:§! [?FROM.OWNER:govt_coalition_strength|1]% ([?FROM.OWNER:govt_coalition_strength_percentage|1]%)"
- ruling_ideology_map_mode_tooltip_delayed: "Government represents the institutionized political environment of a country.\n\nThe color of the country represents the general ideology of the ruling ideology. The intensity indicates how firm said ideology is within official government institutions."
-
- MAPMODE_SOIL_QUALITY_MAP_MODE: "Soil Quality"
- MAPMODE_SOIL_QUALITY_MAP_MODE_NAME: "Soil Quality"
- MAPMODE_SOIL_QUALITY_MAP_MODE_DESCRIPTION: "Displays the soil quality of each state."
- soil_quality_map_mode_tooltip: "§YSoil Quality§! in §C[FROM.GetName]§!\n[FROM.GetSoilQuality]"
- soil_quality_map_mode_tooltip_delayed: "Soil Quality represents the ability for a state to naturally sustain efficient agriculture.\n\nThe color of the state conveys the quality of the soil present in the state is."
-
- MAPMODE_CLIMATE_MAP_MODE: "Climate"
- MAPMODE_CLIMATE_MAP_MODE_NAME: "Climate"
- MAPMODE_CLIMATE_MAP_MODE_DESCRIPTION: "Displays the climate of each state."
- climate_map_mode_tooltip: "§YClimate§! in §C[FROM.GetName]§!\n\nTemperature: [FROM.GetClimateTemperature]\nHumidity: [FROM.GetClimateHumidity]"
- climate_map_mode_tooltip_delayed: "Climate represents the average expected weather a population is expected to endure in a specific region.\n\nThe background color of the state represents the average temperature of the state. The outline color represents the average rainfall of the state."
+ MAPMODE_MARKET_MAP_MODE: "Markets"
+ MAPMODE_MARKET_MAP_MODE_NAME: "Markets"
+ MAPMODE_MARKET_MAP_MODE_DESCRIPTION: ""
+ market_map_mode_tooltip: "§YTrade Market§! of [FROM.CONTROLLER.GetFlag] §C[FROM.CONTROLLER.GetName]§!:\n  §LZone:§! [FROM.GetControllerMarketWithFlag]\n  §LCapital:§! [FROM.GetControllerMarketCapital]\n  §LMembership:§! [FROM.GetControllerMarketMembershipRank]\n\n§YTrade Access:§! [?FROM.GetControllerTradeStatus]"
+ market_map_mode_tooltip_delayed: ""
 
  MAPMODE_GDP_MAP_MODE: "Gross Domestic Product"
  MAPMODE_GDP_MAP_MODE_NAME: "Gross Domestic Product"
@@ -145,12 +122,41 @@
  MAPMODE_SOL_MAP_MODE_DESCRIPTION: "Displays the average standard of living for each state."
  sol_map_mode_tooltip: "§YStandard of Living§! in §C[FROM.GetName]:§! §Y[?FROM.pops_sol|3]§!"
  sol_map_mode_tooltip_delayed: "Standard of Living represents the approximate living conditions of the pops within a region.\n\nThe color portrays the relative standard of living, black being 0, red near zero, then upwards the hue scale to violet of the state with the highest SoL."
-  
- MAPMODE_MARKET_MAP_MODE: "Markets"
- MAPMODE_MARKET_MAP_MODE_NAME: "Markets"
- MAPMODE_MARKET_MAP_MODE_DESCRIPTION: ""
- market_map_mode_tooltip: "§YTrade Market§! of [FROM.CONTROLLER.GetFlag] §C[FROM.CONTROLLER.GetName]§!:\n  §LZone:§! [FROM.GetControllerMarketWithFlag]\n  §LCapital:§! [FROM.GetControllerMarketCapital]\n  §LMembership:§! [FROM.GetControllerMarketMembershipRank]\n\n§YTrade Access:§! [?FROM.GetControllerTradeStatus]"
- market_map_mode_tooltip_delayed: ""
+
+ MAPMODE_BUILDINGS_MAP_MODE: "Buildings"
+ MAPMODE_BUILDINGS_MAP_MODE_NAME: "Buildings"
+ MAPMODE_BUILDINGS_MAP_MODE_DESCRIPTION: "Displays an overview of the buildings and construction projects in your states."
+
+ MAPMODE_CULTURE_MAP_MODE: "Culture"
+ MAPMODE_CULTURE_MAP_MODE_NAME: "Culture"
+ MAPMODE_CULTURE_MAP_MODE_DESCRIPTION: "Displays the plurality culture of each state."
+ culture_map_mode_tooltip: "§YCultures§! in §C[FROM.GetName]:§!\n[FROM.GetCulture0][FROM.GetCulture1][FROM.GetCulture2][FROM.GetCulture3][FROM.GetCulture4][FROM.GetCulture5]"
+ culture_map_mode_tooltip_delayed: "Culture represents the combination of the behaviors, values, and symbols that pops accept.\n\nThe color of the state conveys what plurality culture is present. The intensity indicates how firm the majority is."
+
+ MAPMODE_RELIGION_MAP_MODE: "Religion"
+ MAPMODE_RELIGION_MAP_MODE_NAME: "Religion"
+ MAPMODE_RELIGION_MAP_MODE_DESCRIPTION: "Displays the plurality religion of each state."
+ religion_map_mode_tooltip: "§YReligion§! in §C[FROM.GetName]:§!\n[FROM.GetReligion0][FROM.GetReligion1][FROM.GetReligion2][FROM.GetReligion3][FROM.GetReligion4][FROM.GetReligion5]"
+ religion_map_mode_tooltip_delayed: "Religion represents the set of beliefs that pops believe.\n\nThe color of the state conveys what plurality religion is present. The intensity indicates how firm the majority is."
+
+ MAPMODE_IDEOLOGY_MAP_MODE: "Ideology"
+ MAPMODE_IDEOLOGY_MAP_MODE_NAME: "Ideology"
+ MAPMODE_IDEOLOGY_MAP_MODE_DESCRIPTION: "Displays the plurality ideology of each state."
+ ideology_map_mode_tooltip: "§YIdeology§! in §C[FROM.GetName]:§!\n[FROM.GetIdeology0][FROM.GetIdeology1][FROM.GetIdeology2][FROM.GetIdeology3][FROM.GetIdeology4][FROM.GetIdeology5]"
+ ideology_map_mode_tooltip_delayed: "Ideology represents the set of political beliefs that pops want.\n\nThe color of the state conveys what plurality ideology is present. The intensity indicates how firm the majority is."
+
+ MAPMODE_CLIMATE_MAP_MODE: "Climate"
+ MAPMODE_CLIMATE_MAP_MODE_NAME: "Climate"
+ MAPMODE_CLIMATE_MAP_MODE_DESCRIPTION: "Displays the climate of each state."
+ climate_map_mode_tooltip: "§YClimate§! in §C[FROM.GetName]§!\n\nTemperature: [FROM.GetClimateTemperature]\nHumidity: [FROM.GetClimateHumidity]"
+ climate_map_mode_tooltip_delayed: "Climate represents the average expected weather a population is expected to endure in a specific region.\n\nThe background color of the state represents the average temperature of the state. The outline color represents the average rainfall of the state."
+
+ MAPMODE_SOIL_QUALITY_MAP_MODE: "Soil Quality"
+ MAPMODE_SOIL_QUALITY_MAP_MODE_NAME: "Soil Quality"
+ MAPMODE_SOIL_QUALITY_MAP_MODE_DESCRIPTION: "Displays the soil quality of each state."
+ soil_quality_map_mode_tooltip: "§YSoil Quality§! in §C[FROM.GetName]§!\n[FROM.GetSoilQuality]"
+ soil_quality_map_mode_tooltip_delayed: "Soil Quality represents the ability for a state to naturally sustain efficient agriculture.\n\nThe color of the state conveys the quality of the soil present in the state is."
+
 #Unique
 
 

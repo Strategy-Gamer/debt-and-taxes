@@ -276,6 +276,9 @@ technologies = {
 			name = dandt_resource_folder
 			position = { x = 2 y = @1950 }
 		}
+		path = {
+			leads_to_tech = tech_daizig_draining
+		}
 
 		on_research_complete = {
 			# custom_effect_tooltip = increase_coal_mine_output_tech_20
@@ -297,6 +300,36 @@ technologies = {
 
 		custom_modifier_tooltip = industry_grain_farm_method_modernized_enable_tt
 		custom_modifier_tooltip = industry_fishing_wharf_method_modernized_enable_tt
+	}
+	tech_daizig_draining = {
+		research_cost = 2
+		start_year = 1952
+		folder = {
+			name = dandt_resource_folder
+			position = { x = 2 y = @1955 }
+		}
+
+		on_research_complete = {
+			# custom_effect_tooltip = increase_coal_mine_output_tech_20
+			# custom_effect_tooltip = increase_mine_size_1
+			# custom_effect_tooltip = requirement_separator
+			# custom_effect_tooltip = requirement_requires_one
+			# custom_effect_tooltip = requirement_20_coal_in_a_state
+			# custom_effect_tooltip = requirement_year_1800
+			# update_building_modifiers = yes
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			agriculture_tech
+		}
+
+		custom_modifier_tooltip = industry_rice_paddy_method_modernized_enable_tt
+		industry_rice_paddy_throughput_factor = 0.065
+		commerical_farm_output_factor = 0.015
 	}
 	tech_electrified_wire_fencing = {
 		path = {

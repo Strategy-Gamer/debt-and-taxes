@@ -880,7 +880,12 @@ setup = {
 					}
 				}
 				set_variable = { market_leader = THIS }
-				set_variable = { market_capital = capital }
+				if = {
+					limit = {
+						NOT = { has_variable = market_capital }
+					}
+					set_variable = { market_capital = capital }
+				}
 				if = {
 					limit = {
 						NOT = {

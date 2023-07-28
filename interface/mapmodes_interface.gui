@@ -1270,8 +1270,8 @@ guiTypes = {
 	# A window with the list of all possible map modes that is attached to the "WindowWithMapModeSlots".
 	containerWindowType =  {
 		name = "WindowWithAllMapModes"
-		position = { x = -430 y = -120 } 
-		size = { width = 356 height = 120 }
+		position = { x = -602 y = -60 } 
+		size = { width = 528 height = 60 }
 		Orientation = lower_RIGHT
 		fade_time = 500
 		fade_type = linear
@@ -1286,15 +1286,15 @@ guiTypes = {
 			position = { x = 0 y = 5 }
 			size = { width = 180 height = 262 } 
 			slotsize = { width = 172 height = 22 }
-			max_slots_horizontal = 2
+			max_slots_horizontal = 3
 		}
 	}
 
 	# A window with the list of all possible map modes that is attached to the main map-modes window.
 	containerWindowType =  {
 		name = "WindowWithAllMapModes_Standalone"
-		position = { x = -430 y = -120 } 
-		size = { width = 356 height = 120 }
+		position = { x = -602 y = -60 } 
+		size = { width = 528 height = 60 }
 		Orientation = lower_RIGHT
 		fade_time = 500 
 		fade_type = linear
@@ -1309,7 +1309,7 @@ guiTypes = {
 			position = { x = 0 y = 5 }
 			size = { width = 180 height = 262 } 
 			slotsize = { width = 172 height = 22 }
-			max_slots_horizontal = 2
+			max_slots_horizontal = 3
 		}
 	}
 	

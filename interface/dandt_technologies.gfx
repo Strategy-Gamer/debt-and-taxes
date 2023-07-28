@@ -150,6 +150,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/resource_extraction/tech_agricultural_unit_machinery.dds"
 	}
 	spriteType = {
+		name = "GFX_tech_daizig_draining_medium"
+		texturefile = "gfx/interface/technologies/resource_extraction/tech_daizig_draining.dds"
+	}
+	spriteType = {
 		name = "GFX_tech_electrified_wire_fencing_medium"
 		texturefile = "gfx/interface/technologies/resource_extraction/tech_electrified_wire_fencing.dds"
 	}

@@ -176,6 +176,7 @@
   industry_grain_farm_method_modernized_enable_tt: "Enable §YModernized $industry_grain_farm$§!"
   industry_rice_paddy_method_industrialized_enable_tt: "Enable §YIndustrialized $industry_rice_paddy$§!"
   industry_rice_paddy_method_mechanized_enable_tt: "Enable §YMechanized $industry_rice_paddy$§!"
+  industry_rice_paddy_method_modernized_enable_tt: "Enable §YModernized $industry_rice_paddy$§!"
   industry_livestock_ranch_method_industrialized_enable_tt: "Enable §YIndustrialized $industry_livestock_ranch$§!"
   industry_livestock_ranch_method_mechanized_enable_tt: "Enable §YMechanized $industry_livestock_ranch$§!"
   industry_livestock_ranch_method_modernized_enable_tt: "Enable §YModernized $industry_livestock_ranch$§!"
