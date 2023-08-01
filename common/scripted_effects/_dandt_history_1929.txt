@@ -49,7 +49,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_copper_mine = 1 }
 			set_variable = { production_method@token:industry_copper_mine = 2 }
 
-			set_variable = { size@token:industry_oil_rig = 2 }
+			set_variable = { size@token:industry_oil_rig = 4 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			#Factories
@@ -77,7 +77,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 20 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 3 }
+			set_variable = { size@token:industry_oil_refinery = 12 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_synthetic_rubber_plant = 8 }
@@ -359,7 +359,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_fertilizer_factory = 1 }
 			set_variable = { production_method@token:industry_fertilizer_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 2 }
+			set_variable = { size@token:industry_oil_refinery = 4 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_automobile_factory = 10 }
@@ -493,7 +493,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_plastics_factory = 9 }
 			set_variable = { production_method@token:industry_plastics_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 3 }
+			set_variable = { size@token:industry_oil_refinery = 6 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_synthetic_rubber_plant = 1 }
@@ -632,14 +632,14 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 10 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 4 }
+			set_variable = { size@token:industry_oil_refinery = 8 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_electronics_factory = 11 }
 			set_variable = { production_method@token:industry_electronics_factory = 2 }
 
 			set_variable = { size@token:industry_food_processing_plant = 9 }
-			set_variable = { production_method@token:industry_oil_refinery = 2 }
+			set_variable = { production_method@token:industry_food_processing_plant = 2 }
 
 			set_variable = { size@token:industry_pharmaceuticals_factory = 3 }
 			set_variable = { production_method@token:industry_pharmaceuticals_factory = 2 }
@@ -963,7 +963,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_textile_mill = 15 }
 			set_variable = { production_method@token:industry_textile_mill = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 1 }
+			set_variable = { size@token:industry_oil_refinery = 2 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_food_processing_plant = 1 }
@@ -1747,7 +1747,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_sulfur_mine = 9 }
 			set_variable = { production_method@token:industry_sulfur_mine = 2 }
 
-			set_variable = { size@token:industry_oil_rig = 5 }
+			set_variable = { size@token:industry_oil_rig = 10 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			#Factories
@@ -1760,7 +1760,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 2 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 2 }
+			set_variable = { size@token:industry_oil_refinery = 4 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_food_processing_plant = 2 }
@@ -1838,7 +1838,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_lumber_lodge = 5 }
 			set_variable = { production_method@token:industry_lumber_lodge = 1 }
 
-			set_variable = { size@token:industry_oil_rig = 1 }
+			set_variable = { size@token:industry_oil_rig = 2 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			set_variable = { size@token:industry_coal_mine = 4 }
@@ -1968,7 +1968,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 2 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 1 }
+			set_variable = { size@token:industry_oil_refinery = 2 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_automobile_factory = 1 }
@@ -2064,7 +2064,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_cotton_plantation = 4 }
 			set_variable = { production_method@token:industry_cotton_plantation = 1 }
 
-			set_variable = { size@token:industry_oil_rig = 11 }
+			set_variable = { size@token:industry_oil_rig = 22 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			set_variable = { size@token:industry_lumber_lodge = 1 }
@@ -2089,7 +2089,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 2 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 4 }
+			set_variable = { size@token:industry_oil_refinery = 8 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_food_processing_plant = 4 }
@@ -2177,7 +2177,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_lumber_lodge = 3 }
 			set_variable = { production_method@token:industry_lumber_lodge = 2 }
 
-			set_variable = { size@token:industry_oil_rig = 10 } # 3
+			set_variable = { size@token:industry_oil_rig = 20 } # 3
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			set_variable = { size@token:industry_iron_mine = 1 }
@@ -2205,7 +2205,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_fertilizer_factory = 1 }
 			set_variable = { production_method@token:industry_fertilizer_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 9 }
+			set_variable = { size@token:industry_oil_refinery = 18 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_electronics_factory = 2 }
@@ -2305,7 +2305,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_coal_mine = 1 }
 			set_variable = { production_method@token:industry_coal_mine = 2 }
 
-			set_variable = { size@token:industry_oil_rig = 4 }
+			set_variable = { size@token:industry_oil_rig = 8 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			set_variable = { size@token:industry_hydroelectric_dam = 1 }
@@ -2434,7 +2434,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_lumber_lodge = 3 }
 			set_variable = { production_method@token:industry_lumber_lodge = 1 }
 
-			set_variable = { size@token:industry_oil_rig = 1 }
+			set_variable = { size@token:industry_oil_rig = 2 }
 			set_variable = { production_method@token:industry_oil_rig = 3 }
 
 			set_variable = { size@token:industry_iron_mine = 4 }
@@ -2471,7 +2471,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 9 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 2 }
+			set_variable = { size@token:industry_oil_refinery = 4 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_electronics_factory = 5 }
@@ -2809,7 +2809,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_coal_mine = 1 }
 			set_variable = { production_method@token:industry_coal_mine = 2 }
 
-			set_variable = { size@token:industry_oil_rig = 2 }
+			set_variable = { size@token:industry_oil_rig = 4 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			#Factories
@@ -2822,7 +2822,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 2 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 1 }
+			set_variable = { size@token:industry_oil_refinery = 2 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_fertilizer_factory = 2 }
@@ -2915,7 +2915,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 1 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 1 }
+			set_variable = { size@token:industry_oil_refinery = 2 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_clothing_factory = 1 }
@@ -3073,9 +3073,9 @@ dandt_on_startup_1929 = {
 			set_variable = { production_method@token:industry_consumer_goods_factory = 2 }
 
 			set_variable = { size@token:industry_food_processing_plant = 1 }
-			set_variable = { production_method@token:industry_oil_refinery = 2 }
+			set_variable = { production_method@token:industry_food_processing_plant = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 1 }
+			set_variable = { size@token:industry_oil_refinery = 2 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			#Services
@@ -3623,7 +3623,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 11 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 3 }
+			set_variable = { size@token:industry_oil_refinery = 6 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_synthetic_rubber_plant = 1 }
@@ -3861,7 +3861,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 24 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 1 }
+			set_variable = { size@token:industry_oil_refinery = 2 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_synthetic_rubber_plant = 1 }
@@ -3995,7 +3995,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 9 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 2 }
+			set_variable = { size@token:industry_oil_refinery = 4 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_fertilizer_factory = 2 }
@@ -4233,7 +4233,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_lumber_lodge = 2 }
 			set_variable = { production_method@token:industry_lumber_lodge = 2 }
 
-			set_variable = { size@token:industry_oil_rig = 1 }
+			set_variable = { size@token:industry_oil_rig = 2 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			set_variable = { size@token:industry_coal_mine = 32 }
@@ -4451,7 +4451,7 @@ dandt_on_startup_1929 = {
 
 			#Factories
 			set_variable = { size@token:industry_food_processing_plant = 4 }
-			set_variable = { production_method@token:industry_oil_refinery = 2 }
+			set_variable = { production_method@token:industry_food_processing_plant = 2 }
 
 			set_variable = { size@token:industry_fertilizer_factory = 2 }
 			set_variable = { production_method@token:industry_fertilizer_factory = 2 }
@@ -4656,7 +4656,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_lumber_lodge = 1 }
 			set_variable = { production_method@token:industry_lumber_lodge = 1 }
 
-			set_variable = { size@token:industry_oil_rig = 4 }
+			set_variable = { size@token:industry_oil_rig = 8 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			set_variable = { size@token:industry_iron_mine = 4 }
@@ -4687,14 +4687,14 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_plastics_factory = 1 }
 			set_variable = { production_method@token:industry_plastics_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 1 }
+			set_variable = { size@token:industry_oil_refinery = 2 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_automobile_factory = 3 }
 			set_variable = { production_method@token:industry_automobile_factory = 2 }
 
 			set_variable = { size@token:industry_food_processing_plant = 4 }
-			set_variable = { production_method@token:industry_oil_refinery = 2 }
+			set_variable = { production_method@token:industry_food_processing_plant = 2 }
 
 			set_variable = { size@token:industry_pharmaceuticals_factory = 1 }
 			set_variable = { production_method@token:industry_pharmaceuticals_factory = 2 }
@@ -4762,7 +4762,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_livestock_ranch = 10 }
 			set_variable = { production_method@token:industry_livestock_ranch = 3 }
 
-			set_variable = { size@token:industry_oil_rig = 2 }
+			set_variable = { size@token:industry_oil_rig = 4 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			#Factories
@@ -4835,14 +4835,14 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_lumber_lodge = 2 }
 			set_variable = { production_method@token:industry_lumber_lodge = 2 }
 
-			set_variable = { size@token:industry_oil_rig = 4 }
+			set_variable = { size@token:industry_oil_rig = 8 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			set_variable = { size@token:industry_copper_mine = 1 }
 			set_variable = { production_method@token:industry_copper_mine = 2 }
 
 			#Factories
-			set_variable = { size@token:industry_oil_refinery = 2 }
+			set_variable = { size@token:industry_oil_refinery = 4 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_cement_factory = 2 }
@@ -4970,7 +4970,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_livestock_ranch = 2 }
 			set_variable = { production_method@token:industry_livestock_ranch = 3 }
 
-			set_variable = { size@token:industry_oil_rig = 6 }
+			set_variable = { size@token:industry_oil_rig = 12 }
 			set_variable = { production_method@token:industry_oil_rig = 2 }
 
 			#Factories
@@ -4983,7 +4983,7 @@ dandt_on_startup_1929 = {
 			set_variable = { size@token:industry_machinery_factory = 5 }
 			set_variable = { production_method@token:industry_machinery_factory = 2 }
 
-			set_variable = { size@token:industry_oil_refinery = 6 }
+			set_variable = { size@token:industry_oil_refinery = 8 }
 			set_variable = { production_method@token:industry_oil_refinery = 2 }
 
 			set_variable = { size@token:industry_automobile_factory = 1 }
@@ -5545,6 +5545,56 @@ dandt_on_startup_1929 = {
 					set_variable = { heir@token:ideology_stratocratic = token:VEN_juan_bautista_perez }
 					set_variable = { heir_type@token:ideology_stratocratic = 1 }
 			#
+		}
+		489 = { # Zulia
+			set_variable = { size@token:industry_oil_rig = 9 }
+			set_variable = { production_method@token:industry_oil_rig = 2 }
+			set_variable = { size@token:industry_coal_mine = 3 }
+			set_variable = { production_method@token:industry_coal_mine = 2 }
+			set_variable = { size@token:industry_sheep_ranch = 2 }
+			set_variable = { production_method@token:industry_sheep_ranch = 3 }
+			set_variable = { size@token:industry_food_processing_plant = 2 }
+			set_variable = { production_method@token:industry_food_processing_plant = 2 }
+			set_variable = { size@token:industry_chemical_plant = 3 }
+				set_variable = { production_method@token:industry_chemical_plant = 1 }
+			set_variable = { size@token:industry_oil_refinery = 1 }
+			set_variable = { production_method@token:industry_oil_refinery = 2 }
+			set_variable = { size@token:industry_shipping_hub = 3 }
+			set_variable = { production_method@token:industry_shipping_hub = 1 }
+			set_variable = { size@token:industry_construction_yard = 3 }
+			set_variable = { production_method@token:industry_construction_yard = 2 }
+			set_variable = { size@token:industry_livestock_ranch = 4 }
+			set_variable = { production_method@token:industry_livestock_ranch = 3 }
+		}
+		307 = { # Miranda
+			set_variable = { size@token:industry_oil_rig = 3 }
+			set_variable = { production_method@token:industry_oil_rig = 2 }
+			set_variable = { size@token:industry_coal_mine = 4 }
+			set_variable = { production_method@token:industry_coal_mine = 2 }
+			set_variable = { size@token:industry_livestock_ranch = 5 }
+			set_variable = { production_method@token:industry_livestock_ranch = 3 }
+			set_variable = { size@token:industry_grain_farm = 3 }
+			set_variable = { production_method@token:industry_grain_farm = 3 }
+			set_variable = { size@token:industry_precious_metal_mine = 1 }
+			set_variable = { production_method@token:industry_precious_metal_mine = 1 }
+			set_variable = { size@token:industry_rice_paddy = 3 }
+			set_variable = { production_method@token:industry_rice_paddy = 3 }
+			set_variable = { size@token:industry_real_estate = 2 }
+			set_variable = { production_method@token:industry_real_estate = 2 }
+			set_variable = { size@token:industry_transport_hub = 3 }
+			set_variable = { production_method@token:industry_transport_hub = 2 }
+			set_variable = { size@token:industry_coal_power_plant = 2 }
+			set_variable = { production_method@token:industry_coal_power_plant = 0 }
+		}
+		488 = { # Bolivar
+			set_variable = { size@token:industry_iron_mine = 3 }
+			set_variable = { production_method@token:industry_iron_mine = 2 }
+			set_variable = { size@token:industry_lumber_lodge = 5 }
+			set_variable = { production_method@token:industry_lumber_lodge = 2 }
+			set_variable = { size@token:industry_sheep_ranch = 2 }
+			set_variable = { production_method@token:industry_sheep_ranch = 3 }
+			set_variable = { size@token:industry_rice_paddy = 4 }
+			set_variable = { production_method@token:industry_rice_paddy = 3 }
 		}
 	#
 	#ECU

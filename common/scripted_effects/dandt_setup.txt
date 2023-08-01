@@ -50,6 +50,7 @@ setup = {
 	set_variable = { global.current_year = global.year }
 
 	add_to_array = { global.dandt_countries = USA }
+	add_to_array = { global.dandt_countries = VEN }
 	add_to_array = { global.dandt_countries = BUL }
 	add_to_array = { global.dandt_countries = SWI }
 	add_to_array = { global.dandt_countries = BEL }

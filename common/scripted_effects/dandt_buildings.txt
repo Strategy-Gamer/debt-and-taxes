@@ -2706,54 +2706,54 @@
 		# Country scope
 		var:market_capital = {
 			# Jobs
-				set_variable = { jobs@token:market_capital = controller:trade_jobs }
+				set_variable = { jobs@token:building_market_capital = controller:trade_jobs }
 
-				set_variable = { workers_jobs@token:market_capital = controller:trade_jobs }
-				multiply_variable = { workers_jobs@token:market_capital = 0.9 }
-				set_variable = { workers_open_jobs@token:market_capital = workers_jobs@token:market_capital }
-				multiply_variable = { workers_open_jobs@token:market_capital = employment_target@token:market_capital }
-				subtract_from_variable = { workers_open_jobs@token:market_capital = workers_employed@token:market_capital }
+				set_variable = { workers_jobs@token:building_market_capital = controller:trade_jobs }
+				multiply_variable = { workers_jobs@token:building_market_capital = 0.9 }
+				set_variable = { workers_open_jobs@token:building_market_capital = workers_jobs@token:building_market_capital }
+				multiply_variable = { workers_open_jobs@token:building_market_capital = employment_target@token:building_market_capital }
+				subtract_from_variable = { workers_open_jobs@token:building_market_capital = workers_employed@token:building_market_capital }
 
-				set_variable = { elites_jobs@token:market_capital = controller:trade_jobs }
-				subtract_from_variable = { elites_jobs@token:market_capital = workers_jobs@token:market_capital }
-				set_variable = { elites_open_jobs@token:market_capital = elites_jobs@token:market_capital }
-				multiply_variable = { elites_open_jobs@token:market_capital = employment_target@token:market_capital }
-				subtract_from_variable = { elites_open_jobs@token:market_capital = elites_employed@token:market_capital }
+				set_variable = { elites_jobs@token:building_market_capital = controller:trade_jobs }
+				subtract_from_variable = { elites_jobs@token:building_market_capital = workers_jobs@token:building_market_capital }
+				set_variable = { elites_open_jobs@token:building_market_capital = elites_jobs@token:building_market_capital }
+				multiply_variable = { elites_open_jobs@token:building_market_capital = employment_target@token:building_market_capital }
+				subtract_from_variable = { elites_open_jobs@token:building_market_capital = elites_employed@token:building_market_capital }
 			#
-			set_variable = { money_limit@token:market_capital = controller:trade_jobs }
-			multiply_variable = { money_limit@token:market_capital = 7 }
+			set_variable = { money_limit@token:building_market_capital = controller:trade_jobs }
+			multiply_variable = { money_limit@token:building_market_capital = 7 }
 
 			# Payroll
 				#Wages
-				set_variable = { laborers_payroll@token:market_capital = laborers_wage }
-				multiply_variable = { laborers_payroll@token:market_capital = laborers_employed@token:market_capital }
+				set_variable = { laborers_payroll@token:building_market_capital = laborers_wage }
+				multiply_variable = { laborers_payroll@token:building_market_capital = laborers_employed@token:building_market_capital }
 				
-				set_variable = { workers_payroll@token:market_capital = workers_wage }
-				multiply_variable = { workers_payroll@token:market_capital = workers_employed@token:market_capital }
+				set_variable = { workers_payroll@token:building_market_capital = workers_wage }
+				multiply_variable = { workers_payroll@token:building_market_capital = workers_employed@token:building_market_capital }
 				
-				set_variable = { professionals_payroll@token:market_capital = professionals_wage }
-				multiply_variable = { professionals_payroll@token:market_capital = professionals_employed@token:market_capital }
+				set_variable = { professionals_payroll@token:building_market_capital = professionals_wage }
+				multiply_variable = { professionals_payroll@token:building_market_capital = professionals_employed@token:building_market_capital }
 				
-				set_variable = { elites_payroll@token:market_capital = elites_wage }
-				multiply_variable = { elites_payroll@token:market_capital = elites_employed@token:market_capital }
+				set_variable = { elites_payroll@token:building_market_capital = elites_wage }
+				multiply_variable = { elites_payroll@token:building_market_capital = elites_employed@token:building_market_capital }
 				
 				#Payroll
-				set_variable = { expenses_payroll@token:market_capital = laborers_payroll@token:market_capital }
-				add_to_variable = { expenses_payroll@token:market_capital = workers_payroll@token:market_capital }
-				add_to_variable = { expenses_payroll@token:market_capital = professionals_payroll@token:market_capital }
-				add_to_variable = { expenses_payroll@token:market_capital = elites_payroll@token:market_capital }
+				set_variable = { expenses_payroll@token:building_market_capital = laborers_payroll@token:building_market_capital }
+				add_to_variable = { expenses_payroll@token:building_market_capital = workers_payroll@token:building_market_capital }
+				add_to_variable = { expenses_payroll@token:building_market_capital = professionals_payroll@token:building_market_capital }
+				add_to_variable = { expenses_payroll@token:building_market_capital = elites_payroll@token:building_market_capital }
 
 				#Avg Wage
-				set_variable = { average_wage@token:market_capital = expenses_payroll@token:market_capital }
-				divide_variable = { average_wage@token:market_capital = employed@token:market_capital }
+				set_variable = { average_wage@token:building_market_capital = expenses_payroll@token:building_market_capital }
+				divide_variable = { average_wage@token:building_market_capital = employed@token:building_market_capital }
 			#
-			set_variable = { profit@token:market_capital = controller:trade_profit }
-			subtract_from_variable = { profit@token:market_capital = expenses_payroll@token:market_capital }
+			set_variable = { profit@token:building_market_capital = controller:trade_profit }
+			subtract_from_variable = { profit@token:building_market_capital = expenses_payroll@token:building_market_capital }
 
-			set_variable = { productivity@token:market_capital = controller:trade_productivity }
+			set_variable = { productivity@token:building_market_capital = controller:trade_productivity }
 			
-			set_variable = { base_productivity@token:market_capital = controller:trade_productivity }
-			divide_variable = { base_productivity@token:market_capital = 7 } # 5*0.9 (workers) + 25*0.1 (elites)
+			set_variable = { base_productivity@token:building_market_capital = controller:trade_productivity }
+			divide_variable = { base_productivity@token:building_market_capital = 7 } # 5*0.9 (workers) + 25*0.1 (elites)
 		}
 	}
 
@@ -2807,10 +2807,10 @@
 			set_variable = { global.industry_uses_deposits@token:industry_oil_rig = 1 }
 
 			#WORKFORCE - per level
-			set_variable = { global.industry_base_laborers_employment@token:industry_oil_rig = 8.9 } #2x
-			set_variable = { global.industry_base_workers_employment@token:industry_oil_rig = 1.0 } #5x
+			set_variable = { global.industry_base_laborers_employment@token:industry_oil_rig = 4.45 } #2x
+			set_variable = { global.industry_base_workers_employment@token:industry_oil_rig = 0.5 } #5x
 			set_variable = { global.industry_base_professionals_employment@token:industry_oil_rig = 0.0 } #10x
-			set_variable = { global.industry_base_elites_employment@token:industry_oil_rig = 0.1 } #25x
+			set_variable = { global.industry_base_elites_employment@token:industry_oil_rig = 0.05 } #25x
 
 			#CONSTRUCTION - per level
 			set_variable = { global.industry_base_construction_resource@token:industry_oil_rig = token:resource_construction }
@@ -2834,10 +2834,10 @@
 			set_variable = { global.industry_industrialized_output@token:industry_oil_rig = 54.0 }
 			set_variable = { global.industry_industrialized_tech_unlock@token:industry_oil_rig = token:tech_cable_tool_drilling }
 
-			set_variable = { global.industry_industrialized_laborers_employment@token:industry_oil_rig = 5.0 }
-			set_variable = { global.industry_industrialized_workers_employment@token:industry_oil_rig = 2.4 }
-			set_variable = { global.industry_industrialized_professionals_employment@token:industry_oil_rig = 0.5 }
-			set_variable = { global.industry_industrialized_elites_employment@token:industry_oil_rig = 0.1 }
+			set_variable = { global.industry_industrialized_laborers_employment@token:industry_oil_rig = 2.5 }
+			set_variable = { global.industry_industrialized_workers_employment@token:industry_oil_rig = 1.2 }
+			set_variable = { global.industry_industrialized_professionals_employment@token:industry_oil_rig = 0.25 }
+			set_variable = { global.industry_industrialized_elites_employment@token:industry_oil_rig = 0.05 }
 
 			set_variable = { global.industry_industrialized_input_resource_1@token:industry_oil_rig = token:resource_coal } #Steam Derrick
 			set_variable = { global.industry_industrialized_input_amount_1@token:industry_oil_rig = 7.0 }
@@ -2856,10 +2856,10 @@
 			set_variable = { global.industry_mechanized_output@token:industry_oil_rig = 108.0 }
 			set_variable = { global.industry_mechanized_tech_unlock@token:industry_oil_rig = token:tech_standardized_derrick }
 
-			set_variable = { global.industry_mechanized_laborers_employment@token:industry_oil_rig = 0.9 }
-			set_variable = { global.industry_mechanized_workers_employment@token:industry_oil_rig = 3.0 }
-			set_variable = { global.industry_mechanized_professionals_employment@token:industry_oil_rig = 2.0 }
-			set_variable = { global.industry_mechanized_elites_employment@token:industry_oil_rig = 0.1 }
+			set_variable = { global.industry_mechanized_laborers_employment@token:industry_oil_rig = 0.45 }
+			set_variable = { global.industry_mechanized_workers_employment@token:industry_oil_rig = 1.5 }
+			set_variable = { global.industry_mechanized_professionals_employment@token:industry_oil_rig = 1.0 }
+			set_variable = { global.industry_mechanized_elites_employment@token:industry_oil_rig = 0.05 }
 
 			set_variable = { global.industry_mechanized_input_resource_1@token:industry_oil_rig = token:resource_hydrocarbons } #Diesel Derrick
 			set_variable = { global.industry_mechanized_input_amount_1@token:industry_oil_rig = 6.0 }
@@ -2878,9 +2878,9 @@
 			set_variable = { global.industry_modernized_tech_unlock@token:industry_oil_rig = token:tech_tricone_bit }
 
 			set_variable = { global.industry_modernized_laborers_employment@token:industry_oil_rig = 0.0 }
-			set_variable = { global.industry_modernized_workers_employment@token:industry_oil_rig = 1.9 }
-			set_variable = { global.industry_modernized_professionals_employment@token:industry_oil_rig = 3.0 }
-			set_variable = { global.industry_modernized_elites_employment@token:industry_oil_rig = 0.1 }
+			set_variable = { global.industry_modernized_workers_employment@token:industry_oil_rig = 0.95 }
+			set_variable = { global.industry_modernized_professionals_employment@token:industry_oil_rig = 1.5 }
+			set_variable = { global.industry_modernized_elites_employment@token:industry_oil_rig = 0.05 }
 
 			set_variable = { global.industry_modernized_input_resource_1@token:industry_oil_rig = token:resource_hydrocarbons }
 			set_variable = { global.industry_modernized_input_amount_1@token:industry_oil_rig = 7.0 }
@@ -2929,10 +2929,10 @@
 
 			#WORKFORCE - per level
 			# $0.216 productivity
-			set_variable = { global.industry_base_laborers_employment@token:industry_gas_rig = 8.9 } #2x
-			set_variable = { global.industry_base_workers_employment@token:industry_gas_rig = 1.0 } #5x
+			set_variable = { global.industry_base_laborers_employment@token:industry_gas_rig = 4.45 } #2x
+			set_variable = { global.industry_base_workers_employment@token:industry_gas_rig = 0.5 } #5x
 			set_variable = { global.industry_base_professionals_employment@token:industry_gas_rig = 0.0 } #10x
-			set_variable = { global.industry_base_elites_employment@token:industry_gas_rig = 0.1 } #25x
+			set_variable = { global.industry_base_elites_employment@token:industry_gas_rig = 0.05 } #25x
 
 			#CONSTRUCTION - per level
 			set_variable = { global.industry_base_construction_resource@token:industry_gas_rig = token:resource_construction }
@@ -2956,10 +2956,10 @@
 			set_variable = { global.industry_industrialized_tech_unlock@token:industry_gas_rig = token:tech_cable_tool_drilling }
 
 			# $0.224 productivity
-			set_variable = { global.industry_industrialized_laborers_employment@token:industry_gas_rig = 5.0 }
-			set_variable = { global.industry_industrialized_workers_employment@token:industry_gas_rig = 2.4 }
-			set_variable = { global.industry_industrialized_professionals_employment@token:industry_gas_rig = 0.5 }
-			set_variable = { global.industry_industrialized_elites_employment@token:industry_gas_rig = 0.1 }
+			set_variable = { global.industry_industrialized_laborers_employment@token:industry_gas_rig = 2.5 }
+			set_variable = { global.industry_industrialized_workers_employment@token:industry_gas_rig = 1.2 }
+			set_variable = { global.industry_industrialized_professionals_employment@token:industry_gas_rig = 0.25 }
+			set_variable = { global.industry_industrialized_elites_employment@token:industry_gas_rig = 0.05 }
 
 			set_variable = { global.industry_industrialized_input_resource_1@token:industry_gas_rig = token:resource_coal } #Steam Derrick
 			set_variable = { global.industry_industrialized_input_amount_1@token:industry_gas_rig = 7.0 }
@@ -2979,10 +2979,10 @@
 			set_variable = { global.industry_mechanized_tech_unlock@token:industry_gas_rig = token:tech_standardized_derrick }
 
 			# $0.258 productivity
-			set_variable = { global.industry_mechanized_laborers_employment@token:industry_gas_rig = 0.9 }
-			set_variable = { global.industry_mechanized_workers_employment@token:industry_gas_rig = 3.0 }
-			set_variable = { global.industry_mechanized_professionals_employment@token:industry_gas_rig = 2.0 }
-			set_variable = { global.industry_mechanized_elites_employment@token:industry_gas_rig = 0.1 }
+			set_variable = { global.industry_mechanized_laborers_employment@token:industry_gas_rig = 0.45 }
+			set_variable = { global.industry_mechanized_workers_employment@token:industry_gas_rig = 1.5 }
+			set_variable = { global.industry_mechanized_professionals_employment@token:industry_gas_rig = 1.0 }
+			set_variable = { global.industry_mechanized_elites_employment@token:industry_gas_rig = 0.05 }
 
 			set_variable = { global.industry_mechanized_input_resource_1@token:industry_gas_rig = token:resource_hydrocarbons } #Diesel Derrick
 			set_variable = { global.industry_mechanized_input_amount_1@token:industry_gas_rig = 6.0 }
@@ -3002,9 +3002,9 @@
 
 			# $0.317 productivity
 			set_variable = { global.industry_modernized_laborers_employment@token:industry_gas_rig = 0.0 }
-			set_variable = { global.industry_modernized_workers_employment@token:industry_gas_rig = 1.9 }
-			set_variable = { global.industry_modernized_professionals_employment@token:industry_gas_rig = 3.0 }
-			set_variable = { global.industry_modernized_elites_employment@token:industry_gas_rig = 0.1 }
+			set_variable = { global.industry_modernized_workers_employment@token:industry_gas_rig = 0.95 }
+			set_variable = { global.industry_modernized_professionals_employment@token:industry_gas_rig = 1.5 }
+			set_variable = { global.industry_modernized_elites_employment@token:industry_gas_rig = 0.05 }
 
 			set_variable = { global.industry_modernized_input_resource_1@token:industry_gas_rig = token:resource_hydrocarbons }
 			set_variable = { global.industry_modernized_input_amount_1@token:industry_gas_rig = 7.0 }
@@ -3061,10 +3061,10 @@
 			set_variable = { global.industry_industrialized_tech_unlock@token:industry_offshore_oil_rig = token:tech_on_water_drilling }
 
 			# $0.239 productivity
-			set_variable = { global.industry_industrialized_laborers_employment@token:industry_offshore_oil_rig = 0.9 }
-			set_variable = { global.industry_industrialized_workers_employment@token:industry_offshore_oil_rig = 3.0 }
-			set_variable = { global.industry_industrialized_professionals_employment@token:industry_offshore_oil_rig = 2.0 }
-			set_variable = { global.industry_industrialized_elites_employment@token:industry_offshore_oil_rig = 0.1 }
+			set_variable = { global.industry_industrialized_laborers_employment@token:industry_offshore_oil_rig = 0.45 }
+			set_variable = { global.industry_industrialized_workers_employment@token:industry_offshore_oil_rig = 1.5 }
+			set_variable = { global.industry_industrialized_professionals_employment@token:industry_offshore_oil_rig = 1.0 }
+			set_variable = { global.industry_industrialized_elites_employment@token:industry_offshore_oil_rig = 0.05 }
 
 			set_variable = { global.industry_industrialized_input_resource_1@token:industry_offshore_oil_rig = token:resource_hydrocarbons }
 			set_variable = { global.industry_industrialized_input_amount_1@token:industry_offshore_oil_rig = 6.0 }
@@ -3085,9 +3085,9 @@
 
 			# $0.279 productivity
 			set_variable = { global.industry_mechanized_laborers_employment@token:industry_offshore_oil_rig = 0.0 }
-			set_variable = { global.industry_mechanized_workers_employment@token:industry_offshore_oil_rig = 1.9 }
-			set_variable = { global.industry_mechanized_professionals_employment@token:industry_offshore_oil_rig = 3.0 }
-			set_variable = { global.industry_mechanized_elites_employment@token:industry_offshore_oil_rig = 0.1 }
+			set_variable = { global.industry_mechanized_workers_employment@token:industry_offshore_oil_rig = 0.95 }
+			set_variable = { global.industry_mechanized_professionals_employment@token:industry_offshore_oil_rig = 1.5 }
+			set_variable = { global.industry_mechanized_elites_employment@token:industry_offshore_oil_rig = 0.05 }
 
 			set_variable = { global.industry_mechanized_input_resource_1@token:industry_offshore_oil_rig = token:resource_hydrocarbons }
 			set_variable = { global.industry_mechanized_input_amount_1@token:industry_offshore_oil_rig = 8.0 }
@@ -3110,9 +3110,9 @@
 
 			# $0.299 productivity
 			set_variable = { global.industry_modernized_laborers_employment@token:industry_offshore_oil_rig = 0.0 }
-			set_variable = { global.industry_modernized_workers_employment@token:industry_offshore_oil_rig = 0.9 }
-			set_variable = { global.industry_modernized_professionals_employment@token:industry_offshore_oil_rig = 4.0 }
-			set_variable = { global.industry_modernized_elites_employment@token:industry_offshore_oil_rig = 0.1 }
+			set_variable = { global.industry_modernized_workers_employment@token:industry_offshore_oil_rig = 0.45 }
+			set_variable = { global.industry_modernized_professionals_employment@token:industry_offshore_oil_rig = 2.0 }
+			set_variable = { global.industry_modernized_elites_employment@token:industry_offshore_oil_rig = 0.05 }
 
 			set_variable = { global.industry_modernized_input_resource_1@token:industry_offshore_oil_rig = token:resource_hydrocarbons }
 			set_variable = { global.industry_modernized_input_amount_1@token:industry_offshore_oil_rig = 10.0 }
@@ -7779,10 +7779,10 @@
 			set_variable = { global.industry_industrialized_tech_unlock@token:industry_oil_refinery = 0 }
 
 			# $0.279 productivity
-			set_variable = { global.industry_industrialized_laborers_employment@token:industry_oil_refinery = 0.9 }
-			set_variable = { global.industry_industrialized_workers_employment@token:industry_oil_refinery = 5.0 }
-			set_variable = { global.industry_industrialized_professionals_employment@token:industry_oil_refinery = 2.0 }
-			set_variable = { global.industry_industrialized_elites_employment@token:industry_oil_refinery = 0.1 }
+			set_variable = { global.industry_industrialized_laborers_employment@token:industry_oil_refinery = 0.45 }
+			set_variable = { global.industry_industrialized_workers_employment@token:industry_oil_refinery = 2.5 }
+			set_variable = { global.industry_industrialized_professionals_employment@token:industry_oil_refinery = 1.0 }
+			set_variable = { global.industry_industrialized_elites_employment@token:industry_oil_refinery = 0.05 }
 
 			set_variable = { global.industry_industrialized_input_resource_1@token:industry_oil_refinery = token:resource_crude_oil }
 			set_variable = { global.industry_industrialized_input_amount_1@token:industry_oil_refinery = 68.0 }
@@ -7802,9 +7802,9 @@
 
 			# $0.292 productivity
 			set_variable = { global.industry_mechanized_laborers_employment@token:industry_oil_refinery = 0.0 }
-			set_variable = { global.industry_mechanized_workers_employment@token:industry_oil_refinery = 2.9 }
+			set_variable = { global.industry_mechanized_workers_employment@token:industry_oil_refinery = 1.45 }
 			set_variable = { global.industry_mechanized_professionals_employment@token:industry_oil_refinery = 3.0 }
-			set_variable = { global.industry_mechanized_elites_employment@token:industry_oil_refinery = 0.1 }
+			set_variable = { global.industry_mechanized_elites_employment@token:industry_oil_refinery = 0.05 }
 
 			set_variable = { global.industry_mechanized_input_resource_1@token:industry_oil_refinery = token:resource_crude_oil }
 			set_variable = { global.industry_mechanized_input_amount_1@token:industry_oil_refinery = 110.0 }
@@ -7834,8 +7834,8 @@
 			# $0.310 productivity
 			set_variable = { global.industry_modernized_laborers_employment@token:industry_oil_refinery = 0.0 }
 			set_variable = { global.industry_modernized_workers_employment@token:industry_oil_refinery = 0.0 }
-			set_variable = { global.industry_modernized_professionals_employment@token:industry_oil_refinery = 4.9 }
-			set_variable = { global.industry_modernized_elites_employment@token:industry_oil_refinery = 0.1 }
+			set_variable = { global.industry_modernized_professionals_employment@token:industry_oil_refinery = 2.45 }
+			set_variable = { global.industry_modernized_elites_employment@token:industry_oil_refinery = 0.05 }
 
 			set_variable = { global.industry_modernized_input_resource_1@token:industry_oil_refinery = token:resource_crude_oil }
 			set_variable = { global.industry_modernized_input_amount_1@token:industry_oil_refinery = 150.0 }

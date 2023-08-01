@@ -22,6 +22,22 @@ set_technology = {
 	gw_artillery = 1
 	fuel_silos = 1
 	fuel_refining = 1
+
+	tech_intensive_agriculture = 1
+	tech_tractors = 1
+	tech_agronomy = 1
+	tech_electrified_wire_fencing = 1
+	tech_nitrogen_fertilizers = 1
+	tech_cable_tool_drilling = 1
+	tech_early_rotary_drilling = 1
+	tech_shaft_driven_rotary_table = 1
+	tech_drilling_mud = 1
+	tech_standardized_derrick = 1
+	tech_steel_picks_and_shovels = 1
+	tech_steam_shovels = 1
+	tech_coal_cutting_machines = 1
+	tech_loading_machines = 1
+	tech_hydraulic_excavators = 1
 }
 
 if = {

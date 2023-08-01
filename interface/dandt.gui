@@ -3696,6 +3696,7 @@ guiTypes = {
 			position = { x = 10 y = 10 }
 			spriteType = "GFX_resources_strip"
 			frame = 13
+			pdx_tooltip = "dandt_trade_routes_icon_tooltip"
 		}
 
 		instantTextBoxType = {

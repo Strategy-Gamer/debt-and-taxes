@@ -276,10 +276,12 @@
 		}
 		defined_text = {
 			name = GetPartyLastStrength
-			trigger = {
-				set_temp_variable = { gpls = last_strength@var:v }
+			text = {
+				trigger = {
+					set_temp_variable = { gpls = last_strength@var:v }
+				}
+				localization_key = "[?gpls|1]%"
 			}
-			localization_key = "[?gpls|1]%"
 		}
 		defined_text = {
 			name = GetPartyStrengthChange
