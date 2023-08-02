@@ -1,5 +1,5 @@
-spriteTypes = {	
-	
+spriteTypes = {
+
 ### Death and Taxes ###
 
 ### Technologies ###
@@ -7,42 +7,42 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_watt_steam_engine_medium"
 		texturefile = "gfx/interface/technologies/watt_steam_engine.dds"
-	}	
+	}
 
 	SpriteType = {
 		name = "GFX_steam_indicator_medium"
 		texturefile = "gfx/interface/technologies/steam_indicator.dds"
-	}	
+	}
 
 	SpriteType = {
 		name = "GFX_centrifugal_governor_medium"
 		texturefile = "gfx/interface/technologies/centrifugal_governor.dds"
-	}	
+	}
 
 	SpriteType = {
 		name = "GFX_double_acting_engine_medium"
 		texturefile = "gfx/interface/technologies/double_acting_engine.dds"
-	}	
+	}
 
 	SpriteType = {
 		name = "GFX_compound_engine_medium"
 		texturefile = "gfx/interface/technologies/compound_engine.dds"
-	}	
+	}
 
 	SpriteType = {
 		name = "GFX_rotary_power_medium"
 		texturefile = "gfx/interface/technologies/rotary_power.dds"
-	}	
+	}
 
 	SpriteType = {
 		name = "GFX_parallel_motion_medium"
 		texturefile = "gfx/interface/technologies/parallel_motion.dds"
-	}	
+	}
 
 	SpriteType = {
 		name = "GFX_d_slide_valve_medium"
 		texturefile = "gfx/interface/technologies/d_slide_valve.dds"
-	}	
+	}
 
 	SpriteType = {
 		name = "GFX_high_pressure_steam_engine_medium"
@@ -54,8 +54,8 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_technology_dandt_tech_folder_small_unavailable_item_bg"
 		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
-	}	
-	
+	}
+
 	spriteType = {
 		name = "GFX_technology_dandt_tech_folder_small_available_item_bg"
 		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
@@ -64,13 +64,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_technology_dandt_tech_folder_small_researched_item_bg"
 		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
-	}	
+	}
 
 	spriteType = {
 		name = "GFX_technology_dandt_tech_folder_small_branch_item_bg"
 		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
 	}
-	
+
 	frameAnimatedSpriteType = {
 		name = "GFX_technology_dandt_tech_folder_small_currently_researching_item_bg"
 		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
