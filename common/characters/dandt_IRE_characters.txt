@@ -30,12 +30,12 @@ characters = {
 			}
 			#ideology_liberal
 		}
-		IRE_michael_richard_hefferman = {
-			name = IRE_michael_richard_hefferman
+		IRE_michael_richard_heffernan = {
+			name = IRE_michael_richard_heffernan
 			#https://en.wikipedia.org/wiki/Michael_Heffernan_(politician)
 			portraits = {
 				civilian = {
-					large = GFX_portrait_IRE_michael_richard_hefferman
+					large = GFX_portrait_IRE_michael_richard_heffernan
 				}
 			}
 			#ideology_agrarian

@@ -5575,8 +5575,8 @@ dandt_on_startup_1929 = {
 			set_variable = { production_method@token:industry_livestock_ranch = 3 }
 			set_variable = { size@token:industry_grain_farm = 3 }
 			set_variable = { production_method@token:industry_grain_farm = 3 }
-			set_variable = { size@token:industry_precious_metal_mine = 1 }
-			set_variable = { production_method@token:industry_precious_metal_mine = 1 }
+			set_variable = { size@token:industry_precious_metals_mine = 1 }
+			set_variable = { production_method@token:industry_precious_metals_mine = 1 }
 			set_variable = { size@token:industry_rice_paddy = 3 }
 			set_variable = { production_method@token:industry_rice_paddy = 3 }
 			set_variable = { size@token:industry_real_estate = 2 }
@@ -6005,7 +6005,7 @@ dandt_on_startup_1929 = {
 					set_variable = { leader@token:ideology_liberal = token:IRE_eamon_de_valera }
 				set_variable = { party@token:ideology_agrarian = token:party_IRE_national_farmers_party }
 					set_variable = { popularity@token:ideology_agrarian = 6.4 }
-					set_variable = { leader@token:ideology_agrarian = token:IRE_michael_richard_hefferman }
+					set_variable = { leader@token:ideology_agrarian = token:IRE_michael_richard_heffernan }
 				set_variable = { party@token:ideology_conservative = token:party_IRE_gaelic_society }
 					set_variable = { popularity@token:ideology_conservative = 38.7 }
 					set_variable = { leader@token:ideology_conservative = token:IRE_william_thomas_cosgrave }
