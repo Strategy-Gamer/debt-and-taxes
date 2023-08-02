@@ -5994,19 +5994,27 @@ dandt_on_startup_1929 = {
 	#IRE
 		IRE = {
 			#Politics
-				set_variable = { party@token:ideology_socialist = token:party_generic_workers_party }
-				set_variable = { popularity@token:ideology_socialist = 1.1 }
+				set_variable = { party@token:ideology_communist = token:party_IRE_irish_worker_league }
+					set_variable = { popularity@token:ideology_communist = 1.1 }
+					set_variable = { leader@token:ideology_communist = token:IRE_james_larkin }
 				set_variable = { party@token:ideology_socialist = token:party_generic_labour_party }
-				set_variable = { popularity@token:ideology_socialist = 9.1 }
+					set_variable = { popularity@token:ideology_socialist = 9.1 }
+					set_variable = { leader@token:ideology_socialist = token:IRE_thomas_joseph_oconnell }
 				set_variable = { party@token:ideology_liberal = token:party_generic_republican_party }
-				set_variable = { popularity@token:ideology_liberal = 35.2 }
+					set_variable = { popularity@token:ideology_liberal = 35.2 }
+					set_variable = { leader@token:ideology_liberal = token:IRE_eamon_de_valera }
 				set_variable = { party@token:ideology_agrarian = token:party_IRE_national_farmers_party }
-				set_variable = { popularity@token:ideology_agrarian = 6.4 }
+					set_variable = { popularity@token:ideology_agrarian = 6.4 }
+					set_variable = { leader@token:ideology_agrarian = token:IRE_michael_richard_hefferman }
 				set_variable = { party@token:ideology_conservative = token:party_IRE_gaelic_society }
-				set_variable = { popularity@token:ideology_conservative = 38.7 }
+					set_variable = { popularity@token:ideology_conservative = 38.7 }
+					set_variable = { leader@token:ideology_conservative = token:IRE_william_thomas_cosgrave }
 				set_variable = { party@token:ideology_reactionary = token:party_CUB_national_league }
-				set_variable = { popularity@token:ideology_reactionary = 1.6 }
+					set_variable = { popularity@token:ideology_reactionary = 1.6 }
+					set_variable = { leader@token:ideology_reactionary = token:IRE_william_archer_redmond }
+				set_variable = { party@token:ideology_fascist = token:party_IRE_republican_system }
 				set_variable = { popularity@token:ideology_stratocratic = 7.9 }
+					set_variable = { leader@token:ideology_stratocratic = token:IRE_thomas_bernardine_barry }
 			#
 		}
 	#

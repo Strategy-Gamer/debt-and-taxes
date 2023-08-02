@@ -205,9 +205,13 @@
  party_LIT_christian_democratic_party: "Christian Democratic Party"
  party_LIT_democratic_union: "Democratic Union"
 #Ireland
+ party_IRE_irish_worker_league: "Irish Worker League"
  party_IRE_gaelic_society: "Gaelic Society"
  party_IRE_national_farmers_party: "National Farmer's Party"
  party_IRE_gaelic_family: "Gaelic Family"
+ party_IRE_national_centre_party: "National Centre Party"
+ party_IRE_republican_system: "Republican System"
+ party_IRE_the_irish_family: "The Irish Family"
 #Spain
  party_SPR_radical_republican_party: "Radical Republican Party"
  party_SPR_liberal_republican_party: "Liberal Republican Party"

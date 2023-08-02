@@ -1,0 +1,164 @@
+characters = {
+	#1927 Election
+		IRE_james_larkin = {
+			name = IRE_james_larkin
+			#https://en.wikipedia.org/wiki/James_Larkin
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_james_larkin
+				}
+			}
+			#ideology_communist
+		}
+		IRE_thomas_joseph_oconnell = {
+			name = IRE_thomas_joseph_oconnell
+			#https://en.wikipedia.org/wiki/Thomas_J._O%27Connell
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_thomas_joseph_oconnell
+				}
+			}
+			#ideology_socialist
+		}
+		IRE_eamon_de_valera = {
+			name = IRE_eamon_de_valera
+			#https://en.wikipedia.org/wiki/%C3%89amon_de_Valera
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_eamon_de_valera
+				}
+			}
+			#ideology_liberal
+		}
+		IRE_michael_richard_hefferman = {
+			name = IRE_michael_richard_hefferman
+			#https://en.wikipedia.org/wiki/Michael_Heffernan_(politician)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_michael_richard_hefferman
+				}
+			}
+			#ideology_agrarian
+		}
+		IRE_william_thomas_cosgrave = {
+			name = IRE_william_thomas_cosgrave
+			#https://en.wikipedia.org/wiki/W._T._Cosgrave
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_william_thomas_cosgrave
+				}
+			}
+			#ideology_conservative
+		}
+		IRE_william_archer_redmond = {
+			name = IRE_william_archer_redmond
+			#https://en.wikipedia.org/wiki/William_Redmond_(Irish_politician,_born_1886)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_william_archer_redmond
+				}
+			}
+			#ideology_reactionary
+		}
+		IRE_thomas_bernardine_barry = {
+			name = IRE_thomas_bernardine_barry
+			#https://en.wikipedia.org/wiki/Tom_Barry_(Irish_republican)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_thomas_bernardine_barry
+				}
+			}
+			#ideology_stratocratic
+		}
+	#
+	#1932 Election
+	#
+	#1933 Election
+		IRE_william_joseph_norton = {
+			name = IRE_william_joseph_norton
+			#https://en.wikipedia.org/wiki/William_Norton
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_william_joseph_norton
+				}
+			}
+			#ideology_socialist
+		}
+		IRE_frank_cj_macdermot = {
+			name = IRE_frank_cj_macdermot
+			#https://en.wikipedia.org/wiki/Frank_MacDermot
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_frank_cj_macdermot
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1937 Election
+	#
+	#1938 Election
+	#
+	#1943 Election
+		IRE_michael_donnellan = {
+			name = IRE_michael_donnellan
+			#https://en.wikipedia.org/wiki/Michael_Donnellan_(politician)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_michael_donnellan
+				}
+			}
+			#ideology_agrarian
+		}
+		IRE_simon_john_donnelly = {
+			name = IRE_simon_john_donnelly
+			#https://en.wikipedia.org/wiki/Simon_Donnelly_(Irish_republican)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_simon_john_donnelly
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1944 Election
+		IRE_joseph_blowick = {
+			name = IRE_joseph_blowick
+			#https://en.wikipedia.org/wiki/Joseph_Blowick
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_joseph_blowick
+				}
+			}
+			#ideology_agrarian
+		}
+		IRE_richard_james_mulcahy = {
+			name = IRE_richard_james_mulcahy
+			#https://en.wikipedia.org/wiki/Richard_Mulcahy
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_richard_james_mulcahy
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1948 Election
+	#
+	#1951
+		IRE_michael_oriordan = {
+			name = IRE_michael_oriordan
+			#https://en.wikipedia.org/wiki/Michael_O%27Riordan
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRE_michael_oriordan
+				}
+			}
+			#ideology_communist
+		}
+	#
+	#1954 Election
+	#
+	#1957 Election
+	#
+}

@@ -36,6 +36,8 @@
  climate_mild_tropic_desc: ""
  climate_continental_tropic: "Continental-Tropic"
  climate_continental_tropic_desc: ""
+ climate_arid_subtropic: "Arid-Tropic"
+ climate_arid_subtropic_desc: ""
  climate_humid_subtropic: "Humid-Subtropic"
  climate_humid_subtropic_desc: ""
  climate_mild_subtropic: "Mild-Subtropic"
