@@ -6022,12 +6022,23 @@ dandt_on_startup_1929 = {
 		ENG = {
 			#Politics
 				set_variable = { popularity@token:ideology_communist = 0.9 }
+					set_variable = { leader@token:ideology_communist = token:ENG_albert_samuel_inkpin }
+					set_variable = { heir@token:ideology_communist = token:ENG_harry_pollitt }
 				set_variable = { party@token:ideology_socialist = token:party_generic_labour_party }
-				set_variable = { popularity@token:ideology_socialist = 33.3 }
+					set_variable = { popularity@token:ideology_socialist = 33.3 }
+					set_variable = { leader@token:ideology_socialist = token:ENG_james_ramsay_macdonald }
 				set_variable = { popularity@token:ideology_liberal = 17.8 }
-				set_variable = { popularity@token:ideology_conservative = 46.8 }
-				set_variable = { party@token:ideology_reactionary = token:party_generic_constitutionalist_party }
-				set_variable = { popularity@token:ideology_reactionary = 1.2 }
+					set_variable = { leader@token:ideology_liberal = token:ENG_herbert_henry_asquith }
+					set_variable = { heir@token:ideology_liberal = token:ENG_david_lloyd_george }
+				set_variable = { party@token:ideology_agrarian = token:party_ENG_national_liberal_party }
+					set_variable = { heir@token:ENG_john_allsebrook_simon }
+				set_variable = { popularity@token:ideology_conservative = 47.8 }
+					set_variable = { leader@token:ideology_conservative = token:ENG_stanley_baldwin }
+				set_variable = { party@token:ideology_reactionary = token:party_USA_prohibition_party }
+					set_variable = { popularity@token:ideology_reactionary = 0.2 }
+					set_variable = { leader@token:ideology_reactionary = token:ENG_edwin_scrymgeour }
+				set_variable = { party@token:ideology_fascist = token:party_ENG_imperial_fascist_league }
+					set_variable = { leader@token:ideology_fascist = token:ENG_arnold_spencer_leese }
 			#
 		}
 	#

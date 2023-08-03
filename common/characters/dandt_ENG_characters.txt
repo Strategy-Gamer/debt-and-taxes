@@ -1,0 +1,240 @@
+characters = {
+	#1924 Election
+		ENG_albert_samuel_inkpin = {
+			name = ENG_albert_samuel_inkpin
+			#https://en.wikipedia.org/wiki/Albert_Inkpin
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_albert_samuel_inkpin
+				}
+			}
+			#ideology_communist
+		}
+		ENG_james_ramsay_macdonald = {
+			name = ENG_james_ramsay_macdonald
+			#https://en.wikipedia.org/wiki/Ramsay_MacDonald
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_james_ramsay_macdonald
+				}
+			}
+			#ideology_
+		}
+		ENG_herbert_henry_asquith = {
+			name = ENG_herbert_henry_asquith
+			#https://en.wikipedia.org/wiki/H._H._Asquith
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_herbert_henry_asquith
+				}
+			}
+			#ideology_liberal
+		}
+		ENG_stanley_baldwin = {
+			name = ENG_stanley_baldwin
+			#https://en.wikipedia.org/wiki/Stanley_Baldwin
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_stanley_baldwin
+				}
+			}
+			#ideology_conservative
+		}
+		ENG_edwin_scrymgeour = {
+			name = ENG_edwin_scrymgeour
+			#https://en.wikipedia.org/wiki/Edwin_Scrymgeour
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_edwin_scrymgeour
+				}
+			}
+			#ideology_reactionary
+		}
+		ENG_arnold_spencer_leese = {
+			name = ENG_arnold_spencer_leese
+			#https://en.wikipedia.org/wiki/Arnold_Leese
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_arnold_spencer_leese
+				}
+			}
+			#
+		}
+	#
+	#1929 Election
+		ENG_harry_pollitt = {
+			name = ENG_harry_pollitt
+			#https://en.wikipedia.org/wiki/Harry_Pollitt
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_harry_pollitt
+				}
+			}
+			#ideology_communist
+		}
+		ENG_david_lloyd_george = {
+			name = ENG_david_lloyd_george
+			#https://en.wikipedia.org/wiki/David_Lloyd_George
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_david_lloyd_george
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1931 Election
+		ENG_arthur_henderson = {
+			name = ENG_arthur_henderson
+			#https://en.wikipedia.org/wiki/Arthur_Henderson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_arthur_henderson
+				}
+			}
+			#ideology_socialist
+		}
+		ENG_herbert_louis_samuel = {
+			name = ENG_herbert_louis_samuel
+			#https://en.wikipedia.org/wiki/Herbert_Samuel,_1st_Viscount_Samuel
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_herbert_louis_samuel
+				}
+			}
+			#ideology_liberal
+		}
+		ENG_john_allsebrook_simon = {
+			name = ENG_john_allsebrook_simon
+			#https://en.wikipedia.org/wiki/John_Simon,_1st_Viscount_Simon
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_john_allsebrook_simon
+				}
+			}
+			#ideology_agrarian
+		}
+		ENG_oswald_mosley = {
+			name = ENG_oswald_mosley
+			#https://en.wikipedia.org/wiki/Oswald_Mosley
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_oswald_mosley
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1935 Election
+		ENG_clement_richard_attlee = {
+			name = ENG_clement_richard_attlee
+			#https://en.wikipedia.org/wiki/Clement_Attlee
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_clement_richard_attlee
+				}
+			}
+			#ideology_socialist
+		}
+	#
+	#1945 Election
+		ENG_archibald_henry_macdonald_sinclair = {
+			name = ENG_archibald_henry_macdonald_sinclair
+			#https://en.wikipedia.org/wiki/Archibald_Sinclair,_1st_Viscount_Thurso
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_archibald_henry_macdonald_sinclair
+				}
+			}
+			#ideology_liberal
+		}
+		ENG_alfred_ernest_brown = {
+			name = ENG_alfred_ernest_brown
+			#https://en.wikipedia.org/wiki/Ernest_Brown_(British_politician)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_alfred_ernest_brown
+				}
+			}
+			#ideology_agrarian
+		}
+		ENG_winston_leonard_spencer_churchill = {
+			name = ENG_winston_leonard_spencer_churchill
+			#ENG_winston_leonard_spencer_churchill
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_winston_leonard_spencer_churchill
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1950 Election
+		ENG_edward_clement_davies = {
+			name = ENG_edward_clement_davies
+			#https://en.wikipedia.org/wiki/Clement_Davies
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_edward_clement_davies
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1951 Election
+		ENG_trefor_david = {
+			name = ENG_trefor_david
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_trefor_david
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1955 Election
+		ENG_robert_anthony_eden = {
+			name = ENG_robert_anthony_eden
+			#https://en.wikipedia.org/wiki/Anthony_Eden
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_robert_anthony_eden
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1959 Election
+		ENG_john_gollan = {
+			name = ENG_john_gollan
+			#https://en.wikipedia.org/wiki/John_Gollan
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_john_gollan
+				}
+			}
+			#ideology_communist
+		}
+		ENG_hugh_todd_naylor_gaitskell = {
+			name = ENG_hugh_todd_naylor_gaitskell
+			#https://en.wikipedia.org/wiki/Hugh_Gaitskell
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_hugh_todd_naylor_gaitskell
+				}
+			}
+			#ideology_socialist
+		}
+		ENG_joseph_grimond = {
+			name = ENG_joseph_grimond
+			#https://en.wikipedia.org/wiki/Jo_Grimond
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ENG_joseph_grimond
+				}
+			}
+			#ideology_liberal
+		}
+	#
+}

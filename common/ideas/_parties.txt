@@ -206,6 +206,10 @@ ideas = {
 		party_IRE_national_centre_party = { allowed = { always = no } }
 		party_IRE_republican_system = { allowed = { always = no } }
 		party_IRE_the_irish_family = { allowed = { always = no } }
+		#ENG
+		party_ENG_imperial_fascist_league = { allowed = { always = no } }
+		party_ENG_british_union_of_fascists_and_national_socialists = { allowed = { always = no } }
+		party_ENG_national_liberal_party = { allowed = { always = no } }
 		#SPR
 		party_SPR_radical_republican_party = { allowed = { always = no } }
 		party_SPR_liberal_republican_party = { allowed = { always = no } }

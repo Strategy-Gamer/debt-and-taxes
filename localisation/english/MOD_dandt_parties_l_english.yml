@@ -212,6 +212,10 @@
  party_IRE_national_centre_party: "National Centre Party"
  party_IRE_republican_system: "Republican System"
  party_IRE_the_irish_family: "The Irish Family"
+#Great Britain
+ party_ENG_imperial_fascist_league: "Imperial Fascist League"
+ party_ENG_british_union_of_fascists_and_national_socialists: "British Union of Fascists and National Socialists"
+ party_ENG_national_liberal_party: "National Liberal Party"
 #Spain
  party_SPR_radical_republican_party: "Radical Republican Party"
  party_SPR_liberal_republican_party: "Liberal Republican Party"
