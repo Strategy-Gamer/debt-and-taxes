@@ -111,7 +111,7 @@
   global_market_adjective: "Global"
   global_market_capital: "Earth"
   national_market_adjective: "[?selected_market.GetAdjective]"
-  national_market_capital: "[?selected_market:market_capital.GetName]"
+  national_market_capital: "[?selected_market:market_capital.GetCapitalVictoryPointName]"
 
   can_trade_filter_title: "Show Only §YAccessible Countries§!"
   allied_filter_title: "Show Only §YAllied Countries§!"

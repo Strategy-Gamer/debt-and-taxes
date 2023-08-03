@@ -909,7 +909,7 @@
 					gcl = govt_coalition_leader_array^0
 				}
 				set_temp_variable = {
-					gcl2 = heir@var:gcl
+					gcl2 = leader@var:gcl
 				}
 				check_variable = {
 					gcl2 > 0
