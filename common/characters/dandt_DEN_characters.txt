@@ -1,0 +1,246 @@
+characters = {
+	#1926 Election
+		DEN_thoger_thogorson = {
+			name = DEN_thoger_thogorson
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_thoger_thogorson
+				}
+			}
+			#ideology_communist
+		}
+		DEN_thorvald_august_marinus_stauning = {
+			name = DEN_thorvald_august_marinus_stauning
+			#https://en.wikipedia.org/wiki/Thorvald_Stauning
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_thorvald_august_marinus_stauning
+				}
+			}
+			#ideology_socialist
+		}
+		DEN_carl_theodor_zahle = {
+			name = DEN_carl_theodor_zahle
+			#https://en.wikipedia.org/wiki/Carl_Theodor_Zahle
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_carl_theodor_zahle
+				}
+			}
+			#ideology_liberal
+		}
+		DEN_thomas_madsen_mygdal = {
+			name = DEN_thomas_madsen_mygdal
+			#https://en.wikipedia.org/wiki/Thomas_Madsen-Mygdal
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_thomas_madsen_mygdal
+				}
+			}
+			#ideology_agrarian
+		}
+		DEN_emil_piper = {
+			name = DEN_emil_piper
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_emil_piper
+				}
+			}
+			#ideology_conservative
+		}
+		DEN_andrass_samuelsen = {
+			name = DEN_andrass_samuelsen
+			#https://en.wikipedia.org/wiki/Andrass_Samuelsen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_andrass_samuelsen
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1929 Election
+		DEN_peter_rochegune_munch = {
+			name = DEN_peter_rochegune_munch
+			#https://en.wikipedia.org/wiki/Peter_Rochegune_Munch
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_peter_rochegune_munch
+				}
+			}
+			#ideology_liberal
+		}
+		DEN_guido_leo_john_christmas_moller = {
+			name = DEN_guido_leo_john_christmas_moller
+			#https://en.wikipedia.org/wiki/John_Christmas_M%C3%B8ller
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_guido_leo_john_christmas_moller
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1932 Election
+		DEN_aksel_larsen = {
+			name = DEN_aksel_larsen
+			#https://en.wikipedia.org/wiki/Aksel_Larsen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_aksel_larsen
+				}
+			}
+			#ideology_communist
+		}
+	#
+	#1935 Election
+	#
+	#1939 Election
+		DEN_arne_sorensen = {
+			name = DEN_arne_sorensen
+			#https://en.wikipedia.org/wiki/Arne_S%C3%B8rensen_(politician)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_arne_sorensen
+				}
+			}
+			#ideology_reactionary
+		}
+		DEN_frits_clausen = {
+			name = DEN_frits_clausen
+			#https://en.wikipedia.org/wiki/Frits_Clausen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_frits_clausen
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1943 Election
+		DEN_hans_hedtoft_hansen = {
+			name = DEN_hans_hedtoft_hansen
+			#https://en.wikipedia.org/wiki/Hans_Hedtoft
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_hans_hedtoft_hansen
+				}
+			}
+			#ideology_socialist
+		}
+		DEN_jorgen_peder_laurids_jorgensen = {
+			name = DEN_jorgen_peder_laurids_jorgensen
+			#https://en.wikipedia.org/wiki/J%C3%B8rgen_J%C3%B8rgensen_(politician)
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_jorgen_peder_laurids_jorgensen
+				}
+			}
+			#ideology_liberal
+		}
+		DEN_knud_kristensen = {
+			name = DEN_knud_kristensen
+			#https://en.wikipedia.org/wiki/Knud_Kristensen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_knud_kristensen
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1945 Election
+	#
+	#1947 Election
+		DEN_ole_bjorn_kraft = {
+			name = DEN_ole_bjorn_kraft
+			#https://en.wikipedia.org/wiki/Ole_Bj%C3%B8rn_Kraft
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_ole_bjorn_kraft
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1950 Election
+		DEN_erik_eriksen = {
+			name = DEN_erik_eriksen
+			#https://en.wikipedia.org/wiki/Erik_Eriksen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_erik_eriksen
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1953 Election
+	#
+	#1957 Election
+		DEN_hans_christian_svane_hansen = {
+			name = DEN_hans_christian_svane_hansen
+			#https://en.wikipedia.org/wiki/H._C._Hansen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_hans_christian_svane_hansen
+				}
+			}
+			#ideology_socialist
+		}
+		DEN_aksel_moller = {
+			name = DEN_aksel_moller
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_aksel_moller
+				}
+			}
+			#ideology_conservative
+		}
+		DEN_hakun_djurhuus = {
+			name = DEN_hakun_djurhuus
+			#https://en.wikipedia.org/wiki/H%C3%A1kun_Djurhuus
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_hakun_djurhuus
+				}
+			}
+			#ideology_reactionary
+		}
+	#
+	#1960 Election
+		DEN_knud_jespersen = {
+			name = DEN_knud_jespersen
+			#https://en.wikipedia.org/wiki/Knud_Jespersen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_knud_jespersen
+				}
+			}
+			#ideology_communist
+		}
+		DEN_olfert_viggo_fischer_kampmann = {
+			name = DEN_olfert_viggo_fischer_kampmann
+			#https://en.wikipedia.org/wiki/Viggo_Kampmann
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_olfert_viggo_fischer_kampmann
+				}
+			}
+			#ideology_socialist
+		}
+		DEN_poul_sorensen = {
+			name = DEN_poul_sorensen
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_poul_sorensen
+				}
+			}
+			#ideology_conservative
+		}
+	#
+}

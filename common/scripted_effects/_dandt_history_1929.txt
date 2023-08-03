@@ -5853,16 +5853,26 @@ dandt_on_startup_1929 = {
 		DEN = {
 			#Politics
 				set_variable = { popularity@token:ideology_communist = 0.4 }
+					set_variable = { leader@token:ideology_communist = token:DEN_thoger_thogorson }
 				set_variable = { party@token:ideology_socialist = token:party_generic_social_democratic_party }
-				set_variable = { popularity@token:ideology_socialist = 37.2 }
+					set_variable = { popularity@token:ideology_socialist = 37.2 }
+					set_variable = { leader@token:ideology_socialist = token:DEN_thorvald_august_marinus_stauning }
 				set_variable = { party@token:ideology_liberal = token:party_DEN_social_liberal_party }
-				set_variable = { popularity@token:ideology_liberal = 11.3 }
-				set_variable = { party@token:ideology_agrarian = token:party_DEN_justice_party }
-				set_variable = { popularity@token:ideology_agrarian = 2.1 }
-				set_variable = { party@token:ideology_conservative = token:party_DEN_venstre }
-				set_variable = { popularity@token:ideology_conservative = 48.9 }
+					set_variable = { popularity@token:ideology_liberal = 12.6 }
+					set_variable = { leader@token:ideology_liberal = token:DEN_carl_theodor_zahle }
+					set_variable = { heir@token:ideology_liberal = token:DEN_peter_rochegune_munch }
+				set_variable = { party@token:ideology_agrarian = token:party_DEN_venstre }
+					set_variable = { popularity@token:ideology_agrarian = 28.8 }
+					set_variable = { leader@token:ideology_agrarian = token:DEN_thomas_madsen_mygdal }
+				set_variable = { party@token:ideology_conservative = token:party_SWI_conservative_peoples_party }
+					set_variable = { popularity@token:ideology_conservative = 20.6 }
+					set_variable = { leader@token:ideology_conservative = token:DEN_emil_piper }
+					set_variable = { heir@token:ideology_conservative = token:DEN_guido_leo_john_christmas_moller }
 				set_variable = { party@token:ideology_reactionary = token:party_generic_independence_party }
-				set_variable = { popularity@token:ideology_reactionary = 0.1 }
+					set_variable = { popularity@token:ideology_reactionary = 0.4 }
+					set_variable = { leader@token:ideology_reactionary = token:DEN_andrass_samuelsen }
+				set_variable = { party@token:ideology_fascist = token:party_GER_national_socialist_party }
+					set_variable = { heir@token:ideology_fascist = token:DEN_frits_clausen }
 			#
 		}
 	#
