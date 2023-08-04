@@ -1,0 +1,180 @@
+characters = {
+	#1927 Election
+		ICE_jon_baldvinsson = {
+			name = ICE_jon_baldvinsson
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_jon_baldvinsson
+				}
+			}
+			#ideology_socialist
+		}
+		ICE_sigurour_eggerz = {
+			name = ICE_sigurour_eggerz
+			#https://en.wikipedia.org/wiki/Sigur%C3%B0ur_Eggerz
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_sigurour_eggerz
+				}
+			}
+			#ideology_liberal
+		}
+		ICE_tryggvi_thorhallsson = {
+			name = ICE_tryggvi_thorhallsson
+			#https://en.wikipedia.org/wiki/Tryggvi_%C3%9E%C3%B3rhallsson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_tryggvi_thorhallsson
+				}
+			}
+			#ideology_agrarian
+		}
+		ICE_jon_thorlaksson = {
+			name = ICE_jon_thorlaksson
+			#https://en.wikipedia.org/wiki/J%C3%B3n_%C3%9Eorl%C3%A1ksson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_jon_thorlaksson
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1930 Election
+		ICE_brynjolfur_bjarnason = {
+			name = ICE_brynjolfur_bjarnason
+			#https://en.wikipedia.org/wiki/Brynj%C3%B3lfur_Bjarnason
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_brynjolfur_bjarnason
+				}
+			}
+			#ideology_communist
+		}
+	#
+	#1931 Election
+	#
+	#1933 Election
+		ICE_asgeir_asgeirsson = {
+			name = ICE_asgeir_asgeirsson
+			#https://en.wikipedia.org/wiki/%C3%81sgeir_%C3%81sgeirsson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_asgeir_asgeirsson
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1934 Election
+		ICE_hermann_jonasson = {
+			name = ICE_hermann_jonasson
+			#https://en.wikipedia.org/wiki/Hermann_J%C3%B3nasson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_hermann_jonasson
+				}
+			}
+			#ideology_agrarian
+		}
+		ICE_jon_thorbergsson = {
+			name = ICE_jon_thorbergsson
+			#no_article
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_jon_thorbergsson
+				}
+			}
+			#ideology_fascist
+		}
+	#
+	#1937 Election
+		ICE_jonas_jonsson = {
+			name = ICE_jonas_jonsson
+			#https://en.wikipedia.org/wiki/J%C3%B3nas_J%C3%B3nsson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_jonas_jonsson
+				}
+			}
+			#ideology_agrarian
+		}
+		ICE_olafur_tryggvason_thors = {
+			name = ICE_olafur_tryggvason_thors
+			#https://en.wikipedia.org/wiki/%C3%93lafur_Thors
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_olafur_tryggvason_thors
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1942 Election
+		ICE_einar_olgeirsson = {
+			name = ICE_einar_olgeirsson
+			#https://en.wikipedia.org/wiki/Einar_Olgeirsson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_einar_olgeirsson
+				}
+			}
+			#ideology_communist
+		}
+		ICE_stefan_johann_stefansson = {
+			name = ICE_stefan_johann_stefansson
+			#https://en.wikipedia.org/wiki/Stef%C3%A1n_J%C3%B3hann_Stef%C3%A1nsson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_stefan_johann_stefansson
+				}
+			}
+			#ideology_socialist
+		}
+	#
+	#1942 Election
+	#
+	#1946 Election
+	#
+	#1949 Election
+	#
+	#1953 Election
+		ICE_hannibal_gisli_valdimarsson = {
+			name = ICE_hannibal_gisli_valdimarsson
+			#https://en.wikipedia.org/wiki/Hannibal_Valdimarsson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_hannibal_gisli_valdimarsson
+				}
+			}
+			#ideology_socialist
+		}
+		ICE_gils_guomundsson = {
+			name = ICE_gils_guomundsson
+			#
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_gils_guomundsson
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1956 Election
+	#
+	#1959 Election
+		ICE_guomundur_emil_jonsson = {
+			name = ICE_guomundur_emil_jonsson
+			#https://en.wikipedia.org/wiki/Emil_J%C3%B3nsson
+			portraits = {
+				civilian = {
+					large = GFX_portrait_ICE_guomundur_emil_jonsson
+				}
+			}
+			#ideology_socialist
+		}
+	#
+	#1959 Election
+	#
+}

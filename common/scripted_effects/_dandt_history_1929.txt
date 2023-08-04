@@ -5838,13 +5838,18 @@ dandt_on_startup_1929 = {
 	#ICE
 		ICE = {
 			#Politics
-				set_variable = { party@token:ideology_liberal = token:party_generic_social_democratic_party }
-				set_variable = { popularity@token:ideology_liberal = 19.1 }
+				set_variable = { heir@token:ideology_communist = token:ICE_brynjolfur_bjarnason }
+				set_variable = { party@token:ideology_socialist = token:party_generic_social_democratic_party }
+					set_variable = { popularity@token:ideology_socialist = 19.1 }
+					set_variable = { leader@token:ideology_socialist = token:ICE_jon_baldvinsson }
+				set_variable = { popularity@token:ideology_liberal = 5.8 }
+					set_variable = { leader@token:ideology_liberal = token:ICE_sigurour_eggerz }
 				set_variable = { party@token:ideology_agrarian = token:party_generic_progressive_party }
-				set_variable = { popularity@token:ideology_agrarian = 29.8 }
-				set_variable = { popularity@token:ideology_conservative = 48.3 }
-				set_variable = { party@token:ideology_reactionary = token:party_generic_independence_party }
-				set_variable = { popularity@token:ideology_reactionary = 2.8 }
+					set_variable = { popularity@token:ideology_agrarian = 29.8 }
+					set_variable = { leader@token:ideology_agrarian = token:ICE_tryggvi_thorhallsson }
+				set_variable = { popularity@token:ideology_conservative = 42.5 }
+					set_variable = { leader@token:ideology_conservative = token:ICE_jon_thorlaksson }
+					set_variable = { popularity@token:ideology_reactionary = 2.8 }
 				set_variable = { party@token:ideology_fascist = token:party_generic_nationalist_party }
 			#
 		}
@@ -6041,7 +6046,7 @@ dandt_on_startup_1929 = {
 					set_variable = { leader@token:ideology_liberal = token:ENG_herbert_henry_asquith }
 					set_variable = { heir@token:ideology_liberal = token:ENG_david_lloyd_george }
 				set_variable = { party@token:ideology_agrarian = token:party_ENG_national_liberal_party }
-					set_variable = { heir@token:ENG_john_allsebrook_simon }
+					set_variable = { heir@token:ideology_agrarian = token:ENG_john_allsebrook_simon }
 				set_variable = { popularity@token:ideology_conservative = 47.8 }
 					set_variable = { leader@token:ideology_conservative = token:ENG_stanley_baldwin }
 				set_variable = { party@token:ideology_reactionary = token:party_USA_prohibition_party }
