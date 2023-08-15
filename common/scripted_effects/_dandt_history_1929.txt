@@ -5884,15 +5884,19 @@ dandt_on_startup_1929 = {
 	#NOR
 		NOR = {
 			#Politics
-				set_variable = { popularity@token:ideology_communist = 5.3 }
+				set_variable = { popularity@token:ideology_communist = 4.2 }
+					set_variable = { leader@token:ideology_communist = token:NOR_peder_furubotn }
 				set_variable = { party@token:ideology_socialist = token:party_generic_labour_party }
-				set_variable = { popularity@token:ideology_socialist = 36.8 }
-				set_variable = { popularity@token:ideology_liberal = 17.3 }
+					set_variable = { popularity@token:ideology_socialist = 36.8 }
+					set_variable = { leader@token:ideology_socialist = token:NOR_oscar_frederik_torp }
+				set_variable = { popularity@token:ideology_liberal = 18.7 }
+					set_variable = { leader@token:ideology_liberal = token:NOR_johan_ludwig_mowinckel }
 				set_variable = { party@token:ideology_agrarian = token:party_generic_centre_party }
-				set_variable = { popularity@token:ideology_agrarian = 14.9 }
-				set_variable = { popularity@token:ideology_conservative = 25.5 }
-				set_variable = { party@token:ideology_reactionary = token:party_NOR_society_party }
-				set_variable = { popularity@token:ideology_reactionary = 0.2 }
+					set_variable = { popularity@token:ideology_agrarian = 14.9 }
+					set_variable = { leader@token:ideology_agrarian = token:NOR_erik_enge }
+					set_variable = { heir@token:ideology_agrarian = token:NOR_jens_valentinsen_hundseid }
+				set_variable = { popularity@token:ideology_conservative = 25.4 }
+					set_variable = { leader@token:ideology_conservative = token:NOR_carl_joachim_hambro }
 			#
 		}
 	#

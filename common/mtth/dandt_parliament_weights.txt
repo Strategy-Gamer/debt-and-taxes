@@ -16,7 +16,7 @@
 		}
 	#
 #
-#Ideologies
+#Ideologies 
 	# Apolitical
 		local_apolitical_popularity_weight = {
 			base = 1

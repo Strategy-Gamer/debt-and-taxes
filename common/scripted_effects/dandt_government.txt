@@ -745,6 +745,15 @@
 	govt_house_setup = {
 		clear_array = govt_ideology_array
 
+		set_variable = { strength@token:ideology_communist = popularity@token:ideology_communist }
+		set_variable = { strength@token:ideology_socialist = popularity@token:ideology_socialist }
+		set_variable = { strength@token:ideology_liberal = popularity@token:ideology_liberal }
+		set_variable = { strength@token:ideology_agrarian = popularity@token:ideology_agrarian }
+		set_variable = { strength@token:ideology_conservative = popularity@token:ideology_conservative }
+		set_variable = { strength@token:ideology_reactionary = popularity@token:ideology_reactionary }
+		set_variable = { strength@token:ideology_fascist = popularity@token:ideology_fascist }
+		set_variable = { strength@token:ideology_stratocratic = popularity@token:ideology_stratocratic }
+
 		for_each_loop = {
 			array = global.govt_ideology_array
 			index = ii
@@ -753,7 +762,7 @@
 
 			if = {
 				limit = {
-					check_variable = { popularity@var:vv > 0.09 }
+					check_variable = { strength@var:vv > 0.09 }
 				}
 				for_each_loop = {
 					array = govt_ideology_array
@@ -762,8 +771,8 @@
 					break = bbb
 
 					if = {
-						limit = { 
-							check_variable = { popularity@var:vvv < popularity@var:vv }
+						limit = {
+							check_variable = { strength@var:vvv < strength@var:vv }
 						}
 						add_to_array = {
 							array = govt_ideology_array
@@ -792,106 +801,14 @@
 				array = global.govt_ideology_array
 				value = vv
 				set_variable = { past_popularity@var:vv = popularity@var:vv }
+				set_variable = { past_popularity_percentage@var:vv = popularity_percentage@var:vv }
+				set_variable = { past_strength@var:vv = strength@var:vv }
+				set_variable = { past_strength_percentage@var:vv = strength_percentage@var:vv }
 			}
-		#
-		#Apply
-			add_to_variable = { popularity@token:ideology_communist = communist_temp }
-			clamp_variable = { var = popularity@token:ideology_communist min = 0 }
-			set_temp_variable = {communist_temp = 0 }
-			add_to_variable = { popularity@token:ideology_socialist = socialist_temp }
-			clamp_variable = { var = popularity@token:ideology_socialist min = 0 }
-			set_temp_variable = {socialist_temp = 0 }
-			add_to_variable = { popularity@token:ideology_liberal = communist_temp }
-			clamp_variable = { var = popularity@token:ideology_liberal min = 0 }
-			set_temp_variable = {communist_temp = 0 }
-			add_to_variable = { popularity@token:ideology_agrarian = socialist_temp }
-			clamp_variable = { var = popularity@token:ideology_agrarian min = 0 }
-			set_temp_variable = {socialist_temp = 0 }
-			add_to_variable = { popularity@token:ideology_conservative = conservative_temp }
-			clamp_variable = { var = popularity@token:ideology_conservative min = 0 }
-			set_temp_variable = {conservative_temp = 0 }
-			add_to_variable = { popularity@token:ideology_reactionary = reactionary_temp }
-			clamp_variable = { var = popularity@token:ideology_reactionary min = 0 }
-			set_temp_variable = {reactionary_temp = 0 }
-			add_to_variable = { popularity@token:ideology_fascist = fascist_temp }
-			clamp_variable = { var = popularity@token:ideology_fascist min = 0 }
-			set_temp_variable = {fascist_temp = 0 }
-			add_to_variable = { popularity@token:ideology_stratocratic = stratocratic_temp }
-			clamp_variable = { var = popularity@token:ideology_stratocratic min = 0 }
-			set_temp_variable = {stratocratic_temp = 0 }
 		#
 		#Normalize
 			govt_house_normalize = yes
 		#
-	}
-# Elect House
-	govt_house_election = {
-		set_variable = { weighted_culture_voting_power = 0 }
-		set_variable =	{ weighted_religion_voting_power = 0 }
-		set_variable =	{ weighted_class_voting_power = 0 }
-
-		for_each_loop = {
-			array = pops_culture_type
-			value = vv
-
-			set_temp_variable = { voter_temp = voting_perentage@var:vv }
-			multiply_temp_variable = { voter_temp = mtth:culture_voter_enthusiasm_weight }
-
-			set_variable = { weighted_voting_power@var:vv = voter_temp }
-			add_to_variable = { weighted_culture_voting_power = weighted_voting_power@var:vv }
-		}
-		for_each_loop = {
-			array = pops_culture_type
-			value = vv
-
-			set_variable = { weighted_voting_percentage@var:vv = weighted_voting_power@var:vv }
-			divide_variable = { weighted_voting_percentage@var:vv = weighted_culture_voting_power }
-		}
-		for_each_loop = {
-			array = pops_religion_type
-			value = vv
-
-			set_temp_variable = { voter_temp = voting_perentage@var:vv }
-			multiply_temp_variable = { voter_temp = mtth:religion_voter_enthusiasm_weight }
-
-			set_variable = { weighted_voting_power@var:vv = voter_temp }
-			add_to_variable = { weighted_religion_voting_power = weighted_voting_power@var:vv }
-		}
-		for_each_loop = {
-			array = pops_religion_type
-			value = vv
-
-			set_variable = { weighted_voting_percentage@var:vv = weighted_voting_power@var:vv }
-			divide_variable = { weighted_voting_percentage@var:vv = weighted_religion_voting_power }
-		}
-
-		for_each_loop = {
-			array = global.law_categories_array
-			value = vv
-
-			set_temp_variable = { stance_weight_temp = 0 }
-
-			law_calculate_culture_stance = yes
-			law_calculate_religion_stance = yes
-			law_calculate_class_stance = yes
-
-			set_temp_variable = { culture_stance_temp = culture_stance@var:vv }
-			multiply_temp_variable = { culture_stance_weight_temp = culture_stance_weight@var:vv }
-			add_to_temp_variable = { stance_weight_temp = culture_stance_weight@var:vv }
-
-			set_temp_variable = { religion_stance_temp = religion_stance@var:vv }
-			multiply_temp_variable = { religion_stance_weight_temp = religion_stance_weight@var:vv }
-			add_to_temp_variable = { stance_weight_temp = religion_stance_weight@var:vv }
-
-			set_temp_variable = { class_stance_temp = class_stance@var:vv }
-			multiply_temp_variable = { class_stance_weight_temp = class_stance_weight@var:vv }
-			add_to_temp_variable = { stance_weight_temp = class_stance_weight@var:vv }
-
-			set_variable = { stance@var:vv = culture_stance_temp }
-			add_to_variable = { stance@var:vv = religion_stance_temp }
-			add_to_variable = { stance@var:vv = class_stance_temp }
-			divide_variable = { stance@var:vv = stance_weight_temp }
-		}
 	}
 # Normalize House (country)
 	govt_house_normalize = {
@@ -903,11 +820,11 @@
 				value = vv
 
 				if = {
-					limit = { NOT = { check_variable = { popularity@var:vv = 0 } } }
-					add_to_variable = { popularity@var:vv = 0.002 }
+					limit = { NOT = { check_variable = { popularity_percentage@var:vv = 0 } } }
+					add_to_variable = { popularity_percentage@var:vv = 0.002 }
 				}
-				add_to_temp_variable = { total_percentage_temp = popularity@var:vv }
-				#log = "[?vv.GetTokenLocalizedKey]: popularity-[?popularity@var:vv] count-[?total_percentage_temp]"
+				add_to_temp_variable = { total_percentage_temp = popularity_percentage@var:vv }
+				#log = "[?vv.GetTokenLocalizedKey]: popularity-[?popularity_percentage@var:vv] count-[?total_percentage_temp]"
 			}
 			if = {
 				limit = {
@@ -925,13 +842,13 @@
 					array = global.govt_ideology_array
 					value = vv
 
-					multiply_variable = { popularity@var:vv = total_percentage_adjustment_temp }
-					add_to_temp_variable = { total_percentage_temp_2 = popularity@var:vv }
+					multiply_variable = { popularity_percentage@var:vv = total_percentage_adjustment_temp }
+					add_to_temp_variable = { total_percentage_temp_2 = popularity_percentage@var:vv }
 
 					if = {
 						limit = {
 							check_variable = {
-								popularity@var:vv > popularity@var:largest_popularity_temp
+								popularity_percentage@var:vv > popularity_percentage@var:largest_popularity_temp
 							}
 						}
 						set_temp_variable = { largest_popularity_temp = vv }
@@ -946,7 +863,7 @@
 					}
 					set_temp_variable = { total_percentage_adjustment_temp = 100 }
 					subtract_from_temp_variable = { total_percentage_adjustment_temp = total_percentage_temp_2 }
-					add_to_variable = { popularity@var:largest_popularity_temp = total_percentage_adjustment_temp }
+					add_to_variable = { popularity_percentage@var:largest_popularity_temp = total_percentage_adjustment_temp }
 				}
 			}
 
@@ -955,8 +872,8 @@
 				for_each_loop = {
 					array = global.govt_ideology_array
 					value = vv
-					set_variable = { popularity_change@var:vv	= popularity@var:vv }
-					subtract_from_variable = { popularity_change@var:vv = past_popularity@var:vv }
+					set_variable = { popularity_percentage_change@var:vv	= popularity_percentage@var:vv }
+					subtract_from_variable = { popularity_percentage_change@var:vv = past_popularity_percentage@var:vv }
 				}
 				for_each_loop = {
 					array = govt_ideology_array
@@ -964,6 +881,22 @@
 					custom_effect_tooltip = govt_house_parties_change_generic_tt
 				}
 			#
+			#Bar Chart
+				set_variable = { x_position@token:ideology_socialist = strength_percentage@var:token:ideology_communist }
+				set_variable = { x_position@token:ideology_liberal = strength_percentage@token:ideology_socialist }
+				add_to_variable = { x_position@token:ideology_liberal = x_position@token:ideology_socialist }
+				set_variable = { x_position@token:ideology_agrarian = strength_percentage@token:ideology_liberal }
+				add_to_variable = { x_position@token:ideology_agrarian = x_position@token:ideology_liberal }
+				set_variable = { x_position@token:ideology_conservative = strength_percentage@token:ideology_agrarian }
+				add_to_variable = { x_position@token:ideology_conservative = x_position@token:ideology_agrarian }
+				set_variable = { x_position@token:ideology_reactionary = strength_percentage@token:ideology_conservative }
+				add_to_variable = { x_position@token:ideology_reactionary = x_position@token:ideology_conservative }
+				set_variable = { x_position@token:ideology_fascist = strength_percentage@token:ideology_reactionary }
+				add_to_variable = { x_position@token:ideology_fascist = x_position@token:ideology_reactionary }
+				set_variable = { x_position@token:ideology_stratocratic = strength_percentage@token:ideology_fascist }
+				add_to_variable = { x_position@token:ideology_stratocratic = x_position@token:ideology_fascist }
+			#
+		#
 	}
 # Initialize Coalition (country)
 	govt_coalition_setup = {
@@ -971,17 +904,17 @@
 			clear_array = govt_coalition_leader_array
 			clear_array = govt_coalition_array
 			clear_array = govt_opposition_array
-			
+
 			clear_variable = govt_coalition_leader
 			clear_variable = govt_coalition_popularity
 			clear_variable = govt_coalition_strength
 			clear_variable = govt_coalition_strength_percentage
 			clear_variable = govt_coalition_unity
-			
+
 			clear_variable = govt_opposition_popularity
 			clear_variable = govt_opposition_strength
 			clear_variable = govt_opposition_strength_percentage
-			
+
 			clear_variable = govt_ousted_popularity
 		#
 		#Ruling Party
@@ -997,7 +930,7 @@
 					array = govt_ideology_array
 					value = vv
 					break = bb
-					
+
 					if = {
 						limit = {
 							NOT = {
@@ -1022,11 +955,11 @@
 			}
 			add_to_variable = {
 				var = govt_coalition_popularity
-				value = popularity@var:govt_coalition_leader
+				value = popularity_percentage@var:govt_coalition_leader
 			}
 			add_to_variable = {
 				var = govt_coalition_strength
-				value = popularity@var:govt_coalition_leader
+				value = popularity_percentage@var:govt_coalition_leader
 			}
 			add_to_variable = {
 				var = govt_coalition_strength
@@ -1051,7 +984,7 @@
 				value = vv
 				add_to_variable = {
 					var = govt_ousted_popularity
-					value = popularity@var:vv
+					value = popularity_percentage@var:vv
 				}
 			}
 			set_variable = {
@@ -1083,8 +1016,8 @@
 					array = global.govt_coalition_ideology_communist_array
 					value = vv
 					break = bb
-					
-					
+
+
 					if = {
 						limit = { NOT = { is_ousted_party_loop = yes } }
 						if = {
@@ -1098,11 +1031,11 @@
 							}
 							add_to_variable = {
 								var = govt_coalition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_coalition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							if = {
 								limit = {
@@ -1111,12 +1044,12 @@
 								if = {
 									limit = {
 										check_variable = {
-											popularity@var:vv > 20
+											popularity_percentage@var:vv > 20
 										}
 									}
 									set_temp_variable = {
 										var = half_popularity_temp
-										value = popularity@var:vv
+										value = popularity_percentage@var:vv
 									}
 									divide_temp_variable = {
 										var = half_popularity_temp
@@ -1149,11 +1082,11 @@
 							}
 							add_to_variable = {
 								var = govt_opposition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_opposition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 						}
 					}
@@ -1170,8 +1103,8 @@
 					array = global.govt_coalition_ideology_socialist_array
 					value = vv
 					break = bb
-					
-					
+
+
 					if = {
 						limit = { NOT = { is_ousted_party_loop = yes } }
 						if = {
@@ -1185,11 +1118,11 @@
 							}
 							add_to_variable = {
 								var = govt_coalition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_coalition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							if = {
 								limit = {
@@ -1198,12 +1131,12 @@
 								if = {
 									limit = {
 										check_variable = {
-											popularity@var:vv > 20
+											popularity_percentage@var:vv > 20
 										}
 									}
 									set_temp_variable = {
 										var = half_popularity_temp
-										value = popularity@var:vv
+										value = popularity_percentage@var:vv
 									}
 									divide_temp_variable = {
 										var = half_popularity_temp
@@ -1236,11 +1169,11 @@
 							}
 							add_to_variable = {
 								var = govt_opposition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_opposition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 						}
 					}
@@ -1257,8 +1190,8 @@
 					array = global.govt_coalition_ideology_liberal_array
 					value = vv
 					break = bb
-					
-					
+
+
 					if = {
 						limit = { NOT = { is_ousted_party_loop = yes } }
 						if = {
@@ -1272,11 +1205,11 @@
 							}
 							add_to_variable = {
 								var = govt_coalition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_coalition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							if = {
 								limit = {
@@ -1285,12 +1218,12 @@
 								if = {
 									limit = {
 										check_variable = {
-											popularity@var:vv > 20
+											popularity_percentage@var:vv > 20
 										}
 									}
 									set_temp_variable = {
 										var = half_popularity_temp
-										value = popularity@var:vv
+										value = popularity_percentage@var:vv
 									}
 									divide_temp_variable = {
 										var = half_popularity_temp
@@ -1323,11 +1256,11 @@
 							}
 							add_to_variable = {
 								var = govt_opposition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_opposition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 						}
 					}
@@ -1344,8 +1277,8 @@
 					array = global.govt_coalition_ideology_agrarian_array
 					value = vv
 					break = bb
-					
-					
+
+
 					if = {
 						limit = { NOT = { is_ousted_party_loop = yes } }
 						if = {
@@ -1359,11 +1292,11 @@
 							}
 							add_to_variable = {
 								var = govt_coalition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_coalition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							if = {
 								limit = {
@@ -1372,12 +1305,12 @@
 								if = {
 									limit = {
 										check_variable = {
-											popularity@var:vv > 20
+											popularity_percentage@var:vv > 20
 										}
 									}
 									set_temp_variable = {
 										var = half_popularity_temp
-										value = popularity@var:vv
+										value = popularity_percentage@var:vv
 									}
 									divide_temp_variable = {
 										var = half_popularity_temp
@@ -1410,11 +1343,11 @@
 							}
 							add_to_variable = {
 								var = govt_opposition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_opposition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 						}
 					}
@@ -1431,8 +1364,8 @@
 					array = global.govt_coalition_ideology_conservative_array
 					value = vv
 					break = bb
-					
-					
+
+
 					if = {
 						limit = { NOT = { is_ousted_party_loop = yes } }
 						if = {
@@ -1446,11 +1379,11 @@
 							}
 							add_to_variable = {
 								var = govt_coalition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_coalition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							if = {
 								limit = {
@@ -1459,12 +1392,12 @@
 								if = {
 									limit = {
 										check_variable = {
-											popularity@var:vv > 20
+											popularity_percentage@var:vv > 20
 										}
 									}
 									set_temp_variable = {
 										var = half_popularity_temp
-										value = popularity@var:vv
+										value = popularity_percentage@var:vv
 									}
 									divide_temp_variable = {
 										var = half_popularity_temp
@@ -1497,11 +1430,11 @@
 							}
 							add_to_variable = {
 								var = govt_opposition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_opposition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 						}
 					}
@@ -1518,8 +1451,8 @@
 					array = global.govt_coalition_ideology_reactionary_array
 					value = vv
 					break = bb
-					
-					
+
+
 					if = {
 						limit = { NOT = { is_ousted_party_loop = yes } }
 						if = {
@@ -1533,11 +1466,11 @@
 							}
 							add_to_variable = {
 								var = govt_coalition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_coalition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							if = {
 								limit = {
@@ -1546,12 +1479,12 @@
 								if = {
 									limit = {
 										check_variable = {
-											popularity@var:vv > 20
+											popularity_percentage@var:vv > 20
 										}
 									}
 									set_temp_variable = {
 										var = half_popularity_temp
-										value = popularity@var:vv
+										value = popularity_percentage@var:vv
 									}
 									divide_temp_variable = {
 										var = half_popularity_temp
@@ -1584,11 +1517,11 @@
 							}
 							add_to_variable = {
 								var = govt_opposition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_opposition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 						}
 					}
@@ -1605,8 +1538,8 @@
 					array = global.govt_coalition_ideology_fascist_array
 					value = vv
 					break = bb
-					
-					
+
+
 					if = {
 						limit = { NOT = { is_ousted_party_loop = yes } }
 						if = {
@@ -1620,11 +1553,11 @@
 							}
 							add_to_variable = {
 								var = govt_coalition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_coalition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							if = {
 								limit = {
@@ -1633,12 +1566,12 @@
 								if = {
 									limit = {
 										check_variable = {
-											popularity@var:vv > 20
+											popularity_percentage@var:vv > 20
 										}
 									}
 									set_temp_variable = {
 										var = half_popularity_temp
-										value = popularity@var:vv
+										value = popularity_percentage@var:vv
 									}
 									divide_temp_variable = {
 										var = half_popularity_temp
@@ -1671,11 +1604,11 @@
 							}
 							add_to_variable = {
 								var = govt_opposition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_opposition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 						}
 					}
@@ -1692,8 +1625,8 @@
 					array = global.govt_coalition_ideology_stratocratic_array
 					value = vv
 					break = bb
-					
-					
+
+
 					if = {
 						limit = { NOT = { is_ousted_party_loop = yes } }
 						if = {
@@ -1707,11 +1640,11 @@
 							}
 							add_to_variable = {
 								var = govt_coalition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_coalition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							if = {
 								limit = {
@@ -1720,12 +1653,12 @@
 								if = {
 									limit = {
 										check_variable = {
-											popularity@var:vv > 20
+											popularity_percentage@var:vv > 20
 										}
 									}
 									set_temp_variable = {
 										var = half_popularity_temp
-										value = popularity@var:vv
+										value = popularity_percentage@var:vv
 									}
 									divide_temp_variable = {
 										var = half_popularity_temp
@@ -1758,11 +1691,11 @@
 							}
 							add_to_variable = {
 								var = govt_opposition_popularity
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 							add_to_variable = {
 								var = govt_opposition_strength
-								value = popularity@var:vv
+								value = popularity_percentage@var:vv
 							}
 						}
 					}
@@ -1771,7 +1704,7 @@
 			if = {
 				limit = {
 					is_subject = yes
-					check_variable = { popularity@token:ideology_stratocratic > 2 }
+					check_variable = { popularity_percentage@token:ideology_stratocratic > 2 }
 					NOT = {
 						is_in_array = {
 							array = govt_ousted_array
@@ -1820,4 +1753,74 @@
 govt_incorporate_annexed = {
 	# THIS is annexing country
 	# PREV is annexed country
+}
+
+# Elect House
+govt_house_election = {
+	set_variable = { weighted_culture_voting_power = 0 }
+	set_variable =	{ weighted_religion_voting_power = 0 }
+	set_variable =	{ weighted_class_voting_power = 0 }
+
+	for_each_loop = {
+		array = pops_culture_type
+		value = vv
+
+		set_temp_variable = { voter_temp = voting_perentage@var:vv }
+		multiply_temp_variable = { voter_temp = mtth:culture_voter_enthusiasm_weight }
+
+		set_variable = { weighted_voting_power@var:vv = voter_temp }
+		add_to_variable = { weighted_culture_voting_power = weighted_voting_power@var:vv }
+	}
+	for_each_loop = {
+		array = pops_culture_type
+		value = vv
+
+		set_variable = { weighted_voting_percentage@var:vv = weighted_voting_power@var:vv }
+		divide_variable = { weighted_voting_percentage@var:vv = weighted_culture_voting_power }
+	}
+	for_each_loop = {
+		array = pops_religion_type
+		value = vv
+
+		set_temp_variable = { voter_temp = voting_perentage@var:vv }
+		multiply_temp_variable = { voter_temp = mtth:religion_voter_enthusiasm_weight }
+
+		set_variable = { weighted_voting_power@var:vv = voter_temp }
+		add_to_variable = { weighted_religion_voting_power = weighted_voting_power@var:vv }
+	}
+	for_each_loop = {
+		array = pops_religion_type
+		value = vv
+
+		set_variable = { weighted_voting_percentage@var:vv = weighted_voting_power@var:vv }
+		divide_variable = { weighted_voting_percentage@var:vv = weighted_religion_voting_power }
+	}
+
+	for_each_loop = {
+		array = global.law_categories_array
+		value = vv
+
+		set_temp_variable = { stance_weight_temp = 0 }
+
+		law_calculate_culture_stance = yes
+		law_calculate_religion_stance = yes
+		law_calculate_class_stance = yes
+
+		set_temp_variable = { culture_stance_temp = culture_stance@var:vv }
+		multiply_temp_variable = { culture_stance_weight_temp = culture_stance_weight@var:vv }
+		add_to_temp_variable = { stance_weight_temp = culture_stance_weight@var:vv }
+
+		set_temp_variable = { religion_stance_temp = religion_stance@var:vv }
+		multiply_temp_variable = { religion_stance_weight_temp = religion_stance_weight@var:vv }
+		add_to_temp_variable = { stance_weight_temp = religion_stance_weight@var:vv }
+
+		set_temp_variable = { class_stance_temp = class_stance@var:vv }
+		multiply_temp_variable = { class_stance_weight_temp = class_stance_weight@var:vv }
+		add_to_temp_variable = { stance_weight_temp = class_stance_weight@var:vv }
+
+		set_variable = { stance@var:vv = culture_stance_temp }
+		add_to_variable = { stance@var:vv = religion_stance_temp }
+		add_to_variable = { stance@var:vv = class_stance_temp }
+		divide_variable = { stance@var:vv = stance_weight_temp }
+	}
 }

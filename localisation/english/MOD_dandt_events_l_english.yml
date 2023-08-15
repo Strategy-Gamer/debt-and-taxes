@@ -14,8 +14,9 @@
 
   #Test Event 2
   dandt.3.t: "Test Event 2"
-  dandt.3.d: "[GetSocialistPartyXPosition]"
-  dandt.3.a: "[?leader.GetTokenLocalizedKey]"
+  dandt.3.d: "Communist [?strength@token:ideology_communist]\nSocialist [?strength@token:ideology_socialist]\nCommunist [?strength@token:ideology_communist]\nCommunist [?strength@token:ideology_communist]\nCommunist [?strength@token:ideology_communist]\nCommunist [?strength@token:ideology_communist]\nCommunist [?strength@token:ideology_communist]\nCommunist [?strength@token:ideology_communist]\n"
+  dandt.3.a: "workout"
+  dandt.3.a_tt: "[?strength@token:ideology_communist]"
   dandt.3.b: "Run Runers"
   dandt.3.c: "Interesting"
   dandt.3.e: "Do Nothing"

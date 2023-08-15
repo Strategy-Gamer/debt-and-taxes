@@ -1,0 +1,188 @@
+characters = {
+	#1927 Election
+		NOR_peder_furubotn = {
+			name = NOR_peder_furubotn
+			#https://en.wikipedia.org/wiki/Peder_Furubotn
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_peder_furubotn
+				}
+			}
+			#ideology_communist
+		}
+		NOR_oscar_frederik_torp = {
+			name = NOR_oscar_frederik_torp
+			#https://en.wikipedia.org/wiki/Oscar_Torp
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_oscar_frederik_torp
+				}
+			}
+			#ideology_socialist
+		}
+		NOR_johan_ludwig_mowinckel = {
+			name = NOR_johan_ludwig_mowinckel
+			#https://en.wikipedia.org/wiki/Johan_Ludwig_Mowinckel
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_johan_ludwig_mowinckel
+				}
+			}
+			#ideology_liberal
+		}
+		NOR_erik_mathiassen_enge = {
+			name = NOR_erik_mathiassen_enge
+			#https://en.wikipedia.org/wiki/Erik_Enge
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_erik_mathiassen_enge
+				}
+			}
+			#ideology_agrarian
+		}
+		NOR_carl_joachim_hambro = {
+			name = NOR_carl_joachim_hambro
+			#https://en.wikipedia.org/wiki/C._J._Hambro
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_carl_joachim_hambro
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1930 Election
+		NOR_jens_valentinsen_hundseid = {
+			name = NOR_jens_valentinsen_hundseid
+			#https://en.wikipedia.org/wiki/Jens_Hundseid
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_jens_valentinsen_hundseid
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1933 Election
+	#
+	#1936 Election
+		NOR_johan_h_andresen = {
+			name = NOR_johan_h_andresen
+			#https://en.wikipedia.org/wiki/Johan_H._Andresen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_johan_h_andresen
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1945 Election
+		NOR_adam__hjalmar_egede_nissen = {
+			name = NOR_adam__hjalmar_egede_nissen
+			#https://en.wikipedia.org/wiki/Adam_Egede-Nissen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_adam__hjalmar_egede_nissen
+				}
+			}
+			#ideology_communist
+		}
+		NOR_einar_henry_gerhardsen = {
+			name = NOR_einar_henry_gerhardsen
+			#https://en.wikipedia.org/wiki/Einar_Gerhardsen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_einar_henry_gerhardsen
+				}
+			}
+			#ideology_socialist
+		}
+		NOR_jacob_stenersen_worm_muller = {
+			name = NOR_jacob_stenersen_worm_muller
+			#https://en.wikipedia.org/wiki/Jacob_S._Worm-M%C3%BCller
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_jacob_stenersen_worm_muller
+				}
+			}
+			#ideology_liberal
+		}
+		NOR_nils_traedal = {
+			name = NOR_nils_traedal
+			#https://en.wikipedia.org/wiki/Nils_Tr%C3%A6dal
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_nils_traedal
+				}
+			}
+			#ideology_agrarian
+		}
+		NOR_arthur_henry_eugen_nordlie = {
+			name = NOR_arthur_henry_eugen_nordlie
+			#https://en.wikipedia.org/wiki/Arthur_Nordlie
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_arthur_henry_eugen_nordlie
+				}
+			}
+			#ideology_conservative
+		}
+	#
+	#1949 Election
+		NOR_einar_frogner = {
+			name = NOR_einar_frogner
+			#https://en.wikipedia.org/wiki/Einar_Frogner
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_einar_frogner
+				}
+			}
+			#ideology_agrarian
+		}
+	#
+	#1953 Election
+		NOR_emil_lovlien = {
+			name = NOR_emil_lovlien
+			#https://en.wikipedia.org/wiki/Emil_L%C3%B8vlien
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_emil_lovlien
+				}
+			}
+			#ideology_communist
+		}
+		NOR_bent_roiseland = {
+			name = NOR_bent_roiseland
+			#https://en.wikipedia.org/wiki/Bent_R%C3%B8iseland
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_bent_roiseland
+				}
+			}
+			#ideology_liberal
+		}
+	#
+	#1957 Election
+		NOR_per_borten = {
+			name = NOR_per_borten
+			#https://en.wikipedia.org/wiki/Per_Borten
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_per_borten
+				}
+			}
+			#ideology_agrarian
+		}
+		NOR_alv_kjos = {
+			name = NOR_alv_kjos
+			#https://en.wikipedia.org/wiki/Alv_Kj%C3%B8s
+			portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_alv_kjos
+				}
+			}
+			#ideology_conservative
+		}
+	#
+}

@@ -10,9 +10,9 @@ country_event = {
 	title = dandt.1.t
 	desc = dandt.1.d
 	picture = GFX_report_event_aid_pact
-	
+
 	is_triggered_only = yes
-		
+
 	immediate = {
 		hidden_effect = {
 			country_event = { id = dandt.3 days = 36 }
@@ -43,7 +43,7 @@ country_event = {
 	title = dandt.2.t
 	desc = dandt.2.d
 	picture = GFX_report_event_generic_factory
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -71,13 +71,23 @@ country_event = {
 	title = dandt.3.t
 	desc = dandt.3.d
 	picture = GFX_report_event_generic_factory
-	
+
 	is_triggered_only = yes
+
+	immediate = {
+		set_variable = { strength@token:ideology_communist = mtth:communist_strength_weight }
+		set_variable = { strength@token:ideology_socialist = mtth:socialist_strength_weight }
+		set_variable = { strength@token:ideology_liberal = mtth:liberal_strength_weight }
+		set_variable = { strength@token:ideology_agrarian = mtth:agrarian_strength_weight }
+		set_variable = { strength@token:ideology_conservative = mtth:conservative_strength_weight }
+		set_variable = { strength@token:ideology_reactionary = mtth:reactionary_strength_weight }
+		set_variable = { strength@token:ideology_fascist = mtth:fascist_strength_weight }
+		set_variable = { strength@token:ideology_stratocratic = mtth:stratocratic_strength_weight }
+	}
 
 	option = {
 		name = dandt.3.a
-		set_variable = { leader = token:USA_calvin_coolidge }
-		# govt_parties_setup = yes
+		custom_effect_tooltip = dandt.3.a_tt
 	}
 	option = {
 		name = count_votes
@@ -92,11 +102,10 @@ country_event = {
 		govt_house_normalize = yes
 	}
 }
-
 #Hourly events
 country_event = {
 	id = dandt.241
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -118,7 +127,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.242
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -140,7 +149,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.243
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -162,7 +171,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.244
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -184,7 +193,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.245
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -206,7 +215,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.246
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -228,7 +237,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.247
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -250,7 +259,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.248
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -272,7 +281,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.251
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -294,7 +303,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.252
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -316,7 +325,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.253
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -338,7 +347,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.254
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -360,7 +369,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.255
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -382,7 +391,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.256
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -404,7 +413,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.257
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -426,7 +435,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.258
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -448,7 +457,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.261
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -470,7 +479,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.262
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -492,7 +501,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.263
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -514,7 +523,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.264
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -536,7 +545,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.265
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -558,7 +567,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.266
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -580,7 +589,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.267
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
@@ -602,7 +611,7 @@ country_event = {
 }
 country_event = {
 	id = dandt.268
-	
+
 	hidden = yes
 
 	is_triggered_only = yes
