@@ -1,5 +1,5 @@
 name="Debt and Taxes"
-path="mod/debtandtaxes/"
+path="mod/debt-and-taxes/"
 tags={
 	"Gameplay"
 }
@@ -18,4 +18,4 @@ replace_path="history/states"
 replace_path="history/countries"
 replace_path="history/units"
 replace_path="map/strategicregions"
-supported_version="1.12.*"
+supported_version="1.15.*"
