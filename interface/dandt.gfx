@@ -586,7 +586,7 @@ spriteTypes = {
 		name = "GFX_trend_arrow_up_red"
 		texturefile = "gfx/interface/icons/trend_arrow_up_red.dds"
 	}
-
+  
 	
 	spriteType = {
 		name = "GFX_government_icon"
