@@ -5,8 +5,8 @@ GER = {
 	color_ui = rgb { 138 155 116 }
 }
 ENG = {
-	color = rgb { 201 56 93 }
-	color_ui = rgb { 255 73 121 }
+	color = rgb { 165 24 24 }
+	color_ui = rgb { 165 24 24 }
 }
 SOV = {
 	color = rgb { 125 13 24 }
@@ -181,7 +181,7 @@ HON = {
 	color = rgb { 128 145 65 }
 	color_ui = rgb { 128 145 65 }
 }
-IRQ = {
+IRQ = { 
 	color = rgb { 196 157 163 }
 	color_ui = rgb { 231 148 129 }
 }
